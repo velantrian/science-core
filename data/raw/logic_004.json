@@ -1,0 +1,462 @@
+[
+  {
+    "id": "bias.logic.cognitive.confirmation",
+    "schema_version": "3.2",
+    "domain": "logic.biases",
+    "subtopic": "logic.biases.decision",
+    "tier": "logic",
+    "type": "bias",
+    "statement": "Склонность искать, интерпретировать и запоминать информацию, подтверждающую уже имеющиеся убеждения, и игнорировать противоречащую.",
+    "formal_notation": null,
+    "conditions": "Наличие сформированного мнения и поток новой информации",
+    "prereq": ["concept.logic.prior_belief", "concept.logic.evidence"],
+    "derives_from": [],
+    "confidence": 0.97,
+    "tags": ["bias", "confirmation", "epistemic", "wason"],
+    "tier_extensions": {
+      "category": "bias",
+      "related_logic": ["fallacy.logic.informal.cherry_picking"]
+    }
+  },
+  {
+    "id": "bias.logic.cognitive.anchoring",
+    "schema_version": "3.2",
+    "domain": "logic.biases",
+    "subtopic": "logic.biases.decision",
+    "tier": "logic",
+    "type": "bias",
+    "statement": "Чрезмерное влияние первой полученной величины (якоря) на последующие количественные оценки.",
+    "formal_notation": "Estimate(X) ≈ Anchor + α·(True(X) − Anchor), 0 < α < 1",
+    "conditions": "Оценка под неопределённостью; якорь предъявлен до оценки",
+    "prereq": ["concept.logic.judgment", "concept.math.statistics.estimation"],
+    "derives_from": [],
+    "confidence": 0.95,
+    "tags": ["bias", "anchoring", "tversky_kahneman", "estimation"],
+    "tier_extensions": {
+      "category": "bias",
+      "related_logic": ["bias.logic.cognitive.availability"]
+    }
+  },
+  {
+    "id": "bias.logic.cognitive.availability",
+    "schema_version": "3.2",
+    "domain": "logic.biases",
+    "subtopic": "logic.biases.probabilistic",
+    "tier": "logic",
+    "type": "bias",
+    "statement": "Оценка вероятности события по лёгкости извлечения примеров из памяти.",
+    "formal_notation": "P_perceived(E) ∝ Recall_ease(E)",
+    "conditions": "Лёгкость припоминания зависит от заметности, недавности, эмоциональности",
+    "prereq": ["concept.logic.judgment", "concept.psychology.memory"],
+    "derives_from": [],
+    "confidence": 0.95,
+    "tags": ["bias", "availability", "heuristic", "tversky_kahneman"],
+    "tier_extensions": {
+      "category": "bias"
+    }
+  },
+  {
+    "id": "bias.logic.cognitive.dunning_kruger",
+    "schema_version": "3.2",
+    "domain": "logic.biases",
+    "subtopic": "logic.biases.perception",
+    "tier": "logic",
+    "type": "bias",
+    "statement": "Неквалифицированные лица переоценивают свою компетентность; высококвалифицированные часто недооценивают её.",
+    "formal_notation": "ΔSelfAssessment(Skill) > 0 при Skill < Q1; ΔSelfAssessment(Skill) < 0 при Skill > Q3",
+    "conditions": "Самооценка способностей в области, требующей метакогнитивных навыков",
+    "prereq": ["concept.logic.metacognition", "concept.logic.self_assessment"],
+    "derives_from": [],
+    "confidence": 0.88,
+    "tags": ["bias", "dunning_kruger", "metacognition", "competence"],
+    "tier_extensions": {
+      "category": "bias"
+    }
+  },
+  {
+    "id": "bias.logic.cognitive.sunk_cost",
+    "schema_version": "3.2",
+    "domain": "logic.biases",
+    "subtopic": "logic.biases.decision",
+    "tier": "logic",
+    "type": "bias",
+    "statement": "Продолжение убыточной деятельности из-за уже понесённых невозвратных затрат, нерелевантных для рационального решения.",
+    "formal_notation": "Decision должно зависеть от ΔU(future); фактически зависит от Cost(past)",
+    "conditions": "Невозвратные затраты влияют на выбор о будущем",
+    "prereq": ["concept.logic.rational_choice", "concept.economics.opportunity_cost"],
+    "derives_from": [],
+    "confidence": 0.96,
+    "tags": ["bias", "sunk_cost", "decision", "irrational"],
+    "tier_extensions": {
+      "category": "bias"
+    }
+  },
+  {
+    "id": "bias.logic.cognitive.hindsight",
+    "schema_version": "3.2",
+    "domain": "logic.biases",
+    "subtopic": "logic.biases.memory",
+    "tier": "logic",
+    "type": "bias",
+    "statement": "Восприятие прошедшего события как предсказуемого после того, как оно произошло.",
+    "formal_notation": "P_recalled(E|knew_outcome) > P_predicted(E) до события",
+    "conditions": "Знание исхода искажает память о прошлой оценке вероятности",
+    "prereq": ["concept.psychology.memory", "concept.math.probability.subjective"],
+    "derives_from": [],
+    "confidence": 0.93,
+    "tags": ["bias", "hindsight", "memory", "knew_it_all_along"],
+    "tier_extensions": {
+      "category": "bias"
+    }
+  },
+  {
+    "id": "bias.logic.cognitive.framing",
+    "schema_version": "3.2",
+    "domain": "logic.biases",
+    "subtopic": "logic.biases.decision",
+    "tier": "logic",
+    "type": "bias",
+    "statement": "Решение по эквивалентным альтернативам зависит от формулировки в терминах выигрыша или потери.",
+    "formal_notation": "Choice(A, B) при описании в gains ≠ Choice(A, B) при описании в losses",
+    "conditions": "Эквивалентные исходы; разные формулировки",
+    "prereq": ["concept.logic.rational_choice", "concept.psychology.prospect_theory"],
+    "derives_from": [],
+    "confidence": 0.96,
+    "tags": ["bias", "framing", "prospect_theory", "kahneman"],
+    "tier_extensions": {
+      "category": "bias"
+    }
+  },
+  {
+    "id": "bias.logic.cognitive.loss_aversion",
+    "schema_version": "3.2",
+    "domain": "logic.biases",
+    "subtopic": "logic.biases.decision",
+    "tier": "logic",
+    "type": "bias",
+    "statement": "Потеря определённой величины воспринимается субъективно сильнее, чем эквивалентный выигрыш — примерно вдвое.",
+    "formal_notation": "U(−x) ≈ −2·U(+x) при равных |x|",
+    "conditions": "Выбор под риском; перспектива убытков и прибылей",
+    "prereq": ["concept.psychology.prospect_theory", "concept.economics.utility"],
+    "derives_from": [],
+    "confidence": 0.94,
+    "tags": ["bias", "loss_aversion", "prospect_theory", "kahneman_tversky"],
+    "tier_extensions": {
+      "category": "bias"
+    }
+  },
+  {
+    "id": "bias.logic.cognitive.base_rate_neglect",
+    "schema_version": "3.2",
+    "domain": "logic.biases",
+    "subtopic": "logic.biases.probabilistic",
+    "tier": "logic",
+    "type": "bias",
+    "statement": "Игнорирование априорной вероятности (базовой частоты) при наличии конкретной информации о случае.",
+    "formal_notation": "P_judged(H|D) ≈ P(D|H), игнорируя P(H) — нарушение Байеса",
+    "conditions": "Доступны и базовая частота, и индивидуальная информация",
+    "prereq": ["theorem.logic.bayesian.bayes_rule", "concept.math.probability.prior"],
+    "derives_from": [],
+    "confidence": 0.95,
+    "tags": ["bias", "base_rate", "bayesian", "probabilistic"],
+    "tier_extensions": {
+      "category": "bias"
+    }
+  },
+  {
+    "id": "bias.logic.cognitive.conjunction_fallacy",
+    "schema_version": "3.2",
+    "domain": "logic.biases",
+    "subtopic": "logic.biases.probabilistic",
+    "tier": "logic",
+    "type": "bias",
+    "statement": "Оценка вероятности конъюнкции событий выше, чем вероятности одного из них.",
+    "formal_notation": "P_judged(A ∧ B) > P_judged(A) — нарушает аксиому: P(A∧B) ≤ P(A)",
+    "conditions": "Конкретный сценарий A∧B выглядит репрезентативнее, чем A",
+    "prereq": ["concept.math.probability.joint", "bias.logic.cognitive.availability"],
+    "derives_from": [],
+    "confidence": 0.94,
+    "tags": ["bias", "conjunction", "tversky_kahneman", "linda"],
+    "tier_extensions": {
+      "category": "bias"
+    }
+  },
+  {
+    "id": "bias.logic.cognitive.gamblers_fallacy",
+    "schema_version": "3.2",
+    "domain": "logic.biases",
+    "subtopic": "logic.biases.probabilistic",
+    "tier": "logic",
+    "type": "bias",
+    "statement": "Ожидание, что после серии одинаковых результатов независимых испытаний вероятность противоположного исхода возрастает.",
+    "formal_notation": "P_judged(Heads | n×Tails) > 0.5, тогда как P(Heads) = 0.5 независимо",
+    "conditions": "Независимые испытания с фиксированной вероятностью",
+    "prereq": ["concept.math.probability.independence", "concept.math.probability.bernoulli"],
+    "derives_from": [],
+    "confidence": 0.97,
+    "tags": ["bias", "gamblers_fallacy", "independence", "probabilistic"],
+    "tier_extensions": {
+      "category": "bias"
+    }
+  },
+  {
+    "id": "bias.logic.social.fundamental_attribution",
+    "schema_version": "3.2",
+    "domain": "logic.biases",
+    "subtopic": "logic.biases.social",
+    "tier": "logic",
+    "type": "bias",
+    "statement": "Объяснение поведения других через их диспозиции, а собственного — через ситуацию.",
+    "formal_notation": "Attribution(other, behavior) → dispositional; Attribution(self, behavior) → situational",
+    "conditions": "Социальная атрибуция причин поведения",
+    "prereq": ["concept.psychology.attribution", "concept.psychology.self_other"],
+    "derives_from": [],
+    "confidence": 0.92,
+    "tags": ["bias", "attribution", "social", "ross"],
+    "tier_extensions": {
+      "category": "bias"
+    }
+  },
+  {
+    "id": "bias.logic.social.in_group",
+    "schema_version": "3.2",
+    "domain": "logic.biases",
+    "subtopic": "logic.biases.social",
+    "tier": "logic",
+    "type": "bias",
+    "statement": "Систематическое предпочтение и положительная оценка членов собственной группы по сравнению с членами внешней группы.",
+    "formal_notation": "Eval(in_group) > Eval(out_group) при прочих равных",
+    "conditions": "Социальная идентификация с группой",
+    "prereq": ["concept.psychology.group_identity", "concept.psychology.social_categorization"],
+    "derives_from": [],
+    "confidence": 0.93,
+    "tags": ["bias", "in_group", "social", "tajfel"],
+    "tier_extensions": {
+      "category": "bias"
+    }
+  },
+  {
+    "id": "paradox.logic.semantic.liar",
+    "schema_version": "3.2",
+    "domain": "logic.paradoxes",
+    "subtopic": "logic.paradoxes.logical",
+    "tier": "logic",
+    "type": "paradox",
+    "statement": "Утверждение «это утверждение ложно» истинно тогда и только тогда, когда оно ложно.",
+    "formal_notation": "L ⟺ ¬L → противоречие",
+    "conditions": "Самоссылающееся утверждение в языке с предикатом истинности",
+    "limits": ["Иерархия Тарского избегает парадокса разделением языка и метаязыка"],
+    "prereq": ["concept.logic.formal.truth_value", "concept.logic.self_reference"],
+    "derives_from": ["law_of_thought.logic.formal.non_contradiction"],
+    "confidence": 1.0,
+    "tags": ["paradox", "liar", "self_reference", "semantic"],
+    "tier_extensions": {
+      "category": "paradox"
+    }
+  },
+  {
+    "id": "paradox.logic.set_theory.russell",
+    "schema_version": "3.2",
+    "domain": "logic.paradoxes",
+    "subtopic": "logic.paradoxes.logical",
+    "tier": "logic",
+    "type": "paradox",
+    "statement": "Множество всех множеств, не содержащих себя как элемент, содержит себя тогда и только тогда, когда не содержит.",
+    "formal_notation": "R = {x | x ∉ x};   R ∈ R ⟺ R ∉ R",
+    "conditions": "Наивная теория множеств с неограниченной аксиомой свёртывания",
+    "limits": ["В ZFC аксиома свёртывания заменена аксиомой выделения — парадокс блокируется"],
+    "prereq": ["axiom.logic.set_theory.extensionality", "concept.logic.self_reference"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["paradox", "russell", "set_theory", "self_reference"],
+    "tier_extensions": {
+      "category": "paradox"
+    }
+  },
+  {
+    "id": "paradox.logic.motion.zeno_dichotomy",
+    "schema_version": "3.2",
+    "domain": "logic.paradoxes",
+    "subtopic": "logic.paradoxes.logical",
+    "tier": "logic",
+    "type": "paradox",
+    "statement": "Движение невозможно: до прохождения отрезка нужно пройти половину, до половины — четверть, и так до бесконечности.",
+    "formal_notation": "Σ 1/2ⁿ = 1 при n→∞ — бесконечный ряд сходится",
+    "conditions": "Античная апория Зенона; континуум делим бесконечно",
+    "limits": ["Разрешается математическим анализом: сходящийся бесконечный ряд имеет конечную сумму"],
+    "prereq": ["concept.math.series.geometric", "concept.math.limit"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["paradox", "zeno", "motion", "infinity"],
+    "tier_extensions": {
+      "category": "paradox"
+    }
+  },
+  {
+    "id": "paradox.logic.vagueness.sorites",
+    "schema_version": "3.2",
+    "domain": "logic.paradoxes",
+    "subtopic": "logic.paradoxes.logical",
+    "tier": "logic",
+    "type": "paradox",
+    "statement": "Куча песка остаётся кучей при удалении одной песчинки; повторение операции приводит к выводу, что и одна песчинка — куча.",
+    "formal_notation": "Heap(n) ∧ ∀n(Heap(n) → Heap(n−1)) ⊢ Heap(1) — противоречит интуиции",
+    "conditions": "Предикат с размытой границей применимости",
+    "limits": ["Решается нечёткой логикой или эпистемическим подходом к неточности"],
+    "prereq": ["concept.logic.vagueness", "inference_rule.logic.proof.induction"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["paradox", "sorites", "vagueness", "heap"],
+    "tier_extensions": {
+      "category": "paradox"
+    }
+  },
+  {
+    "id": "paradox.logic.probabilistic.monty_hall",
+    "schema_version": "3.2",
+    "domain": "logic.paradoxes",
+    "subtopic": "logic.paradoxes.probabilistic",
+    "tier": "logic",
+    "type": "paradox",
+    "statement": "После открытия ведущим проигрышной двери смена выбора повышает вероятность выигрыша с 1/3 до 2/3.",
+    "formal_notation": "P(win|switch) = 2/3;   P(win|stay) = 1/3",
+    "conditions": "Ведущий знает расположение приза и всегда открывает проигрышную дверь",
+    "limits": ["При случайном выборе ведущего вероятности становятся 1/2"],
+    "prereq": ["theorem.logic.bayesian.bayes_rule", "concept.math.probability.conditional"],
+    "derives_from": ["theorem.logic.bayesian.bayes_rule"],
+    "confidence": 1.0,
+    "tags": ["paradox", "monty_hall", "bayes", "probabilistic"],
+    "tier_extensions": {
+      "category": "paradox"
+    }
+  },
+  {
+    "id": "paradox.logic.probabilistic.birthday",
+    "schema_version": "3.2",
+    "domain": "logic.paradoxes",
+    "subtopic": "logic.paradoxes.probabilistic",
+    "tier": "logic",
+    "type": "paradox",
+    "statement": "В группе из 23 человек вероятность совпадения дней рождения у двоих превышает 50%, что противоречит интуиции.",
+    "formal_notation": "P(match) = 1 − 365! / (365ⁿ · (365−n)!);   P > 0.5 при n = 23",
+    "conditions": "Дни рождения распределены равномерно; 365 дней в году",
+    "prereq": ["concept.math.probability.combinatorics", "concept.math.probability.independence"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["paradox", "birthday", "probability", "combinatorics"],
+    "tier_extensions": {
+      "category": "paradox"
+    }
+  },
+  {
+    "id": "paradox.logic.probabilistic.simpson",
+    "schema_version": "3.2",
+    "domain": "logic.paradoxes",
+    "subtopic": "logic.paradoxes.probabilistic",
+    "tier": "logic",
+    "type": "paradox",
+    "statement": "Тренд, наблюдаемый в каждой подгруппе данных, может развернуться при их объединении.",
+    "formal_notation": "P(A|B,C) > P(A|¬B,C) ∧ P(A|B,¬C) > P(A|¬B,¬C), но P(A|B) < P(A|¬B)",
+    "conditions": "Скрытая переменная C влияет на распределение по группам",
+    "prereq": ["concept.math.statistics.confounder", "concept.math.probability.conditional"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["paradox", "simpson", "statistics", "confounding"],
+    "tier_extensions": {
+      "category": "paradox"
+    }
+  },
+  {
+    "id": "paradox.logic.epistemic.ravens",
+    "schema_version": "3.2",
+    "domain": "logic.paradoxes",
+    "subtopic": "logic.paradoxes.epistemic",
+    "tier": "logic",
+    "type": "paradox",
+    "statement": "Утверждение «все вороны чёрные» логически эквивалентно «все нечёрные объекты — не вороны»; красное яблоко подтверждает оба.",
+    "formal_notation": "∀x(R(x)→B(x)) ⊣⊢ ∀x(¬B(x)→¬R(x));   apple подтверждает оба эквивалентно",
+    "conditions": "Принцип никода: пример P(a)∧Q(a) подтверждает ∀x(P(x)→Q(x))",
+    "limits": ["Байесовский подход даёт малый, но ненулевой вес такому подтверждению"],
+    "prereq": ["inference_rule.logic.propositional.contraposition", "concept.logic.induction"],
+    "derives_from": ["inference_rule.logic.propositional.contraposition"],
+    "confidence": 0.98,
+    "tags": ["paradox", "ravens", "hempel", "confirmation"],
+    "tier_extensions": {
+      "category": "paradox"
+    }
+  },
+  {
+    "id": "paradox.logic.epistemic.surprise_exam",
+    "schema_version": "3.2",
+    "domain": "logic.paradoxes",
+    "subtopic": "logic.paradoxes.epistemic",
+    "tier": "logic",
+    "type": "paradox",
+    "statement": "Учитель объявляет экзамен на одной из недель неожиданно; индукция с конца недели показывает, что экзамен невозможен, но он происходит.",
+    "formal_notation": "Surprise(day_n) → ¬Predict(day_n);   обратная индукция исключает все дни",
+    "conditions": "Сильная интерпретация «неожиданности» как предсказуемой невозможности",
+    "limits": ["Существуют формализации, разрешающие парадокс через эпистемическую логику"],
+    "prereq": ["concept.logic.modal.knowledge", "inference_rule.logic.proof.induction"],
+    "derives_from": [],
+    "confidence": 0.95,
+    "tags": ["paradox", "surprise_exam", "epistemic", "induction"],
+    "tier_extensions": {
+      "category": "paradox"
+    }
+  },
+  {
+    "id": "paradox.logic.epistemic.gettier",
+    "schema_version": "3.2",
+    "domain": "logic.paradoxes",
+    "subtopic": "logic.paradoxes.epistemic",
+    "tier": "logic",
+    "type": "paradox",
+    "statement": "Истинное обоснованное убеждение не всегда является знанием: возможны случаи случайного совпадения обоснования с истиной.",
+    "formal_notation": "JTB(S, P) ⊬ K(S, P) — контрпримеры Геттье",
+    "conditions": "Классическое определение знания как обоснованного истинного убеждения",
+    "prereq": ["concept.logic.epistemic_status", "concept.logic.justification"],
+    "derives_from": [],
+    "confidence": 0.97,
+    "tags": ["paradox", "gettier", "epistemic", "knowledge"],
+    "tier_extensions": {
+      "category": "paradox"
+    }
+  },
+  {
+    "id": "paradox.logic.set_theory.barber",
+    "schema_version": "3.2",
+    "domain": "logic.paradoxes",
+    "subtopic": "logic.paradoxes.logical",
+    "tier": "logic",
+    "type": "paradox",
+    "statement": "Брадобрей бреет всех, кто не бреется сам; вопрос о том, бреет ли он себя, ведёт к противоречию.",
+    "formal_notation": "Shaves(b, x) ⟺ ¬Shaves(x, x);   подстановка x=b → противоречие",
+    "conditions": "Популярная иллюстрация парадокса Рассела",
+    "limits": ["Разрешается выводом: такого брадобрея не существует"],
+    "prereq": ["paradox.logic.set_theory.russell", "concept.logic.self_reference"],
+    "derives_from": ["paradox.logic.set_theory.russell"],
+    "confidence": 1.0,
+    "tags": ["paradox", "barber", "russell", "self_reference"],
+    "tier_extensions": {
+      "category": "paradox"
+    }
+  },
+  {
+    "id": "paradox.logic.epistemic.newcomb",
+    "schema_version": "3.2",
+    "domain": "logic.paradoxes",
+    "subtopic": "logic.paradoxes.epistemic",
+    "tier": "logic",
+    "type": "paradox",
+    "statement": "Принцип доминирования и принцип ожидаемой полезности дают противоположные ответы в задаче с предсказателем.",
+    "formal_notation": "EU(one_box) > EU(two_boxes) при надёжном предсказателе; Dominance: two_boxes",
+    "conditions": "Предсказатель достоверно угадывает выбор агента до выбора",
+    "prereq": ["concept.logic.rational_choice", "concept.math.probability.conditional"],
+    "derives_from": [],
+    "confidence": 0.92,
+    "tags": ["paradox", "newcomb", "decision_theory", "epistemic"],
+    "tier_extensions": {
+      "category": "paradox"
+    }
+  }
+]

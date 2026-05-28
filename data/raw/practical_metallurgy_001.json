@@ -1,0 +1,638 @@
+[
+  {
+    "id": "process.metallurgy.steel.bof",
+    "schema_version": "3.2",
+    "domain": "metallurgy.ferrous",
+    "subtopic": "practical.metallurgy.ferrous",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Кислородно-конвертерный передел: продувка жидкого чугуна технически чистым кислородом через водоохлаждаемую фурму с окислением C, Si, Mn, P до получения стали.",
+    "formal_notation": "C + 1/2 O₂ → CO; Si + O₂ → SiO₂; 2P + 5/2 O₂ → P₂O₅; T ~ 1600–1700°C; цикл 35–45 мин",
+    "conditions": "Чугун 1250–1350°C с C 4.0–4.5%; O₂ чистоты ≥99.5%; футеровка периклаз-углеродная; садка 100–350 т",
+    "limits": [
+      "Доля скрапа не более 25–30% от шихты",
+      "Высокий P в чугуне требует двушлакового режима",
+      "Без чистого O₂ невозможно — воздух даёт N₂-загрязнение"
+    ],
+    "prereq": ["process.metallurgy.iron.blast_furnace", "concept.chemistry.redox", "material.metallurgy.iron.pig_iron"],
+    "derives_from": [],
+    "confidence": 0.97,
+    "tags": ["bof", "steel", "converter", "oxygen", "ferrous"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.98,
+      "safety_critical": true,
+      "safety_notes": "Выброс CO при продувке; взрыв при попадании влаги; температура расплава до 1700°C"
+    }
+  },
+  {
+    "id": "process.metallurgy.steel.eaf",
+    "schema_version": "3.2",
+    "domain": "metallurgy.ferrous",
+    "subtopic": "practical.metallurgy.ferrous",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Электродуговая плавка стали из стального скрапа дугой между графитовыми электродами и шихтой в футерованной печи переменного или постоянного тока.",
+    "formal_notation": "Электрическая дуга 25–40 В на электрод; ток 30–80 кА; удельный расход 380–450 кВт·ч/т",
+    "conditions": "Скрап + металлизованные окатыши (DRI); графитовые электроды ø 600–750 мм; садка 50–300 т",
+    "limits": [
+      "Чувствительна к примесям Cu, Sn в скрапе — не удаляются окислением",
+      "Высокий расход электроэнергии требует сетевой инфраструктуры",
+      "Графитовые электроды расходуются 1.5–2.5 кг/т стали"
+    ],
+    "prereq": ["material.metallurgy.scrap.steel", "concept.physics.electric_arc"],
+    "derives_from": [],
+    "confidence": 0.97,
+    "tags": ["eaf", "steel", "electric_arc", "scrap", "ferrous"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.97,
+      "safety_critical": true,
+      "safety_notes": "Высокое напряжение и ток; ультрафиолет дуги; выброс расплава при попадании закрытых полостей в скрапе"
+    }
+  },
+  {
+    "id": "process.metallurgy.iron.blast_furnace",
+    "schema_version": "3.2",
+    "domain": "metallurgy.ferrous",
+    "subtopic": "practical.metallurgy.ferrous",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Доменный процесс восстанавливает железо из агломерата и окатышей коксом и оксидом углерода в шахтной печи противотока с непрерывным выпуском чугуна и шлака.",
+    "formal_notation": "Fe₂O₃ + 3CO → 2Fe + 3CO₂; C + CO₂ → 2CO (реакция Будуара); T низа 1900–2100°C",
+    "conditions": "Кокс, агломерат, известняк; дутьё горячее 1100–1250°C; высота печи 30–40 м; объём 2000–5500 м³",
+    "limits": [
+      "Только для богатых Fe-руд после агломерации/окомкования",
+      "Кокс необходим — заменяется частично пылеугольным вдуванием",
+      "Накопление шлака требует постоянного выпуска"
+    ],
+    "prereq": ["material.metallurgy.coke", "concept.chemistry.reduction", "material.geology.iron_ore"],
+    "derives_from": [],
+    "confidence": 0.97,
+    "tags": ["blast_furnace", "iron", "coke", "reduction", "ferrous"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.98,
+      "safety_critical": true,
+      "safety_notes": "Выброс доменного газа с CO 25–30%; высокотемпературный чугун; риск прогара горна"
+    }
+  },
+  {
+    "id": "process.metallurgy.steel.continuous_casting",
+    "schema_version": "3.2",
+    "domain": "metallurgy.ferrous",
+    "subtopic": "practical.metallurgy.ferrous",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Непрерывная разливка стали через водоохлаждаемый медный кристаллизатор с формированием корки на поверхности слитка и его вытягиванием на роликовый рольганг.",
+    "formal_notation": "Скорость вытяжки 0.6–6 м/мин; теплоотвод в кристаллизаторе 1.5–2.5 МВт/м²",
+    "conditions": "Жидкая сталь 1520–1560°C; кристаллизатор Cu с покрытием Ni/Cr; защитный шлак",
+    "limits": [
+      "Перерыв разливки приводит к зависанию слитка",
+      "Прорыв корки даёт аварийный выход расплава",
+      "Не применима для слитков массой выше 30 т единичной массы"
+    ],
+    "prereq": ["process.metallurgy.steel.bof", "concept.physics.heat_transfer"],
+    "derives_from": [],
+    "confidence": 0.96,
+    "tags": ["continuous_casting", "steel", "crystallizer", "ferrous"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.96,
+      "safety_critical": true,
+      "safety_notes": "Прорыв корки слитка — выход 1500°C стали; обязательная аварийная остановка"
+    }
+  },
+  {
+    "id": "process.metallurgy.steel.hot_rolling",
+    "schema_version": "3.2",
+    "domain": "metallurgy.ferrous",
+    "subtopic": "practical.metallurgy.ferrous",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Горячая прокатка стали при T выше точки рекристаллизации обжимает слиток или сляб между валками с уменьшением сечения и измельчением зерна.",
+    "formal_notation": "T прокатки 1100–1250°C; относительное обжатие 15–40% за проход; ε̇ 1–100 с⁻¹",
+    "conditions": "Сляб/блюм после непрерывной разливки; валки из легированной стали; смазка водой и окалиной",
+    "limits": [
+      "Качество поверхности уступает холодной прокатке",
+      "Толщина листа ограничена 1.2–1.5 мм снизу",
+      "Образование вторичной окалины на поверхности"
+    ],
+    "prereq": ["process.metallurgy.steel.continuous_casting", "mechanism.metallurgy.recrystallization"],
+    "derives_from": [],
+    "confidence": 0.96,
+    "tags": ["hot_rolling", "steel", "deformation", "ferrous"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.97,
+      "safety_critical": true,
+      "safety_notes": "Раскалённый прокат и окалина; усилия прокатки до 30 МН; обязательное ограждение клетей"
+    }
+  },
+  {
+    "id": "process.metallurgy.steel.cold_rolling",
+    "schema_version": "3.2",
+    "domain": "metallurgy.ferrous",
+    "subtopic": "practical.metallurgy.ferrous",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Холодная прокатка ниже температуры рекристаллизации даёт точный размер и наклёп с упрочнением металла без фазовых превращений.",
+    "formal_notation": "T < 0.3·T_пл; суммарное обжатие 50–90%; рост σ_в 20–60% от наклёпа",
+    "conditions": "Подкат после горячей прокатки и травления; эмульсия на минеральном масле; усилие до 25 МН",
+    "limits": [
+      "Промежуточный отжиг при обжатии выше 70%",
+      "Невозможна без предварительной горячей прокатки",
+      "Поверхностные дефекты подката переходят в готовый лист"
+    ],
+    "prereq": ["process.metallurgy.steel.hot_rolling", "mechanism.metallurgy.work_hardening"],
+    "derives_from": [],
+    "confidence": 0.95,
+    "tags": ["cold_rolling", "steel", "work_hardening", "ferrous"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.97,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "process.metallurgy.casting.sand",
+    "schema_version": "3.2",
+    "domain": "metallurgy.foundry",
+    "subtopic": "practical.metallurgy.ferrous",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Литьё в песчано-глинистые формы заливает расплав в одноразовую форму из формовочной смеси с моделью отливки и стержнями для внутренних полостей.",
+    "formal_notation": "Кварцевый песок 90–95% + бентонит 6–10% + вода 3–5%; прочность сырой формы 0.05–0.2 МПа",
+    "conditions": "Формовочный песок зернистость 0.1–0.4 мм; температура заливки чугуна 1350–1450°C; стали 1550–1620°C",
+    "limits": [
+      "Точность размеров не выше 14 квалитета",
+      "Шероховатость поверхности Ra 12.5–50 мкм",
+      "Не подходит для тонкостенных деталей менее 3 мм"
+    ],
+    "prereq": ["concept.physics.solidification", "material.geology.silica_sand"],
+    "derives_from": [],
+    "confidence": 0.96,
+    "tags": ["casting", "sand", "foundry", "mold"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.93,
+      "safety_critical": true,
+      "safety_notes": "Выброс расплава при влажной форме; пары металла и SiO₂-пыль; ожог при разрушении формы"
+    }
+  },
+  {
+    "id": "process.metallurgy.casting.investment",
+    "schema_version": "3.2",
+    "domain": "metallurgy.foundry",
+    "subtopic": "practical.metallurgy.ferrous",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Литьё по выплавляемым моделям формирует керамическую оболочку вокруг восковой модели, выплавляет воск и заливает расплав в полученную форму.",
+    "formal_notation": "Слои оболочки 5–9; прокалка 900–1050°C; точность IT 7–9",
+    "conditions": "Модельный состав парафин-стеарин 50:50; суспензия этилсиликат + кварцевый порошок",
+    "limits": [
+      "Высокая стоимость на единицу отливки",
+      "Размер отливки до ~500 мм по габариту",
+      "Длительный цикл изготовления формы 1–3 суток"
+    ],
+    "prereq": ["process.metallurgy.casting.sand"],
+    "derives_from": [],
+    "confidence": 0.93,
+    "tags": ["investment_casting", "lost_wax", "foundry", "precision"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.95,
+      "safety_critical": true,
+      "safety_notes": "Горячая оболочка 900°C при заливке; пары воска; СИЗ от расплава"
+    }
+  },
+  {
+    "id": "process.metallurgy.casting.die",
+    "schema_version": "3.2",
+    "domain": "metallurgy.foundry",
+    "subtopic": "practical.metallurgy.ferrous",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Литьё под давлением запрессовывает расплав цветного сплава в стальную пресс-форму под давлением 30–200 МПа со скоростью впрыска 30–80 м/с.",
+    "formal_notation": "P впрыска 30–200 МПа; v впрыска 30–80 м/с; цикл 10–120 с",
+    "conditions": "Сплавы Al, Mg, Zn; пресс-форма из стали 4Х5МФС или H13; смазка штампа на водной основе",
+    "limits": [
+      "Только для сплавов с T_пл ниже 700°C при холоднокамерной машине типа Zn",
+      "Пористость от воздуха при высокой скорости впрыска",
+      "Не применимо для сталей и чугунов"
+    ],
+    "prereq": ["material.metallurgy.alloy.aluminum"],
+    "derives_from": [],
+    "confidence": 0.95,
+    "tags": ["die_casting", "high_pressure", "aluminum", "foundry"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.96,
+      "safety_critical": true,
+      "safety_notes": "Высокое давление в форме; выброс расплава при потере герметичности; контакт расплава с водой"
+    }
+  },
+  {
+    "id": "process.metallurgy.forging.open_die",
+    "schema_version": "3.2",
+    "domain": "metallurgy.forming",
+    "subtopic": "practical.metallurgy.ferrous",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Свободная ковка деформирует нагретую заготовку плоскими бойками без замкнутой формы с осадкой, протяжкой и прошивкой как основными операциями.",
+    "formal_notation": "T ковки стали 1100–1250°C; усилие пресса 5–150 МН; молоты 1–25 т",
+    "conditions": "Слиток или прокат; нагрев в камерной печи; противоокалинная среда",
+    "limits": [
+      "Точность размеров низкая, припуски 5–20 мм",
+      "Невозможна для тонкостенных и сложных профилей",
+      "Большие припуски на механообработку"
+    ],
+    "prereq": ["mechanism.metallurgy.plastic_deformation"],
+    "derives_from": [],
+    "confidence": 0.95,
+    "tags": ["forging", "open_die", "deformation", "ferrous"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.96,
+      "safety_critical": true,
+      "safety_notes": "Горячий металл и окалина; удары молотом; вибрация и шум выше 100 дБ"
+    }
+  },
+  {
+    "id": "process.metallurgy.heat_treatment.quenching",
+    "schema_version": "3.2",
+    "domain": "metallurgy.heat_treatment",
+    "subtopic": "practical.metallurgy.heat_treatment",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Закалка стали — нагрев выше Ac₃ с быстрым охлаждением до температуры ниже точки начала мартенситного превращения с фиксацией пересыщенного твёрдого раствора углерода в α-Fe.",
+    "formal_notation": "γ-Fe → α'-мартенсит; T закалки 800–900°C; v охлаждения > v_кр",
+    "conditions": "Углеродистая или легированная сталь с C 0.3–1.2%; закалочная среда — вода, масло, водные полимеры",
+    "limits": [
+      "Низкоуглеродистые стали (C < 0.25%) практически не закаливаются",
+      "Большие сечения требуют легирования для прокаливаемости",
+      "Возможны закалочные трещины при резком охлаждении"
+    ],
+    "prereq": ["concept.metallurgy.martensite", "material.metallurgy.alloy.carbon_steel"],
+    "derives_from": [],
+    "confidence": 0.97,
+    "tags": ["quenching", "martensite", "heat_treatment", "steel"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.95,
+      "safety_critical": true,
+      "safety_notes": "Возгорание масла при перегреве ванны; брызги при погружении влажных деталей"
+    }
+  },
+  {
+    "id": "process.metallurgy.heat_treatment.tempering",
+    "schema_version": "3.2",
+    "domain": "metallurgy.heat_treatment",
+    "subtopic": "practical.metallurgy.heat_treatment",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Отпуск нагревает закалённую сталь ниже точки Ac₁ с распадом мартенсита, снижением остаточных напряжений и повышением вязкости при контролируемой потере твёрдости.",
+    "formal_notation": "T отпуска 150–650°C; продолжительность 1–4 ч; HRC ↓ при росте вязкости",
+    "conditions": "Закалённая сталь; печи с принудительной циркуляцией воздуха или соляные ванны",
+    "limits": [
+      "Зона отпускной хрупкости 250–400°C и 450–550°C для отдельных сталей",
+      "Длительный отпуск выше 600°C полностью устраняет упрочнение"
+    ],
+    "prereq": ["process.metallurgy.heat_treatment.quenching"],
+    "derives_from": [],
+    "confidence": 0.96,
+    "tags": ["tempering", "heat_treatment", "steel", "toughness"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.97,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "process.metallurgy.heat_treatment.annealing",
+    "schema_version": "3.2",
+    "domain": "metallurgy.heat_treatment",
+    "subtopic": "practical.metallurgy.heat_treatment",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Отжиг нагревает сталь выше критической точки с медленным охлаждением в печи для получения равновесной структуры феррит-перлит со снятием наклёпа и напряжений.",
+    "formal_notation": "T 750–900°C; v охлаждения 30–100°C/ч с печью",
+    "conditions": "Деформированная или литая сталь; защитная атмосфера N₂/H₂ против обезуглероживания",
+    "limits": [
+      "Не пригоден для упрочнения — снижает твёрдость",
+      "Длительный цикл 8–24 ч ограничивает производительность"
+    ],
+    "prereq": ["mechanism.metallurgy.recrystallization"],
+    "derives_from": [],
+    "confidence": 0.96,
+    "tags": ["annealing", "heat_treatment", "softening", "steel"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.98,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "process.metallurgy.heat_treatment.carburizing",
+    "schema_version": "3.2",
+    "domain": "metallurgy.heat_treatment",
+    "subtopic": "practical.metallurgy.heat_treatment",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Цементация насыщает поверхностный слой низкоуглеродистой стали углеродом из газовой или твёрдой среды при T выше Ac₃ с последующей закалкой и низким отпуском.",
+    "formal_notation": "CH₄ → [C] + 2H₂; глубина слоя 0.5–2 мм; T 900–950°C; время 4–12 ч",
+    "conditions": "Сталь с C 0.1–0.25%; атмосфера эндогаз + природный газ; вакуумная цементация при 1000°C",
+    "limits": [
+      "Невозможна для среднеуглеродистых и высокоуглеродистых сталей",
+      "Деформация деталей при последующей закалке",
+      "Хрупкая корка при перенасыщении углеродом"
+    ],
+    "prereq": ["concept.physics.diffusion", "process.metallurgy.heat_treatment.quenching"],
+    "derives_from": [],
+    "confidence": 0.95,
+    "tags": ["carburizing", "case_hardening", "surface_treatment", "steel"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.96,
+      "safety_critical": true,
+      "safety_notes": "Эндогаз содержит CO и H₂; риск утечки и взрыва; обязательная вентиляция и контроль атмосферы"
+    }
+  },
+  {
+    "id": "process.metallurgy.aluminum.bayer",
+    "schema_version": "3.2",
+    "domain": "metallurgy.nonferrous",
+    "subtopic": "practical.metallurgy.nonferrous",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Процесс Байера выщелачивает глинозём из боксита раствором NaOH под давлением с осаждением гидроксида алюминия и его последующим прокаливанием в Al₂O₃.",
+    "formal_notation": "Al₂O₃·H₂O + 2NaOH → 2NaAlO₂ + 2H₂O; T 200–250°C; P 25–40 атм",
+    "conditions": "Боксит с Al₂O₃ ≥45%; раствор NaOH 200–300 г/л; автоклавы из стали с футеровкой",
+    "limits": [
+      "Эффективен только на боксите — лимонит и каолин нерентабельны",
+      "Образует красный шлам как трудно утилизируемый отход",
+      "Не подходит для боксита с Si выше 7%"
+    ],
+    "prereq": ["material.geology.bauxite", "concept.chemistry.leaching"],
+    "derives_from": [],
+    "confidence": 0.97,
+    "tags": ["bayer", "alumina", "leaching", "aluminum", "nonferrous"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.97,
+      "safety_critical": true,
+      "safety_notes": "Концентрированная щёлочь под давлением 40 атм при 250°C; химические ожоги; разрывы автоклавов"
+    }
+  },
+  {
+    "id": "process.metallurgy.aluminum.hall_heroult",
+    "schema_version": "3.2",
+    "domain": "metallurgy.nonferrous",
+    "subtopic": "practical.metallurgy.nonferrous",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Электролиз Холла-Эру разлагает глинозём растворённый в расплавленном криолите с осаждением жидкого алюминия на угольном катоде и выделением CO₂ на угольных анодах.",
+    "formal_notation": "2Al₂O₃ + 3C → 4Al + 3CO₂; U 4.0–4.5 В; I 200–600 кА; 13–15 кВт·ч/кг Al",
+    "conditions": "Электролит криолит Na₃AlF₆ + 2–8% Al₂O₃; T 950–970°C; угольные аноды Soderberg или предобожжённые",
+    "limits": [
+      "Энергоёмкий — 13–16 кВт·ч на 1 кг алюминия",
+      "Выброс перфторуглеродов CF₄ при анодном эффекте",
+      "Нет промышленных альтернатив для первичного производства"
+    ],
+    "prereq": ["process.metallurgy.aluminum.bayer", "concept.electrochemistry.electrolysis"],
+    "derives_from": [],
+    "confidence": 0.97,
+    "tags": ["hall_heroult", "electrolysis", "aluminum", "cryolite", "nonferrous"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.98,
+      "safety_critical": true,
+      "safety_notes": "Расплав 950°C и токи 500 кА; выделение HF и CO; контакт расплава с водой → взрыв пара"
+    }
+  },
+  {
+    "id": "process.metallurgy.copper.flash_smelting",
+    "schema_version": "3.2",
+    "domain": "metallurgy.nonferrous",
+    "subtopic": "practical.metallurgy.nonferrous",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Взвешенная плавка медного концентрата в потоке кислородно-обогащённого дутья окисляет сульфиды с образованием медного штейна и шлака на лету в шахте печи.",
+    "formal_notation": "CuFeS₂ + O₂ → Cu₂S·FeS (штейн) + FeO + SO₂; обогащение O₂ 60–95%",
+    "conditions": "Сульфидный медный концентрат с Cu 25–35%; дутьё O₂ 60–95%; печь Outotec/Inco",
+    "limits": [
+      "Только для сульфидных руд",
+      "Требует обязательной утилизации SO₂ в серную кислоту",
+      "Не подходит для оксидных и силикатных руд меди"
+    ],
+    "prereq": ["material.geology.chalcopyrite", "concept.chemistry.oxidation"],
+    "derives_from": [],
+    "confidence": 0.94,
+    "tags": ["copper", "flash_smelting", "matte", "nonferrous"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.96,
+      "safety_critical": true,
+      "safety_notes": "Выделение SO₂; расплав 1200–1300°C; контакт штейна с водой"
+    }
+  },
+  {
+    "id": "process.metallurgy.copper.electrorefining",
+    "schema_version": "3.2",
+    "domain": "metallurgy.nonferrous",
+    "subtopic": "practical.metallurgy.nonferrous",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Электролитическое рафинирование меди растворяет анодную медь в сернокислом электролите и осаждает чистую медь на катоде с попутным выпадением шлама с Au, Ag, Pt.",
+    "formal_notation": "Cu(анод) → Cu²⁺ + 2e⁻; Cu²⁺ + 2e⁻ → Cu(катод); U 0.2–0.3 В; J 200–350 А/м²",
+    "conditions": "Электролит CuSO₄ 40–50 г/л + H₂SO₄ 150–200 г/л; T 60–65°C; цикл 14–21 сут",
+    "limits": [
+      "Чувствителен к As и Sb в анодах — пассивация",
+      "Низкая скорость осаждения по сравнению с пирометаллургией"
+    ],
+    "prereq": ["process.metallurgy.copper.flash_smelting", "concept.electrochemistry.electrolysis"],
+    "derives_from": [],
+    "confidence": 0.96,
+    "tags": ["copper", "electrorefining", "cathode", "nonferrous"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.98,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "process.metallurgy.titanium.kroll",
+    "schema_version": "3.2",
+    "domain": "metallurgy.nonferrous",
+    "subtopic": "practical.metallurgy.nonferrous",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Процесс Кролла восстанавливает тетрахлорид титана металлическим магнием в инертной атмосфере с образованием титановой губки и хлорида магния.",
+    "formal_notation": "TiCl₄ + 2Mg → Ti + 2MgCl₂; T 800–900°C; атмосфера Ar",
+    "conditions": "TiCl₄ ≥99.9%; Mg расплавленный; стальной реактор с антикоррозионной футеровкой",
+    "limits": [
+      "Периодический процесс — 4–6 суток на цикл",
+      "Высокая стоимость по сравнению с алюминием и сталью",
+      "Невозможен переход на непрерывное производство в большом масштабе"
+    ],
+    "prereq": ["material.metallurgy.alloy.titanium", "concept.chemistry.reduction"],
+    "derives_from": [],
+    "confidence": 0.95,
+    "tags": ["titanium", "kroll", "sponge", "nonferrous"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.95,
+      "safety_critical": true,
+      "safety_notes": "TiCl₄ гидролизуется с выделением HCl; Mg горит на воздухе; работа в Ar-атмосфере"
+    }
+  },
+  {
+    "id": "material.metallurgy.alloy.carbon_steel",
+    "schema_version": "3.2",
+    "domain": "metallurgy.materials",
+    "subtopic": "practical.metallurgy.ferrous",
+    "tier": "practical",
+    "type": "material",
+    "statement": "Углеродистая сталь — сплав железа с углеродом 0.02–2.14% без значимых легирующих элементов с микроструктурой феррит, перлит, цементит в зависимости от %C.",
+    "formal_notation": "Fe + C (0.02–2.14%); σ_в 300–900 МПа; HB 120–250",
+    "conditions": "Нормализованное или горячекатаное состояние; марки Ст3, Ст5, 20, 45, У8",
+    "limits": [
+      "Низкая коррозионная стойкость — требует покрытий",
+      "Прокаливаемость ограничена сечением 30–50 мм",
+      "Снижение прочности выше 400°C"
+    ],
+    "prereq": ["process.metallurgy.steel.bof"],
+    "derives_from": [],
+    "confidence": 0.98,
+    "tags": ["carbon_steel", "ferrite", "pearlite", "alloy"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.99,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "material.metallurgy.alloy.stainless_steel",
+    "schema_version": "3.2",
+    "domain": "metallurgy.materials",
+    "subtopic": "practical.metallurgy.ferrous",
+    "tier": "practical",
+    "type": "material",
+    "statement": "Нержавеющая сталь — сплав железа с хромом не менее 10.5% и часто Ni, Mo, N с пассивной плёнкой Cr₂O₃ как механизмом коррозионной стойкости.",
+    "formal_notation": "Fe + Cr ≥10.5% + Ni 8–18% + Mo 0–6%; AISI 304 (18Cr-8Ni), 316 (18Cr-10Ni-2Mo)",
+    "conditions": "Аустенитная при Ni ≥8%; ферритная без Ni; мартенситная при C >0.1%",
+    "limits": [
+      "Аустенитные склонны к МКК после сварки без стабилизации Ti или Nb",
+      "Высокая стоимость Ni и Mo",
+      "Питтинговая коррозия в средах с Cl⁻"
+    ],
+    "prereq": ["material.metallurgy.alloy.carbon_steel", "mechanism.chemistry.passivation"],
+    "derives_from": [],
+    "confidence": 0.97,
+    "tags": ["stainless_steel", "chromium", "corrosion", "alloy"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.98,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "material.metallurgy.alloy.aluminum",
+    "schema_version": "3.2",
+    "domain": "metallurgy.materials",
+    "subtopic": "practical.metallurgy.nonferrous",
+    "tier": "practical",
+    "type": "material",
+    "statement": "Алюминиевые сплавы делятся на деформируемые и литейные с упрочнением от твёрдого раствора, наклёпа или дисперсионного твердения через выделение фаз Mg₂Si, CuAl₂, Al₃Sc.",
+    "formal_notation": "Al + Cu/Mg/Si/Zn 0.5–8%; ρ 2.65–2.85 г/см³; σ_в 200–700 МПа",
+    "conditions": "Серии 2xxx (Al-Cu), 5xxx (Al-Mg), 6xxx (Al-Mg-Si), 7xxx (Al-Zn-Mg)",
+    "limits": [
+      "Снижение прочности выше 150–200°C",
+      "Сложная сварка серии 2xxx и 7xxx из-за трещинообразования",
+      "Гальваническая коррозия в контакте со сталью"
+    ],
+    "prereq": ["process.metallurgy.aluminum.hall_heroult", "mechanism.metallurgy.precipitation_hardening"],
+    "derives_from": [],
+    "confidence": 0.96,
+    "tags": ["aluminum", "alloy", "precipitation", "nonferrous"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.98,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "material.metallurgy.alloy.copper",
+    "schema_version": "3.2",
+    "domain": "metallurgy.materials",
+    "subtopic": "practical.metallurgy.nonferrous",
+    "tier": "practical",
+    "type": "material",
+    "statement": "Медные сплавы — латуни Cu-Zn, бронзы Cu-Sn/Al/Be и медно-никелевые сплавы с высокой электропроводностью, теплопроводностью и коррозионной стойкостью в морской воде.",
+    "formal_notation": "Латунь Cu+Zn 5–40%; бронза оловянная Cu+Sn 5–12%; мельхиор Cu+Ni 18–25%",
+    "conditions": "Однофазные α-латуни Zn до 39%; двухфазные α+β при Zn 39–46%",
+    "limits": [
+      "Дезинкование β-латуней в кислых средах",
+      "Высокая стоимость Be в бериллиевых бронзах + токсичность пыли",
+      "Снижение прочности выше 200°C"
+    ],
+    "prereq": ["process.metallurgy.copper.electrorefining"],
+    "derives_from": [],
+    "confidence": 0.96,
+    "tags": ["copper_alloy", "brass", "bronze", "nonferrous"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.98,
+      "safety_critical": true,
+      "safety_notes": "Пыль и пары Be канцерогенны; обязательная вытяжка и СИЗ при обработке Cu-Be"
+    }
+  },
+  {
+    "id": "mechanism.metallurgy.precipitation_hardening",
+    "schema_version": "3.2",
+    "domain": "metallurgy.materials",
+    "subtopic": "practical.metallurgy.heat_treatment",
+    "tier": "practical",
+    "type": "mechanism",
+    "statement": "Дисперсионное твердение упрочняет сплав через выделение когерентных или полукогерентных нановыделений второй фазы из пересыщенного твёрдого раствора при старении.",
+    "formal_notation": "Δσ ~ Gb·√(f/r); зоны GP → θ″ → θ′ → θ; T старения 100–200°C для Al-Cu",
+    "conditions": "Сплавы Al-Cu, Al-Mg-Si, Al-Zn-Mg, Ni-суперсплавы, мартенситостареющие стали",
+    "limits": [
+      "Перестаривание снижает прочность",
+      "Эффект исчезает при T выше температуры старения"
+    ],
+    "prereq": ["concept.metallurgy.solid_solution", "concept.metallurgy.dislocation"],
+    "derives_from": [],
+    "confidence": 0.92,
+    "tags": ["precipitation", "aging", "hardening", "alloy"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.95,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "mechanism.metallurgy.recrystallization",
+    "schema_version": "3.2",
+    "domain": "metallurgy.materials",
+    "subtopic": "practical.metallurgy.heat_treatment",
+    "tier": "practical",
+    "type": "mechanism",
+    "statement": "Рекристаллизация заменяет деформированную структуру с дислокациями новыми равноосными зёрнами через зарождение и рост при нагреве выше 0.4·T_пл деформированного металла.",
+    "formal_notation": "T_рекр ≈ 0.4·T_пл (К); кинетика по Аврами; X = 1 − exp(−k·t^n)",
+    "conditions": "Степень деформации выше критической 5–10%; T нагрева выше T_рекр",
+    "limits": [
+      "Невозможна без предварительной деформации",
+      "Критическая деформация даёт крупное зерно при отжиге"
+    ],
+    "prereq": ["mechanism.metallurgy.work_hardening", "concept.physics.diffusion"],
+    "derives_from": [],
+    "confidence": 0.93,
+    "tags": ["recrystallization", "grain", "annealing", "deformation"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.97,
+      "safety_critical": false
+    }
+  }
+]

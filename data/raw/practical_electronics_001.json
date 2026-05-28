@@ -1,0 +1,631 @@
+[
+  {
+    "id": "technology.electronics.semiconductor.diode_pn",
+    "schema_version": "3.2",
+    "domain": "electronics.semiconductors",
+    "subtopic": "practical.electronics.semiconductors",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Полупроводниковый диод p-n пропускает ток при прямом смещении сверх барьерного напряжения и блокирует ток при обратном смещении до напряжения пробоя.",
+    "formal_notation": "I = I_s·(exp(qU/(nkT)) − 1); U_пр Si ≈ 0.6–0.7 В; Ge ≈ 0.3 В",
+    "conditions": "Si или Ge монокристалл с диффузионным или эпитаксиальным переходом; T −55…+150°C",
+    "limits": [
+      "Лавинный или туннельный пробой при обратном напряжении > U_проб",
+      "Утечка растёт экспоненциально с T",
+      "Высокочастотные ограничения накопленным зарядом"
+    ],
+    "prereq": ["mechanism.physics.semiconductor.pn_junction"],
+    "derives_from": [],
+    "confidence": 0.98,
+    "tags": ["diode", "semiconductor", "pn", "rectifier"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.99,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "technology.electronics.semiconductor.bjt",
+    "schema_version": "3.2",
+    "domain": "electronics.semiconductors",
+    "subtopic": "practical.electronics.semiconductors",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Биполярный транзистор содержит два p-n перехода с тонкой базой между эмиттером и коллектором и управляет коллекторным током инжекцией малого тока базы.",
+    "formal_notation": "I_C = β·I_B; β 50–500; U_BE ≈ 0.7 В Si; f_T 1 МГц–500 ГГц",
+    "conditions": "Структура NPN или PNP; активный режим U_BE>U_BE0, U_CB>0; T −55…+150°C",
+    "limits": [
+      "Тепловой пробой при положительной обратной связи I_C(T)",
+      "Эффект Эрли — модуляция ширины базы коллекторным напряжением",
+      "Насыщение при U_CE < 0.2 В"
+    ],
+    "prereq": ["mechanism.physics.semiconductor.pn_junction", "concept.physics.semiconductor.minority_carrier"],
+    "derives_from": [],
+    "confidence": 0.97,
+    "tags": ["bjt", "transistor", "current", "semiconductor"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.99,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "technology.electronics.semiconductor.mosfet",
+    "schema_version": "3.2",
+    "domain": "electronics.semiconductors",
+    "subtopic": "practical.electronics.semiconductors",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "MOSFET управляет током канала сток-исток электрическим полем затвора через тонкий слой диэлектрика SiO₂ с инверсионным каналом, образующимся при U_GS>U_th.",
+    "formal_notation": "I_D = μ·C_ox·(W/L)·((U_GS−U_th)·U_DS − U_DS²/2); насыщение I_D ∝ (U_GS−U_th)²",
+    "conditions": "Подложка p или n; затвор поликремний или металл; T_ox 1–10 нм современного техпроцесса",
+    "limits": [
+      "Пробой подзатворного оксида при превышении напряжения",
+      "Утечка канала и затвора масштабируется с уменьшением T_ox",
+      "Чувствителен к статическому электричеству"
+    ],
+    "prereq": ["concept.physics.semiconductor.doping", "concept.physics.electric_field"],
+    "derives_from": [],
+    "confidence": 0.97,
+    "tags": ["mosfet", "transistor", "field_effect", "semiconductor"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.99,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "technology.electronics.logic.cmos",
+    "schema_version": "3.2",
+    "domain": "electronics.semiconductors",
+    "subtopic": "practical.electronics.semiconductors",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "КМОП-логика комбинирует pMOS-нагрузку и nMOS-ключ в комплементарной паре с нулевым статическим током и переключением заряда вентильной ёмкости в динамическом режиме.",
+    "formal_notation": "P = α·C·U²·f + I_утечки·U; шумовая невосприимчивость ≈ U/2",
+    "conditions": "Питание U_dd 0.6–5 В; библиотеки техпроцесса 180 нм–3 нм; T_оп −40…+125°C",
+    "limits": [
+      "Статический ток растёт со снижением T_ox и L",
+      "Защёлкивание (latch-up) при паразитном тиристорном эффекте",
+      "Глубокая субмикронная вариативность параметров"
+    ],
+    "prereq": ["technology.electronics.semiconductor.mosfet"],
+    "derives_from": [],
+    "confidence": 0.97,
+    "tags": ["cmos", "logic", "low_power", "vlsi"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.99,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "concept.electronics.logic.nand_gate",
+    "schema_version": "3.2",
+    "domain": "electronics.logic",
+    "subtopic": "practical.electronics.semiconductors",
+    "tier": "practical",
+    "type": "concept",
+    "statement": "Логический вентиль NAND выдаёт логический 0 только при одновременной 1 на всех входах с реализацией в КМОП последовательной pMOS-подтяжкой и параллельной nMOS-разрядкой.",
+    "formal_notation": "Y = ¬(A ∧ B); таблица истинности NAND функционально полная",
+    "conditions": "U_dd 1.0–5 В; пороги V_IH/V_IL по стандарту техпроцесса",
+    "limits": [
+      "Длинные цепочки последовательных pMOS снижают быстродействие",
+      "Шумы выше V_IH/V_IL вызывают сбои переключения"
+    ],
+    "prereq": ["technology.electronics.logic.cmos", "concept.logic.boolean"],
+    "derives_from": [],
+    "confidence": 0.99,
+    "tags": ["nand", "gate", "logic", "cmos"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.99,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "concept.electronics.logic.flip_flop",
+    "schema_version": "3.2",
+    "domain": "electronics.logic",
+    "subtopic": "practical.electronics.semiconductors",
+    "tier": "practical",
+    "type": "concept",
+    "statement": "Триггер D хранит один бит на тактовом фронте через ведущий-ведомый или master-slave с защёлками, синхронизирующими данные по перепаду тактового сигнала.",
+    "formal_notation": "Q_new = D при clk↑; t_setup, t_hold относительно фронта clk",
+    "conditions": "Питание U_dd согласовано с предшественником; тактовая частота ≤ 1/(t_clk-q + t_logic + t_setup)",
+    "limits": [
+      "Нарушение setup/hold даёт метастабильность с неопределённым выходом",
+      "Сигналы из других тактовых доменов требуют синхронизаторов"
+    ],
+    "prereq": ["concept.electronics.logic.nand_gate"],
+    "derives_from": [],
+    "confidence": 0.97,
+    "tags": ["flip_flop", "register", "sequential", "logic"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.99,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "process.electronics.fabrication.photolithography",
+    "schema_version": "3.2",
+    "domain": "electronics.fabrication",
+    "subtopic": "practical.electronics.fabrication",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Фотолитография переносит рисунок маски на резистивное покрытие пластины экспонированием через оптическую систему с последующим проявлением для травления или имплантации.",
+    "formal_notation": "Минимальный размер ~k·λ/NA; иммерсия ArF λ=193 нм; EUV λ=13.5 нм",
+    "conditions": "Кремниевая пластина 300 мм; чистая комната ISO 1–3; экспозиция от ArF до EUV сканера",
+    "limits": [
+      "Дифракционный предел требует двойного и тройного паттернинга на 7–14 нм",
+      "Стоимость EUV-сканера 150–200 млн $",
+      "Точность совмещения масок 1–2 нм на узлах ниже 7 нм"
+    ],
+    "prereq": ["concept.physics.optics.diffraction"],
+    "derives_from": [],
+    "confidence": 0.97,
+    "tags": ["lithography", "euv", "photomask", "fabrication"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.97,
+      "safety_critical": true,
+      "safety_notes": "EUV-источник на оловянной плазме при 200 кВт; УФ-излучение; химия резистов токсична"
+    }
+  },
+  {
+    "id": "process.electronics.fabrication.ion_implantation",
+    "schema_version": "3.2",
+    "domain": "electronics.fabrication",
+    "subtopic": "practical.electronics.fabrication",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Ионная имплантация легирует кремний внедрением разогнанных ионов B, P, As в вакууме с заданной дозой и глубиной профиля по энергии пучка.",
+    "formal_notation": "Доза 10¹¹–10¹⁶ ионов/см²; энергия 1 кэВ–3 МэВ; глубина 10 нм–3 мкм",
+    "conditions": "Вакуум ~10⁻⁶ Па; пучок ионов на расщепителе масс; пластина с фоторезистивной маской",
+    "limits": [
+      "Создаёт радиационные дефекты — требуется отжиг 900–1050°C",
+      "Каналирование вдоль кристаллографических направлений",
+      "Невозможно без последующей активации легирующей примеси"
+    ],
+    "prereq": ["concept.physics.semiconductor.doping"],
+    "derives_from": [],
+    "confidence": 0.95,
+    "tags": ["implantation", "doping", "fabrication", "ion_beam"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.98,
+      "safety_critical": true,
+      "safety_notes": "Источники AsH₃, PH₃, BF₃ токсичны и пирофорны; высокое напряжение и рентген"
+    }
+  },
+  {
+    "id": "process.electronics.fabrication.cvd",
+    "schema_version": "3.2",
+    "domain": "electronics.fabrication",
+    "subtopic": "practical.electronics.fabrication",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Химическое осаждение из газовой фазы наносит плёнки SiO₂, Si₃N₄, поликремния, металлов разложением прекурсоров на нагретой подложке в реакторе при пониженном давлении.",
+    "formal_notation": "SiH₄ + O₂ → SiO₂ + 2H₂; T 400–900°C; P 0.1–100 Па (LPCVD)",
+    "conditions": "Прекурсоры SiH₄, TEOS, WF₆, TiCl₄; нагреватель индукционный или резистивный; вакуумная камера",
+    "limits": [
+      "Высокие температуры ограничивают выбор подложки",
+      "Конформность профиля хуже у ALD",
+      "Образование частиц и поверхностных дефектов"
+    ],
+    "prereq": ["concept.physics.thin_film", "concept.chemistry.pyrolysis"],
+    "derives_from": [],
+    "confidence": 0.95,
+    "tags": ["cvd", "thin_film", "deposition", "fabrication"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.97,
+      "safety_critical": true,
+      "safety_notes": "SiH₄ пирофорен и взрывоопасен; WF₆ гидролизуется до HF; обязательная газовая сигнализация"
+    }
+  },
+  {
+    "id": "process.electronics.fabrication.etching",
+    "schema_version": "3.2",
+    "domain": "electronics.fabrication",
+    "subtopic": "practical.electronics.fabrication",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Сухое плазменное травление удаляет материал реактивными ионами в индуктивно связанной плазме или RIE-реакторе по маске резиста с высокой анизотропией профиля.",
+    "formal_notation": "SF₆ + Si → SiF₄; селективность к маске 10:1–100:1; скорость 10–1000 нм/мин",
+    "conditions": "Газы SF₆, CF₄, Cl₂, HBr; плазма 13.56 МГц; давление 0.1–10 Па",
+    "limits": [
+      "Повреждение поверхности ионной бомбардировкой",
+      "Селективность ниже у изотропного травления",
+      "Не применимо для глубоких отверстий без процесса Bosch"
+    ],
+    "prereq": ["concept.physics.plasma", "process.electronics.fabrication.photolithography"],
+    "derives_from": [],
+    "confidence": 0.94,
+    "tags": ["etching", "plasma", "rie", "fabrication"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.97,
+      "safety_critical": true,
+      "safety_notes": "Cl₂, HBr, F-содержащие газы токсичны и коррозионны; вакуум и УФ от плазмы"
+    }
+  },
+  {
+    "id": "technology.electronics.memory.dram",
+    "schema_version": "3.2",
+    "domain": "electronics.memory",
+    "subtopic": "practical.electronics.semiconductors",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "DRAM хранит бит как заряд на конденсаторе ячейки, доступ к которому открывается одним nMOS-транзистором со словарной линией с периодической регенерацией.",
+    "formal_notation": "1T1C-ячейка; C_s ~ 10–25 фФ; интервал регенерации 32–64 мс",
+    "conditions": "Питание массива 1.0–1.2 В; CMOS-периферия; ячейка 6F² на современных узлах",
+    "limits": [
+      "Утечка требует регенерации — память энергозависимая",
+      "Эффект row hammer вызывает программные сбои соседних строк",
+      "Не масштабируется ниже ~10 нм по конденсатору"
+    ],
+    "prereq": ["technology.electronics.semiconductor.mosfet"],
+    "derives_from": [],
+    "confidence": 0.96,
+    "tags": ["dram", "memory", "volatile", "1t1c"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.99,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "technology.electronics.memory.sram",
+    "schema_version": "3.2",
+    "domain": "electronics.memory",
+    "subtopic": "practical.electronics.semiconductors",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "SRAM хранит бит в защёлке из двух кросс-связанных инверторов на шести MOSFET с непрерывной подпиткой от U_dd без регенерации, но с большой площадью ячейки.",
+    "formal_notation": "Ячейка 6T; β-отношение pMOS/nMOS определяет статическую границу шума",
+    "conditions": "Питание U_dd 0.6–1.2 В; T_оп −40…+125°C; стандартные ячейки кэш-памяти процессоров",
+    "limits": [
+      "Низкая плотность по сравнению с DRAM",
+      "Соотношение pull-up/pull-down/pass-gate критично для устойчивости",
+      "Высокая статическая утечка на глубоких субмикронных техпроцессах"
+    ],
+    "prereq": ["technology.electronics.logic.cmos", "concept.electronics.logic.flip_flop"],
+    "derives_from": [],
+    "confidence": 0.97,
+    "tags": ["sram", "cache", "memory", "cmos"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.99,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "technology.electronics.memory.flash_nand",
+    "schema_version": "3.2",
+    "domain": "electronics.memory",
+    "subtopic": "practical.electronics.semiconductors",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "NAND-флэш хранит данные зарядом плавающего затвора или ловушками заряда в нитриде с программированием туннелированием Фаулера-Нордгейма по битовой и словной линии.",
+    "formal_notation": "U_прог 15–22 В; стирание блоками 256 КБ–4 МБ; QLC хранит 4 бита/ячейку",
+    "conditions": "Структура 3D NAND 96–232 слоя; контроллер с FTL, ECC и wear leveling",
+    "limits": [
+      "Ограничен ресурс ~10³ циклов QLC, ~10⁵ SLC",
+      "Стирание только большими блоками",
+      "Деградация удержания заряда со временем и T"
+    ],
+    "prereq": ["technology.electronics.semiconductor.mosfet", "effect.physics.tunneling"],
+    "derives_from": [],
+    "confidence": 0.95,
+    "tags": ["flash", "nand", "ssd", "nonvolatile"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.98,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "technology.electronics.pcb.multilayer",
+    "schema_version": "3.2",
+    "domain": "electronics.assembly",
+    "subtopic": "practical.electronics.semiconductors",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Многослойная печатная плата прессует слои стеклоэпоксида FR-4 с медной фольгой и переходные отверстия с гальваническим осаждением Cu, обеспечивая разводку плотных межсоединений.",
+    "formal_notation": "FR-4 ε_r 4.2–4.7; tg δ 0.02; импеданс линии 50/75/100 Ω по согласованию",
+    "conditions": "Слои 4–32; толщина платы 0.4–3.2 мм; ширина проводника 75–500 мкм",
+    "limits": [
+      "Потери выше 10 ГГц требуют материалов Rogers, PTFE",
+      "Сложность переходов между слоями (via stitching)",
+      "Несбалансированный наполнитель ведёт к короблению"
+    ],
+    "prereq": ["material.electronics.fr4", "concept.electronics.transmission_line"],
+    "derives_from": [],
+    "confidence": 0.96,
+    "tags": ["pcb", "multilayer", "fr4", "assembly"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.99,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "technology.electronics.led",
+    "schema_version": "3.2",
+    "domain": "electronics.photonics",
+    "subtopic": "practical.electronics.semiconductors",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Светодиод генерирует свет рекомбинацией электрон-дырочных пар в активной области p-n перехода прямозонного полупроводника GaN, InGaN, AlGaInP с длиной волны по ширине запрещённой зоны.",
+    "formal_notation": "λ = h·c/E_g; синий GaN E_g 3.4 эВ; красный AlGaInP 1.9 эВ; η до 60% wall-plug",
+    "conditions": "Прямозонные полупроводники; ток 1–700 мА на кристалл; теплоотвод обязателен",
+    "limits": [
+      "Эффективность падает при высоких плотностях тока (droop)",
+      "Деградация люминофора белых LED со временем",
+      "Не работает в режиме обратного смещения"
+    ],
+    "prereq": ["mechanism.physics.semiconductor.pn_junction", "concept.physics.semiconductor.band_gap"],
+    "derives_from": [],
+    "confidence": 0.97,
+    "tags": ["led", "photonics", "gan", "ingan"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.99,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "concept.electronics.opamp",
+    "schema_version": "3.2",
+    "domain": "electronics.analog",
+    "subtopic": "practical.electronics.semiconductors",
+    "tier": "practical",
+    "type": "concept",
+    "statement": "Операционный усилитель имеет высокий дифференциальный коэффициент усиления, малый входной ток и низкий выходной импеданс, поведение в петле обратной связи задаётся внешними элементами.",
+    "formal_notation": "U_вых = A·(U+ − U−); A 10⁵–10⁷; единичное усиление f_t 1 МГц–1 ГГц",
+    "conditions": "Биполярное или однополярное питание; температурный диапазон по семейству",
+    "limits": [
+      "Скорость нарастания slew rate ограничивает большие сигналы",
+      "Смещение нуля и дрейф со временем и T",
+      "Полоса пропускания падает с ростом усиления"
+    ],
+    "prereq": ["technology.electronics.semiconductor.bjt", "concept.electronics.feedback"],
+    "derives_from": [],
+    "confidence": 0.96,
+    "tags": ["opamp", "amplifier", "analog", "feedback"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.99,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "concept.electronics.adc",
+    "schema_version": "3.2",
+    "domain": "electronics.signal",
+    "subtopic": "practical.electronics.semiconductors",
+    "tier": "practical",
+    "type": "concept",
+    "statement": "Аналого-цифровой преобразователь дискретизирует аналоговое напряжение во времени и квантует амплитуду в N-битное целое по архитектурам SAR, конвейерной, сигма-дельта или Flash.",
+    "formal_notation": "SNR ≈ 6.02·N + 1.76 дБ; f_s > 2·f_max по теореме Найквиста",
+    "conditions": "Источник опорного напряжения V_ref стабильный; T_оп по семейству АЦП",
+    "limits": [
+      "Квантовый шум ограничивает разрешение",
+      "Аперtурный джиттер тактового сигнала на высоких f",
+      "INL/DNL отклонения от идеальной передаточной"
+    ],
+    "prereq": ["concept.electronics.opamp", "law.signal.sampling.nyquist"],
+    "derives_from": [],
+    "confidence": 0.96,
+    "tags": ["adc", "sampling", "quantization", "signal"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.99,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "concept.electronics.dac",
+    "schema_version": "3.2",
+    "domain": "electronics.signal",
+    "subtopic": "practical.electronics.semiconductors",
+    "tier": "practical",
+    "type": "concept",
+    "statement": "Цифро-аналоговый преобразователь восстанавливает аналоговый сигнал из N-битного кода через резисторную лестницу R-2R, токовые источники или сигма-дельта модуляцию.",
+    "formal_notation": "U_вых = V_ref·Σ b_i·2^(−i); разрешение 8–32 бита",
+    "conditions": "Стабильный V_ref; согласование выходных токов или резисторов; ФНЧ восстановления",
+    "limits": [
+      "Glitch-энергия при переключении кода",
+      "Нелинейность INL/DNL уменьшают эффективные биты",
+      "Не подходит для прямой работы на низкоомную нагрузку без буфера"
+    ],
+    "prereq": ["concept.electronics.opamp"],
+    "derives_from": [],
+    "confidence": 0.96,
+    "tags": ["dac", "reconstruction", "signal", "analog"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.99,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "technology.electronics.interface.usb",
+    "schema_version": "3.2",
+    "domain": "electronics.interfaces",
+    "subtopic": "practical.electronics.semiconductors",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "USB-интерфейс передаёт данные дифференциальной парой с фиксированным сопротивлением 90 Ω и питанием по отдельной линии с топологией хост-устройство и согласованием по конечной точке.",
+    "formal_notation": "USB 2.0 480 Мбит/с; USB 3.2 Gen 2x2 20 Гбит/с; USB4 40 Гбит/с; PD до 240 Вт",
+    "conditions": "Разъёмы Type-A, Type-B, Type-C; согласованный кабель сертифицированной длины",
+    "limits": [
+      "Длина кабеля ограничена 5 м для USB 2.0, 1–2 м USB 3.x пассивно",
+      "Power Delivery требует CC-логики и сертифицированного кабеля для >60 Вт",
+      "Сигнальная целостность на USB 3+ требует ретаймеров на длинных трассах"
+    ],
+    "prereq": ["concept.electronics.transmission_line"],
+    "derives_from": [],
+    "confidence": 0.95,
+    "tags": ["usb", "interface", "differential", "power_delivery"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.99,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "technology.electronics.interface.ethernet",
+    "schema_version": "3.2",
+    "domain": "electronics.interfaces",
+    "subtopic": "practical.electronics.semiconductors",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Ethernet передаёт кадры физическим уровнем по витой паре или оптоволокну с MAC-адресацией, кодированием PAM/NRZ и CSMA/CD в полудуплексных или полным дуплексом в коммутируемых сетях.",
+    "formal_notation": "10BASE-T 10 Мбит/с; 1000BASE-T 1 Гбит/с по 4 парам Cat5e; 10GBASE-T до 100 м Cat6a",
+    "conditions": "Витая пара Cat5e/6/6a/8 длиной до 100 м; коммутатор с MAC-таблицей; PoE до 90 Вт по 802.3bt",
+    "limits": [
+      "Длина медной пары 100 м без повторителя",
+      "PoE+ требует кабеля Cat5e+ и согласованного питания",
+      "Задержка по сравнению с прямыми соединениями выше"
+    ],
+    "prereq": ["concept.electronics.transmission_line"],
+    "derives_from": [],
+    "confidence": 0.96,
+    "tags": ["ethernet", "network", "twisted_pair", "interface"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.99,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "concept.physics.semiconductor.band_gap",
+    "schema_version": "3.2",
+    "domain": "electronics.semiconductors",
+    "subtopic": "practical.electronics.semiconductors",
+    "tier": "practical",
+    "type": "concept",
+    "statement": "Запрещённая зона полупроводника — энергетический интервал между валентной зоной и зоной проводимости, определяющий поглощение света, проводимость и тип материала.",
+    "formal_notation": "E_g Si 1.12 эВ; Ge 0.66 эВ; GaAs 1.42 эВ; GaN 3.4 эВ; SiC 3.26 эВ",
+    "conditions": "T 300 K стандартно; для прямозонных эффективная радиационная рекомбинация",
+    "limits": [
+      "Слабо зависит от T (−0.5 мэВ/К Si)",
+      "Не определяет подвижность носителей и времена релаксации"
+    ],
+    "prereq": ["concept.physics.solid.band_structure"],
+    "derives_from": [],
+    "confidence": 0.98,
+    "tags": ["band_gap", "semiconductor", "electronics", "physics"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.99,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "technology.electronics.power.smps",
+    "schema_version": "3.2",
+    "domain": "electronics.power",
+    "subtopic": "practical.electronics.semiconductors",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Импульсный преобразователь регулирует выходное напряжение переключением силового MOSFET с ШИМ и LC-фильтром на топологиях buck, boost, buck-boost, flyback, forward.",
+    "formal_notation": "Buck U_out = D·U_in; Boost U_out = U_in/(1−D); f_sw 50 кГц–10 МГц",
+    "conditions": "Силовые MOSFET или GaN/SiC; индуктор и керамические конденсаторы; контроллер обратной связи",
+    "limits": [
+      "EMI на коммутационной частоте требует фильтрации и экранирования",
+      "Потери переключения растут с f_sw",
+      "Ограниченный диапазон ШИМ ведёт к режиму прерывистого тока"
+    ],
+    "prereq": ["technology.electronics.semiconductor.mosfet", "concept.electronics.feedback"],
+    "derives_from": [],
+    "confidence": 0.96,
+    "tags": ["smps", "power", "buck", "boost"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.98,
+      "safety_critical": true,
+      "safety_notes": "Высокое напряжение DC после выпрямителя сетевого ввода; конденсаторы остаются заряжены; обязательная разрядка перед обслуживанием"
+    }
+  },
+  {
+    "id": "process.electronics.fabrication.epitaxy",
+    "schema_version": "3.2",
+    "domain": "electronics.fabrication",
+    "subtopic": "practical.electronics.fabrication",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Эпитаксия выращивает монокристаллический слой повторяющий ориентацию подложки молекулярно-лучевым (MBE) или газофазным (MOCVD) осаждением для гетероструктур GaAs, GaN, SiGe.",
+    "formal_notation": "MBE T 500–700°C; UHV 10⁻⁸ Па; MOCVD T 600–1100°C; P 10–700 Торр",
+    "conditions": "Подложка ориентированная Si, GaAs, сапфир; чистая среда; прецизионный контроль скорости роста",
+    "limits": [
+      "Несоответствие параметров решётки даёт дислокации",
+      "Низкая скорость роста MBE 0.1–1 монослой/с",
+      "Высокая стоимость прекурсоров MOCVD (TMG, TMI, NH₃)"
+    ],
+    "prereq": ["concept.physics.crystal.lattice"],
+    "derives_from": [],
+    "confidence": 0.94,
+    "tags": ["epitaxy", "mbe", "mocvd", "heterostructure"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.96,
+      "safety_critical": true,
+      "safety_notes": "AsH₃, PH₃ как прекурсоры — острая токсичность; UHV-камеры и высокие температуры"
+    }
+  },
+  {
+    "id": "technology.electronics.processor.cpu",
+    "schema_version": "3.2",
+    "domain": "electronics.processor",
+    "subtopic": "practical.electronics.semiconductors",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Центральный процессор исполняет инструкции набора команд через конвейер с fetch-decode-execute-memory-writeback, кэшами L1/L2/L3 и блоком прогноза переходов.",
+    "formal_notation": "Тактовая f 1–6 ГГц; ширина суперскалярного выпуска 4–8 инструкций/такт",
+    "conditions": "Архитектуры x86-64, ARMv8/v9, RISC-V; питание ядра 0.6–1.4 В; TDP 5–280 Вт",
+    "limits": [
+      "Стена частоты ~5 ГГц из-за плотности рассеиваемой мощности",
+      "Закон Амдала ограничивает прирост от параллелизма",
+      "Уязвимости спекулятивного исполнения (Spectre, Meltdown)"
+    ],
+    "prereq": ["technology.electronics.logic.cmos", "concept.electronics.logic.flip_flop"],
+    "derives_from": [],
+    "confidence": 0.95,
+    "tags": ["cpu", "pipeline", "cache", "processor"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.99,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "technology.electronics.opto.laser_diode",
+    "schema_version": "3.2",
+    "domain": "electronics.photonics",
+    "subtopic": "practical.electronics.semiconductors",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Лазерный диод усиливает свет вынужденным излучением в активной квантовой яме гетероструктуры с положительной обратной связью оптического резонатора Фабри-Перо или DFB-решётки.",
+    "formal_notation": "I_threshold по плотности тока; λ 405–1550 нм; ширина линии DFB ~МГц",
+    "conditions": "Гетероструктура GaAs/AlGaAs или InP/InGaAsP; теплоотвод обязателен; ток смещения выше порога",
+    "limits": [
+      "Деградация при длительной работе и тепловом цикле",
+      "Чувствителен к ESD и обратной засветке",
+      "Когерентность ограничена шумами усиления"
+    ],
+    "prereq": ["technology.electronics.led", "concept.physics.optics.stimulated_emission"],
+    "derives_from": [],
+    "confidence": 0.96,
+    "tags": ["laser_diode", "photonics", "dfb", "coherent"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.97,
+      "safety_critical": true,
+      "safety_notes": "Невидимое ИК-излучение опасно для сетчатки; классы лазеров требуют защитных очков выше Class 2"
+    }
+  }
+]

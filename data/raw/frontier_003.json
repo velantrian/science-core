@@ -1,0 +1,502 @@
+[
+  {
+    "id": "open_problem.frontier.biology.origin_of_life",
+    "schema_version": "3.2",
+    "domain": "frontier.biology",
+    "subtopic": "frontier.biology.origin_of_life",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Конкретный путь абиогенеза — переход от химических смесей к самовоспроизводящимся системам с наследственностью — не установлен.",
+    "formal_notation": "химическая смесь → автокаталитический набор → реплицирующиеся полимеры → LUCA",
+    "conditions": "Ранняя Земля 4.0-3.8 млрд лет назад; гидротермальные источники или приливные водоёмы",
+    "prereq": ["concept.biology.cell.luca", "concept.chemistry.prebiotic.synthesis"],
+    "confidence": 0.30,
+    "tags": ["abiogenesis", "origin_of_life", "rna_world", "luca"],
+    "tier_extensions": {
+      "status": "open",
+      "partial_results": "Синтез нуклеотидов из HCN (Sutherland); рибозимы способны к самокопированию частично",
+      "competing_approaches": ["RNA world", "metabolism-first", "lipid world", "hydrothermal vent (Russell, Lane)", "panspermia"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "hypothesis.frontier.biology.rna_world",
+    "schema_version": "3.2",
+    "domain": "frontier.biology",
+    "subtopic": "frontier.biology.origin_of_life",
+    "tier": "frontier",
+    "type": "hypothesis",
+    "statement": "Ранняя жизнь основывалась на РНК, выполнявшей функции хранения информации и катализа до появления ДНК и белков.",
+    "formal_notation": "РНК → (репликация + катализ) → ДНК + белок мир (LUCA)",
+    "conditions": "Пребиотическая Земля; ионы Mg²⁺; высокая концентрация нуклеотидов",
+    "prereq": ["concept.biology.molecular.ribozyme", "concept.biology.cell.luca"],
+    "confidence": 0.50,
+    "tags": ["rna_world", "ribozyme", "abiogenesis", "self_replication"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "Рибосома — рибозим (Nobel 2009); искусственные репликаторы рибозимов созданы (Joyce, Holliger)",
+      "competing_approaches": ["metabolism-first", "PNA/TNA preceding RNA", "lipid world", "co-evolution scenario"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.biology.hard_problem_consciousness",
+    "schema_version": "3.2",
+    "domain": "frontier.biology.consciousness",
+    "subtopic": "frontier.biology.consciousness",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Объяснение субъективного опыта (qualia) и почему физические процессы в мозге сопровождаются феноменальным переживанием — трудная проблема сознания.",
+    "formal_notation": "explanatory gap: P(physical processes) ↛ Q(qualia)",
+    "conditions": "Феноменологическое сознание; от первого лица",
+    "prereq": ["concept.biology.neuroscience.consciousness", "concept.philosophy.mind.qualia"],
+    "confidence": 0.25,
+    "tags": ["hard_problem", "qualia", "chalmers", "consciousness"],
+    "tier_extensions": {
+      "status": "disputed",
+      "partial_results": "Нет согласия даже о постановке; нейронные корреляты сознания (NCC) картированы частично",
+      "competing_approaches": ["IIT Tononi", "GWT Baars-Dehaene", "HOT Rosenthal", "predictive processing Friston", "illusionism Frankish"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "hypothesis.frontier.biology.iit_consciousness",
+    "schema_version": "3.2",
+    "domain": "frontier.biology.consciousness",
+    "subtopic": "frontier.biology.consciousness",
+    "tier": "frontier",
+    "type": "hypothesis",
+    "statement": "Сознание тождественно интегрированной информации Φ системы; Φ количественно измеряет степень сознания (теория Тонони).",
+    "formal_notation": "Φ = min_partition KL(p(s_t+1|s_t) || ∏ p(parts))",
+    "conditions": "Дискретная система с причинной структурой; интегрированность не сводима к частям",
+    "prereq": ["concept.information.theory.integration", "concept.biology.neuroscience.consciousness"],
+    "confidence": 0.30,
+    "tags": ["iit", "tononi", "phi", "integrated_information"],
+    "tier_extensions": {
+      "status": "disputed",
+      "partial_results": "В 2023 более 100 учёных подписали письмо, называя IIT псевдонаукой; эксперименты adversarial с GWT неоднозначны",
+      "competing_approaches": ["Global Workspace Theory", "Higher-Order Theory", "Recurrent Processing", "Attention Schema"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "hypothesis.frontier.biology.gwt_consciousness",
+    "schema_version": "3.2",
+    "domain": "frontier.biology.consciousness",
+    "subtopic": "frontier.biology.consciousness",
+    "tier": "frontier",
+    "type": "hypothesis",
+    "statement": "Сознательное содержимое — то, что транслируется в глобальное рабочее пространство мозга и становится доступным многим модулям (Баарс, Деан).",
+    "formal_notation": "conscious ⟺ broadcast in global workspace; ignition pattern в фронтопариетальной сети",
+    "conditions": "Млекопитающие с развитой корой; рекуррентная активность",
+    "prereq": ["concept.biology.neuroscience.consciousness", "concept.biology.neuroscience.attention"],
+    "confidence": 0.45,
+    "tags": ["gwt", "global_workspace", "dehaene", "ignition"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "Adversarial collaboration GWT vs IIT (2023) показала смешанные результаты; ignition подтверждена для отчётных задач",
+      "competing_approaches": ["IIT", "Higher-Order Thought", "Predictive Processing", "Recurrent Processing"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.cs.agi_alignment",
+    "schema_version": "3.2",
+    "domain": "frontier.cs.ai_alignment",
+    "subtopic": "frontier.cs.ai_alignment",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Как обеспечить, чтобы общий искусственный интеллект сверхчеловеческого уровня преследовал цели, соответствующие человеческим ценностям.",
+    "formal_notation": "argmax U_AI(a) ↔ argmax U_human(a) ?; specification, robustness, assurance не решены",
+    "conditions": "Сверхчеловеческий AGI; неполная спецификация ценностей",
+    "prereq": ["concept.cs.ai.reinforcement_learning", "concept.philosophy.ethics.value_alignment"],
+    "confidence": 0.25,
+    "tags": ["alignment", "agi", "safety", "value_loading"],
+    "tier_extensions": {
+      "status": "open",
+      "partial_results": "RLHF, Constitutional AI работают для текущих LLM; масштабирование до сверхчеловеческого не доказано",
+      "competing_approaches": ["RLHF", "Constitutional AI", "scalable oversight", "interpretability", "mechanistic alignment"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.biology.aging_mechanism",
+    "schema_version": "3.2",
+    "domain": "frontier.biology",
+    "subtopic": "frontier.biology.aging",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Старение — следствие накопления случайных повреждений или генетически запрограммированный процесс — не разрешено окончательно.",
+    "formal_notation": "Hallmarks of aging (López-Otín 2013, 2023): 12 признаков, иерархия причинности неясна",
+    "conditions": "Многоклеточные организмы; постмитотические и пролиферирующие ткани",
+    "prereq": ["concept.biology.cell.senescence", "concept.biology.molecular.telomere"],
+    "confidence": 0.45,
+    "tags": ["aging", "senescence", "hallmarks", "longevity"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "12 hallmarks картированы; partial reprogramming OSK факторами обращает эпигенетические часы у мышей",
+      "competing_approaches": ["damage accumulation", "antagonistic pleiotropy", "programmed aging", "hyperfunction Blagosklonny", "information loss Sinclair"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.biology.memory_engram",
+    "schema_version": "3.2",
+    "domain": "frontier.biology",
+    "subtopic": "frontier.biology.unsolved",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Физический субстрат долговременной памяти — паттерн синаптических весов, специфические нейроны-инграммы или внутриклеточные молекулы — не установлен полностью.",
+    "formal_notation": "memory = f(synaptic weights, engram cells, intracellular state); вес каждого спорен",
+    "conditions": "Долговременная память; млекопитающие, особенно гиппокамп и кора",
+    "prereq": ["concept.biology.neuroscience.synaptic_plasticity", "concept.biology.neuroscience.engram"],
+    "confidence": 0.40,
+    "tags": ["memory", "engram", "synapse", "consolidation"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "Tonegawa и др. идентифицировали инграмм-клетки оптогенетикой; роль PKMζ, дендритных шипиков частично картирована",
+      "competing_approaches": ["synaptic Hebbian theory", "engram cell ensemble", "molecular memory PKMζ", "extracellular matrix Tsien"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.biology.protein_folding_kinetics",
+    "schema_version": "3.2",
+    "domain": "frontier.biology",
+    "subtopic": "frontier.biology.unsolved",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Полное предсказание динамики и кинетики свёртывания белков и формирование промежуточных состояний из аминокислотной последовательности.",
+    "formal_notation": "sequence → folding trajectory(t); AlphaFold даёт структуру, не путь свёртывания",
+    "conditions": "In vivo условия; шапероны, краудинг, котрансляционное свёртывание",
+    "prereq": ["concept.biology.molecular.protein_folding", "concept.biology.molecular.alphafold"],
+    "confidence": 0.45,
+    "tags": ["protein_folding", "levinthal", "kinetics", "alphafold"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "AlphaFold 2/3 решают статическую структуру с высокой точностью; динамика и misfolding не решены",
+      "competing_approaches": ["funnel landscape Wolynes", "molecular dynamics simulations", "machine learning kinetics"],
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "open_problem.frontier.biology.cambrian_explosion",
+    "schema_version": "3.2",
+    "domain": "frontier.biology",
+    "subtopic": "frontier.biology.unsolved",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Причины кембрийского взрыва 541 млн лет назад — быстрого появления большинства типов животных — не установлены однозначно.",
+    "formal_notation": "Δt ~ 25 млн лет, появление ~30 типов; триггер неизвестен",
+    "conditions": "Поздний эдиакарий — ранний кембрий; рост O₂; появление хищничества",
+    "prereq": ["concept.biology.evolution.cambrian", "concept.biology.evolution.body_plan"],
+    "confidence": 0.45,
+    "tags": ["cambrian", "evolution", "body_plan", "ediacaran"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "Уровень O₂ вырос; появились Hox-гены; хищничество способствовало морфологической инновации",
+      "competing_approaches": ["oxygen rise", "Hox gene evolution", "predation arms race", "calcium pulse Lyell"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.biology.species_definition",
+    "schema_version": "3.2",
+    "domain": "frontier.biology",
+    "subtopic": "frontier.biology.unsolved",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Универсального определения вида, применимого ко всем формам жизни (включая бактерии с горизонтальным переносом генов), не существует.",
+    "formal_notation": "species concept ≠ unique; >26 концепций species в литературе",
+    "conditions": "Все организмы — от бактерий до многоклеточных эукариот",
+    "prereq": ["concept.biology.evolution.speciation", "concept.biology.taxonomy.species_concept"],
+    "confidence": 0.55,
+    "tags": ["species_concept", "taxonomy", "evolution", "open"],
+    "tier_extensions": {
+      "status": "disputed",
+      "partial_results": "Биологическая концепция Майра работает для половых эукариот; для бактерий — ANI > 95%",
+      "competing_approaches": ["biological species concept Mayr", "phylogenetic", "ecological", "genomic ANI"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.biology.language_origin",
+    "schema_version": "3.2",
+    "domain": "frontier.biology",
+    "subtopic": "frontier.biology.unsolved",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Происхождение и эволюция человеческой языковой способности — постепенная адаптация или внезапная мутация — не разрешено.",
+    "formal_notation": "language faculty emergence: Δt ~ 50-200 kya?; gradual vs saltational",
+    "conditions": "Homo sapiens; возможно архаичные люди (неандертальцы, денисовцы)",
+    "prereq": ["concept.biology.evolution.cognitive_evolution", "concept.linguistics.universal_grammar"],
+    "confidence": 0.35,
+    "tags": ["language_origin", "evolution", "foxp2", "chomsky"],
+    "tier_extensions": {
+      "status": "disputed",
+      "partial_results": "FOXP2 связан с речью; археологические данные о символическом поведении неоднозначны",
+      "competing_approaches": ["Chomsky saltational merge", "gradualist Pinker-Bloom", "gesture-first Corballis", "musilanguage"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.biology.animal_consciousness",
+    "schema_version": "3.2",
+    "domain": "frontier.biology.consciousness",
+    "subtopic": "frontier.biology.consciousness",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Какие животные обладают феноменальным сознанием и где проходит граница — не установлено; критерии оспариваются.",
+    "formal_notation": "consciousness(species) = ?; кандидаты от приматов до насекомых, головоногих",
+    "conditions": "Поведенческие и нейроанатомические маркеры",
+    "prereq": ["concept.biology.neuroscience.consciousness", "concept.ethics.animal.sentience"],
+    "confidence": 0.40,
+    "tags": ["animal_consciousness", "sentience", "cephalopod", "insects"],
+    "tier_extensions": {
+      "status": "disputed",
+      "partial_results": "New York Declaration on Animal Consciousness (2024): сильные свидетельства для всех позвоночных, многих беспозвоночных",
+      "competing_approaches": ["Cambridge Declaration 2012", "global workspace markers", "behavioural criteria Birch", "neural complexity"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.biology.placebo_mechanism",
+    "schema_version": "3.2",
+    "domain": "frontier.biology",
+    "subtopic": "frontier.biology.unsolved",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Физиологический механизм эффекта плацебо — особенно его специфичность по системам органов и устойчивость при открытом плацебо — не объяснён полностью.",
+    "formal_notation": "Δ(симптомов | placebo) > 0 даже при known-placebo; механизм частично эндогенные опиоиды/дофамин",
+    "conditions": "Контролируемые клинические испытания; открытое плацебо",
+    "prereq": ["concept.medicine.clinical.placebo", "concept.biology.neuroscience.expectation"],
+    "confidence": 0.50,
+    "tags": ["placebo", "expectation", "neuroscience", "open"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "Эндогенные опиоиды объясняют плацебо-анальгезию; открытое плацебо работает (Kaptchuk); неспецифические эффекты не объяснены",
+      "competing_approaches": ["expectancy theory", "conditioning", "endogenous opioid release", "Bayesian brain"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.biology.reproducibility_crisis",
+    "schema_version": "3.2",
+    "domain": "frontier.biology",
+    "subtopic": "frontier.biology.unsolved",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Высокая доля невоспроизводимых публикаций в биомедицине и психологии (30-70%) — её причины и способы устранения системно не решены.",
+    "formal_notation": "P(replicate | published) ≈ 0.3-0.5 в психологии (RPP 2015), биомедицине",
+    "conditions": "Современная научная публикационная система; статистические методы NHST",
+    "prereq": ["concept.science.method.replication", "concept.statistics.p_value"],
+    "confidence": 0.55,
+    "tags": ["reproducibility", "p_hacking", "methodology", "open_science"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "Reproducibility Project (Open Science Collaboration): 39% репликаций психологии успешны; preregistration снижает p-hacking",
+      "competing_approaches": ["preregistration", "registered reports", "Bayesian statistics", "team science Many Labs"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "hypothesis.frontier.biology.quantum_biology",
+    "schema_version": "3.2",
+    "domain": "frontier.biology",
+    "subtopic": "frontier.biology.unsolved",
+    "tier": "frontier",
+    "type": "hypothesis",
+    "statement": "Квантовые эффекты (когерентность, туннелирование, запутанность) играют функциональную роль в фотосинтезе, магниторецепции и ферментативном катализе.",
+    "formal_notation": "τ_coherence > τ_function в FMO complex, cryptochrome",
+    "conditions": "Биологические условия 300 K; влажная зашумлённая среда",
+    "prereq": ["concept.biology.molecular.photosynthesis", "concept.physics.qm.coherence"],
+    "confidence": 0.40,
+    "tags": ["quantum_biology", "coherence", "magnetoreception", "cryptochrome"],
+    "tier_extensions": {
+      "status": "disputed",
+      "partial_results": "FMO long-lived coherence (Engel 2007) переинтерпретирована как вибронная; cryptochrome — компас птиц частично подтверждён",
+      "competing_approaches": ["functional coherence", "vibronic coupling", "classical mechanisms", "radical pair magnetoreception"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.biology.cancer_treatment_universal",
+    "schema_version": "3.2",
+    "domain": "frontier.biology",
+    "subtopic": "frontier.biology.unsolved",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Универсальная стратегия лечения рака, учитывающая гетерогенность опухолей и резистентность к терапии, не разработана.",
+    "formal_notation": "S(cure | tumor type, stage) << 1 для многих типов; intratumor heterogeneity",
+    "conditions": "Солидные опухоли; метастатическое заболевание; иммунотерапия",
+    "prereq": ["concept.biology.cancer.heterogeneity", "concept.medicine.oncology.resistance"],
+    "confidence": 0.45,
+    "tags": ["cancer", "heterogeneity", "resistance", "immunotherapy"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "Checkpoint inhibitors преобразили лечение меланомы, NSCLC; CAR-T работает для B-cell malignancies; солидные опухоли упорствуют",
+      "competing_approaches": ["immune checkpoint", "CAR-T", "targeted therapy", "metabolic therapy", "evolutionary therapy"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.biology.microbiome_causality",
+    "schema_version": "3.2",
+    "domain": "frontier.biology",
+    "subtopic": "frontier.biology.unsolved",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Причинно-следственные связи между составом микробиома кишечника и заболеваниями (ожирение, аутизм, депрессия) преимущественно корреляционные.",
+    "formal_notation": "corr(microbiome, disease) ≠ causation; механизмы через метаболиты, ось кишечник-мозг частично",
+    "conditions": "Человеческий кишечный микробиом; 16S rRNA и метагеномика",
+    "prereq": ["concept.biology.microbiome.gut", "concept.medicine.gut_brain_axis"],
+    "confidence": 0.45,
+    "tags": ["microbiome", "causality", "gut_brain", "fmt"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "FMT эффективна для C. difficile; для других показаний — смешанные результаты; SCFA как медиаторы частично подтверждены",
+      "competing_approaches": ["FMT clinical trials", "germ-free mouse models", "Mendelian randomization", "in vitro gut chips"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.cs.transformer_understanding",
+    "schema_version": "3.2",
+    "domain": "frontier.cs.ai_alignment",
+    "subtopic": "frontier.cs.ai_alignment",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Понимают ли крупные языковые модели семантику в нетривиальном смысле или статистически интерполируют — открыто и плохо операционализировано.",
+    "formal_notation": "understanding(LLM) =? f(grounding, world_model, reasoning); нет согласованного теста",
+    "conditions": "Современные LLM на трансформерах; задачи рассуждения и обобщения",
+    "prereq": ["concept.cs.ai.transformer", "concept.philosophy.mind.understanding"],
+    "confidence": 0.40,
+    "tags": ["llm", "understanding", "grounding", "stochastic_parrot"],
+    "tier_extensions": {
+      "status": "disputed",
+      "partial_results": "Mechanistic interpretability вскрывает circuits (induction heads, IOI); внутренние world models частично найдены",
+      "competing_approaches": ["stochastic parrots Bender", "emergent world models", "scaling hypothesis", "neuro-symbolic"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.biology.dreaming_function",
+    "schema_version": "3.2",
+    "domain": "frontier.biology",
+    "subtopic": "frontier.biology.unsolved",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Биологическая функция сновидений (REM-сна) — консолидация памяти, эмоциональная регуляция, симуляция угроз — не установлена однозначно.",
+    "formal_notation": "function(REM_dreams) = ?; multiple competing roles",
+    "conditions": "REM-сон у млекопитающих, особенно человека",
+    "prereq": ["concept.biology.neuroscience.rem_sleep", "concept.biology.neuroscience.memory_consolidation"],
+    "confidence": 0.40,
+    "tags": ["dreams", "rem", "function", "consolidation"],
+    "tier_extensions": {
+      "status": "open",
+      "partial_results": "REM связан с эмоциональной обработкой и творчеством; депривация REM не катастрофична для людей на ингибиторах",
+      "competing_approaches": ["memory consolidation Stickgold", "threat simulation Revonsuo", "emotional regulation Walker", "default network noise"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.biology.major_transitions",
+    "schema_version": "3.2",
+    "domain": "frontier.biology",
+    "subtopic": "frontier.biology.unsolved",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Механизмы крупных эволюционных переходов — эукариоты, многоклеточность, социальность — и их повторяемость не объяснены детально.",
+    "formal_notation": "major transitions (Maynard Smith, Szathmáry 1995): 8 переходов; каждый — отдельная загадка",
+    "conditions": "Геологическая шкала; ключевые события в истории жизни",
+    "prereq": ["concept.biology.evolution.major_transitions", "concept.biology.evolution.eukaryote"],
+    "confidence": 0.40,
+    "tags": ["major_transitions", "eukaryogenesis", "multicellularity", "evolution"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "Эндосимбиотическая теория Маргулис подтверждена для митохондрий; экспериментальная эволюция многоклеточности у дрожжей (Ratcliff)",
+      "competing_approaches": ["endosymbiotic theory", "hydrogen hypothesis Martin", "experimental evolution", "Asgard archaea origin"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.biology.neural_code",
+    "schema_version": "3.2",
+    "domain": "frontier.biology",
+    "subtopic": "frontier.biology.unsolved",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Как мозг кодирует информацию в паттернах спайков — частотный код, временной, популяционный или их комбинация — не разрешено в общем виде.",
+    "formal_notation": "P(spike_train | stimulus) — модель не универсальна; rate vs timing vs population",
+    "conditions": "Биологические нейронные сети; сенсорные и моторные системы",
+    "prereq": ["concept.biology.neuroscience.spike", "concept.biology.neuroscience.coding"],
+    "confidence": 0.40,
+    "tags": ["neural_code", "spikes", "population_coding", "open"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "Сетчатка использует rate + timing; место-клетки гиппокампа кодируют фазой; общий принцип не выведен",
+      "competing_approaches": ["rate coding", "temporal coding", "population coding", "predictive coding"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.biology.ageing_clock_reset",
+    "schema_version": "3.2",
+    "domain": "frontier.biology",
+    "subtopic": "frontier.biology.aging",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Возможно ли безопасное частичное эпигенетическое перепрограммирование (Yamanaka factors) для обращения старения у человека.",
+    "formal_notation": "OSK(M) factors → epigenetic age ↓; риск онкогенеза неизвестен у человека",
+    "conditions": "Соматические клетки in vivo; режим OSK без полной дедифференцировки",
+    "prereq": ["concept.biology.molecular.yamanaka", "concept.biology.molecular.epigenetic_clock"],
+    "confidence": 0.35,
+    "tags": ["reprogramming", "yamanaka", "epigenetic_clock", "rejuvenation"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "Lu et al. 2020: восстановление зрения у мышей через OSK; продление жизни прогероидных мышей; человеческие испытания только начинаются",
+      "competing_approaches": ["partial reprogramming OSK", "senolytics", "rapamycin/mTOR", "NAD+ boosters", "gene therapy"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.biology.regeneration_limits",
+    "schema_version": "3.2",
+    "domain": "frontier.biology",
+    "subtopic": "frontier.biology.unsolved",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Почему млекопитающие потеряли способность к регенерации конечностей, сохранённую у саламандр, и можно ли её восстановить.",
+    "formal_notation": "regeneration capacity(mammal) << regeneration capacity(axolotl); генетическая основа частично известна",
+    "conditions": "Млекопитающие vs амфибии; ткани конечностей, сердца",
+    "prereq": ["concept.biology.development.regeneration", "concept.biology.evolution.gene_loss"],
+    "confidence": 0.40,
+    "tags": ["regeneration", "axolotl", "limb", "stem_cells"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "MRL-mice регенерируют уши; геном аксолотля секвенирован 2018; ключевые регенеративные гены идентифицированы",
+      "competing_approaches": ["blastema reactivation", "stem cell engineering", "bioelectricity Levin", "gene therapy mTOR"],
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "open_problem.frontier.cs.scaling_limits_llm",
+    "schema_version": "3.2",
+    "domain": "frontier.cs.ai_alignment",
+    "subtopic": "frontier.cs.ai_alignment",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Существуют ли фундаментальные ограничения возможностей трансформерных моделей при увеличении размера и данных, до достижения AGI.",
+    "formal_notation": "lim_{N→∞} capability(N parameters, D data) =? AGI; scaling laws Chinchilla",
+    "conditions": "Архитектура трансформера; обучение на естественных данных",
+    "prereq": ["concept.cs.ai.scaling_laws", "concept.cs.ai.transformer"],
+    "confidence": 0.30,
+    "tags": ["scaling", "agi", "transformer", "limits"],
+    "tier_extensions": {
+      "status": "disputed",
+      "partial_results": "Chinchilla scaling laws (2022) описывают убывающую отдачу; GPT-4, Claude, Gemini показывают эмерджентные способности",
+      "competing_approaches": ["pure scaling hypothesis Sutskever", "data wall обоснование", "architectural innovation needed", "embodiment requirement"],
+      "has_disputes": true
+    }
+  }
+]

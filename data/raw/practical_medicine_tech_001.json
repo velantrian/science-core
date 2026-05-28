@@ -1,0 +1,645 @@
+[
+  {
+    "id": "method.medicine.diagnostics.pcr",
+    "schema_version": "3.2",
+    "domain": "medicine.tech.diagnostics",
+    "subtopic": "practical.medical.diagnostics",
+    "tier": "practical",
+    "type": "method",
+    "statement": "Полимеразная цепная реакция амплифицирует целевой участок ДНК термоциклами денатурации, отжига праймеров и элонгации Taq-полимеразой с экспоненциальным ростом копий.",
+    "formal_notation": "94–96°C денатурация; 50–65°C отжиг; 72°C элонгация; 25–40 циклов; копий ~2^n",
+    "conditions": "Шаблон ДНК; пара специфичных праймеров; Mg²⁺, dNTP, термостабильная полимераза; буфер",
+    "limits": [
+      "Контаминация ампликонами даёт ложноположительные результаты",
+      "Ингибиторы из крови и кала блокируют полимеразу",
+      "Без обратной транскрипции не работает с РНК-мишенями"
+    ],
+    "prereq": ["concept.biology.dna.replication", "material.biology.enzyme.taq_polymerase"],
+    "derives_from": [],
+    "confidence": 0.98,
+    "tags": ["pcr", "amplification", "dna", "diagnostics"],
+    "tier_extensions": {
+      "scale": "laboratory",
+      "success_rate": 0.98,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "method.medicine.diagnostics.rt_pcr",
+    "schema_version": "3.2",
+    "domain": "medicine.tech.diagnostics",
+    "subtopic": "practical.medical.diagnostics",
+    "tier": "practical",
+    "type": "method",
+    "statement": "Количественная ОТ-ПЦР преобразует РНК в кДНК обратной транскриптазой и амплифицирует с флюоресцентным красителем SYBR Green или TaqMan-зондом для измерения исходной концентрации.",
+    "formal_notation": "Ct = пороговый цикл; ΔΔCt сравнение по референс-гену; динамика 6–7 порядков",
+    "conditions": "РНК образца; RT-фермент M-MLV или Superscript; флюориметр термоциклера",
+    "limits": [
+      "Деградация РНК RNase даёт занижение результата",
+      "SYBR Green неспецифичен — нужна кривая плавления",
+      "Не пригоден для абсолютного количества без стандартной кривой"
+    ],
+    "prereq": ["method.medicine.diagnostics.pcr", "concept.biology.rna.reverse_transcription"],
+    "derives_from": [],
+    "confidence": 0.97,
+    "tags": ["rt_pcr", "rna", "diagnostics", "quantitative"],
+    "tier_extensions": {
+      "scale": "clinical",
+      "success_rate": 0.96,
+      "safety_critical": true,
+      "safety_notes": "Биобезопасность образцов BSL-2; обращение с инфекционными материалами; обращение с BrEt при гель-электрофорезе"
+    }
+  },
+  {
+    "id": "technology.medicine.imaging.mri",
+    "schema_version": "3.2",
+    "domain": "medicine.tech.imaging",
+    "subtopic": "practical.medical.imaging",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Магнитно-резонансная томография измеряет сигнал ядер ¹H в сильном статическом поле после возбуждения РЧ-импульсом и считывает T1/T2-релаксацию для построения 3D-изображения тканей.",
+    "formal_notation": "B₀ 0.3–7 Т клинически; f резонанса 42.58 МГц/Т ¹H; срез задаётся градиентами",
+    "conditions": "Сверхпроводящий магнит на жидком гелии; РЧ-катушки; градиентные катушки 30–80 мТ/м",
+    "limits": [
+      "Несовместима с ферромагнитными имплантатами и старыми кардиостимуляторами",
+      "Длительность исследования 15–60 мин с артефактами движения",
+      "Шумная процедура 80–120 дБ"
+    ],
+    "prereq": ["effect.physics.nuclear_magnetic_resonance", "concept.physics.magnetism"],
+    "derives_from": [],
+    "confidence": 0.97,
+    "tags": ["mri", "nmr", "imaging", "diagnostics"],
+    "tier_extensions": {
+      "scale": "clinical",
+      "success_rate": 0.97,
+      "safety_critical": true,
+      "safety_notes": "Магнит притягивает ферромагнетики со смертельной силой; ожоги от РЧ; недопустимы металлические импланты"
+    }
+  },
+  {
+    "id": "technology.medicine.imaging.ct",
+    "schema_version": "3.2",
+    "domain": "medicine.tech.imaging",
+    "subtopic": "practical.medical.imaging",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Компьютерная томография собирает рентгеновские проекции пациента под разными углами вращающейся системой источник-детектор с реконструкцией поперечных срезов алгоритмом обратной проекции.",
+    "formal_notation": "Срез 0.5–10 мм; доза 2–20 мЗв; HU (Хаунсфилда): вода=0, воздух=−1000",
+    "conditions": "Рентгеновская трубка U 80–140 кВ; матричный детектор; реконструкция FBP или итеративная",
+    "limits": [
+      "Ионизирующее излучение ограничивает повторные исследования",
+      "Артефакты от металлов и движения",
+      "Низкая контрастность мягких тканей по сравнению с МРТ"
+    ],
+    "prereq": ["effect.physics.x_ray_absorption", "concept.math.radon_transform"],
+    "derives_from": [],
+    "confidence": 0.97,
+    "tags": ["ct", "xray", "tomography", "imaging"],
+    "tier_extensions": {
+      "scale": "clinical",
+      "success_rate": 0.98,
+      "safety_critical": true,
+      "safety_notes": "Доза ионизирующего излучения накопительная; беременность относительное противопоказание; йодный контраст требует контроля почек"
+    }
+  },
+  {
+    "id": "technology.medicine.imaging.xray",
+    "schema_version": "3.2",
+    "domain": "medicine.tech.imaging",
+    "subtopic": "practical.medical.imaging",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Рентгенография регистрирует прошедшее через тело излучение трубки на плоском детекторе или плёнке с контрастом от поглощения по плотности и атомному номеру тканей.",
+    "formal_notation": "U_трубки 40–150 кВ; mAs 0.5–500; доза 0.01–1 мЗв за снимок",
+    "conditions": "Трубка с вольфрамовым анодом; цифровой плоскопанельный детектор; сетка для рассеянного излучения",
+    "limits": [
+      "Низкий контраст между мягкими тканями",
+      "Проекционное изображение скрывает глубину",
+      "Беременность — относительное противопоказание"
+    ],
+    "prereq": ["effect.physics.x_ray_absorption"],
+    "derives_from": [],
+    "confidence": 0.98,
+    "tags": ["xray", "radiography", "imaging", "diagnostics"],
+    "tier_extensions": {
+      "scale": "clinical",
+      "success_rate": 0.99,
+      "safety_critical": true,
+      "safety_notes": "Ионизирующее излучение; СИЗ свинцовый фартук и щитовидный воротник; контроль выхода трубки"
+    }
+  },
+  {
+    "id": "technology.medicine.imaging.ultrasound",
+    "schema_version": "3.2",
+    "domain": "medicine.tech.imaging",
+    "subtopic": "practical.medical.imaging",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Ультразвуковое исследование зондирует ткани короткими импульсами 2–18 МГц от пьезопреобразователя и измеряет амплитуду и время отражённой волны для построения B-режима изображения.",
+    "formal_notation": "f 2–18 МГц; c в тканях ~1540 м/с; разрешение λ/2; глубина обратно пропорциональна f",
+    "conditions": "Пьезоэлемент PZT; ультразвуковой гель; режимы B, M, Doppler; матричные датчики",
+    "limits": [
+      "Воздух и кость полностью отражают сигнал",
+      "Глубина видимости снижается с ростом f",
+      "Оператор-зависимость качества"
+    ],
+    "prereq": ["effect.physics.piezoelectric", "concept.physics.acoustic_wave"],
+    "derives_from": [],
+    "confidence": 0.97,
+    "tags": ["ultrasound", "echo", "imaging", "doppler"],
+    "tier_extensions": {
+      "scale": "clinical",
+      "success_rate": 0.99,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "technology.medicine.imaging.pet",
+    "schema_version": "3.2",
+    "domain": "medicine.tech.imaging",
+    "subtopic": "practical.medical.imaging",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Позитронно-эмиссионная томография регистрирует пары γ-квантов 511 кэВ от аннигиляции позитронов радиофармпрепарата ¹⁸F-ФДГ кольцом сцинтилляционных детекторов в совпадениях.",
+    "formal_notation": "Аннигиляция e⁺e⁻ → 2γ × 511 кэВ; полупериод ¹⁸F 109.7 мин; реконструкция OSEM",
+    "conditions": "Циклотрон для производства ¹⁸F; РФП ¹⁸F-ФДГ; сцинтиллятор LYSO/BGO",
+    "limits": [
+      "Короткий период полураспада требует близкого циклотрона",
+      "Доза 5–10 мЗв на исследование",
+      "Низкое пространственное разрешение 3–6 мм без совмещения с КТ"
+    ],
+    "prereq": ["effect.physics.x_ray_absorption", "concept.physics.nuclear.positron"],
+    "derives_from": [],
+    "confidence": 0.95,
+    "tags": ["pet", "radiopharmaceutical", "imaging", "oncology"],
+    "tier_extensions": {
+      "scale": "clinical",
+      "success_rate": 0.97,
+      "safety_critical": true,
+      "safety_notes": "Радиоактивный препарат и излучение от пациента; контроль персонала по нормам Бэр; беременность — противопоказание"
+    }
+  },
+  {
+    "id": "method.medicine.diagnostics.ecg",
+    "schema_version": "3.2",
+    "domain": "medicine.tech.diagnostics",
+    "subtopic": "practical.medical.diagnostics",
+    "tier": "practical",
+    "type": "method",
+    "statement": "Электрокардиография регистрирует разность потенциалов сердечной деполяризации между электродами на коже с 12 отведениями и временной развёрткой типичных комплексов P-QRS-T.",
+    "formal_notation": "Полоса 0.05–150 Гц диагностический; амплитуда 0.5–3 мВ; ЧСС 60–100/мин норма",
+    "conditions": "Электроды Ag/AgCl с гелем; усилитель ≥10 МΩ входное сопротивление; режекторный фильтр 50/60 Гц",
+    "limits": [
+      "Чувствительна к артефактам движения и мышечной активности",
+      "Не локализует ишемию вне зон, обращённых к отведениям",
+      "Не различает все формы аритмий с одного отведения"
+    ],
+    "prereq": ["concept.biology.heart.action_potential"],
+    "derives_from": [],
+    "confidence": 0.97,
+    "tags": ["ecg", "cardiac", "diagnostics", "biopotential"],
+    "tier_extensions": {
+      "scale": "clinical",
+      "success_rate": 0.99,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "method.medicine.diagnostics.eeg",
+    "schema_version": "3.2",
+    "domain": "medicine.tech.diagnostics",
+    "subtopic": "practical.medical.diagnostics",
+    "tier": "practical",
+    "type": "method",
+    "statement": "Электроэнцефалография регистрирует суммарные потенциалы коры с поверхности скальпа сетью электродов 10–20 с амплитудой 10–100 мкВ и разделением на δ, θ, α, β, γ-ритмы.",
+    "formal_notation": "Полоса 0.5–100 Гц; ритмы δ <4 Гц, θ 4–8, α 8–13, β 13–30, γ >30 Гц",
+    "conditions": "21 электрод системы 10–20; усилитель сопротивлением >100 МΩ; экранированная комната",
+    "limits": [
+      "Слабая пространственная локализация источников",
+      "Низкое отношение сигнал/шум на поверхности скальпа",
+      "Артефакты глазных движений и мышечной активности"
+    ],
+    "prereq": ["concept.biology.neuron.action_potential"],
+    "derives_from": [],
+    "confidence": 0.94,
+    "tags": ["eeg", "brain", "diagnostics", "biopotential"],
+    "tier_extensions": {
+      "scale": "clinical",
+      "success_rate": 0.97,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "technology.medicine.therapy.hemodialysis",
+    "schema_version": "3.2",
+    "domain": "medicine.tech.therapy",
+    "subtopic": "practical.medical.therapeutics",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Гемодиализ очищает кровь пациента противотоком через полупроницаемую мембрану диализатора с удалением мочевины, креатинина, K⁺ и избытка воды по градиенту концентрации и давления.",
+    "formal_notation": "Q_крови 250–500 мл/мин; Q_диализата 500–800 мл/мин; время 3–5 ч × 3/нед",
+    "conditions": "Сосудистый доступ AVF/AVG/CVC; диализатор полого волокна; гепаринизация",
+    "limits": [
+      "Не заменяет эндокринные функции почек",
+      "Гипотензия и судороги при быстрой ультрафильтрации",
+      "Требует постоянного сосудистого доступа"
+    ],
+    "prereq": ["concept.chemistry.osmosis", "concept.biology.kidney.filtration"],
+    "derives_from": [],
+    "confidence": 0.97,
+    "tags": ["dialysis", "kidney", "therapy", "ultrafiltration"],
+    "tier_extensions": {
+      "scale": "clinical",
+      "success_rate": 0.96,
+      "safety_critical": true,
+      "safety_notes": "Воздушная эмболия, кровопотеря, реакции на мембрану; обязательный мониторинг давлений и кондуктивности диализата"
+    }
+  },
+  {
+    "id": "technology.medicine.therapy.endoscopy",
+    "schema_version": "3.2",
+    "domain": "medicine.tech.surgery",
+    "subtopic": "practical.medical.therapeutics",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Эндоскопия вводит гибкий волоконно-оптический или CMOS-инструмент в полые органы через естественные отверстия с подачей CO₂/воздуха, осмотром, биопсией и лечебными манипуляциями.",
+    "formal_notation": "Диаметр 4–13 мм; угол обзора 140°; HD/4K-сенсор на дистальном конце",
+    "conditions": "Седация или общая анестезия; промывание и инсуффляция; стерилизация инструмента",
+    "limits": [
+      "Перфорация при технических ошибках",
+      "Ограниченный угол доступа к некоторым отделам",
+      "Не работает без подготовки полого органа"
+    ],
+    "prereq": ["concept.physics.optics.fiber"],
+    "derives_from": [],
+    "confidence": 0.97,
+    "tags": ["endoscopy", "minimally_invasive", "diagnostics", "therapy"],
+    "tier_extensions": {
+      "scale": "clinical",
+      "success_rate": 0.98,
+      "safety_critical": true,
+      "safety_notes": "Перфорация, кровотечение, аспирация; необходима седация и мониторинг витальных функций"
+    }
+  },
+  {
+    "id": "technology.medicine.surgery.laparoscopy",
+    "schema_version": "3.2",
+    "domain": "medicine.tech.surgery",
+    "subtopic": "practical.medical.therapeutics",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Лапароскопия выполняет внутрибрюшные операции через порты 5–12 мм с CO₂-инсуффляцией пневмоперитонеума, оптикой и хирургическими инструментами на длинных стержнях.",
+    "formal_notation": "Давление CO₂ 12–15 мм рт.ст.; порты 5/10/12 мм; угол оптики 0°, 30°, 45°",
+    "conditions": "Общая анестезия с ИВЛ; троакары; видеостойка; инсуффлятор CO₂",
+    "limits": [
+      "Невозможна при выраженном спаечном процессе",
+      "Затруднена при сердечно-лёгочной недостаточности из-за CO₂-пневмоперитонеума",
+      "Ограниченная тактильная обратная связь"
+    ],
+    "prereq": ["technology.medicine.therapy.endoscopy"],
+    "derives_from": [],
+    "confidence": 0.96,
+    "tags": ["laparoscopy", "minimally_invasive", "surgery", "co2"],
+    "tier_extensions": {
+      "scale": "clinical",
+      "success_rate": 0.96,
+      "safety_critical": true,
+      "safety_notes": "Повреждение сосудов троакаром; CO₂-эмболия; ожоги от электрохирургии; гипотензия от пневмоперитонеума"
+    }
+  },
+  {
+    "id": "technology.medicine.surgery.stent",
+    "schema_version": "3.2",
+    "domain": "medicine.tech.surgery",
+    "subtopic": "practical.medical.therapeutics",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Коронарное стентирование расширяет суженный участок артерии металлическим каркасом из CoCr или Pt-Cr с лекарственным покрытием для предотвращения рестеноза.",
+    "formal_notation": "Диаметр стента 2.25–5.0 мм; длина 8–48 мм; покрытие сиролимус, эверолимус",
+    "conditions": "Чрескожный доступ через лучевую или бедренную артерию; ангиограф; антиагреганты двойные",
+    "limits": [
+      "Тромбоз стента при отмене антиагрегантов",
+      "Рестеноз при голометаллических стентах ~20–30%",
+      "Невозможен при чрезмерной кальцификации без подготовки"
+    ],
+    "prereq": ["material.metallurgy.alloy.cobalt_chromium"],
+    "derives_from": [],
+    "confidence": 0.96,
+    "tags": ["stent", "cardiology", "intervention", "drug_eluting"],
+    "tier_extensions": {
+      "scale": "clinical",
+      "success_rate": 0.95,
+      "safety_critical": true,
+      "safety_notes": "Диссекция или перфорация коронарной артерии; контраст-индуцированная нефропатия; кровотечение из доступа"
+    }
+  },
+  {
+    "id": "technology.medicine.surgery.prosthesis_hip",
+    "schema_version": "3.2",
+    "domain": "medicine.tech.surgery",
+    "subtopic": "practical.medical.therapeutics",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Эндопротезирование тазобедренного сустава заменяет головку бедра и вертлужную впадину компонентами из CoCrMo, Ti6Al4V, UHMWPE и керамики на цементной или бесцементной фиксации.",
+    "formal_notation": "Пары трения металл-полиэтилен, керамика-керамика, керамика-полиэтилен; срок службы 15–25 лет",
+    "conditions": "Общая или спинальная анестезия; парные имплантаты по размерам; антибиотикопрофилактика",
+    "limits": [
+      "Износ полиэтилена приводит к асептическому расшатыванию",
+      "Перипротезные переломы и инфекции",
+      "Не подходит для очень молодых пациентов из-за конечного ресурса"
+    ],
+    "prereq": ["material.metallurgy.alloy.titanium"],
+    "derives_from": [],
+    "confidence": 0.96,
+    "tags": ["prosthesis", "hip", "orthopedics", "implant"],
+    "tier_extensions": {
+      "scale": "clinical",
+      "success_rate": 0.95,
+      "safety_critical": true,
+      "safety_notes": "Тромбоэмболия лёгочной артерии; инфекция; перипротезный перелом; обязательная антибиотикопрофилактика"
+    }
+  },
+  {
+    "id": "technology.medicine.therapy.vaccination",
+    "schema_version": "3.2",
+    "domain": "medicine.tech.therapy",
+    "subtopic": "practical.medical.therapeutics",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Вакцинация вводит антиген или его генетический код для индукции адаптивного иммунного ответа с формированием B- и T-клеток памяти без перенесения болезни.",
+    "formal_notation": "Платформы: живые ослабленные, инактивированные, субъединичные, векторные, мРНК; интервалы по схеме",
+    "conditions": "Холодовая цепь 2–8°C для большинства, −70…−20°C для мРНК; стерильный путь введения",
+    "limits": [
+      "Иммунокомпрометированные хуже отвечают",
+      "Уход иммунитета (waning) требует ревакцинации",
+      "Не работает при тяжёлой иммуносупрессии"
+    ],
+    "prereq": ["concept.biology.immune.adaptive"],
+    "derives_from": [],
+    "confidence": 0.97,
+    "tags": ["vaccine", "immunization", "therapy", "immunology"],
+    "tier_extensions": {
+      "scale": "clinical",
+      "success_rate": 0.95,
+      "safety_critical": true,
+      "safety_notes": "Анафилаксия редкая (1–10 на млн доз); требует наблюдения 15–30 мин и доступности адреналина"
+    }
+  },
+  {
+    "id": "technology.medicine.therapy.mrna_vaccine",
+    "schema_version": "3.2",
+    "domain": "medicine.tech.therapy",
+    "subtopic": "practical.medical.therapeutics",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "мРНК-вакцина доставляет липидными наночастицами модифицированную ψ-уридином мРНК с кодом антигена в клетки, где рибосомы синтезируют белок и запускают иммунный ответ.",
+    "formal_notation": "LNP с ионизируемым липидом + холестерин + PEG-липид; модификация N1-метил-ψ-уридин",
+    "conditions": "Хранение −70°C (Pfizer) или −20°C (Moderna); внутримышечное введение",
+    "limits": [
+      "Не интегрируется в геном — мРНК деградирует за дни",
+      "Требует холодовой цепи",
+      "Редкий миокардит у молодых мужчин после введения"
+    ],
+    "prereq": ["concept.biology.translation", "technology.medicine.therapy.vaccination"],
+    "derives_from": [],
+    "confidence": 0.94,
+    "tags": ["mrna", "vaccine", "lnp", "immunology"],
+    "tier_extensions": {
+      "scale": "clinical",
+      "success_rate": 0.92,
+      "safety_critical": true,
+      "safety_notes": "Анафилаксия 2–5 на 1 млн доз; редкий миокардит у мужчин 16–29 лет; требуется наблюдение"
+    }
+  },
+  {
+    "id": "technology.medicine.therapy.antibiotic_therapy",
+    "schema_version": "3.2",
+    "domain": "medicine.tech.therapy",
+    "subtopic": "practical.medical.therapeutics",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Антибиотикотерапия подавляет бактериальные мишени: клеточную стенку (β-лактамы), рибосому (макролиды, тетрациклины), ДНК-гиразу (фторхинолоны) с дозированием по PK/PD.",
+    "formal_notation": "MIC минимальная подавляющая концентрация; AUC/MIC и T>MIC как индексы эффективности",
+    "conditions": "Идентификация возбудителя и чувствительность; доза по массе и почечной функции",
+    "limits": [
+      "Не действует на вирусы и грибы (большинство классов)",
+      "Резистентность через бета-лактамазы, эффлюкс, мутации мишеней",
+      "Дисбиоз кишечника и C. difficile"
+    ],
+    "prereq": ["concept.biology.cell.bacteria", "concept.pharmacology.pk_pd"],
+    "derives_from": [],
+    "confidence": 0.95,
+    "tags": ["antibiotic", "antimicrobial", "therapy", "resistance"],
+    "tier_extensions": {
+      "scale": "clinical",
+      "success_rate": 0.92,
+      "safety_critical": true,
+      "safety_notes": "Аллергия (анафилаксия β-лактамов); нефротоксичность аминогликозидов; тендиниты фторхинолонов"
+    }
+  },
+  {
+    "id": "method.medicine.diagnostics.elisa",
+    "schema_version": "3.2",
+    "domain": "medicine.tech.diagnostics",
+    "subtopic": "practical.medical.diagnostics",
+    "tier": "practical",
+    "type": "method",
+    "statement": "Иммуноферментный анализ выявляет антиген или антитело связыванием с иммобилизованным реагентом на планшете и регистрацией ферментно-генерированного хромогенного сигнала.",
+    "formal_notation": "OD 450 нм для TMB/HRP; форматы direct, indirect, sandwich, competitive",
+    "conditions": "Планшет 96 лунок; конъюгат HRP или ALP; буферы и блокировка BSA/казеином",
+    "limits": [
+      "Перекрёстные реакции антител дают ложные положительные",
+      "Прозон-эффект при избытке антигена в sandwich-формате",
+      "Чувствительность ниже PCR для возбудителей низкой концентрации"
+    ],
+    "prereq": ["concept.biology.immune.antibody"],
+    "derives_from": [],
+    "confidence": 0.96,
+    "tags": ["elisa", "immunoassay", "diagnostics", "antibody"],
+    "tier_extensions": {
+      "scale": "laboratory",
+      "success_rate": 0.97,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "method.medicine.diagnostics.ngs",
+    "schema_version": "3.2",
+    "domain": "medicine.tech.diagnostics",
+    "subtopic": "practical.medical.diagnostics",
+    "tier": "practical",
+    "type": "method",
+    "statement": "Секвенирование нового поколения параллельно читает миллионы коротких фрагментов ДНК методами обратимой терминации (Illumina) или нанопор (Nanopore) с биоинформатической сборкой.",
+    "formal_notation": "Illumina чтения 150–300 пн; Nanopore до 2 Мпн; глубина 30–100× для генома человека",
+    "conditions": "Подготовка библиотеки; флоу-селл; биоинформатика выравнивания BWA/STAR и вызова вариантов GATK",
+    "limits": [
+      "Иллюмина плохо читает GC-богатые и повторяющиеся регионы",
+      "Высокая стоимость и сложность анализа",
+      "Не различает соматические и герминальные варианты без парных образцов"
+    ],
+    "prereq": ["concept.biology.dna.sequence", "method.medicine.diagnostics.pcr"],
+    "derives_from": [],
+    "confidence": 0.94,
+    "tags": ["ngs", "sequencing", "genomics", "diagnostics"],
+    "tier_extensions": {
+      "scale": "laboratory",
+      "success_rate": 0.95,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "technology.medicine.therapy.monoclonal_antibody",
+    "schema_version": "3.2",
+    "domain": "medicine.tech.therapy",
+    "subtopic": "practical.medical.therapeutics",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Моноклональные антитела — рекомбинантные IgG идентичной специфичности из CHO-клеточных культур, блокирующие рецептор, цитокин или маркер опухоли с высокой селективностью.",
+    "formal_notation": "Аффинность K_d 10⁻⁹–10⁻¹² М; полупериод 21 день IgG; дозирование 1–20 мг/кг",
+    "conditions": "Внутривенная инфузия или подкожно; премедикация при риске инфузионных реакций",
+    "limits": [
+      "Иммуногенность ADA снижает эффективность",
+      "Высокая стоимость и сложная биопродукция",
+      "Не пересекает гематоэнцефалический барьер без модификаций"
+    ],
+    "prereq": ["concept.biology.immune.antibody"],
+    "derives_from": [],
+    "confidence": 0.93,
+    "tags": ["monoclonal", "biologics", "therapy", "immunology"],
+    "tier_extensions": {
+      "scale": "clinical",
+      "success_rate": 0.90,
+      "safety_critical": true,
+      "safety_notes": "Инфузионные реакции; цитокиновый шторм при CAR-T-родственных; реактивация HBV при ритуксимабе"
+    }
+  },
+  {
+    "id": "technology.medicine.therapy.chemotherapy",
+    "schema_version": "3.2",
+    "domain": "medicine.tech.therapy",
+    "subtopic": "practical.medical.therapeutics",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Цитотоксическая химиотерапия повреждает быстро делящиеся клетки алкилированием ДНК, ингибированием топоизомераз, антиметаболитами или микротрубочковыми ядами с целью апоптоза опухоли.",
+    "formal_notation": "Циклы 14–28 дней; дозы по площади тела м²; AUC по Calvert для карбоплатина",
+    "conditions": "Премедикация противорвотными 5-HT3; контроль гемограммы и почечной функции",
+    "limits": [
+      "Нейтропения и инфекции",
+      "Кардио-, нефро-, нейротоксичность по препаратам",
+      "Резистентность через MDR-помпы и репарацию ДНК"
+    ],
+    "prereq": ["concept.biology.cell.division", "concept.pharmacology.pk_pd"],
+    "derives_from": [],
+    "confidence": 0.93,
+    "tags": ["chemotherapy", "oncology", "cytotoxic", "therapy"],
+    "tier_extensions": {
+      "scale": "clinical",
+      "success_rate": 0.85,
+      "safety_critical": true,
+      "safety_notes": "Фебрильная нейтропения; экстравазация везикантов; обращение с цитостатиками в БЗК"
+    }
+  },
+  {
+    "id": "technology.medicine.surgery.defibrillator",
+    "schema_version": "3.2",
+    "domain": "medicine.tech.therapy",
+    "subtopic": "practical.medical.therapeutics",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Дефибриллятор подаёт двухфазный импульс 120–360 Дж через электроды на грудную клетку для одновременной деполяризации миокарда и прерывания фибрилляции желудочков.",
+    "formal_notation": "Энергия 120–360 Дж; длительность импульса 6–20 мс; ток 30–50 А пик",
+    "conditions": "Гель или адгезивные электроды; распознавание ритма АНД; пауза CPR ≤10 с",
+    "limits": [
+      "Не показан при асистолии и электромеханической диссоциации",
+      "Ожоги кожи при низком контактном гелировании",
+      "Поверхностные имплантаты требуют смещения электродов"
+    ],
+    "prereq": ["concept.biology.heart.action_potential"],
+    "derives_from": [],
+    "confidence": 0.97,
+    "tags": ["defibrillator", "cardiac", "resuscitation", "therapy"],
+    "tier_extensions": {
+      "scale": "clinical",
+      "success_rate": 0.95,
+      "safety_critical": true,
+      "safety_notes": "Поражение спасателя током; ожоги кожи; противопоказан при контакте с водой и металлом"
+    }
+  },
+  {
+    "id": "method.medicine.diagnostics.mass_spectrometry",
+    "schema_version": "3.2",
+    "domain": "medicine.tech.diagnostics",
+    "subtopic": "practical.medical.diagnostics",
+    "tier": "practical",
+    "type": "method",
+    "statement": "Масс-спектрометрия ионизирует молекулы пробы методами ESI или MALDI и разделяет ионы по m/z в квадруполе, времяпролётном или орбитальном анализаторе с идентификацией по спектру.",
+    "formal_notation": "Разрешение m/Δm 10³ (квад) до 10⁶ (Orbitrap); диапазон m/z 50–10⁵",
+    "conditions": "Высокий вакуум 10⁻⁵ Па; жидкостная или газовая хроматография на входе; калибровка по эталонам",
+    "limits": [
+      "Подавление ионизации в сложных матрицах",
+      "Низкая чувствительность для нелетучих/неионизирующихся соединений GC-MS",
+      "Сложная пробоподготовка для биообразцов"
+    ],
+    "prereq": ["concept.chemistry.ionization"],
+    "derives_from": [],
+    "confidence": 0.95,
+    "tags": ["mass_spectrometry", "proteomics", "diagnostics", "analytical"],
+    "tier_extensions": {
+      "scale": "laboratory",
+      "success_rate": 0.96,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "technology.medicine.surgery.pacemaker",
+    "schema_version": "3.2",
+    "domain": "medicine.tech.therapy",
+    "subtopic": "practical.medical.therapeutics",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Имплантируемый кардиостимулятор подаёт электрические импульсы по эндокардиальным электродам на миокард предсердия и желудочка с алгоритмом восприятия и контроля частоты.",
+    "formal_notation": "Импульс 0.5–7.5 В × 0.05–1.5 мс; ресурс батареи Li-I₂ 8–12 лет; режимы DDD, VVI, AAI",
+    "conditions": "Имплантация в подключичную область; электроды в правом предсердии и/или желудочке",
+    "limits": [
+      "Внешние магниты МРТ переводят в безопасный режим",
+      "Инфекция ложа стимулятора 1–2%",
+      "Стимуляция правого желудочка может вызвать кардиомиопатию"
+    ],
+    "prereq": ["concept.biology.heart.action_potential", "concept.electronics.feedback"],
+    "derives_from": [],
+    "confidence": 0.96,
+    "tags": ["pacemaker", "cardiac", "implant", "therapy"],
+    "tier_extensions": {
+      "scale": "clinical",
+      "success_rate": 0.97,
+      "safety_critical": true,
+      "safety_notes": "Электромагнитные помехи (МРТ, диатермия); инфекция; пневмоторакс при доступе к подключичной вене"
+    }
+  },
+  {
+    "id": "technology.medicine.therapy.crispr_clinical",
+    "schema_version": "3.2",
+    "domain": "medicine.tech.therapy",
+    "subtopic": "practical.medical.therapeutics",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Клиническое CRISPR-Cas9 редактирует геном пациента вне организма (ex vivo) направляющей РНК к мишени с двухцепочечным разрывом и репарацией NHEJ или HDR для коррекции наследственных болезней.",
+    "formal_notation": "sgRNA 20 нт; PAM NGG для SpCas9; редактирование клеток CD34+ при серповидноклеточной анемии",
+    "conditions": "Электропорация sgRNA+Cas9 в клетки CD34+; миелоаблативная кондиционирующая терапия; обратная инфузия",
+    "limits": [
+      "Off-target эффекты вне планируемого участка",
+      "Мозаицизм in vivo редактирования",
+      "Длительные эффекты неизвестны — препарат одобрен с 2023"
+    ],
+    "prereq": ["concept.biology.dna.repair", "method.medicine.diagnostics.ngs"],
+    "derives_from": [],
+    "confidence": 0.85,
+    "tags": ["crispr", "gene_editing", "therapy", "clinical"],
+    "tier_extensions": {
+      "scale": "clinical",
+      "success_rate": 0.85,
+      "safety_critical": true,
+      "safety_notes": "Off-target мутации; миелоаблативная подготовка с риском инфекций; долгосрочный мониторинг онкорисков"
+    }
+  }
+]

@@ -1,0 +1,502 @@
+[
+  {
+    "id": "open_problem.frontier.physics.quantum_gravity_unification",
+    "schema_version": "3.2",
+    "domain": "frontier.physics",
+    "subtopic": "frontier.physics.quantum_gravity",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Существует непротиворечивая квантовая теория гравитации, объединяющая общую теорию относительности и квантовую механику.",
+    "formal_notation": "S = (1/16πG)∫R√-g d^4x ⊕ S_QM ; согласованное квантование g_μν неизвестно",
+    "conditions": "Энергии порядка планковской 10^19 ГэВ; размер ~10^-35 м",
+    "prereq": ["concept.physics.relativity.general", "concept.physics.qm.quantization"],
+    "confidence": 0.30,
+    "tags": ["quantum_gravity", "unification", "planck_scale", "frontier"],
+    "tier_extensions": {
+      "status": "open",
+      "partial_results": "Эффективная теория работает до планковского масштаба; парадокс информации ЧД указывает на необходимость новой физики",
+      "competing_approaches": ["string theory", "loop quantum gravity", "asymptotic safety", "causal dynamical triangulation"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "hypothesis.frontier.physics.string_theory",
+    "schema_version": "3.2",
+    "domain": "frontier.physics",
+    "subtopic": "frontier.physics.quantum_gravity",
+    "tier": "frontier",
+    "type": "hypothesis",
+    "statement": "Фундаментальные объекты Вселенной — одномерные струны в 10- или 11-мерном пространстве, моды колебаний которых порождают частицы.",
+    "formal_notation": "S_NG = -T ∫d^2σ √(-det(∂_a X^μ ∂_b X_μ)); D=10 (суперструна) или 11 (M-теория)",
+    "conditions": "Энергии порядка планковской; компактификация дополнительных измерений",
+    "prereq": ["concept.physics.qft.gauge_theory", "concept.physics.relativity.general"],
+    "confidence": 0.25,
+    "tags": ["string_theory", "m_theory", "extra_dimensions", "supersymmetry"],
+    "tier_extensions": {
+      "status": "open",
+      "partial_results": "5 согласованных суперструнных теорий; AdS/CFT соответствие даёт богатые предсказания для CFT",
+      "competing_approaches": ["loop quantum gravity", "asymptotic safety", "emergent gravity Verlinde"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "hypothesis.frontier.physics.loop_quantum_gravity",
+    "schema_version": "3.2",
+    "domain": "frontier.physics",
+    "subtopic": "frontier.physics.quantum_gravity",
+    "tier": "frontier",
+    "type": "hypothesis",
+    "statement": "Пространство-время дискретно на планковском масштабе и состоит из квантованных спиновых сетей с минимальной площадью порядка планковской.",
+    "formal_notation": "A_min = 8πγℓ_P²√(j(j+1)); spin foam — эволюция спиновых сетей",
+    "conditions": "Фоновая независимость; каноническое квантование GR",
+    "prereq": ["concept.physics.relativity.general", "concept.physics.qm.quantization"],
+    "confidence": 0.25,
+    "tags": ["lqg", "spin_network", "background_independent", "quantum_gravity"],
+    "tier_extensions": {
+      "status": "open",
+      "partial_results": "Спектр площади и объёма дискретен; не воспроизведена полностью классическая GR в низкоэнергетическом пределе",
+      "competing_approaches": ["string theory", "causal sets", "spin foam models"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.physics.dark_matter_nature",
+    "schema_version": "3.2",
+    "domain": "frontier.physics",
+    "subtopic": "frontier.physics.dark_sector",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Природа тёмной материи — частицы вне Стандартной модели, модификация гравитации или примордиальные чёрные дыры — не установлена.",
+    "formal_notation": "Ω_DM ≈ 0.265; m_DM, σ_DM-SM не определены",
+    "conditions": "Наблюдения кривых вращения, гравитационного линзирования, CMB",
+    "prereq": ["concept.physics.cosmology.lambda_cdm", "concept.physics.standard_model.bsm"],
+    "confidence": 0.40,
+    "tags": ["dark_matter", "dark_sector", "bsm", "cosmology"],
+    "tier_extensions": {
+      "status": "open",
+      "partial_results": "LZ, XENONnT исключили большую часть параметров WIMP; ADMX ищет аксионы; нет прямого детектирования",
+      "competing_approaches": ["WIMPs", "axions", "sterile neutrinos", "primordial black holes", "MOND"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.physics.dark_energy_nature",
+    "schema_version": "3.2",
+    "domain": "frontier.physics",
+    "subtopic": "frontier.physics.dark_sector",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Природа тёмной энергии, ответственной за ускоренное расширение Вселенной — космологическая постоянная или динамическое поле — не установлена.",
+    "formal_notation": "w = p/ρ ≈ -1; Ω_Λ ≈ 0.685; DESI 2024 намекает w(z) изменяется",
+    "conditions": "Наблюдения SN Ia, BAO, CMB; красные смещения z < 2",
+    "prereq": ["concept.physics.cosmology.expansion", "concept.physics.cosmology.lambda_cdm"],
+    "confidence": 0.35,
+    "tags": ["dark_energy", "cosmological_constant", "quintessence", "expansion"],
+    "tier_extensions": {
+      "status": "open",
+      "partial_results": "DESI Year 1 (2024): свидетельства эволюции w(z), отклонение от Λ на уровне 2-3σ",
+      "competing_approaches": ["cosmological constant Λ", "quintessence", "modified gravity f(R)", "phantom energy"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.physics.baryon_asymmetry",
+    "schema_version": "3.2",
+    "domain": "frontier.physics",
+    "subtopic": "frontier.physics.unsolved",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Происхождение наблюдаемой асимметрии материи и антиматерии во Вселенной — η ~ 10^-10 — не объяснено в рамках Стандартной модели.",
+    "formal_notation": "η = (n_B - n_B̄)/n_γ ≈ 6×10^-10",
+    "conditions": "Ранняя Вселенная; условия Сахарова (B-нарушение, C/CP, неравновесие)",
+    "prereq": ["concept.physics.standard_model.cp_violation", "concept.physics.cosmology.early_universe"],
+    "confidence": 0.30,
+    "tags": ["baryogenesis", "cp_violation", "matter_antimatter", "sakharov"],
+    "tier_extensions": {
+      "status": "open",
+      "partial_results": "CP-нарушение в Стандартной модели недостаточно (на 10 порядков); требуется новая физика",
+      "competing_approaches": ["leptogenesis", "electroweak baryogenesis", "Affleck-Dine mechanism", "GUT baryogenesis"],
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "open_problem.frontier.physics.inflation_mechanism",
+    "schema_version": "3.2",
+    "domain": "frontier.physics",
+    "subtopic": "frontier.physics.unsolved",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Конкретный физический механизм инфляции ранней Вселенной — поле инфлатона, его потенциал и связь со Стандартной моделью — не известен.",
+    "formal_notation": "ä/a = -(4πG/3)(ρ + 3p) > 0; H ≈ const; N ≥ 60 e-folds",
+    "conditions": "Ранняя Вселенная t ~ 10^-36 - 10^-32 с",
+    "prereq": ["concept.physics.cosmology.inflation", "concept.physics.qft.scalar_field"],
+    "confidence": 0.45,
+    "tags": ["inflation", "inflaton", "cosmology", "early_universe"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "Плоскостность, однородность, спектр CMB подтверждают инфляцию; модель Старобинского R+R² лучше всего согласуется",
+      "competing_approaches": ["Starobinsky R²", "Higgs inflation", "natural inflation", "bouncing cosmologies альтернатива"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "hypothesis.frontier.physics.multiverse",
+    "schema_version": "3.2",
+    "domain": "frontier.physics",
+    "subtopic": "frontier.physics.unsolved",
+    "tier": "frontier",
+    "type": "hypothesis",
+    "statement": "Наблюдаемая Вселенная — одна из ансамбля вселенных с разными физическими константами и/или законами.",
+    "formal_notation": "N_universes >> 1; распределение P(α_i) над константами Стандартной модели",
+    "conditions": "Вечная инфляция или ландшафт струнных вакуумов ~10^500",
+    "prereq": ["concept.physics.cosmology.eternal_inflation", "concept.physics.string.landscape"],
+    "confidence": 0.20,
+    "tags": ["multiverse", "anthropic", "eternal_inflation", "landscape"],
+    "tier_extensions": {
+      "status": "disputed",
+      "partial_results": "Тонкая настройка констант мотивирует антропный аргумент; прямых наблюдательных свидетельств нет",
+      "competing_approaches": ["eternal inflation level II", "string landscape", "many-worlds QM", "mathematical universe Tegmark"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.physics.hierarchy_problem",
+    "schema_version": "3.2",
+    "domain": "frontier.physics",
+    "subtopic": "frontier.physics.unsolved",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Почему масса бозона Хиггса 125 ГэВ намного меньше планковской массы 10^19 ГэВ, несмотря на квантовые поправки порядка планковских.",
+    "formal_notation": "δm_H² ~ Λ²_UV; m_H/M_Pl ~ 10^-17 требует тонкой настройки 10^-34",
+    "conditions": "Стандартная модель без новой физики ниже планковского масштаба",
+    "prereq": ["concept.physics.standard_model.higgs", "concept.physics.qft.renormalization"],
+    "confidence": 0.40,
+    "tags": ["hierarchy", "naturalness", "higgs", "fine_tuning"],
+    "tier_extensions": {
+      "status": "open",
+      "partial_results": "LHC не нашёл суперсимметрии до 2 ТэВ; натуральность под давлением",
+      "competing_approaches": ["supersymmetry", "extra dimensions ADD/RS", "composite Higgs", "anthropic"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.physics.neutrino_mass_hierarchy",
+    "schema_version": "3.2",
+    "domain": "frontier.physics",
+    "subtopic": "frontier.physics.unsolved",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Иерархия масс нейтрино — нормальная (m_1 < m_2 < m_3) или обратная (m_3 < m_1 < m_2) — не установлена.",
+    "formal_notation": "Δm²_21 ≈ 7.5×10^-5 эВ²; |Δm²_31| ≈ 2.5×10^-3 эВ²; знак Δm²_31 неизвестен",
+    "conditions": "Осцилляции атмосферных, солнечных, реакторных и ускорительных нейтрино",
+    "prereq": ["concept.physics.particles.neutrino_oscillation", "concept.physics.standard_model.lepton_sector"],
+    "confidence": 0.45,
+    "tags": ["neutrino", "mass_hierarchy", "oscillations", "open"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "NOvA, T2K дают слабое предпочтение нормальной иерархии; JUNO, DUNE определят к 2030",
+      "competing_approaches": ["NOvA + T2K combined", "JUNO reactor", "DUNE long baseline", "KATRIN absolute mass"],
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "open_problem.frontier.physics.measurement_problem",
+    "schema_version": "3.2",
+    "domain": "frontier.physics",
+    "subtopic": "frontier.physics.foundations",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Механизм коллапса квантовой волновой функции при измерении и переход от суперпозиции к определённому исходу не объяснены унитарной динамикой.",
+    "formal_notation": "|ψ⟩ = Σ c_i |i⟩ → |k⟩ с вероятностью |c_k|² ; механизм →?",
+    "conditions": "Квантовая система с макроскопическим прибором",
+    "prereq": ["concept.physics.qm.wave_function", "concept.physics.qm.born_rule"],
+    "confidence": 0.40,
+    "tags": ["measurement_problem", "qm_foundations", "interpretation", "collapse"],
+    "tier_extensions": {
+      "status": "disputed",
+      "partial_results": "Декогеренция объясняет переход к смешанным состояниям, но не выбор конкретного исхода",
+      "competing_approaches": ["Copenhagen", "many-worlds Everett", "Bohmian mechanics", "GRW spontaneous collapse", "QBism"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.physics.arrow_of_time",
+    "schema_version": "3.2",
+    "domain": "frontier.physics",
+    "subtopic": "frontier.physics.foundations",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Происхождение стрелы времени — почему энтропия растёт, при T-симметричных микрозаконах — связано с низкой энтропией Большого взрыва.",
+    "formal_notation": "dS/dt ≥ 0; микрозаконы CPT-инвариантны; S(t_Big_Bang) << S_max",
+    "conditions": "Замкнутая Вселенная; гипотеза прошлого (Past Hypothesis)",
+    "prereq": ["concept.physics.thermodynamics.entropy", "concept.physics.cosmology.early_universe"],
+    "confidence": 0.40,
+    "tags": ["arrow_of_time", "entropy", "past_hypothesis", "thermodynamics"],
+    "tier_extensions": {
+      "status": "open",
+      "partial_results": "Низкая энтропия начала Вселенной постулируется (Penrose, Carroll); происхождение не объяснено",
+      "competing_approaches": ["Past Hypothesis Albert", "Weyl curvature Penrose", "branching multiverse Carroll-Chen"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.physics.black_hole_information",
+    "schema_version": "3.2",
+    "domain": "frontier.physics",
+    "subtopic": "frontier.physics.quantum_gravity",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Сохраняется ли квантовая информация при испарении чёрной дыры через излучение Хокинга — парадокс информации.",
+    "formal_notation": "S_rad(t) → ? при t > t_Page; Page curve vs Hawking thermal",
+    "conditions": "Полное испарение чёрной дыры через излучение Хокинга",
+    "prereq": ["concept.physics.gr.black_hole", "concept.physics.qft.hawking_radiation"],
+    "confidence": 0.45,
+    "tags": ["bh_information", "hawking", "page_curve", "holography"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "Penington-Almheiri 2019: islands formula воспроизводит Page curve; механизм возврата информации детально неизвестен",
+      "competing_approaches": ["holographic AdS/CFT", "fuzzballs", "ER=EPR", "soft hair Hawking-Perry-Strominger"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.physics.cosmological_constant_problem",
+    "schema_version": "3.2",
+    "domain": "frontier.physics",
+    "subtopic": "frontier.physics.unsolved",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Наблюдаемая космологическая постоянная Λ на 120 порядков меньше предсказания квантовой теории поля для энергии вакуума.",
+    "formal_notation": "ρ_Λ^obs ~ 10^-47 ГэВ⁴; ρ_vac^QFT ~ 10^73 ГэВ⁴; расхождение 10^120",
+    "conditions": "Стандартная QFT + ОТО; обрезание на планковском масштабе",
+    "prereq": ["concept.physics.cosmology.dark_energy", "concept.physics.qft.vacuum_energy"],
+    "confidence": 0.25,
+    "tags": ["cosmological_constant", "vacuum_energy", "fine_tuning", "hierarchy"],
+    "tier_extensions": {
+      "status": "open",
+      "partial_results": "Никакой механизм симметрии не отменяет вклад полностью; антропный аргумент в струнном ландшафте",
+      "competing_approaches": ["supersymmetry cancellation", "anthropic landscape", "modified gravity", "sequestering"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.physics.proton_radius",
+    "schema_version": "3.2",
+    "domain": "frontier.physics",
+    "subtopic": "frontier.physics.unsolved",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Радиус протона по разным методам измерения даёт расходящиеся значения; источник расхождения не установлен.",
+    "formal_notation": "r_p (e-scattering) ≈ 0.879 fm vs r_p (muonic H) ≈ 0.841 fm",
+    "conditions": "Измерения по упругому рассеянию электронов, спектроскопии водорода, спектроскопии мюонного водорода",
+    "prereq": ["concept.physics.qed.precision_test", "concept.physics.atomic.spectroscopy"],
+    "confidence": 0.50,
+    "tags": ["proton_radius", "qed", "puzzle", "muonic_hydrogen"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "После 2019 новые измерения PRad и в водороде сходятся к меньшему значению ~0.84 fm",
+      "competing_approaches": ["new physics in muon sector", "experimental systematics", "QED higher order corrections"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.physics.muon_g_minus_2",
+    "schema_version": "3.2",
+    "domain": "frontier.physics",
+    "subtopic": "frontier.physics.unsolved",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Расхождение между измеренным аномальным магнитным моментом мюона и теоретическим предсказанием Стандартной модели — намёк на новую физику.",
+    "formal_notation": "a_μ = (g-2)/2; Δa_μ ≈ 2.5×10^-9 (~5σ от R-ratio, ~0σ от lattice BMW)",
+    "conditions": "Fermilab E989, BNL E821 эксперименты; HVP вклад спорный",
+    "prereq": ["concept.physics.qed.magnetic_moment", "concept.physics.qft.hadronic_corrections"],
+    "confidence": 0.45,
+    "tags": ["muon_g2", "anomaly", "bsm", "hadronic"],
+    "tier_extensions": {
+      "status": "disputed",
+      "partial_results": "Fermilab Run-2/3 (2023) подтвердил расхождение с R-ratio; BMW решёточный расчёт даёт согласие с СМ",
+      "competing_approaches": ["new BSM physics", "hadronic vacuum polarization systematics", "lattice QCD BMW"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.physics.matter_antimatter_gravity",
+    "schema_version": "3.2",
+    "domain": "frontier.physics",
+    "subtopic": "frontier.physics.unsolved",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Подчиняется ли антиматерия принципу эквивалентности так же, как материя — гравитирует ли антиводород вниз.",
+    "formal_notation": "g_antimatter = g_matter ?",
+    "conditions": "ALPHA-g, AEgIS, GBAR эксперименты с антиводородом",
+    "prereq": ["concept.physics.gr.equivalence_principle", "concept.physics.particles.antimatter"],
+    "confidence": 0.55,
+    "tags": ["antimatter", "gravity", "equivalence_principle", "cern"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "ALPHA-g (CERN, 2023): антиводород падает вниз с g_anti = (0.75 ± 0.13_stat ± 0.16_syst)g — согласуется с g",
+      "competing_approaches": ["ALPHA-g free fall", "AEgIS horizontal beam", "GBAR cold atoms"],
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "open_problem.frontier.physics.hubble_tension",
+    "schema_version": "3.2",
+    "domain": "frontier.physics",
+    "subtopic": "frontier.physics.dark_sector",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Значения постоянной Хаббла, полученные из CMB и из локальных измерений (Cepheids+SN Ia), расходятся на уровне 5σ.",
+    "formal_notation": "H_0^CMB = 67.4 ± 0.5; H_0^SH0ES = 73.0 ± 1.0 км/с/Мпк",
+    "conditions": "Планк CMB vs SH0ES distance ladder; систематики не известны",
+    "prereq": ["concept.physics.cosmology.hubble_constant", "concept.physics.cosmology.distance_ladder"],
+    "confidence": 0.45,
+    "tags": ["hubble_tension", "h0", "cosmology", "anomaly"],
+    "tier_extensions": {
+      "status": "open",
+      "partial_results": "JWST подтверждает калибровку Cepheids SH0ES; TRGB даёт промежуточное значение ~70",
+      "competing_approaches": ["early dark energy", "modified recombination", "interacting dark sector", "systematic errors"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.physics.strong_cp",
+    "schema_version": "3.2",
+    "domain": "frontier.physics",
+    "subtopic": "frontier.physics.unsolved",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Почему θ-параметр QCD, контролирующий CP-нарушение в сильных взаимодействиях, экспериментально равен нулю с точностью 10^-10.",
+    "formal_notation": "L_QCD ⊃ θ(g²/32π²)G_μν G̃^μν; |θ| < 10^-10 из EDM нейтрона",
+    "conditions": "Квантовая хромодинамика; топологический член",
+    "prereq": ["concept.physics.qcd.theta_term", "concept.physics.symmetry.cp_violation"],
+    "confidence": 0.35,
+    "tags": ["strong_cp", "theta_qcd", "axion", "naturalness"],
+    "tier_extensions": {
+      "status": "open",
+      "partial_results": "Аксион Печчеи-Куинн динамически зануляет θ; ADMX, HAYSTAC ищут аксионы массой μэВ",
+      "competing_approaches": ["Peccei-Quinn axion", "Nelson-Barr mechanism", "anthropic", "discrete symmetry"],
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "open_problem.frontier.physics.quark_mass_origin",
+    "schema_version": "3.2",
+    "domain": "frontier.physics",
+    "subtopic": "frontier.physics.unsolved",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Происхождение иерархии масс кварков и лептонов через юкавские константы Стандартной модели не объяснено.",
+    "formal_notation": "y_top ≈ 1, y_e ≈ 3×10^-6; шкала 10^6; нет принципа выбора",
+    "conditions": "Стандартная модель с тремя поколениями; матрица CKM",
+    "prereq": ["concept.physics.standard_model.yukawa", "concept.physics.standard_model.flavor"],
+    "confidence": 0.30,
+    "tags": ["flavor_puzzle", "yukawa", "mass_hierarchy", "ckm"],
+    "tier_extensions": {
+      "status": "open",
+      "partial_results": "Текстуры Фроггатта-Нильсена частично объясняют; точные значения не предсказаны",
+      "competing_approaches": ["Froggatt-Nielsen", "GUT relations", "extra dimensions wave function", "anthropic"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "hypothesis.frontier.physics.supersymmetry",
+    "schema_version": "3.2",
+    "domain": "frontier.physics",
+    "subtopic": "frontier.physics.unsolved",
+    "tier": "frontier",
+    "type": "hypothesis",
+    "statement": "Каждой частице Стандартной модели соответствует суперпартнёр с противоположной статистикой; SUSY-частицы не обнаружены до 2 ТэВ.",
+    "formal_notation": "Q|boson⟩ = |fermion⟩; m_squark, m_gluino > 2.2 ТэВ (LHC Run 2-3)",
+    "conditions": "Расширение Пуанкаре алгебры; нарушенная при низких энергиях",
+    "prereq": ["concept.physics.standard_model.bsm", "concept.physics.symmetry.poincare"],
+    "confidence": 0.20,
+    "tags": ["supersymmetry", "mssm", "bsm", "lhc"],
+    "tier_extensions": {
+      "status": "disputed",
+      "partial_results": "LHC исключил natural SUSY ниже 2 ТэВ; MSSM требует тонкой настройки",
+      "competing_approaches": ["MSSM", "NMSSM", "split SUSY", "no SUSY at low energy"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.physics.high_tc_superconductivity",
+    "schema_version": "3.2",
+    "domain": "frontier.physics",
+    "subtopic": "frontier.technology.superconductivity",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Микроскопический механизм высокотемпературной сверхпроводимости в купратах и железных пниктидах не установлен.",
+    "formal_notation": "T_c > T_c^BCS; механизм спаривания: спиновые флуктуации? фононы?",
+    "conditions": "Купраты YBCO, BSCCO, Hg-1223; T_c до 138 K при атм. давлении",
+    "prereq": ["concept.physics.condensed.bcs_theory", "concept.physics.condensed.cuprates"],
+    "confidence": 0.40,
+    "tags": ["high_tc", "cuprates", "superconductivity", "open"],
+    "tier_extensions": {
+      "status": "open",
+      "partial_results": "Pseudogap и strange metal phase картированы; нет согласия по механизму спаривания",
+      "competing_approaches": ["spin fluctuation pairing", "RVB Anderson", "phonon-mediated", "string theory holography"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.physics.quantum_error_threshold",
+    "schema_version": "3.2",
+    "domain": "frontier.physics",
+    "subtopic": "frontier.technology.quantum_computing",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Минимальный аппаратный порог ошибок для практической квантовой коррекции с разумной overhead не определён точно.",
+    "formal_notation": "p_phys < p_threshold ≈ 10^-2 (surface code); overhead ~10^3-10^4 физ. кубит/логический",
+    "conditions": "Surface code или альтернативные коды; шум стандартной модели",
+    "prereq": ["concept.physics.qc.error_correction", "concept.physics.qc.surface_code"],
+    "confidence": 0.50,
+    "tags": ["qec", "fault_tolerance", "surface_code", "threshold"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "Google Willow (2024) показал ниже порога для distance-3,5,7 surface code; масштабирование до 10^6 кубит — задача",
+      "competing_approaches": ["surface code", "color codes", "LDPC codes", "topological qubits"],
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "open_problem.frontier.physics.fusion_breakeven_commercial",
+    "schema_version": "3.2",
+    "domain": "frontier.physics",
+    "subtopic": "frontier.technology.fusion",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Достижение коммерчески жизнеспособной термоядерной энергетики с высоким Q_eng и долгой работой не достигнуто.",
+    "formal_notation": "Q_sci > 10, Q_eng > 1; tritium breeding ratio > 1; T_pulse > часов",
+    "conditions": "DT-плазма; токамак, стелларатор или ICF",
+    "prereq": ["concept.physics.plasma.tokamak", "concept.physics.fusion.lawson_criterion"],
+    "confidence": 0.45,
+    "tags": ["fusion", "iter", "commercial", "tokamak"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "NIF 2022: Q_sci=1.5 на один выстрел; ITER first plasma отложен до 2034; SPARC, Commonwealth цели 2025-2030",
+      "competing_approaches": ["ITER tokamak", "SPARC high-field", "NIF inertial", "stellarators W7-X", "private companies"],
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "open_problem.frontier.physics.room_temp_superconductor",
+    "schema_version": "3.2",
+    "domain": "frontier.physics",
+    "subtopic": "frontier.technology.superconductivity",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Существование сверхпроводимости при комнатной температуре и атмосферном давлении не подтверждено в воспроизводимом материале.",
+    "formal_notation": "T_c > 293 K при P = 1 атм; не достигнуто на 2026",
+    "conditions": "Атмосферное давление; стабильный материал",
+    "prereq": ["concept.physics.condensed.superconductivity", "concept.physics.high_pressure.hydrides"],
+    "confidence": 0.30,
+    "tags": ["room_temp_sc", "lk99", "hydrides", "open"],
+    "tier_extensions": {
+      "status": "disputed",
+      "partial_results": "Hydrides при >100 ГПа достигают T_c=250 K; LK-99 (2023) и Ranga Dias claims опровергнуты",
+      "competing_approaches": ["hydride high-pressure", "cuprate engineering", "twisted bilayer graphene", "moiré materials"],
+      "has_disputes": true
+    }
+  }
+]

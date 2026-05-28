@@ -1,0 +1,478 @@
+[
+  {
+    "id": "theorem.logic.propositional.de_morgan_conjunction",
+    "schema_version": "3.2",
+    "domain": "logic.formal.propositional",
+    "subtopic": "logic.formal.propositional",
+    "tier": "logic",
+    "type": "theorem",
+    "statement": "Отрицание конъюнкции эквивалентно дизъюнкции отрицаний.",
+    "formal_notation": "¬(P ∧ Q) ⊣⊢ (¬P ∨ ¬Q)",
+    "conditions": "Классическая двузначная логика",
+    "prereq": ["concept.logic.formal.conjunction", "concept.logic.formal.disjunction", "concept.logic.formal.negation"],
+    "derives_from": ["definition.logic.propositional.implication"],
+    "confidence": 1.0,
+    "tags": ["de_morgan", "theorem", "boolean", "duality"],
+    "tier_extensions": {
+      "category": "law",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "theorem.logic.propositional.de_morgan_disjunction",
+    "schema_version": "3.2",
+    "domain": "logic.formal.propositional",
+    "subtopic": "logic.formal.propositional",
+    "tier": "logic",
+    "type": "theorem",
+    "statement": "Отрицание дизъюнкции эквивалентно конъюнкции отрицаний.",
+    "formal_notation": "¬(P ∨ Q) ⊣⊢ (¬P ∧ ¬Q)",
+    "conditions": "Классическая двузначная логика",
+    "prereq": ["concept.logic.formal.conjunction", "concept.logic.formal.disjunction", "concept.logic.formal.negation"],
+    "derives_from": ["theorem.logic.propositional.de_morgan_conjunction"],
+    "confidence": 1.0,
+    "tags": ["de_morgan", "theorem", "boolean", "duality"],
+    "tier_extensions": {
+      "category": "law",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "theorem.logic.boolean.distributivity",
+    "schema_version": "3.2",
+    "domain": "logic.formal.propositional",
+    "subtopic": "logic.formal.propositional",
+    "tier": "logic",
+    "type": "theorem",
+    "statement": "Конъюнкция дистрибутивна над дизъюнкцией и наоборот.",
+    "formal_notation": "P ∧ (Q ∨ R) ⊣⊢ (P ∧ Q) ∨ (P ∧ R)",
+    "conditions": "Булева алгебра; классическая логика",
+    "prereq": ["concept.logic.formal.conjunction", "concept.logic.formal.disjunction"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["boolean", "distributivity", "theorem", "algebra"],
+    "tier_extensions": {
+      "category": "law",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "theorem.logic.boolean.absorption",
+    "schema_version": "3.2",
+    "domain": "logic.formal.propositional",
+    "subtopic": "logic.formal.propositional",
+    "tier": "logic",
+    "type": "theorem",
+    "statement": "Конъюнкция переменной с её дизъюнкцией эквивалентна самой переменной.",
+    "formal_notation": "P ∧ (P ∨ Q) ⊣⊢ P;   P ∨ (P ∧ Q) ⊣⊢ P",
+    "conditions": "Булева алгебра",
+    "prereq": ["concept.logic.formal.conjunction", "concept.logic.formal.disjunction"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["boolean", "absorption", "theorem", "algebra"],
+    "tier_extensions": {
+      "category": "law",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "theorem.logic.boolean.idempotency",
+    "schema_version": "3.2",
+    "domain": "logic.formal.propositional",
+    "subtopic": "logic.formal.propositional",
+    "tier": "logic",
+    "type": "theorem",
+    "statement": "Конъюнкция и дизъюнкция переменной с собой эквивалентны самой переменной.",
+    "formal_notation": "P ∧ P ⊣⊢ P;   P ∨ P ⊣⊢ P",
+    "conditions": "Булева алгебра",
+    "prereq": ["concept.logic.formal.conjunction", "concept.logic.formal.disjunction"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["boolean", "idempotency", "theorem", "algebra"],
+    "tier_extensions": {
+      "category": "law",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "theorem.logic.predicate.quantifier_negation",
+    "schema_version": "3.2",
+    "domain": "logic.formal.predicate",
+    "subtopic": "logic.formal.predicate",
+    "tier": "logic",
+    "type": "theorem",
+    "statement": "Отрицание квантора всеобщности равно квантору существования отрицания.",
+    "formal_notation": "¬∀x P(x) ⊣⊢ ∃x ¬P(x);   ¬∃x P(x) ⊣⊢ ∀x ¬P(x)",
+    "conditions": "Логика первого порядка; непустая область",
+    "prereq": ["concept.logic.formal.universal_quantifier", "concept.logic.formal.existential_quantifier"],
+    "derives_from": ["theorem.logic.propositional.de_morgan_conjunction"],
+    "confidence": 1.0,
+    "tags": ["predicate", "quantifier", "negation", "duality"],
+    "tier_extensions": {
+      "category": "law",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "definition.logic.predicate.prenex_normal_form",
+    "schema_version": "3.2",
+    "domain": "logic.formal.predicate",
+    "subtopic": "logic.formal.predicate",
+    "tier": "logic",
+    "type": "definition",
+    "statement": "Пренексная нормальная форма — формула с цепочкой кванторов в начале и бескванторной матрицей далее.",
+    "formal_notation": "Q₁x₁ Q₂x₂ ... Qₙxₙ M(x₁,...,xₙ), где Qᵢ ∈ {∀, ∃}",
+    "conditions": "Логика первого порядка",
+    "prereq": ["concept.logic.formal.universal_quantifier", "concept.logic.formal.existential_quantifier"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["definition", "prenex", "normal_form", "predicate"],
+    "tier_extensions": {
+      "category": "rule",
+      "is_axiomatic": true
+    }
+  },
+  {
+    "id": "definition.logic.modal.necessity",
+    "schema_version": "3.2",
+    "domain": "logic.formal.modal",
+    "subtopic": "logic.formal.modal",
+    "tier": "logic",
+    "type": "definition",
+    "statement": "Необходимость □P истинна в мире w, если P истинно во всех мирах, доступных из w.",
+    "formal_notation": "w ⊨ □P ⟺ ∀v: (wRv → v ⊨ P)",
+    "conditions": "Семантика возможных миров Крипке; отношение доступности R",
+    "prereq": ["concept.logic.modal.possible_world", "concept.logic.modal.accessibility"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["modal", "necessity", "kripke", "definition"],
+    "tier_extensions": {
+      "category": "rule",
+      "is_axiomatic": true
+    }
+  },
+  {
+    "id": "definition.logic.modal.possibility",
+    "schema_version": "3.2",
+    "domain": "logic.formal.modal",
+    "subtopic": "logic.formal.modal",
+    "tier": "logic",
+    "type": "definition",
+    "statement": "Возможность ◇P истинна в мире w, если P истинно хотя бы в одном мире, доступном из w.",
+    "formal_notation": "w ⊨ ◇P ⟺ ∃v: (wRv ∧ v ⊨ P);   ◇P ≡ ¬□¬P",
+    "conditions": "Семантика возможных миров Крипке",
+    "prereq": ["definition.logic.modal.necessity"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["modal", "possibility", "kripke", "duality"],
+    "tier_extensions": {
+      "category": "rule",
+      "is_axiomatic": true
+    }
+  },
+  {
+    "id": "axiom.logic.modal.k",
+    "schema_version": "3.2",
+    "domain": "logic.formal.modal",
+    "subtopic": "logic.formal.modal",
+    "tier": "logic",
+    "type": "axiom",
+    "statement": "Необходимость дистрибутивна над импликацией: из необходимости импликации и необходимости посылки следует необходимость заключения.",
+    "formal_notation": "□(P → Q) → (□P → □Q)",
+    "conditions": "Минимальная нормальная модальная система K",
+    "prereq": ["definition.logic.modal.necessity"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["modal", "axiom_k", "system_k", "distribution"],
+    "tier_extensions": {
+      "category": "law",
+      "is_axiomatic": true
+    }
+  },
+  {
+    "id": "axiom.logic.modal.t",
+    "schema_version": "3.2",
+    "domain": "logic.formal.modal",
+    "subtopic": "logic.formal.modal",
+    "tier": "logic",
+    "type": "axiom",
+    "statement": "Необходимое истинно: □P → P. Аксиома системы T соответствует рефлексивности отношения доступности.",
+    "formal_notation": "□P → P",
+    "conditions": "Модальная система T; отношение доступности рефлексивно",
+    "prereq": ["axiom.logic.modal.k"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["modal", "axiom_t", "system_t", "reflexive"],
+    "tier_extensions": {
+      "category": "law",
+      "is_axiomatic": true
+    }
+  },
+  {
+    "id": "axiom.logic.modal.s4",
+    "schema_version": "3.2",
+    "domain": "logic.formal.modal",
+    "subtopic": "logic.formal.modal",
+    "tier": "logic",
+    "type": "axiom",
+    "statement": "Необходимое необходимо необходимо: □P → □□P. Аксиома системы S4 соответствует транзитивности отношения доступности.",
+    "formal_notation": "□P → □□P",
+    "conditions": "Модальная система S4; отношение доступности рефлексивно и транзитивно",
+    "prereq": ["axiom.logic.modal.t"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["modal", "axiom_4", "system_s4", "transitive"],
+    "tier_extensions": {
+      "category": "law",
+      "is_axiomatic": true
+    }
+  },
+  {
+    "id": "axiom.logic.modal.s5",
+    "schema_version": "3.2",
+    "domain": "logic.formal.modal",
+    "subtopic": "logic.formal.modal",
+    "tier": "logic",
+    "type": "axiom",
+    "statement": "Возможное необходимо возможно: ◇P → □◇P. Аксиома системы S5 соответствует отношению эквивалентности на мирах.",
+    "formal_notation": "◇P → □◇P",
+    "conditions": "Модальная система S5; отношение доступности — эквивалентность",
+    "prereq": ["axiom.logic.modal.s4"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["modal", "axiom_5", "system_s5", "equivalence"],
+    "tier_extensions": {
+      "category": "law",
+      "is_axiomatic": true
+    }
+  },
+  {
+    "id": "definition.logic.fuzzy.truth_degree",
+    "schema_version": "3.2",
+    "domain": "logic.formal.fuzzy",
+    "subtopic": "logic.formal.propositional",
+    "tier": "logic",
+    "type": "definition",
+    "statement": "В нечёткой логике истинностное значение пропозиции — действительное число из отрезка [0, 1].",
+    "formal_notation": "v: Prop → [0, 1] ⊂ ℝ",
+    "conditions": "Системы Заде; многозначная логика",
+    "prereq": ["concept.logic.formal.truth_value"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["fuzzy", "many_valued", "zadeh", "definition"],
+    "tier_extensions": {
+      "category": "rule",
+      "is_axiomatic": true
+    }
+  },
+  {
+    "id": "definition.logic.fuzzy.t_norm",
+    "schema_version": "3.2",
+    "domain": "logic.formal.fuzzy",
+    "subtopic": "logic.formal.propositional",
+    "tier": "logic",
+    "type": "definition",
+    "statement": "T-норма — бинарная операция на [0,1], коммутативная, ассоциативная, монотонная, с нейтральным элементом 1; обобщает конъюнкцию.",
+    "formal_notation": "T: [0,1]² → [0,1]; T(x,1)=x; T(x,y)=T(y,x); T(x,T(y,z))=T(T(x,y),z)",
+    "conditions": "Нечёткая логика",
+    "prereq": ["definition.logic.fuzzy.truth_degree"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["fuzzy", "t_norm", "definition", "conjunction"],
+    "tier_extensions": {
+      "category": "rule",
+      "is_axiomatic": true
+    }
+  },
+  {
+    "id": "axiom.logic.set_theory.extensionality",
+    "schema_version": "3.2",
+    "domain": "logic.formal.set_theory",
+    "subtopic": "logic.formal.predicate",
+    "tier": "logic",
+    "type": "axiom",
+    "statement": "Два множества равны тогда и только тогда, когда содержат одни и те же элементы.",
+    "formal_notation": "∀A∀B: (∀x: x∈A ↔ x∈B) → A=B",
+    "conditions": "Аксиоматика ZFC; логика первого порядка с равенством",
+    "prereq": ["concept.logic.set_theory.set", "concept.logic.set_theory.membership"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["axiom", "zfc", "extensionality", "set_theory"],
+    "tier_extensions": {
+      "category": "law",
+      "is_axiomatic": true
+    }
+  },
+  {
+    "id": "axiom.logic.set_theory.empty_set",
+    "schema_version": "3.2",
+    "domain": "logic.formal.set_theory",
+    "subtopic": "logic.formal.predicate",
+    "tier": "logic",
+    "type": "axiom",
+    "statement": "Существует множество, не содержащее ни одного элемента.",
+    "formal_notation": "∃A ∀x: ¬(x ∈ A)",
+    "conditions": "Аксиоматика ZFC",
+    "prereq": ["axiom.logic.set_theory.extensionality"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["axiom", "zfc", "empty_set", "set_theory"],
+    "tier_extensions": {
+      "category": "law",
+      "is_axiomatic": true
+    }
+  },
+  {
+    "id": "inference_rule.logic.propositional.reductio_ad_absurdum",
+    "schema_version": "3.2",
+    "domain": "logic.formal.propositional",
+    "subtopic": "logic.formal.proof_methods",
+    "tier": "logic",
+    "type": "inference_rule",
+    "statement": "Если из допущения P выводится противоречие, то ¬P.",
+    "formal_notation": "(P ⊢ ⊥) ⊢ ¬P",
+    "conditions": "Классическая или интуиционистская логика",
+    "prereq": ["concept.logic.formal.negation", "concept.logic.formal.contradiction"],
+    "derives_from": ["law_of_thought.logic.formal.non_contradiction"],
+    "confidence": 1.0,
+    "tags": ["proof_method", "reductio", "contradiction", "deduction"],
+    "tier_extensions": {
+      "category": "rule",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "inference_rule.logic.propositional.explosion",
+    "schema_version": "3.2",
+    "domain": "logic.formal.propositional",
+    "subtopic": "logic.formal.inference_rules",
+    "tier": "logic",
+    "type": "inference_rule",
+    "statement": "Из противоречия следует любое утверждение: ex contradictione quodlibet.",
+    "formal_notation": "(P ∧ ¬P) ⊢ Q",
+    "conditions": "Классическая логика",
+    "limits": ["Параконсистентные логики отвергают принцип взрыва"],
+    "prereq": ["concept.logic.formal.contradiction", "concept.logic.formal.negation"],
+    "derives_from": ["inference_rule.logic.propositional.disjunctive_syllogism"],
+    "confidence": 1.0,
+    "tags": ["explosion", "ex_falso", "principle", "classical"],
+    "tier_extensions": {
+      "category": "rule",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "inference_rule.logic.proof.induction",
+    "schema_version": "3.2",
+    "domain": "logic.formal.predicate",
+    "subtopic": "logic.formal.proof_methods",
+    "tier": "logic",
+    "type": "inference_rule",
+    "statement": "Если P(0) и из P(n) следует P(n+1), то P(n) истинно для всех натуральных n.",
+    "formal_notation": "(P(0) ∧ ∀n(P(n) → P(n+1))) ⊢ ∀n ∈ ℕ: P(n)",
+    "conditions": "Натуральные числа; аксиома индукции Пеано",
+    "prereq": ["concept.logic.formal.predicate", "concept.math.natural_number"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["induction", "proof_method", "peano", "mathematical"],
+    "tier_extensions": {
+      "category": "rule",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "theorem.logic.formal.completeness_godel",
+    "schema_version": "3.2",
+    "domain": "logic.formal.predicate",
+    "subtopic": "logic.formal.predicate",
+    "tier": "logic",
+    "type": "theorem",
+    "statement": "В классическом исчислении предикатов первого порядка всякая семантически общезначимая формула формально выводима.",
+    "formal_notation": "⊨ φ ⟺ ⊢ φ",
+    "conditions": "Логика первого порядка; счётный язык",
+    "prereq": ["concept.logic.formal.predicate", "concept.logic.formal.validity"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["godel", "completeness", "theorem", "first_order"],
+    "tier_extensions": {
+      "category": "law",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "theorem.logic.formal.incompleteness_godel_first",
+    "schema_version": "3.2",
+    "domain": "logic.formal.metalogic",
+    "subtopic": "logic.formal.predicate",
+    "tier": "logic",
+    "type": "theorem",
+    "statement": "Во всякой непротиворечивой формальной системе, достаточной для арифметики, существует истинное недоказуемое утверждение.",
+    "formal_notation": "Cons(T) → ∃φ: (⊨ φ) ∧ (⊬_T φ)",
+    "conditions": "Формальная система содержит арифметику Пеано; рекурсивно перечислимая",
+    "prereq": ["theorem.logic.formal.completeness_godel", "inference_rule.logic.proof.induction"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["godel", "incompleteness", "theorem", "metamathematics"],
+    "tier_extensions": {
+      "category": "law",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "definition.logic.formal.consistency",
+    "schema_version": "3.2",
+    "domain": "logic.formal.metalogic",
+    "subtopic": "logic.formal.predicate",
+    "tier": "logic",
+    "type": "definition",
+    "statement": "Формальная система непротиворечива, если в ней нельзя одновременно вывести P и ¬P.",
+    "formal_notation": "Cons(T) ⟺ ¬∃φ: (T ⊢ φ) ∧ (T ⊢ ¬φ)",
+    "conditions": "Дедуктивная формальная система",
+    "prereq": ["concept.logic.formal.contradiction", "concept.logic.formal.derivability"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["definition", "consistency", "metalogic", "formal_system"],
+    "tier_extensions": {
+      "category": "rule",
+      "is_axiomatic": true
+    }
+  },
+  {
+    "id": "definition.logic.formal.soundness",
+    "schema_version": "3.2",
+    "domain": "logic.formal.metalogic",
+    "subtopic": "logic.formal.predicate",
+    "tier": "logic",
+    "type": "definition",
+    "statement": "Формальная система корректна, если всякая выводимая в ней формула семантически общезначима.",
+    "formal_notation": "Sound(T) ⟺ ∀φ: (⊢_T φ) → (⊨ φ)",
+    "conditions": "Дедуктивная формальная система с семантикой",
+    "prereq": ["concept.logic.formal.validity", "concept.logic.formal.derivability"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["definition", "soundness", "metalogic", "formal_system"],
+    "tier_extensions": {
+      "category": "rule",
+      "is_axiomatic": true
+    }
+  },
+  {
+    "id": "theorem.logic.bayesian.bayes_rule",
+    "schema_version": "3.2",
+    "domain": "logic.bayesian",
+    "subtopic": "logic.bayesian",
+    "tier": "logic",
+    "type": "theorem",
+    "statement": "Апостериорная вероятность гипотезы при данных пропорциональна произведению априорной вероятности и правдоподобия.",
+    "formal_notation": "P(H|D) = P(D|H) · P(H) / P(D)",
+    "conditions": "Колмогоровская теория вероятностей; P(D) > 0",
+    "prereq": ["concept.math.probability.conditional", "concept.math.probability.joint"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["bayes", "theorem", "probability", "inference"],
+    "tier_extensions": {
+      "category": "law",
+      "is_axiomatic": false
+    }
+  }
+]

@@ -1,0 +1,502 @@
+[
+  {
+    "id": "material.geology.mineralogy.pyrite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.sulfides.iron",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Пирит — дисульфид железа, кубическая сингония, твёрдость 6–6,5, плотность 5,0 г/см³, металлический латунно-жёлтый блеск, зеленовато-чёрная черта.",
+    "formal_notation": "FeS2; cubic; ρ=5.0; Mohs 6–6.5",
+    "conditions": "Гидротермальные жилы, осадочные конкреции, метаморфические сульфидные залежи",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.99,
+    "tags": ["sulfide", "pyrite", "iron", "fools_gold"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.chalcopyrite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.sulfides.copper",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Халькопирит — сульфид меди и железа, тетрагональная сингония, твёрдость 3,5–4, плотность 4,1–4,3 г/см³, металлический латунно-жёлтый блеск, главная руда меди.",
+    "formal_notation": "CuFeS2; tetragonal; ρ=4.1–4.3; Mohs 3.5–4",
+    "conditions": "Гидротермальные месторождения, порфировые медные руды, скарны",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.98,
+    "tags": ["sulfide", "chalcopyrite", "copper_ore", "industrial"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.galena",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.sulfides.lead",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Галенит — сульфид свинца, кубическая сингония, твёрдость 2,5–2,75, плотность 7,2–7,6 г/см³, металлический блеск, совершенная кубическая спайность, главная руда свинца.",
+    "formal_notation": "PbS; cubic; ρ=7.2–7.6; Mohs 2.5–2.75; cleavage cubic",
+    "conditions": "Гидротермальные среднетемпературные месторождения; часто с сфалеритом",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.99,
+    "tags": ["sulfide", "galena", "lead_ore", "industrial"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.sphalerite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.sulfides.zinc",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Сфалерит — сульфид цинка, кубическая сингония, твёрдость 3,5–4, плотность 3,9–4,1 г/см³, алмазный до смолистого блеск, совершенная додекаэдрическая спайность, главная руда цинка.",
+    "formal_notation": "ZnS; cubic sphalerite-type; ρ=3.9–4.1; Mohs 3.5–4",
+    "conditions": "Гидротермальные среднетемпературные жилы; стратиформные осадочные месторождения",
+    "prereq": ["principle.geology.mineralogy.strunz_classification", "concept.geology.mineralogy.polymorphism"],
+    "confidence": 0.98,
+    "tags": ["sulfide", "sphalerite", "zinc_ore", "industrial"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.molybdenite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.sulfides.molybdenum",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Молибденит — слоистый дисульфид молибдена, гексагональная сингония, твёрдость 1–1,5, плотность 4,7–4,8 г/см³, металлический блеск, совершенная базальная спайность.",
+    "formal_notation": "MoS2; hexagonal; ρ=4.7–4.8; Mohs 1–1.5",
+    "conditions": "Высокотемпературные гидротермальные жилы, порфировые молибденовые руды",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.97,
+    "tags": ["sulfide", "molybdenite", "molybdenum_ore", "lubricant"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.cinnabar",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.sulfides.mercury",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Киноварь — сульфид ртути, тригональная сингония, твёрдость 2–2,5, плотность 8,1 г/см³, алмазный блеск, ярко-красный цвет, главная руда ртути.",
+    "formal_notation": "HgS; trigonal; ρ=8.1; Mohs 2–2.5",
+    "conditions": "Низкотемпературные гидротермальные жилы, фумарольные обстановки",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.97,
+    "tags": ["sulfide", "cinnabar", "mercury_ore", "toxic"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.calcite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.carbonates.calcium",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Кальцит — карбонат кальция, тригональная сингония, твёрдость 3, плотность 2,71 г/см³, стеклянный блеск, совершенная ромбоэдрическая спайность, бурно реагирует с HCl.",
+    "formal_notation": "CaCO3; trigonal; ρ=2.71; Mohs 3; cleavage rhombohedral",
+    "conditions": "Стабилен при н.у.; в осадочных, гидротермальных, метаморфических породах",
+    "prereq": ["principle.geology.mineralogy.strunz_classification", "concept.geology.mineralogy.polymorphism"],
+    "confidence": 0.99,
+    "tags": ["carbonate", "calcite", "rock_forming", "mohs_standard"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.aragonite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.carbonates.calcium",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Арагонит — ромбический полиморф карбоната кальция, твёрдость 3,5–4, плотность 2,93 г/см³, стеклянный блеск, метастабилен при н.у.",
+    "formal_notation": "CaCO3; orthorhombic; ρ=2.93; Mohs 3.5–4",
+    "conditions": "Биогенные раковины, морские осадки, гидротермальные источники; переход в кальцит при T>400°C",
+    "prereq": ["concept.geology.mineralogy.polymorphism"],
+    "confidence": 0.97,
+    "tags": ["carbonate", "aragonite", "polymorph", "biogenic"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.dolomite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.carbonates.magnesium",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Доломит — двойной карбонат кальция и магния, тригональная сингония, твёрдость 3,5–4, плотность 2,84–2,86 г/см³, ромбоэдрическая спайность, слабо реагирует с холодной HCl.",
+    "formal_notation": "CaMg(CO3)2; trigonal; ρ=2.84–2.86; Mohs 3.5–4",
+    "conditions": "Осадочные доломитизированные известняки; гидротермальные жилы",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.98,
+    "tags": ["carbonate", "dolomite", "rock_forming", "sedimentary"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.siderite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.carbonates.iron",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Сидерит — карбонат железа, тригональная сингония, твёрдость 3,5–4,5, плотность 3,96 г/см³, стеклянный блеск, ромбоэдрическая спайность.",
+    "formal_notation": "FeCO3; trigonal; ρ=3.96; Mohs 3.5–4.5",
+    "conditions": "Осадочные и гидротермальные обстановки; восстановительная среда",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.96,
+    "tags": ["carbonate", "siderite", "iron_ore", "sedimentary"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.magnesite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.carbonates.magnesium",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Магнезит — карбонат магния, тригональная сингония, твёрдость 3,5–4,5, плотность 3,0–3,2 г/см³, стеклянный блеск, ромбоэдрическая спайность.",
+    "formal_notation": "MgCO3; trigonal; ρ=3.0–3.2; Mohs 3.5–4.5",
+    "conditions": "Гидротермальное изменение ультраосновных пород; метасоматоз доломитов",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.96,
+    "tags": ["carbonate", "magnesite", "magnesium_ore", "industrial"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.halite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.halides.chlorides",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Галит — хлорид натрия, кубическая сингония, твёрдость 2–2,5, плотность 2,17 г/см³, стеклянный блеск, совершенная кубическая спайность, солёный вкус.",
+    "formal_notation": "NaCl; cubic; ρ=2.17; Mohs 2–2.5; cleavage cubic",
+    "conditions": "Эвапоритовые осадочные толщи; солевые озёра, морские залежи",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.99,
+    "tags": ["halide", "halite", "evaporite", "sedimentary"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.fluorite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.halides.fluorides",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Флюорит — фторид кальция, кубическая сингония, твёрдость 4, плотность 3,18 г/см³, стеклянный блеск, совершенная октаэдрическая спайность, часто флюоресцирует.",
+    "formal_notation": "CaF2; cubic; ρ=3.18; Mohs 4; cleavage octahedral",
+    "conditions": "Гидротермальные жилы средних температур; пегматиты",
+    "prereq": ["principle.geology.mineralogy.strunz_classification", "concept.geology.mineralogy.mohs_scale"],
+    "confidence": 0.99,
+    "tags": ["halide", "fluorite", "mohs_standard", "industrial"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.sylvite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.halides.chlorides",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Сильвин — хлорид калия, кубическая сингония, твёрдость 2, плотность 1,99 г/см³, стеклянный блеск, совершенная кубическая спайность, горько-солёный вкус.",
+    "formal_notation": "KCl; cubic; ρ=1.99; Mohs 2; cleavage cubic",
+    "conditions": "Эвапоритовые отложения; верхние горизонты соленосных серий",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.97,
+    "tags": ["halide", "sylvite", "evaporite", "potassium_ore"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.gypsum",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.sulfates.hydrated",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Гипс — водный сульфат кальция, моноклинная сингония, твёрдость 2, плотность 2,3 г/см³, стеклянный или перламутровый блеск, совершенная спайность по {010}.",
+    "formal_notation": "CaSO4·2H2O; monoclinic; ρ=2.3; Mohs 2",
+    "conditions": "Эвапоритовые отложения; гидратация ангидрита; T<58°C для устойчивости",
+    "prereq": ["principle.geology.mineralogy.strunz_classification", "concept.geology.mineralogy.mohs_scale"],
+    "confidence": 0.99,
+    "tags": ["sulfate", "gypsum", "evaporite", "mohs_standard"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.anhydrite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.sulfates.anhydrous",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Ангидрит — безводный сульфат кальция, ромбическая сингония, твёрдость 3–3,5, плотность 2,98 г/см³, стеклянный блеск, спайность в трёх взаимно перпендикулярных направлениях.",
+    "formal_notation": "CaSO4; orthorhombic; ρ=2.98; Mohs 3–3.5",
+    "conditions": "Эвапоритовые залежи; T>58°C; гидратируется в гипс с увеличением объёма",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.97,
+    "tags": ["sulfate", "anhydrite", "evaporite", "sedimentary"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.barite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.sulfates.barium",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Барит — сульфат бария, ромбическая сингония, твёрдость 3–3,5, плотность 4,48 г/см³, стеклянный блеск, совершенная спайность по {001} и {110}.",
+    "formal_notation": "BaSO4; orthorhombic; ρ=4.48; Mohs 3–3.5",
+    "conditions": "Гидротермальные жилы низких и средних температур; осадочные конкреции",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.97,
+    "tags": ["sulfate", "barite", "drilling_mud", "industrial"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.apatite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.phosphates.calcium",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Апатит — фосфат кальция с F, Cl или OH, гексагональная сингония, твёрдость 5, плотность 3,16–3,22 г/см³, стеклянный блеск, основа костной ткани позвоночных.",
+    "formal_notation": "Ca5(PO4)3(F,Cl,OH); hexagonal; ρ=3.16–3.22; Mohs 5",
+    "conditions": "Магматические, метаморфические и осадочные обстановки; биоминерализация",
+    "prereq": ["principle.geology.mineralogy.strunz_classification", "concept.geology.mineralogy.mohs_scale"],
+    "confidence": 0.98,
+    "tags": ["phosphate", "apatite", "biogenic", "mohs_standard"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.monazite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.phosphates.rare_earth",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Монацит — фосфат редкоземельных элементов и тория, моноклинная сингония, твёрдость 5–5,5, плотность 4,98–5,43 г/см³, смолистый блеск, радиоактивен.",
+    "formal_notation": "(Ce,La,Nd,Th)PO4; monoclinic; ρ=4.98–5.43; Mohs 5–5.5",
+    "conditions": "Акцессорий гранитов и пегматитов; устойчив в россыпях",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.95,
+    "tags": ["phosphate", "monazite", "rare_earth_ore", "radioactive"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.diamond",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.native_elements.carbon",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Алмаз — кубическая полиморфная модификация углерода со sp3-связями, твёрдость 10, плотность 3,52 г/см³, алмазный блеск, совершенная октаэдрическая спайность.",
+    "formal_notation": "C; cubic Fd-3m; ρ=3.52; Mohs 10",
+    "conditions": "Метастабилен при н.у.; стабилен при P>4 ГПа и T>900°C; мантийное происхождение",
+    "prereq": ["concept.geology.mineralogy.polymorphism", "concept.geology.mineralogy.mohs_scale"],
+    "confidence": 0.99,
+    "tags": ["native", "diamond", "carbon", "gemstone"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.graphite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.native_elements.carbon",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Графит — гексагональная полиморфная модификация углерода со sp2-связями, твёрдость 1–2, плотность 2,09–2,23 г/см³, металлический блеск, совершенная базальная спайность.",
+    "formal_notation": "C; hexagonal P63/mmc; ρ=2.09–2.23; Mohs 1–2",
+    "conditions": "Стабилен при н.у.; высокие ступени метаморфизма органогенных пород",
+    "prereq": ["concept.geology.mineralogy.polymorphism"],
+    "confidence": 0.99,
+    "tags": ["native", "graphite", "carbon", "polymorph"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.gold",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.native_elements.gold",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Самородное золото — кубическая сингония, твёрдость 2,5–3, плотность 15,5–19,3 г/см³, металлический жёлтый блеск, ковкое, химически инертно.",
+    "formal_notation": "Au; cubic Fm-3m; ρ=15.5–19.3; Mohs 2.5–3",
+    "conditions": "Гидротермальные жилы, аллювиальные россыпи, окислительные коры выветривания",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.99,
+    "tags": ["native", "gold", "precious_metal", "noble"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.silver",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.native_elements.silver",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Самородное серебро — кубическая сингония, твёрдость 2,5–3, плотность 10,1–11,1 г/см³, металлический блеск, белый цвет, темнеет от сульфидизации.",
+    "formal_notation": "Ag; cubic Fm-3m; ρ=10.1–11.1; Mohs 2.5–3",
+    "conditions": "Гидротермальные жилы, зоны окисления сульфидных месторождений",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.98,
+    "tags": ["native", "silver", "precious_metal", "noble"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.copper",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.native_elements.copper",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Самородная медь — кубическая сингония, твёрдость 2,5–3, плотность 8,9 г/см³, металлический медно-красный блеск, ковкая, окисляется до малахита и куприта.",
+    "formal_notation": "Cu; cubic Fm-3m; ρ=8.9; Mohs 2.5–3",
+    "conditions": "Зоны цементации сульфидных руд; гидротермальные жилы; базальтовые миндалины",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.97,
+    "tags": ["native", "copper", "metal", "industrial"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.sulfur",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.native_elements.sulfur",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Самородная сера — ромбическая сингония α-серы, твёрдость 1,5–2,5, плотность 2,07 г/см³, смолистый блеск, жёлтый цвет, Tпл=115,21°C.",
+    "formal_notation": "S8; orthorhombic α-S; ρ=2.07; Mohs 1.5–2.5",
+    "conditions": "Вулканические фумаролы; осадочные залежи на куполах соли; биогенная редукция сульфатов",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.97,
+    "tags": ["native", "sulfur", "volcanic", "industrial"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  }
+]
