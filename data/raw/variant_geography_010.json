@@ -1,0 +1,591 @@
+[
+  {
+    "id": "fact.geography.range.cordillera",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.range.cordillera",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Кордильеры — длиннейшая горная система мира; ~18 000 км вдоль западной окраины Северной и Южной Америки; высшая точка Аконкагуа 6961 м.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.mountain"],
+    "confidence": 0.93,
+    "tags": ["cordillera", "geography", "mountain", "americas", "range"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.range.rocky",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.range.rocky",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Скалистые горы — горная система запада Северной Америки; протяжённость 4830 км от Канады до Нью-Мексико; высшая точка гора Эльберт 4401 м.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.mountain"],
+    "confidence": 0.93,
+    "tags": ["rocky", "geography", "mountain", "north_america", "range"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.range.appalachians",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.range.appalachians",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Аппалачи — древняя горная система востока Северной Америки; длина 2400 км; возраст 480 млн лет; высшая точка гора Митчелл 2037 м.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.mountain"],
+    "confidence": 0.93,
+    "tags": ["appalachians", "geography", "mountain", "north_america", "ancient"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.range.alps",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.range.alps",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Альпы — крупнейшая горная система Европы; протяжённость 1200 км через 8 стран; высшая точка Монблан 4805 м; возраст 65 млн лет.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.mountain"],
+    "confidence": 0.94,
+    "tags": ["alps", "geography", "mountain", "europe", "range"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.range.carpathians",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.range.carpathians",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Карпаты — горная система Центральной и Восточной Европы; длина 1500 км, охватывает 7 стран; высшая точка Герлаховски-Штит 2655 м.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.mountain"],
+    "confidence": 0.92,
+    "tags": ["carpathians", "geography", "mountain", "europe", "range"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.range.caucasus",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.range.caucasus",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Кавказ — горная система между Чёрным и Каспийским морями; длина 1200 км; высшая точка Эльбрус 5642 м; делит Европу и Азию.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.mountain"],
+    "confidence": 0.93,
+    "tags": ["caucasus", "geography", "mountain", "eurasia", "range"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.range.pamir",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.range.pamir",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Памир — горная система Центральной Азии; известна как Крыша мира; высшая точка пик Конгур 7649 м, пик Исмоила Сомони 7495 м.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.mountain"],
+    "confidence": 0.91,
+    "tags": ["pamir", "geography", "mountain", "central_asia", "range"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.range.tianshan",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.range.tianshan",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Тянь-Шань — горная система Центральной Азии; длина 2500 км; высшая точка пик Победы 7439 м; охватывает Китай, Казахстан, Киргизию.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.mountain"],
+    "confidence": 0.91,
+    "tags": ["tianshan", "geography", "mountain", "central_asia", "range"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.range.altai",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.range.altai",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Алтай — горная система Центральной Азии; длина 2000 км; высшая точка Белуха 4506 м; охватывает Россию, Казахстан, Китай, Монголию.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.mountain"],
+    "confidence": 0.91,
+    "tags": ["altai", "geography", "mountain", "asia", "range"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.range.ural",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.range.ural",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Урал — горная система России; длина 2500 км от Карского моря до Казахстана; традиционная граница Европы и Азии; высшая точка Народная 1895 м.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.mountain"],
+    "confidence": 0.92,
+    "tags": ["ural", "geography", "mountain", "russia", "europe_asia_border"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.range.atlas",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.range.atlas",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Атлас — горная система северо-западной Африки; длина 2500 км через Марокко, Алжир, Тунис; высшая точка Тубкаль 4167 м.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.mountain"],
+    "confidence": 0.91,
+    "tags": ["atlas", "geography", "mountain", "africa", "range"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.range.drakensberg",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.range.drakensberg",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Драконовы горы — горная система на востоке Южной Африки; длина 1000 км; высшая точка Табана-Нтленьяна 3482 м; в ЮАР и Лесото.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.mountain"],
+    "confidence": 0.90,
+    "tags": ["drakensberg", "geography", "mountain", "africa", "range"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.range.great_dividing",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.range.great_dividing",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Большой Водораздельный хребет — горная система восточной Австралии; длина 3500 км; высшая точка гора Косцюшко 2228 м.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.mountain"],
+    "confidence": 0.91,
+    "tags": ["great_dividing", "geography", "mountain", "australia", "range"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.mountain.k2",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.mountain.k2",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "K2 (Чогори) — вторая по высоте вершина мира; 8611 м; в Каракоруме на границе Пакистана и Китая; самая сложная восьмитысячница для восхождения.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.mountain"],
+    "confidence": 0.95,
+    "tags": ["k2", "geography", "mountain", "karakoram", "eight_thousander"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.mountain.kangchenjunga",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.mountain.kangchenjunga",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Канченджанга — третья по высоте вершина мира; 8586 м; в Гималаях на границе Непала и Индии (Сикким).",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.mountain"],
+    "confidence": 0.95,
+    "tags": ["kangchenjunga", "geography", "mountain", "himalayas", "eight_thousander"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.mountain.annapurna",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.mountain.annapurna",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Аннапурна I — десятая по высоте вершина мира; 8091 м; в центральных Гималаях Непала; первая покорённая восьмитысячница, 1950.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.mountain"],
+    "confidence": 0.94,
+    "tags": ["annapurna", "geography", "mountain", "himalayas", "nepal"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.mountain.denali",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.mountain.denali",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Денали — высочайшая вершина Северной Америки; 6190 м; в Аляскинском хребте США; превышение над основанием около 5500 м — рекорд для одной горы.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.mountain"],
+    "confidence": 0.94,
+    "tags": ["denali", "geography", "mountain", "alaska", "north_america"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.mountain.aconcagua",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.mountain.aconcagua",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Аконкагуа — высочайшая вершина Южной Америки и Западного полушария; 6961 м; в Андах Аргентины; вулканического происхождения.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.mountain"],
+    "confidence": 0.94,
+    "tags": ["aconcagua", "geography", "mountain", "andes", "argentina"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.mountain.elbrus",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.mountain.elbrus",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Эльбрус — высочайшая вершина Европы; стратовулкан 5642 м (западная) и 5621 м (восточная) на Кавказе; считается потухшим.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.mountain", "concept.geography.volcano"],
+    "confidence": 0.94,
+    "tags": ["elbrus", "geography", "mountain", "caucasus", "europe"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "fact.geography.mountain.montblanc",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.mountain.montblanc",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Монблан — высочайшая вершина Альп; 4805 м; на границе Франции и Италии; первое восхождение 1786, классический объект альпинизма.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.mountain"],
+    "confidence": 0.94,
+    "tags": ["montblanc", "geography", "mountain", "alps", "europe"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.mountain.kilimanjaro",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.mountain.kilimanjaro",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Килиманджаро — высочайшая вершина Африки; стратовулкан 5895 м в Танзании; включает 3 вулканических конуса: Кибо, Мавензи, Шира.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.mountain", "concept.geography.volcano"],
+    "confidence": 0.94,
+    "tags": ["kilimanjaro", "geography", "mountain", "africa", "volcano"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.volcano.fuji",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.volcano.fuji",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Фудзи — высочайшая вершина Японии; действующий стратовулкан 3776 м на острове Хонсю; последнее извержение 1707; объект ЮНЕСКО.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.volcano"],
+    "confidence": 0.94,
+    "tags": ["fuji", "geography", "volcano", "japan", "stratovolcano"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.volcano.etna",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.volcano.etna",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Этна — самый высокий действующий вулкан Европы; 3357 м на Сицилии; один из активнейших в мире, регулярные извержения; объект ЮНЕСКО.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.volcano"],
+    "confidence": 0.93,
+    "tags": ["etna", "geography", "volcano", "italy", "active"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.volcano.vesuvius",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.volcano.vesuvius",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Везувий — действующий стратовулкан Италии; 1281 м у Неаполя; извержение 79 года уничтожило Помпеи и Геркуланум; последнее извержение 1944.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.volcano"],
+    "confidence": 0.94,
+    "tags": ["vesuvius", "geography", "volcano", "italy", "pompeii"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.volcano.krakatoa",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.volcano.krakatoa",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Кракатау — вулкан Зондского пролива Индонезии; катастрофическое извержение 1883 (VEI 6) убило ~36 000 человек; ныне активен Анак-Кракатау.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.volcano"],
+    "confidence": 0.93,
+    "tags": ["krakatoa", "geography", "volcano", "indonesia", "vei6"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.volcano.yellowstone",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.volcano.yellowstone",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Йеллоустон — супервулкан на западе США; кальдера 55×72 км; три крупных извержения за 2,1 млн лет, последнее 640 тыс лет назад.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.volcano"],
+    "confidence": 0.92,
+    "tags": ["yellowstone", "geography", "volcano", "supervolcano", "usa"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.mountain.mauna_kea",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.mountain.mauna_kea",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Мауна-Кеа — щитовой вулкан Гавайев; 4205 м над уровнем моря, но 10 210 м от основания на дне океана; самая высокая гора Земли от подножия.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.volcano"],
+    "confidence": 0.93,
+    "tags": ["mauna_kea", "geography", "volcano", "hawaii", "shield"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.mountain.olympus",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.mountain.olympus",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Олимп — высочайшая вершина Греции; 2917 м; в мифологии — обитель богов; объект ЮНЕСКО, биосферный заповедник.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.mountain"],
+    "confidence": 0.93,
+    "tags": ["olympus", "geography", "mountain", "greece", "europe"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.volcano.st_helens",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.volcano.st_helens",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Сент-Хеленс — действующий стратовулкан Каскадных гор США; высота 2549 м после извержения 1980 (VEI 5), снизившего вершину на 400 м.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.volcano"],
+    "confidence": 0.93,
+    "tags": ["st_helens", "geography", "volcano", "cascades", "usa"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.volcano.popocatepetl",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.volcano.popocatepetl",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Попокатепетль — активный стратовулкан Мексики; 5426 м, второй по высоте в стране; находится в 70 км от Мехико; регулярные извержения.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.volcano"],
+    "confidence": 0.92,
+    "tags": ["popocatepetl", "geography", "volcano", "mexico", "active"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.mountain.chimborazo",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.mountain.chimborazo",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Чимборасо — потухший вулкан Эквадора; 6263 м, но из-за экваториальной выпуклости Земли его вершина — самая удалённая точка от центра планеты.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.volcano"],
+    "confidence": 0.92,
+    "tags": ["chimborazo", "geography", "volcano", "ecuador", "andes"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  }
+]

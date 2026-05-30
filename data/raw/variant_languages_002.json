@@ -1,0 +1,477 @@
+[
+  {
+    "id": "fact.linguistics.family_indo_european",
+    "schema_version": "3.2",
+    "domain": "linguistics.families",
+    "subtopic": "family.indo_european",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Индоевропейская языковая семья — крупнейшая по числу носителей: около 3.3 миллиарда человек, включая английский, хинди, русский и испанский.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.linguistics.language_family"],
+    "confidence": 0.9,
+    "tags": ["indo-european", "family", "global"],
+    "tier_extensions": {
+      "source": "Ethnologue 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.linguistics.family_sino_tibetan",
+    "schema_version": "3.2",
+    "domain": "linguistics.families",
+    "subtopic": "family.sino_tibetan",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Сино-тибетская семья — вторая по числу носителей (около 1.4 млрд), включает китайские языки, бирманский, тибетский.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.linguistics.language_family"],
+    "confidence": 0.88,
+    "tags": ["sino-tibetan", "family", "asia"],
+    "tier_extensions": {
+      "source": "Ethnologue 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.linguistics.family_niger_congo",
+    "schema_version": "3.2",
+    "domain": "linguistics.families",
+    "subtopic": "family.niger_congo",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Нигеро-конголезская семья — крупнейшая в Африке, около 700 миллионов носителей, включает суахили, йоруба, зулу.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.linguistics.language_family"],
+    "confidence": 0.84,
+    "tags": ["niger-congo", "family", "africa"],
+    "tier_extensions": {
+      "source": "Ethnologue 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.linguistics.family_afroasiatic",
+    "schema_version": "3.2",
+    "domain": "linguistics.families",
+    "subtopic": "family.afroasiatic",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Афразийская (афроазиатская) семья — около 500 миллионов носителей, включает арабский, иврит, амхарский, берберские, сомалийский.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.linguistics.language_family"],
+    "confidence": 0.86,
+    "tags": ["afroasiatic", "family", "africa"],
+    "tier_extensions": {
+      "source": "Ethnologue 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.linguistics.family_austronesian",
+    "schema_version": "3.2",
+    "domain": "linguistics.families",
+    "subtopic": "family.austronesian",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Австронезийская семья — около 350 миллионов носителей, включает индонезийский, малайский, тагальский, малагасийский, маори.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.linguistics.language_family"],
+    "confidence": 0.85,
+    "tags": ["austronesian", "family", "oceania"],
+    "tier_extensions": {
+      "source": "Ethnologue 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.linguistics.family_dravidian",
+    "schema_version": "3.2",
+    "domain": "linguistics.families",
+    "subtopic": "family.dravidian",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Дравидийская семья — около 250 миллионов носителей на юге Индии и Шри-Ланки, включает тамильский, телугу, каннада, малаялам.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.linguistics.language_family"],
+    "confidence": 0.85,
+    "tags": ["dravidian", "family", "india"],
+    "tier_extensions": {
+      "source": "Ethnologue 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.linguistics.family_altaic_hypothesis",
+    "schema_version": "3.2",
+    "domain": "linguistics.families",
+    "subtopic": "family.altaic",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Алтайская гипотеза — спорная гипотеза о родстве тюркских, монгольских и тунгусо-маньчжурских языков; большинство лингвистов её отвергает.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.linguistics.language_family"],
+    "confidence": 0.78,
+    "tags": ["altaic", "hypothesis", "disputed"],
+    "tier_extensions": {
+      "source": "Glottolog 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "fact.linguistics.family_uralic",
+    "schema_version": "3.2",
+    "domain": "linguistics.families",
+    "subtopic": "family.uralic",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Уральская семья — около 25 миллионов носителей, включает финский, эстонский, венгерский, саамские и самодийские языки.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.linguistics.language_family"],
+    "confidence": 0.85,
+    "tags": ["uralic", "family", "europe"],
+    "tier_extensions": {
+      "source": "Ethnologue 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.linguistics.group_turkic",
+    "schema_version": "3.2",
+    "domain": "linguistics.families",
+    "subtopic": "group.turkic",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Тюркская языковая группа — около 200 миллионов носителей, включает турецкий, азербайджанский, узбекский, казахский, татарский, киргизский.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.linguistics.language_family"],
+    "confidence": 0.85,
+    "tags": ["turkic", "group", "asia"],
+    "tier_extensions": {
+      "source": "Ethnologue 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.linguistics.group_germanic",
+    "schema_version": "3.2",
+    "domain": "linguistics.families",
+    "subtopic": "group.germanic",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Германская группа индоевропейской семьи — около 515 миллионов L1-носителей, включает английский, немецкий, голландский, шведский, норвежский.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.linguistics.language_family"],
+    "confidence": 0.87,
+    "tags": ["germanic", "group", "indo-european"],
+    "tier_extensions": {
+      "source": "Ethnologue 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.linguistics.group_romance",
+    "schema_version": "3.2",
+    "domain": "linguistics.families",
+    "subtopic": "group.romance",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Романская группа происходит от вульгарной латыни, около 1 миллиарда носителей, включает испанский, португальский, французский, итальянский, румынский.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.linguistics.language_family"],
+    "confidence": 0.87,
+    "tags": ["romance", "group", "indo-european"],
+    "tier_extensions": {
+      "source": "Ethnologue 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.linguistics.group_slavic",
+    "schema_version": "3.2",
+    "domain": "linguistics.families",
+    "subtopic": "group.slavic",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Славянская группа делится на восточную, западную и южную ветви, около 315 миллионов носителей всего, включает русский, польский, украинский, чешский, сербохорватский, болгарский.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.linguistics.language_family"],
+    "confidence": 0.86,
+    "tags": ["slavic", "group", "indo-european"],
+    "tier_extensions": {
+      "source": "Ethnologue 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.linguistics.group_celtic",
+    "schema_version": "3.2",
+    "domain": "linguistics.families",
+    "subtopic": "group.celtic",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Кельтская группа — около 1.5 миллиона носителей, включает ирландский, валлийский, шотландский гэльский, бретонский, корнский.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.linguistics.language_family"],
+    "confidence": 0.83,
+    "tags": ["celtic", "group", "indo-european"],
+    "tier_extensions": {
+      "source": "Ethnologue 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.linguistics.group_iranian",
+    "schema_version": "3.2",
+    "domain": "linguistics.families",
+    "subtopic": "group.iranian",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Иранская группа индоевропейской семьи — около 200 миллионов носителей, включает фарси, дари, таджикский, пушту, курдский, белуджский, осетинский.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.linguistics.language_family"],
+    "confidence": 0.85,
+    "tags": ["iranian", "group", "indo-european"],
+    "tier_extensions": {
+      "source": "Ethnologue 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.linguistics.script_latin",
+    "schema_version": "3.2",
+    "domain": "linguistics.scripts",
+    "subtopic": "script.latin",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Латиница — самая распространённая письменность мира, охватывает более 70% языков с письменной формой, базовый алфавит 26 букв.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.linguistics.script"],
+    "confidence": 0.9,
+    "tags": ["latin", "script", "alphabet"],
+    "tier_extensions": {
+      "source": "Unicode Consortium 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.linguistics.script_cyrillic",
+    "schema_version": "3.2",
+    "domain": "linguistics.scripts",
+    "subtopic": "script.cyrillic",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Кириллица — алфавитная письменность, созданная в IX веке на основе греческого устава, охватывает более 50 языков, включая русский, украинский, болгарский.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.linguistics.script"],
+    "confidence": 0.88,
+    "tags": ["cyrillic", "script", "alphabet"],
+    "tier_extensions": {
+      "source": "Unicode Consortium 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.linguistics.script_greek",
+    "schema_version": "3.2",
+    "domain": "linguistics.scripts",
+    "subtopic": "script.greek",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Греческое письмо — алфавит из 24 букв, происходит от финикийского около IX века до н. э., предок латиницы и кириллицы.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.linguistics.script"],
+    "confidence": 0.9,
+    "tags": ["greek", "script", "alphabet"],
+    "tier_extensions": {
+      "source": "Unicode Consortium 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.linguistics.script_arabic",
+    "schema_version": "3.2",
+    "domain": "linguistics.scripts",
+    "subtopic": "script.arabic",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Арабское письмо — консонантный абджад из 28 базовых букв, пишется справа налево, охватывает арабский, фарси, урду, пушту.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.linguistics.script"],
+    "confidence": 0.89,
+    "tags": ["arabic", "script", "abjad"],
+    "tier_extensions": {
+      "source": "Unicode Consortium 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.linguistics.script_hanzi",
+    "schema_version": "3.2",
+    "domain": "linguistics.scripts",
+    "subtopic": "script.hanzi",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Китайские иероглифы (ханьцзы) — логографическая письменность, около 50000 знаков в больших словарях, базовая грамотность требует ~3500 знаков.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.linguistics.script"],
+    "confidence": 0.87,
+    "tags": ["hanzi", "script", "logography"],
+    "tier_extensions": {
+      "source": "Unicode CJK 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.linguistics.script_kana",
+    "schema_version": "3.2",
+    "domain": "linguistics.scripts",
+    "subtopic": "script.kana",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Японские каны — две слоговые азбуки хирагана и катакана по 46 базовых знаков каждая, применяются параллельно с китайскими кандзи.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.linguistics.script"],
+    "confidence": 0.88,
+    "tags": ["kana", "script", "japan"],
+    "tier_extensions": {
+      "source": "Unicode Consortium 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.linguistics.script_hangul",
+    "schema_version": "3.2",
+    "domain": "linguistics.scripts",
+    "subtopic": "script.hangul",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Хангыль — корейская алфавитная письменность из 24 базовых знаков (14 согласных и 10 гласных), создана в 1443 году королём Седжоном.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.linguistics.script"],
+    "confidence": 0.89,
+    "tags": ["hangul", "script", "korea"],
+    "tier_extensions": {
+      "source": "Unicode Consortium 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.linguistics.script_devanagari",
+    "schema_version": "3.2",
+    "domain": "linguistics.scripts",
+    "subtopic": "script.devanagari",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Деванагари — абугида из 47 базовых знаков, письменность хинди, маратхи, санскрита и непали, восходит к брахми.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.linguistics.script"],
+    "confidence": 0.88,
+    "tags": ["devanagari", "script", "abugida"],
+    "tier_extensions": {
+      "source": "Unicode Consortium 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.linguistics.script_hebrew",
+    "schema_version": "3.2",
+    "domain": "linguistics.scripts",
+    "subtopic": "script.hebrew",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Еврейское письмо (иврит) — абджад из 22 согласных, пишется справа налево, восходит к арамейскому квадратному письму III века до н. э.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.linguistics.script"],
+    "confidence": 0.87,
+    "tags": ["hebrew", "script", "abjad"],
+    "tier_extensions": {
+      "source": "Unicode Consortium 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.linguistics.script_georgian",
+    "schema_version": "3.2",
+    "domain": "linguistics.scripts",
+    "subtopic": "script.georgian",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Грузинское письмо мхедрули содержит 33 буквы, не имеет различия прописных и строчных, унаследовано от древних асомтаврули и нусхури.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.linguistics.script"],
+    "confidence": 0.86,
+    "tags": ["georgian", "script", "alphabet"],
+    "tier_extensions": {
+      "source": "Unicode Consortium 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.linguistics.script_armenian",
+    "schema_version": "3.2",
+    "domain": "linguistics.scripts",
+    "subtopic": "script.armenian",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Армянское письмо — алфавит из 39 букв, создан Месропом Маштоцем около 405 года, применяется для армянского языка.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.linguistics.script"],
+    "confidence": 0.87,
+    "tags": ["armenian", "script", "alphabet"],
+    "tier_extensions": {
+      "source": "Unicode Consortium 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  }
+]

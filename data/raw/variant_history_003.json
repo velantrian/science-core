@@ -1,0 +1,477 @@
+[
+  {
+    "id": "fact.history.modern.reformation_1517",
+    "schema_version": "3.2",
+    "domain": "history.modern",
+    "subtopic": "history.modern.reformation_1517",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Реформация: религиозное движение в Западной Европе, начатое 95 тезисами Мартина Лютера 31 октября 1517 г.; раскол западного христианства на католиков и протестантов; деятельность Кальвина, Цвингли.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.modern"],
+    "confidence": 0.92,
+    "tags": ["reformation", "luther", "modern", "history", "protestantism"],
+    "tier_extensions": {
+      "source": "Cambridge Modern History",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.modern.thirty_years_war",
+    "schema_version": "3.2",
+    "domain": "history.modern",
+    "subtopic": "history.modern.thirty_years_war",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Тридцатилетняя война (1618-1648): крупнейший религиозно-политический конфликт в Священной Римской империи; вовлечение Швеции, Франции, Испании; завершилась Вестфальским миром, заложившим систему суверенных государств.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.modern"],
+    "confidence": 0.92,
+    "tags": ["thirty_years_war", "westphalia", "modern", "history", "germany"],
+    "tier_extensions": {
+      "source": "Cambridge Modern History",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.modern.english_revolution",
+    "schema_version": "3.2",
+    "domain": "history.modern",
+    "subtopic": "history.modern.english_revolution",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Английская революция (1642-1660): гражданская война короны и парламента; казнь Карла I в 1649 г.; протекторат Оливера Кромвеля; реставрация Стюартов; Славная революция 1688 г. закрепила парламентаризм.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.modern"],
+    "confidence": 0.9,
+    "tags": ["english_revolution", "cromwell", "modern", "history", "parliament"],
+    "tier_extensions": {
+      "source": "Cambridge Modern History",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.modern.enlightenment",
+    "schema_version": "3.2",
+    "domain": "history.modern",
+    "subtopic": "history.modern.enlightenment",
+    "tier": "variant",
+    "type": "concept",
+    "statement": "Эпоха Просвещения (ок. 1680-1789): интеллектуальное движение в Европе; примат разума, эмпирического знания, естественных прав; работы Локка, Вольтера, Руссо, Канта, Дидро; влияние на революции конца XVIII в.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.modern"],
+    "confidence": 0.9,
+    "tags": ["enlightenment", "modern", "history", "philosophy", "reason"],
+    "tier_extensions": {
+      "source": "Cambridge Modern History",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.modern.industrial_revolution",
+    "schema_version": "3.2",
+    "domain": "history.modern",
+    "subtopic": "history.modern.industrial_revolution",
+    "tier": "variant",
+    "type": "concept",
+    "statement": "Промышленная революция (ок. 1760-1840): переход от ручного труда к машинному производству, начало в Великобритании; паровая машина Уатта, текстильные машины, железные дороги; формирование индустриального общества.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.modern"],
+    "confidence": 0.92,
+    "tags": ["industrial_revolution", "modern", "history", "britain", "steam"],
+    "tier_extensions": {
+      "source": "Cambridge Economic History",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.modern.french_revolution_1789",
+    "schema_version": "3.2",
+    "domain": "history.modern",
+    "subtopic": "history.modern.french_revolution_1789",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Французская революция (1789-1799): крах абсолютизма Бурбонов; взятие Бастилии 14 июля 1789 г.; Декларация прав человека и гражданина; якобинский террор; завершилась переворотом 18 брюмера Наполеона.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.modern"],
+    "confidence": 0.92,
+    "tags": ["french_revolution", "1789", "modern", "history", "bastille"],
+    "tier_extensions": {
+      "source": "Cambridge Modern History",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.modern.napoleonic_wars",
+    "schema_version": "3.2",
+    "domain": "history.modern",
+    "subtopic": "history.modern.napoleonic_wars",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Наполеоновские войны (1803-1815): серия конфликтов Французской империи с европейскими коалициями; кампания 1812 г. в России; поражение при Лейпциге 1813 и Ватерлоо 1815; Венский конгресс 1814-1815 гг.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.modern"],
+    "confidence": 0.92,
+    "tags": ["napoleon", "waterloo", "modern", "history", "vienna_congress"],
+    "tier_extensions": {
+      "source": "Cambridge Modern History",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.modern.us_civil_war",
+    "schema_version": "3.2",
+    "domain": "history.modern",
+    "subtopic": "history.modern.us_civil_war",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Гражданская война в США (1861-1865): конфликт Севера и Конфедерации южных штатов по вопросу рабства и федерализма; президентство Линкольна, Прокламация об освобождении рабов 1863 г.; капитуляция при Аппоматоксе.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.modern"],
+    "confidence": 0.92,
+    "tags": ["civil_war", "lincoln", "modern", "history", "usa"],
+    "tier_extensions": {
+      "source": "Cambridge History of the United States",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.modern.german_unification_1871",
+    "schema_version": "3.2",
+    "domain": "history.modern",
+    "subtopic": "history.modern.german_unification_1871",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Объединение Германии 1871 г.: провозглашение Германской империи в Версале 18 января 1871 г. под главенством Пруссии; результат политики Бисмарка и побед в датской, австро-прусской и франко-прусской войнах.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.modern"],
+    "confidence": 0.92,
+    "tags": ["germany", "bismarck", "modern", "history", "unification"],
+    "tier_extensions": {
+      "source": "Cambridge Modern History",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.modern.wwi",
+    "schema_version": "3.2",
+    "domain": "history.contemporary",
+    "subtopic": "history.contemporary.wwi",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Первая мировая война (1914-1918): глобальный конфликт Антанты и Центральных держав после убийства эрцгерцога Франца Фердинанда; позиционная война; ок. 20 млн погибших; Версальский мир 1919 г.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.contemporary"],
+    "confidence": 0.92,
+    "tags": ["wwi", "contemporary", "history", "versailles", "entente"],
+    "tier_extensions": {
+      "source": "Cambridge History of the First World War",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.contemporary.october_revolution_1917",
+    "schema_version": "3.2",
+    "domain": "history.contemporary",
+    "subtopic": "history.contemporary.october_revolution_1917",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Октябрьская революция 1917 г.: захват власти большевиками в Петрограде 25 октября (7 ноября) 1917 г.; свержение Временного правительства; начало гражданской войны и создания СССР в 1922 г.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.contemporary"],
+    "confidence": 0.9,
+    "tags": ["october_revolution", "1917", "contemporary", "history", "bolsheviks"],
+    "tier_extensions": {
+      "source": "Cambridge History of Russia",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.contemporary.great_depression",
+    "schema_version": "3.2",
+    "domain": "history.contemporary",
+    "subtopic": "history.contemporary.great_depression",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Великая депрессия (1929-1939): глобальный экономический кризис, начавшийся с краха Уолл-стрит 24 октября 1929 г.; падение мирового ВВП на ~15%, массовая безработица; «Новый курс» Рузвельта в США.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.contemporary"],
+    "confidence": 0.92,
+    "tags": ["great_depression", "1929", "contemporary", "history", "wall_street"],
+    "tier_extensions": {
+      "source": "Cambridge Economic History",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.contemporary.wwii",
+    "schema_version": "3.2",
+    "domain": "history.contemporary",
+    "subtopic": "history.contemporary.wwii",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Вторая мировая война (1939-1945): конфликт Оси и антигитлеровской коалиции; нападение Германии на Польшу 1.9.1939, на СССР 22.6.1941; капитуляция Германии 8.5.1945, Японии 2.9.1945; ок. 70-85 млн погибших.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.contemporary"],
+    "confidence": 0.92,
+    "tags": ["wwii", "contemporary", "history", "axis", "allies"],
+    "tier_extensions": {
+      "source": "Cambridge History of the Second World War",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.contemporary.holocaust",
+    "schema_version": "3.2",
+    "domain": "history.contemporary",
+    "subtopic": "history.contemporary.holocaust",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Холокост (1941-1945): систематическое уничтожение нацистской Германией около 6 млн евреев в Европе; концлагеря и лагеря смерти Освенцим, Треблинка, Собибор; решение принято на Ванзейской конференции 1942 г.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.contemporary"],
+    "confidence": 0.92,
+    "tags": ["holocaust", "contemporary", "history", "auschwitz", "genocide"],
+    "tier_extensions": {
+      "source": "Yad Vashem; USHMM",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.contemporary.hiroshima",
+    "schema_version": "3.2",
+    "domain": "history.contemporary",
+    "subtopic": "history.contemporary.hiroshima",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Атомные бомбардировки Хиросимы и Нагасаки 6 и 9 августа 1945 г.: применение США ядерного оружия против Японии; погибло ок. 200 тыс. человек; ускорило капитуляцию Японии 2 сентября 1945 г.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.contemporary"],
+    "confidence": 0.92,
+    "tags": ["hiroshima", "nagasaki", "contemporary", "history", "nuclear"],
+    "tier_extensions": {
+      "source": "Cambridge History of the Second World War",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.contemporary.nuremberg",
+    "schema_version": "3.2",
+    "domain": "history.contemporary",
+    "subtopic": "history.contemporary.nuremberg",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Нюрнбергский процесс (1945-1946): международный военный трибунал над главными нацистскими преступниками; 12 смертных приговоров; введение понятий преступлений против мира, военных преступлений и преступлений против человечности.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.contemporary"],
+    "confidence": 0.92,
+    "tags": ["nuremberg", "contemporary", "history", "tribunal", "war_crimes"],
+    "tier_extensions": {
+      "source": "Cambridge History of International Law",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.contemporary.cold_war",
+    "schema_version": "3.2",
+    "domain": "history.contemporary",
+    "subtopic": "history.contemporary.cold_war",
+    "tier": "variant",
+    "type": "concept",
+    "statement": "Холодная война (1947-1991): геополитическое противостояние США и СССР с союзниками; гонка вооружений, прокси-конфликты в Корее, Вьетнаме, Афганистане; завершилась распадом СССР.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.contemporary"],
+    "confidence": 0.92,
+    "tags": ["cold_war", "contemporary", "history", "usa", "ussr"],
+    "tier_extensions": {
+      "source": "Cambridge History of the Cold War",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.contemporary.cuban_missile_crisis",
+    "schema_version": "3.2",
+    "domain": "history.contemporary",
+    "subtopic": "history.contemporary.cuban_missile_crisis",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Карибский кризис (октябрь 1962 г.): острейший момент холодной войны после размещения советских ракет на Кубе; противостояние Кеннеди и Хрущёва; разрешён выводом ракет и обязательством США не вторгаться на Кубу.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.contemporary"],
+    "confidence": 0.92,
+    "tags": ["cuban_missile_crisis", "1962", "contemporary", "history", "kennedy"],
+    "tier_extensions": {
+      "source": "Cambridge History of the Cold War",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.contemporary.ussr_collapse_1991",
+    "schema_version": "3.2",
+    "domain": "history.contemporary",
+    "subtopic": "history.contemporary.ussr_collapse_1991",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Распад СССР: Беловежские соглашения 8 декабря 1991 г. констатировали прекращение существования СССР; 25 декабря 1991 г. Горбачёв сложил полномочия; образование СНГ и 15 независимых государств.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.contemporary"],
+    "confidence": 0.92,
+    "tags": ["ussr_collapse", "1991", "contemporary", "history", "gorbachev"],
+    "tier_extensions": {
+      "source": "Cambridge History of Russia",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.contemporary.apartheid_end_1994",
+    "schema_version": "3.2",
+    "domain": "history.contemporary",
+    "subtopic": "history.contemporary.apartheid_end_1994",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Окончание апартеида в ЮАР: первые всерасовые выборы 27 апреля 1994 г.; президентом избран Нельсон Мандела; завершение системы расовой сегрегации, действовавшей с 1948 г.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.contemporary"],
+    "confidence": 0.92,
+    "tags": ["apartheid", "1994", "contemporary", "history", "mandela"],
+    "tier_extensions": {
+      "source": "Cambridge History of South Africa",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.contemporary.september_11",
+    "schema_version": "3.2",
+    "domain": "history.contemporary",
+    "subtopic": "history.contemporary.september_11",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Теракты 11 сентября 2001 г.: атака террористов «Аль-Каиды» на башни-близнецы Всемирного торгового центра и Пентагон; погибло ок. 3000 человек; начало «войны с террором» и вторжения в Афганистан.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.contemporary"],
+    "confidence": 0.92,
+    "tags": ["9_11", "2001", "contemporary", "history", "al_qaeda"],
+    "tier_extensions": {
+      "source": "9/11 Commission Report",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.contemporary.great_recession_2008",
+    "schema_version": "3.2",
+    "domain": "history.contemporary",
+    "subtopic": "history.contemporary.great_recession_2008",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Великая рецессия 2008 г.: глобальный финансовый кризис после краха Lehman Brothers 15 сентября 2008 г.; крах рынка ипотечных бумаг subprime в США; глобальное сокращение ВВП и масштабные программы стимулирования.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.contemporary"],
+    "confidence": 0.92,
+    "tags": ["great_recession", "2008", "contemporary", "history", "lehman"],
+    "tier_extensions": {
+      "source": "IMF World Economic Outlook 2009",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.contemporary.covid_19_2020",
+    "schema_version": "3.2",
+    "domain": "history.contemporary",
+    "subtopic": "history.contemporary.covid_19_2020",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Пандемия COVID-19: вызванная коронавирусом SARS-CoV-2, объявлена ВОЗ 11 марта 2020 г.; глобальные локдауны; разработка мРНК-вакцин в 2020 г.; ок. 7 млн подтверждённых смертей к 2024 г.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.contemporary"],
+    "confidence": 0.9,
+    "tags": ["covid_19", "pandemic", "2020", "contemporary", "history"],
+    "tier_extensions": {
+      "source": "WHO COVID-19 Dashboard",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.contemporary.ukraine_war_2022",
+    "schema_version": "3.2",
+    "domain": "history.contemporary",
+    "subtopic": "history.contemporary.ukraine_war_2022",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Война в Украине: полномасштабное вторжение России 24 февраля 2022 г.; крупнейший вооружённый конфликт в Европе со Второй мировой войны; широкая международная помощь Украине и санкции против России.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.contemporary"],
+    "confidence": 0.88,
+    "tags": ["ukraine_war", "2022", "contemporary", "history", "russia"],
+    "tier_extensions": {
+      "source": "UN OCHA; ISW reports",
+      "valid_from": "2022-02-24",
+      "valid_until": null,
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "fact.history.contemporary.internet_invention",
+    "schema_version": "3.2",
+    "domain": "history.contemporary",
+    "subtopic": "history.contemporary.internet_invention",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Изобретение интернета: первое сообщение ARPANET 29 октября 1969 г.; протокол TCP/IP стандартизирован в 1983 г.; World Wide Web создан Тимом Бернерсом-Ли в ЦЕРН в 1989-1991 гг.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.contemporary"],
+    "confidence": 0.92,
+    "tags": ["internet", "arpanet", "www", "contemporary", "history"],
+    "tier_extensions": {
+      "source": "IEEE History of Computing",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  }
+]

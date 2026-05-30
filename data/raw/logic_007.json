@@ -1,0 +1,478 @@
+[
+  {
+    "id": "principle.logic.computability.church_turing",
+    "schema_version": "3.2",
+    "domain": "logic.computability",
+    "subtopic": "logic.computability.thesis",
+    "tier": "logic",
+    "type": "principle",
+    "statement": "Тезис Чёрча-Тьюринга: класс эффективно вычислимых функций совпадает с классом функций, вычислимых машиной Тьюринга.",
+    "formal_notation": "EffectivelyComputable ≡ TuringComputable ≡ λ-definable ≡ μ-recursive",
+    "conditions": "Неформальное понятие алгоритма; математический тезис без доказательства",
+    "limits": ["Тезис не теорема: понятие эффективной вычислимости неформально"],
+    "prereq": ["definition.logic.lambda.untyped"],
+    "derives_from": [],
+    "confidence": 0.98,
+    "tags": ["church_turing", "thesis", "computability", "algorithm"],
+    "tier_extensions": {
+      "category": "principle",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "definition.logic.computability.turing_machine",
+    "schema_version": "3.2",
+    "domain": "logic.computability",
+    "subtopic": "logic.computability.models",
+    "tier": "logic",
+    "type": "definition",
+    "statement": "Машина Тьюринга: семёрка ⟨Q, Σ, Γ, δ, q₀, q_acc, q_rej⟩ с лентой, конечным управлением и функцией переходов δ.",
+    "formal_notation": "M = ⟨Q, Σ, Γ, δ, q₀, q_acc, q_rej⟩, δ: Q × Γ → Q × Γ × {L, R}",
+    "conditions": "Дискретное время; неограниченная лента",
+    "prereq": ["principle.logic.computability.church_turing"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["turing_machine", "computation", "automata", "formal_model"],
+    "tier_extensions": {
+      "category": "axiom",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "theorem.logic.computability.halting",
+    "schema_version": "3.2",
+    "domain": "logic.computability",
+    "subtopic": "logic.computability.undecidable",
+    "tier": "logic",
+    "type": "theorem",
+    "statement": "Проблема остановки неразрешима: не существует машины Тьюринга, по программе M и входу x определяющей, остановится ли M на x.",
+    "formal_notation": "HALT = {⟨M,x⟩ : M(x)↓} ∉ Decidable;  HALT ∈ RE",
+    "conditions": "Универсальная модель вычислений; диагональная аргументация",
+    "prereq": ["definition.logic.computability.turing_machine"],
+    "derives_from": ["definition.logic.computability.turing_machine"],
+    "confidence": 1.0,
+    "tags": ["halting_problem", "turing", "undecidability", "diagonal"],
+    "tier_extensions": {
+      "category": "theorem",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "theorem.logic.computability.rice",
+    "schema_version": "3.2",
+    "domain": "logic.computability",
+    "subtopic": "logic.computability.undecidable",
+    "tier": "logic",
+    "type": "theorem",
+    "statement": "Теорема Райса: всякое нетривиальное семантическое свойство частично рекурсивных функций неразрешимо машиной Тьюринга.",
+    "formal_notation": "P ⊆ RE нетривиальное семантическое  ⇒  {⟨M⟩ : φ_M ∈ P} ∉ Decidable",
+    "conditions": "Свойство зависит только от вычисляемой функции, не от кода",
+    "prereq": ["theorem.logic.computability.halting"],
+    "derives_from": ["theorem.logic.computability.halting"],
+    "confidence": 1.0,
+    "tags": ["rice", "undecidability", "semantic_property", "computability"],
+    "tier_extensions": {
+      "category": "theorem",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "definition.logic.computability.mu_recursive",
+    "schema_version": "3.2",
+    "domain": "logic.computability",
+    "subtopic": "logic.computability.recursion",
+    "tier": "logic",
+    "type": "definition",
+    "statement": "μ-рекурсивные функции Гёделя-Клини: класс, замкнутый относительно констант, проекций, композиции, примитивной рекурсии и оператора минимизации μ.",
+    "formal_notation": "μ y. [f(x̄, y) = 0] := min {y : f(x̄, y) = 0}",
+    "conditions": "Базисные функции 0, S, проекции; пять схем построения",
+    "prereq": ["definition.logic.computability.turing_machine"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["mu_recursive", "godel", "kleene", "primitive_recursion"],
+    "tier_extensions": {
+      "category": "axiom",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "concept.logic.computability.chomsky_hierarchy",
+    "schema_version": "3.2",
+    "domain": "logic.computability.languages",
+    "subtopic": "logic.computability.languages.chomsky",
+    "tier": "logic",
+    "type": "concept",
+    "statement": "Иерархия Хомского: класс 3 регулярные ⊂ класс 2 контекстно-свободные ⊂ класс 1 контекстно-зависимые ⊂ класс 0 рекурсивно перечислимые.",
+    "formal_notation": "REG ⊊ CFL ⊊ CSL ⊊ RE",
+    "conditions": "Формальные языки; модели — конечные автоматы, МПА, ЛОА, МТ",
+    "prereq": ["definition.logic.computability.turing_machine"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["chomsky", "hierarchy", "formal_languages", "grammars"],
+    "tier_extensions": {
+      "category": "concept",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "definition.logic.computability.cfg",
+    "schema_version": "3.2",
+    "domain": "logic.computability.languages",
+    "subtopic": "logic.computability.languages.cfg",
+    "tier": "logic",
+    "type": "definition",
+    "statement": "Контекстно-свободная грамматика: четвёрка ⟨V, Σ, P, S⟩ с правилами A → α, где A — нетерминал, α — строка над V ∪ Σ.",
+    "formal_notation": "G = ⟨V, Σ, P, S⟩;  ∀(A → α) ∈ P: A ∈ V, α ∈ (V ∪ Σ)*",
+    "conditions": "Левая часть продукции — единственный нетерминал",
+    "prereq": ["concept.logic.computability.chomsky_hierarchy"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["cfg", "context_free", "grammar", "chomsky"],
+    "tier_extensions": {
+      "category": "axiom",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "definition.logic.computability.regex",
+    "schema_version": "3.2",
+    "domain": "logic.computability.languages",
+    "subtopic": "logic.computability.languages.regular",
+    "tier": "logic",
+    "type": "definition",
+    "statement": "Регулярные выражения: индуктивно ∅, ε, символ алфавита; замкнуто относительно конкатенации ·, объединения ∪ и звезды Клини *.",
+    "formal_notation": "R ::= ∅ | ε | a | R · R | R ∪ R | R*",
+    "conditions": "Алфавит Σ конечен; язык L(R) определён индуктивно",
+    "prereq": ["concept.logic.computability.chomsky_hierarchy"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["regex", "regular_expression", "kleene_star", "formal_languages"],
+    "tier_extensions": {
+      "category": "axiom",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "theorem.logic.complexity.cook_levin",
+    "schema_version": "3.2",
+    "domain": "logic.complexity",
+    "subtopic": "logic.complexity.np_completeness",
+    "tier": "logic",
+    "type": "theorem",
+    "statement": "Теорема Кука-Левина: SAT является NP-полной; всякая задача из NP сводится полиномиально к выполнимости пропозициональной формулы.",
+    "formal_notation": "SAT ∈ NPC;  ∀L ∈ NP : L ≤_p SAT",
+    "conditions": "Полиномиальные сводимости Карпа; модель — МТ за полиномиальное время",
+    "prereq": ["definition.logic.computability.turing_machine"],
+    "derives_from": ["definition.logic.computability.turing_machine"],
+    "confidence": 1.0,
+    "tags": ["cook_levin", "np_complete", "sat", "complexity"],
+    "tier_extensions": {
+      "category": "theorem",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "definition.logic.complexity.class_p",
+    "schema_version": "3.2",
+    "domain": "logic.complexity",
+    "subtopic": "logic.complexity.classes",
+    "tier": "logic",
+    "type": "definition",
+    "statement": "Класс P: задачи, разрешимые детерминированной машиной Тьюринга за время, ограниченное полиномом от длины входа.",
+    "formal_notation": "P = ⋃_{k≥0} DTIME(n^k)",
+    "conditions": "Детерминированная модель; полиномиальная сложность по времени",
+    "prereq": ["definition.logic.computability.turing_machine"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["class_p", "polynomial_time", "complexity", "tractable"],
+    "tier_extensions": {
+      "category": "axiom",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "definition.logic.complexity.class_np",
+    "schema_version": "3.2",
+    "domain": "logic.complexity",
+    "subtopic": "logic.complexity.classes",
+    "tier": "logic",
+    "type": "definition",
+    "statement": "Класс NP: задачи, разрешимые недетерминированной машиной Тьюринга за полиномиальное время или верифицируемые за полином по сертификату.",
+    "formal_notation": "NP = ⋃_{k≥0} NTIME(n^k) = {L : ∃ V ∈ P, ∃ полином p, x ∈ L ⇔ ∃y |y| ≤ p(|x|), V(x,y)=1}",
+    "conditions": "Сертификат полиномиальной длины; верификатор — детерминированный",
+    "prereq": ["definition.logic.complexity.class_p"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["class_np", "nondeterministic", "verifier", "complexity"],
+    "tier_extensions": {
+      "category": "axiom",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "definition.logic.complexity.class_conp",
+    "schema_version": "3.2",
+    "domain": "logic.complexity",
+    "subtopic": "logic.complexity.classes",
+    "tier": "logic",
+    "type": "definition",
+    "statement": "Класс co-NP: задачи, дополнение которых принадлежит NP; задача отрицания SAT — каноническая co-NP-полная.",
+    "formal_notation": "co-NP = {L : L̄ ∈ NP}; TAUT ∈ co-NPC",
+    "conditions": "Двойственный класс NP по дополнению",
+    "prereq": ["definition.logic.complexity.class_np"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["co_np", "complement", "complexity", "taut"],
+    "tier_extensions": {
+      "category": "axiom",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "definition.logic.complexity.pspace",
+    "schema_version": "3.2",
+    "domain": "logic.complexity",
+    "subtopic": "logic.complexity.classes",
+    "tier": "logic",
+    "type": "definition",
+    "statement": "Класс PSPACE: задачи, разрешимые детерминированной машиной Тьюринга с полиномиальной памятью независимо от времени.",
+    "formal_notation": "PSPACE = ⋃_{k≥0} DSPACE(n^k);  NP ⊆ PSPACE",
+    "conditions": "Ограничена память лента, не время",
+    "prereq": ["definition.logic.complexity.class_np"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["pspace", "space_complexity", "complexity", "polynomial_space"],
+    "tier_extensions": {
+      "category": "axiom",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "definition.logic.complexity.exptime",
+    "schema_version": "3.2",
+    "domain": "logic.complexity",
+    "subtopic": "logic.complexity.classes",
+    "tier": "logic",
+    "type": "definition",
+    "statement": "Класс EXPTIME: задачи, разрешимые детерминированной МТ за время 2^poly(n); строго содержит P.",
+    "formal_notation": "EXPTIME = ⋃_{k≥0} DTIME(2^{n^k});  P ⊊ EXPTIME",
+    "conditions": "Экспоненциальный временной ресурс",
+    "prereq": ["definition.logic.complexity.class_p"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["exptime", "exponential", "time_complexity"],
+    "tier_extensions": {
+      "category": "axiom",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "definition.logic.complexity.bpp",
+    "schema_version": "3.2",
+    "domain": "logic.complexity",
+    "subtopic": "logic.complexity.classes",
+    "tier": "logic",
+    "type": "definition",
+    "statement": "Класс BPP: задачи, разрешимые вероятностной МТ за полином с ограниченной двусторонней ошибкой не более 1/3.",
+    "formal_notation": "L ∈ BPP ⇔ ∃ PTM M ∈ poly: x ∈ L ⇒ Pr[M(x)=1] ≥ 2/3;  x ∉ L ⇒ Pr[M(x)=1] ≤ 1/3",
+    "conditions": "Вероятностная модель; ошибка усиливается до экспоненциально малой",
+    "prereq": ["definition.logic.complexity.class_p"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["bpp", "probabilistic", "bounded_error", "complexity"],
+    "tier_extensions": {
+      "category": "axiom",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "definition.logic.complexity.bqp",
+    "schema_version": "3.2",
+    "domain": "logic.complexity",
+    "subtopic": "logic.complexity.classes",
+    "tier": "logic",
+    "type": "definition",
+    "statement": "Класс BQP: задачи, разрешимые квантовой машиной Тьюринга за полиномиальное время с ограниченной двусторонней ошибкой ≤ 1/3.",
+    "formal_notation": "L ∈ BQP ⇔ ∃ QTM Q ∈ poly: x ∈ L ⇒ Pr[Q(x)=1] ≥ 2/3;  x ∉ L ⇒ Pr[Q(x)=1] ≤ 1/3",
+    "conditions": "Квантовая модель; универсальные квантовые вентили",
+    "prereq": ["definition.logic.complexity.bpp"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["bqp", "quantum_complexity", "bounded_error", "complexity"],
+    "tier_extensions": {
+      "category": "axiom",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "definition.logic.complexity.ac0_nc",
+    "schema_version": "3.2",
+    "domain": "logic.complexity",
+    "subtopic": "logic.complexity.circuit",
+    "tier": "logic",
+    "type": "definition",
+    "statement": "Классы AC^0 и NC: задачи, решаемые булевыми схемами полиномиального размера; AC^0 — константная глубина с неограниченным веером; NC — полилогарифмическая глубина.",
+    "formal_notation": "AC^0 ⊊ NC = ⋃_k NC^k;  NC^k: depth O(log^k n), size poly(n)",
+    "conditions": "Семейства равномерно построенных схем",
+    "prereq": ["definition.logic.complexity.class_p"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["ac0", "nc", "circuit_complexity", "parallel"],
+    "tier_extensions": {
+      "category": "axiom",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "concept.logic.complexity.polynomial_hierarchy",
+    "schema_version": "3.2",
+    "domain": "logic.complexity",
+    "subtopic": "logic.complexity.hierarchy",
+    "tier": "logic",
+    "type": "concept",
+    "statement": "Полиномиальная иерархия PH: Σ^p_0 = P; Σ^p_{k+1} = NP^{Σ^p_k}; Π^p_k = coΣ^p_k; PH = ⋃_k Σ^p_k.",
+    "formal_notation": "Σ^p_1 = NP, Π^p_1 = coNP; PH = ⋃_{k≥0} Σ^p_k",
+    "conditions": "Оракульные машины над классами иерархии",
+    "prereq": ["definition.logic.complexity.class_np", "definition.logic.complexity.class_conp"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["polynomial_hierarchy", "ph", "oracle", "complexity"],
+    "tier_extensions": {
+      "category": "concept",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "theorem.logic.complexity.savitch",
+    "schema_version": "3.2",
+    "domain": "logic.complexity",
+    "subtopic": "logic.complexity.space",
+    "tier": "logic",
+    "type": "theorem",
+    "statement": "Теорема Сэвича: NSPACE(s(n)) ⊆ DSPACE(s(n)^2) для s(n) ≥ log n; в частности PSPACE = NPSPACE.",
+    "formal_notation": "NSPACE(s(n)) ⊆ DSPACE(s(n)²);  PSPACE = NPSPACE",
+    "conditions": "Конструктивная по памяти функция s(n) ≥ log n",
+    "prereq": ["definition.logic.complexity.pspace"],
+    "derives_from": ["definition.logic.complexity.pspace"],
+    "confidence": 1.0,
+    "tags": ["savitch", "space_complexity", "pspace", "nondeterminism"],
+    "tier_extensions": {
+      "category": "theorem",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "theorem.logic.complexity.time_hierarchy",
+    "schema_version": "3.2",
+    "domain": "logic.complexity",
+    "subtopic": "logic.complexity.hierarchy",
+    "tier": "logic",
+    "type": "theorem",
+    "statement": "Теорема о временной иерархии: для конструктивных функций f, g, при f(n) log f(n) = o(g(n)) выполнено DTIME(f) ⊊ DTIME(g).",
+    "formal_notation": "f(n) log f(n) = o(g(n))  ⇒  DTIME(f(n)) ⊊ DTIME(g(n))",
+    "conditions": "Функции конструктивны по времени; диагональный аргумент",
+    "prereq": ["definition.logic.complexity.class_p", "definition.logic.complexity.exptime"],
+    "derives_from": ["definition.logic.complexity.class_p"],
+    "confidence": 1.0,
+    "tags": ["time_hierarchy", "hartmanis_stearns", "complexity", "diagonal"],
+    "tier_extensions": {
+      "category": "theorem",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "theorem.logic.complexity.space_hierarchy",
+    "schema_version": "3.2",
+    "domain": "logic.complexity",
+    "subtopic": "logic.complexity.hierarchy",
+    "tier": "logic",
+    "type": "theorem",
+    "statement": "Теорема о пространственной иерархии: если s(n) = o(S(n)) и обе функции конструктивны по памяти, то DSPACE(s) ⊊ DSPACE(S).",
+    "formal_notation": "s(n) = o(S(n))  ⇒  DSPACE(s(n)) ⊊ DSPACE(S(n))",
+    "conditions": "Конструктивные по памяти функции; s(n) ≥ log n",
+    "prereq": ["definition.logic.complexity.pspace"],
+    "derives_from": ["definition.logic.complexity.pspace"],
+    "confidence": 1.0,
+    "tags": ["space_hierarchy", "stearns_hartmanis", "complexity"],
+    "tier_extensions": {
+      "category": "theorem",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "paradox.logic.vagueness.sorites_formal",
+    "schema_version": "3.2",
+    "domain": "logic.paradoxes",
+    "subtopic": "logic.paradoxes.vagueness",
+    "tier": "logic",
+    "type": "paradox",
+    "statement": "Формализованный парадокс Сорита: P(0) и ∀n (P(n)→P(n+1)) ведут к ∀n P(n), что противоречит ¬P(N) для большого N; индукция по неопределённому предикату.",
+    "formal_notation": "P(0) ∧ ∀n (P(n) → P(n+1)) ⊢ P(N);  но эмпирически ¬P(N)",
+    "conditions": "Предикат P нечёткий или толерантный к малым изменениям",
+    "prereq": ["paradox.logic.vagueness.sorites", "concept.logic.fuzzy_zadeh"],
+    "derives_from": ["paradox.logic.vagueness.sorites"],
+    "confidence": 1.0,
+    "tags": ["sorites", "vagueness", "induction", "tolerance_principle"],
+    "tier_extensions": {
+      "category": "paradox",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "definition.logic.computability.dfa",
+    "schema_version": "3.2",
+    "domain": "logic.computability.automata",
+    "subtopic": "logic.computability.automata.finite",
+    "tier": "logic",
+    "type": "definition",
+    "statement": "Детерминированный конечный автомат: пятёрка ⟨Q, Σ, δ, q₀, F⟩ с конечным состоянием, алфавитом и детерминированной функцией переходов δ: Q × Σ → Q.",
+    "formal_notation": "DFA = ⟨Q, Σ, δ, q₀, F⟩, δ: Q × Σ → Q",
+    "conditions": "Один начальный q₀; множество принимающих F ⊆ Q",
+    "prereq": ["definition.logic.computability.regex"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["dfa", "finite_automaton", "regular", "deterministic"],
+    "tier_extensions": {
+      "category": "axiom",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "theorem.logic.computability.kleene_equivalence",
+    "schema_version": "3.2",
+    "domain": "logic.computability",
+    "subtopic": "logic.computability.thesis",
+    "tier": "logic",
+    "type": "theorem",
+    "statement": "Теорема Клини об эквивалентности моделей вычислений: μ-рекурсивные функции, лямбда-определимые функции и функции, вычислимые МТ, образуют один класс.",
+    "formal_notation": "TuringComputable = λ-definable = μ-recursive",
+    "conditions": "Тотальные и частичные вычислимые функции на ℕ",
+    "prereq": ["definition.logic.computability.mu_recursive", "definition.logic.lambda.untyped", "definition.logic.computability.turing_machine"],
+    "derives_from": ["definition.logic.computability.mu_recursive", "definition.logic.computability.turing_machine"],
+    "confidence": 1.0,
+    "tags": ["kleene", "equivalence", "computability", "models"],
+    "tier_extensions": {
+      "category": "theorem",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "concept.logic.complexity.reduction",
+    "schema_version": "3.2",
+    "domain": "logic.complexity",
+    "subtopic": "logic.complexity.reductions",
+    "tier": "logic",
+    "type": "concept",
+    "statement": "Полиномиальная сводимость по Карпу: A ≤_p B, если существует функция f ∈ FP такая, что x ∈ A ⇔ f(x) ∈ B.",
+    "formal_notation": "A ≤_p B ⇔ ∃ f ∈ FP : ∀x (x ∈ A ⇔ f(x) ∈ B)",
+    "conditions": "Функция f вычислима за полиномиальное время",
+    "prereq": ["definition.logic.complexity.class_p", "definition.logic.complexity.class_np"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["karp_reduction", "many_one", "complexity", "completeness"],
+    "tier_extensions": {
+      "category": "concept",
+      "is_axiomatic": false
+    }
+  }
+]

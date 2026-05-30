@@ -1,0 +1,714 @@
+[
+  {
+    "id": "fact.astronomy.galaxy.triangulum_m33",
+    "schema_version": "3.2",
+    "domain": "astronomy.galaxy",
+    "subtopic": "astronomy.galaxy.triangulum",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Галактика Треугольника (M33) — спиральная SA(s)cd; диаметр ~60000 св. лет; масса ~5×10¹⁰ M☉; расстояние 2,73 млн св. лет; третья по размеру галактика Местной группы.",
+    "conditions": "Hubble/Gaia DR3",
+    "prereq": [
+      "concept.astronomy.galaxy"
+    ],
+    "confidence": 0.92,
+    "tags": [
+      "triangulum",
+      "m33",
+      "spiral_galaxy",
+      "local_group"
+    ],
+    "tier_extensions": {
+      "source": "NASA/ESA 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "diameter_ly": 60000,
+      "distance_ly": 2730000,
+      "mass_solar": 50000000000.0
+    }
+  },
+  {
+    "id": "fact.astronomy.galaxy.sombrero_m104",
+    "schema_version": "3.2",
+    "domain": "astronomy.galaxy",
+    "subtopic": "astronomy.galaxy.sombrero",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Галактика Сомбреро (M104) — линзовидная SA(s)a с пылевым кольцом; диаметр ~50000 св. лет; расстояние ~29,3 млн св. лет; центральная СМЧД массой ~10⁹ M☉.",
+    "conditions": "Hubble/Spitzer",
+    "prereq": [
+      "concept.astronomy.galaxy"
+    ],
+    "confidence": 0.91,
+    "tags": [
+      "sombrero",
+      "m104",
+      "lenticular_galaxy"
+    ],
+    "tier_extensions": {
+      "source": "Hubble/Spitzer 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "diameter_ly": 50000,
+      "distance_ly": 29300000
+    }
+  },
+  {
+    "id": "fact.astronomy.galaxy.whirlpool_m51",
+    "schema_version": "3.2",
+    "domain": "astronomy.galaxy",
+    "subtopic": "astronomy.galaxy.whirlpool",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Галактика Водоворот (M51a/NGC 5194) — спиральная SA(s)bc pec; диаметр ~76000 св. лет; расстояние ~23 млн св. лет; взаимодействует со спутником NGC 5195.",
+    "conditions": "HST/JWST",
+    "prereq": [
+      "concept.astronomy.galaxy"
+    ],
+    "confidence": 0.92,
+    "tags": [
+      "whirlpool",
+      "m51",
+      "spiral_galaxy",
+      "interacting"
+    ],
+    "tier_extensions": {
+      "source": "Hubble/JWST 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "diameter_ly": 76000,
+      "distance_ly": 23000000
+    }
+  },
+  {
+    "id": "fact.astronomy.galaxy.cigar_m82",
+    "schema_version": "3.2",
+    "domain": "astronomy.galaxy",
+    "subtopic": "astronomy.galaxy.cigar",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Галактика Сигара (M82) — иррегулярная стартбёрст-галактика; диаметр ~37000 св. лет; расстояние ~11,5 млн св. лет; темп звездообразования в 10 раз выше Млечного Пути.",
+    "conditions": "HST/Chandra/JWST",
+    "prereq": [
+      "concept.astronomy.galaxy",
+      "concept.astronomy.starburst"
+    ],
+    "confidence": 0.91,
+    "tags": [
+      "cigar",
+      "m82",
+      "starburst",
+      "irregular"
+    ],
+    "tier_extensions": {
+      "source": "JWST/Chandra 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "diameter_ly": 37000,
+      "distance_ly": 11500000
+    }
+  },
+  {
+    "id": "fact.astronomy.galaxy.ngc_1300",
+    "schema_version": "3.2",
+    "domain": "astronomy.galaxy",
+    "subtopic": "astronomy.galaxy.ngc_1300",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "NGC 1300 — каноническая спиральная галактика с баром SB(s)bc; диаметр ~110000 св. лет; расстояние ~61 млн св. лет; находится в созвездии Эридан.",
+    "conditions": "HST 2005",
+    "prereq": [
+      "concept.astronomy.galaxy"
+    ],
+    "confidence": 0.9,
+    "tags": [
+      "ngc_1300",
+      "barred_spiral",
+      "eridanus"
+    ],
+    "tier_extensions": {
+      "source": "Hubble 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "diameter_ly": 110000,
+      "distance_ly": 61000000
+    }
+  },
+  {
+    "id": "fact.astronomy.galaxy.lmc",
+    "schema_version": "3.2",
+    "domain": "astronomy.galaxy",
+    "subtopic": "astronomy.galaxy.magellanic_large",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Большое Магелланово Облако — карликовая иррегулярная галактика-спутник Млечного Пути; диаметр ~14000 св. лет; масса ~10¹¹ M☉; расстояние 163000 св. лет.",
+    "conditions": "Gaia DR3/HST",
+    "prereq": [
+      "concept.astronomy.galaxy",
+      "fact.astronomy.galaxy.milky_way"
+    ],
+    "confidence": 0.93,
+    "tags": [
+      "lmc",
+      "magellanic_cloud",
+      "satellite_galaxy",
+      "irregular"
+    ],
+    "tier_extensions": {
+      "source": "Gaia DR3 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "diameter_ly": 14000,
+      "distance_ly": 163000,
+      "mass_solar": 100000000000.0
+    }
+  },
+  {
+    "id": "fact.astronomy.galaxy.smc",
+    "schema_version": "3.2",
+    "domain": "astronomy.galaxy",
+    "subtopic": "astronomy.galaxy.magellanic_small",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Малое Магелланово Облако — карликовая иррегулярная галактика-спутник Млечного Пути; диаметр ~7000 св. лет; масса ~7×10⁹ M☉; расстояние ~200000 св. лет.",
+    "conditions": "Gaia DR3/HST",
+    "prereq": [
+      "concept.astronomy.galaxy",
+      "fact.astronomy.galaxy.milky_way"
+    ],
+    "confidence": 0.92,
+    "tags": [
+      "smc",
+      "magellanic_cloud",
+      "satellite_galaxy",
+      "dwarf"
+    ],
+    "tier_extensions": {
+      "source": "Gaia DR3 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "diameter_ly": 7000,
+      "distance_ly": 200000,
+      "mass_solar": 7000000000.0
+    }
+  },
+  {
+    "id": "fact.astronomy.cluster.virgo",
+    "schema_version": "3.2",
+    "domain": "astronomy.galaxy_cluster",
+    "subtopic": "astronomy.cluster.virgo",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Скопление Девы — ближайшее крупное скопление галактик; ~1300-2000 членов; расстояние ~53,8 млн св. лет; масса ~1,2×10¹⁵ M☉; центр Местного сверхскопления.",
+    "conditions": "ROSAT/Chandra/Planck",
+    "prereq": [
+      "concept.astronomy.galaxy_cluster"
+    ],
+    "confidence": 0.91,
+    "tags": [
+      "virgo_cluster",
+      "galaxy_cluster",
+      "local_supercluster"
+    ],
+    "tier_extensions": {
+      "source": "NASA 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "distance_ly": 53800000,
+      "mass_solar": 1200000000000000.0,
+      "member_count_range": [
+        1300,
+        2000
+      ]
+    }
+  },
+  {
+    "id": "fact.astronomy.cluster.coma",
+    "schema_version": "3.2",
+    "domain": "astronomy.galaxy_cluster",
+    "subtopic": "astronomy.cluster.coma",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Скопление Волос Вероники — богатое скопление галактик; >1000 членов; расстояние ~320 млн св. лет; масса ~6×10¹⁴ M☉; исторически дало первое свидетельство тёмной материи (Цвикки, 1933).",
+    "conditions": "Chandra/Planck",
+    "prereq": [
+      "concept.astronomy.galaxy_cluster",
+      "concept.astronomy.dark_matter"
+    ],
+    "confidence": 0.91,
+    "tags": [
+      "coma_cluster",
+      "galaxy_cluster",
+      "dark_matter_history"
+    ],
+    "tier_extensions": {
+      "source": "Planck/Chandra 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "distance_ly": 320000000,
+      "mass_solar": 600000000000000.0
+    }
+  },
+  {
+    "id": "fact.astronomy.cluster.local_group",
+    "schema_version": "3.2",
+    "domain": "astronomy.galaxy_group",
+    "subtopic": "astronomy.cluster.local_group",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Местная группа — гравитационно связанная группа из >80 галактик; диаметр ~10 млн св. лет; масса ~3×10¹² M☉; доминируют Млечный Путь и Андромеда.",
+    "conditions": "Gaia DR3",
+    "prereq": [
+      "concept.astronomy.galaxy_group",
+      "fact.astronomy.galaxy.milky_way",
+      "fact.astronomy.galaxy.andromeda"
+    ],
+    "confidence": 0.92,
+    "tags": [
+      "local_group",
+      "galaxy_group"
+    ],
+    "tier_extensions": {
+      "source": "Gaia DR3 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "diameter_ly": 10000000,
+      "mass_solar": 3000000000000.0,
+      "member_count_min": 80
+    }
+  },
+  {
+    "id": "fact.astronomy.black_hole.m87",
+    "schema_version": "3.2",
+    "domain": "astronomy.black_hole",
+    "subtopic": "astronomy.black_hole.m87_central",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "M87* — сверхмассивная чёрная дыра в центре галактики M87; масса (6,5±0,7)×10⁹ M☉; диаметр тени ~38 мкас; первое прямое изображение получил EHT в 2019.",
+    "conditions": "Event Horizon Telescope 2019",
+    "prereq": [
+      "concept.astronomy.black_hole_supermassive"
+    ],
+    "confidence": 0.93,
+    "tags": [
+      "m87",
+      "smbh",
+      "eht",
+      "first_image"
+    ],
+    "tier_extensions": {
+      "source": "EHT Collaboration 2019",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "mass_solar": 6500000000.0,
+      "shadow_diameter_microarcsec": 38
+    }
+  },
+  {
+    "id": "fact.astronomy.black_hole.cygnus_x1",
+    "schema_version": "3.2",
+    "domain": "astronomy.black_hole",
+    "subtopic": "astronomy.black_hole.cygnus_x1",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Cygnus X-1 — первый кандидат на чёрную дыру звёздной массы; масса 21,2 M☉; расстояние ~7200 св. лет; в двойной системе с голубым сверхгигантом HDE 226868.",
+    "conditions": "VLBA/HST 2021",
+    "prereq": [
+      "concept.astronomy.black_hole_stellar"
+    ],
+    "confidence": 0.92,
+    "tags": [
+      "cygnus_x1",
+      "stellar_black_hole",
+      "xray_binary"
+    ],
+    "tier_extensions": {
+      "source": "Miller-Jones et al. 2021",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "mass_solar": 21.2,
+      "distance_ly": 7200
+    }
+  },
+  {
+    "id": "fact.astronomy.gw.gw150914",
+    "schema_version": "3.2",
+    "domain": "astronomy.gravitational_waves",
+    "subtopic": "astronomy.gw.gw150914",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "GW150914 — первое прямое детектирование гравитационных волн (14.09.2015) от слияния двух чёрных дыр; массы 36 и 29 M☉; результат 62 M☉; излучено 3 M☉c²; расстояние ~1,3 млрд св. лет.",
+    "conditions": "LIGO Hanford/Livingston",
+    "prereq": [
+      "concept.astronomy.gravitational_wave"
+    ],
+    "confidence": 0.95,
+    "tags": [
+      "gw150914",
+      "gravitational_wave",
+      "ligo",
+      "black_hole_merger"
+    ],
+    "tier_extensions": {
+      "source": "LIGO/Virgo 2016",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "mass1_solar": 36,
+      "mass2_solar": 29,
+      "final_mass_solar": 62,
+      "distance_ly": 1300000000.0
+    }
+  },
+  {
+    "id": "fact.astronomy.galaxy.ngc_4889",
+    "schema_version": "3.2",
+    "domain": "astronomy.galaxy",
+    "subtopic": "astronomy.galaxy.ngc_4889",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "NGC 4889 — гигантская эллиптическая галактика E4 в скоплении Волос Вероники; диаметр ~239000 св. лет; центральная СМЧД массой ~2,1×10¹⁰ M☉.",
+    "conditions": "Keck/HST 2011",
+    "prereq": [
+      "concept.astronomy.galaxy",
+      "concept.astronomy.black_hole_supermassive"
+    ],
+    "confidence": 0.88,
+    "tags": [
+      "ngc_4889",
+      "elliptical_galaxy",
+      "smbh",
+      "coma_cluster"
+    ],
+    "tier_extensions": {
+      "source": "Keck/HST 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": true,
+      "diameter_ly": 239000,
+      "smbh_mass_solar": 21000000000.0
+    }
+  },
+  {
+    "id": "fact.astronomy.galaxy.henize_2_10",
+    "schema_version": "3.2",
+    "domain": "astronomy.galaxy",
+    "subtopic": "astronomy.galaxy.henize_2_10",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Henize 2-10 — карликовая стартбёрст-галактика с активной СМЧД массой ~10⁶ M☉; расстояние ~34 млн св. лет; чёрная дыра запускает звездообразование, что нетипично.",
+    "conditions": "HST/Chandra 2022",
+    "prereq": [
+      "concept.astronomy.galaxy",
+      "concept.astronomy.black_hole_supermassive"
+    ],
+    "confidence": 0.86,
+    "tags": [
+      "henize_2_10",
+      "dwarf_galaxy",
+      "starburst",
+      "smbh"
+    ],
+    "tier_extensions": {
+      "source": "Schutte & Reines 2022",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "distance_ly": 34000000,
+      "smbh_mass_solar": 1000000.0
+    }
+  },
+  {
+    "id": "fact.astronomy.galaxy.bode_m81",
+    "schema_version": "3.2",
+    "domain": "astronomy.galaxy",
+    "subtopic": "astronomy.galaxy.bode",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Галактика Боде (M81/NGC 3031) — спиральная SA(s)ab; диаметр ~96000 св. лет; расстояние ~11,8 млн св. лет; гравитационно взаимодействует с M82 и NGC 3077.",
+    "conditions": "HST/Spitzer",
+    "prereq": [
+      "concept.astronomy.galaxy"
+    ],
+    "confidence": 0.91,
+    "tags": [
+      "bode_galaxy",
+      "m81",
+      "spiral_galaxy",
+      "interacting"
+    ],
+    "tier_extensions": {
+      "source": "Hubble/Spitzer 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "diameter_ly": 96000,
+      "distance_ly": 11800000
+    }
+  },
+  {
+    "id": "fact.astronomy.galaxy.centaurus_a",
+    "schema_version": "3.2",
+    "domain": "astronomy.galaxy",
+    "subtopic": "astronomy.galaxy.centaurus_a",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Центавр A (NGC 5128) — линзовидная пекулярная галактика с активным ядром; диаметр ~60000 св. лет; расстояние ~12 млн св. лет; СМЧД массой ~5,5×10⁷ M☉; мощный радиоисточник.",
+    "conditions": "EHT/Chandra 2021",
+    "prereq": [
+      "concept.astronomy.galaxy",
+      "concept.astronomy.agn"
+    ],
+    "confidence": 0.9,
+    "tags": [
+      "centaurus_a",
+      "ngc_5128",
+      "agn",
+      "radio_galaxy"
+    ],
+    "tier_extensions": {
+      "source": "EHT/Chandra 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "diameter_ly": 60000,
+      "distance_ly": 12000000,
+      "smbh_mass_solar": 55000000.0
+    }
+  },
+  {
+    "id": "fact.astronomy.galaxy.ic_1101",
+    "schema_version": "3.2",
+    "domain": "astronomy.galaxy",
+    "subtopic": "astronomy.galaxy.ic_1101",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "IC 1101 — одна из крупнейших известных галактик, гигантская эллиптическая cD; диаметр звёздного гало ~600000 св. лет; масса ~10¹⁵ M☉; расстояние ~1,04 млрд св. лет.",
+    "conditions": "SDSS",
+    "prereq": [
+      "concept.astronomy.galaxy"
+    ],
+    "confidence": 0.83,
+    "tags": [
+      "ic_1101",
+      "elliptical_galaxy",
+      "largest_galaxy"
+    ],
+    "tier_extensions": {
+      "source": "SDSS DR17 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": true,
+      "diameter_ly": 600000,
+      "distance_ly": 1040000000.0,
+      "mass_solar": 1000000000000000.0
+    }
+  },
+  {
+    "id": "fact.astronomy.black_hole.ton_618",
+    "schema_version": "3.2",
+    "domain": "astronomy.black_hole",
+    "subtopic": "astronomy.black_hole.ton_618",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "TON 618 — гиперсветящийся квазар с одной из крупнейших известных СМЧД; масса ~6,6×10¹⁰ M☉; красное смещение z=2,219; расстояние ~10,4 млрд св. лет.",
+    "conditions": "SDSS 2004",
+    "prereq": [
+      "concept.astronomy.black_hole_supermassive",
+      "concept.astronomy.quasar"
+    ],
+    "confidence": 0.84,
+    "tags": [
+      "ton_618",
+      "smbh",
+      "quasar",
+      "ultramassive"
+    ],
+    "tier_extensions": {
+      "source": "Shemmer et al. 2004",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": true,
+      "mass_solar": 66000000000.0,
+      "redshift": 2.219
+    }
+  },
+  {
+    "id": "fact.astronomy.gw.gw170817",
+    "schema_version": "3.2",
+    "domain": "astronomy.gravitational_waves",
+    "subtopic": "astronomy.gw.gw170817",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "GW170817 — первое детектирование гравитационных волн от слияния нейтронных звёзд (17.08.2017); массы 1,17 и 1,60 M☉; расстояние ~130 млн св. лет; килоновое излучение зафиксировано.",
+    "conditions": "LIGO/Virgo + электромагнитное послесвечение",
+    "prereq": [
+      "concept.astronomy.gravitational_wave",
+      "concept.astronomy.kilonova"
+    ],
+    "confidence": 0.95,
+    "tags": [
+      "gw170817",
+      "gravitational_wave",
+      "neutron_star_merger",
+      "kilonova"
+    ],
+    "tier_extensions": {
+      "source": "LIGO/Virgo 2017",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "mass1_solar": 1.17,
+      "mass2_solar": 1.6,
+      "distance_ly": 130000000
+    }
+  },
+  {
+    "id": "fact.astronomy.galaxy.ngc_6822",
+    "schema_version": "3.2",
+    "domain": "astronomy.galaxy",
+    "subtopic": "astronomy.galaxy.barnards_galaxy",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Галактика Барнарда (NGC 6822) — карликовая иррегулярная IB(s)m в Местной группе; диаметр ~7000 св. лет; расстояние ~1,63 млн св. лет; активное звездообразование.",
+    "conditions": "HST 2024",
+    "prereq": [
+      "concept.astronomy.galaxy"
+    ],
+    "confidence": 0.9,
+    "tags": [
+      "ngc_6822",
+      "barnards_galaxy",
+      "dwarf_irregular",
+      "local_group"
+    ],
+    "tier_extensions": {
+      "source": "Hubble 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "diameter_ly": 7000,
+      "distance_ly": 1630000
+    }
+  },
+  {
+    "id": "fact.astronomy.cluster.fornax",
+    "schema_version": "3.2",
+    "domain": "astronomy.galaxy_cluster",
+    "subtopic": "astronomy.cluster.fornax",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Скопление Печи — второе по близости крупное скопление галактик после Девы; ~60 ярких членов; расстояние ~62 млн св. лет; центр NGC 1399 — гигантская эллиптическая галактика.",
+    "conditions": "VLT/HST",
+    "prereq": [
+      "concept.astronomy.galaxy_cluster"
+    ],
+    "confidence": 0.89,
+    "tags": [
+      "fornax_cluster",
+      "galaxy_cluster"
+    ],
+    "tier_extensions": {
+      "source": "ESO/VLT 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "distance_ly": 62000000,
+      "bright_member_count": 60
+    }
+  },
+  {
+    "id": "fact.astronomy.supercluster.laniakea",
+    "schema_version": "3.2",
+    "domain": "astronomy.supercluster",
+    "subtopic": "astronomy.supercluster.laniakea",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Сверхскопление Ланиакея — гравитационно связанный домен, включающий Млечный Путь; диаметр ~520 млн св. лет; масса ~10¹⁷ M☉; ~100000 галактик; идентифицировано в 2014.",
+    "conditions": "Tully et al. 2014",
+    "prereq": [
+      "concept.astronomy.supercluster"
+    ],
+    "confidence": 0.87,
+    "tags": [
+      "laniakea",
+      "supercluster",
+      "large_scale_structure"
+    ],
+    "tier_extensions": {
+      "source": "Tully et al. Nature 2014",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": true,
+      "diameter_ly": 520000000,
+      "mass_solar": 1e+17
+    }
+  },
+  {
+    "id": "fact.astronomy.gw.gw190521",
+    "schema_version": "3.2",
+    "domain": "astronomy.gravitational_waves",
+    "subtopic": "astronomy.gw.gw190521",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "GW190521 — слияние чёрных дыр промежуточной массы (21.05.2019); массы 85 и 66 M☉; результат 142 M☉; первая зафиксированная чёрная дыра промежуточной массы.",
+    "conditions": "LIGO/Virgo",
+    "prereq": [
+      "concept.astronomy.gravitational_wave"
+    ],
+    "confidence": 0.93,
+    "tags": [
+      "gw190521",
+      "intermediate_mass_black_hole",
+      "gravitational_wave"
+    ],
+    "tier_extensions": {
+      "source": "LIGO/Virgo 2020",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "mass1_solar": 85,
+      "mass2_solar": 66,
+      "final_mass_solar": 142
+    }
+  },
+  {
+    "id": "fact.astronomy.galaxy.dwarf_canis_major",
+    "schema_version": "3.2",
+    "domain": "astronomy.galaxy",
+    "subtopic": "astronomy.galaxy.canis_major_dwarf",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Карликовая галактика Большого Пса — спутник Млечного Пути; расстояние ~25000 св. лет от Солнца; масса ~10⁹ M☉; гипотетическая, идентификация оспаривается.",
+    "conditions": "2MASS/SDSS",
+    "prereq": [
+      "concept.astronomy.galaxy"
+    ],
+    "confidence": 0.75,
+    "tags": [
+      "canis_major_dwarf",
+      "satellite_galaxy",
+      "milky_way"
+    ],
+    "tier_extensions": {
+      "source": "Martin et al. 2004",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": true,
+      "distance_ly": 25000,
+      "mass_solar": 1000000000.0
+    }
+  }
+]

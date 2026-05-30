@@ -1,0 +1,724 @@
+[
+  {
+    "id": "fact.geography.river.yangtze",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.river.yangtze",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Янцзы — крупнейшая река Азии и третья в мире; длина 6300 км, площадь бассейна 1,8 млн км², впадает в Восточно-Китайское море.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.river"],
+    "confidence": 0.93,
+    "tags": ["yangtze", "geography", "river", "china", "asia"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.river.mississippi",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.river.mississippi",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Миссисипи — главная река США; длина 3766 км, с Миссури — 6275 км; бассейн 3,2 млн км², впадает в Мексиканский залив.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.river"],
+    "confidence": 0.93,
+    "tags": ["mississippi", "geography", "river", "usa", "north_america"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.river.yenisei",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.river.yenisei",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Енисей — крупнейшая по водности река России; длина 3487 км (с Малым Енисеем 4287 км), бассейн 2,58 млн км², впадает в Карское море.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.river"],
+    "confidence": 0.92,
+    "tags": ["yenisei", "geography", "river", "russia", "siberia"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.river.lena",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.river.lena",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Лена — крупная сибирская река России; длина 4400 км, бассейн 2,49 млн км², впадает в море Лаптевых, образуя обширную дельту.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.river"],
+    "confidence": 0.92,
+    "tags": ["lena", "geography", "river", "russia", "siberia"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.river.ob",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.river.ob",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Обь — река Западной Сибири; длина 3650 км (с Иртышом 5410 км), бассейн 2,99 млн км² — крупнейший в России, впадает в Карское море.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.river"],
+    "confidence": 0.92,
+    "tags": ["ob", "geography", "river", "russia", "siberia"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.river.volga",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.river.volga",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Волга — крупнейшая река Европы; длина 3531 км, бассейн 1,36 млн км², впадает в Каспийское море, не имеет выхода в мировой океан.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.river"],
+    "confidence": 0.94,
+    "tags": ["volga", "geography", "river", "russia", "europe"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.river.danube",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.river.danube",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Дунай — вторая по длине река Европы; 2860 км, бассейн 817 тыс км²; протекает через 10 стран, впадает в Чёрное море.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.river"],
+    "confidence": 0.93,
+    "tags": ["danube", "geography", "river", "europe", "international"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.river.rhine",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.river.rhine",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Рейн — река Западной Европы; длина 1233 км, бассейн 198 тыс км²; берёт начало в Альпах, впадает в Северное море через дельту в Нидерландах.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.river"],
+    "confidence": 0.94,
+    "tags": ["rhine", "geography", "river", "europe", "germany"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.river.mekong",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.river.mekong",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Меконг — главная река Юго-Восточной Азии; длина 4350 км, бассейн 795 тыс км²; протекает через 6 стран, впадает в Южно-Китайское море.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.river"],
+    "confidence": 0.92,
+    "tags": ["mekong", "geography", "river", "asia", "indochina"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.river.congo",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.river.congo",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Конго — вторая по водности река мира после Амазонки; длина 4700 км, бассейн 3,7 млн км², глубина до 220 м, впадает в Атлантический океан.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.river"],
+    "confidence": 0.93,
+    "tags": ["congo", "geography", "river", "africa", "tropical"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.river.niger",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.river.niger",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Нигер — третья по длине река Африки; длина 4180 км, бассейн 2,11 млн км²; впадает в Гвинейский залив через обширную дельту в Нигерии.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.river"],
+    "confidence": 0.92,
+    "tags": ["niger", "geography", "river", "africa", "delta"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.river.zambezi",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.river.zambezi",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Замбези — четвёртая по длине река Африки; длина 2574 км, бассейн 1,39 млн км²; включает водопад Виктория, впадает в Индийский океан.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.river"],
+    "confidence": 0.92,
+    "tags": ["zambezi", "geography", "river", "africa", "victoria_falls"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.river.parana",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.river.parana",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Парана — вторая по длине река Южной Америки; длина 4880 км, бассейн 2,58 млн км²; впадает в эстуарий Ла-Плата на границе Аргентины и Уругвая.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.river"],
+    "confidence": 0.91,
+    "tags": ["parana", "geography", "river", "south_america", "la_plata"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.river.mackenzie",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.river.mackenzie",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Маккензи — крупнейшая речная система Канады; длина 1738 км (с Финли 4241 км), бассейн 1,8 млн км², впадает в море Бофорта.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.river"],
+    "confidence": 0.91,
+    "tags": ["mackenzie", "geography", "river", "canada", "arctic"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.river.yukon",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.river.yukon",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Юкон — река Аляски и северо-западной Канады; длина 3185 км, бассейн 832 тыс км², впадает в Берингово море.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.river"],
+    "confidence": 0.91,
+    "tags": ["yukon", "geography", "river", "alaska", "north_america"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.river.colorado",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.river.colorado",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Колорадо — река юго-запада США; длина 2334 км, бассейн 637 тыс км²; прорезает Большой Каньон, впадает в Калифорнийский залив.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.river"],
+    "confidence": 0.92,
+    "tags": ["colorado", "geography", "river", "usa", "grand_canyon"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.river.columbia",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.river.columbia",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Колумбия — крупнейшая река тихоокеанского побережья Северной Америки; длина 2000 км, бассейн 668 тыс км², впадает в Тихий океан.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.river"],
+    "confidence": 0.91,
+    "tags": ["columbia", "geography", "river", "usa", "pacific"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.river.huanghe",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.river.huanghe",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Хуанхэ (Жёлтая река) — вторая по длине река Китая; 5464 км, бассейн 752 тыс км²; несёт максимум взвешенных частиц, впадает в Бохайский залив.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.river"],
+    "confidence": 0.92,
+    "tags": ["huanghe", "geography", "river", "china", "yellow_river"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.river.brahmaputra",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.river.brahmaputra",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Брахмапутра — река Тибета, Индии и Бангладеш; длина 2900 км, бассейн 651 тыс км²; сливается с Гангом, впадает в Бенгальский залив.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.river"],
+    "confidence": 0.91,
+    "tags": ["brahmaputra", "geography", "river", "asia", "ganges"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.river.indus",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.river.indus",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Инд — главная река Пакистана; длина 3180 км, бассейн 1,12 млн км²; берёт начало в Тибете, впадает в Аравийское море.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.river"],
+    "confidence": 0.91,
+    "tags": ["indus", "geography", "river", "pakistan", "asia"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.river.tigris",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.river.tigris",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Тигр — река Турции, Сирии и Ирака; длина 1850 км, бассейн 375 тыс км²; вместе с Евфратом образует Шатт-эль-Араб, впадает в Персидский залив.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.river"],
+    "confidence": 0.91,
+    "tags": ["tigris", "geography", "river", "mesopotamia", "middle_east"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.river.euphrates",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.river.euphrates",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Евфрат — длиннейшая река Юго-Западной Азии; длина 2780 км, бассейн 765 тыс км²; протекает через Турцию, Сирию, Ирак.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.river"],
+    "confidence": 0.91,
+    "tags": ["euphrates", "geography", "river", "mesopotamia", "middle_east"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.river.jordan",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.river.jordan",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Иордан — река Ближнего Востока; длина 251 км, бассейн 18,3 тыс км²; впадает в Мёртвое море, ниже уровня океана на 430 м.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.river"],
+    "confidence": 0.92,
+    "tags": ["jordan", "geography", "river", "middle_east", "dead_sea"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.river.ohio",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.river.ohio",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Огайо — крупный приток Миссисипи; длина 1579 км, бассейн 490 тыс км²; самый водоносный приток, впадает в Миссисипи у Каира, Иллинойс.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.river"],
+    "confidence": 0.91,
+    "tags": ["ohio", "geography", "river", "usa", "mississippi_basin"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.lake.caspian",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.lake.caspian",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Каспийское — крупнейший замкнутый водоём планеты; площадь 371 тыс км², глубина до 1025 м, солёное, ниже уровня океана на 28 м.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.lake"],
+    "confidence": 0.94,
+    "tags": ["caspian", "geography", "lake", "endorheic", "eurasia"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "fact.geography.lake.superior",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.lake.superior",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Верхнее — крупнейшее пресноводное озеро мира по площади; 82 100 км², глубина до 406 м, на границе США и Канады.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.lake"],
+    "confidence": 0.94,
+    "tags": ["superior", "geography", "lake", "great_lakes", "north_america"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.lake.victoria",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.lake.victoria",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Виктория — крупнейшее озеро Африки; площадь 68 800 км², глубина до 84 м; исток Белого Нила, на территории Уганды, Кении, Танзании.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.lake"],
+    "confidence": 0.93,
+    "tags": ["victoria", "geography", "lake", "africa", "nile_source"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.lake.tanganyika",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.lake.tanganyika",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Танганьика — второе по глубине озеро мира; глубина 1470 м, площадь 32 900 км², длина 673 км; рифтовое озеро Восточной Африки.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.lake"],
+    "confidence": 0.93,
+    "tags": ["tanganyika", "geography", "lake", "africa", "rift"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.lake.huron",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.lake.huron",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Гурон — второе по площади из Великих озёр; 59 600 км², глубина до 229 м; на границе США и Канады, соединено с Мичиганом проливом Макино.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.lake"],
+    "confidence": 0.93,
+    "tags": ["huron", "geography", "lake", "great_lakes", "north_america"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.lake.michigan",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.lake.michigan",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Мичиган — третье по площади озеро Великих озёр; 58 000 км², глубина до 281 м; единственное полностью в пределах США.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.lake"],
+    "confidence": 0.93,
+    "tags": ["michigan", "geography", "lake", "great_lakes", "usa"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.lake.aral",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.lake.aral",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Аральское — бессточное солёное озеро Средней Азии; с 1960 сократилось с 68 тыс км² до менее 8 тыс км² из-за забора воды на орошение.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.lake"],
+    "confidence": 0.92,
+    "tags": ["aral", "geography", "lake", "central_asia", "ecological_disaster"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.lake.balkhash",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.lake.balkhash",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Балхаш — бессточное озеро Казахстана; площадь 16 400 км², глубина до 26 м; уникально тем что западная часть пресная, восточная солёная.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.lake"],
+    "confidence": 0.91,
+    "tags": ["balkhash", "geography", "lake", "kazakhstan", "endorheic"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.lake.issyk_kul",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.lake.issyk_kul",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Иссык-Куль — высокогорное солоноватое озеро Киргизии; площадь 6236 км², глубина до 668 м, на высоте 1607 м; не замерзает зимой.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.lake"],
+    "confidence": 0.91,
+    "tags": ["issyk_kul", "geography", "lake", "kyrgyzstan", "high_altitude"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.lake.erie",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.lake.erie",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Эри — четвёртое по площади из Великих озёр; 25 700 км², глубина до 64 м (мелкое); связано с Онтарио рекой Ниагара и Ниагарским водопадом.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.lake"],
+    "confidence": 0.92,
+    "tags": ["erie", "geography", "lake", "great_lakes", "niagara"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.lake.ontario",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.lake.ontario",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Онтарио — наименьшее по площади из Великих озёр; 19 000 км², глубина до 244 м; вытекает река Святого Лаврентия.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.lake"],
+    "confidence": 0.92,
+    "tags": ["ontario", "geography", "lake", "great_lakes", "north_america"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.lake.great_bear",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.lake.great_bear",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Большое Медвежье — крупнейшее озеро Канады; площадь 31 153 км², глубина до 446 м; за Полярным кругом, покрыто льдом 8 месяцев в году.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.lake"],
+    "confidence": 0.91,
+    "tags": ["great_bear", "geography", "lake", "canada", "arctic"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.lake.maracaibo",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.lake.maracaibo",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Маракайбо — крупнейший водоём Южной Америки; площадь 13 210 км², солоноватое, связано с Венесуэльским заливом; рекордсмен по молниям.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.lake"],
+    "confidence": 0.89,
+    "tags": ["maracaibo", "geography", "lake", "venezuela", "south_america"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "fact.geography.lake.ladoga",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.lake.ladoga",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Ладожское — крупнейшее озеро Европы; площадь 17 870 км², глубина до 230 м; в Северо-Западной России, исток реки Невы.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.lake"],
+    "confidence": 0.93,
+    "tags": ["ladoga", "geography", "lake", "russia", "europe"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  }
+]

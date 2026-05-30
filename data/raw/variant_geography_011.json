@@ -1,0 +1,572 @@
+[
+  {
+    "id": "fact.geography.sea.mediterranean",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.sea.mediterranean",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Средиземное море — внутреннее море Атлантики; площадь 2,5 млн км², средняя глубина 1500 м, максимум 5267 м; соединено с океаном Гибралтаром.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.sea"],
+    "confidence": 0.94,
+    "tags": ["mediterranean", "geography", "sea", "europe", "atlantic"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.sea.black",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.sea.black",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Чёрное море — внутреннее море Атлантики; площадь 436 тыс км², максимальная глубина 2212 м; ниже 150 м бескислородная (сероводородная) зона.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.sea"],
+    "confidence": 0.94,
+    "tags": ["black_sea", "geography", "sea", "anoxic", "eurasia"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.sea.baltic",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.sea.baltic",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Балтийское море — внутреннее море Атлантики в Северной Европе; площадь 415 тыс км², средняя глубина 55 м; одно из самых пресных морей мира.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.sea"],
+    "confidence": 0.93,
+    "tags": ["baltic", "geography", "sea", "europe", "brackish"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.sea.north",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.sea.north",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Северное море — окраинное море Атлантики между Великобританией и континентальной Европой; площадь 750 тыс км², средняя глубина 95 м.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.sea"],
+    "confidence": 0.93,
+    "tags": ["north_sea", "geography", "sea", "europe", "oil"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.sea.caribbean",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.sea.caribbean",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Карибское море — окраинное море Атлантики; площадь 2,75 млн км², максимальная глубина 7686 м (Каймановый жёлоб); тропическое.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.sea"],
+    "confidence": 0.93,
+    "tags": ["caribbean", "geography", "sea", "tropical", "atlantic"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.sea.bering",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.sea.bering",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Берингово море — северное окраинное море Тихого океана; площадь 2,3 млн км², максимальная глубина 4151 м; разделяет Евразию и Северную Америку.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.sea"],
+    "confidence": 0.93,
+    "tags": ["bering", "geography", "sea", "pacific", "arctic"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.sea.okhotsk",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.sea.okhotsk",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Охотское море — окраинное море Тихого океана у Дальнего Востока России; площадь 1,6 млн км², максимальная глубина 3372 м; зимой замерзает.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.sea"],
+    "confidence": 0.93,
+    "tags": ["okhotsk", "geography", "sea", "pacific", "russia"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.sea.japan",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.sea.japan",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Японское море — окраинное море Тихого океана; площадь 1,06 млн км², максимальная глубина 3742 м; разделяет Японский архипелаг и материк.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.sea"],
+    "confidence": 0.92,
+    "tags": ["japan_sea", "geography", "sea", "pacific", "asia"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "fact.geography.sea.south_china",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.sea.south_china",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Южно-Китайское море — окраинное море Тихого океана; площадь 3,5 млн км², максимальная глубина 5560 м; ключевой морской торговый путь.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.sea"],
+    "confidence": 0.92,
+    "tags": ["south_china_sea", "geography", "sea", "pacific", "asia"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "fact.geography.sea.arabian",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.sea.arabian",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Аравийское море — окраинное море Индийского океана; площадь 3,86 млн км², максимальная глубина 5803 м; между Аравийским полуостровом и Индией.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.sea"],
+    "confidence": 0.93,
+    "tags": ["arabian_sea", "geography", "sea", "indian_ocean", "asia"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.sea.red",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.sea.red",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Красное море — окраинное море Индийского океана; площадь 438 тыс км², максимальная глубина 3040 м; соединено с Суэцким каналом, рифтовое море.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.sea"],
+    "confidence": 0.93,
+    "tags": ["red_sea", "geography", "sea", "rift", "indian_ocean"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.sea.kara",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.sea.kara",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Карское море — окраинное море Северного Ледовитого океана у России; площадь 893 тыс км², средняя глубина 111 м; покрыто льдом большую часть года.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.sea"],
+    "confidence": 0.91,
+    "tags": ["kara_sea", "geography", "sea", "arctic", "russia"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.sea.laptev",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.sea.laptev",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Море Лаптевых — окраинное море Северного Ледовитого океана у России; площадь 672 тыс км², средняя глубина 540 м; одно из суровейших морей Арктики.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.sea"],
+    "confidence": 0.91,
+    "tags": ["laptev", "geography", "sea", "arctic", "russia"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.sea.beaufort",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.sea.beaufort",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Море Бофорта — окраинное море Северного Ледовитого океана у Аляски и Канады; площадь 476 тыс км², максимальная глубина 4683 м.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.sea"],
+    "confidence": 0.91,
+    "tags": ["beaufort", "geography", "sea", "arctic", "north_america"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.sea.weddell",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.sea.weddell",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Море Уэдделла — окраинное море Южного океана у Антарктиды; площадь 2,9 млн км²; известно самой холодной и прозрачной водой мирового океана.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.sea"],
+    "confidence": 0.91,
+    "tags": ["weddell", "geography", "sea", "antarctic", "southern_ocean"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.sea.ross",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.sea.ross",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Море Росса — окраинное море Южного океана у Антарктиды; площадь 960 тыс км²; крупнейший в мире морской охраняемый район с 2017.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.sea"],
+    "confidence": 0.91,
+    "tags": ["ross_sea", "geography", "sea", "antarctic", "marine_protected"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.sea.sargasso",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.sea.sargasso",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Саргассово море — единственное море без береговой линии; в центре Северной Атлантики, ограничено течениями; площадь ~5 млн км²; саргассовые водоросли.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.sea"],
+    "confidence": 0.92,
+    "tags": ["sargasso", "geography", "sea", "atlantic", "no_coast"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.current.gulf_stream",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.current.gulf_stream",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Гольфстрим — тёплое поверхностное течение Северной Атлантики; скорость до 2,5 м/с, расход ~30 Св у Флориды; смягчает климат Западной Европы.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.current"],
+    "confidence": 0.93,
+    "tags": ["gulf_stream", "geography", "current", "atlantic", "warm"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.current.north_atlantic",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.current.north_atlantic",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Северо-Атлантическое течение — продолжение Гольфстрима к северо-востоку; ключевой компонент АМОЦ; обеспечивает мягкий климат Северной Европы.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.current"],
+    "confidence": 0.92,
+    "tags": ["north_atlantic_current", "geography", "current", "amoc", "warm"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.current.kuroshio",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.current.kuroshio",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Куросио — тёплое течение западной части Тихого океана у Японии; скорость до 2 м/с, расход ~50 Св; аналог Гольфстрима в Тихом океане.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.current"],
+    "confidence": 0.92,
+    "tags": ["kuroshio", "geography", "current", "pacific", "warm"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.current.california",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.current.california",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Калифорнийское течение — холодное поверхностное течение восточной части Тихого океана; вдоль западного побережья США; апвеллинг богат биопродукцией.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.current"],
+    "confidence": 0.91,
+    "tags": ["california_current", "geography", "current", "pacific", "cold"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.current.humboldt",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.current.humboldt",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Перуанское (Гумбольдтово) течение — холодное течение у западного побережья Южной Америки; мощный апвеллинг даёт ~10% мирового улова рыбы.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.current"],
+    "confidence": 0.92,
+    "tags": ["humboldt", "geography", "current", "pacific", "upwelling"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.current.benguela",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.current.benguela",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Бенгельское течение — холодное течение у юго-западного побережья Африки; апвеллинг создаёт богатую морскую экосистему у Намибии и Анголы.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.current"],
+    "confidence": 0.91,
+    "tags": ["benguela", "geography", "current", "atlantic", "upwelling"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.current.somali",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.current.somali",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Сомалийское течение — единственное в мире, меняющее направление сезонно; летом течёт на север под юго-западным муссоном со скоростью до 3,5 м/с.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.current"],
+    "confidence": 0.91,
+    "tags": ["somali_current", "geography", "current", "indian_ocean", "monsoon"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.gulf.mexico",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.gulf.mexico",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Мексиканский залив — крупный залив Атлантического океана; площадь 1,55 млн км², максимальная глубина 4384 м; берега США, Мексики и Кубы.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.gulf"],
+    "confidence": 0.93,
+    "tags": ["gulf_of_mexico", "geography", "gulf", "atlantic", "americas"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.gulf.bengal",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.gulf.bengal",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Бенгальский залив — крупнейший залив мира; площадь 2,17 млн км²; северо-восточная часть Индийского океана; крупнейшая речная дельта мира (Ганг-Брахмапутра).",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.gulf"],
+    "confidence": 0.93,
+    "tags": ["bay_of_bengal", "geography", "gulf", "indian_ocean", "asia"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.gulf.guinea",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.gulf.guinea",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Гвинейский залив — крупный залив Атлантического океана у западного побережья Африки; в нём пересекаются экватор и нулевой меридиан.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.gulf"],
+    "confidence": 0.92,
+    "tags": ["gulf_of_guinea", "geography", "gulf", "africa", "atlantic"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.gulf.persian",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.gulf.persian",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Персидский залив — мелководный залив Индийского океана; площадь 251 тыс км², средняя глубина 50 м; крупнейший в мире резервуар нефти.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.gulf"],
+    "confidence": 0.93,
+    "tags": ["persian_gulf", "geography", "gulf", "middle_east", "oil"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "fact.geography.gulf.finland",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.gulf.finland",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Финский залив — восточная часть Балтийского моря; длина 420 км, площадь 29 500 км², средняя глубина 38 м; берега России, Финляндии, Эстонии.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.gulf"],
+    "confidence": 0.92,
+    "tags": ["gulf_of_finland", "geography", "gulf", "baltic", "europe"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.geography.gulf.biscay",
+    "schema_version": "3.2",
+    "domain": "geography.physical",
+    "subtopic": "geography.gulf.biscay",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Бискайский залив — залив Атлантического океана у западного побережья Франции и северного побережья Испании; площадь 223 тыс км², известен штормами.",
+    "conditions": "Данные на 2024; современные измерения",
+    "prereq": ["concept.geography.gulf"],
+    "confidence": 0.92,
+    "tags": ["bay_of_biscay", "geography", "gulf", "atlantic", "europe"],
+    "tier_extensions": {
+      "source": "Britannica / National Geographic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  }
+]

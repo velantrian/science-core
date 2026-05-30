@@ -1,0 +1,520 @@
+[
+  {
+    "id": "fact.events.cyclone.amy.1971",
+    "schema_version": "3.2",
+    "domain": "climate.extreme_events",
+    "subtopic": "climate.event.tropical_cyclone",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Циклон Эми (январь 1971) — тропический шторм в южной части Тихого океана; затронул Фиджи и Новую Каледонию; максимальные ветры ~120 км/ч; ущерб инфраструктуре.",
+    "conditions": "BoM Australia cyclone records 1971",
+    "prereq": ["concept.climate.tropical_cyclone"],
+    "confidence": 0.78,
+    "tags": ["cyclone", "pacific", "amy", "1971"],
+    "tier_extensions": {
+      "source": "Australian Bureau of Meteorology Cyclone Database",
+      "valid_from": "1971-01-15",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.events.hurricane.katrina.2005",
+    "schema_version": "3.2",
+    "domain": "climate.extreme_events",
+    "subtopic": "climate.event.hurricane",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Ураган Катрина (август 2005) — 5 категория; обрушился на Луизиану; ветры до 280 км/ч; погибших >1800; экономический ущерб $186 млрд; затопление Нового Орлеана прорывом дамб.",
+    "conditions": "NOAA NHC отчёт по Katrina 2005",
+    "prereq": ["concept.climate.hurricane"],
+    "confidence": 0.94,
+    "tags": ["hurricane", "katrina", "new_orleans", "2005"],
+    "tier_extensions": {
+      "source": "NOAA National Hurricane Center; NHC Tropical Cyclone Report 2005",
+      "valid_from": "2005-08-29",
+      "valid_until": null,
+      "has_disputes": false,
+      "category": 5,
+      "deaths": 1833,
+      "damage_usd": 186000000000
+    }
+  },
+  {
+    "id": "fact.events.hurricane.sandy.2012",
+    "schema_version": "3.2",
+    "domain": "climate.extreme_events",
+    "subtopic": "climate.event.hurricane",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Ураган Сэнди (октябрь 2012) — гибридный пост-тропический циклон; обрушился на Нью-Джерси; диаметр ~1800 км; погибших ~233; ущерб $70 млрд; затопление метро Нью-Йорка.",
+    "conditions": "NOAA NHC Tropical Cyclone Report Sandy 2013",
+    "prereq": ["concept.climate.hurricane"],
+    "confidence": 0.93,
+    "tags": ["hurricane", "sandy", "new_york", "2012"],
+    "tier_extensions": {
+      "source": "NOAA NHC Tropical Cyclone Report AL182012",
+      "valid_from": "2012-10-29",
+      "valid_until": null,
+      "has_disputes": false,
+      "deaths": 233,
+      "damage_usd": 70000000000
+    }
+  },
+  {
+    "id": "fact.events.typhoon.haiyan.2013",
+    "schema_version": "3.2",
+    "domain": "climate.extreme_events",
+    "subtopic": "climate.event.typhoon",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Тайфун Хайян (Йоланда, ноябрь 2013) — один из мощнейших тропических циклонов; ветры до 315 км/ч; обрушился на Филиппины; погибших >6300; разрушения в Таклобане катастрофические.",
+    "conditions": "JTWC и PAGASA данные 2013",
+    "prereq": ["concept.climate.typhoon"],
+    "confidence": 0.93,
+    "tags": ["typhoon", "haiyan", "philippines", "2013"],
+    "tier_extensions": {
+      "source": "Joint Typhoon Warning Center; PAGASA Philippines",
+      "valid_from": "2013-11-08",
+      "valid_until": null,
+      "has_disputes": false,
+      "wind_max_kmh": 315,
+      "deaths": 6300
+    }
+  },
+  {
+    "id": "fact.events.hurricane.dorian.2019",
+    "schema_version": "3.2",
+    "domain": "climate.extreme_events",
+    "subtopic": "climate.event.hurricane",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Ураган Дориан (сентябрь 2019) — 5 категория; устойчивые ветры 295 км/ч; обрушился на Багамы; стационарное движение ~36 часов над Великим Абако; ущерб $5.1 млрд.",
+    "conditions": "NOAA NHC Tropical Cyclone Report Dorian 2020",
+    "prereq": ["concept.climate.hurricane"],
+    "confidence": 0.92,
+    "tags": ["hurricane", "dorian", "bahamas", "2019"],
+    "tier_extensions": {
+      "source": "NOAA NHC AL052019 Tropical Cyclone Report",
+      "valid_from": "2019-09-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "category": 5,
+      "wind_max_kmh": 295
+    }
+  },
+  {
+    "id": "fact.events.earthquake.san_francisco.1906",
+    "schema_version": "3.2",
+    "domain": "climate.extreme_events",
+    "subtopic": "climate.event.earthquake",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Землетрясение Сан-Франциско (18 апреля 1906) — магнитуда Mw 7.9; разлом Сан-Андреас; погибших ~3000; пожары уничтожили 80% города; смещение разлома до 6 м.",
+    "conditions": "USGS исторические данные",
+    "prereq": ["concept.geology.earthquake"],
+    "confidence": 0.91,
+    "tags": ["earthquake", "san_francisco", "1906", "san_andreas"],
+    "tier_extensions": {
+      "source": "USGS Earthquake Hazards Program",
+      "valid_from": "1906-04-18",
+      "valid_until": null,
+      "has_disputes": false,
+      "magnitude": 7.9,
+      "deaths": 3000
+    }
+  },
+  {
+    "id": "fact.events.earthquake.tangshan.1976",
+    "schema_version": "3.2",
+    "domain": "climate.extreme_events",
+    "subtopic": "climate.event.earthquake",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Землетрясение Таншань (28 июля 1976, КНР) — магнитуда Ms 7.5; официально 242 769 погибших; одно из самых смертоносных в XX веке; разрушение города почти полное.",
+    "conditions": "USGS, CEA данные 1976",
+    "prereq": ["concept.geology.earthquake"],
+    "confidence": 0.88,
+    "tags": ["earthquake", "tangshan", "china", "1976"],
+    "tier_extensions": {
+      "source": "USGS; China Earthquake Administration",
+      "valid_from": "1976-07-28",
+      "valid_until": null,
+      "has_disputes": true,
+      "magnitude": 7.5,
+      "deaths_official": 242769
+    }
+  },
+  {
+    "id": "fact.events.earthquake.chile.1960",
+    "schema_version": "3.2",
+    "domain": "climate.extreme_events",
+    "subtopic": "climate.event.earthquake",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Великое Чилийское землетрясение (22 мая 1960, Вальдивия) — магнитуда Mw 9.5; сильнейшее за всю историю инструментальных наблюдений; тихоокеанское цунами; погибших ~1655.",
+    "conditions": "USGS, NOAA NCEI исторический каталог",
+    "prereq": ["concept.geology.earthquake"],
+    "confidence": 0.94,
+    "tags": ["earthquake", "chile", "valdivia", "1960"],
+    "tier_extensions": {
+      "source": "USGS; NOAA NCEI Tsunami Database",
+      "valid_from": "1960-05-22",
+      "valid_until": null,
+      "has_disputes": false,
+      "magnitude": 9.5,
+      "is_largest_recorded": true
+    }
+  },
+  {
+    "id": "fact.events.earthquake.alaska.1964",
+    "schema_version": "3.2",
+    "domain": "climate.extreme_events",
+    "subtopic": "climate.event.earthquake",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Великое Аляскинское землетрясение (27 марта 1964) — магнитуда Mw 9.2; второе по силе зафиксированное; длительность сотрясений ~4.5 минуты; цунами достигло Калифорнии и Гавайев.",
+    "conditions": "USGS Earthquake Hazards Program",
+    "prereq": ["concept.geology.earthquake"],
+    "confidence": 0.93,
+    "tags": ["earthquake", "alaska", "1964", "subduction"],
+    "tier_extensions": {
+      "source": "USGS; Alaska Earthquake Center",
+      "valid_from": "1964-03-27",
+      "valid_until": null,
+      "has_disputes": false,
+      "magnitude": 9.2,
+      "duration_seconds": 270
+    }
+  },
+  {
+    "id": "fact.events.earthquake.sumatra.2004",
+    "schema_version": "3.2",
+    "domain": "climate.extreme_events",
+    "subtopic": "climate.event.earthquake",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Суматра-Андаманское землетрясение (26 декабря 2004) — магнитуда Mw 9.1-9.3; вызвало цунами в Индийском океане; погибших ~227 898 в 14 странах; разрыв разлома >1200 км.",
+    "conditions": "USGS, UNESCO IOC данные",
+    "prereq": ["concept.geology.earthquake", "concept.climate.tsunami"],
+    "confidence": 0.93,
+    "tags": ["earthquake", "sumatra", "tsunami", "2004"],
+    "tier_extensions": {
+      "source": "USGS; UNESCO IOC Indian Ocean Tsunami Report",
+      "valid_from": "2004-12-26",
+      "valid_until": null,
+      "has_disputes": false,
+      "magnitude": 9.1,
+      "deaths": 227898
+    }
+  },
+  {
+    "id": "fact.events.earthquake.tohoku.2011",
+    "schema_version": "3.2",
+    "domain": "climate.extreme_events",
+    "subtopic": "climate.event.earthquake",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Тохоку (Великое Восточно-Японское) землетрясение (11 марта 2011) — магнитуда Mw 9.0; цунами высотой до 40 м; авария АЭС Фукусима-Дайити; погибших ~19 759.",
+    "conditions": "JMA, USGS, NPA Japan 2011",
+    "prereq": ["concept.geology.earthquake"],
+    "confidence": 0.95,
+    "tags": ["earthquake", "tohoku", "japan", "fukushima", "2011"],
+    "tier_extensions": {
+      "source": "Japan Meteorological Agency; USGS",
+      "valid_from": "2011-03-11",
+      "valid_until": null,
+      "has_disputes": false,
+      "magnitude": 9.0,
+      "tsunami_max_m": 40,
+      "deaths": 19759
+    }
+  },
+  {
+    "id": "fact.events.earthquake.turkey_syria.2023",
+    "schema_version": "3.2",
+    "domain": "climate.extreme_events",
+    "subtopic": "climate.event.earthquake",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Землетрясение Кахраманмараш (6 февраля 2023, Турция-Сирия) — основной удар Mw 7.8 и афтершок Mw 7.5; погибших >59 000; разрушено более 230 000 зданий.",
+    "conditions": "USGS, AFAD Турция, ООН OCHA",
+    "prereq": ["concept.geology.earthquake"],
+    "confidence": 0.94,
+    "tags": ["earthquake", "turkey", "syria", "2023"],
+    "tier_extensions": {
+      "source": "USGS; AFAD Turkey; UN OCHA Reports 2023",
+      "valid_from": "2023-02-06",
+      "valid_until": null,
+      "has_disputes": false,
+      "magnitude_main": 7.8,
+      "deaths": 59000
+    }
+  },
+  {
+    "id": "fact.events.volcano.krakatoa.1883",
+    "schema_version": "3.2",
+    "domain": "climate.extreme_events",
+    "subtopic": "climate.event.volcanic_eruption",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Извержение Кракатау (26-27 августа 1883) — VEI 6; звук слышен на 4800 км; цунами до 40 м; погибших >36 000; глобальное похолодание ~0.5°C на 2 года; яркие закаты.",
+    "conditions": "Global Volcanism Program Smithsonian",
+    "prereq": ["concept.geology.volcano"],
+    "confidence": 0.9,
+    "tags": ["volcano", "krakatoa", "1883", "VEI6"],
+    "tier_extensions": {
+      "source": "Smithsonian Global Volcanism Program",
+      "valid_from": "1883-08-27",
+      "valid_until": null,
+      "has_disputes": false,
+      "VEI": 6,
+      "deaths": 36000
+    }
+  },
+  {
+    "id": "fact.events.volcano.st_helens.1980",
+    "schema_version": "3.2",
+    "domain": "climate.extreme_events",
+    "subtopic": "climate.event.volcanic_eruption",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Извержение Сент-Хеленс (18 мая 1980, штат Вашингтон США) — VEI 5; боковой взрыв обрушил северный склон; высота горы уменьшилась с 2950 до 2549 м; погибших 57.",
+    "conditions": "USGS Cascades Volcano Observatory",
+    "prereq": ["concept.geology.volcano"],
+    "confidence": 0.93,
+    "tags": ["volcano", "st_helens", "1980", "VEI5"],
+    "tier_extensions": {
+      "source": "USGS Cascades Volcano Observatory",
+      "valid_from": "1980-05-18",
+      "valid_until": null,
+      "has_disputes": false,
+      "VEI": 5,
+      "deaths": 57
+    }
+  },
+  {
+    "id": "fact.events.volcano.pinatubo.1991",
+    "schema_version": "3.2",
+    "domain": "climate.extreme_events",
+    "subtopic": "climate.event.volcanic_eruption",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Извержение Пинатубо (15 июня 1991, Филиппины) — VEI 6; крупнейшее наземное извержение XX века; выброс ~20 Мт SO2; глобальное похолодание ~0.5°C на 1-2 года.",
+    "conditions": "USGS, PHIVOLCS данные 1991",
+    "prereq": ["concept.geology.volcano"],
+    "confidence": 0.93,
+    "tags": ["volcano", "pinatubo", "1991", "VEI6", "stratospheric_aerosol"],
+    "tier_extensions": {
+      "source": "USGS; PHIVOLCS Philippines",
+      "valid_from": "1991-06-15",
+      "valid_until": null,
+      "has_disputes": false,
+      "VEI": 6,
+      "SO2_megatonnes": 20,
+      "cooling_effect_C": 0.5
+    }
+  },
+  {
+    "id": "fact.events.volcano.hunga_tonga.2022",
+    "schema_version": "3.2",
+    "domain": "climate.extreme_events",
+    "subtopic": "climate.event.volcanic_eruption",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Извержение Хунга-Тонга-Хунга-Хаапай (15 января 2022) — подводное VEI 5-6; шлейф достиг высоты 58 км в мезосфере; глобальные акустические волны; рекордный выброс H2O в стратосферу.",
+    "conditions": "NASA, GVP Smithsonian 2022-23",
+    "prereq": ["concept.geology.volcano"],
+    "confidence": 0.91,
+    "tags": ["volcano", "hunga_tonga", "2022", "submarine", "stratospheric_water"],
+    "tier_extensions": {
+      "source": "NASA Earth Observatory; Smithsonian GVP",
+      "valid_from": "2022-01-15",
+      "valid_until": null,
+      "has_disputes": false,
+      "plume_height_km": 58,
+      "VEI": 5
+    }
+  },
+  {
+    "id": "fact.events.tsunami.indian_ocean.2004",
+    "schema_version": "3.2",
+    "domain": "climate.extreme_events",
+    "subtopic": "climate.event.tsunami",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Цунами в Индийском океане (26 декабря 2004) — вызвано землетрясением Mw 9.1; волны до 30 м; затронуло 14 стран; ~227 898 погибших; Индонезия, Шри-Ланка, Индия, Таиланд наиболее пострадали.",
+    "conditions": "UNESCO IOC Tsunami Database",
+    "prereq": ["concept.climate.tsunami"],
+    "confidence": 0.94,
+    "tags": ["tsunami", "indian_ocean", "2004", "boxing_day"],
+    "tier_extensions": {
+      "source": "UNESCO IOC; NOAA NCEI Tsunami Database",
+      "valid_from": "2004-12-26",
+      "valid_until": null,
+      "has_disputes": false,
+      "wave_max_m": 30,
+      "deaths": 227898
+    }
+  },
+  {
+    "id": "fact.events.tsunami.japan.2011",
+    "schema_version": "3.2",
+    "domain": "climate.extreme_events",
+    "subtopic": "climate.event.tsunami",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Цунами Тохоку (11 марта 2011) — максимальная высота заплеска 40.5 м в Мияко; затопление 561 км²; повреждение АЭС Фукусима-1; глобальная отметка стандарта защиты АЭС.",
+    "conditions": "JMA, MEXT отчёты 2011-12",
+    "prereq": ["concept.climate.tsunami"],
+    "confidence": 0.94,
+    "tags": ["tsunami", "japan", "tohoku", "fukushima", "2011"],
+    "tier_extensions": {
+      "source": "JMA; MEXT Japan; UNESCO IOC",
+      "valid_from": "2011-03-11",
+      "valid_until": null,
+      "has_disputes": false,
+      "max_runup_m": 40.5,
+      "flooded_area_km2": 561
+    }
+  },
+  {
+    "id": "fact.events.drought.sahel.1968_1985",
+    "schema_version": "3.2",
+    "domain": "climate.extreme_events",
+    "subtopic": "climate.event.drought",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Сахельская засуха (1968-1985) — снижение годовых осадков на 20-40%; погибших от голода >100 000; миграции; деградация земель; связь с изменением температуры Атлантики и Индийского океана.",
+    "conditions": "FAO, IPCC AR6 региональные данные",
+    "prereq": ["concept.climate.drought"],
+    "confidence": 0.85,
+    "tags": ["drought", "sahel", "africa", "1970s", "famine"],
+    "tier_extensions": {
+      "source": "FAO; IPCC AR6 Chapter 11 Africa",
+      "valid_from": "1968-01-01",
+      "valid_until": "1985-12-31",
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "fact.events.flood.pakistan.2010",
+    "schema_version": "3.2",
+    "domain": "climate.extreme_events",
+    "subtopic": "climate.event.flood",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Наводнение в Пакистане (июль-август 2010) — муссонные осадки 200-300% от нормы; затоплено ~20% территории страны; пострадало ~20 млн человек; погибших ~2000; ущерб $43 млрд.",
+    "conditions": "Pakistan NDMA, UN OCHA отчёты",
+    "prereq": ["concept.climate.flood"],
+    "confidence": 0.9,
+    "tags": ["flood", "pakistan", "monsoon", "2010"],
+    "tier_extensions": {
+      "source": "Pakistan NDMA; UN OCHA Reports 2010-11",
+      "valid_from": "2010-07-01",
+      "valid_until": "2010-08-31",
+      "has_disputes": false,
+      "affected_population": 20000000,
+      "damage_usd": 43000000000
+    }
+  },
+  {
+    "id": "fact.events.wildfire.australia.2019_2020",
+    "schema_version": "3.2",
+    "domain": "climate.extreme_events",
+    "subtopic": "climate.event.wildfire",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Лесные пожары в Австралии Чёрное лето (2019-2020) — сгорело 18.6 млн га; погибли 34 человека и ~3 млрд животных; выбросы CO2 ~715 Мт; дым достиг стратосферы.",
+    "conditions": "CSIRO, Royal Commission Final Report 2020",
+    "prereq": ["concept.climate.wildfire"],
+    "confidence": 0.92,
+    "tags": ["wildfire", "australia", "black_summer", "2019"],
+    "tier_extensions": {
+      "source": "CSIRO; Royal Commission into National Natural Disaster Arrangements 2020",
+      "valid_from": "2019-09-01",
+      "valid_until": "2020-03-31",
+      "has_disputes": false,
+      "burned_area_ha": 18600000,
+      "wildlife_deaths": 3000000000
+    }
+  },
+  {
+    "id": "fact.events.wildfire.california.2020",
+    "schema_version": "3.2",
+    "domain": "climate.extreme_events",
+    "subtopic": "climate.event.wildfire",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Пожары в Калифорнии 2020 — рекордные 4.3 млн акров (1.74 млн га) выгорело; крупнейший комплекс August Complex >1 млн акров; задымление до восточного побережья США.",
+    "conditions": "CAL FIRE статистика 2020",
+    "prereq": ["concept.climate.wildfire"],
+    "confidence": 0.92,
+    "tags": ["wildfire", "california", "2020", "august_complex"],
+    "tier_extensions": {
+      "source": "CAL FIRE 2020 Fire Season Statistics",
+      "valid_from": "2020-01-01",
+      "valid_until": "2020-12-31",
+      "has_disputes": false,
+      "burned_area_acres": 4300000
+    }
+  },
+  {
+    "id": "fact.events.wildfire.siberia.2021",
+    "schema_version": "3.2",
+    "domain": "climate.extreme_events",
+    "subtopic": "climate.event.wildfire",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Сибирские лесные пожары (2021) — выгорело >18.8 млн га в Якутии и Иркутской области; рекордные выбросы CO2 ~800 Мт; задымление достигло Северного полюса.",
+    "conditions": "Greenpeace, Copernicus CAMS 2021",
+    "prereq": ["concept.climate.wildfire"],
+    "confidence": 0.85,
+    "tags": ["wildfire", "siberia", "yakutia", "2021", "boreal"],
+    "tier_extensions": {
+      "source": "Copernicus Atmosphere Monitoring Service; Greenpeace Russia",
+      "valid_from": "2021-05-01",
+      "valid_until": "2021-09-30",
+      "has_disputes": true,
+      "burned_area_ha": 18800000
+    }
+  },
+  {
+    "id": "concept.climate.tropical_cyclone",
+    "schema_version": "3.2",
+    "domain": "climate.extreme_events",
+    "subtopic": "climate.concept.cyclone",
+    "tier": "variant",
+    "type": "concept",
+    "statement": "Тропический циклон — низкобарическая вихревая система над тёплыми океанами (T≥26.5°C); диаметр 100-1000 км; названия зависят от региона: ураган, тайфун, циклон.",
+    "conditions": "WMO стандарты классификации",
+    "prereq": ["concept.atmosphere.pressure_systems"],
+    "confidence": 0.93,
+    "tags": ["cyclone", "hurricane", "typhoon", "wmo"],
+    "tier_extensions": {
+      "source": "WMO Tropical Cyclone Programme",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "concept.climate.saffir_simpson",
+    "schema_version": "3.2",
+    "domain": "climate.extreme_events",
+    "subtopic": "climate.concept.cyclone_scale",
+    "tier": "variant",
+    "type": "concept",
+    "statement": "Шкала Саффира-Симпсона — классификация ураганов по скорости ветра: 1 (119-153 км/ч), 2 (154-177), 3 (178-208), 4 (209-251), 5 (≥252 км/ч).",
+    "conditions": "NOAA NHC текущая шкала",
+    "prereq": ["concept.climate.tropical_cyclone"],
+    "confidence": 0.95,
+    "tags": ["saffir_simpson", "scale", "hurricane"],
+    "tier_extensions": {
+      "source": "NOAA National Hurricane Center",
+      "valid_from": "2012-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  }
+]

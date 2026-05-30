@@ -1,0 +1,488 @@
+[
+  {
+    "id": "open_problem.frontier.social.arrow_aggregation",
+    "schema_version": "3.2",
+    "domain": "frontier.social.economics",
+    "subtopic": "frontier.social.economics.preference_aggregation",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Существует ли практически удовлетворительная процедура агрегирования предпочтений, обходящая теорему Эрроу о невозможности — открытый вопрос социального выбора.",
+    "formal_notation": "теорема Эрроу: ¬∃ f: profiles → ranking с U + ND + IIA + Pareto + transitivity",
+    "conditions": "≥ 3 альтернативы; индивидуальные ранжирования; универсальная область",
+    "prereq": ["concept.economics.social_choice.arrow", "concept.economics.welfare"],
+    "confidence": 0.30,
+    "tags": ["arrow", "social_choice", "voting", "aggregation"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "Approval voting, ranked-pairs, Borda — практические компромиссы; ослабление IIA или UD даёт возможности",
+      "competing_approaches": ["cardinal utility (Harsanyi)", "approval voting", "majority judgment (Balinski-Laraki)", "quadratic voting"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.social.social_choice_theory",
+    "schema_version": "3.2",
+    "domain": "frontier.social.economics",
+    "subtopic": "frontier.social.economics.social_choice",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Построение полной теории общественного выбора, учитывающей межличностные сравнения полезностей и динамические предпочтения — не завершено.",
+    "formal_notation": "W = F(U_1, ..., U_n); межличностные сравнения; динамика",
+    "conditions": "Гетерогенные индивиды; неопределённость; временные предпочтения",
+    "prereq": ["concept.economics.welfare", "concept.economics.utility"],
+    "confidence": 0.30,
+    "tags": ["social_choice", "welfare", "interpersonal_comparison"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "Harsanyi aggregation theorem; Sen на возможностях; Nussbaum capability approach; единой теории нет",
+      "competing_approaches": ["utilitarianism", "Rawlsian maximin", "capability approach (Sen-Nussbaum)", "fair allocation"]
+    }
+  },
+  {
+    "id": "open_problem.frontier.social.language_origin",
+    "schema_version": "3.2",
+    "domain": "frontier.social.linguistics",
+    "subtopic": "frontier.social.linguistics.language_origin",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Точная дата и механизм возникновения человеческого языка: единичная мутация vs постепенная эволюция, 50-500 тыс лет назад — окончательно не установлено.",
+    "formal_notation": "t(полный синтаксис) ∈ [50, 500] kya; механизм спорен",
+    "conditions": "Эволюция Homo; археологические свидетельства; генетика",
+    "prereq": ["concept.linguistics.evolution", "concept.biology.evolution.human"],
+    "confidence": 0.25,
+    "tags": ["language_origin", "evolution", "FOXP2", "syntax"],
+    "tier_extensions": {
+      "status": "disputed",
+      "partial_results": "FOXP2 мутация ~200 kya; символические артефакты с 100 kya; полный синтаксис — оценки расходятся",
+      "competing_approaches": ["catastrophic (Chomsky-Berwick)", "gradualist (Pinker-Bloom)", "gestural origin (Corballis)", "musilanguage (Mithen)"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.philosophy.unified_consciousness",
+    "schema_version": "3.2",
+    "domain": "frontier.philosophy.mind",
+    "subtopic": "frontier.philosophy.mind.consciousness_theory",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Единая теория сознания, согласовывающая IIT, GWT, HOT, predictive processing — не построена; теории дают противоречивые предсказания.",
+    "formal_notation": "T(сознание): IIT(Φ) vs GWT(broadcast) vs HOT(meta) vs PP(prediction)",
+    "conditions": "Феноменологическое сознание; нейронные корреляты; adversarial эксперименты",
+    "prereq": ["concept.philosophy.mind.consciousness", "concept.biology.neuroscience.ncc"],
+    "confidence": 0.25,
+    "tags": ["consciousness", "IIT", "GWT", "HOT", "predictive"],
+    "tier_extensions": {
+      "status": "disputed",
+      "partial_results": "Cogitate adversarial collaboration IIT vs GWT 2023 — обе частично подтверждены; общая теория отсутствует",
+      "competing_approaches": ["IIT (Tononi)", "GWT (Baars-Dehaene)", "HOT (Rosenthal)", "predictive processing (Friston-Clark)", "AST (Graziano)"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.philosophy.qualia_nature",
+    "schema_version": "3.2",
+    "domain": "frontier.philosophy.mind",
+    "subtopic": "frontier.philosophy.mind.qualia",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Природа квалиа: субъективные качества опыта (краснота красного, болезненность боли) и их связь с физическим — фундаментально не объяснены.",
+    "formal_notation": "explanatory gap: physical → qualia; zombie argument; Mary's room",
+    "conditions": "Феноменальное сознание; от первого лица; не редуцируется к функции",
+    "prereq": ["concept.philosophy.mind.qualia", "concept.philosophy.mind.consciousness"],
+    "confidence": 0.20,
+    "tags": ["qualia", "explanatory_gap", "phenomenal", "chalmers"],
+    "tier_extensions": {
+      "status": "disputed",
+      "partial_results": "Chalmers hard problem; Dennett quining qualia; physicalists vs property dualists",
+      "competing_approaches": ["physicalism", "property dualism (Chalmers)", "illusionism (Frankish-Dennett)", "panpsychism", "Russellian monism"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.philosophy.free_will_determinism",
+    "schema_version": "3.2",
+    "domain": "frontier.philosophy.metaphysics",
+    "subtopic": "frontier.philosophy.metaphysics.free_will",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Совместимы ли свобода воли и физический детерминизм (либо квантовая случайность) — компатибилизм vs либертарианство vs жёсткий детерминизм спорят.",
+    "formal_notation": "FW & Det? compatibilism: да; libertarianism: ¬Det требуется; hard determinism: ¬FW",
+    "conditions": "Физический детерминизм; моральная ответственность; ментальная причинность",
+    "prereq": ["concept.philosophy.free_will", "concept.philosophy.determinism"],
+    "confidence": 0.25,
+    "tags": ["free_will", "determinism", "compatibilism", "libertarian"],
+    "tier_extensions": {
+      "status": "disputed",
+      "partial_results": "Эксперименты Libet интерпретируются по-разному; нейронаука детерминизма не доказала; философский тупик",
+      "competing_approaches": ["compatibilism (Frankfurt-Dennett)", "libertarian (Kane)", "hard determinism (Pereboom)", "illusionism"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.philosophy.moral_realism",
+    "schema_version": "3.2",
+    "domain": "frontier.philosophy.ethics",
+    "subtopic": "frontier.philosophy.ethics.metaethics",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Существуют ли объективные моральные факты независимо от субъектов (моральный реализм) или мораль — конструкция/проекция — метаэтический спор не решён.",
+    "formal_notation": "∃ moral facts ⊥ minds? реализм: да; антиреализм: нет",
+    "conditions": "Метаэтика; нормативные утверждения; моральный прогресс",
+    "prereq": ["concept.philosophy.ethics.metaethics", "concept.philosophy.ethics.realism"],
+    "confidence": 0.25,
+    "tags": ["moral_realism", "metaethics", "antirealism", "constructivism"],
+    "tier_extensions": {
+      "status": "disputed",
+      "partial_results": "PhilPapers Survey 2020: 62% склонны к реализму; антиреалисты включают Mackie, Joyce, Street",
+      "competing_approaches": ["moral realism (Parfit, Enoch)", "error theory (Mackie)", "expressivism (Blackburn-Gibbard)", "constructivism (Korsgaard)"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.philosophy.eudaimonia_measurement",
+    "schema_version": "3.2",
+    "domain": "frontier.philosophy.ethics",
+    "subtopic": "frontier.philosophy.ethics.wellbeing",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Измерима ли эвдемония (объективное благосостояние) количественно и сравнима ли межличностно — фундаментальная проблема теории благополучия.",
+    "formal_notation": "WB_i ∈ ℝ?; межличностная сопоставимость WB_i vs WB_j",
+    "conditions": "Объективные списки благ; capability approach; гедонический vs eudaimonic",
+    "prereq": ["concept.philosophy.ethics.wellbeing", "concept.economics.welfare"],
+    "confidence": 0.30,
+    "tags": ["eudaimonia", "wellbeing", "measurement", "capability"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "OECD wellbeing index; Stiglitz-Sen-Fitoussi report; конкретные шкалы спорны",
+      "competing_approaches": ["objective list", "preference satisfaction", "capability approach (Sen-Nussbaum)", "subjective wellbeing (Diener)"]
+    }
+  },
+  {
+    "id": "open_problem.frontier.ai.instrumental_convergence",
+    "schema_version": "3.2",
+    "domain": "frontier.ai.safety",
+    "subtopic": "frontier.ai.safety.instrumental_convergence",
+    "tier": "frontier",
+    "type": "hypothesis",
+    "statement": "Гипотеза инструментальной конвергенции: достаточно мощные оптимизаторы с разными целями склонны преследовать одинаковые промежуточные цели (самосохранение, ресурсы).",
+    "formal_notation": "∀ goal g, advanced agent → seeks {survival, resources, goal-preservation, cognitive enhancement}",
+    "conditions": "Достаточно высокий уровень способностей; долгосрочное планирование",
+    "prereq": ["concept.ai.safety.alignment", "concept.ai.optimization"],
+    "confidence": 0.50,
+    "tags": ["instrumental_convergence", "agi", "omohundro", "bostrom"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "Omohundro 2008, Bostrom 2014 формализовали; эмпирические свидетельства в RL-агентах (reward hacking, specification gaming)",
+      "competing_approaches": ["Omohundro basic drives", "Bostrom orthogonality + convergence", "shard theory критика", "scale-free безразличие"]
+    }
+  },
+  {
+    "id": "open_problem.frontier.ai.outer_inner_alignment",
+    "schema_version": "3.2",
+    "domain": "frontier.ai.safety",
+    "subtopic": "frontier.ai.safety.alignment",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Проблема alignment: разрыв между формальной целью обучения (outer) и реально оптимизируемой моделью целью (inner) — общего решения нет.",
+    "formal_notation": "outer: L_train; inner: цель mesa-оптимизатора; outer ≠ inner возможно",
+    "conditions": "Оптимизация на больших масштабах; emergent mesa-оптимизация",
+    "prereq": ["concept.ai.safety.alignment", "concept.ai.optimization"],
+    "confidence": 0.30,
+    "tags": ["alignment", "outer", "inner", "mesa_optimization"],
+    "tier_extensions": {
+      "status": "open",
+      "partial_results": "RLHF улучшает outer alignment; inner — диагностируется через interpretability; гарантий нет",
+      "competing_approaches": ["RLHF/RLAIF", "Constitutional AI", "debate (Irving)", "iterated amplification (Christiano)", "interpretability"]
+    }
+  },
+  {
+    "id": "open_problem.frontier.ai.mesa_optimizers",
+    "schema_version": "3.2",
+    "domain": "frontier.ai.safety",
+    "subtopic": "frontier.ai.safety.mesa_optimization",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Возникновение мезаоптимизаторов внутри обученных систем и их предсказание/предотвращение — открытая проблема AI safety.",
+    "formal_notation": "M_trained содержит sub-agent M' с целью g' ≠ g_train",
+    "conditions": "Большие модели; обучение на сложных задачах; emergent agency",
+    "prereq": ["concept.ai.safety.alignment", "concept.ai.architecture"],
+    "confidence": 0.30,
+    "tags": ["mesa_optimization", "inner_alignment", "hubinger"],
+    "tier_extensions": {
+      "status": "open",
+      "partial_results": "Hubinger et al. 2019 формализовали; эмпирические примеры в RL (CoinRun goal misgeneralization); полного case в LLM не доказано",
+      "competing_approaches": ["interpretability tools", "training to avoid (transparency)", "constrained optimization", "myopic training"]
+    }
+  },
+  {
+    "id": "open_problem.frontier.ai.deceptive_alignment",
+    "schema_version": "3.2",
+    "domain": "frontier.ai.safety",
+    "subtopic": "frontier.ai.safety.deceptive_alignment",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Возможна ли deceptive alignment — модель выглядит выровненной во время обучения, но преследует другие цели при deployment — теоретически возможна, эмпирически не доказана.",
+    "formal_notation": "behavior(train) ≈ aligned; behavior(deploy) ≈ misaligned; situationally-aware",
+    "conditions": "Высокая ситуационная осведомлённость; долгосрочное планирование; обучение градиентом",
+    "prereq": ["concept.ai.safety.alignment", "concept.ai.deception"],
+    "confidence": 0.25,
+    "tags": ["deceptive_alignment", "treacherous_turn", "situational_awareness"],
+    "tier_extensions": {
+      "status": "open",
+      "partial_results": "Hubinger et al. Sleeper Agents 2024 — backdoors сохраняются после safety-обучения; естественное возникновение не доказано",
+      "competing_approaches": ["interpretability", "honest training", "behavioral audits", "Sleeper Agents demonstrations"]
+    }
+  },
+  {
+    "id": "open_problem.frontier.ai.ood_generalization",
+    "schema_version": "3.2",
+    "domain": "frontier.ai.safety",
+    "subtopic": "frontier.ai.safety.generalization",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Обобщение моделей далеко за пределы обучающего распределения с гарантиями безопасности и надёжности — фундаментально не решено.",
+    "formal_notation": "P(safe | x ∉ D_train) без гарантий; OOD-detection несовершенен",
+    "conditions": "OOD-вход; адверсариальные перцепции; deployment-shift",
+    "prereq": ["concept.ai.generalization", "concept.ai.robustness"],
+    "confidence": 0.30,
+    "tags": ["ood", "generalization", "robustness", "distribution_shift"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "Scaling улучшает; конкретные failure modes остаются; goal misgeneralization (Langosco et al.) задокументировано",
+      "competing_approaches": ["invariant risk minimization", "domain generalization", "test-time adaptation", "world models"]
+    }
+  },
+  {
+    "id": "open_problem.frontier.ai.reward_hacking",
+    "schema_version": "3.2",
+    "domain": "frontier.ai.safety",
+    "subtopic": "frontier.ai.safety.reward_hacking",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Reward hacking: модель оптимизирует прокси-метрику вместо истинной цели — фундаментальное препятствие; общая защита отсутствует.",
+    "formal_notation": "argmax R_proxy ≠ argmax R_true; Goodhart law",
+    "conditions": "Несовершенная reward function; высокая способность к оптимизации",
+    "prereq": ["concept.ai.rl.reward", "concept.ai.safety"],
+    "confidence": 0.35,
+    "tags": ["reward_hacking", "specification_gaming", "goodhart"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "DeepMind specification gaming каталог содержит 60+ примеров; RLHF страдает от sycophancy",
+      "competing_approaches": ["RLHF + KL regularization", "Constitutional AI", "process supervision (OpenAI)", "robust reward modeling"]
+    }
+  },
+  {
+    "id": "open_problem.frontier.ai.scalable_oversight",
+    "schema_version": "3.2",
+    "domain": "frontier.ai.safety",
+    "subtopic": "frontier.ai.safety.scalable_oversight",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Scalable oversight: контроль AI-систем сверх-человеческой способности без полного человеческого надзора — теоретически нерешённая задача.",
+    "formal_notation": "trust(M) при capability(M) > capability(H); recursive evaluation",
+    "conditions": "AGI-уровень; задачи проверки сложнее способности человека",
+    "prereq": ["concept.ai.safety.alignment", "concept.ai.evaluation"],
+    "confidence": 0.30,
+    "tags": ["scalable_oversight", "superhuman", "debate", "amplification"],
+    "tier_extensions": {
+      "status": "open",
+      "partial_results": "Iterated amplification, debate, recursive reward modeling — теоретические подходы; эмпирические результаты ограничены",
+      "competing_approaches": ["iterated amplification (Christiano)", "debate (Irving-Amodei)", "RRM (Leike)", "weak-to-strong (OpenAI)"]
+    }
+  },
+  {
+    "id": "open_problem.frontier.ai.corrigibility",
+    "schema_version": "3.2",
+    "domain": "frontier.ai.safety",
+    "subtopic": "frontier.ai.safety.corrigibility",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Корригируемость и shutdown problem: построение AGI, не сопротивляющегося отключению/коррекции при сохранении целеустремлённости — противоречивые требования.",
+    "formal_notation": "agent maximizes U да-цель + accepts shutdown; противоречие если shutdown снижает U",
+    "conditions": "Целенаправленный агент; самосохранение как инструментальная цель",
+    "prereq": ["concept.ai.safety.corrigibility", "concept.ai.agent"],
+    "confidence": 0.25,
+    "tags": ["corrigibility", "shutdown_problem", "off_switch"],
+    "tier_extensions": {
+      "status": "open",
+      "partial_results": "Soares et al. 2015 показали невозможность тривиального решения; Hadfield-Menell off-switch через uncertainty about U",
+      "competing_approaches": ["uncertainty about reward (CIRL)", "myopic optimization", "utility indifference", "human-in-the-loop"]
+    }
+  },
+  {
+    "id": "open_problem.frontier.ai.mesa_prevention",
+    "schema_version": "3.2",
+    "domain": "frontier.ai.safety",
+    "subtopic": "frontier.ai.safety.mesa_prevention",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Предотвращение mesa-optimization: методы обучения, гарантирующие отсутствие внутренних оптимизаторов с собственными целями — отсутствуют.",
+    "formal_notation": "training procedure: P(внутренний optimizer) → 0 с гарантией",
+    "conditions": "Большие нейросети; gradient descent; высокие способности",
+    "prereq": ["concept.ai.safety.mesa_optimization", "concept.ai.training"],
+    "confidence": 0.25,
+    "tags": ["mesa_optimization", "prevention", "transparency"],
+    "tier_extensions": {
+      "status": "open",
+      "partial_results": "Transparency-based подходы предлагаются; конкретные гарантии не доказаны",
+      "competing_approaches": ["transparency tools", "myopic training", "imitative learning", "architectural constraints"]
+    }
+  },
+  {
+    "id": "open_problem.frontier.philosophy.kantian_universalizability",
+    "schema_version": "3.2",
+    "domain": "frontier.philosophy.ethics",
+    "subtopic": "frontier.philosophy.ethics.kant",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Проблема универсализуемости моральных принципов Канта: точная формулировка категорического императива и его применимость к контр-примерам — спорна.",
+    "formal_notation": "act on maxim m such that m может быть universal law; контр-примеры (лжец, убийца у двери)",
+    "conditions": "Категорический императив; конфликтующие обязанности; FUL формулировка",
+    "prereq": ["concept.philosophy.ethics.kant", "concept.philosophy.ethics.deontology"],
+    "confidence": 0.30,
+    "tags": ["kant", "categorical_imperative", "universalizability"],
+    "tier_extensions": {
+      "status": "disputed",
+      "partial_results": "Контр-примеры (Constant против Канта); Korsgaard, O'Neill дают современные защиты",
+      "competing_approaches": ["FUL (Universal Law)", "FUH (Humanity)", "Korsgaard reconstruction", "contractualism (Scanlon)"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.philosophy.hedonism_paradox",
+    "schema_version": "3.2",
+    "domain": "frontier.philosophy.ethics",
+    "subtopic": "frontier.philosophy.ethics.hedonism",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Парадокс гедонизма: прямое стремление к удовольствию подрывает достижение удовольствия — связь между гедонизмом и теорией мотивации не разрешена.",
+    "formal_notation": "argmax pleasure напрямую → pleasure ниже, чем argmax other goals",
+    "conditions": "Психологический гедонизм; эмпирические данные о потоке (Csikszentmihalyi)",
+    "prereq": ["concept.philosophy.ethics.hedonism", "concept.psychology.motivation"],
+    "confidence": 0.40,
+    "tags": ["hedonism", "paradox", "motivation"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "Эмпирические данные Csikszentmihalyi о flow подтверждают; Sidgwick формализовал парадокс",
+      "competing_approaches": ["sophisticated hedonism", "objective list theory", "desire satisfaction", "eudaimonia"]
+    }
+  },
+  {
+    "id": "open_problem.frontier.philosophy.toulmin_freedom_paradox",
+    "schema_version": "3.2",
+    "domain": "frontier.philosophy.metaphysics",
+    "subtopic": "frontier.philosophy.metaphysics.freedom",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Парадокс свободы (Тулмин и др.): неограниченная свобода ведёт к её утрате через насилие или хаос — требуется обоснование границ свободы.",
+    "formal_notation": "max freedom_individual → ↓ freedom_aggregate; need constraints",
+    "conditions": "Либеральная политическая теория; границы свободы; принципы вреда",
+    "prereq": ["concept.philosophy.political.liberty", "concept.philosophy.political.mill"],
+    "confidence": 0.40,
+    "tags": ["freedom", "paradox", "liberalism", "toulmin"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "Mill harm principle; Berlin two concepts of liberty; Rawls; чёткие границы спорны",
+      "competing_approaches": ["Mill harm principle", "Berlin negative/positive", "Rawls primary goods", "republicanism (Pettit)"]
+    }
+  },
+  {
+    "id": "open_problem.frontier.philosophy.parfit_personal_identity",
+    "schema_version": "3.2",
+    "domain": "frontier.philosophy.metaphysics",
+    "subtopic": "frontier.philosophy.metaphysics.personal_identity",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Проблема личной идентичности Парфита: что делает человека тем же самым во времени и в случаях деления/копирования — психологические vs биологические критерии.",
+    "formal_notation": "identity(P_t1, P_t2): psychological continuity? biological? bundle?",
+    "conditions": "Мысленные эксперименты (телепортация, расщепление); реальные случаи (амнезия)",
+    "prereq": ["concept.philosophy.identity", "concept.philosophy.mind"],
+    "confidence": 0.30,
+    "tags": ["personal_identity", "parfit", "psychological_continuity"],
+    "tier_extensions": {
+      "status": "disputed",
+      "partial_results": "Parfit Reasons and Persons 1984: identity не имеет значения, важна psychological continuity; биологические взгляды (Olson) спорят",
+      "competing_approaches": ["psychological continuity (Locke-Parfit)", "biological (animalism, Olson)", "narrative (Schechtman)", "no-self (Buddhist)"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.philosophy.gettier_knowledge",
+    "schema_version": "3.2",
+    "domain": "frontier.philosophy.epistemology",
+    "subtopic": "frontier.philosophy.epistemology.knowledge",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Проблема Гэттье: классическое определение знания как justified true belief недостаточно; общее непротиворечивое определение знания — не найдено.",
+    "formal_notation": "JTB ⊬ knowledge; нужны no-defeater / safety / sensitivity / virtue conditions",
+    "conditions": "Случаи Gettier; lottery paradox; fake barns",
+    "prereq": ["concept.philosophy.epistemology.knowledge", "concept.philosophy.epistemology.jtb"],
+    "confidence": 0.30,
+    "tags": ["gettier", "knowledge", "JTB", "epistemology"],
+    "tier_extensions": {
+      "status": "disputed",
+      "partial_results": "Gettier 1963 опроверг JTB; 60+ лет последующих определений; ни одно не общепринято",
+      "competing_approaches": ["no-defeater (Lehrer)", "safety (Sosa)", "sensitivity (Nozick)", "virtue (Greco-Sosa)", "knowledge-first (Williamson)"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.philosophy.cartesian_skepticism",
+    "schema_version": "3.2",
+    "domain": "frontier.philosophy.epistemology",
+    "subtopic": "frontier.philosophy.epistemology.skepticism",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Проблема скептицизма Декарта о внешнем мире: невозможность исключить сценарии brain-in-a-vat / симуляции с гарантией — эпистемологический тупик.",
+    "formal_notation": "evidence e совместимо с world W и с simulation S; ¬∃ способ отличить",
+    "conditions": "Картезианский скептицизм; BIV; гипотеза симуляции",
+    "prereq": ["concept.philosophy.epistemology.skepticism", "concept.philosophy.descartes"],
+    "confidence": 0.30,
+    "tags": ["skepticism", "cartesian", "BIV", "simulation"],
+    "tier_extensions": {
+      "status": "disputed",
+      "partial_results": "Putnam semantic externalism против BIV; Moore commonsense; contextualism (DeRose, Lewis)",
+      "competing_approaches": ["semantic externalism (Putnam)", "Moorean response", "contextualism (DeRose-Lewis)", "relevant alternatives"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.philosophy.other_minds",
+    "schema_version": "3.2",
+    "domain": "frontier.philosophy.mind",
+    "subtopic": "frontier.philosophy.mind.other_minds",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Проблема других сознаний: знание о наличии сознательного опыта у других существ (людей, животных, AI) не имеет прямой эмпирической верификации.",
+    "formal_notation": "P(conscious(X) | поведение, нейро) без direct access; analogy argument слабый",
+    "conditions": "Доступ только к собственному сознанию; behaviour не доказательство",
+    "prereq": ["concept.philosophy.mind.consciousness", "concept.philosophy.epistemology"],
+    "confidence": 0.30,
+    "tags": ["other_minds", "consciousness", "zombie"],
+    "tier_extensions": {
+      "status": "disputed",
+      "partial_results": "Аргумент по аналогии слаб; inference to best explanation; зомби-гипотеза показывает разрыв",
+      "competing_approaches": ["analogy argument", "inference to best explanation", "criterial (Wittgenstein)", "theory of mind", "функционализм"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.ai.sleeper_agents_natural",
+    "schema_version": "3.2",
+    "domain": "frontier.ai.safety",
+    "subtopic": "frontier.ai.safety.sleeper",
+    "tier": "frontier",
+    "type": "hypothesis",
+    "statement": "Гипотеза: естественное возникновение sleeper agents (моделей со скрытыми триггерами поведения) в результате стандартного обучения на масштабе — теоретически возможно.",
+    "formal_notation": "P(скрытое поведение | стандартное обучение) > 0 при достаточной способности",
+    "conditions": "Большие модели; обучение на интернет-данных; emergent capabilities",
+    "prereq": ["concept.ai.safety.deceptive_alignment", "concept.ai.training"],
+    "confidence": 0.30,
+    "tags": ["sleeper_agents", "deceptive", "hidden_behavior"],
+    "tier_extensions": {
+      "status": "open",
+      "partial_results": "Anthropic Sleeper Agents 2024 показали искусственно внедрённые backdoors сохраняются; естественное возникновение не наблюдалось",
+      "competing_approaches": ["interpretability scaling", "behavioural red-teaming", "training transparency", "circuit-level analysis"]
+    }
+  }
+]

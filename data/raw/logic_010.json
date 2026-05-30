@@ -1,0 +1,683 @@
+[
+  {
+    "id": "paradox.logic.social_choice.condorcet",
+    "schema_version": "3.2",
+    "domain": "logic.paradoxes",
+    "subtopic": "logic.paradoxes.social_choice",
+    "tier": "logic",
+    "type": "paradox",
+    "statement": "Парные мажоритарные предпочтения групп могут образовывать цикл A>B>C>A при транзитивных индивидуальных порядках, без коллективного победителя.",
+    "formal_notation": "A ≻_maj B ∧ B ≻_maj C ∧ C ≻_maj A",
+    "conditions": "≥3 альтернатив; ≥3 избирателей; попарное голосование большинством",
+    "prereq": [
+      "concept.logic.preference",
+      "concept.logic.transitivity"
+    ],
+    "derives_from": [],
+    "confidence": 0.99,
+    "tags": [
+      "paradox",
+      "condorcet",
+      "voting",
+      "social_choice"
+    ],
+    "tier_extensions": {
+      "category": "paradox",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "paradox.logic.social_choice.arrow_impossibility",
+    "schema_version": "3.2",
+    "domain": "logic.paradoxes",
+    "subtopic": "logic.paradoxes.social_choice",
+    "tier": "logic",
+    "type": "paradox",
+    "statement": "Для ≥3 альтернатив не существует ранжирующего правила, одновременно удовлетворяющего unrestricted domain, Pareto, IIA и недиктаторству.",
+    "formal_notation": "¬∃ f: профили ↦ ранжирование, выполняющее UD ∧ Pareto ∧ IIA ∧ ¬dictator",
+    "conditions": "Конечное множество альтернатив ≥3; полные индивидуальные ранжирования",
+    "prereq": [
+      "concept.logic.social_welfare",
+      "concept.logic.preference"
+    ],
+    "derives_from": [],
+    "confidence": 0.99,
+    "tags": [
+      "paradox",
+      "arrow",
+      "impossibility",
+      "social_choice"
+    ],
+    "tier_extensions": {
+      "category": "paradox",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "paradox.logic.social_choice.voting",
+    "schema_version": "3.2",
+    "domain": "logic.paradoxes",
+    "subtopic": "logic.paradoxes.rational_choice",
+    "tier": "logic",
+    "type": "paradox",
+    "statement": "Индивидуально рациональный избиратель не голосует из-за пренебрежимой вероятности повлиять на исход, при этом массовая явка наблюдается эмпирически.",
+    "formal_notation": "E[benefit] = P(pivotal)·B − C; P(pivotal) ≈ 0 ⇒ E < 0; observed turnout > 0",
+    "conditions": "Большая электоральная масса; рациональный эгоистический агент",
+    "prereq": [
+      "concept.economics.rational_choice",
+      "concept.logic.expected_value"
+    ],
+    "derives_from": [],
+    "confidence": 0.93,
+    "tags": [
+      "paradox",
+      "voting",
+      "downs",
+      "rational_choice"
+    ],
+    "tier_extensions": {
+      "category": "paradox",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "paradox.logic.self_reference.quine_suicide",
+    "schema_version": "3.2",
+    "domain": "logic.paradoxes",
+    "subtopic": "logic.paradoxes.self_reference",
+    "tier": "logic",
+    "type": "paradox",
+    "statement": "Конструкция Куайна: предложение yields a falsehood when preceded by its quotation yields a falsehood when preceded by its quotation истинно тогда и только тогда, когда ложно.",
+    "formal_notation": "Q(x) := x ‘yields a falsehood…’; Q(‘Q’) ↔ ¬Q(‘Q’)",
+    "conditions": "Разрешены цитирование и подстановка строк в естественном языке",
+    "prereq": [
+      "concept.logic.self_reference",
+      "concept.logic.quotation"
+    ],
+    "derives_from": [
+      "paradox.logic.self_reference.liar"
+    ],
+    "confidence": 0.97,
+    "tags": [
+      "paradox",
+      "quine",
+      "self_reference",
+      "liar"
+    ],
+    "tier_extensions": {
+      "category": "paradox",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "paradox.logic.identity.ship_of_theseus",
+    "schema_version": "3.2",
+    "domain": "logic.paradoxes",
+    "subtopic": "logic.paradoxes.identity",
+    "tier": "logic",
+    "type": "paradox",
+    "statement": "Постепенная замена всех частей объекта сохраняет ли тождество исходному объекту; при сборке двойника из старых частей возникают две конкурирующие претензии на идентичность.",
+    "formal_notation": "Identity(O_0, O_t) ? при ∀ part: replaced(part); ∃ O' собранный из старых частей",
+    "conditions": "Объект составной; происходит инкрементная замена; сохранены оригинальные части",
+    "prereq": [
+      "concept.philosophy.identity",
+      "concept.logic.mereology"
+    ],
+    "derives_from": [],
+    "confidence": 0.94,
+    "tags": [
+      "paradox",
+      "ship_of_theseus",
+      "identity",
+      "mereology"
+    ],
+    "tier_extensions": {
+      "category": "paradox",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "paradox.logic.vagueness.sorites_formalized",
+    "schema_version": "3.2",
+    "domain": "logic.paradoxes",
+    "subtopic": "logic.paradoxes.vagueness",
+    "tier": "logic",
+    "type": "paradox",
+    "statement": "Если 1 зерно не куча и добавление одного зерна к не-куче не делает кучу, то по индукции никакое число зёрен не образует кучу, что противоречит наблюдению.",
+    "formal_notation": "¬Heap(1) ∧ (∀n: ¬Heap(n) → ¬Heap(n+1)) ⊢ ¬Heap(N) для любого N",
+    "conditions": "Размытый предикат без чёткого порога; индукция по натуральному ряду",
+    "prereq": [
+      "concept.logic.vagueness",
+      "concept.logic.induction"
+    ],
+    "derives_from": [],
+    "confidence": 0.98,
+    "tags": [
+      "paradox",
+      "sorites",
+      "vagueness",
+      "eubulides"
+    ],
+    "tier_extensions": {
+      "category": "paradox",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "paradox.logic.semantic.grelling",
+    "schema_version": "3.2",
+    "domain": "logic.paradoxes",
+    "subtopic": "logic.paradoxes.self_reference",
+    "tier": "logic",
+    "type": "paradox",
+    "statement": "Предикат гетерологический определяется как не применимый к самому себе; гетерологичен тогда и только тогда, когда не гетерологичен.",
+    "formal_notation": "Het(W) ↔ ¬W(W); Het(‘Het’) ↔ ¬Het(‘Het’)",
+    "conditions": "Разрешено применение предиката к собственному имени",
+    "prereq": [
+      "concept.logic.self_reference",
+      "concept.logic.predicate"
+    ],
+    "derives_from": [
+      "paradox.logic.set_theory.russell"
+    ],
+    "confidence": 0.96,
+    "tags": [
+      "paradox",
+      "grelling_nelson",
+      "semantic",
+      "self_reference"
+    ],
+    "tier_extensions": {
+      "category": "paradox",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "paradox.logic.decision.st_petersburg",
+    "schema_version": "3.2",
+    "domain": "logic.paradoxes",
+    "subtopic": "logic.paradoxes.decision",
+    "tier": "logic",
+    "type": "paradox",
+    "statement": "Игра с выигрышем 2^n при выпадении первой решки на n-м броске имеет бесконечное ожидание, однако рациональный игрок платит лишь умеренную сумму за участие.",
+    "formal_notation": "E[X] = Σ (1/2)^n · 2^n = ∞; observed WTP < ∞",
+    "conditions": "Честная монета; бесконечно делимые выигрыши; принцип ожидаемой стоимости",
+    "prereq": [
+      "concept.economics.expected_utility",
+      "concept.math.probability"
+    ],
+    "derives_from": [],
+    "confidence": 0.98,
+    "tags": [
+      "paradox",
+      "st_petersburg",
+      "bernoulli",
+      "expected_utility"
+    ],
+    "tier_extensions": {
+      "category": "paradox",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "paradox.logic.decision.ellsberg",
+    "schema_version": "3.2",
+    "domain": "logic.paradoxes",
+    "subtopic": "logic.paradoxes.decision",
+    "tier": "logic",
+    "type": "paradox",
+    "statement": "При выборе между ставкой на известную и неизвестную вероятность агенты систематически предпочитают известную, нарушая аксиому независимости Сэвиджа.",
+    "formal_notation": "Bet(known p=1/3) ≻ Bet(unknown); противоречит Savage's sure-thing principle",
+    "conditions": "Урна 30 красных и 60 чёрных/жёлтых неизвестной пропорции; парные ставки",
+    "prereq": [
+      "concept.economics.expected_utility",
+      "concept.economics.ambiguity"
+    ],
+    "derives_from": [],
+    "confidence": 0.97,
+    "tags": [
+      "paradox",
+      "ellsberg",
+      "ambiguity_aversion",
+      "decision"
+    ],
+    "tier_extensions": {
+      "category": "paradox",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "paradox.logic.decision.allais",
+    "schema_version": "3.2",
+    "domain": "logic.paradoxes",
+    "subtopic": "logic.paradoxes.decision",
+    "tier": "logic",
+    "type": "paradox",
+    "statement": "Систематические предпочтения в парах лотерей нарушают аксиому независимости теории ожидаемой полезности, демонстрируя сертайнти-эффект.",
+    "formal_notation": "(A ≻ B) ∧ (B' ≻ A') при A' = A+ε shift, B' = B+ε shift одинаковой структуры",
+    "conditions": "Лотереи с близкими ожиданиями; одна с гарантированным исходом",
+    "prereq": [
+      "concept.economics.expected_utility",
+      "concept.economics.independence_axiom"
+    ],
+    "derives_from": [],
+    "confidence": 0.97,
+    "tags": [
+      "paradox",
+      "allais",
+      "certainty_effect",
+      "decision"
+    ],
+    "tier_extensions": {
+      "category": "paradox",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "paradox.logic.game_theory.ultimatum",
+    "schema_version": "3.2",
+    "domain": "logic.paradoxes",
+    "subtopic": "logic.paradoxes.game_theory",
+    "tier": "logic",
+    "type": "paradox",
+    "statement": "В игре ультиматум респонденты отвергают малые положительные предложения, нарушая равновесие subgame perfect рационального максимизатора денежного дохода.",
+    "formal_notation": "Reject(ε > 0); subgame perfect equilibrium: Accept any ε > 0",
+    "conditions": "Однократная анонимная игра; известные правила; реальные деньги",
+    "prereq": [
+      "concept.game_theory.subgame_perfect",
+      "concept.economics.fairness"
+    ],
+    "derives_from": [],
+    "confidence": 0.95,
+    "tags": [
+      "paradox",
+      "ultimatum",
+      "guth",
+      "fairness"
+    ],
+    "tier_extensions": {
+      "category": "paradox",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "paradox.logic.network.friendship",
+    "schema_version": "3.2",
+    "domain": "logic.paradoxes",
+    "subtopic": "logic.paradoxes.network",
+    "tier": "logic",
+    "type": "paradox",
+    "statement": "В любой неоднородной социальной сети ожидаемое число друзей у случайно выбранного друга превышает ожидаемое число друзей случайного индивида.",
+    "formal_notation": "E[deg(friend)] = E[deg^2] / E[deg] ≥ E[deg]",
+    "conditions": "Граф с дисперсией степеней > 0; выборка по рёбрам, а не по узлам",
+    "prereq": [
+      "concept.network.degree_distribution",
+      "concept.math.statistics.variance"
+    ],
+    "derives_from": [],
+    "confidence": 0.99,
+    "tags": [
+      "paradox",
+      "friendship",
+      "feld",
+      "network"
+    ],
+    "tier_extensions": {
+      "category": "paradox",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "paradox.logic.cosmology.fermi_silence",
+    "schema_version": "3.2",
+    "domain": "logic.paradoxes",
+    "subtopic": "logic.paradoxes.cosmology",
+    "tier": "logic",
+    "type": "paradox",
+    "statement": "Возраст галактики и оценки числа цивилизаций предполагают значимую вероятность контакта; наблюдаемая тишина создаёт противоречие между моделью и данными.",
+    "formal_notation": "N_civ · P(detect) ≫ 0 модельно; observed signals ≈ 0",
+    "conditions": "Принимаются стандартные оценки факторов Дрейка; разумная астроинженерия видима",
+    "prereq": [
+      "concept.astronomy.drake_equation",
+      "concept.logic.evidence"
+    ],
+    "derives_from": [],
+    "confidence": 0.88,
+    "tags": [
+      "paradox",
+      "fermi",
+      "dark_forest",
+      "seti"
+    ],
+    "tier_extensions": {
+      "category": "paradox",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "paradox.logic.physics.schrodinger_cat_logic",
+    "schema_version": "3.2",
+    "domain": "logic.paradoxes",
+    "subtopic": "logic.paradoxes.quantum_logic",
+    "tier": "logic",
+    "type": "paradox",
+    "statement": "Линейная суперпозиция микросостояний, связанная через триггер с макроскопическим состоянием, формально приводит к суперпозиции макроскопически различимых исходов.",
+    "formal_notation": "|ψ⟩ = (|alive⟩ + |dead⟩)/√2 при отсутствии коллапса до измерения",
+    "conditions": "Унитарная эволюция замкнутой системы; макроскопическое усиление состояния",
+    "prereq": [
+      "concept.physics.quantum.superposition",
+      "concept.physics.measurement"
+    ],
+    "derives_from": [],
+    "confidence": 0.96,
+    "tags": [
+      "paradox",
+      "schrodinger_cat",
+      "quantum",
+      "measurement"
+    ],
+    "tier_extensions": {
+      "category": "paradox",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "paradox.logic.identity.carpenter",
+    "schema_version": "3.2",
+    "domain": "logic.paradoxes",
+    "subtopic": "logic.paradoxes.identity",
+    "tier": "logic",
+    "type": "paradox",
+    "statement": "Изделие, частично пересобираемое из новых и старых частей с заменой ключевых узлов, ставит вопрос о критерии нумерической идентичности предметов через время.",
+    "formal_notation": "Identity(O_0, O_t) под composition+replacement; критерий не задан однозначно",
+    "conditions": "Композитный артефакт; постепенная замена частей различной значимости",
+    "prereq": [
+      "concept.philosophy.identity",
+      "concept.logic.mereology"
+    ],
+    "derives_from": [
+      "paradox.logic.identity.ship_of_theseus"
+    ],
+    "confidence": 0.9,
+    "tags": [
+      "paradox",
+      "carpenter",
+      "identity",
+      "mereology"
+    ],
+    "tier_extensions": {
+      "category": "paradox",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "concept.logic.heuristic.representativeness",
+    "schema_version": "3.2",
+    "domain": "logic.heuristics",
+    "subtopic": "logic.heuristics.judgment",
+    "tier": "logic",
+    "type": "concept",
+    "statement": "Эвристика оценки принадлежности и вероятности по сходству объекта со стереотипом категории; источник base rate neglect и conjunction errors.",
+    "formal_notation": "Judge(X ∈ C) ∝ Sim(X, stereotype(C))",
+    "conditions": "Категоризация под неопределённостью при доступной модели прототипа",
+    "prereq": [
+      "concept.psychology.categorization",
+      "concept.logic.judgment"
+    ],
+    "derives_from": [],
+    "confidence": 0.94,
+    "tags": [
+      "heuristic",
+      "representativeness",
+      "tversky_kahneman",
+      "judgment"
+    ],
+    "tier_extensions": {
+      "category": "heuristic",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "concept.logic.heuristic.availability",
+    "schema_version": "3.2",
+    "domain": "logic.heuristics",
+    "subtopic": "logic.heuristics.judgment",
+    "tier": "logic",
+    "type": "concept",
+    "statement": "Эвристика оценки частоты и вероятности через лёгкость извлечения релевантных примеров из памяти.",
+    "formal_notation": "Judge(P(E)) ∝ Ease(Retrieve(E))",
+    "conditions": "Задача оценки частоты; доступ к эпизодической памяти",
+    "prereq": [
+      "concept.psychology.memory",
+      "concept.logic.judgment"
+    ],
+    "derives_from": [],
+    "confidence": 0.94,
+    "tags": [
+      "heuristic",
+      "availability",
+      "tversky_kahneman",
+      "memory"
+    ],
+    "tier_extensions": {
+      "category": "heuristic",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "concept.logic.heuristic.anchoring_adjustment",
+    "schema_version": "3.2",
+    "domain": "logic.heuristics",
+    "subtopic": "logic.heuristics.estimation",
+    "tier": "logic",
+    "type": "concept",
+    "statement": "Стратегия численной оценки: принять стартовый якорь и итеративно корректировать к правдоподобному значению; корректировка систематически недостаточна.",
+    "formal_notation": "Estimate = Anchor + Δ; Δ < Δ_optimal",
+    "conditions": "Доступен числовой ориентир до оценки; оценка под когнитивной нагрузкой",
+    "prereq": [
+      "concept.math.statistics.estimation",
+      "concept.logic.judgment"
+    ],
+    "derives_from": [],
+    "confidence": 0.92,
+    "tags": [
+      "heuristic",
+      "anchoring",
+      "adjustment",
+      "tversky_kahneman"
+    ],
+    "tier_extensions": {
+      "category": "heuristic",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "concept.logic.heuristic.affect",
+    "schema_version": "3.2",
+    "domain": "logic.heuristics",
+    "subtopic": "logic.heuristics.judgment",
+    "tier": "logic",
+    "type": "concept",
+    "statement": "Текущее аффективное состояние выступает быстрым сигналом при оценке риска и выгоды объекта; положительный аффект понижает воспринимаемый риск.",
+    "formal_notation": "Risk_perceived ∝ −Affect; Benefit_perceived ∝ +Affect",
+    "conditions": "Решение с компонентой аффективной реакции на объект",
+    "prereq": [
+      "concept.psychology.affect",
+      "concept.logic.judgment"
+    ],
+    "derives_from": [],
+    "confidence": 0.89,
+    "tags": [
+      "heuristic",
+      "affect",
+      "slovic",
+      "risk_perception"
+    ],
+    "tier_extensions": {
+      "category": "heuristic",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "concept.logic.heuristic.recognition",
+    "schema_version": "3.2",
+    "domain": "logic.heuristics",
+    "subtopic": "logic.heuristics.fast_frugal",
+    "tier": "logic",
+    "type": "concept",
+    "statement": "При выборе между двумя объектами на основании критерия выбирается узнаваемый, если другой неузнаваем; полезна в коррелированной с критерием среде.",
+    "formal_notation": "Choose(A) ← Recognize(A) ∧ ¬Recognize(B); validity > 0.5",
+    "conditions": "Среда с корреляцией recognition ↔ critical variable",
+    "prereq": [
+      "concept.psychology.recognition",
+      "concept.logic.decision"
+    ],
+    "derives_from": [],
+    "confidence": 0.9,
+    "tags": [
+      "heuristic",
+      "recognition",
+      "goldstein_gigerenzer",
+      "fast_frugal"
+    ],
+    "tier_extensions": {
+      "category": "heuristic",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "concept.logic.heuristic.take_the_best",
+    "schema_version": "3.2",
+    "domain": "logic.heuristics",
+    "subtopic": "logic.heuristics.fast_frugal",
+    "tier": "logic",
+    "type": "concept",
+    "statement": "Лексикографический выбор: сравнить альтернативы по самому валидному признаку; при ничьей перейти к следующему по валидности; остановиться при первом различии.",
+    "formal_notation": "Order cues by validity v_1 ≥ v_2 ≥ …; choose by first discriminating cue",
+    "conditions": "Признаки упорядочены по валидности; бинарный выбор",
+    "prereq": [
+      "concept.logic.decision",
+      "concept.logic.cue"
+    ],
+    "derives_from": [],
+    "confidence": 0.91,
+    "tags": [
+      "heuristic",
+      "take_the_best",
+      "gigerenzer",
+      "lexicographic"
+    ],
+    "tier_extensions": {
+      "category": "heuristic",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "concept.logic.heuristic.satisficing",
+    "schema_version": "3.2",
+    "domain": "logic.heuristics",
+    "subtopic": "logic.heuristics.decision",
+    "tier": "logic",
+    "type": "concept",
+    "statement": "Поиск вариантов прекращается при первом, удовлетворяющем порогу приемлемости, вместо максимизации по всему множеству.",
+    "formal_notation": "Stop search at first x: U(x) ≥ aspiration",
+    "conditions": "Конечные ресурсы поиска; задана уровень приемлемости",
+    "prereq": [
+      "concept.logic.bounded_rationality",
+      "concept.logic.decision"
+    ],
+    "derives_from": [],
+    "confidence": 0.95,
+    "tags": [
+      "heuristic",
+      "satisficing",
+      "simon",
+      "bounded_rationality"
+    ],
+    "tier_extensions": {
+      "category": "heuristic",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "concept.logic.heuristic.fast_frugal_tree",
+    "schema_version": "3.2",
+    "domain": "logic.heuristics",
+    "subtopic": "logic.heuristics.fast_frugal",
+    "tier": "logic",
+    "type": "concept",
+    "statement": "Бинарное дерево решений с возможностью выхода на каждом уровне; классификация по немногим признакам с явной экзит-структурой.",
+    "formal_notation": "Tree с n уровнями; каждый уровень имеет одно ветвление в exit",
+    "conditions": "Задача классификации; известны валидности признаков",
+    "prereq": [
+      "concept.logic.decision_tree",
+      "concept.logic.classification"
+    ],
+    "derives_from": [],
+    "confidence": 0.9,
+    "tags": [
+      "heuristic",
+      "fast_frugal_tree",
+      "martignon",
+      "classification"
+    ],
+    "tier_extensions": {
+      "category": "heuristic",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "concept.logic.heuristic.fluency",
+    "schema_version": "3.2",
+    "domain": "logic.heuristics",
+    "subtopic": "logic.heuristics.judgment",
+    "tier": "logic",
+    "type": "concept",
+    "statement": "Лёгкость обработки информации воспринимается как сигнал её истинности, знакомости или валидности безотносительно содержания.",
+    "formal_notation": "Truth_perceived ∝ Processing_fluency",
+    "conditions": "Перцептивные характеристики стимула влияют на скорость обработки",
+    "prereq": [
+      "concept.psychology.processing",
+      "concept.logic.judgment"
+    ],
+    "derives_from": [],
+    "confidence": 0.9,
+    "tags": [
+      "heuristic",
+      "fluency",
+      "alter_oppenheimer",
+      "metacognition"
+    ],
+    "tier_extensions": {
+      "category": "heuristic",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "concept.logic.heuristic.elimination_by_aspects",
+    "schema_version": "3.2",
+    "domain": "logic.heuristics",
+    "subtopic": "logic.heuristics.decision",
+    "tier": "logic",
+    "type": "concept",
+    "statement": "Альтернативы последовательно отбрасываются по случайно выбранному аспекту с порогом; остаётся одна, удовлетворяющая всем последовательно применённым порогам.",
+    "formal_notation": "While |A| > 1: pick aspect a ~ P(a); remove {x: a(x) < θ}",
+    "conditions": "Множество альтернатив с несколькими атрибутами и порогами",
+    "prereq": [
+      "concept.logic.decision",
+      "concept.logic.attribute"
+    ],
+    "derives_from": [],
+    "confidence": 0.91,
+    "tags": [
+      "heuristic",
+      "elimination_by_aspects",
+      "tversky",
+      "decision"
+    ],
+    "tier_extensions": {
+      "category": "heuristic",
+      "is_axiomatic": false
+    }
+  }
+]

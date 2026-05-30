@@ -1,0 +1,483 @@
+[
+  {
+    "id": "open_problem.frontier.chemistry.room_temperature_superconductivity",
+    "schema_version": "3.2",
+    "domain": "frontier.chemistry.materials",
+    "subtopic": "frontier.chemistry.materials.rt_superconductor",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Существует ли стабильный материал со сверхпроводимостью при комнатной температуре и атмосферном давлении — окончательно не подтверждено.",
+    "formal_notation": "T_c ≥ 293 K при P ≈ 1 атм; критерии: ρ=0, эффект Мейснера",
+    "conditions": "Атмосферное давление; нормальные условия; воспроизводимость в независимых лабораториях",
+    "prereq": ["concept.physics.condensed.superconductivity", "concept.physics.cooper_pair"],
+    "confidence": 0.20,
+    "tags": ["superconductivity", "room_temperature", "LK-99", "hydride"],
+    "tier_extensions": {
+      "status": "open",
+      "partial_results": "H₃S при 203 K (Drozdov 2015) и LaH₁₀ при 250 K — но при ~170 ГПа; LK-99 (2023) не подтверждён",
+      "competing_approaches": ["гидриды под давлением", "купраты", "органические сверхпроводники", "топологические материалы"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.chemistry.metallic_hydrogen",
+    "schema_version": "3.2",
+    "domain": "frontier.chemistry.materials",
+    "subtopic": "frontier.chemistry.materials.metallic_hydrogen",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Синтез стабильного металлического водорода при достижимых давлениях и его метастабильность при декомпрессии — не установлены экспериментально.",
+    "formal_notation": "H₂(insulator) → H(metal) при P > 400 ГПа; метастабильность при P → 0",
+    "conditions": "Сверхвысокие давления; алмазные наковальни; криогенные температуры",
+    "prereq": ["concept.physics.condensed.phase_transition", "concept.chemistry.hydrogen"],
+    "confidence": 0.30,
+    "tags": ["metallic_hydrogen", "high_pressure", "wigner_huntington"],
+    "tier_extensions": {
+      "status": "open",
+      "partial_results": "Dias-Silvera 2017 заявили о металлической фазе при 495 ГПа; результат оспаривается",
+      "competing_approaches": ["алмазные наковальни", "ударные волны", "лазерное сжатие"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.chemistry.cold_fusion",
+    "schema_version": "3.2",
+    "domain": "frontier.chemistry.nuclear",
+    "subtopic": "frontier.chemistry.nuclear.cold_fusion",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Возможен ли воспроизводимый ядерный синтез при низких энергиях (LENR) в конденсированной среде — научный статус остаётся неопределённым.",
+    "formal_notation": "D + D → He + энергия при T < 1000 K; избыток тепла > химического",
+    "conditions": "Электрохимические ячейки Pd/D₂O; конденсированная среда; низкая энергия",
+    "prereq": ["concept.physics.nuclear.fusion", "concept.chemistry.electrochemistry"],
+    "confidence": 0.10,
+    "tags": ["cold_fusion", "lenr", "fleischmann_pons"],
+    "tier_extensions": {
+      "status": "disputed",
+      "partial_results": "Fleischmann-Pons 1989 не воспроизведён; программа Google 2019 не обнаружила эффекта; отдельные claims продолжаются",
+      "competing_approaches": ["электрохимический Pd/D", "газоразрядные системы", "Widom-Larsen weak-interaction"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.chemistry.superheavy_island_stability",
+    "schema_version": "3.2",
+    "domain": "frontier.chemistry.nuclear",
+    "subtopic": "frontier.chemistry.nuclear.superheavy",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Существует ли остров стабильности сверхтяжёлых элементов около Z ≈ 114-126 с временами жизни порядка секунд или дольше — не определено.",
+    "formal_notation": "T_{1/2}(Z=126, N=184) ≫ T_{1/2}(окружения); магические числа Z, N",
+    "conditions": "Дважды магические ядра; деформация оболочки",
+    "prereq": ["concept.physics.nuclear.shell_model", "concept.chemistry.element"],
+    "confidence": 0.35,
+    "tags": ["superheavy", "island_of_stability", "magic_numbers"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "Синтезированы Z=113-118; периоды полураспада секунды-миллисекунды; пик стабильности не достигнут",
+      "competing_approaches": ["реакции горячего слияния", "холодного слияния", "многонуклонная передача"]
+    }
+  },
+  {
+    "id": "open_problem.frontier.chemistry.ab_initio_large_systems",
+    "schema_version": "3.2",
+    "domain": "frontier.chemistry.computational",
+    "subtopic": "frontier.chemistry.computational.ab_initio_scaling",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Точный прогноз свойств молекул методами ab initio с химической точностью (1 ккал/моль) для систем > 1000 атомов — вычислительно недостижим.",
+    "formal_notation": "CCSD(T) scaling O(N⁷); требуется O(N) или O(N log N) с химической точностью",
+    "conditions": "Большие системы; коррелированные методы; химическая точность",
+    "prereq": ["concept.chemistry.quantum.ccsd", "concept.chemistry.dft"],
+    "confidence": 0.40,
+    "tags": ["ab_initio", "computational_chemistry", "scaling", "ccsd"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "DLPNO-CCSD(T) масштабируется до сотен атомов; ML-потенциалы аппроксимируют, но без гарантий точности",
+      "competing_approaches": ["fragment methods", "ML-потенциалы (ANI, MACE)", "DMRG", "selected CI"]
+    }
+  },
+  {
+    "id": "open_problem.frontier.chemistry.protein_folding_dynamics",
+    "schema_version": "3.2",
+    "domain": "frontier.chemistry.biophysics",
+    "subtopic": "frontier.chemistry.biophysics.folding_dynamics",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Точное предсказание полной динамики сворачивания белка из аминокислотной последовательности — не решено, AlphaFold даёт только конечную структуру.",
+    "formal_notation": "последовательность → траектория(t) сворачивания, не только argmin E",
+    "conditions": "Физиологические условия; шаперонные системы; время μs-s",
+    "prereq": ["concept.biology.protein.folding", "concept.chemistry.biophysics.energy_landscape"],
+    "confidence": 0.35,
+    "tags": ["protein_folding", "dynamics", "alphafold", "levinthal"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "AlphaFold2/3 предсказывает структуру; динамика — только короткие пептиды на Anton/Folding@Home",
+      "competing_approaches": ["MD на специализированном железе (Anton)", "ML-потенциалы", "energy landscape theory", "Markov state models"]
+    }
+  },
+  {
+    "id": "open_problem.frontier.chemistry.rational_catalyst_design",
+    "schema_version": "3.2",
+    "domain": "frontier.chemistry.catalysis",
+    "subtopic": "frontier.chemistry.catalysis.rational_design",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Рациональный дизайн катализатора с заданной активностью и селективностью de novo, без эмпирического перебора — общая методика отсутствует.",
+    "formal_notation": "цель(k_cat, селективность) → структура активного центра; обратная задача",
+    "conditions": "Гетерогенный/гомогенный катализ; промышленные условия",
+    "prereq": ["concept.chemistry.catalysis", "concept.chemistry.transition_state"],
+    "confidence": 0.30,
+    "tags": ["catalysis", "rational_design", "selectivity", "inverse_design"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "Sabatier-принцип и scaling relations предсказывают тренды; ML ускоряет скрининг; de novo — единичные примеры",
+      "competing_approaches": ["DFT + scaling relations", "ML-поиск", "high-throughput screening", "biomimetic"]
+    }
+  },
+  {
+    "id": "open_problem.frontier.chemistry.artificial_photosynthesis",
+    "schema_version": "3.2",
+    "domain": "frontier.chemistry.energy",
+    "subtopic": "frontier.chemistry.energy.photosynthesis",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Создание искусственной фотосинтетической системы с КПД > 10% при солнечной освещённости, стабильной годами и масштабируемой — не достигнуто.",
+    "formal_notation": "η_STH ≥ 10% при AM1.5; срок службы ≥ 10⁴ часов; cost < $2/кг H₂",
+    "conditions": "Солнечная освещённость AM1.5; вода; долговременная стабильность",
+    "prereq": ["concept.chemistry.photocatalysis", "concept.chemistry.water_splitting"],
+    "confidence": 0.35,
+    "tags": ["artificial_photosynthesis", "water_splitting", "solar_fuels"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "Лабораторные ячейки достигают 19% STH (NREL), но дорогие и нестабильные; недорогие — < 5%",
+      "competing_approaches": ["PEC-ячейки", "particulate suspensions", "PV + электролизёр", "biohybrid"]
+    }
+  },
+  {
+    "id": "open_problem.frontier.chemistry.co2_long_term_storage",
+    "schema_version": "3.2",
+    "domain": "frontier.chemistry.geochemistry",
+    "subtopic": "frontier.chemistry.geochemistry.co2_storage",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Гарантированно безопасное хранение CO₂ в геологических формациях на тысячелетних масштабах без утечек — не подтверждено.",
+    "formal_notation": "утечка < 0.01%/год за 10³-10⁴ лет; минерализация vs supercritical",
+    "conditions": "Глубинные осадочные бассейны; базальты; солевые водоносные горизонты",
+    "prereq": ["concept.chemistry.geochemistry.co2", "concept.chemistry.mineralization"],
+    "confidence": 0.40,
+    "tags": ["ccs", "co2_storage", "carbon_sequestration", "leakage"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "Sleipner и CarbFix демонстрируют 25+ лет работы; долгосрочные риски моделируются, не измерены",
+      "competing_approaches": ["supercritical injection", "mineral carbonation (CarbFix)", "ocean storage", "DAC + utilization"]
+    }
+  },
+  {
+    "id": "open_problem.frontier.chemistry.chirality_controlled_nanotubes",
+    "schema_version": "3.2",
+    "domain": "frontier.chemistry.nano",
+    "subtopic": "frontier.chemistry.nano.nanotube_chirality",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Промышленный синтез углеродных нанотрубок с заданной хиральностью (n,m) и чистотой > 99% — не реализован.",
+    "formal_notation": "выход(n,m) > 99% при производительности кг/день",
+    "conditions": "CVD-процессы; катализаторы; масштаб килограммы и более",
+    "prereq": ["concept.chemistry.nano.cnt", "concept.chemistry.cvd"],
+    "confidence": 0.35,
+    "tags": ["carbon_nanotubes", "chirality", "selective_synthesis"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "Достигнута чистота 92% для (12,6) на CoMo катализаторах (Liu 2014); масштаб — миллиграммы",
+      "competing_approaches": ["catalyst engineering", "epitaxial growth", "post-synthesis separation (DGU, gel)", "cloning"]
+    }
+  },
+  {
+    "id": "open_problem.frontier.chemistry.long_lasting_biocompatible_implants",
+    "schema_version": "3.2",
+    "domain": "frontier.chemistry.biomaterials",
+    "subtopic": "frontier.chemistry.biomaterials.implants",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Биосовместимые имплантаты со сроком службы > 50 лет без воспалительного отклика и износа — задача материаловедения не решена.",
+    "formal_notation": "износ < 1 мкм/год; FBR (foreign body response) → 0; срок ≥ 50 лет",
+    "conditions": "in vivo; механическая нагрузка; иммунная среда",
+    "prereq": ["concept.chemistry.biomaterials", "concept.biology.immunology"],
+    "confidence": 0.30,
+    "tags": ["biomaterials", "implants", "biocompatibility", "wear"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "Ti-сплавы и UHMWPE дают 15-25 лет; пожизненные имплантаты остаются целью",
+      "competing_approaches": ["biomimetic coatings", "antifouling polymers", "regenerative scaffolds", "self-healing materials"]
+    }
+  },
+  {
+    "id": "open_problem.frontier.chemistry.material_memory_fatigue",
+    "schema_version": "3.2",
+    "domain": "frontier.chemistry.materials",
+    "subtopic": "frontier.chemistry.materials.memory_fatigue",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Общая теория памяти-наследия материалов: предсказание накопления усталостных повреждений под циклической нагрузкой из микроструктуры — не построена.",
+    "formal_notation": "N_f = f(σ_a, σ_m, микроструктура); единая модель multiscale",
+    "conditions": "Циклическая нагрузка; многомасштабные дефекты; длительная эксплуатация",
+    "prereq": ["concept.physics.materials.fatigue", "concept.chemistry.materials.microstructure"],
+    "confidence": 0.35,
+    "tags": ["fatigue", "fracture", "microstructure", "multiscale"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "Эмпирические S-N кривые работают; первопринципный прогноз для новых сплавов — низкая точность",
+      "competing_approaches": ["continuum damage mechanics", "crystal plasticity FEM", "phase-field fracture", "data-driven ML"]
+    }
+  },
+  {
+    "id": "open_problem.frontier.chemistry.rough_corrosion_theory",
+    "schema_version": "3.2",
+    "domain": "frontier.chemistry.electrochemistry",
+    "subtopic": "frontier.chemistry.electrochemistry.corrosion",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Общая теория шероховатой (питтинговой) коррозии с предсказанием места и времени зарождения питтингов из локальной микроструктуры — отсутствует.",
+    "formal_notation": "P(pit at x, t | микроструктура, среда) = ?",
+    "conditions": "Локальная неоднородность; хлоридная среда; пассивный слой",
+    "prereq": ["concept.chemistry.corrosion", "concept.chemistry.electrochemistry.passivation"],
+    "confidence": 0.30,
+    "tags": ["corrosion", "pitting", "passivation", "stochastic"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "Модель Galvele для роста питтинга; статистика Гумбеля для размеров; зарождение — стохастика",
+      "competing_approaches": ["point defect model", "Galvele acidification", "stochastic nucleation", "ML на изображениях"]
+    }
+  },
+  {
+    "id": "open_problem.frontier.chemistry.glass_transition",
+    "schema_version": "3.2",
+    "domain": "frontier.chemistry.condensed",
+    "subtopic": "frontier.chemistry.condensed.glass_transition",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Природа стеклообразного перехода и структура аморфного состояния — фундаментальная нерешённая проблема конденсированной материи.",
+    "formal_notation": "T_g: η(T_g) = 10¹² Па·с; кооперативные перестройки vs термодинамический переход",
+    "conditions": "Переохлаждённая жидкость; быстрое охлаждение; аморфное состояние",
+    "prereq": ["concept.physics.condensed.glass", "concept.chemistry.amorphous"],
+    "confidence": 0.30,
+    "tags": ["glass_transition", "amorphous", "supercooled_liquid", "RFOT"],
+    "tier_extensions": {
+      "status": "disputed",
+      "partial_results": "Аномальное замедление при T_g описано феноменологически (VFT, MCT); микроскопическая причина обсуждается",
+      "competing_approaches": ["RFOT (Wolynes)", "Mode Coupling Theory (Götze)", "kinetically constrained models", "dynamical facilitation"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.chemistry.liquid_theory",
+    "schema_version": "3.2",
+    "domain": "frontier.chemistry.condensed",
+    "subtopic": "frontier.chemistry.condensed.liquid_state",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Общая теория жидкого состояния, объединяющая газ и кристалл и предсказывающая транспортные коэффициенты из потенциала взаимодействия — не построена.",
+    "formal_notation": "η, D, κ = f(U(r), T, ρ) без подгоночных параметров",
+    "conditions": "Молекулярные жидкости; широкий диапазон T, ρ",
+    "prereq": ["concept.physics.condensed.liquid", "concept.chemistry.statistical_mechanics"],
+    "confidence": 0.30,
+    "tags": ["liquid_theory", "transport_coefficients", "viscosity"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "Интегральные уравнения (PY, HNC) работают для простых жидкостей; сложные молекулы — только MD",
+      "competing_approaches": ["integral equation theories", "DFT для жидкостей", "two-phonon theory (Trachenko)", "mode coupling"]
+    }
+  },
+  {
+    "id": "open_problem.frontier.chemistry.nonequilibrium_thermodynamics",
+    "schema_version": "3.2",
+    "domain": "frontier.chemistry.thermodynamics",
+    "subtopic": "frontier.chemistry.thermodynamics.nonequilibrium",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Общая теория неравновесной термодинамики вдали от равновесия с предсказательной силой для сложных систем — отсутствует.",
+    "formal_notation": "dS/dt = σ_internal ≥ 0; принципы отбора стационарных состояний",
+    "conditions": "Системы вдали от равновесия; диссипативные структуры",
+    "prereq": ["concept.chemistry.thermodynamics", "concept.physics.statistical.entropy"],
+    "confidence": 0.30,
+    "tags": ["nonequilibrium", "dissipative_structures", "thermodynamics"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "Линейная теория Онзагера работает у равновесия; stochastic thermodynamics (Seifert, Jarzynski) расширяет; общая принципа нет",
+      "competing_approaches": ["MaxEnt production", "min entropy production", "stochastic thermodynamics", "GENERIC formalism"]
+    }
+  },
+  {
+    "id": "open_problem.frontier.chemistry.polywater_anomalous",
+    "schema_version": "3.2",
+    "domain": "frontier.chemistry.water",
+    "subtopic": "frontier.chemistry.water.anomalies",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Природа аномалий воды (плотность, теплоёмкость, гипотеза двух жидких фаз HDL/LDL) — окончательно не установлена.",
+    "formal_notation": "ρ_max(4°C); C_p расходимость; гипотеза LLCP при T≈220 K, P≈100 МПа",
+    "conditions": "Переохлаждённая вода; высокое давление; no man's land 150-235 K",
+    "prereq": ["concept.chemistry.water", "concept.physics.condensed.liquid_liquid_transition"],
+    "confidence": 0.35,
+    "tags": ["water_anomalies", "polywater", "llcp", "hdl_ldl"],
+    "tier_extensions": {
+      "status": "disputed",
+      "partial_results": "Polywater Дерягина-Полинга опровергнут (1973); LLCP — численные доказательства (Debenedetti 2020), экспериментально оспаривается",
+      "competing_approaches": ["LLCP scenario", "singularity-free", "critical point free", "stability limit"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.chemistry.gibbs_energy_nonideal",
+    "schema_version": "3.2",
+    "domain": "frontier.chemistry.thermodynamics",
+    "subtopic": "frontier.chemistry.thermodynamics.nonideal_solutions",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Точное вычисление энергии Гиббса смешения сильно неидеальных многокомпонентных растворов из первых принципов — не решено.",
+    "formal_notation": "ΔG_mix(T, P, {x_i}) = f(межмолекулярные потенциалы) точно",
+    "conditions": "Сильная неидеальность; электролиты; высокие концентрации",
+    "prereq": ["concept.chemistry.thermodynamics.gibbs", "concept.chemistry.solution"],
+    "confidence": 0.35,
+    "tags": ["gibbs_energy", "nonideal_solution", "activity_coefficient"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "Модели UNIQUAC, NRTL, COSMO-RS — эмпирические; ab initio для электролитов > 1 М — ненадёжно",
+      "competing_approaches": ["COSMO-RS", "SAFT", "ePC-SAFT", "ML-модели", "MD с поляризуемыми FF"]
+    }
+  },
+  {
+    "id": "open_problem.frontier.chemistry.multicomponent_solubility",
+    "schema_version": "3.2",
+    "domain": "frontier.chemistry.solutions",
+    "subtopic": "frontier.chemistry.solutions.multicomponent",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Точное предсказание растворимости в многокомпонентных системах (5+ компонентов) с эффектами высаливания и комплексообразования — не решено.",
+    "formal_notation": "S_i(T, P, {c_j}) для всех i, j; учёт ионных пар и кластеров",
+    "conditions": "Многокомпонентные электролиты; нелинейные эффекты; промышленные процессы",
+    "prereq": ["concept.chemistry.solubility", "concept.chemistry.electrolyte"],
+    "confidence": 0.35,
+    "tags": ["solubility", "multicomponent", "electrolyte", "salting"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "Pitzer-модель работает для умеренных концентраций; > 10 компонентов — эмпирические таблицы",
+      "competing_approaches": ["Pitzer equations", "SIT", "COSMO-RS", "OLI Systems", "ML"]
+    }
+  },
+  {
+    "id": "open_problem.frontier.chemistry.femtosecond_transition_states",
+    "schema_version": "3.2",
+    "domain": "frontier.chemistry.dynamics",
+    "subtopic": "frontier.chemistry.dynamics.transition_states",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Экспериментальное разрешение переходных состояний каталитических реакций с фемтосекундным разрешением для гетерогенных и ферментативных систем — недоступно.",
+    "formal_notation": "Δt ≤ 10 фс; пространственное разрешение Å; in operando условия",
+    "conditions": "Гетерогенный катализ под давлением; ферменты in vivo",
+    "prereq": ["concept.chemistry.transition_state", "concept.physics.spectroscopy.ultrafast"],
+    "confidence": 0.40,
+    "tags": ["transition_state", "femtosecond", "ultrafast", "operando"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "Femtochemistry Zewail (Nobel 1999) — газовая фаза; XFEL даёт пикосекунды для твёрдых; in operando — миллисекунды",
+      "competing_approaches": ["XFEL serial crystallography", "attosecond spectroscopy", "ultrafast electron diffraction", "operando AP-XPS"]
+    }
+  },
+  {
+    "id": "open_problem.frontier.chemistry.rent_kern_ab_initio",
+    "schema_version": "3.2",
+    "domain": "frontier.chemistry.quantum",
+    "subtopic": "frontier.chemistry.quantum.core_valence",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Граница применимости приближения замороженного остова (core-valence separation) в ab initio расчётах тяжёлых элементов — общая теория ошибки отсутствует.",
+    "formal_notation": "оценка ε(frozen core) для Z > 50 с релятивистскими эффектами",
+    "conditions": "Тяжёлые элементы Z > 50; релятивистские эффекты; точные расчёты",
+    "prereq": ["concept.chemistry.quantum.frozen_core", "concept.physics.relativistic"],
+    "confidence": 0.40,
+    "tags": ["frozen_core", "relativistic", "ab_initio", "heavy_elements"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "All-electron расчёты возможны до Z≈100, но дорогие; pseudopotentials — стандарт, ошибки оцениваются эмпирически",
+      "competing_approaches": ["all-electron DKH/X2C", "small-core ECPs", "explicit correlation F12", "DLPNO methods"]
+    }
+  },
+  {
+    "id": "open_problem.frontier.chemistry.melting_point_multicomponent",
+    "schema_version": "3.2",
+    "domain": "frontier.chemistry.materials",
+    "subtopic": "frontier.chemistry.materials.melting_point",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Точный первопринципный прогноз температуры плавления многокомпонентных сплавов и high-entropy сплавов без экспериментальной калибровки — не достигнут.",
+    "formal_notation": "T_m({состав}) с погрешностью < 50 K из ab initio",
+    "conditions": "Многокомпонентные сплавы; high-entropy alloys; CALPHAD-данные неполные",
+    "prereq": ["concept.chemistry.phase_diagram", "concept.physics.materials.melting"],
+    "confidence": 0.35,
+    "tags": ["melting_point", "high_entropy_alloy", "calphad", "phase_diagram"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "CALPHAD-методы работают для известных систем; экстраполяция к новым сплавам — высокая ошибка",
+      "competing_approaches": ["CALPHAD", "ab initio MD + free energy", "ML-потенциалы", "MTP/MACE для свободной энергии"]
+    }
+  },
+  {
+    "id": "open_problem.frontier.chemistry.heterogeneous_selectivity",
+    "schema_version": "3.2",
+    "domain": "frontier.chemistry.catalysis",
+    "subtopic": "frontier.chemistry.catalysis.selectivity",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Общая теория селективности гетерогенного катализа, связывающая структуру поверхности с предпочтением одного продукта из множества — не построена.",
+    "formal_notation": "P(product_i | поверхность, реагенты, T) без эмпирики",
+    "conditions": "Гетерогенный катализ; многоканальные реакции; промышленные условия",
+    "prereq": ["concept.chemistry.catalysis.heterogeneous", "concept.chemistry.selectivity"],
+    "confidence": 0.35,
+    "tags": ["heterogeneous_catalysis", "selectivity", "scaling_relations"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "Scaling relations связывают энергии; Sabatier-принцип; общий случай — эмпирика",
+      "competing_approaches": ["scaling relations + BEP", "microkinetic modeling", "single-atom catalysis", "ML descriptors"]
+    }
+  },
+  {
+    "id": "open_problem.frontier.chemistry.enzyme_precision_evolution",
+    "schema_version": "3.2",
+    "domain": "frontier.chemistry.enzymes",
+    "subtopic": "frontier.chemistry.enzymes.evolution",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Теория эволюции ферментативной точности: почему k_cat/K_M достигает дифузионного предела (10⁸-10⁹ M⁻¹s⁻¹) и каковы пути эволюции — не установлено.",
+    "formal_notation": "max(k_cat/K_M) ≈ k_diff; распределение по эволюции",
+    "conditions": "Природный отбор; селективное давление; миллиарды лет",
+    "prereq": ["concept.biology.enzyme.kinetics", "concept.biology.evolution"],
+    "confidence": 0.35,
+    "tags": ["enzyme_evolution", "kcat", "diffusion_limit", "perfection"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "Bar-Even et al. 2011 показали распределение k_cat/K_M; большинство ферментов далеки от предела",
+      "competing_approaches": ["neutral evolution", "selection for efficiency", "trade-off theory", "directed evolution"]
+    }
+  },
+  {
+    "id": "open_problem.frontier.chemistry.biomolecular_chirality_origin",
+    "schema_version": "3.2",
+    "domain": "frontier.chemistry.origin_life",
+    "subtopic": "frontier.chemistry.origin_life.homochirality",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Причина хиральной асимметрии биомолекул (L-аминокислоты, D-сахара) — экспериментально-достоверного механизма выбора не установлено.",
+    "formal_notation": "ee(L-aa) ≈ 100% in vivo; ee(prebiotic) ≈ 0%; механизм усиления",
+    "conditions": "Пребиотическая Земля; рацемический пул; механизм симметрии-нарушения",
+    "prereq": ["concept.chemistry.chirality", "concept.chemistry.origin_life"],
+    "confidence": 0.30,
+    "tags": ["homochirality", "chirality", "origin_of_life", "soai"],
+    "tier_extensions": {
+      "status": "open",
+      "partial_results": "Реакция Соаи демонстрирует автокаталитическое усиление ee; метеоритные аминокислоты L-обогащены на ~10%; причина первичной асимметрии открыта",
+      "competing_approaches": ["циркулярно-поляризованный свет", "слабое взаимодействие (parity violation)", "Soai autocatalysis", "минеральные поверхности"],
+      "has_disputes": true
+    }
+  }
+]

@@ -1,0 +1,625 @@
+[
+  {
+    "id": "method.agriculture.crops.crop_rotation",
+    "schema_version": "3.2",
+    "domain": "agriculture.crops",
+    "subtopic": "agriculture.crops.rotation",
+    "tier": "practical",
+    "type": "method",
+    "statement": "Севооборот: чередование культур разных семейств на одном поле по годам с включением бобовых для фиксации азота и разрыва циклов вредителей и болезней.",
+    "formal_notation": "Цикл 3–7 лет; бобовые фиксируют 60–250 кг N/га; индекс плодородия +10–25%",
+    "conditions": "Почвы с устойчивой структурой; набор культур с разной корневой системой; учёт фитосанитарного состояния",
+    "limits": [
+      "Невозможен при монокультурной специализации хозяйства",
+      "Не работает без учёта совместимости предшественников"
+    ],
+    "prereq": ["concept.biology.nitrogen_fixation", "concept.agriculture.soil"],
+    "derives_from": [],
+    "confidence": 0.94,
+    "tags": ["rotation", "crops", "soil", "nitrogen", "fertility"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.92,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "process.agriculture.tillage.plowing",
+    "schema_version": "3.2",
+    "domain": "agriculture.crops",
+    "subtopic": "agriculture.crops.tillage",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Отвальная вспашка: оборачивание пахотного слоя плугом на глубину 20–30 см с заделкой пожнивных остатков и сорняков под почву.",
+    "formal_notation": "Глубина 20–30 см; скорость 6–10 км/ч; тяговое усилие 30–60 кН на 4–6 корпусов",
+    "conditions": "Влажность почвы 18–24%; температура выше 5°C; отсутствие промерзания",
+    "limits": [
+      "Усиливает ветровую и водную эрозию на склонах >5°",
+      "Разрушает естественную структуру почвы и капилляры",
+      "Не работает на каменистых и торфяных почвах"
+    ],
+    "prereq": ["concept.agriculture.soil"],
+    "derives_from": [],
+    "confidence": 0.93,
+    "tags": ["tillage", "plowing", "soil", "moldboard"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.95,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "process.agriculture.tillage.no_till",
+    "schema_version": "3.2",
+    "domain": "agriculture.crops",
+    "subtopic": "agriculture.crops.tillage",
+    "tier": "practical",
+    "type": "process",
+    "statement": "No-till: прямой посев в необработанную почву через слой растительных остатков сошниками-дисками с щелевым вскрытием бороздки шириной 2–3 см.",
+    "formal_notation": "Сохранение >30% покрытия мульчей; экономия топлива 60–75% против вспашки",
+    "conditions": "Равномерное распределение пожнивных остатков; сеялки с дисковыми сошниками и прижимом",
+    "limits": [
+      "Требует гербицидов для контроля сорняков без механической прополки",
+      "Накопление патогенов в поверхностном слое мульчи",
+      "Снижение температуры почвы весной на 2–4°C"
+    ],
+    "prereq": ["concept.agriculture.soil", "technology.agriculture.herbicide.glyphosate"],
+    "derives_from": [],
+    "confidence": 0.91,
+    "tags": ["no_till", "conservation", "soil", "tillage"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.88,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "process.agriculture.tillage.subsoiling",
+    "schema_version": "3.2",
+    "domain": "agriculture.crops",
+    "subtopic": "agriculture.crops.tillage",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Безотвальная глубокая обработка: рыхление подпахотного горизонта стойкой плоскореза или чизелем без оборота пласта на глубину 35–60 см.",
+    "formal_notation": "Глубина 35–60 см; разрушение плужной подошвы; тяговое усилие 4–8 кН на стойку",
+    "conditions": "Сухая почва ниже плужной подошвы; наличие тракторов тяги ≥4 класса",
+    "limits": [
+      "Бесполезно при отсутствии плотного подпахотного горизонта",
+      "Высокий расход топлива 18–30 л/га"
+    ],
+    "prereq": ["concept.agriculture.soil"],
+    "derives_from": [],
+    "confidence": 0.9,
+    "tags": ["subsoiling", "chisel", "soil", "compaction"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.9,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "material.agriculture.fertilizer.ammonium_nitrate",
+    "schema_version": "3.2",
+    "domain": "agriculture.crops",
+    "subtopic": "agriculture.crops.fertilizers",
+    "tier": "practical",
+    "type": "material",
+    "statement": "Аммиачная селитра NH4NO3: гранулированное азотное удобрение с содержанием азота 34.4% в двух формах — аммонийной и нитратной для быстрого и пролонгированного действия.",
+    "formal_notation": "NH4NO3; N ~ 34.4%; растворимость 192 г/100 г воды при 20°C",
+    "conditions": "Хранение при влажности <60%, температуре <30°C; внесение 100–300 кг/га",
+    "limits": [
+      "Взрывоопасна при контакте с органикой и нагреве выше 200°C",
+      "Подкисляет почву на 1–1.8 кг CaCO3 на кг N",
+      "Газообразные потери NH3 при поверхностном внесении на щелочных почвах"
+    ],
+    "prereq": ["process.chemistry.ammonia.haber_bosch"],
+    "derives_from": [],
+    "confidence": 0.96,
+    "tags": ["fertilizer", "nitrogen", "ammonium_nitrate", "saltpeter"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.97,
+      "safety_critical": true,
+      "safety_notes": "Взрывоопасна (катастрофы в Тулузе 2001 и Бейруте 2020); запрет смешивания с топливом и хлоридами"
+    }
+  },
+  {
+    "id": "material.agriculture.fertilizer.urea",
+    "schema_version": "3.2",
+    "domain": "agriculture.crops",
+    "subtopic": "agriculture.crops.fertilizers",
+    "tier": "practical",
+    "type": "material",
+    "statement": "Мочевина CO(NH2)2: концентрированное амидное удобрение с содержанием азота 46.2% и гидролизом уреазой почвы до NH4+ за 2–7 суток.",
+    "formal_notation": "CO(NH2)2 + H2O → 2NH3 + CO2 (уреаза); N 46.2%",
+    "conditions": "Заделка в почву 5–10 см; температура почвы >5°C; внесение 80–250 кг/га",
+    "limits": [
+      "Потери NH3 при поверхностном внесении до 30–50% за неделю",
+      "Биурет >1% токсичен для проростков",
+      "Требует ингибиторов уреазы для no-till"
+    ],
+    "prereq": ["process.chemistry.ammonia.haber_bosch"],
+    "derives_from": [],
+    "confidence": 0.96,
+    "tags": ["fertilizer", "urea", "nitrogen", "amide"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.95,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "material.agriculture.fertilizer.uan",
+    "schema_version": "3.2",
+    "domain": "agriculture.crops",
+    "subtopic": "agriculture.crops.fertilizers",
+    "tier": "practical",
+    "type": "material",
+    "statement": "КАС: водный раствор мочевины и аммиачной селитры с содержанием азота 28–32% в трёх формах с равномерным внесением через форсунки опрыскивателя.",
+    "formal_notation": "NH4NO3 + CO(NH2)2 + H2O; N 28/30/32%; плотность 1.28–1.32 г/см³",
+    "conditions": "Температура хранения выше точки кристаллизации (−2 до −18°C по марке); опрыскивание дефлекторными форсунками",
+    "limits": [
+      "Ожоги листьев при концентрации >30% по N в фазу кущения",
+      "Коррозия чёрной стали — требует нержавеющих ёмкостей"
+    ],
+    "prereq": ["material.agriculture.fertilizer.ammonium_nitrate", "material.agriculture.fertilizer.urea"],
+    "derives_from": [],
+    "confidence": 0.93,
+    "tags": ["fertilizer", "uan", "liquid", "nitrogen"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.93,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "material.agriculture.fertilizer.superphosphate",
+    "schema_version": "3.2",
+    "domain": "agriculture.crops",
+    "subtopic": "agriculture.crops.fertilizers",
+    "tier": "practical",
+    "type": "material",
+    "statement": "Двойной суперфосфат Ca(H2PO4)2·H2O: водорастворимое фосфорное удобрение с содержанием P2O5 43–49%, получаемое разложением апатита фосфорной кислотой.",
+    "formal_notation": "Ca5(PO4)3F + 7H3PO4 → 5Ca(H2PO4)2 + HF; P2O5 43–49%",
+    "conditions": "Внесение под основную обработку 100–400 кг/га; pH почвы 5.5–7.0 для максимального усвоения",
+    "limits": [
+      "Ретроградация в Al/Fe-фосфаты на кислых почвах при pH <5",
+      "Связывание в Ca3(PO4)2 на карбонатных почвах при pH >7.5"
+    ],
+    "prereq": ["material.chemistry.acids.h3po4"],
+    "derives_from": [],
+    "confidence": 0.94,
+    "tags": ["fertilizer", "phosphate", "superphosphate", "apatite"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.94,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "material.agriculture.fertilizer.kcl",
+    "schema_version": "3.2",
+    "domain": "agriculture.crops",
+    "subtopic": "agriculture.crops.fertilizers",
+    "tier": "practical",
+    "type": "material",
+    "statement": "Хлористый калий KCl: основное калийное удобрение с содержанием K2O 58–62%, получаемое флотацией сильвинита KCl·NaCl.",
+    "formal_notation": "KCl; K2O 58–62%; растворимость 34 г/100 г воды при 20°C",
+    "conditions": "Внесение осенью под зябь 80–300 кг/га; равномерное распределение туковой сеялкой",
+    "limits": [
+      "Хлоридофобные культуры (табак, виноград, цитрусы) снижают качество",
+      "Засоление почвы при дозах >400 кг/га в засушливой зоне"
+    ],
+    "prereq": ["material.minerals.salts.sylvite"],
+    "derives_from": [],
+    "confidence": 0.95,
+    "tags": ["fertilizer", "potassium", "kcl", "potash"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.96,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "method.agriculture.soil.liming",
+    "schema_version": "3.2",
+    "domain": "agriculture.crops",
+    "subtopic": "agriculture.crops.soil",
+    "tier": "practical",
+    "type": "method",
+    "statement": "Известкование: нейтрализация почвенной кислотности молотым известняком CaCO3 или доломитовой мукой CaMg(CO3)2 с поднятием pH до 6.0–6.8.",
+    "formal_notation": "CaCO3 + 2H+ → Ca2+ + H2O + CO2; норма 2–10 т/га по гидролитической кислотности",
+    "conditions": "Тонкий помол <0.25 мм; распределение разбрасывателем; заделка дисками 5–10 см",
+    "limits": [
+      "Переизвесткование вызывает дефицит Mn, Zn, B, Fe",
+      "Эффект длится 5–8 лет с постепенным расходом",
+      "На солонцах не применимо — требуется гипсование"
+    ],
+    "prereq": ["concept.agriculture.soil", "material.minerals.carbonates.calcite"],
+    "derives_from": [],
+    "confidence": 0.94,
+    "tags": ["liming", "ph", "soil", "calcium", "acidity"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.94,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "technology.agriculture.herbicide.glyphosate",
+    "schema_version": "3.2",
+    "domain": "agriculture.crops",
+    "subtopic": "agriculture.crops.protection",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Глифосат: системный гербицид сплошного действия, ингибитор EPSPS-синтазы шикиматного пути синтеза ароматических аминокислот у растений и микробов.",
+    "formal_notation": "N-(фосфонометил)глицин; LD50 крысы 5600 мг/кг; норма 1.5–6 л/га 360 г/л",
+    "conditions": "Опрыскивание по вегетирующим сорнякам с >5 листьями; температура 10–25°C; без осадков 6 часов",
+    "limits": [
+      "Не действует на животных (нет шикиматного пути)",
+      "Устойчивые биотипы у Amaranthus, Lolium при многолетнем применении",
+      "Инактивация в почве сорбцией на глинистых частицах"
+    ],
+    "prereq": ["concept.biology.metabolism.shikimate"],
+    "derives_from": [],
+    "confidence": 0.93,
+    "tags": ["herbicide", "glyphosate", "epsps", "shikimate"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.95,
+      "safety_critical": true,
+      "safety_notes": "ВОЗ/IARC класс 2A (вероятный канцероген); СИЗ при работе; запрет в ряде стран ЕС"
+    }
+  },
+  {
+    "id": "technology.agriculture.insecticide.pyrethroid",
+    "schema_version": "3.2",
+    "domain": "agriculture.crops",
+    "subtopic": "agriculture.crops.protection",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Синтетические пиретроиды: контактные инсектициды на основе аналогов пиретринов хризантемы, блокирующие натриевые каналы нейронов насекомых.",
+    "formal_notation": "Эфиры циклопропанкарбоновых кислот; нарушение Nav1.x каналов; LD50 насекомые ~ 0.01–1 мг/кг",
+    "conditions": "Опрыскивание 0.05–0.2 л/га; температура <25°C; без сильного УФ для фотостабильности",
+    "limits": [
+      "Высокая токсичность для пчёл и водных организмов",
+      "Резистентность через мутации kdr в гене Nav-канала",
+      "Деградация на солнце за 4–10 дней"
+    ],
+    "prereq": ["concept.biology.neuron.sodium_channel"],
+    "derives_from": [],
+    "confidence": 0.92,
+    "tags": ["insecticide", "pyrethroid", "sodium_channel", "neurotoxin"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.93,
+      "safety_critical": true,
+      "safety_notes": "Высокотоксично для пчёл — запрет опрыскивания в период цветения; рыботоксично"
+    }
+  },
+  {
+    "id": "technology.agriculture.fungicide.triazole",
+    "schema_version": "3.2",
+    "domain": "agriculture.crops",
+    "subtopic": "agriculture.crops.protection",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Триазольные фунгициды: системные ингибиторы DMI 14α-деметилазы CYP51 биосинтеза эргостерола в мембранах грибов с защитным и лечебным эффектом.",
+    "formal_notation": "Ингибирование CYP51 (стерол-14α-деметилаза); норма 0.5–1.5 л/га; защита 14–28 суток",
+    "conditions": "Опрыскивание при первых признаках болезни; температура 12–25°C; pH рабочего раствора 5.5–7",
+    "limits": [
+      "Резистентность через мутации CYP51 и эффлюкс-помпы",
+      "Слабая активность против оомицетов (Phytophthora, Peronospora)",
+      "Ретардантный эффект на злаках при ранних обработках"
+    ],
+    "prereq": ["concept.biology.fungi.cell_wall"],
+    "derives_from": [],
+    "confidence": 0.91,
+    "tags": ["fungicide", "triazole", "cyp51", "ergosterol"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.9,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "concept.agriculture.breeding.f1_hybrid",
+    "schema_version": "3.2",
+    "domain": "agriculture.crops",
+    "subtopic": "agriculture.crops.breeding",
+    "tier": "practical",
+    "type": "concept",
+    "statement": "Гибрид F1: первое поколение от скрещивания двух гомозиготных инбредных линий, демонстрирующее гетерозис — превышение продуктивности обоих родителей.",
+    "formal_notation": "P1 (AA) × P2 (aa) → F1 (Aa); прибавка урожая 15–40% против родителей",
+    "conditions": "Получение чистых инбредных линий 5–7 поколений самоопыления; контроль опыления вручную или ЦМС",
+    "limits": [
+      "F2 расщепляется — пересев семенами невозможен",
+      "Требует ежегодной закупки семян у селекционера",
+      "Узкая адаптация к конкретным условиям"
+    ],
+    "prereq": ["concept.biology.genetics.heterosis"],
+    "derives_from": [],
+    "confidence": 0.95,
+    "tags": ["hybrid", "f1", "heterosis", "breeding"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.94,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "technology.agriculture.gmo.bt_corn",
+    "schema_version": "3.2",
+    "domain": "agriculture.crops",
+    "subtopic": "agriculture.crops.gmo",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Bt-кукуруза: трансгенная культура с генами cry-токсинов Bacillus thuringiensis, синтезирующая в тканях белки, специфически убивающие личинок чешуекрылых через рецепторы кишечника.",
+    "formal_notation": "Cry1Ab/Cry1F/Cry3 связывают рецепторы Cadherin/ABCC2 → поры в мембране → лизис клеток",
+    "conditions": "Селективность по pH 9.5–10.5 кишечника гусениц; защитные зоны рефугии 5–20% без Bt",
+    "limits": [
+      "Резистентность Spodoptera, Helicoverpa при отсутствии рефугии",
+      "Не действует на жуков, тлю, клопов (некоторые Cry3 — на жуков)",
+      "Запрет выращивания в ряде стран ЕС"
+    ],
+    "prereq": ["technology.biology.genetics.transgenesis"],
+    "derives_from": [],
+    "confidence": 0.94,
+    "tags": ["gmo", "bt", "cry", "corn", "transgenic"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.95,
+      "safety_critical": true,
+      "safety_notes": "Регуляторный надзор EFSA/USDA/EPA; обязательные рефугии для управления резистентностью"
+    }
+  },
+  {
+    "id": "technology.agriculture.gmo.roundup_ready",
+    "schema_version": "3.2",
+    "domain": "agriculture.crops",
+    "subtopic": "agriculture.crops.gmo",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Roundup Ready: культуры с трансгеном CP4 EPSPS из Agrobacterium, устойчивым к глифосату, что разрешает обработку гербицидом по вегетации без повреждения культуры.",
+    "formal_notation": "CP4 EPSPS не связывает глифосат → шикиматный путь сохранён → синтез ароматических AA продолжается",
+    "conditions": "Применение глифосата 1.5–3 л/га 360 г/л по культуре до фазы 8 листьев",
+    "limits": [
+      "Устойчивые сорняки Amaranthus palmeri, Conyza при многолетнем применении",
+      "Зависимость хозяйств от одного действующего вещества",
+      "Запрет в части стран ЕС"
+    ],
+    "prereq": ["technology.agriculture.herbicide.glyphosate", "technology.biology.genetics.transgenesis"],
+    "derives_from": [],
+    "confidence": 0.93,
+    "tags": ["gmo", "roundup_ready", "epsps", "herbicide_tolerant"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.94,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "technology.agriculture.irrigation.drip",
+    "schema_version": "3.2",
+    "domain": "agriculture.crops",
+    "subtopic": "agriculture.crops.irrigation",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Капельное орошение: подача воды малыми расходами через капельницы непосредственно в зону корней с расходом 0.5–8 л/ч на эмиттер при давлении 0.5–2 бар.",
+    "formal_notation": "Q = 0.5–8 л/ч; КПД полива 0.85–0.95; экономия воды 30–60% против дождевания",
+    "conditions": "Фильтрация до 130 микрон; компенсированные капельницы при перепадах рельефа; регулярная промывка",
+    "limits": [
+      "Засорение эмиттеров солями и биоплёнками",
+      "Высокие капитальные затраты 2000–6000 USD/га",
+      "Поверхностное распределение корней при некорректной норме"
+    ],
+    "prereq": ["concept.agriculture.water_balance"],
+    "derives_from": [],
+    "confidence": 0.95,
+    "tags": ["irrigation", "drip", "water", "efficiency"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.94,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "technology.agriculture.irrigation.sprinkler",
+    "schema_version": "3.2",
+    "domain": "agriculture.crops",
+    "subtopic": "agriculture.crops.irrigation",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Дождевание: распыление воды в атмосферу через спринклеры или круговые системы pivot с орошаемой площадью до 130 га одной машиной.",
+    "formal_notation": "Интенсивность 5–25 мм/ч; давление 2–6 бар; КПД полива 0.7–0.85",
+    "conditions": "Ветер <4 м/с; температура <30°C для снижения испарения; ровный или волнистый рельеф",
+    "limits": [
+      "Потери на испарение и снос 15–35% при жаре и ветре",
+      "Уплотнение поверхности почвы каплями",
+      "Распространение листовых болезней через смачивание"
+    ],
+    "prereq": ["concept.agriculture.water_balance"],
+    "derives_from": [],
+    "confidence": 0.93,
+    "tags": ["irrigation", "sprinkler", "pivot", "water"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.92,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "technology.agriculture.irrigation.flood",
+    "schema_version": "3.2",
+    "domain": "agriculture.crops",
+    "subtopic": "agriculture.crops.irrigation",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Орошение затоплением: подача воды самотёком по чекам или бороздам с покрытием поверхности слоем 5–20 см для риса или 1–3 см для пропашных культур.",
+    "formal_notation": "Норма 3000–15000 м³/га за вегетацию; КПД полива 0.4–0.6",
+    "conditions": "Спланированный рельеф с уклоном <0.3%; глинистая водоупорная подошва или плотный слой",
+    "limits": [
+      "Высокие потери на инфильтрацию и испарение",
+      "Засоление при минерализованной воде >1.5 г/л",
+      "Эмиссия метана из затопленных рисовых чеков"
+    ],
+    "prereq": ["concept.agriculture.water_balance"],
+    "derives_from": [],
+    "confidence": 0.92,
+    "tags": ["irrigation", "flood", "rice", "water"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.88,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "technology.agriculture.greenhouse.climate_control",
+    "schema_version": "3.2",
+    "domain": "agriculture.crops",
+    "subtopic": "agriculture.crops.greenhouse",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Промышленная теплица: ограждение со светопропусканием 70–90%, активным управлением температурой, влажностью, CO2 и досветкой натриевыми или LED-лампами.",
+    "formal_notation": "PAR досветка 150–400 мкмоль/м²/с; CO2 800–1200 ppm; T 18–26°C; RH 65–85%",
+    "conditions": "Системы отопления, вентиляции, зашторивания и форточек; контроллер климата с датчиками",
+    "limits": [
+      "Энергопотребление 1.5–3 кВт·ч на кг продукции",
+      "Болезни в условиях высокой влажности (Botrytis, мучнистая роса)"
+    ],
+    "prereq": ["concept.biology.photosynthesis"],
+    "derives_from": [],
+    "confidence": 0.93,
+    "tags": ["greenhouse", "climate", "co2", "led"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.92,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "technology.agriculture.hydroponics.nft",
+    "schema_version": "3.2",
+    "domain": "agriculture.crops",
+    "subtopic": "agriculture.crops.hydroponics",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "NFT: гидропоника тонкоплёночной техники с проточным слоем питательного раствора 1–3 мм по лоткам с уклоном 1–2% и циркуляцией через бак с насосом.",
+    "formal_notation": "EC 1.5–3.0 мСм/см; pH 5.5–6.5; расход 1–2 л/мин на лоток; T раствора 18–22°C",
+    "conditions": "Постоянная работа насоса с резервом; контроль EC, pH, температуры и кислорода раствора",
+    "limits": [
+      "При остановке насоса корни сохнут за 30–60 минут",
+      "Не работает с тяжёлыми плодовыми культурами",
+      "Распространение Pythium через общий раствор"
+    ],
+    "prereq": ["concept.biology.plant.nutrition"],
+    "derives_from": [],
+    "confidence": 0.92,
+    "tags": ["hydroponics", "nft", "nutrient_film", "soilless"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.9,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "technology.agriculture.aeroponics.misting",
+    "schema_version": "3.2",
+    "domain": "agriculture.crops",
+    "subtopic": "agriculture.crops.aeroponics",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Аэропоника: бессубстратная технология выращивания с распылением питательного раствора на висящие корни форсунками высокого давления с каплями 30–100 мкм.",
+    "formal_notation": "Давление 4–7 бар; цикл распыления 5 с / пауза 60–300 с; кислород корням ~21%",
+    "conditions": "Закрытая камера корневой зоны с темнотой; стерильность раствора; резерв питания насоса",
+    "limits": [
+      "Полный отказ при перебое электричества — гибель за <60 мин",
+      "Засорение форсунок солями кальция и фосфатами",
+      "Высокая стоимость оборудования"
+    ],
+    "prereq": ["concept.biology.plant.nutrition"],
+    "derives_from": [],
+    "confidence": 0.9,
+    "tags": ["aeroponics", "soilless", "misting", "roots"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.85,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "method.agriculture.soil.mulching",
+    "schema_version": "3.2",
+    "domain": "agriculture.crops",
+    "subtopic": "agriculture.crops.soil",
+    "tier": "practical",
+    "type": "method",
+    "statement": "Мульчирование: покрытие поверхности почвы органическими остатками, плёнкой или агроволокном слоем 3–10 см для сохранения влаги, подавления сорняков и регуляции температуры.",
+    "formal_notation": "Снижение испарения 30–70%; повышение T почвы +2–5°C под чёрной плёнкой",
+    "conditions": "Сухая поверхность перед укладкой; равномерный слой без разрывов; фиксация по периметру",
+    "limits": [
+      "Под плёнкой при жаре >35°C перегрев корневой зоны",
+      "Органическая мульча связывает N при разложении (C:N >30)",
+      "Загрязнение почвы микропластиком от плёнок"
+    ],
+    "prereq": ["concept.agriculture.soil"],
+    "derives_from": [],
+    "confidence": 0.93,
+    "tags": ["mulching", "soil", "moisture", "weeds"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.94,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "method.agriculture.agroforestry.alley_cropping",
+    "schema_version": "3.2",
+    "domain": "agriculture.crops",
+    "subtopic": "agriculture.crops.agroforestry",
+    "tier": "practical",
+    "type": "method",
+    "statement": "Аллейное возделывание: рядовое размещение полос древесных пород между полосами полевых культур шириной 10–30 м для защиты от ветра и обогащения почвы.",
+    "formal_notation": "Полосы деревьев 3–10 м; межполосье 10–30 м; снижение ветра на 30–50%",
+    "conditions": "Подбор совместимых пород без аллелопатии; обрезка крон для светового режима",
+    "limits": [
+      "Конкуренция деревьев за воду в межполосье 5–10 м",
+      "Усложнение механизированной обработки",
+      "Длительный срок выхода на проектную продуктивность 5–15 лет"
+    ],
+    "prereq": ["concept.biology.ecology.symbiosis"],
+    "derives_from": [],
+    "confidence": 0.88,
+    "tags": ["agroforestry", "alley_cropping", "windbreak", "shelterbelt"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.85,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "technology.agriculture.precision.gps_guidance",
+    "schema_version": "3.2",
+    "domain": "agriculture.crops",
+    "subtopic": "agriculture.crops.precision",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Точное земледелие на основе RTK-GPS: автоматическое вождение машин по координатам с точностью 2–3 см и дифференцированное внесение по картам урожайности.",
+    "formal_notation": "RTK-поправка через базовую станцию или сеть; точность ±2.5 см; перекрытие <1%",
+    "conditions": "Базовая RTK-станция в радиусе 30 км или подписка на сеть VRS; GNSS-приёмник на машине",
+    "limits": [
+      "Потеря сигнала в густых лесополосах и тоннелях",
+      "Дрейф при длинной базовой линии >40 км",
+      "Зависимость от связи с базой через UHF или GSM"
+    ],
+    "prereq": ["concept.physics.gnss"],
+    "derives_from": [],
+    "confidence": 0.94,
+    "tags": ["precision", "gps", "rtk", "autoguidance"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.96,
+      "safety_critical": false
+    }
+  }
+]

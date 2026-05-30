@@ -1,0 +1,477 @@
+[
+  {
+    "id": "fact.history.ancient.sumer",
+    "schema_version": "3.2",
+    "domain": "history.ancient",
+    "subtopic": "history.ancient.sumer",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Шумер: древнейшая цивилизация Южной Месопотамии (ок. 4500-1900 до н.э.); города-государства Ур, Урук, Лагаш; изобретение клинописи, колеса, шестидесятеричной системы счисления.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.ancient"],
+    "confidence": 0.9,
+    "tags": ["sumer", "ancient", "history", "mesopotamia", "cuneiform"],
+    "tier_extensions": {
+      "source": "Cambridge Ancient History",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.ancient.akkad",
+    "schema_version": "3.2",
+    "domain": "history.ancient",
+    "subtopic": "history.ancient.akkad",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Аккадская империя (ок. 2334-2154 до н.э.): первая централизованная империя Месопотамии, основана Саргоном Древним; аккадский язык вытеснил шумерский как язык управления.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.ancient"],
+    "confidence": 0.88,
+    "tags": ["akkad", "ancient", "history", "sargon", "mesopotamia"],
+    "tier_extensions": {
+      "source": "Cambridge Ancient History",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.ancient.babylon",
+    "schema_version": "3.2",
+    "domain": "history.ancient",
+    "subtopic": "history.ancient.babylon",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Вавилон: древний город Месопотамии; Старовавилонский период (ок. 1894-1595 до н.э.) с царём Хаммурапи и его кодексом законов; Нововавилонское царство (626-539 до н.э.) при Навуходоносоре II.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.ancient"],
+    "confidence": 0.9,
+    "tags": ["babylon", "ancient", "history", "hammurabi", "mesopotamia"],
+    "tier_extensions": {
+      "source": "Cambridge Ancient History",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.ancient.egypt_old_kingdom",
+    "schema_version": "3.2",
+    "domain": "history.ancient",
+    "subtopic": "history.ancient.egypt_old_kingdom",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Древний Египет, Старое царство (ок. 2686-2181 до н.э.): эпоха строительства великих пирамид Гизы; III-VI династии; столица Мемфис; обожествление фараона.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.ancient"],
+    "confidence": 0.9,
+    "tags": ["egypt", "old_kingdom", "ancient", "history", "pyramids"],
+    "tier_extensions": {
+      "source": "Cambridge Ancient History",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.ancient.egypt_middle_kingdom",
+    "schema_version": "3.2",
+    "domain": "history.ancient",
+    "subtopic": "history.ancient.egypt_middle_kingdom",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Древний Египет, Среднее царство (ок. 2055-1650 до н.э.): XI-XII династии; столица Фивы, затем Иттауи; расцвет литературы, расширение в Нубию; завершилось вторжением гиксосов.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.ancient"],
+    "confidence": 0.88,
+    "tags": ["egypt", "middle_kingdom", "ancient", "history", "thebes"],
+    "tier_extensions": {
+      "source": "Cambridge Ancient History",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.ancient.egypt_new_kingdom",
+    "schema_version": "3.2",
+    "domain": "history.ancient",
+    "subtopic": "history.ancient.egypt_new_kingdom",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Древний Египет, Новое царство (ок. 1550-1069 до н.э.): XVIII-XX династии; правители Хатшепсут, Тутмос III, Эхнатон, Тутанхамон, Рамзес II; максимальная территориальная экспансия.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.ancient"],
+    "confidence": 0.9,
+    "tags": ["egypt", "new_kingdom", "ancient", "history", "ramses"],
+    "tier_extensions": {
+      "source": "Cambridge Ancient History",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.ancient.hittites",
+    "schema_version": "3.2",
+    "domain": "history.ancient",
+    "subtopic": "history.ancient.hittites",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Хеттское царство (ок. 1650-1180 до н.э.): индоевропейская держава Малой Азии со столицей Хаттуса; раннее освоение железа; битва при Кадеше с Рамзесом II (ок. 1274 до н.э.).",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.ancient"],
+    "confidence": 0.88,
+    "tags": ["hittites", "ancient", "history", "anatolia", "kadesh"],
+    "tier_extensions": {
+      "source": "Cambridge Ancient History",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.ancient.assyria",
+    "schema_version": "3.2",
+    "domain": "history.ancient",
+    "subtopic": "history.ancient.assyria",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Ассирия: древнее государство Северной Месопотамии; Новоассирийская империя (911-609 до н.э.) контролировала Ближний Восток; столицы Ашшур, Ниневия; пала под ударами вавилонян и мидийцев.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.ancient"],
+    "confidence": 0.88,
+    "tags": ["assyria", "ancient", "history", "nineveh", "mesopotamia"],
+    "tier_extensions": {
+      "source": "Cambridge Ancient History",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.ancient.phoenicia",
+    "schema_version": "3.2",
+    "domain": "history.ancient",
+    "subtopic": "history.ancient.phoenicia",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Финикия: цивилизация восточного Средиземноморья (ок. 1500-300 до н.э.); города Тир, Сидон, Библ; распространение алфавитного письма; обширная морская торговля и колонизация.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.ancient"],
+    "confidence": 0.88,
+    "tags": ["phoenicia", "ancient", "history", "alphabet", "tyre"],
+    "tier_extensions": {
+      "source": "Cambridge Ancient History",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.ancient.minoan",
+    "schema_version": "3.2",
+    "domain": "history.ancient",
+    "subtopic": "history.ancient.minoan",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Минойская цивилизация Крита (ок. 3000-1450 до н.э.): дворцовые комплексы Кносса и Феста; линейное письмо A; упадок связан с извержением Санторина и микенским вторжением.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.ancient"],
+    "confidence": 0.85,
+    "tags": ["minoan", "ancient", "history", "crete", "knossos"],
+    "tier_extensions": {
+      "source": "Cambridge Ancient History",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "fact.history.ancient.mycenae",
+    "schema_version": "3.2",
+    "domain": "history.ancient",
+    "subtopic": "history.ancient.mycenae",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Микенская цивилизация (ок. 1600-1100 до н.э.): бронзовый век Греции; центры Микены, Пилос, Тиринф; линейное письмо B (расшифровано как ранний греческий); крах около 1100 до н.э.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.ancient"],
+    "confidence": 0.88,
+    "tags": ["mycenae", "ancient", "history", "greece", "bronze_age"],
+    "tier_extensions": {
+      "source": "Cambridge Ancient History",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.ancient.greece_archaic",
+    "schema_version": "3.2",
+    "domain": "history.ancient",
+    "subtopic": "history.ancient.greece_archaic",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Архаическая Греция (ок. 800-480 до н.э.): формирование полисов, греческая колонизация Средиземноморья и Причерноморья, появление монеты, первые Олимпийские игры (776 до н.э.).",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.ancient"],
+    "confidence": 0.88,
+    "tags": ["greece", "archaic", "ancient", "history", "polis"],
+    "tier_extensions": {
+      "source": "Cambridge Ancient History",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.ancient.greece_classical",
+    "schema_version": "3.2",
+    "domain": "history.ancient",
+    "subtopic": "history.ancient.greece_classical",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Классическая Греция (480-323 до н.э.): греко-персидские войны, расцвет Афин при Перикле, Пелопоннесская война (431-404 до н.э.), философия Сократа, Платона, Аристотеля.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.ancient"],
+    "confidence": 0.9,
+    "tags": ["greece", "classical", "ancient", "history", "athens"],
+    "tier_extensions": {
+      "source": "Cambridge Ancient History",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.ancient.greece_hellenistic",
+    "schema_version": "3.2",
+    "domain": "history.ancient",
+    "subtopic": "history.ancient.greece_hellenistic",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Эллинистический период (323-30 до н.э.): начался со смертью Александра Македонского; царства Селевкидов, Птолемеев, Антигонидов; синтез греческой и восточных культур; закончился с присоединением Египта Римом.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.ancient"],
+    "confidence": 0.9,
+    "tags": ["greece", "hellenistic", "ancient", "history", "alexander"],
+    "tier_extensions": {
+      "source": "Cambridge Ancient History",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.ancient.etruscans",
+    "schema_version": "3.2",
+    "domain": "history.ancient",
+    "subtopic": "history.ancient.etruscans",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Этруски: доримская цивилизация Центральной Италии (ок. 900-100 до н.э.); федерация двенадцати городов; нерасшифрованный язык; сильное влияние на раннюю римскую культуру и религию.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.ancient"],
+    "confidence": 0.85,
+    "tags": ["etruscans", "ancient", "history", "italy", "rome"],
+    "tier_extensions": {
+      "source": "Cambridge Ancient History",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "fact.history.ancient.carthage",
+    "schema_version": "3.2",
+    "domain": "history.ancient",
+    "subtopic": "history.ancient.carthage",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Карфаген: финикийская колония в Северной Африке (ок. 814-146 до н.э.); крупнейшая морская держава Западного Средиземноморья; три Пунические войны с Римом; разрушен в 146 до н.э.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.ancient"],
+    "confidence": 0.9,
+    "tags": ["carthage", "ancient", "history", "punic_wars", "hannibal"],
+    "tier_extensions": {
+      "source": "Cambridge Ancient History",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.ancient.roman_republic",
+    "schema_version": "3.2",
+    "domain": "history.ancient",
+    "subtopic": "history.ancient.roman_republic",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Римская республика (509-27 до н.э.): аристократическая республика с сенатом и консулами; экспансия от Италии до всего Средиземноморья; гражданские войны I века; закончилась приходом к власти Октавиана.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.ancient"],
+    "confidence": 0.92,
+    "tags": ["rome", "republic", "ancient", "history", "senate"],
+    "tier_extensions": {
+      "source": "Cambridge Ancient History",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.ancient.roman_empire_early",
+    "schema_version": "3.2",
+    "domain": "history.ancient",
+    "subtopic": "history.ancient.roman_empire_early",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Ранняя Римская империя, Принципат (27 до н.э. - 284 н.э.): начат Августом; Pax Romana, максимальное расширение при Траяне (117 н.э.); кризис III века завершил период.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.ancient"],
+    "confidence": 0.92,
+    "tags": ["rome", "empire", "principate", "ancient", "history"],
+    "tier_extensions": {
+      "source": "Cambridge Ancient History",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.ancient.roman_empire_late",
+    "schema_version": "3.2",
+    "domain": "history.ancient",
+    "subtopic": "history.ancient.roman_empire_late",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Поздняя Римская империя, Доминат (284-476 н.э.): реформы Диоклетиана и Константина; легализация христианства (313); разделение империи (395); падение Западной Римской империи в 476.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.ancient"],
+    "confidence": 0.9,
+    "tags": ["rome", "dominate", "ancient", "history", "constantine"],
+    "tier_extensions": {
+      "source": "Cambridge Ancient History",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.ancient.byzantium_early",
+    "schema_version": "3.2",
+    "domain": "history.ancient",
+    "subtopic": "history.ancient.byzantium_early",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Ранняя Византия (330-610): основание Константинополя при Константине; правление Юстиниана I (527-565) с кодификацией римского права и реконкистой; противостояние с Сасанидами.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.ancient"],
+    "confidence": 0.88,
+    "tags": ["byzantium", "ancient", "history", "justinian", "constantinople"],
+    "tier_extensions": {
+      "source": "Cambridge Ancient History",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.ancient.china_shang_zhou",
+    "schema_version": "3.2",
+    "domain": "history.ancient",
+    "subtopic": "history.ancient.china_shang_zhou",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Древний Китай династии Шан (ок. 1600-1046 до н.э.) и Чжоу (1046-256 до н.э.): бронзолитейное дело, гадательные кости, концепция Мандата Неба; эпоха Конфуция и Лао-цзы.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.ancient"],
+    "confidence": 0.88,
+    "tags": ["china", "shang", "zhou", "ancient", "history"],
+    "tier_extensions": {
+      "source": "Cambridge History of Ancient China",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.ancient.china_qin_han",
+    "schema_version": "3.2",
+    "domain": "history.ancient",
+    "subtopic": "history.ancient.china_qin_han",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Династия Цинь (221-206 до н.э.): первая объединённая китайская империя при Цинь Шихуанди; Великая стена. Династия Хань (206 до н.э. - 220 н.э.): расцвет, конфуцианство как идеология, Шёлковый путь.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.ancient"],
+    "confidence": 0.9,
+    "tags": ["china", "qin", "han", "ancient", "history"],
+    "tier_extensions": {
+      "source": "Cambridge History of Ancient China",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.ancient.india_harappa",
+    "schema_version": "3.2",
+    "domain": "history.ancient",
+    "subtopic": "history.ancient.india_harappa",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Индская (Хараппская) цивилизация (ок. 3300-1300 до н.э.): города долины Инда Мохенджо-Даро и Хараппа; стандартизированная планировка, канализация, нерасшифрованная письменность.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.ancient"],
+    "confidence": 0.85,
+    "tags": ["india", "harappa", "ancient", "history", "indus"],
+    "tier_extensions": {
+      "source": "Cambridge Ancient History",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "fact.history.ancient.india_maurya",
+    "schema_version": "3.2",
+    "domain": "history.ancient",
+    "subtopic": "history.ancient.india_maurya",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Империя Маурьев (321-185 до н.э.): крупнейшая древнеиндийская империя, основана Чандрагуптой; пик при Ашоке (268-232 до н.э.), распространившем буддизм после битвы при Калинге.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.ancient"],
+    "confidence": 0.88,
+    "tags": ["india", "maurya", "ashoka", "ancient", "history"],
+    "tier_extensions": {
+      "source": "Cambridge Ancient History",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.ancient.india_gupta",
+    "schema_version": "3.2",
+    "domain": "history.ancient",
+    "subtopic": "history.ancient.india_gupta",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Империя Гуптов (ок. 320-550 н.э.): золотой век классической Индии; десятичная система счисления и понятие нуля, расцвет санскритской литературы (Калидаса), храмового зодчества и индуизма.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.ancient"],
+    "confidence": 0.88,
+    "tags": ["india", "gupta", "ancient", "history", "golden_age"],
+    "tier_extensions": {
+      "source": "Cambridge Ancient History",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  }
+]

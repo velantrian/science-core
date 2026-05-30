@@ -1,0 +1,752 @@
+[
+  {
+    "id": "fact.medicine.disease.parkinson",
+    "schema_version": "3.2",
+    "domain": "medicine.disease",
+    "subtopic": "medicine.disease.parkinson",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Болезнь Паркинсона — нейродегенеративное заболевание с гибелью дофаминергических нейронов чёрной субстанции; тремор покоя, ригидность, брадикинезия.",
+    "conditions": "Данные на 2024",
+    "prereq": [
+      "concept.medicine.disease"
+    ],
+    "confidence": 0.92,
+    "tags": [
+      "parkinson",
+      "neurodegeneration",
+      "dopamine",
+      "disease",
+      "medicine"
+    ],
+    "tier_extensions": {
+      "source": "WHO ICD-11 8A00; Mayo Clinic 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "icd11_code": "8A00.0",
+      "treatment": "леводопа/карбидопа, агонисты дофамина, DBS",
+      "global_prevalence": "~10 млн человек (2024)"
+    }
+  },
+  {
+    "id": "fact.medicine.disease.schizophrenia",
+    "schema_version": "3.2",
+    "domain": "medicine.disease",
+    "subtopic": "medicine.disease.schizophrenia",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Шизофрения — хроническое психическое расстройство с позитивными (галлюцинации, бред), негативными (апатия) и когнитивными симптомами; дебют 15–30 лет.",
+    "conditions": "Данные на 2024",
+    "prereq": [
+      "concept.medicine.disease"
+    ],
+    "confidence": 0.88,
+    "tags": [
+      "schizophrenia",
+      "psychiatry",
+      "psychosis",
+      "disease",
+      "medicine"
+    ],
+    "tier_extensions": {
+      "source": "WHO ICD-11 6A20; DSM-5-TR 2022",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": true,
+      "icd11_code": "6A20",
+      "treatment": "антипсихотики 2-го поколения, психотерапия, реабилитация",
+      "global_prevalence": "~24 млн человек (~0.32% популяции)"
+    }
+  },
+  {
+    "id": "fact.medicine.disease.depression",
+    "schema_version": "3.2",
+    "domain": "medicine.disease",
+    "subtopic": "medicine.disease.depression",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Большое депрессивное расстройство — аффективное расстройство с подавленным настроением, ангедонией, нарушением сна и аппетита продолжительностью ≥2 недель.",
+    "conditions": "Данные на 2024",
+    "prereq": [
+      "concept.medicine.disease"
+    ],
+    "confidence": 0.9,
+    "tags": [
+      "depression",
+      "psychiatry",
+      "mood_disorder",
+      "disease",
+      "medicine"
+    ],
+    "tier_extensions": {
+      "source": "WHO ICD-11 6A70; DSM-5-TR",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "icd11_code": "6A70",
+      "treatment": "СИОЗС, СИОЗСН, КПТ, ЭСТ при резистентности",
+      "global_prevalence": "~280 млн человек (WHO 2023)"
+    }
+  },
+  {
+    "id": "fact.medicine.disease.anxiety_disorder",
+    "schema_version": "3.2",
+    "domain": "medicine.disease",
+    "subtopic": "medicine.disease.anxiety_disorder",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Генерализованное тревожное расстройство — чрезмерная тревога и беспокойство о различных событиях ≥6 месяцев с соматическими симптомами.",
+    "conditions": "Данные на 2024",
+    "prereq": [
+      "concept.medicine.disease"
+    ],
+    "confidence": 0.88,
+    "tags": [
+      "anxiety",
+      "psychiatry",
+      "GAD",
+      "disease",
+      "medicine"
+    ],
+    "tier_extensions": {
+      "source": "WHO ICD-11 6B00; DSM-5-TR",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "icd11_code": "6B00",
+      "treatment": "СИОЗС, СИОЗСН, КПТ, бензодиазепины короткими курсами",
+      "global_prevalence": "~301 млн человек (WHO 2023)"
+    }
+  },
+  {
+    "id": "fact.medicine.disease.bipolar",
+    "schema_version": "3.2",
+    "domain": "medicine.disease",
+    "subtopic": "medicine.disease.bipolar",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Биполярное аффективное расстройство — чередование маниакальных/гипоманиакальных эпизодов и депрессий; тип I с полной манией, тип II с гипоманией.",
+    "conditions": "Данные на 2024",
+    "prereq": [
+      "concept.medicine.disease"
+    ],
+    "confidence": 0.9,
+    "tags": [
+      "bipolar",
+      "psychiatry",
+      "mood_disorder",
+      "disease",
+      "medicine"
+    ],
+    "tier_extensions": {
+      "source": "WHO ICD-11 6A60; DSM-5-TR",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "icd11_code": "6A60",
+      "treatment": "литий, вальпроат, атипичные антипсихотики, ламотриджин",
+      "global_prevalence": "~40 млн человек (~0.5% популяции)"
+    }
+  },
+  {
+    "id": "fact.medicine.disease.epilepsy",
+    "schema_version": "3.2",
+    "domain": "medicine.disease",
+    "subtopic": "medicine.disease.epilepsy",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Эпилепсия — хроническое неврологическое расстройство с повторяющимися непровоцированными приступами вследствие гиперсинхронной активности нейронов.",
+    "conditions": "Данные на 2024",
+    "prereq": [
+      "concept.medicine.disease"
+    ],
+    "confidence": 0.93,
+    "tags": [
+      "epilepsy",
+      "neurology",
+      "seizure",
+      "disease",
+      "medicine"
+    ],
+    "tier_extensions": {
+      "source": "WHO ICD-11 8A60; ILAE 2017",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "icd11_code": "8A60",
+      "treatment": "противоэпилептические препараты, кетогенная диета, хирургия",
+      "global_prevalence": "~50 млн человек (WHO)"
+    }
+  },
+  {
+    "id": "fact.medicine.disease.migraine",
+    "schema_version": "3.2",
+    "domain": "medicine.disease",
+    "subtopic": "medicine.disease.migraine",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Мигрень — первичная головная боль с пульсирующей односторонней болью 4–72 ч, тошнотой и фото/фонофобией; патогенез связан с CGRP и тригемино-васкулярной системой.",
+    "conditions": "Данные на 2024",
+    "prereq": [
+      "concept.medicine.disease"
+    ],
+    "confidence": 0.91,
+    "tags": [
+      "migraine",
+      "neurology",
+      "headache",
+      "CGRP",
+      "medicine"
+    ],
+    "tier_extensions": {
+      "source": "ICHD-3; WHO ICD-11 8A80",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "icd11_code": "8A80",
+      "treatment": "триптаны, гепанты, моноклональные антитела к CGRP",
+      "global_prevalence": "~1 млрд человек (GBD 2019)"
+    }
+  },
+  {
+    "id": "fact.medicine.disease.multiple_sclerosis",
+    "schema_version": "3.2",
+    "domain": "medicine.disease",
+    "subtopic": "medicine.disease.multiple_sclerosis",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Рассеянный склероз — аутоиммунное демиелинизирующее заболевание ЦНС с очагами в белом веществе; ремиттирующая, вторично- и первично-прогрессирующая формы.",
+    "conditions": "Данные на 2024",
+    "prereq": [
+      "concept.medicine.disease"
+    ],
+    "confidence": 0.9,
+    "tags": [
+      "multiple_sclerosis",
+      "neurology",
+      "autoimmune",
+      "demyelination",
+      "medicine"
+    ],
+    "tier_extensions": {
+      "source": "WHO ICD-11 8A40; McDonald criteria 2017",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "icd11_code": "8A40",
+      "treatment": "интерферон бета, окрелизумаб, натализумаб, финголимод",
+      "global_prevalence": "~2.8 млн человек (MSIF 2020)"
+    }
+  },
+  {
+    "id": "fact.medicine.disease.als",
+    "schema_version": "3.2",
+    "domain": "medicine.disease",
+    "subtopic": "medicine.disease.als",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Боковой амиотрофический склероз — прогрессирующая дегенерация верхних и нижних мотонейронов; летальность 2–5 лет от начала симптомов.",
+    "conditions": "Данные на 2024",
+    "prereq": [
+      "concept.medicine.disease"
+    ],
+    "confidence": 0.9,
+    "tags": [
+      "ALS",
+      "neurology",
+      "motor_neuron",
+      "neurodegeneration",
+      "medicine"
+    ],
+    "tier_extensions": {
+      "source": "WHO ICD-11 8B60; El Escorial criteria",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "icd11_code": "8B60",
+      "treatment": "рилузол, эдаравон, тофферсен (SOD1-форма)",
+      "global_prevalence": "~5/100000 (распространённость)"
+    }
+  },
+  {
+    "id": "fact.medicine.disease.myasthenia_gravis",
+    "schema_version": "3.2",
+    "domain": "medicine.disease",
+    "subtopic": "medicine.disease.myasthenia_gravis",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Миастения — аутоиммунное заболевание с антителами к никотиновым ацетилхолиновым рецепторам постсинаптической мембраны; патологическая мышечная утомляемость.",
+    "conditions": "Данные на 2024",
+    "prereq": [
+      "concept.medicine.disease"
+    ],
+    "confidence": 0.91,
+    "tags": [
+      "myasthenia",
+      "neurology",
+      "autoimmune",
+      "acetylcholine",
+      "medicine"
+    ],
+    "tier_extensions": {
+      "source": "WHO ICD-11 8C60; MGFA classification",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "icd11_code": "8C60",
+      "treatment": "пиридостигмин, преднизолон, азатиоприн, ритуксимаб, тимэктомия",
+      "global_prevalence": "~700000 человек (~20/100000)"
+    }
+  },
+  {
+    "id": "fact.medicine.disease.copd",
+    "schema_version": "3.2",
+    "domain": "medicine.disease",
+    "subtopic": "medicine.disease.copd",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "ХОБЛ — хроническая обструктивная болезнь лёгких с прогрессирующим ограничением воздушного потока; основная причина — курение; объединяет эмфизему и хронический бронхит.",
+    "conditions": "Данные на 2024",
+    "prereq": [
+      "concept.medicine.disease"
+    ],
+    "confidence": 0.93,
+    "tags": [
+      "COPD",
+      "pulmonology",
+      "emphysema",
+      "smoking",
+      "medicine"
+    ],
+    "tier_extensions": {
+      "source": "GOLD 2024; WHO ICD-11 CA22",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "icd11_code": "CA22",
+      "treatment": "бронходилататоры (LAMA, LABA), ИГКС, отказ от курения, кислород",
+      "global_prevalence": "~390 млн человек (GBD 2020)"
+    }
+  },
+  {
+    "id": "fact.medicine.disease.cystic_fibrosis",
+    "schema_version": "3.2",
+    "domain": "medicine.disease",
+    "subtopic": "medicine.disease.cystic_fibrosis",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Муковисцидоз — аутосомно-рецессивное заболевание из-за мутаций гена CFTR; вязкая слизь поражает лёгкие, поджелудочную железу, кишечник.",
+    "conditions": "Данные на 2024",
+    "prereq": [
+      "concept.medicine.disease"
+    ],
+    "confidence": 0.94,
+    "tags": [
+      "cystic_fibrosis",
+      "CFTR",
+      "genetics",
+      "pulmonology",
+      "medicine"
+    ],
+    "tier_extensions": {
+      "source": "WHO ICD-11 CA25; CFF Patient Registry 2023",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "icd11_code": "CA25",
+      "treatment": "ивакафтор/тезакафтор/элексакафтор (Trikafta), муколитики, ферменты",
+      "global_prevalence": "~162000 человек (CFF 2023)"
+    }
+  },
+  {
+    "id": "fact.medicine.disease.sickle_cell",
+    "schema_version": "3.2",
+    "domain": "medicine.disease",
+    "subtopic": "medicine.disease.sickle_cell",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Серповидноклеточная анемия — наследственная гемоглобинопатия с мутацией HbS (Glu6Val); серповидные эритроциты вызывают окклюзии сосудов и хроническую анемию.",
+    "conditions": "Данные на 2024",
+    "prereq": [
+      "concept.medicine.disease"
+    ],
+    "confidence": 0.94,
+    "tags": [
+      "sickle_cell",
+      "hemoglobinopathy",
+      "anemia",
+      "genetics",
+      "medicine"
+    ],
+    "tier_extensions": {
+      "source": "WHO ICD-11 3A51; NHLBI 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "icd11_code": "3A51",
+      "treatment": "гидроксимочевина, кризанлизумаб, ТГСК, генная терапия (Casgevy 2023)",
+      "global_prevalence": "~7.7 млн человек (GBD 2021)"
+    }
+  },
+  {
+    "id": "fact.medicine.disease.hemophilia_a",
+    "schema_version": "3.2",
+    "domain": "medicine.disease",
+    "subtopic": "medicine.disease.hemophilia_a",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Гемофилия A — X-сцепленный рецессивный дефицит фактора свёртывания VIII; кровотечения в суставы и мышцы; болеют преимущественно мужчины.",
+    "conditions": "Данные на 2024",
+    "prereq": [
+      "concept.medicine.disease"
+    ],
+    "confidence": 0.94,
+    "tags": [
+      "hemophilia_a",
+      "coagulation",
+      "factor_viii",
+      "genetics",
+      "medicine"
+    ],
+    "tier_extensions": {
+      "source": "WHO ICD-11 3B10.0; WFH 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "icd11_code": "3B10.0",
+      "treatment": "рекомбинантный FVIII, эмицизумаб, генная терапия валоктокоген (2022)",
+      "global_prevalence": "~1/5000 мальчиков"
+    }
+  },
+  {
+    "id": "fact.medicine.disease.hemophilia_b",
+    "schema_version": "3.2",
+    "domain": "medicine.disease",
+    "subtopic": "medicine.disease.hemophilia_b",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Гемофилия B (болезнь Кристмаса) — X-сцепленный рецессивный дефицит фактора IX; клинически сходна с гемофилией A, но встречается в ~5 раз реже.",
+    "conditions": "Данные на 2024",
+    "prereq": [
+      "concept.medicine.disease"
+    ],
+    "confidence": 0.93,
+    "tags": [
+      "hemophilia_b",
+      "coagulation",
+      "factor_ix",
+      "genetics",
+      "medicine"
+    ],
+    "tier_extensions": {
+      "source": "WHO ICD-11 3B10.1; WFH 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "icd11_code": "3B10.1",
+      "treatment": "рекомбинантный FIX, этранакоген дезапарвовек (Hemgenix 2022)",
+      "global_prevalence": "~1/25000 мальчиков"
+    }
+  },
+  {
+    "id": "fact.medicine.disease.thalassemia",
+    "schema_version": "3.2",
+    "domain": "medicine.disease",
+    "subtopic": "medicine.disease.thalassemia",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Талассемия — наследственная гемоглобинопатия с нарушением синтеза α- или β-цепей глобина; α-талассемия и β-талассемия; от лёгких форм до тяжёлой Кули.",
+    "conditions": "Данные на 2024",
+    "prereq": [
+      "concept.medicine.disease"
+    ],
+    "confidence": 0.93,
+    "tags": [
+      "thalassemia",
+      "hemoglobinopathy",
+      "anemia",
+      "genetics",
+      "medicine"
+    ],
+    "tier_extensions": {
+      "source": "WHO ICD-11 3A50; TIF 2023",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "icd11_code": "3A50",
+      "treatment": "трансфузии, хелаторы железа, ТГСК, луспатерцепт, бетибеглоген (2022)",
+      "global_prevalence": "~1.5% носителей β-талассемии глобально"
+    }
+  },
+  {
+    "id": "fact.medicine.disease.celiac",
+    "schema_version": "3.2",
+    "domain": "medicine.disease",
+    "subtopic": "medicine.disease.celiac",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Целиакия — аутоиммунная энтеропатия с непереносимостью глютена у генетически предрасположенных лиц (HLA-DQ2/DQ8); атрофия ворсин тонкой кишки.",
+    "conditions": "Данные на 2024",
+    "prereq": [
+      "concept.medicine.disease"
+    ],
+    "confidence": 0.92,
+    "tags": [
+      "celiac",
+      "autoimmune",
+      "gluten",
+      "gastroenterology",
+      "medicine"
+    ],
+    "tier_extensions": {
+      "source": "WHO ICD-11 DA95; ESsCD 2022",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "icd11_code": "DA95",
+      "treatment": "пожизненная безглютеновая диета",
+      "global_prevalence": "~1% популяции (серопревалентность ~1.4%)"
+    }
+  },
+  {
+    "id": "fact.medicine.disease.crohn",
+    "schema_version": "3.2",
+    "domain": "medicine.disease",
+    "subtopic": "medicine.disease.crohn",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Болезнь Крона — хроническое трансмуральное гранулёматозное воспаление любого отдела ЖКТ; чаще терминальный илеит; патогенез сочетает генетику и микробиом.",
+    "conditions": "Данные на 2024",
+    "prereq": [
+      "concept.medicine.disease"
+    ],
+    "confidence": 0.91,
+    "tags": [
+      "crohn",
+      "IBD",
+      "gastroenterology",
+      "autoimmune",
+      "medicine"
+    ],
+    "tier_extensions": {
+      "source": "WHO ICD-11 DD70; ECCO 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "icd11_code": "DD70",
+      "treatment": "5-АСК, ГКС, азатиоприн, анти-TNF, устекинумаб, ведолизумаб",
+      "global_prevalence": "~6-8 млн человек глобально (GBD 2019)"
+    }
+  },
+  {
+    "id": "fact.medicine.disease.ulcerative_colitis",
+    "schema_version": "3.2",
+    "domain": "medicine.disease",
+    "subtopic": "medicine.disease.ulcerative_colitis",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Язвенный колит — хроническое воспаление слизистой толстой кишки от прямой проксимально; кровавая диарея, риск рака при длительном течении.",
+    "conditions": "Данные на 2024",
+    "prereq": [
+      "concept.medicine.disease"
+    ],
+    "confidence": 0.91,
+    "tags": [
+      "ulcerative_colitis",
+      "IBD",
+      "gastroenterology",
+      "autoimmune",
+      "medicine"
+    ],
+    "tier_extensions": {
+      "source": "WHO ICD-11 DD71; ECCO 2022",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "icd11_code": "DD71",
+      "treatment": "месалазин, ГКС, тиопурины, анти-TNF, тофацитиниб, колэктомия",
+      "global_prevalence": "~5 млн человек глобально (GBD 2019)"
+    }
+  },
+  {
+    "id": "fact.medicine.disease.gerd",
+    "schema_version": "3.2",
+    "domain": "medicine.disease",
+    "subtopic": "medicine.disease.gerd",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "ГЭРБ — гастроэзофагеальная рефлюксная болезнь с патологическим забросом желудочного содержимого в пищевод; изжога, регургитация, эзофагит, риск пищевода Барретта.",
+    "conditions": "Данные на 2024",
+    "prereq": [
+      "concept.medicine.disease"
+    ],
+    "confidence": 0.93,
+    "tags": [
+      "GERD",
+      "gastroenterology",
+      "reflux",
+      "esophagus",
+      "medicine"
+    ],
+    "tier_extensions": {
+      "source": "WHO ICD-11 DA22; ACG 2022",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "icd11_code": "DA22",
+      "treatment": "ИПП (омепразол), H2-блокаторы, фундопликация при рефрактерных",
+      "global_prevalence": "~14% взрослых глобально"
+    }
+  },
+  {
+    "id": "fact.medicine.disease.ibs",
+    "schema_version": "3.2",
+    "domain": "medicine.disease",
+    "subtopic": "medicine.disease.ibs",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Синдром раздражённого кишечника — функциональное расстройство ЖКТ с болью в животе и нарушением стула без органической патологии; Римские IV критерии.",
+    "conditions": "Данные на 2024",
+    "prereq": [
+      "concept.medicine.disease"
+    ],
+    "confidence": 0.88,
+    "tags": [
+      "IBS",
+      "gastroenterology",
+      "functional",
+      "rome_iv",
+      "medicine"
+    ],
+    "tier_extensions": {
+      "source": "Rome IV; WHO ICD-11 DD91",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": true,
+      "icd11_code": "DD91",
+      "treatment": "диета low-FODMAP, спазмолитики, рифаксимин, СИОЗС, психотерапия",
+      "global_prevalence": "~10% популяции глобально"
+    }
+  },
+  {
+    "id": "fact.medicine.disease.hepatitis_a",
+    "schema_version": "3.2",
+    "domain": "medicine.disease",
+    "subtopic": "medicine.disease.hepatitis_a",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Гепатит A — острая вирусная инфекция HAV (Picornaviridae) с фекально-оральным путём передачи; самокупирующийся, без хронизации; есть эффективная вакцина.",
+    "conditions": "Данные на 2024",
+    "prereq": [
+      "concept.medicine.disease"
+    ],
+    "confidence": 0.94,
+    "tags": [
+      "hepatitis_a",
+      "HAV",
+      "virus",
+      "hepatology",
+      "medicine"
+    ],
+    "tier_extensions": {
+      "source": "WHO ICD-11 1E50.0; WHO Hepatitis 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "icd11_code": "1E50.0",
+      "treatment": "поддерживающее; профилактика вакциной",
+      "global_prevalence": "~159 млн случаев ежегодно (WHO)"
+    }
+  },
+  {
+    "id": "fact.medicine.disease.hepatitis_b",
+    "schema_version": "3.2",
+    "domain": "medicine.disease",
+    "subtopic": "medicine.disease.hepatitis_b",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Гепатит B — вирусная инфекция HBV (Hepadnaviridae) с парентеральной передачей; острая и хроническая формы; риск цирроза и гепатоцеллюлярного рака.",
+    "conditions": "Данные на 2024",
+    "prereq": [
+      "concept.medicine.disease"
+    ],
+    "confidence": 0.95,
+    "tags": [
+      "hepatitis_b",
+      "HBV",
+      "virus",
+      "hepatology",
+      "medicine"
+    ],
+    "tier_extensions": {
+      "source": "WHO Hepatitis Report 2024; ICD-11 1E50.1",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "icd11_code": "1E50.1",
+      "treatment": "тенофовир, энтекавир, пегилированный интерферон; вакцина",
+      "global_prevalence": "~254 млн хронических носителей (WHO 2024)"
+    }
+  },
+  {
+    "id": "fact.medicine.disease.hepatitis_c",
+    "schema_version": "3.2",
+    "domain": "medicine.disease",
+    "subtopic": "medicine.disease.hepatitis_c",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Гепатит C — вирусная инфекция HCV (Flaviviridae) с парентеральной передачей; хронизация ~75%; излечивается DAA-терапией в >95% случаев.",
+    "conditions": "Данные на 2024",
+    "prereq": [
+      "concept.medicine.disease"
+    ],
+    "confidence": 0.95,
+    "tags": [
+      "hepatitis_c",
+      "HCV",
+      "virus",
+      "DAA",
+      "medicine"
+    ],
+    "tier_extensions": {
+      "source": "WHO Hepatitis Report 2024; AASLD/IDSA",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "icd11_code": "1E50.2",
+      "treatment": "софосбувир/велпатасвир, глекапревир/пибрентасвир (DAA)",
+      "global_prevalence": "~50 млн хронических случаев (WHO 2024)"
+    }
+  },
+  {
+    "id": "fact.medicine.disease.cirrhosis",
+    "schema_version": "3.2",
+    "domain": "medicine.disease",
+    "subtopic": "medicine.disease.cirrhosis",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Цирроз печени — терминальная стадия хронических заболеваний печени с фиброзом и узловой регенерацией; портальная гипертензия, печёночная недостаточность.",
+    "conditions": "Данные на 2024",
+    "prereq": [
+      "concept.medicine.disease"
+    ],
+    "confidence": 0.93,
+    "tags": [
+      "cirrhosis",
+      "hepatology",
+      "fibrosis",
+      "portal_hypertension",
+      "medicine"
+    ],
+    "tier_extensions": {
+      "source": "WHO ICD-11 DB93; EASL 2022",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "icd11_code": "DB93",
+      "treatment": "этиотропное (DAA, абстиненция), бета-блокаторы, трансплантация",
+      "global_prevalence": "~112 млн человек (GBD 2017)"
+    }
+  }
+]

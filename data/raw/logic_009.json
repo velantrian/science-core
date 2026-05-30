@@ -1,0 +1,477 @@
+[
+  {
+    "id": "bias.logic.cognitive.representativeness",
+    "schema_version": "3.2",
+    "domain": "logic.biases",
+    "subtopic": "logic.biases.probabilistic",
+    "tier": "logic",
+    "type": "bias",
+    "statement": "Оценка вероятности принадлежности объекта к категории по степени его сходства со стереотипом категории; пренебрежение базовыми частотами.",
+    "formal_notation": "P_perceived(X∈C) ∝ Sim(X, prototype(C)); base rate ignored",
+    "conditions": "Категоризация под неопределённостью; известны базовые частоты",
+    "prereq": ["concept.logic.judgment", "concept.math.statistics.base_rate"],
+    "derives_from": [],
+    "confidence": 0.95,
+    "tags": ["bias", "representativeness", "tversky_kahneman", "base_rate"],
+    "tier_extensions": {
+      "category": "bias",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "bias.logic.cognitive.recency",
+    "schema_version": "3.2",
+    "domain": "logic.biases",
+    "subtopic": "logic.biases.memory",
+    "tier": "logic",
+    "type": "bias",
+    "statement": "Завышенный вес недавно полученной информации при суждении по сравнению с более ранней при равной её релевантности.",
+    "formal_notation": "Weight(Info_t) ↑ при t → now",
+    "conditions": "Последовательное предъявление информации с задержкой суждения",
+    "prereq": ["concept.psychology.memory", "concept.logic.judgment"],
+    "derives_from": [],
+    "confidence": 0.92,
+    "tags": ["bias", "recency", "memory", "serial_position"],
+    "tier_extensions": {
+      "category": "bias",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "bias.logic.cognitive.primacy",
+    "schema_version": "3.2",
+    "domain": "logic.biases",
+    "subtopic": "logic.biases.memory",
+    "tier": "logic",
+    "type": "bias",
+    "statement": "Повышенное запоминание и влияние первых элементов последовательности на итоговое суждение относительно средних элементов.",
+    "formal_notation": "Recall(Info_1..k) > Recall(Info_mid)",
+    "conditions": "Последовательное предъявление; достаточная пауза до суждения",
+    "prereq": ["concept.psychology.memory", "concept.logic.judgment"],
+    "derives_from": [],
+    "confidence": 0.91,
+    "tags": ["bias", "primacy", "serial_position", "memory"],
+    "tier_extensions": {
+      "category": "bias",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "bias.logic.cognitive.halo",
+    "schema_version": "3.2",
+    "domain": "logic.biases",
+    "subtopic": "logic.biases.perception",
+    "tier": "logic",
+    "type": "bias",
+    "statement": "Перенос положительной оценки одного свойства объекта на оценку независимых свойств того же объекта.",
+    "formal_notation": "Eval(A) > 0 ⊢ Eval(B) > 0 при corr(A,B) ≈ 0",
+    "conditions": "Многоатрибутная оценка одного субъекта; одна доминирующая черта",
+    "prereq": ["concept.psychology.perception", "concept.logic.attribute"],
+    "derives_from": [],
+    "confidence": 0.93,
+    "tags": ["bias", "halo", "thorndike", "perception"],
+    "tier_extensions": {
+      "category": "bias",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "bias.logic.cognitive.horn",
+    "schema_version": "3.2",
+    "domain": "logic.biases",
+    "subtopic": "logic.biases.perception",
+    "tier": "logic",
+    "type": "bias",
+    "statement": "Перенос отрицательной оценки одного свойства объекта на оценку независимых свойств того же объекта; зеркальная форма halo.",
+    "formal_notation": "Eval(A) < 0 ⊢ Eval(B) < 0 при corr(A,B) ≈ 0",
+    "conditions": "Многоатрибутная оценка одного субъекта; одна негативная черта доминирует",
+    "prereq": ["concept.psychology.perception", "concept.logic.attribute"],
+    "derives_from": [],
+    "confidence": 0.91,
+    "tags": ["bias", "horn", "perception", "negative_halo"],
+    "tier_extensions": {
+      "category": "bias",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "bias.logic.cognitive.mere_exposure",
+    "schema_version": "3.2",
+    "domain": "logic.biases",
+    "subtopic": "logic.biases.preference",
+    "tier": "logic",
+    "type": "bias",
+    "statement": "Рост позитивной оценки стимула вследствие повторных контактов с ним без подкрепления.",
+    "formal_notation": "Preference(S) монотонно растёт с Exposures(S) до плато",
+    "conditions": "Повторное предъявление нейтрального стимула без негативных ассоциаций",
+    "prereq": ["concept.psychology.preference", "concept.psychology.familiarity"],
+    "derives_from": [],
+    "confidence": 0.91,
+    "tags": ["bias", "mere_exposure", "zajonc", "familiarity"],
+    "tier_extensions": {
+      "category": "bias",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "bias.logic.cognitive.illusion_of_control",
+    "schema_version": "3.2",
+    "domain": "logic.biases",
+    "subtopic": "logic.biases.agency",
+    "tier": "logic",
+    "type": "bias",
+    "statement": "Завышенная оценка собственного влияния на исходы, фактически определяемые случайностью или внешними факторами.",
+    "formal_notation": "P_perceived(control) > P_real(control)",
+    "conditions": "Случайные процессы; индивид вовлечён действиями без причинной связи",
+    "prereq": ["concept.psychology.agency", "concept.math.probability.randomness"],
+    "derives_from": [],
+    "confidence": 0.90,
+    "tags": ["bias", "illusion_of_control", "langer", "agency"],
+    "tier_extensions": {
+      "category": "bias",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "bias.logic.cognitive.planning_fallacy",
+    "schema_version": "3.2",
+    "domain": "logic.biases",
+    "subtopic": "logic.biases.prediction",
+    "tier": "logic",
+    "type": "bias",
+    "statement": "Систематическое занижение времени, стоимости и рисков завершения проектов при сохранении знания о прошлых перерасходах в аналогичных проектах.",
+    "formal_notation": "E[T_self] < E[T_actual]; bias persists despite reference class",
+    "conditions": "Планирование уникальных задач; пренебрежение внешним взглядом",
+    "prereq": ["concept.logic.prediction", "concept.logic.reference_class"],
+    "derives_from": [],
+    "confidence": 0.93,
+    "tags": ["bias", "planning_fallacy", "kahneman", "prediction"],
+    "tier_extensions": {
+      "category": "bias",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "bias.logic.cognitive.optimism",
+    "schema_version": "3.2",
+    "domain": "logic.biases",
+    "subtopic": "logic.biases.prediction",
+    "tier": "logic",
+    "type": "bias",
+    "statement": "Завышение вероятности благоприятных исходов и занижение вероятности неблагоприятных в отношении себя по сравнению с другими.",
+    "formal_notation": "P_self(good) > P_other(good); P_self(bad) < P_other(bad)",
+    "conditions": "Оценка собственных рисков под неопределённостью",
+    "prereq": ["concept.logic.judgment", "concept.psychology.self"],
+    "derives_from": [],
+    "confidence": 0.92,
+    "tags": ["bias", "optimism", "weinstein", "prediction"],
+    "tier_extensions": {
+      "category": "bias",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "bias.logic.cognitive.pessimism",
+    "schema_version": "3.2",
+    "domain": "logic.biases",
+    "subtopic": "logic.biases.prediction",
+    "tier": "logic",
+    "type": "bias",
+    "statement": "Завышение вероятности неблагоприятных исходов и занижение вероятности благоприятных; ассоциируется с депрессивными состояниями.",
+    "formal_notation": "P_self(bad) > P_base(bad)",
+    "conditions": "Прогноз под неопределённостью; устойчивое аффективное состояние",
+    "prereq": ["concept.logic.judgment", "concept.psychology.affect"],
+    "derives_from": [],
+    "confidence": 0.88,
+    "tags": ["bias", "pessimism", "depressive_realism", "prediction"],
+    "tier_extensions": {
+      "category": "bias",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "bias.logic.cognitive.negativity",
+    "schema_version": "3.2",
+    "domain": "logic.biases",
+    "subtopic": "logic.biases.attention",
+    "tier": "logic",
+    "type": "bias",
+    "statement": "Негативные стимулы при равной интенсивности получают больший вес внимания, памяти и эмоциональной реакции, чем позитивные.",
+    "formal_notation": "Weight(neg) ≈ k·Weight(pos), k > 1",
+    "conditions": "Парные стимулы сопоставимой интенсивности",
+    "prereq": ["concept.psychology.attention", "concept.psychology.affect"],
+    "derives_from": [],
+    "confidence": 0.94,
+    "tags": ["bias", "negativity", "rozin", "attention"],
+    "tier_extensions": {
+      "category": "bias",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "bias.logic.cognitive.status_quo",
+    "schema_version": "3.2",
+    "domain": "logic.biases",
+    "subtopic": "logic.biases.decision",
+    "tier": "logic",
+    "type": "bias",
+    "statement": "Предпочтение сохранения текущего положения дел даже при наличии превосходящих альтернатив с близкими ожидаемыми издержками перехода.",
+    "formal_notation": "Choose(current) при U(current) < U(alternative) с малыми costs(switch)",
+    "conditions": "Выбор между текущим и новым вариантом сопоставимого риска",
+    "prereq": ["concept.logic.decision", "concept.psychology.loss_aversion"],
+    "derives_from": [],
+    "confidence": 0.92,
+    "tags": ["bias", "status_quo", "samuelson_zeckhauser", "decision"],
+    "tier_extensions": {
+      "category": "bias",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "bias.logic.cognitive.endowment",
+    "schema_version": "3.2",
+    "domain": "logic.biases",
+    "subtopic": "logic.biases.valuation",
+    "tier": "logic",
+    "type": "bias",
+    "statement": "Объект, находящийся во владении субъекта, оценивается выше, чем тот же объект в отсутствие владения.",
+    "formal_notation": "WTA(owner) > WTP(non_owner) при идентичном благе",
+    "conditions": "Установлено владение; оценивается готовность принять и заплатить",
+    "prereq": ["concept.economics.valuation", "concept.psychology.loss_aversion"],
+    "derives_from": [],
+    "confidence": 0.94,
+    "tags": ["bias", "endowment", "thaler", "valuation"],
+    "tier_extensions": {
+      "category": "bias",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "bias.logic.cognitive.ikea",
+    "schema_version": "3.2",
+    "domain": "logic.biases",
+    "subtopic": "logic.biases.valuation",
+    "tier": "logic",
+    "type": "bias",
+    "statement": "Объект, собранный или созданный собственным трудом, оценивается выше готового эквивалента сопоставимого качества.",
+    "formal_notation": "Value(self_built) > Value(prebuilt) при equal_quality",
+    "conditions": "Затрачен заметный труд на сборку; оценка после завершения",
+    "prereq": ["concept.psychology.effort", "concept.economics.valuation"],
+    "derives_from": [],
+    "confidence": 0.88,
+    "tags": ["bias", "ikea", "norton_mochon_ariely", "effort_justification"],
+    "tier_extensions": {
+      "category": "bias",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "bias.logic.cognitive.automation",
+    "schema_version": "3.2",
+    "domain": "logic.biases",
+    "subtopic": "logic.biases.trust",
+    "tier": "logic",
+    "type": "bias",
+    "statement": "Избыточное доверие к решениям автоматизированных систем при наличии противоречащих данных от человека или из контекста.",
+    "formal_notation": "Trust(machine_output) > Trust(human_data) при evidence(human) ≥ evidence(machine)",
+    "conditions": "Совместное принятие решений человеком и автоматикой",
+    "prereq": ["concept.logic.trust", "concept.engineering.automation"],
+    "derives_from": [],
+    "confidence": 0.89,
+    "tags": ["bias", "automation", "parasuraman", "trust"],
+    "tier_extensions": {
+      "category": "bias",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "bias.logic.cognitive.semmelweis_reflex",
+    "schema_version": "3.2",
+    "domain": "logic.biases",
+    "subtopic": "logic.biases.epistemic",
+    "tier": "logic",
+    "type": "bias",
+    "statement": "Рефлекторное отвержение фактов или гипотез, противоречащих устоявшимся нормам и парадигмам, без содержательной проверки.",
+    "formal_notation": "Reject(P) ← Contradicts(P, Paradigm) безотносительно Evidence(P)",
+    "conditions": "Новый результат конфликтует с консенсусом в сообществе",
+    "prereq": ["concept.philosophy.paradigm", "concept.logic.evidence"],
+    "derives_from": [],
+    "confidence": 0.86,
+    "tags": ["bias", "semmelweis", "paradigm", "rejection"],
+    "tier_extensions": {
+      "category": "bias",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "bias.logic.cognitive.backfire",
+    "schema_version": "3.2",
+    "domain": "logic.biases",
+    "subtopic": "logic.biases.epistemic",
+    "tier": "logic",
+    "type": "bias",
+    "statement": "Усиление исходного убеждения после предъявления опровергающих фактов в чувствительных идентичностных областях; эффект зависит от темы и спорен по воспроизводимости.",
+    "formal_notation": "Belief(P, after correction) > Belief(P, before)",
+    "conditions": "Идентичностно значимый тезис; прямое опровержение",
+    "prereq": ["concept.psychology.identity", "concept.logic.evidence"],
+    "derives_from": [],
+    "confidence": 0.81,
+    "tags": ["bias", "backfire", "nyhan_reifler", "epistemic"],
+    "tier_extensions": {
+      "category": "bias",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "bias.logic.cognitive.illusory_correlation",
+    "schema_version": "3.2",
+    "domain": "logic.biases",
+    "subtopic": "logic.biases.probabilistic",
+    "tier": "logic",
+    "type": "bias",
+    "statement": "Восприятие статистической связи между переменными при её отсутствии или слабости, особенно для редких совместных событий.",
+    "formal_notation": "P_perceived(corr) > 0 при P_real(corr) ≈ 0",
+    "conditions": "Заметные парные события; малая база; стереотипный ожидаемый паттерн",
+    "prereq": ["concept.logic.correlation", "concept.psychology.salience"],
+    "derives_from": [],
+    "confidence": 0.90,
+    "tags": ["bias", "illusory_correlation", "chapman", "salience"],
+    "tier_extensions": {
+      "category": "bias",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "bias.logic.cognitive.hot_hand",
+    "schema_version": "3.2",
+    "domain": "logic.biases",
+    "subtopic": "logic.biases.probabilistic",
+    "tier": "logic",
+    "type": "bias",
+    "statement": "Убеждение, что серия успехов в независимых испытаниях повышает вероятность следующего успеха; обратная сторона ошибки игрока.",
+    "formal_notation": "P_perceived(success | streak) > P_real(success); испытания i.i.d.",
+    "conditions": "Независимые испытания с интерпретацией серий как тренда",
+    "prereq": ["concept.math.probability.independence", "concept.logic.judgment"],
+    "derives_from": [],
+    "confidence": 0.88,
+    "tags": ["bias", "hot_hand", "gilovich", "streak"],
+    "tier_extensions": {
+      "category": "bias",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "bias.logic.cognitive.regression_neglect",
+    "schema_version": "3.2",
+    "domain": "logic.biases",
+    "subtopic": "logic.biases.probabilistic",
+    "tier": "logic",
+    "type": "bias",
+    "statement": "Игнорирование регрессии к среднему: экстремальные наблюдения трактуются как устойчивая тенденция, а не как флуктуация.",
+    "formal_notation": "E[X_{t+1} | X_t = extreme] → mean; cognition treats E[X_{t+1}] ≈ X_t",
+    "conditions": "Шумный измеритель; наблюдение хвостового значения",
+    "prereq": ["concept.math.statistics.regression_to_mean", "concept.logic.judgment"],
+    "derives_from": [],
+    "confidence": 0.92,
+    "tags": ["bias", "regression_neglect", "galton", "statistical"],
+    "tier_extensions": {
+      "category": "bias",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "bias.logic.cognitive.framing_recall",
+    "schema_version": "3.2",
+    "domain": "logic.biases",
+    "subtopic": "logic.biases.memory",
+    "tier": "logic",
+    "type": "bias",
+    "statement": "Реконструкция воспоминаний под влиянием формулировки и контекста запроса; постфактумная информация модифицирует исходный след памяти.",
+    "formal_notation": "Recall(E | frame_q) ≠ Recall(E | frame_p); leading wording reshapes content",
+    "conditions": "Восстановление событий с возможностью внушения деталей",
+    "prereq": ["concept.psychology.memory", "concept.linguistics.framing"],
+    "derives_from": [],
+    "confidence": 0.90,
+    "tags": ["bias", "framing_recall", "loftus", "memory"],
+    "tier_extensions": {
+      "category": "bias",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "bias.logic.cognitive.anchoring_adjustment",
+    "schema_version": "3.2",
+    "domain": "logic.biases",
+    "subtopic": "logic.biases.estimation",
+    "tier": "logic",
+    "type": "bias",
+    "statement": "Корректировка от первоначального якоря в сторону истинного значения оказывается недостаточной; итог смещён к якорю.",
+    "formal_notation": "Estimate = Anchor + Δ; Δ < (True − Anchor)",
+    "conditions": "Сознательная стратегия начать с якоря и корректировать",
+    "prereq": ["bias.logic.cognitive.anchoring", "concept.math.statistics.estimation"],
+    "derives_from": ["bias.logic.cognitive.anchoring"],
+    "confidence": 0.92,
+    "tags": ["bias", "anchoring", "adjustment", "tversky_kahneman"],
+    "tier_extensions": {
+      "category": "bias",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "bias.logic.cognitive.actor_observer",
+    "schema_version": "3.2",
+    "domain": "logic.biases",
+    "subtopic": "logic.biases.attribution",
+    "tier": "logic",
+    "type": "bias",
+    "statement": "Поведение себя объясняется ситуацией, поведение других — устойчивыми диспозициями личности; асимметрия атрибуции по роли.",
+    "formal_notation": "Attribute(self) → situation; Attribute(other) → disposition",
+    "conditions": "Объяснение идентичного поступка с разных ракурсов",
+    "prereq": ["concept.psychology.attribution", "concept.psychology.perspective"],
+    "derives_from": [],
+    "confidence": 0.88,
+    "tags": ["bias", "actor_observer", "jones_nisbett", "attribution"],
+    "tier_extensions": {
+      "category": "bias",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "bias.logic.cognitive.just_world",
+    "schema_version": "3.2",
+    "domain": "logic.biases",
+    "subtopic": "logic.biases.attribution",
+    "tier": "logic",
+    "type": "bias",
+    "statement": "Убеждение в справедливости мира приводит к атрибуции страданий жертв их собственным действиям или качествам без независимых данных.",
+    "formal_notation": "Suffer(X) ⊢ Deserve(X) при отсутствии причинного основания",
+    "conditions": "Наблюдение несчастья третьего лица под угрозой картины мира",
+    "prereq": ["concept.psychology.attribution", "concept.psychology.worldview"],
+    "derives_from": [],
+    "confidence": 0.89,
+    "tags": ["bias", "just_world", "lerner", "attribution"],
+    "tier_extensions": {
+      "category": "bias",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "bias.logic.cognitive.third_person_effect",
+    "schema_version": "3.2",
+    "domain": "logic.biases",
+    "subtopic": "logic.biases.media",
+    "tier": "logic",
+    "type": "bias",
+    "statement": "Восприятие медиасообщений как сильнее влияющих на других людей, чем на себя самого, при равных условиях воздействия.",
+    "formal_notation": "Effect_perceived(others) > Effect_perceived(self)",
+    "conditions": "Воздействие убеждающего контента; самооценка влияния",
+    "prereq": ["concept.communication.media", "concept.psychology.self"],
+    "derives_from": [],
+    "confidence": 0.87,
+    "tags": ["bias", "third_person_effect", "davison", "media"],
+    "tier_extensions": {
+      "category": "bias",
+      "is_axiomatic": false
+    }
+  }
+]

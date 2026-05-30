@@ -1,0 +1,542 @@
+[
+  {
+    "id": "model.abstract.mind.baddeley_wm",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.working_memory",
+    "tier": "abstract",
+    "type": "model",
+    "statement": "Модель рабочей памяти Бэддли: центральный исполнитель координирует фонологическую петлю, зрительно-пространственный блокнот и эпизодический буфер с долговременным хранилищем.",
+    "conditions": "Здоровая взрослая когниция; задачи двойной нагрузки",
+    "prereq": ["concept.abstract.mind.working_memory"],
+    "confidence": 0.78,
+    "tags": ["baddeley", "working_memory", "central_executive", "phonological_loop"],
+    "tier_extensions": {
+      "abstract_type": "memory",
+      "human_only": false,
+      "related_abstract": ["mechanism.abstract.mind.chunking", "concept.abstract.mind.attention_control"]
+    }
+  },
+  {
+    "id": "concept.abstract.mind.phonological_loop",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.working_memory",
+    "tier": "abstract",
+    "type": "concept",
+    "statement": "Фонологическая петля: подсистема рабочей памяти с фонологическим хранилищем длительностью около 2 секунд и артикуляционным повторением, удерживающим вербальный материал.",
+    "conditions": "Вербальные задачи; эффекты фонологического сходства и длины слов",
+    "prereq": ["model.abstract.mind.baddeley_wm"],
+    "confidence": 0.77,
+    "tags": ["phonological_loop", "subvocal_rehearsal", "verbal_memory"],
+    "tier_extensions": {
+      "abstract_type": "memory",
+      "human_only": false,
+      "related_abstract": ["concept.abstract.mind.visuospatial_sketchpad"]
+    }
+  },
+  {
+    "id": "concept.abstract.mind.visuospatial_sketchpad",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.working_memory",
+    "tier": "abstract",
+    "type": "concept",
+    "statement": "Зрительно-пространственный блокнот: подсистема рабочей памяти, удерживающая зрительные образы и пространственные отношения с компонентами визуального кэша и внутреннего писца.",
+    "conditions": "Задачи мысленного вращения, навигации и зрительного слежения",
+    "prereq": ["model.abstract.mind.baddeley_wm"],
+    "confidence": 0.74,
+    "tags": ["visuospatial", "mental_imagery", "spatial_memory"],
+    "tier_extensions": {
+      "abstract_type": "memory",
+      "human_only": false,
+      "related_abstract": ["concept.abstract.mind.mental_imagery"]
+    }
+  },
+  {
+    "id": "concept.abstract.mind.episodic_buffer",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.working_memory",
+    "tier": "abstract",
+    "type": "concept",
+    "statement": "Эпизодический буфер: добавленный Бэддли в 2000 компонент рабочей памяти, интегрирующий мультимодальную информацию из подсистем и долговременной памяти в связные эпизоды.",
+    "conditions": "Связывание информации разных кодов; зависит от центрального исполнителя",
+    "prereq": ["model.abstract.mind.baddeley_wm", "concept.abstract.mind.episodic_memory"],
+    "confidence": 0.70,
+    "tags": ["episodic_buffer", "binding", "multimodal"],
+    "tier_extensions": {
+      "abstract_type": "memory",
+      "human_only": false,
+      "related_abstract": ["concept.abstract.mind.phonological_loop"]
+    }
+  },
+  {
+    "id": "model.abstract.mind.dual_process",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.reasoning",
+    "tier": "abstract",
+    "type": "model",
+    "statement": "Теория двух систем Канемана: Система 1 быстрая автоматическая ассоциативная, Система 2 медленная контролируемая аналитическая; конфликт систем порождает когнитивные искажения.",
+    "conditions": "Задачи суждения и принятия решений в условиях неопределённости",
+    "prereq": ["concept.abstract.mind.metacognition"],
+    "confidence": 0.72,
+    "tags": ["kahneman", "system1", "system2", "dual_process"],
+    "tier_extensions": {
+      "abstract_type": "metacognition",
+      "human_only": false,
+      "related_abstract": ["mechanism.abstract.mind.insight", "concept.abstract.mind.cognitive_bias"]
+    }
+  },
+  {
+    "id": "concept.abstract.language.generative_grammar",
+    "schema_version": "3.2",
+    "domain": "abstract.language",
+    "subtopic": "abstract.language.syntax",
+    "tier": "abstract",
+    "type": "concept",
+    "statement": "Порождающая грамматика Хомского: конечный набор правил, генерирующий бесконечное множество грамматически правильных предложений языка через рекурсивные синтаксические преобразования.",
+    "conditions": "Естественные языки с рекурсивной фразовой структурой",
+    "prereq": ["concept.abstract.language.linguistic_structure"],
+    "confidence": 0.74,
+    "tags": ["chomsky", "generative", "syntax", "recursion"],
+    "tier_extensions": {
+      "abstract_type": "pattern",
+      "human_only": true,
+      "related_abstract": ["pattern.abstract.language.universals"]
+    }
+  },
+  {
+    "id": "mechanism.abstract.mind.broca_processing",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.language_processing",
+    "tier": "abstract",
+    "type": "mechanism",
+    "statement": "Зона Брока в нижней лобной извилине доминантного полушария обеспечивает синтаксическое программирование и моторное планирование речи; поражение даёт аграмматичную афазию.",
+    "conditions": "Здоровый левополушарный речевой контроль у правшей",
+    "prereq": ["concept.abstract.language.generative_grammar"],
+    "confidence": 0.82,
+    "tags": ["broca", "syntax", "aphasia", "speech_production"],
+    "tier_extensions": {
+      "abstract_type": "mechanism",
+      "human_only": true,
+      "related_abstract": ["mechanism.abstract.mind.wernicke_processing"]
+    }
+  },
+  {
+    "id": "mechanism.abstract.mind.wernicke_processing",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.language_processing",
+    "tier": "abstract",
+    "type": "mechanism",
+    "statement": "Зона Вернике в задней верхней височной извилине обеспечивает декодирование звуковой формы слов и доступ к их семантике; поражение даёт беглую но бессмысленную речь.",
+    "conditions": "Левополушарная локализация в типичных случаях",
+    "prereq": ["concept.abstract.language.linguistic_structure"],
+    "confidence": 0.82,
+    "tags": ["wernicke", "comprehension", "aphasia", "semantics"],
+    "tier_extensions": {
+      "abstract_type": "mechanism",
+      "human_only": true,
+      "related_abstract": ["mechanism.abstract.mind.broca_processing"]
+    }
+  },
+  {
+    "id": "pattern.abstract.mind.bilingual_advantage",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.bilingualism",
+    "tier": "abstract",
+    "type": "pattern",
+    "statement": "Билингвизм связан с усилением исполнительного контроля и торможения нерелевантной информации, отсрочкой клинических проявлений деменции на 4-5 лет в среднем по когортам.",
+    "conditions": "Активный двуязычный опыт; эффект частично оспаривается метаанализами",
+    "prereq": ["model.abstract.mind.baddeley_wm"],
+    "confidence": 0.55,
+    "tags": ["bilingualism", "executive_function", "cognitive_reserve"],
+    "tier_extensions": {
+      "abstract_type": "pattern",
+      "human_only": true,
+      "related_abstract": ["model.abstract.mind.dual_process"]
+    }
+  },
+  {
+    "id": "mechanism.abstract.mind.semantic_priming",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.priming",
+    "tier": "abstract",
+    "type": "mechanism",
+    "statement": "Семантический прайминг: предъявление слова-стимула ускоряет распознавание семантически связанной цели через распространяющуюся активацию в сети понятий.",
+    "conditions": "Короткий интервал SOA; лексические задачи",
+    "prereq": ["concept.abstract.mind.semantic_memory"],
+    "confidence": 0.80,
+    "tags": ["priming", "semantic_network", "spreading_activation"],
+    "tier_extensions": {
+      "abstract_type": "mechanism",
+      "human_only": false,
+      "related_abstract": ["mechanism.abstract.mind.perceptual_priming"]
+    }
+  },
+  {
+    "id": "mechanism.abstract.mind.perceptual_priming",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.priming",
+    "tier": "abstract",
+    "type": "mechanism",
+    "statement": "Перцептивный прайминг: предшествующее восприятие стимула ускоряет последующую обработку идентичной перцептивной формы независимо от семантического содержания.",
+    "conditions": "Совпадение модальности и физических признаков",
+    "prereq": ["mechanism.abstract.mind.semantic_priming"],
+    "confidence": 0.76,
+    "tags": ["priming", "perceptual", "implicit_memory"],
+    "tier_extensions": {
+      "abstract_type": "mechanism",
+      "human_only": false,
+      "related_abstract": ["mechanism.abstract.mind.semantic_priming"]
+    }
+  },
+  {
+    "id": "concept.abstract.mind.verbal_protocol",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.methodology",
+    "tier": "abstract",
+    "type": "concept",
+    "statement": "Метод мышления вслух Эрикссона-Саймона: участник вербализует поток сознания при решении задачи, давая доступ к содержанию рабочей памяти без интерпретации процесса.",
+    "conditions": "Минимизация мета-комментариев; задачи средней сложности",
+    "prereq": ["concept.abstract.mind.metacognition"],
+    "confidence": 0.70,
+    "tags": ["think_aloud", "protocol_analysis", "ericsson"],
+    "tier_extensions": {
+      "abstract_type": "metacognition",
+      "human_only": true,
+      "related_abstract": ["concept.abstract.mind.metacognition"]
+    }
+  },
+  {
+    "id": "mechanism.abstract.mind.aha_effect",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.insight",
+    "tier": "abstract",
+    "type": "mechanism",
+    "statement": "Ага-эффект: внезапное переструктурирование задачи с резким переходом от непонимания к решению, сопровождаемое всплеском гамма-ритма в правой передней височной извилине.",
+    "conditions": "Тупиковые задачи; необходимость преодоления установки",
+    "prereq": ["mechanism.abstract.mind.insight"],
+    "confidence": 0.65,
+    "tags": ["aha", "insight", "restructuring", "gamma"],
+    "tier_extensions": {
+      "abstract_type": "creativity",
+      "human_only": false,
+      "related_abstract": ["mechanism.abstract.mind.incubation"]
+    }
+  },
+  {
+    "id": "concept.abstract.mind.eye_tracking_paradigm",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.methodology",
+    "tier": "abstract",
+    "type": "concept",
+    "statement": "Парадигма зрительной точки фиксации: регистрация саккад и фиксаций глаза индексирует распределение внимания и когнитивную нагрузку при чтении и сцен-восприятии.",
+    "conditions": "Калиброванная окулография; контроль освещения",
+    "prereq": ["concept.abstract.mind.attention"],
+    "confidence": 0.78,
+    "tags": ["eye_tracking", "fixation", "saccade", "attention"],
+    "tier_extensions": {
+      "abstract_type": "pattern",
+      "human_only": false,
+      "related_abstract": ["concept.abstract.mind.verbal_protocol"]
+    }
+  },
+  {
+    "id": "concept.abstract.mind.symbol_grounding",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.cognition",
+    "tier": "abstract",
+    "type": "concept",
+    "statement": "Проблема символьного основания Харнада: как абстрактные символы приобретают значение, не сводящееся к другим символам, через связь с сенсомоторным опытом агента.",
+    "conditions": "Системы манипуляции символами без сенсорного контакта",
+    "prereq": ["concept.abstract.mind.mental_representation"],
+    "confidence": 0.66,
+    "tags": ["harnad", "symbol_grounding", "embodiment", "semantics"],
+    "tier_extensions": {
+      "abstract_type": "metacognition",
+      "human_only": false,
+      "related_abstract": ["relation.abstract.mind.symbolic_vs_connectionist"]
+    }
+  },
+  {
+    "id": "relation.abstract.mind.symbolic_vs_connectionist",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.cognition",
+    "tier": "abstract",
+    "type": "relation",
+    "statement": "Символьный подход моделирует когницию как манипуляцию дискретными символами по правилам, коннекционистский как распределённую активацию узлов сети; гибриды совмещают оба уровня.",
+    "conditions": "Конкурирующие парадигмы когнитивной науки 1980-х",
+    "prereq": ["concept.abstract.mind.symbol_grounding"],
+    "confidence": 0.70,
+    "tags": ["symbolic", "connectionist", "cognitive_architecture"],
+    "tier_extensions": {
+      "abstract_type": "metacognition",
+      "human_only": false,
+      "related_abstract": ["concept.abstract.mind.symbol_grounding"]
+    }
+  },
+  {
+    "id": "concept.abstract.mind.mental_imagery_debate",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.imagery",
+    "tier": "abstract",
+    "type": "concept",
+    "statement": "Дискуссия Кослин-Пилишин: Кослин защищает депиктивный пространственный формат ментальных образов, Пилишин настаивает на пропозициональном кодировании с поверхностной аналогией.",
+    "conditions": "Эксперименты с мысленным сканированием и вращением",
+    "prereq": ["concept.abstract.mind.visuospatial_sketchpad"],
+    "confidence": 0.62,
+    "tags": ["mental_imagery", "kosslyn", "pylyshyn", "depictive"],
+    "tier_extensions": {
+      "abstract_type": "imagination",
+      "human_only": false,
+      "related_abstract": ["concept.abstract.mind.visuospatial_sketchpad"]
+    }
+  },
+  {
+    "id": "concept.abstract.mind.episodic_future_thinking",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.prospection",
+    "tier": "abstract",
+    "type": "concept",
+    "statement": "Эпизодическая будущая мысль: проективное конструирование возможного личного события с привлечением сети эпизодической памяти и сети по умолчанию для симуляции деталей сцены.",
+    "conditions": "Сохранность гиппокампа; временной горизонт от минут до десятилетий",
+    "prereq": ["mechanism.abstract.mind.mental_time_travel"],
+    "confidence": 0.72,
+    "tags": ["prospection", "future_thinking", "episodic", "simulation"],
+    "tier_extensions": {
+      "abstract_type": "imagination",
+      "human_only": false,
+      "related_abstract": ["mechanism.abstract.mind.mental_simulation"]
+    }
+  },
+  {
+    "id": "concept.abstract.mind.self_awareness",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.self",
+    "tier": "abstract",
+    "type": "concept",
+    "statement": "Самосознание: способность субъекта делать собственные состояния объектом рефлексии, операционализируемая через зеркальный тест, отчёт о намерениях и автобиографическую память.",
+    "conditions": "Развитая префронтальная кора; возраст человека от 18 месяцев",
+    "prereq": ["concept.abstract.mind.metacognition"],
+    "confidence": 0.74,
+    "tags": ["self_awareness", "mirror_test", "reflection"],
+    "tier_extensions": {
+      "abstract_type": "metacognition",
+      "human_only": false,
+      "related_abstract": ["mechanism.abstract.mind.narrative_self"]
+    }
+  },
+  {
+    "id": "concept.abstract.mind.narrative_identity_ricoeur",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.identity",
+    "tier": "abstract",
+    "type": "concept",
+    "statement": "Нарративная идентичность Рикёра: единство личности конституируется сюжетным сопряжением разнородных событий жизни в связную историю с темпоральной согласованностью.",
+    "conditions": "Языковое сообщество и автобиографический жанр",
+    "prereq": ["mechanism.abstract.mind.narrative_self"],
+    "confidence": 0.65,
+    "tags": ["ricoeur", "narrative_identity", "hermeneutics"],
+    "tier_extensions": {
+      "abstract_type": "metacognition",
+      "human_only": true,
+      "related_abstract": ["mechanism.abstract.mind.narrative_self", "concept.abstract.mind.self_awareness"]
+    }
+  },
+  {
+    "id": "mechanism.abstract.mind.confabulation",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.memory_errors",
+    "tier": "abstract",
+    "type": "mechanism",
+    "statement": "Конфабуляция: непреднамеренное продуцирование ложных воспоминаний с субъективной уверенностью в их истинности, типично при поражении вентромедиальной префронтальной коры.",
+    "conditions": "Дефицит мониторинга источника; синдром Корсакова",
+    "prereq": ["mechanism.abstract.mind.reconstructive_memory"],
+    "confidence": 0.74,
+    "tags": ["confabulation", "source_monitoring", "korsakoff"],
+    "tier_extensions": {
+      "abstract_type": "memory",
+      "human_only": false,
+      "related_abstract": ["mechanism.abstract.mind.false_memory_loftus"]
+    }
+  },
+  {
+    "id": "mechanism.abstract.mind.false_memory_loftus",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.memory_errors",
+    "tier": "abstract",
+    "type": "mechanism",
+    "statement": "Эффект ложной памяти Лофтус: внушаемая информация после события встраивается в воспоминание свидетеля, изменяя детали с высокой субъективной уверенностью.",
+    "conditions": "Постсобытийное внушение; неполная исходная кодировка",
+    "prereq": ["mechanism.abstract.mind.reconstructive_memory"],
+    "confidence": 0.78,
+    "tags": ["loftus", "false_memory", "misinformation", "eyewitness"],
+    "tier_extensions": {
+      "abstract_type": "memory",
+      "human_only": false,
+      "related_abstract": ["mechanism.abstract.mind.confabulation", "pattern.abstract.mind.mandela_effect"]
+    }
+  },
+  {
+    "id": "pattern.abstract.mind.mandela_effect",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.memory_errors",
+    "tier": "abstract",
+    "type": "pattern",
+    "statement": "Эффект Манделы: устойчивое коллективное ложное воспоминание о деталях известных событий или брендов, объясняемое схожими когнитивными схемами и социальным заражением.",
+    "conditions": "Распространённая культурная схема и медийное усиление",
+    "prereq": ["mechanism.abstract.mind.false_memory_loftus"],
+    "confidence": 0.60,
+    "tags": ["mandela_effect", "collective_memory", "schema"],
+    "tier_extensions": {
+      "abstract_type": "memory",
+      "human_only": true,
+      "related_abstract": ["mechanism.abstract.mind.false_memory_loftus"]
+    }
+  },
+  {
+    "id": "pattern.abstract.mind.bizarreness_effect",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.memory",
+    "tier": "abstract",
+    "type": "pattern",
+    "statement": "Эффект странности Бизарра: необычные образы воспроизводятся лучше обычных в смешанных списках за счёт повышенной отличительности следа памяти.",
+    "conditions": "Смешанные списки; свободное воспроизведение",
+    "prereq": ["concept.abstract.mind.episodic_memory"],
+    "confidence": 0.62,
+    "tags": ["bizarreness", "distinctiveness", "recall"],
+    "tier_extensions": {
+      "abstract_type": "memory",
+      "human_only": false,
+      "related_abstract": ["pattern.abstract.mind.von_restorff"]
+    }
+  },
+  {
+    "id": "pattern.abstract.mind.serial_position",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.memory",
+    "tier": "abstract",
+    "type": "pattern",
+    "statement": "Эффект серийного позиционирования: при свободном воспроизведении лучше запоминаются первые и последние элементы списка, формируя U-образную кривую с эффектами первичности и недавности.",
+    "conditions": "Списочное запоминание; отсутствие интерферирующих задач",
+    "prereq": ["concept.abstract.mind.working_memory"],
+    "confidence": 0.85,
+    "tags": ["primacy", "recency", "serial_position"],
+    "tier_extensions": {
+      "abstract_type": "memory",
+      "human_only": false,
+      "related_abstract": ["pattern.abstract.mind.testing_effect"]
+    }
+  },
+  {
+    "id": "pattern.abstract.mind.testing_effect",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.learning",
+    "tier": "abstract",
+    "type": "pattern",
+    "statement": "Тестовый эффект Роудигера-Карпике: активное извлечение материала из памяти упрочняет след сильнее повторного пассивного чтения, особенно на отсроченных тестах.",
+    "conditions": "Отсроченное тестирование; усилия извлечения",
+    "prereq": ["mechanism.abstract.mind.memory_consolidation"],
+    "confidence": 0.82,
+    "tags": ["testing_effect", "retrieval_practice", "learning"],
+    "tier_extensions": {
+      "abstract_type": "memory",
+      "human_only": false,
+      "related_abstract": ["pattern.abstract.mind.serial_position"]
+    }
+  },
+  {
+    "id": "pattern.abstract.mind.von_restorff",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.memory",
+    "tier": "abstract",
+    "type": "pattern",
+    "statement": "Эффект изоляции фон Ресторфа: выделяющийся элемент списка воспроизводится лучше окружающих за счёт перцептивной и категориальной отличительности.",
+    "conditions": "Контрастное выделение цвета, шрифта или категории",
+    "prereq": ["pattern.abstract.mind.bizarreness_effect"],
+    "confidence": 0.80,
+    "tags": ["von_restorff", "isolation", "distinctiveness"],
+    "tier_extensions": {
+      "abstract_type": "memory",
+      "human_only": false,
+      "related_abstract": ["pattern.abstract.mind.bizarreness_effect"]
+    }
+  },
+  {
+    "id": "pattern.abstract.mind.self_reference",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.memory",
+    "tier": "abstract",
+    "type": "pattern",
+    "statement": "Эффект самореференции Роджерса: материал, обработанный с привязкой к Я-концепции, воспроизводится лучше семантически или фонетически обработанного.",
+    "conditions": "Глубокая семантическая обработка с автобиографическим контекстом",
+    "prereq": ["concept.abstract.mind.self_awareness"],
+    "confidence": 0.76,
+    "tags": ["self_reference", "encoding", "self_concept"],
+    "tier_extensions": {
+      "abstract_type": "memory",
+      "human_only": true,
+      "related_abstract": ["concept.abstract.mind.self_awareness"]
+    }
+  },
+  {
+    "id": "mechanism.abstract.mind.flashbulb_memory",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.memory",
+    "tier": "abstract",
+    "type": "mechanism",
+    "statement": "Флэшбулб-память Брауна-Кулика: ярко детализированное воспоминание о моменте получения шокирующей новости, сохраняющее уверенность вопреки фактическим искажениям при перепроверке.",
+    "conditions": "Высокая эмоциональная значимость и личная вовлечённость",
+    "prereq": ["concept.abstract.mind.episodic_memory"],
+    "confidence": 0.66,
+    "tags": ["flashbulb", "brown_kulik", "emotion_memory"],
+    "tier_extensions": {
+      "abstract_type": "memory",
+      "human_only": true,
+      "related_abstract": ["mechanism.abstract.mind.confabulation"]
+    }
+  },
+  {
+    "id": "concept.abstract.mind.attention_control",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.attention",
+    "tier": "abstract",
+    "type": "concept",
+    "statement": "Контроль внимания: способность направлять и удерживать обработку на релевантной информации при подавлении отвлекающих стимулов, измеряемая Струп-тестом и фланкер-задачей.",
+    "conditions": "Целенаправленное поведение; фронто-теменная сеть",
+    "prereq": ["model.abstract.mind.baddeley_wm"],
+    "confidence": 0.80,
+    "tags": ["attention", "executive_control", "stroop"],
+    "tier_extensions": {
+      "abstract_type": "metacognition",
+      "human_only": false,
+      "related_abstract": ["concept.abstract.mind.eye_tracking_paradigm"]
+    }
+  }
+]

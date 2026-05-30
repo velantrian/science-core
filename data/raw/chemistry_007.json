@@ -1,0 +1,623 @@
+[
+  {
+    "id": "concept.chemistry.biomolecules.amino_acid_canonical",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.biomolecules",
+    "subtopic": "chemistry.biomolecules.amino_acids",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "20 канонических протеиногенных α-аминокислот имеют общий каркас H2N-CHR-COOH; различаются боковой цепью R; кодируются стандартным генетическим кодом.",
+    "formal_notation": "H2N-CHR-COOH",
+    "conditions": "Биосинтез на рибосоме; pH 7.4 — цвиттер-ион",
+    "prereq": [
+      "concept.chemistry.biochemistry.amino_acid"
+    ],
+    "confidence": 0.99,
+    "tags": [
+      "amino_acid",
+      "canonical",
+      "proteinogenic"
+    ]
+  },
+  {
+    "id": "concept.chemistry.biomolecules.amino_acid_groups",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.biomolecules",
+    "subtopic": "chemistry.biomolecules.amino_acids",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "Канонические аминокислоты делятся на классы по R: неполярные (Gly, Ala, Val, Leu, Ile, Pro, Met), ароматические (Phe, Tyr, Trp), полярные нейтральные (Ser, Thr, Cys, Asn, Gln), кислые (Asp, Glu), основные (Lys, Arg, His).",
+    "conditions": "pH 7.4 водный раствор",
+    "prereq": [
+      "concept.chemistry.biomolecules.amino_acid_canonical"
+    ],
+    "confidence": 0.98,
+    "tags": [
+      "amino_acid",
+      "classification",
+      "polarity"
+    ]
+  },
+  {
+    "id": "concept.chemistry.biomolecules.zwitterion",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.biomolecules",
+    "subtopic": "chemistry.biomolecules.amino_acids",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "Цвиттер-ион аминокислоты — внутренняя соль с протонированной -NH3+ и депротонированным -COO-; изоэлектрическая точка pI — pH с нулевым суммарным зарядом.",
+    "formal_notation": "+H3N-CHR-COO-",
+    "conditions": "Водный раствор; pH ≈ pI",
+    "prereq": [
+      "concept.chemistry.biomolecules.amino_acid_canonical"
+    ],
+    "confidence": 0.98,
+    "tags": [
+      "zwitterion",
+      "isoelectric_point",
+      "amino_acid"
+    ]
+  },
+  {
+    "id": "concept.chemistry.biomolecules.disulfide_bond",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.biomolecules",
+    "subtopic": "chemistry.biomolecules.proteins",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "Дисульфидная связь -S-S- между двумя цистеинами образуется окислением тиолов; энергия ≈ 250 кДж/моль; стабилизирует третичную и четвертичную структуру белков.",
+    "formal_notation": "2 R-SH → R-S-S-R + 2H+ + 2e-",
+    "conditions": "Окислительная среда (эндоплазматический ретикулум, внеклеточные белки)",
+    "prereq": [
+      "concept.chemistry.biomolecules.amino_acid_canonical"
+    ],
+    "confidence": 0.97,
+    "tags": [
+      "disulfide",
+      "cysteine",
+      "tertiary_structure"
+    ]
+  },
+  {
+    "id": "concept.chemistry.biomolecules.alpha_helix",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.biomolecules",
+    "subtopic": "chemistry.biomolecules.proteins",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "α-Спираль — элемент вторичной структуры белка: 3.6 аминокислоты на виток, период 0.54 нм, водородные связи C=O···H-N между i и i+4 остатками; правозакрученная.",
+    "formal_notation": "период 5.4 Å; 3.6 а.о./виток",
+    "conditions": "Полипептидная цепь с гибкими R; не Pro/Gly в центре",
+    "prereq": [
+      "concept.chemistry.biochemistry.peptide_bond"
+    ],
+    "confidence": 0.98,
+    "tags": [
+      "alpha_helix",
+      "secondary_structure",
+      "hydrogen_bond"
+    ]
+  },
+  {
+    "id": "concept.chemistry.biomolecules.beta_sheet",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.biomolecules",
+    "subtopic": "chemistry.biomolecules.proteins",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "β-Лист — вторичная структура из вытянутых β-нитей, связанных межцепочечными H-связями C=O···H-N; параллельная или антипараллельная ориентация; складчатая геометрия.",
+    "conditions": "Полипептидная цепь; гидрофобные/полярные остатки чередуются",
+    "prereq": [
+      "concept.chemistry.biochemistry.peptide_bond"
+    ],
+    "confidence": 0.98,
+    "tags": [
+      "beta_sheet",
+      "secondary_structure",
+      "parallel"
+    ]
+  },
+  {
+    "id": "concept.chemistry.biomolecules.quaternary_structure",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.biomolecules",
+    "subtopic": "chemistry.biomolecules.proteins",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "Четвертичная структура белка — пространственное расположение нескольких полипептидных субъединиц, удерживаемых нековалентными взаимодействиями и иногда -S-S- мостиками.",
+    "conditions": "Олигомерные белки (≥2 субъединиц)",
+    "prereq": [
+      "concept.chemistry.biochemistry.protein"
+    ],
+    "confidence": 0.97,
+    "tags": [
+      "quaternary_structure",
+      "subunit",
+      "oligomer"
+    ]
+  },
+  {
+    "id": "concept.chemistry.biomolecules.enzyme_catalyst",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.biomolecules",
+    "subtopic": "chemistry.biomolecules.enzymes",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "Фермент — биологический катализатор белковой природы (реже РНК), снижающий Ea реакции через комплементарность переходному состоянию; ускорение 10^6–10^17 раз.",
+    "conditions": "Физиологические T, pH; специфический субстрат",
+    "prereq": [
+      "concept.chemistry.kinetics.catalyst",
+      "concept.chemistry.biochemistry.protein"
+    ],
+    "confidence": 0.98,
+    "tags": [
+      "enzyme",
+      "biocatalyst",
+      "transition_state"
+    ]
+  },
+  {
+    "id": "mechanism.chemistry.biomolecules.competitive_inhibition",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.biomolecules",
+    "subtopic": "chemistry.biomolecules.enzymes",
+    "tier": "invariant",
+    "type": "mechanism",
+    "statement": "Конкурентное ингибирование: ингибитор связывает активный центр, конкурируя с субстратом; повышает кажущуюся Km, Vmax не меняется; снимается избытком субстрата.",
+    "formal_notation": "Km^app = Km(1+[I]/Ki); Vmax = const",
+    "conditions": "Структурное сходство ингибитора и субстрата",
+    "prereq": [
+      "concept.chemistry.biomolecules.enzyme_catalyst"
+    ],
+    "confidence": 0.94,
+    "tags": [
+      "competitive_inhibition",
+      "km",
+      "enzyme_kinetics"
+    ]
+  },
+  {
+    "id": "mechanism.chemistry.biomolecules.noncompetitive_inhibition",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.biomolecules",
+    "subtopic": "chemistry.biomolecules.enzymes",
+    "tier": "invariant",
+    "type": "mechanism",
+    "statement": "Неконкурентное ингибирование: ингибитор связывает аллостерический сайт, снижая Vmax; Km не меняется; избыток субстрата не снимает блок.",
+    "formal_notation": "Vmax^app = Vmax/(1+[I]/Ki); Km = const",
+    "conditions": "Аллостерический сайт; разные эпитопы связывания",
+    "prereq": [
+      "concept.chemistry.biomolecules.enzyme_catalyst"
+    ],
+    "confidence": 0.93,
+    "tags": [
+      "noncompetitive_inhibition",
+      "vmax",
+      "allosteric"
+    ]
+  },
+  {
+    "id": "material.chemistry.biomolecules.glucose",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.biomolecules",
+    "subtopic": "chemistry.biomolecules.carbohydrates",
+    "tier": "invariant",
+    "type": "material",
+    "statement": "D-Глюкоза C6H12O6 — альдогексоза; в растворе равновесие открытая форма / α-пиранозы / β-пиранозы (~36:64 при 25 °C); основной субстрат гликолиза.",
+    "formal_notation": "C6H12O6",
+    "conditions": "Водный раствор; T 25 °C; pH 7",
+    "prereq": [
+      "concept.chemistry.organic.aldehyde"
+    ],
+    "confidence": 0.99,
+    "tags": [
+      "glucose",
+      "monosaccharide",
+      "aldohexose"
+    ]
+  },
+  {
+    "id": "material.chemistry.biomolecules.fructose",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.biomolecules",
+    "subtopic": "chemistry.biomolecules.carbohydrates",
+    "tier": "invariant",
+    "type": "material",
+    "statement": "D-Фруктоза C6H12O6 — кетогексоза, структурный изомер глюкозы; преобладает β-фуранозная форма; самый сладкий природный моносахарид.",
+    "formal_notation": "C6H12O6 (кетогексоза)",
+    "conditions": "Водный раствор; pH 7",
+    "prereq": [
+      "concept.chemistry.organic.ketone"
+    ],
+    "confidence": 0.98,
+    "tags": [
+      "fructose",
+      "monosaccharide",
+      "ketohexose"
+    ]
+  },
+  {
+    "id": "material.chemistry.biomolecules.galactose",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.biomolecules",
+    "subtopic": "chemistry.biomolecules.carbohydrates",
+    "tier": "invariant",
+    "type": "material",
+    "statement": "D-Галактоза C6H12O6 — альдогексоза, C4-эпимер глюкозы; компонент лактозы и галактолипидов мозга.",
+    "formal_notation": "C6H12O6 (C4-эпимер глюкозы)",
+    "conditions": "Водный раствор",
+    "prereq": [
+      "material.chemistry.biomolecules.glucose"
+    ],
+    "confidence": 0.97,
+    "tags": [
+      "galactose",
+      "monosaccharide",
+      "epimer"
+    ]
+  },
+  {
+    "id": "material.chemistry.biomolecules.sucrose",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.biomolecules",
+    "subtopic": "chemistry.biomolecules.carbohydrates",
+    "tier": "invariant",
+    "type": "material",
+    "statement": "Сахароза C12H22O11 — невосстанавливающий дисахарид; α-D-глюкоза и β-D-фруктоза связаны α,β-1,2-гликозидной связью.",
+    "formal_notation": "α-D-Glc-(1→2)-β-D-Fru",
+    "conditions": "Кристаллическое; растворима в воде",
+    "prereq": [
+      "material.chemistry.biomolecules.glucose",
+      "material.chemistry.biomolecules.fructose"
+    ],
+    "confidence": 0.98,
+    "tags": [
+      "sucrose",
+      "disaccharide",
+      "glycosidic_bond"
+    ]
+  },
+  {
+    "id": "material.chemistry.biomolecules.lactose",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.biomolecules",
+    "subtopic": "chemistry.biomolecules.carbohydrates",
+    "tier": "invariant",
+    "type": "material",
+    "statement": "Лактоза C12H22O11 — восстанавливающий дисахарид молока; β-D-галактоза β-1,4-связана с D-глюкозой; гидролизуется лактазой.",
+    "formal_notation": "β-D-Gal-(1→4)-D-Glc",
+    "conditions": "Растворима в воде; pH 7",
+    "prereq": [
+      "material.chemistry.biomolecules.galactose",
+      "material.chemistry.biomolecules.glucose"
+    ],
+    "confidence": 0.98,
+    "tags": [
+      "lactose",
+      "disaccharide",
+      "milk_sugar"
+    ]
+  },
+  {
+    "id": "material.chemistry.biomolecules.maltose",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.biomolecules",
+    "subtopic": "chemistry.biomolecules.carbohydrates",
+    "tier": "invariant",
+    "type": "material",
+    "statement": "Мальтоза C12H22O11 — восстанавливающий дисахарид из двух α-D-глюкоз, связанных α-1,4-гликозидной связью; продукт гидролиза крахмала.",
+    "formal_notation": "α-D-Glc-(1→4)-D-Glc",
+    "conditions": "Растворима в воде",
+    "prereq": [
+      "material.chemistry.biomolecules.glucose"
+    ],
+    "confidence": 0.98,
+    "tags": [
+      "maltose",
+      "disaccharide",
+      "starch_hydrolysis"
+    ]
+  },
+  {
+    "id": "material.chemistry.biomolecules.starch",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.biomolecules",
+    "subtopic": "chemistry.biomolecules.carbohydrates",
+    "tier": "invariant",
+    "type": "material",
+    "statement": "Крахмал — растительный полисахарид: амилоза (линейная, α-1,4) и амилопектин (разветвлённый, α-1,4 + α-1,6 каждые 24–30 остатков).",
+    "formal_notation": "(C6H10O5)n",
+    "conditions": "Хранится в зёрнах амилопластов растений",
+    "prereq": [
+      "material.chemistry.biomolecules.glucose"
+    ],
+    "confidence": 0.97,
+    "tags": [
+      "starch",
+      "polysaccharide",
+      "amylose",
+      "amylopectin"
+    ]
+  },
+  {
+    "id": "material.chemistry.biomolecules.glycogen",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.biomolecules",
+    "subtopic": "chemistry.biomolecules.carbohydrates",
+    "tier": "invariant",
+    "type": "material",
+    "statement": "Гликоген — животный полисахарид-аналог амилопектина: α-1,4-цепи с α-1,6-ветвлением каждые 8–12 остатков; хранится в печени и мышцах.",
+    "formal_notation": "(C6H10O5)n, высокая ветвистость",
+    "conditions": "Цитоплазма гепатоцитов и миоцитов",
+    "prereq": [
+      "material.chemistry.biomolecules.glucose"
+    ],
+    "confidence": 0.97,
+    "tags": [
+      "glycogen",
+      "polysaccharide",
+      "branched"
+    ]
+  },
+  {
+    "id": "material.chemistry.biomolecules.cellulose",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.biomolecules",
+    "subtopic": "chemistry.biomolecules.carbohydrates",
+    "tier": "invariant",
+    "type": "material",
+    "statement": "Целлюлоза — линейный β-1,4-полимер D-глюкозы; параллельные цепи образуют микрофибриллы с межцепочечными H-связями; структурный материал клеточной стенки растений.",
+    "formal_notation": "(β-D-Glc)n, β-1,4",
+    "conditions": "Клеточная стенка растений; нерастворима в воде",
+    "prereq": [
+      "material.chemistry.biomolecules.glucose"
+    ],
+    "confidence": 0.98,
+    "tags": [
+      "cellulose",
+      "polysaccharide",
+      "cell_wall"
+    ]
+  },
+  {
+    "id": "concept.chemistry.biomolecules.phospholipid",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.biomolecules",
+    "subtopic": "chemistry.biomolecules.lipids",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "Фосфолипид — амфифильная молекула с глицерин-фосфатным гидрофильным головным фрагментом и двумя гидрофобными цепями жирных кислот; основа бислоя мембран.",
+    "conditions": "Водная среда; T выше Tпл липида",
+    "prereq": [
+      "concept.chemistry.organic.ester"
+    ],
+    "confidence": 0.98,
+    "tags": [
+      "phospholipid",
+      "amphiphile",
+      "membrane"
+    ]
+  },
+  {
+    "id": "concept.chemistry.biomolecules.triglyceride",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.biomolecules",
+    "subtopic": "chemistry.biomolecules.lipids",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "Триглицерид — сложный эфир глицерина и трёх жирных кислот; основная форма запаса энергии животных и масел растений.",
+    "formal_notation": "CH2(OCOR)-CH(OCOR')-CH2(OCOR'')",
+    "conditions": "Адипоциты и масличные семена; гидрофобный",
+    "prereq": [
+      "concept.chemistry.organic.ester"
+    ],
+    "confidence": 0.98,
+    "tags": [
+      "triglyceride",
+      "lipid",
+      "energy_storage"
+    ]
+  },
+  {
+    "id": "concept.chemistry.biomolecules.steroid",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.biomolecules",
+    "subtopic": "chemistry.biomolecules.lipids",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "Стероид — липид с тетрациклическим скелетом циклопентанопергидрофенантрена (3 циклогексана + 1 циклопентан); включает холестерин, гормоны и желчные кислоты.",
+    "formal_notation": "C17H28 (циклопентанопергидрофенантрен)",
+    "conditions": "Биосинтез из ацетил-КоА через мевалонатный путь",
+    "prereq": [
+      "material.chemistry.hydrocarbons.cyclohexane"
+    ],
+    "confidence": 0.97,
+    "tags": [
+      "steroid",
+      "lipid",
+      "tetracyclic"
+    ]
+  },
+  {
+    "id": "material.chemistry.biomolecules.cholesterol",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.biomolecules",
+    "subtopic": "chemistry.biomolecules.lipids",
+    "tier": "invariant",
+    "type": "material",
+    "statement": "Холестерин C27H46O — стероидный спирт с 8 хиральными центрами; компонент мембран животных, регулирует текучесть; предшественник стероидных гормонов и витамина D.",
+    "formal_notation": "C27H46O",
+    "conditions": "Биосинтез в печени; перенос ЛПНП/ЛПВП",
+    "prereq": [
+      "concept.chemistry.biomolecules.steroid"
+    ],
+    "confidence": 0.98,
+    "tags": [
+      "cholesterol",
+      "steroid",
+      "membrane_fluidity"
+    ]
+  },
+  {
+    "id": "material.chemistry.biomolecules.heme",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.biomolecules",
+    "subtopic": "chemistry.biomolecules.cofactors",
+    "tier": "invariant",
+    "type": "material",
+    "statement": "Гем — протопорфирин IX с координированным Fe2+/3+; простетическая группа гемоглобина, миоглобина, цитохромов и каталазы; связывает O2, CO, NO.",
+    "formal_notation": "Fe-протопорфирин IX",
+    "conditions": "Биосинтез: глицин + сукцинил-КоА → δ-АЛК; включение Fe ферроцелатазой",
+    "prereq": [
+      "concept.chemistry.bonding.covalent"
+    ],
+    "confidence": 0.97,
+    "tags": [
+      "heme",
+      "porphyrin",
+      "iron"
+    ]
+  },
+  {
+    "id": "material.chemistry.biomolecules.chlorophyll",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.biomolecules",
+    "subtopic": "chemistry.biomolecules.cofactors",
+    "tier": "invariant",
+    "type": "material",
+    "statement": "Хлорофилл — Mg-порфирин с фитольным хвостом; поглощает свет в красной (~660 нм) и синей (~430 нм) областях; ключевой пигмент фотосинтеза.",
+    "formal_notation": "Mg-хлорин-фитил",
+    "conditions": "Тилакоидные мембраны хлоропластов",
+    "prereq": [
+      "material.chemistry.biomolecules.heme"
+    ],
+    "confidence": 0.98,
+    "tags": [
+      "chlorophyll",
+      "porphyrin",
+      "photosynthesis"
+    ]
+  },
+  {
+    "id": "material.chemistry.biomolecules.nad",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.biomolecules",
+    "subtopic": "chemistry.biomolecules.cofactors",
+    "tier": "invariant",
+    "type": "material",
+    "statement": "НАД+ (никотинамидадениндинуклеотид) — кофермент-переносчик 2 электронов и 1 протона: НАД+ + 2e- + H+ → НАДH; E°' = -0.32 В.",
+    "formal_notation": "НАД+ + 2H+ + 2e- → НАДH + H+",
+    "conditions": "Цитозоль и митохондрии; pH 7.4",
+    "prereq": [
+      "definition.chemistry.redox"
+    ],
+    "confidence": 0.98,
+    "tags": [
+      "nad",
+      "cofactor",
+      "redox",
+      "hydride_transfer"
+    ]
+  },
+  {
+    "id": "material.chemistry.biomolecules.fad",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.biomolecules",
+    "subtopic": "chemistry.biomolecules.cofactors",
+    "tier": "invariant",
+    "type": "material",
+    "statement": "ФАД (флавинадениндинуклеотид) — кофермент-переносчик 2 электронов и 2 протонов: ФАД + 2e- + 2H+ → ФАДH2; E°' ≈ -0.22 В; ковалентно или прочно связан с ферментом.",
+    "formal_notation": "ФАД + 2H+ + 2e- → ФАДH2",
+    "conditions": "Митохондрии; pH 7.4",
+    "prereq": [
+      "definition.chemistry.redox"
+    ],
+    "confidence": 0.97,
+    "tags": [
+      "fad",
+      "flavin",
+      "cofactor",
+      "redox"
+    ]
+  },
+  {
+    "id": "material.chemistry.biomolecules.coenzyme_a",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.biomolecules",
+    "subtopic": "chemistry.biomolecules.cofactors",
+    "tier": "invariant",
+    "type": "material",
+    "statement": "Кофермент А (CoA) — тиоловый кофактор-переносчик ацильных групп; тиоэфирная связь -S-CO-R высокоэнергетическая (ΔG° гидролиза ≈ -31 кДж/моль).",
+    "formal_notation": "CoA-SH + RCOOH → CoA-S-CO-R + H2O",
+    "conditions": "Биосинтез из пантотеновой кислоты, цистеина и АТФ",
+    "prereq": [
+      "concept.chemistry.organic.ester"
+    ],
+    "confidence": 0.97,
+    "tags": [
+      "coenzyme_a",
+      "thioester",
+      "acyl_transfer"
+    ]
+  },
+  {
+    "id": "concept.chemistry.biomolecules.dna_double_helix",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.biomolecules",
+    "subtopic": "chemistry.biomolecules.nucleic_acids",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "Двойная спираль ДНК (B-форма) — правозакрученная антипараллельная спираль из двух цепей; 10.5 п.о. на виток, период 3.4 нм, диаметр 2 нм; H-связи A-T (2) и G-C (3).",
+    "formal_notation": "B-форма: 10.5 п.о./виток; 0.34 нм/п.о.",
+    "conditions": "Физиологические pH, ионная сила; B-форма",
+    "prereq": [
+      "material.chemistry.biochemistry.dna"
+    ],
+    "confidence": 0.99,
+    "tags": [
+      "dna",
+      "double_helix",
+      "watson_crick"
+    ]
+  },
+  {
+    "id": "concept.chemistry.biomolecules.rna_types",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.biomolecules",
+    "subtopic": "chemistry.biomolecules.nucleic_acids",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "Основные типы РНК: mRNA — матричная (кодирует белок); tRNA — транспортная (доставляет аминокислоты); rRNA — рибосомная (структурно-каталитическое ядро рибосомы).",
+    "conditions": "Эукариотические и прокариотические клетки",
+    "prereq": [
+      "concept.chemistry.biochemistry.nucleotide"
+    ],
+    "confidence": 0.98,
+    "tags": [
+      "rna",
+      "mrna",
+      "trna",
+      "rrna"
+    ]
+  },
+  {
+    "id": "concept.chemistry.biomolecules.nucleobases",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.biomolecules",
+    "subtopic": "chemistry.biomolecules.nucleic_acids",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "Канонические азотистые основания: пурины аденин (A) и гуанин (G); пиримидины цитозин (C), тимин (T, только ДНК), урацил (U, только РНК); комплементарность A-T/U, G-C.",
+    "conditions": "ДНК и РНК; водные растворы клеток",
+    "prereq": [
+      "concept.chemistry.biochemistry.nucleotide"
+    ],
+    "confidence": 0.99,
+    "tags": [
+      "nucleobase",
+      "purine",
+      "pyrimidine",
+      "complementarity"
+    ]
+  }
+]

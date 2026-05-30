@@ -1,0 +1,512 @@
+[
+  {
+    "id": "mechanism.chemistry.polymers.radical_chain_polymerization",
+    "schema_version": "3.2",
+    "domain": "chemistry.materials.polymers",
+    "subtopic": "chemistry.polymers.synthesis",
+    "tier": "invariant",
+    "type": "mechanism",
+    "statement": "Цепная радикальная полимеризация: инициирование (распад инициатора I→2R·), рост (R·+M→RM·), обрыв (рекомбинация или диспропорционирование); ширина ММР характеризуется Đ ≈ 1.5–2.",
+    "formal_notation": "I → 2R·; R·+nM → R(M)n·; обрыв",
+    "conditions": "Виниловые мономеры; пероксиды/AIBN; T 50–100 °C",
+    "prereq": [
+      "mechanism.chemistry.kinetics.chain_reaction"
+    ],
+    "confidence": 0.94,
+    "tags": [
+      "radical_polymerization",
+      "chain_growth",
+      "vinyl"
+    ]
+  },
+  {
+    "id": "mechanism.chemistry.polymers.ionic_polymerization",
+    "schema_version": "3.2",
+    "domain": "chemistry.materials.polymers",
+    "subtopic": "chemistry.polymers.synthesis",
+    "tier": "invariant",
+    "type": "mechanism",
+    "statement": "Ионная полимеризация: катионная (инициация кислотами Льюиса BF3, AlCl3) для электронодонорных мономеров; анионная (BuLi, NaNH2) для электроноакцепторных; даёт узкое ММР.",
+    "formal_notation": "I+ + M → IM+; рост IMn+ + M → IMn+1+",
+    "conditions": "Безводная среда; T -78 → 0 °C; отсутствие O2/H2O",
+    "limits": [
+      "Несовместимо с протонными примесями"
+    ],
+    "prereq": [
+      "mechanism.chemistry.polymers.radical_chain_polymerization"
+    ],
+    "confidence": 0.92,
+    "tags": [
+      "ionic_polymerization",
+      "cationic",
+      "anionic"
+    ]
+  },
+  {
+    "id": "mechanism.chemistry.polymers.condensation_polymerization",
+    "schema_version": "3.2",
+    "domain": "chemistry.materials.polymers",
+    "subtopic": "chemistry.polymers.synthesis",
+    "tier": "invariant",
+    "type": "mechanism",
+    "statement": "Конденсационная (ступенчатая) полимеризация: бифункциональные мономеры реагируют с отщеплением низкомолекулярного продукта (H2O, HCl, ROH); ММ растёт постепенно.",
+    "formal_notation": "n A-X + n B-Y → -(AB)n- + n XY",
+    "conditions": "Стехиометрия 1:1; высокая степень конверсии нужна для большой ММ (уравнение Карозерса)",
+    "prereq": [
+      "mechanism.chemistry.reactions.esterification_fischer"
+    ],
+    "confidence": 0.94,
+    "tags": [
+      "condensation",
+      "step_growth",
+      "carothers"
+    ]
+  },
+  {
+    "id": "definition.chemistry.polymers.degree_of_polymerization",
+    "schema_version": "3.2",
+    "domain": "chemistry.materials.polymers",
+    "subtopic": "chemistry.polymers.structure",
+    "tier": "invariant",
+    "type": "definition",
+    "statement": "Степень полимеризации DP — среднее число мономерных звеньев в полимерной цепи; M_n = DP · M_0, где M_0 — молярная масса звена.",
+    "formal_notation": "DP = M_n / M_0",
+    "conditions": "Линейный гомополимер; среднечисловая ММ",
+    "prereq": [
+      "mechanism.chemistry.polymers.radical_chain_polymerization"
+    ],
+    "confidence": 1.0,
+    "tags": [
+      "degree_of_polymerization",
+      "molecular_weight"
+    ]
+  },
+  {
+    "id": "concept.chemistry.polymers.crystallinity",
+    "schema_version": "3.2",
+    "domain": "chemistry.materials.polymers",
+    "subtopic": "chemistry.polymers.structure",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "Кристалличность полимера — доля упорядоченных доменов в матрице аморфных областей; повышает Tпл, модуль упругости, плотность; снижает прозрачность и растворимость.",
+    "formal_notation": "Xc = (ρ - ρa)/(ρc - ρa)",
+    "conditions": "Регулярная структура цепи; отсутствие крупных боковых групп",
+    "prereq": [
+      "mechanism.chemistry.polymers.radical_chain_polymerization"
+    ],
+    "confidence": 0.96,
+    "tags": [
+      "crystallinity",
+      "polymer",
+      "morphology"
+    ]
+  },
+  {
+    "id": "concept.chemistry.polymers.glass_transition",
+    "schema_version": "3.2",
+    "domain": "chemistry.materials.polymers",
+    "subtopic": "chemistry.polymers.thermal",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "Температура стеклования Tg — T перехода аморфного полимера из стеклообразного в высокоэластическое состояние; кинетический переход второго рода; зависит от скорости охлаждения.",
+    "formal_notation": "ниже Tg цепи заморожены; выше — сегментная подвижность",
+    "conditions": "Аморфные или частично-кристаллические полимеры",
+    "prereq": [
+      "concept.chemistry.polymers.crystallinity"
+    ],
+    "confidence": 0.95,
+    "tags": [
+      "glass_transition",
+      "tg",
+      "amorphous"
+    ]
+  },
+  {
+    "id": "material.chemistry.polymers.ldpe",
+    "schema_version": "3.2",
+    "domain": "chemistry.materials.polymers",
+    "subtopic": "chemistry.polymers.polyolefins",
+    "tier": "invariant",
+    "type": "material",
+    "statement": "Полиэтилен низкой плотности (LDPE): разветвлённые цепи с короткими ответвлениями; плотность 0.910–0.940 г/см³; кристалличность 40–50%; гибкий, синтез при P 1000–3000 атм радикально.",
+    "formal_notation": "-(CH2-CH2)n-",
+    "conditions": "Радикальная полимеризация; P 1000–3000 атм; T 150–300 °C",
+    "prereq": [
+      "material.chemistry.hydrocarbons.ethylene",
+      "mechanism.chemistry.polymers.radical_chain_polymerization"
+    ],
+    "confidence": 0.97,
+    "tags": [
+      "ldpe",
+      "polyethylene",
+      "branched"
+    ]
+  },
+  {
+    "id": "material.chemistry.polymers.hdpe",
+    "schema_version": "3.2",
+    "domain": "chemistry.materials.polymers",
+    "subtopic": "chemistry.polymers.polyolefins",
+    "tier": "invariant",
+    "type": "material",
+    "statement": "Полиэтилен высокой плотности (HDPE): линейные цепи; плотность 0.941–0.965 г/см³; кристалличность 60–80%; синтез при низком P на катализаторах Циглера-Натта или металлоценах.",
+    "formal_notation": "-(CH2-CH2)n- линейный",
+    "conditions": "Катализ Ziegler-Natta или Cr/SiO2; P 1–50 атм; T 50–150 °C",
+    "prereq": [
+      "material.chemistry.polymers.ldpe"
+    ],
+    "confidence": 0.97,
+    "tags": [
+      "hdpe",
+      "polyethylene",
+      "ziegler_natta"
+    ]
+  },
+  {
+    "id": "material.chemistry.polymers.polypropylene",
+    "schema_version": "3.2",
+    "domain": "chemistry.materials.polymers",
+    "subtopic": "chemistry.polymers.polyolefins",
+    "tier": "invariant",
+    "type": "material",
+    "statement": "Полипропилен (PP) -(CH2-CHCH3)n-: изотактический (98%) кристалличен, Tпл 165 °C; атактический аморфен; синтез на стереоспецифичных катализаторах.",
+    "formal_notation": "-(CH2-CHCH3)n-",
+    "conditions": "Катализ Ziegler-Natta TiCl4/AlEt3 или металлоценовый",
+    "prereq": [
+      "material.chemistry.polymers.hdpe"
+    ],
+    "confidence": 0.97,
+    "tags": [
+      "polypropylene",
+      "isotactic",
+      "tacticity"
+    ]
+  },
+  {
+    "id": "material.chemistry.polymers.pvc",
+    "schema_version": "3.2",
+    "domain": "chemistry.materials.polymers",
+    "subtopic": "chemistry.polymers.vinyl",
+    "tier": "invariant",
+    "type": "material",
+    "statement": "Поливинилхлорид (PVC) -(CH2-CHCl)n-: атактический, аморфный, Tg ≈ 80 °C; жёсткий без пластификаторов; деградирует с отщеплением HCl при T выше 100 °C.",
+    "formal_notation": "-(CH2-CHCl)n-",
+    "conditions": "Радикальная полимеризация в суспензии или эмульсии",
+    "limits": [
+      "Термолабилен — нужны стабилизаторы Sn, Ca/Zn"
+    ],
+    "prereq": [
+      "mechanism.chemistry.polymers.radical_chain_polymerization"
+    ],
+    "confidence": 0.97,
+    "tags": [
+      "pvc",
+      "vinyl_chloride",
+      "dehydrochlorination"
+    ]
+  },
+  {
+    "id": "material.chemistry.polymers.polystyrene",
+    "schema_version": "3.2",
+    "domain": "chemistry.materials.polymers",
+    "subtopic": "chemistry.polymers.vinyl",
+    "tier": "invariant",
+    "type": "material",
+    "statement": "Полистирол (PS) -(CH2-CH(C6H5))n-: атактический аморфен, Tg ≈ 100 °C; прозрачен; хрупок; растворим в ароматических и хлорированных растворителях.",
+    "formal_notation": "-(CH2-CH(Ph))n-",
+    "conditions": "Радикальная полимеризация стирола; T 80–140 °C",
+    "prereq": [
+      "material.chemistry.hydrocarbons.styrene"
+    ],
+    "confidence": 0.97,
+    "tags": [
+      "polystyrene",
+      "amorphous",
+      "transparent"
+    ]
+  },
+  {
+    "id": "material.chemistry.polymers.pet",
+    "schema_version": "3.2",
+    "domain": "chemistry.materials.polymers",
+    "subtopic": "chemistry.polymers.polyester",
+    "tier": "invariant",
+    "type": "material",
+    "statement": "Полиэтилентерефталат (ПЭТФ) — поликонденсат терефталевой кислоты и этиленгликоля; Tпл 260 °C, Tg 75 °C; высокая прочность плёнки и волокна.",
+    "formal_notation": "-(O-CH2-CH2-O-CO-C6H4-CO)n-",
+    "conditions": "Поликонденсация при T 250–290 °C; катализаторы Sb, Ti",
+    "prereq": [
+      "mechanism.chemistry.polymers.condensation_polymerization"
+    ],
+    "confidence": 0.97,
+    "tags": [
+      "pet",
+      "polyester",
+      "terephthalate"
+    ]
+  },
+  {
+    "id": "material.chemistry.polymers.nylon_6",
+    "schema_version": "3.2",
+    "domain": "chemistry.materials.polymers",
+    "subtopic": "chemistry.polymers.polyamide",
+    "tier": "invariant",
+    "type": "material",
+    "statement": "Нейлон-6 — полиамид -[NH-(CH2)5-CO]n-, синтез полимеризацией ε-капролактама с раскрытием цикла; Tпл 220 °C; высокая прочность и износостойкость.",
+    "formal_notation": "-[NH-(CH2)5-CO]n-",
+    "conditions": "Анионная или гидролитическая полимеризация капролактама; T 250 °C",
+    "prereq": [
+      "mechanism.chemistry.polymers.condensation_polymerization"
+    ],
+    "confidence": 0.96,
+    "tags": [
+      "nylon_6",
+      "polyamide",
+      "caprolactam"
+    ]
+  },
+  {
+    "id": "material.chemistry.polymers.nylon_66",
+    "schema_version": "3.2",
+    "domain": "chemistry.materials.polymers",
+    "subtopic": "chemistry.polymers.polyamide",
+    "tier": "invariant",
+    "type": "material",
+    "statement": "Нейлон-6,6 — полиамид из гексаметилендиамина и адипиновой кислоты; Tпл 265 °C; межцепочечные H-связи C=O···H-N обеспечивают кристалличность и прочность.",
+    "formal_notation": "-[NH-(CH2)6-NH-CO-(CH2)4-CO]n-",
+    "conditions": "Поликонденсация при T 270–290 °C через соль AH",
+    "prereq": [
+      "mechanism.chemistry.polymers.condensation_polymerization"
+    ],
+    "confidence": 0.96,
+    "tags": [
+      "nylon_66",
+      "polyamide",
+      "hydrogen_bond"
+    ]
+  },
+  {
+    "id": "material.chemistry.polymers.kevlar",
+    "schema_version": "3.2",
+    "domain": "chemistry.materials.polymers",
+    "subtopic": "chemistry.polymers.polyamide",
+    "tier": "invariant",
+    "type": "material",
+    "statement": "Кевлар — поли-пара-фенилентерефталамид (PPTA); жёсткие ароматические цепи с межцепочечными H-связями и π-стэкингом; прочность на растяжение ≈ 3.6 ГПа; высокотермостойкий.",
+    "formal_notation": "-[NH-C6H4-NH-CO-C6H4-CO]n-",
+    "conditions": "Поликонденсация в H2SO4; формование волокна из жидкокристаллического раствора",
+    "prereq": [
+      "material.chemistry.polymers.nylon_66"
+    ],
+    "confidence": 0.96,
+    "tags": [
+      "kevlar",
+      "aramid",
+      "high_strength"
+    ]
+  },
+  {
+    "id": "material.chemistry.polymers.teflon",
+    "schema_version": "3.2",
+    "domain": "chemistry.materials.polymers",
+    "subtopic": "chemistry.polymers.fluoropolymers",
+    "tier": "invariant",
+    "type": "material",
+    "statement": "Тефлон (ПТФЭ) -(CF2-CF2)n-: высококристаллический фторполимер; Tпл 327 °C; химически инертен; рекордно низкий коэффициент трения 0.04.",
+    "formal_notation": "-(CF2-CF2)n-",
+    "conditions": "Радикальная эмульсионная полимеризация тетрафторэтилена",
+    "prereq": [
+      "mechanism.chemistry.polymers.radical_chain_polymerization"
+    ],
+    "confidence": 0.97,
+    "tags": [
+      "teflon",
+      "ptfe",
+      "fluoropolymer"
+    ]
+  },
+  {
+    "id": "material.chemistry.polymers.silicone",
+    "schema_version": "3.2",
+    "domain": "chemistry.materials.polymers",
+    "subtopic": "chemistry.polymers.inorganic",
+    "tier": "invariant",
+    "type": "material",
+    "statement": "Силикон (полисилоксан) -(Si(R)2-O)n- с органическими R (чаще CH3); гибкая Si-O-Si связь; термостабилен от -100 до +250 °C; биоинертен.",
+    "formal_notation": "-(Si(CH3)2-O)n- (PDMS)",
+    "conditions": "Гидролиз и поликонденсация диалкилдихлорсиланов",
+    "prereq": [
+      "mechanism.chemistry.polymers.condensation_polymerization"
+    ],
+    "confidence": 0.96,
+    "tags": [
+      "silicone",
+      "pdms",
+      "siloxane"
+    ]
+  },
+  {
+    "id": "material.chemistry.polymers.epoxy",
+    "schema_version": "3.2",
+    "domain": "chemistry.materials.polymers",
+    "subtopic": "chemistry.polymers.thermosets",
+    "tier": "invariant",
+    "type": "material",
+    "statement": "Эпоксидные смолы — олигомеры с концевыми оксирановыми группами (типично DGEBA); отверждаются аминами или ангидридами через раскрытие эпоксидного цикла в трёхмерную сетку.",
+    "formal_notation": "DGEBA: бисфенол A-диглицидиловый эфир",
+    "conditions": "Отверждение T 25–180 °C амином или ангидридом",
+    "prereq": [
+      "mechanism.chemistry.polymers.condensation_polymerization"
+    ],
+    "confidence": 0.95,
+    "tags": [
+      "epoxy",
+      "thermoset",
+      "dgeba"
+    ]
+  },
+  {
+    "id": "material.chemistry.polymers.phenol_formaldehyde",
+    "schema_version": "3.2",
+    "domain": "chemistry.materials.polymers",
+    "subtopic": "chemistry.polymers.thermosets",
+    "tier": "invariant",
+    "type": "material",
+    "statement": "Фенолформальдегидная смола — продукт поликонденсации фенола с формальдегидом; новолак (кислотная среда, избыток фенола) или резол (щелочная, избыток формальдегида); первый промышленный термореактив.",
+    "formal_notation": "C6H5OH + CH2O → -(C6H3(OH)-CH2)n-",
+    "conditions": "Катализ H+ или OH-; T 60–100 °C; отверждение нагреванием",
+    "prereq": [
+      "mechanism.chemistry.polymers.condensation_polymerization"
+    ],
+    "confidence": 0.95,
+    "tags": [
+      "bakelite",
+      "phenol_formaldehyde",
+      "novolac"
+    ]
+  },
+  {
+    "id": "material.chemistry.polymers.natural_rubber",
+    "schema_version": "3.2",
+    "domain": "chemistry.materials.polymers",
+    "subtopic": "chemistry.polymers.elastomers",
+    "tier": "invariant",
+    "type": "material",
+    "statement": "Натуральный каучук — цис-1,4-полиизопрен из латекса Hevea brasiliensis; Tg ≈ -70 °C; стереорегулярность обеспечивает кристаллизацию при растяжении.",
+    "formal_notation": "-(CH2-C(CH3)=CH-CH2)n- цис",
+    "conditions": "Биосинтез; экстракция из латекса",
+    "prereq": [
+      "material.chemistry.hydrocarbons.isoprene"
+    ],
+    "confidence": 0.97,
+    "tags": [
+      "natural_rubber",
+      "polyisoprene",
+      "elastomer"
+    ]
+  },
+  {
+    "id": "material.chemistry.polymers.sbr",
+    "schema_version": "3.2",
+    "domain": "chemistry.materials.polymers",
+    "subtopic": "chemistry.polymers.elastomers",
+    "tier": "invariant",
+    "type": "material",
+    "statement": "Бутадиен-стирольный каучук (SBR) — статистический сополимер бутадиена (~75%) и стирола (~25%); радикальная или анионная полимеризация; основной материал автомобильных шин.",
+    "formal_notation": "сополимер -(CH2-CH=CH-CH2)x-(CH2-CHPh)y-",
+    "conditions": "Эмульсионная радикальная или растворная анионная полимеризация",
+    "prereq": [
+      "material.chemistry.hydrocarbons.butadiene",
+      "material.chemistry.hydrocarbons.styrene"
+    ],
+    "confidence": 0.95,
+    "tags": [
+      "sbr",
+      "synthetic_rubber",
+      "copolymer"
+    ]
+  },
+  {
+    "id": "mechanism.chemistry.polymers.vulcanization",
+    "schema_version": "3.2",
+    "domain": "chemistry.materials.polymers",
+    "subtopic": "chemistry.polymers.elastomers",
+    "tier": "invariant",
+    "type": "mechanism",
+    "statement": "Вулканизация — сшивание полидиеновых цепей мостиками -Sx- (x=1–8) при нагревании с серой и активаторами (ZnO, ускорители); создаёт сетку, повышает прочность и термостабильность.",
+    "formal_notation": "2 цепи -CH2-CH=CH- + S8 → сшивка -S-S-",
+    "conditions": "T 140–180 °C; 1–5 масс.% S; ускорители (тиазолы, сульфенамиды)",
+    "prereq": [
+      "material.chemistry.polymers.natural_rubber"
+    ],
+    "confidence": 0.94,
+    "tags": [
+      "vulcanization",
+      "sulfur",
+      "crosslinking"
+    ]
+  },
+  {
+    "id": "material.chemistry.polymers.polyacetylene",
+    "schema_version": "3.2",
+    "domain": "chemistry.materials.polymers",
+    "subtopic": "chemistry.polymers.conducting",
+    "tier": "invariant",
+    "type": "material",
+    "statement": "Полиацетилен -(CH=CH)n- — простейший проводящий полимер с сопряжёнными π-связями; при допировании (I2, AsF5) проводимость растёт до 10^5 См/см.",
+    "formal_notation": "-(CH=CH)n-",
+    "conditions": "Полимеризация ацетилена на катализаторах Циглера-Натта",
+    "limits": [
+      "Окисляется на воздухе; нестабилен без допирования"
+    ],
+    "prereq": [
+      "material.chemistry.hydrocarbons.acetylene"
+    ],
+    "confidence": 0.93,
+    "tags": [
+      "polyacetylene",
+      "conducting_polymer",
+      "doping"
+    ]
+  },
+  {
+    "id": "material.chemistry.polymers.pla",
+    "schema_version": "3.2",
+    "domain": "chemistry.materials.polymers",
+    "subtopic": "chemistry.polymers.biodegradable",
+    "tier": "invariant",
+    "type": "material",
+    "statement": "Полилактид (PLA) — биоразлагаемый полиэфир из молочной кислоты или лактида; Tg ≈ 60 °C, Tпл 175 °C для PLLA; гидролизуется до молочной кислоты в компосте.",
+    "formal_notation": "-(O-CH(CH3)-CO)n-",
+    "conditions": "Полимеризация лактида с раскрытием цикла; катализаторы Sn(Oct)2",
+    "prereq": [
+      "mechanism.chemistry.polymers.condensation_polymerization"
+    ],
+    "confidence": 0.96,
+    "tags": [
+      "pla",
+      "biodegradable",
+      "polylactide"
+    ]
+  },
+  {
+    "id": "material.chemistry.polymers.phb",
+    "schema_version": "3.2",
+    "domain": "chemistry.materials.polymers",
+    "subtopic": "chemistry.polymers.biodegradable",
+    "tier": "invariant",
+    "type": "material",
+    "statement": "Полигидроксибутират (PHB) — бактериальный полиэфир -(O-CH(CH3)-CH2-CO)n-; запасается клетками Ralstonia eutropha как энергорезерв; биоразлагаем и биосовместим.",
+    "formal_notation": "-(O-CH(CH3)-CH2-CO)n-",
+    "conditions": "Биосинтез из ацетил-КоА в клетках; ферментация",
+    "prereq": [
+      "concept.chemistry.organic.ester"
+    ],
+    "confidence": 0.95,
+    "tags": [
+      "phb",
+      "biopolymer",
+      "bacterial"
+    ]
+  }
+]

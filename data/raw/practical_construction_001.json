@@ -1,0 +1,632 @@
+[
+  {
+    "id": "process.construction.cement.portland_clinker_production",
+    "schema_version": "3.2",
+    "domain": "construction.cement",
+    "subtopic": "construction.cement.production",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Производство портландцементного клинкера: обжиг известняка и глины во вращающейся печи при 1450°C до спекания с образованием алита, белита, алюмината и алюмоферрита.",
+    "conditions": "T = 1450°C в зоне спекания; сырьевая смесь CaCO3 75–78% + Al2O3·SiO2 22–25%; время прохождения печи 30–60 мин",
+    "prereq": [
+      "material.chemistry.substance.calcium_carbonate",
+      "process.chemistry.calcination"
+    ],
+    "confidence": 0.95,
+    "tags": [
+      "cement",
+      "clinker",
+      "portland",
+      "kiln"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.97,
+      "safety_critical": true,
+      "safety_notes": "Высокотемпературный обжиг 1450°C; пыль клинкера щёлочная pH>12; ожоги при контакте с расплавом"
+    }
+  },
+  {
+    "id": "material.construction.cement.alite_c3s",
+    "schema_version": "3.2",
+    "domain": "construction.cement",
+    "subtopic": "construction.cement.clinker_minerals",
+    "tier": "practical",
+    "type": "material",
+    "statement": "Алит (трёхкальциевый силикат C3S, 3CaO·SiO2): главная фаза клинкера 50–65%, обеспечивает раннюю прочность бетона за счёт быстрой гидратации.",
+    "conditions": "Стабилен при T > 1250°C; в обычном клинкере 50–65% по массе",
+    "prereq": [
+      "process.construction.cement.portland_clinker_production"
+    ],
+    "confidence": 0.94,
+    "tags": [
+      "cement",
+      "alite",
+      "c3s",
+      "clinker"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.96,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "material.construction.cement.belite_c2s",
+    "schema_version": "3.2",
+    "domain": "construction.cement",
+    "subtopic": "construction.cement.clinker_minerals",
+    "tier": "practical",
+    "type": "material",
+    "statement": "Белит (двухкальциевый силикат C2S, 2CaO·SiO2): 15–25% клинкера, гидратируется медленно, формирует позднюю прочность после 28 суток.",
+    "conditions": "Β-форма стабильна при комнатной T; содержание в клинкере 15–25%",
+    "prereq": [
+      "process.construction.cement.portland_clinker_production"
+    ],
+    "confidence": 0.94,
+    "tags": [
+      "cement",
+      "belite",
+      "c2s",
+      "clinker"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.96,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "material.construction.cement.aluminate_c3a",
+    "schema_version": "3.2",
+    "domain": "construction.cement",
+    "subtopic": "construction.cement.clinker_minerals",
+    "tier": "practical",
+    "type": "material",
+    "statement": "Трёхкальциевый алюминат (C3A, 3CaO·Al2O3): 5–10% клинкера, реагирует с водой мгновенно с тепловыделением, регулируется добавкой гипса.",
+    "conditions": "Содержание 5–10%; требует 3–5% гипса CaSO4·2H2O для регулировки схватывания",
+    "prereq": [
+      "process.construction.cement.portland_clinker_production"
+    ],
+    "confidence": 0.93,
+    "tags": [
+      "cement",
+      "aluminate",
+      "c3a",
+      "clinker"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.95,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "material.construction.cement.ferrite_c4af",
+    "schema_version": "3.2",
+    "domain": "construction.cement",
+    "subtopic": "construction.cement.clinker_minerals",
+    "tier": "practical",
+    "type": "material",
+    "statement": "Алюмоферрит кальция (C4AF, 4CaO·Al2O3·Fe2O3): 5–15% клинкера, придаёт серый цвет цементу, гидратируется умеренно с малым тепловыделением.",
+    "conditions": "Содержание 5–15%; в белом цементе минимизируется до <1%",
+    "prereq": [
+      "process.construction.cement.portland_clinker_production"
+    ],
+    "confidence": 0.92,
+    "tags": [
+      "cement",
+      "ferrite",
+      "c4af",
+      "clinker"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.95,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "process.construction.cement.hydration",
+    "schema_version": "3.2",
+    "domain": "construction.cement",
+    "subtopic": "construction.cement.hydration",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Гидратация цемента: реакция клинкерных силикатов с водой с образованием гидросиликатов кальция C-S-H и портландита Ca(OH)2, формирующих прочную микроструктуру.",
+    "conditions": "T = 5–40°C; влажность ≥ 95%; продолжительность твердения 28 суток до проектной прочности",
+    "prereq": [
+      "material.construction.cement.alite_c3s",
+      "material.construction.cement.belite_c2s"
+    ],
+    "confidence": 0.94,
+    "tags": [
+      "cement",
+      "hydration",
+      "csh",
+      "portlandite"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.97,
+      "safety_critical": true,
+      "safety_notes": "Свежий бетон щёлочной pH 12–13; химические ожоги кожи и глаз при длительном контакте"
+    }
+  },
+  {
+    "id": "concept.construction.concrete.water_cement_ratio",
+    "schema_version": "3.2",
+    "domain": "construction.concrete",
+    "subtopic": "construction.concrete.mix_design",
+    "tier": "practical",
+    "type": "concept",
+    "statement": "Водоцементное отношение В/Ц: масса воды к массе цемента в смеси, определяет прочность и долговечность; снижение В/Ц с 0,6 до 0,4 повышает прочность вдвое.",
+    "conditions": "Типовой диапазон В/Ц 0,35–0,70; минимум 0,22 для полной гидратации; ниже требует суперпластификаторов",
+    "prereq": [
+      "process.construction.cement.hydration"
+    ],
+    "confidence": 0.95,
+    "tags": [
+      "concrete",
+      "water_cement_ratio",
+      "strength",
+      "mix"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.97,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "material.construction.concrete.superplasticizer",
+    "schema_version": "3.2",
+    "domain": "construction.concrete",
+    "subtopic": "construction.concrete.admixtures",
+    "tier": "practical",
+    "type": "material",
+    "statement": "Суперпластификатор: поликарбоксилатный эфир ПКЭ или нафталинформальдегид, снижает В/Ц на 20–30% при сохранении подвижности смеси за счёт дефлокуляции частиц цемента.",
+    "conditions": "Дозировка 0,3–1,2% от массы цемента; температура смеси 5–35°C",
+    "prereq": [
+      "concept.construction.concrete.water_cement_ratio"
+    ],
+    "confidence": 0.92,
+    "tags": [
+      "concrete",
+      "superplasticizer",
+      "admixture",
+      "pce"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.95,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "material.construction.concrete.air_entraining_agent",
+    "schema_version": "3.2",
+    "domain": "construction.concrete",
+    "subtopic": "construction.concrete.admixtures",
+    "tier": "practical",
+    "type": "material",
+    "statement": "Воздухововлекающая добавка: ПАВ создаёт стабильные микропузырьки 10–300 мкм объёмом 4–7% от смеси, повышая морозостойкость за счёт компенсации расширения замерзающей воды.",
+    "conditions": "Дозировка 0,005–0,05% от массы цемента; контроль воздухосодержания 4–7%",
+    "prereq": [
+      "material.construction.concrete.superplasticizer"
+    ],
+    "confidence": 0.91,
+    "tags": [
+      "concrete",
+      "air_entrainment",
+      "frost_resistance",
+      "admixture"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.94,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "material.construction.concrete.set_accelerator",
+    "schema_version": "3.2",
+    "domain": "construction.concrete",
+    "subtopic": "construction.concrete.admixtures",
+    "tier": "practical",
+    "type": "material",
+    "statement": "Ускоритель схватывания: CaCl2, формиат кальция или алюминатные составы, сокращают индукционный период гидратации C3S и набор прочности в раннем возрасте при низких T.",
+    "conditions": "Дозировка 1–3% от массы цемента; T бетона < 10°C; запрещён для предварительно напряжённых конструкций",
+    "prereq": [
+      "process.construction.cement.hydration"
+    ],
+    "confidence": 0.9,
+    "tags": [
+      "concrete",
+      "accelerator",
+      "admixture",
+      "winter"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.93,
+      "safety_critical": true,
+      "safety_notes": "CaCl2 вызывает коррозию арматуры; запрещён в железобетоне ответственных конструкций"
+    }
+  },
+  {
+    "id": "material.construction.concrete.set_retarder",
+    "schema_version": "3.2",
+    "domain": "construction.concrete",
+    "subtopic": "construction.concrete.admixtures",
+    "tier": "practical",
+    "type": "material",
+    "statement": "Замедлитель схватывания: лигносульфонаты, глюконат натрия, сахароза, продлевают период жизнеспособности смеси с 2 до 6–12 часов адсорбцией на зёрнах C3S.",
+    "conditions": "Дозировка 0,1–0,5% от массы цемента; T > 25°C; дальние перевозки и непрерывное бетонирование",
+    "prereq": [
+      "process.construction.cement.hydration"
+    ],
+    "confidence": 0.9,
+    "tags": [
+      "concrete",
+      "retarder",
+      "admixture",
+      "hot_weather"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.94,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "concept.construction.concrete.frost_resistance_grade",
+    "schema_version": "3.2",
+    "domain": "construction.concrete",
+    "subtopic": "construction.concrete.durability",
+    "tier": "practical",
+    "type": "concept",
+    "statement": "Марка по морозостойкости F: число циклов попеременного замораживания-оттаивания водонасыщенного образца без потери прочности более 5% и массы более 5%.",
+    "conditions": "Цикл −18°C / +20°C; марки F50, F100, F200, F300, F500, F1000",
+    "prereq": [
+      "material.construction.concrete.air_entraining_agent"
+    ],
+    "confidence": 0.94,
+    "tags": [
+      "concrete",
+      "frost",
+      "durability",
+      "grade"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.96,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "concept.construction.concrete.watertightness_grade",
+    "schema_version": "3.2",
+    "domain": "construction.concrete",
+    "subtopic": "construction.concrete.durability",
+    "tier": "practical",
+    "type": "concept",
+    "statement": "Марка по водонепроницаемости W: максимальное давление воды в МПа·10, при котором не происходит её фильтрация через образец толщиной 150 мм за нормированное время.",
+    "conditions": "Марки W2, W4, W6, W8, W10, W12, W16, W20; испытание по ГОСТ 12730.5",
+    "prereq": [
+      "concept.construction.concrete.water_cement_ratio"
+    ],
+    "confidence": 0.93,
+    "tags": [
+      "concrete",
+      "watertightness",
+      "durability",
+      "grade"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.95,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "concept.construction.concrete.strength_class_b",
+    "schema_version": "3.2",
+    "domain": "construction.concrete",
+    "subtopic": "construction.concrete.strength",
+    "tier": "practical",
+    "type": "concept",
+    "statement": "Класс бетона по прочности на сжатие B: гарантированная с обеспеченностью 95% кубиковая прочность в МПа после 28 суток нормального твердения.",
+    "conditions": "Классы B7,5 до B100; испытание кубов 150×150 мм при +20°C, влажность 95%, 28 суток",
+    "prereq": [
+      "process.construction.cement.hydration"
+    ],
+    "confidence": 0.95,
+    "tags": [
+      "concrete",
+      "strength",
+      "class",
+      "compression"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.97,
+      "safety_critical": true,
+      "safety_notes": "Несоответствие класса прочности приводит к обрушению несущих конструкций"
+    }
+  },
+  {
+    "id": "technology.construction.concrete.reinforced",
+    "schema_version": "3.2",
+    "domain": "construction.concrete",
+    "subtopic": "construction.concrete.reinforcement",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Железобетон: композит из бетона и стальной арматуры, где бетон работает на сжатие, сталь на растяжение, с близкими коэффициентами линейного расширения 10–12·10⁻⁶ 1/°C.",
+    "conditions": "Защитный слой бетона над арматурой 15–50 мм по классу среды; марка стали А240–А1000",
+    "prereq": [
+      "concept.construction.concrete.strength_class_b"
+    ],
+    "confidence": 0.96,
+    "tags": [
+      "reinforced_concrete",
+      "rebar",
+      "composite",
+      "steel"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.98,
+      "safety_critical": true,
+      "safety_notes": "Коррозия арматуры при недостаточном защитном слое или карбонизации бетона ведёт к разрушению"
+    }
+  },
+  {
+    "id": "technology.construction.concrete.prestressed",
+    "schema_version": "3.2",
+    "domain": "construction.concrete",
+    "subtopic": "construction.concrete.reinforcement",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Предварительно напряжённый железобетон: высокопрочная арматура натягивается до 1000–1500 МПа, создавая в бетоне сжимающие напряжения, компенсирующие эксплуатационные растягивающие.",
+    "conditions": "Арматурные канаты класса К1400–К1860; натяжение на упоры (преднатяжение) или на бетон (постнатяжение)",
+    "prereq": [
+      "technology.construction.concrete.reinforced"
+    ],
+    "confidence": 0.94,
+    "tags": [
+      "prestressed",
+      "concrete",
+      "tendon",
+      "post_tensioning"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.96,
+      "safety_critical": true,
+      "safety_notes": "Обрыв напрягаемой арматуры при натяжении опасен для жизни; зона за упорами огораживается"
+    }
+  },
+  {
+    "id": "material.construction.concrete.fiber_reinforced",
+    "schema_version": "3.2",
+    "domain": "construction.concrete",
+    "subtopic": "construction.concrete.special",
+    "tier": "practical",
+    "type": "material",
+    "statement": "Фибробетон: бетон с дисперсным армированием стальной, полипропиленовой, базальтовой или стеклянной фиброй 0,5–2% по объёму, повышающей трещиностойкость и ударную прочность.",
+    "conditions": "Длина фибры 12–60 мм; диаметр 0,15–1 мм; равномерное распределение в смеси",
+    "prereq": [
+      "technology.construction.concrete.reinforced"
+    ],
+    "confidence": 0.91,
+    "tags": [
+      "fiber_concrete",
+      "dispersed_reinforcement",
+      "toughness"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.94,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "material.construction.concrete.heavy",
+    "schema_version": "3.2",
+    "domain": "construction.concrete",
+    "subtopic": "construction.concrete.types",
+    "tier": "practical",
+    "type": "material",
+    "statement": "Тяжёлый бетон: плотность 2200–2500 кг/м³ на заполнителях из плотных горных пород (гранит, диабаз, известняк), основа несущих конструкций гражданских и промышленных зданий.",
+    "conditions": "Заполнитель — щебень фракции 5–40 мм; объёмная масса > 2200 кг/м³",
+    "prereq": [
+      "concept.construction.concrete.strength_class_b"
+    ],
+    "confidence": 0.94,
+    "tags": [
+      "heavy_concrete",
+      "dense",
+      "structural"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.97,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "material.construction.concrete.lightweight",
+    "schema_version": "3.2",
+    "domain": "construction.concrete",
+    "subtopic": "construction.concrete.types",
+    "tier": "practical",
+    "type": "material",
+    "statement": "Лёгкий бетон: плотность 500–1800 кг/м³ на пористых заполнителях (керамзит, перлит, шунгизит), сочетает несущую способность и теплоизоляцию λ = 0,2–0,7 Вт/(м·К).",
+    "conditions": "Пористый заполнитель насыпной плотностью 250–1200 кг/м³; снижение нагрузок на фундамент",
+    "prereq": [
+      "material.construction.concrete.heavy"
+    ],
+    "confidence": 0.92,
+    "tags": [
+      "lightweight_concrete",
+      "porous",
+      "thermal"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.95,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "material.construction.aggregate.expanded_clay",
+    "schema_version": "3.2",
+    "domain": "construction.aggregate",
+    "subtopic": "construction.aggregate.lightweight",
+    "tier": "practical",
+    "type": "material",
+    "statement": "Керамзит: гранулы вспученной обожжённой глины 5–40 мм с замкнуто-пористой структурой, насыпная плотность 250–700 кг/м³, теплопроводность 0,1–0,18 Вт/(м·К).",
+    "conditions": "Обжиг сырьевых гранул при 1100–1200°C с быстрым вспучиванием; коэффициент вспучивания 3–6",
+    "prereq": [
+      "material.construction.concrete.lightweight"
+    ],
+    "confidence": 0.93,
+    "tags": [
+      "expanded_clay",
+      "aggregate",
+      "porous",
+      "insulation"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.96,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "material.construction.concrete.autoclaved_aerated",
+    "schema_version": "3.2",
+    "domain": "construction.concrete",
+    "subtopic": "construction.concrete.cellular",
+    "tier": "practical",
+    "type": "material",
+    "statement": "Газобетон автоклавный: ячеистый материал из цемента, извести, песка и алюминиевой пудры (газообразователь), твердеющий в автоклаве при 180–200°C и 1,2 МПа.",
+    "conditions": "Плотность D300–D700 кг/м³; прочность B1,5–B5; реакция Al + Ca(OH)2 + H2O → H2",
+    "prereq": [
+      "material.construction.concrete.lightweight"
+    ],
+    "confidence": 0.93,
+    "tags": [
+      "aerated_concrete",
+      "autoclaved",
+      "cellular",
+      "aac"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.96,
+      "safety_critical": true,
+      "safety_notes": "Автоклав под давлением 1,2 МПа; реакция выделения водорода H2 пожаровзрывоопасна на стадии вспучивания"
+    }
+  },
+  {
+    "id": "material.construction.concrete.foam",
+    "schema_version": "3.2",
+    "domain": "construction.concrete",
+    "subtopic": "construction.concrete.cellular",
+    "tier": "practical",
+    "type": "material",
+    "statement": "Пенобетон: ячеистый бетон с порами из готовой пены ПАВ, замешиваемой в цементно-песчаное тесто, твердеет в естественных условиях без автоклава.",
+    "conditions": "Плотность D200–D1200 кг/м³; пенообразователь синтетический или белковый 0,5–2% от массы воды",
+    "prereq": [
+      "material.construction.concrete.autoclaved_aerated"
+    ],
+    "confidence": 0.9,
+    "tags": [
+      "foam_concrete",
+      "cellular",
+      "non_autoclaved"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.93,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "material.construction.brick.ceramic_solid",
+    "schema_version": "3.2",
+    "domain": "construction.masonry",
+    "subtopic": "construction.masonry.brick",
+    "tier": "practical",
+    "type": "material",
+    "statement": "Кирпич керамический полнотелый: обожжённое глиняное изделие плотностью 1600–1900 кг/м³ без сквозных пустот, марки прочности М100–М300 для несущих стен и фундаментов.",
+    "conditions": "Обжиг при 950–1050°C; стандартный формат 250×120×65 мм; водопоглощение 8–14%",
+    "prereq": [
+      "material.chemistry.minerals.kaolinite"
+    ],
+    "confidence": 0.94,
+    "tags": [
+      "brick",
+      "ceramic",
+      "solid",
+      "masonry"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.97,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "material.construction.brick.ceramic_hollow",
+    "schema_version": "3.2",
+    "domain": "construction.masonry",
+    "subtopic": "construction.masonry.brick",
+    "tier": "practical",
+    "type": "material",
+    "statement": "Кирпич керамический пустотелый: керамическое изделие с щелевыми или круглыми пустотами 13–55% объёма, снижающими массу и теплопроводность стены до 0,3–0,5 Вт/(м·К).",
+    "conditions": "Не для фундаментов и цоколя ниже гидроизоляции; марки М100–М200",
+    "prereq": [
+      "material.construction.brick.ceramic_solid"
+    ],
+    "confidence": 0.92,
+    "tags": [
+      "brick",
+      "ceramic",
+      "hollow",
+      "masonry"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.95,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "material.construction.brick.silicate",
+    "schema_version": "3.2",
+    "domain": "construction.masonry",
+    "subtopic": "construction.masonry.brick",
+    "tier": "practical",
+    "type": "material",
+    "statement": "Силикатный кирпич: автоклавное изделие из песка 90%, извести 8% и воды, твердеющее в автоклаве при 175°C и 0,8–1,3 МПа за счёт образования гидросиликатов кальция.",
+    "conditions": "Прочность М100–М300; нельзя в фундаментах, цоколях, печах, дымоходах из-за низкой водо- и термостойкости",
+    "prereq": [
+      "material.construction.brick.ceramic_solid"
+    ],
+    "confidence": 0.93,
+    "tags": [
+      "brick",
+      "silicate",
+      "autoclaved",
+      "lime"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.95,
+      "safety_critical": false
+    }
+  }
+]

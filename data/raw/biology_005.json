@@ -1,0 +1,500 @@
+[
+  {
+    "id": "concept.biology.microbiology.bacterial_morphology",
+    "schema_version": "3.2",
+    "domain": "biology.microbiology",
+    "subtopic": "biology.microbiology.bacteria",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "Бактерии классифицируются по форме клетки: кокки сферические, бациллы палочковидные, спириллы спиральные, вибрионы изогнутые, спирохеты гибкие спиральные.",
+    "conditions": "Световая микроскопия; окраска по Граму",
+    "prereq": [],
+    "confidence": 0.99,
+    "tags": [
+      "morphology",
+      "cocci",
+      "bacilli",
+      "spirilla"
+    ]
+  },
+  {
+    "id": "concept.biology.microbiology.gram_staining",
+    "schema_version": "3.2",
+    "domain": "biology.microbiology",
+    "subtopic": "biology.microbiology.bacteria",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "Окраска по Граму делит бактерии на грам-положительные с толстым слоем пептидогликана и грам-отрицательные с тонким слоем и внешней липополисахаридной мембраной.",
+    "formal_notation": "Грам+ удерживают кристаллический фиолетовый; грам− окрашиваются сафранином",
+    "conditions": "Стандартный протокол Грама 1884 года",
+    "prereq": [
+      "concept.biology.microbiology.bacterial_morphology"
+    ],
+    "confidence": 0.99,
+    "tags": [
+      "Gram",
+      "peptidoglycan",
+      "LPS",
+      "staining"
+    ]
+  },
+  {
+    "id": "concept.biology.microbiology.peptidoglycan",
+    "schema_version": "3.2",
+    "domain": "biology.microbiology",
+    "subtopic": "biology.microbiology.bacteria",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "Пептидогликан — полимер N-ацетилглюкозамина и N-ацетилмурамовой кислоты, сшитый короткими пептидами; формирует жёсткую сеть клеточной стенки бактерий.",
+    "formal_notation": "NAG–NAM повторы; поперечные пептидные мостики (L-Ala–D-Glu–mDAP/L-Lys–D-Ala)",
+    "conditions": "Эубактерии; отсутствует у архей и эукариот",
+    "prereq": [
+      "concept.biology.microbiology.gram_staining"
+    ],
+    "confidence": 0.99,
+    "tags": [
+      "peptidoglycan",
+      "murein",
+      "cell_wall",
+      "NAM"
+    ]
+  },
+  {
+    "id": "concept.biology.microbiology.endospore",
+    "schema_version": "3.2",
+    "domain": "biology.microbiology",
+    "subtopic": "biology.microbiology.bacteria",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "Бактериальная эндоспора — устойчивая покоящаяся форма с дегидратированной цитоплазмой, толстой кортексой и оболочкой; сохраняет жизнеспособность десятилетия при высыхании, нагреве и радиации.",
+    "conditions": "Виды Bacillus и Clostridium; голод или стресс",
+    "prereq": [
+      "concept.biology.microbiology.bacterial_morphology"
+    ],
+    "confidence": 0.98,
+    "tags": [
+      "endospore",
+      "dormancy",
+      "Bacillus",
+      "Clostridium"
+    ]
+  },
+  {
+    "id": "concept.biology.microbiology.biofilm",
+    "schema_version": "3.2",
+    "domain": "biology.microbiology",
+    "subtopic": "biology.microbiology.bacteria",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "Биоплёнка — сообщество микроорганизмов, прикреплённое к поверхности и заключённое в собственный внеклеточный матрикс из полисахаридов, белков и внеклеточной ДНК.",
+    "conditions": "Достаточная плотность; кворум-сенсинг; влажная поверхность",
+    "prereq": [
+      "concept.biology.microbiology.bacterial_morphology"
+    ],
+    "confidence": 0.97,
+    "tags": [
+      "biofilm",
+      "EPS",
+      "quorum_sensing",
+      "community"
+    ]
+  },
+  {
+    "id": "mechanism.biology.microbiology.conjugation",
+    "schema_version": "3.2",
+    "domain": "biology.microbiology",
+    "subtopic": "biology.microbiology.gene_transfer",
+    "tier": "invariant",
+    "type": "mechanism",
+    "statement": "Бактериальная конъюгация — горизонтальный перенос ДНК через половой пилус от донорной клетки F+ к реципиентной F− с репликацией по типу катящегося кольца.",
+    "formal_notation": "F-плазмида: oriT → ник → перенос одноцепочечной ДНК через пилус",
+    "conditions": "Прямой контакт клеток; F-плазмида или интегрированный F-фактор у донора",
+    "prereq": [
+      "concept.biology.microbiology.bacterial_morphology"
+    ],
+    "confidence": 0.98,
+    "tags": [
+      "conjugation",
+      "F_plasmid",
+      "pilus",
+      "HGT"
+    ]
+  },
+  {
+    "id": "mechanism.biology.microbiology.transformation",
+    "schema_version": "3.2",
+    "domain": "biology.microbiology",
+    "subtopic": "biology.microbiology.gene_transfer",
+    "tier": "invariant",
+    "type": "mechanism",
+    "statement": "Бактериальная трансформация — поглощение свободной внеклеточной ДНК компетентной клеткой и её интеграция в геном гомологичной рекомбинацией; открыта Гриффитом в 1928 году.",
+    "conditions": "Состояние компетентности; гомология ДНК или сохранение в виде плазмиды",
+    "prereq": [
+      "mechanism.biology.microbiology.conjugation"
+    ],
+    "confidence": 0.98,
+    "tags": [
+      "transformation",
+      "Griffith",
+      "competence",
+      "HGT"
+    ]
+  },
+  {
+    "id": "mechanism.biology.microbiology.transduction",
+    "schema_version": "3.2",
+    "domain": "biology.microbiology",
+    "subtopic": "biology.microbiology.gene_transfer",
+    "tier": "invariant",
+    "type": "mechanism",
+    "statement": "Трансдукция — перенос бактериальной ДНК между клетками через бактериофаг; генерализованная захватывает случайные фрагменты, специализированная переносит гены рядом с сайтом интеграции профага.",
+    "conditions": "Бактериофаг в качестве переносчика; ошибка упаковки или эксцизия",
+    "prereq": [
+      "mechanism.biology.microbiology.transformation"
+    ],
+    "confidence": 0.97,
+    "tags": [
+      "transduction",
+      "phage",
+      "HGT",
+      "generalized"
+    ]
+  },
+  {
+    "id": "concept.biology.microbiology.plasmid",
+    "schema_version": "3.2",
+    "domain": "biology.microbiology",
+    "subtopic": "biology.microbiology.gene_transfer",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "Плазмида — внехромосомная кольцевая ДНК, реплицирующаяся автономно; R-фактор несёт гены устойчивости к антибиотикам и распространяется горизонтально.",
+    "formal_notation": "ori репликации + гены устойчивости/вирулентности",
+    "conditions": "Самостоятельная репликация; необязательна для жизни клетки",
+    "prereq": [
+      "mechanism.biology.microbiology.conjugation"
+    ],
+    "confidence": 0.99,
+    "tags": [
+      "plasmid",
+      "R_factor",
+      "antibiotic_resistance"
+    ]
+  },
+  {
+    "id": "concept.biology.microbiology.bacteriophage",
+    "schema_version": "3.2",
+    "domain": "biology.microbiology",
+    "subtopic": "biology.microbiology.virology",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "Бактериофаг — вирус, заражающий бактерии; типичная структура включает икосаэдрический капсид с ДНК, белковый хвост и фибриллы для адсорбции на рецепторе клетки.",
+    "conditions": "Специфичность хозяина определяется рецептором",
+    "prereq": [
+      "mechanism.biology.microbiology.transduction"
+    ],
+    "confidence": 0.99,
+    "tags": [
+      "phage",
+      "T4",
+      "capsid",
+      "tail"
+    ]
+  },
+  {
+    "id": "process.biology.microbiology.lytic_cycle",
+    "schema_version": "3.2",
+    "domain": "biology.microbiology",
+    "subtopic": "biology.microbiology.virology",
+    "tier": "invariant",
+    "type": "process",
+    "statement": "Литический цикл фага — адсорбция, инъекция ДНК, переключение метаболизма хозяина, репликация и сборка вирионов, лизис клетки с выходом потомства.",
+    "conditions": "Вирулентный фаг или индукция профага",
+    "prereq": [
+      "concept.biology.microbiology.bacteriophage"
+    ],
+    "confidence": 0.99,
+    "tags": [
+      "lytic",
+      "phage",
+      "lysis",
+      "virion"
+    ]
+  },
+  {
+    "id": "process.biology.microbiology.lysogenic_cycle",
+    "schema_version": "3.2",
+    "domain": "biology.microbiology",
+    "subtopic": "biology.microbiology.virology",
+    "tier": "invariant",
+    "type": "process",
+    "statement": "Лизогенный цикл — интеграция геномa фага в хромосому хозяина как профага, репликация вместе с ДНК клетки и индукция в литическую фазу при стрессе.",
+    "formal_notation": "Фаг λ: cI-репрессор поддерживает лизогению; SOS-ответ индуцирует литический путь",
+    "conditions": "Умеренный фаг; функциональный сайт интеграции attB",
+    "prereq": [
+      "process.biology.microbiology.lytic_cycle"
+    ],
+    "confidence": 0.98,
+    "tags": [
+      "lysogenic",
+      "prophage",
+      "lambda",
+      "integration"
+    ]
+  },
+  {
+    "id": "concept.biology.microbiology.virus_structure",
+    "schema_version": "3.2",
+    "domain": "biology.microbiology",
+    "subtopic": "biology.microbiology.virology",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "Вирион состоит из нуклеиновой кислоты ДНК или РНК, белкового капсида с симметрией икосаэдра или спирали и иногда липидной оболочки с гликопротеинами хозяина.",
+    "conditions": "Облигатный внутриклеточный паразит; нет собственного метаболизма",
+    "prereq": [],
+    "confidence": 0.99,
+    "tags": [
+      "virion",
+      "capsid",
+      "envelope",
+      "nucleocapsid"
+    ]
+  },
+  {
+    "id": "concept.biology.microbiology.virus_classification",
+    "schema_version": "3.2",
+    "domain": "biology.microbiology",
+    "subtopic": "biology.microbiology.virology",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "Классификация Балтимора делит вирусы по геному и способу его экспрессии: dsDNA, ssDNA, dsRNA, +ssRNA, −ssRNA, ssRNA-RT, dsDNA-RT.",
+    "formal_notation": "Семь групп Балтимора (1971)",
+    "conditions": "Геном и его путь к мРНК",
+    "prereq": [
+      "concept.biology.microbiology.virus_structure"
+    ],
+    "confidence": 0.98,
+    "tags": [
+      "Baltimore",
+      "classification",
+      "genome",
+      "mRNA"
+    ]
+  },
+  {
+    "id": "concept.biology.microbiology.retrovirus",
+    "schema_version": "3.2",
+    "domain": "biology.microbiology",
+    "subtopic": "biology.microbiology.virology",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "Ретровирус — РНК-вирус, переписывающий геном в ДНК обратной транскриптазой и интегрирующий провирус в хромосому хозяина интегразой; пример — HIV.",
+    "formal_notation": "ssRNA(+) → dsDNA → провирус → мРНК → белки",
+    "conditions": "Наличие обратной транскриптазы и интегразы в вирионе",
+    "prereq": [
+      "concept.biology.microbiology.virus_classification"
+    ],
+    "confidence": 0.99,
+    "tags": [
+      "retrovirus",
+      "reverse_transcriptase",
+      "integrase",
+      "HIV"
+    ]
+  },
+  {
+    "id": "concept.biology.microbiology.prion",
+    "schema_version": "3.2",
+    "domain": "biology.microbiology",
+    "subtopic": "biology.microbiology.virology",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "Прион — инфекционный белок без нуклеиновой кислоты, индуцирующий конформационный переход нормальной формы PrPC в патологическую PrPSc с накоплением амилоидных агрегатов.",
+    "conditions": "Аутокаталитическая конверсия укладки белка",
+    "prereq": [],
+    "confidence": 0.96,
+    "tags": [
+      "prion",
+      "PrP",
+      "Prusiner",
+      "amyloid"
+    ]
+  },
+  {
+    "id": "concept.biology.microbiology.viroid",
+    "schema_version": "3.2",
+    "domain": "biology.microbiology",
+    "subtopic": "biology.microbiology.virology",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "Вироид — кольцевая одноцепочечная некодирующая РНК длиной 246–401 нуклеотид, реплицирующаяся по типу катящегося кольца в растениях без капсида.",
+    "conditions": "Высокая вторичная структура; репликация РНК-полимеразой II хозяина",
+    "prereq": [
+      "concept.biology.microbiology.virus_structure"
+    ],
+    "confidence": 0.97,
+    "tags": [
+      "viroid",
+      "RNA",
+      "rolling_circle",
+      "plant"
+    ]
+  },
+  {
+    "id": "concept.biology.microbiology.archaea_domain",
+    "schema_version": "3.2",
+    "domain": "biology.microbiology",
+    "subtopic": "biology.microbiology.archaea",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "Археи — третий домен жизни с мембранными липидами на основе изопреноидных эфиров глицерина, без пептидогликана и с собственной системой репликации и транскрипции эукариотического типа.",
+    "formal_notation": "Архей: эфирные связи; бактерии: эфирные жирные кислоты",
+    "conditions": "Домен Archaea по Везе (1977)",
+    "prereq": [],
+    "confidence": 0.99,
+    "tags": [
+      "archaea",
+      "Woese",
+      "isoprenoid",
+      "ether"
+    ]
+  },
+  {
+    "id": "concept.biology.microbiology.methanogens",
+    "schema_version": "3.2",
+    "domain": "biology.microbiology",
+    "subtopic": "biology.microbiology.archaea",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "Метаногены — анаэробные археи, восстанавливающие CO2, ацетат или метиловые соединения до метана; ключевые ферменты — метил-CoM-редуктаза и кофермент F420.",
+    "formal_notation": "CO2 + 4H2 → CH4 + 2H2O",
+    "conditions": "Строго анаэробная среда; редокс-потенциал ниже −300 мВ",
+    "prereq": [
+      "concept.biology.microbiology.archaea_domain"
+    ],
+    "confidence": 0.98,
+    "tags": [
+      "methanogen",
+      "methane",
+      "anaerobic",
+      "F420"
+    ]
+  },
+  {
+    "id": "concept.biology.microbiology.extremophiles",
+    "schema_version": "3.2",
+    "domain": "biology.microbiology",
+    "subtopic": "biology.microbiology.archaea",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "Экстремофилы — организмы, оптимально живущие в экстремальных условиях: термофилы выше 60 °C, галофилы при насыщенной соли, ацидофилы при pH<3, психрофилы ниже 15 °C, барофилы при высоком давлении.",
+    "conditions": "Адаптация белков, мембран и ДНК-репарации",
+    "prereq": [
+      "concept.biology.microbiology.archaea_domain"
+    ],
+    "confidence": 0.98,
+    "tags": [
+      "extremophile",
+      "thermophile",
+      "halophile",
+      "psychrophile"
+    ]
+  },
+  {
+    "id": "concept.biology.microbiology.fungal_cell",
+    "schema_version": "3.2",
+    "domain": "biology.microbiology",
+    "subtopic": "biology.microbiology.fungi",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "Грибная клетка — эукариотическая с клеточной стенкой из хитина и β-глюканов, эргостеролом в мембране и одним или несколькими ядрами; запасает гликоген.",
+    "formal_notation": "Стенка: хитин + β-(1,3)-глюкан + маннопротеины",
+    "conditions": "Царство Fungi; отсутствие пластид",
+    "prereq": [],
+    "confidence": 0.99,
+    "tags": [
+      "fungi",
+      "chitin",
+      "ergosterol",
+      "glucan"
+    ]
+  },
+  {
+    "id": "concept.biology.microbiology.mycelium",
+    "schema_version": "3.2",
+    "domain": "biology.microbiology",
+    "subtopic": "biology.microbiology.fungi",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "Мицелий — вегетативное тело гриба, образованное сетью нитевидных гиф; гифы бывают септированными с перегородками или ценоцитными многоядерными.",
+    "conditions": "Рост на субстрате с органическим источником углерода",
+    "prereq": [
+      "concept.biology.microbiology.fungal_cell"
+    ],
+    "confidence": 0.99,
+    "tags": [
+      "mycelium",
+      "hyphae",
+      "septate",
+      "coenocytic"
+    ]
+  },
+  {
+    "id": "concept.biology.microbiology.yeast",
+    "schema_version": "3.2",
+    "domain": "biology.microbiology",
+    "subtopic": "biology.microbiology.fungi",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "Дрожжи — одноклеточные грибы, размножающиеся почкованием или делением; Saccharomyces cerevisiae проводит спиртовое брожение глюкозы до этанола и CO2.",
+    "formal_notation": "C6H12O6 → 2 C2H5OH + 2 CO2 (анаэробно)",
+    "conditions": "Доступная глюкоза; ограниченный кислород для брожения",
+    "prereq": [
+      "concept.biology.microbiology.fungal_cell"
+    ],
+    "confidence": 0.99,
+    "tags": [
+      "yeast",
+      "Saccharomyces",
+      "fermentation",
+      "budding"
+    ]
+  },
+  {
+    "id": "concept.biology.microbiology.lichen",
+    "schema_version": "3.2",
+    "domain": "biology.microbiology",
+    "subtopic": "biology.microbiology.fungi",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "Лишайник — облигатный симбиоз гриба-микобионта с фотосинтетиком — зелёной водорослью или цианобактерией; гриб формирует слоевище, фотобионт поставляет углеводы.",
+    "conditions": "Стабильная влажность; обмен веществ через гаустории",
+    "prereq": [
+      "concept.biology.microbiology.mycelium"
+    ],
+    "confidence": 0.98,
+    "tags": [
+      "lichen",
+      "symbiosis",
+      "mycobiont",
+      "photobiont"
+    ]
+  },
+  {
+    "id": "concept.biology.microbiology.protozoa",
+    "schema_version": "3.2",
+    "domain": "biology.microbiology",
+    "subtopic": "biology.microbiology.protozoa",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "Простейшие — одноклеточные гетеротрофные эукариоты с различными способами движения: жгутиконосцы, амёбы, инфузории, споровики; парафилетическая группа.",
+    "conditions": "Эукариотическая клетка без клеточной стенки растений или грибов",
+    "prereq": [],
+    "confidence": 0.97,
+    "tags": [
+      "protozoa",
+      "flagellate",
+      "amoeba",
+      "ciliate"
+    ]
+  }
+]

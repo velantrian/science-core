@@ -1,0 +1,470 @@
+[
+  {
+    "id": "principle.abstract.culture.clarke_laws",
+    "schema_version": "3.2",
+    "domain": "abstract.culture",
+    "subtopic": "abstract.culture.technology",
+    "tier": "abstract",
+    "type": "principle",
+    "statement": "Три закона Кларка: пожилой учёный обычно прав в возможности и неправ в невозможности; границы возможного открываются заглядыванием за них; развитая технология неотличима от магии.",
+    "conditions": "Эвристики прогноза научно-технического развития",
+    "prereq": ["pattern.abstract.history.paradigm_shift"],
+    "confidence": 0.68,
+    "tags": ["clarke", "futurism", "technology", "laws"],
+    "tier_extensions": {
+      "abstract_type": "pattern",
+      "human_only": true,
+      "related_abstract": ["pattern.abstract.history.paradigm_shift"]
+    }
+  },
+  {
+    "id": "pattern.abstract.culture.butterfly_narrative",
+    "schema_version": "3.2",
+    "domain": "abstract.culture",
+    "subtopic": "abstract.culture.narrative",
+    "tier": "abstract",
+    "type": "pattern",
+    "statement": "Эффект бабочки в нарративах: малое начальное событие сюжета через цепь причинных усилений приводит к качественно иному финалу, эксплуатируя интуицию хаотической динамики.",
+    "conditions": "Сюжеты с временными петлями и контрафактами",
+    "prereq": ["pattern.abstract.culture.story_structure"],
+    "confidence": 0.62,
+    "tags": ["butterfly_effect", "narrative", "counterfactual"],
+    "tier_extensions": {
+      "abstract_type": "pattern",
+      "human_only": true,
+      "related_abstract": ["mechanism.abstract.mind.counterfactual"]
+    }
+  },
+  {
+    "id": "concept.abstract.culture.aesthetic_emotion",
+    "schema_version": "3.2",
+    "domain": "abstract.culture",
+    "subtopic": "abstract.culture.aesthetics",
+    "tier": "abstract",
+    "type": "concept",
+    "statement": "Эстетическая эмоция: специфический класс аффекта при восприятии произведения искусства, сочетающий перцептивное удовольствие, узнавание формы и метарефлексивную дистанцию.",
+    "conditions": "Эстетическая установка и культурная компетенция реципиента",
+    "prereq": ["concept.abstract.mind.self_awareness"],
+    "confidence": 0.62,
+    "tags": ["aesthetics", "emotion", "art_reception"],
+    "tier_extensions": {
+      "abstract_type": "pattern",
+      "human_only": true,
+      "related_abstract": ["concept.abstract.culture.catharsis"]
+    }
+  },
+  {
+    "id": "concept.abstract.culture.catharsis",
+    "schema_version": "3.2",
+    "domain": "abstract.culture",
+    "subtopic": "abstract.culture.aesthetics",
+    "tier": "abstract",
+    "type": "concept",
+    "statement": "Катарсис Аристотеля: очищение аффектов страха и сострадания у зрителя трагедии через сопереживание герою, ведущее к эмоциональному равновесию по завершении драмы.",
+    "conditions": "Античная и классическая трагедийная форма",
+    "prereq": ["concept.abstract.culture.aesthetic_emotion"],
+    "confidence": 0.65,
+    "tags": ["catharsis", "aristotle", "tragedy"],
+    "tier_extensions": {
+      "abstract_type": "pattern",
+      "human_only": true,
+      "related_abstract": ["concept.abstract.culture.mimesis"]
+    }
+  },
+  {
+    "id": "concept.abstract.culture.mimesis",
+    "schema_version": "3.2",
+    "domain": "abstract.culture",
+    "subtopic": "abstract.culture.aesthetics",
+    "tier": "abstract",
+    "type": "concept",
+    "statement": "Мимесис: подражательное воспроизведение действительности в искусстве, у Платона лишь тень идеи, у Аристотеля познавательный акт раскрытия общего через единичное.",
+    "conditions": "Классическая эстетика; реалистические и условные конвенции",
+    "prereq": ["pattern.abstract.culture.story_structure"],
+    "confidence": 0.68,
+    "tags": ["mimesis", "imitation", "aristotle", "plato"],
+    "tier_extensions": {
+      "abstract_type": "pattern",
+      "human_only": true,
+      "related_abstract": ["concept.abstract.culture.catharsis"]
+    }
+  },
+  {
+    "id": "concept.abstract.culture.apollonian_dionysian",
+    "schema_version": "3.2",
+    "domain": "abstract.culture",
+    "subtopic": "abstract.culture.aesthetics",
+    "tier": "abstract",
+    "type": "concept",
+    "statement": "Дихотомия Ницше: аполлоническое начало даёт меру, форму и индивидуацию, дионисийское опьянение растворяет индивида в коллективном экстазе; их синтез порождает трагедию.",
+    "conditions": "Эстетика немецкого романтизма и греческой трагедии",
+    "prereq": ["concept.abstract.culture.catharsis"],
+    "confidence": 0.60,
+    "tags": ["nietzsche", "apollonian", "dionysian", "tragedy"],
+    "tier_extensions": {
+      "abstract_type": "archetype",
+      "human_only": true,
+      "related_abstract": ["concept.abstract.culture.archetype"]
+    }
+  },
+  {
+    "id": "model.abstract.mind.lewin_field_theory",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.social",
+    "tier": "abstract",
+    "type": "model",
+    "statement": "Теория поля Левина: поведение есть функция личности и окружения B=f(P,E), действующих как векторные силы в жизненном пространстве с зонами валентности и барьерами.",
+    "conditions": "Гештальтистская социальная психология",
+    "prereq": ["concept.abstract.mind.mental_model"],
+    "confidence": 0.65,
+    "tags": ["lewin", "field_theory", "life_space"],
+    "tier_extensions": {
+      "abstract_type": "pattern",
+      "human_only": false,
+      "related_abstract": ["concept.abstract.culture.habitus"]
+    }
+  },
+  {
+    "id": "concept.abstract.economy.mauss_gift",
+    "schema_version": "3.2",
+    "domain": "abstract.economy",
+    "subtopic": "abstract.economy.exchange",
+    "tier": "abstract",
+    "type": "concept",
+    "statement": "Экономика подарка Мосса: тотальный социальный факт обмена дарами с обязательствами давать, принимать и возвращать, конституирующий социальные связи в архаических обществах.",
+    "conditions": "Догосударственные и племенные общества; ритуальный обмен",
+    "prereq": ["pattern.abstract.economy.gift_economy"],
+    "confidence": 0.72,
+    "tags": ["mauss", "gift", "reciprocity", "anthropology"],
+    "tier_extensions": {
+      "abstract_type": "pattern",
+      "human_only": true,
+      "related_abstract": ["pattern.abstract.culture.reciprocity"]
+    }
+  },
+  {
+    "id": "concept.abstract.economy.moral_economy_scott",
+    "schema_version": "3.2",
+    "domain": "abstract.economy",
+    "subtopic": "abstract.economy.peasant",
+    "tier": "abstract",
+    "type": "concept",
+    "statement": "Моральная экономика Скотта: крестьянские нормы взаимности и минимального обеспечения существования вступают в конфликт с капиталистической рациональностью рынка и налога.",
+    "conditions": "Аграрные общества под давлением модернизации",
+    "prereq": ["concept.abstract.economy.mauss_gift"],
+    "confidence": 0.66,
+    "tags": ["scott", "moral_economy", "peasant", "subsistence"],
+    "tier_extensions": {
+      "abstract_type": "pattern",
+      "human_only": true,
+      "related_abstract": ["concept.abstract.economy.mauss_gift"]
+    }
+  },
+  {
+    "id": "model.abstract.culture.social_identity",
+    "schema_version": "3.2",
+    "domain": "abstract.culture",
+    "subtopic": "abstract.culture.identity",
+    "tier": "abstract",
+    "type": "model",
+    "statement": "Теория социальной идентичности Тэджфела-Тёрнера: часть Я-концепции выводится из членства в группах, порождая ингрупповой фаворитизм и аутгрупповую дискриминацию даже при минимальных условиях.",
+    "conditions": "Парадигма минимальных групп; категоризация по произвольному признаку",
+    "prereq": ["pattern.abstract.culture.status_game"],
+    "confidence": 0.78,
+    "tags": ["tajfel", "social_identity", "ingroup", "outgroup"],
+    "tier_extensions": {
+      "abstract_type": "pattern",
+      "human_only": true,
+      "related_abstract": ["pattern.abstract.culture.status_game"]
+    }
+  },
+  {
+    "id": "pattern.abstract.culture.primate_hierarchy",
+    "schema_version": "3.2",
+    "domain": "abstract.culture",
+    "subtopic": "abstract.culture.hierarchy",
+    "tier": "abstract",
+    "type": "pattern",
+    "statement": "Статусные иерархии в группах приматов: линейные доминационные ранги с альфа-структурой регулируют доступ к ресурсам и снижают агрессию через ритуализованные сигналы подчинения.",
+    "conditions": "Социальные виды с устойчивыми группами; шимпанзе, бабуины, макаки",
+    "prereq": ["pattern.abstract.culture.status_game"],
+    "confidence": 0.78,
+    "tags": ["dominance", "hierarchy", "primates", "ethology"],
+    "tier_extensions": {
+      "abstract_type": "pattern",
+      "human_only": false,
+      "related_abstract": ["model.abstract.culture.social_identity"]
+    }
+  },
+  {
+    "id": "concept.abstract.culture.cultural_capital",
+    "schema_version": "3.2",
+    "domain": "abstract.culture",
+    "subtopic": "abstract.culture.bourdieu",
+    "tier": "abstract",
+    "type": "concept",
+    "statement": "Культурный капитал Бурдьё: инкорпорированные диспозиции, объективированные блага и институциональные титулы, передаваемые через семью и школу и конвертируемые в социальные позиции.",
+    "conditions": "Стратифицированное общество с символическим господством",
+    "prereq": ["pattern.abstract.culture.status_game"],
+    "confidence": 0.74,
+    "tags": ["bourdieu", "cultural_capital", "stratification"],
+    "tier_extensions": {
+      "abstract_type": "pattern",
+      "human_only": true,
+      "related_abstract": ["concept.abstract.culture.habitus", "concept.abstract.culture.field"]
+    }
+  },
+  {
+    "id": "concept.abstract.culture.habitus",
+    "schema_version": "3.2",
+    "domain": "abstract.culture",
+    "subtopic": "abstract.culture.bourdieu",
+    "tier": "abstract",
+    "type": "concept",
+    "statement": "Габитус Бурдьё: система инкорпорированных диспозиций восприятия, оценки и действия, сформированная классовыми условиями и воспроизводящая социальный порядок до уровня рефлексии.",
+    "conditions": "Стабильные классовые позиции и социализация",
+    "prereq": ["concept.abstract.culture.cultural_capital"],
+    "confidence": 0.72,
+    "tags": ["habitus", "bourdieu", "disposition"],
+    "tier_extensions": {
+      "abstract_type": "pattern",
+      "human_only": true,
+      "related_abstract": ["concept.abstract.culture.cultural_capital", "concept.abstract.culture.field"]
+    }
+  },
+  {
+    "id": "concept.abstract.culture.field",
+    "schema_version": "3.2",
+    "domain": "abstract.culture",
+    "subtopic": "abstract.culture.bourdieu",
+    "tier": "abstract",
+    "type": "concept",
+    "statement": "Социальное поле Бурдьё: относительно автономная структурированная сеть позиций с собственным капиталом и правилами игры, в которой агенты конкурируют за доминирующие позиции.",
+    "conditions": "Дифференцированные сферы науки, искусства, политики, экономики",
+    "prereq": ["concept.abstract.culture.habitus"],
+    "confidence": 0.70,
+    "tags": ["field", "bourdieu", "social_space"],
+    "tier_extensions": {
+      "abstract_type": "pattern",
+      "human_only": true,
+      "related_abstract": ["concept.abstract.culture.habitus", "concept.abstract.culture.cultural_capital"]
+    }
+  },
+  {
+    "id": "concept.abstract.economy.precariat",
+    "schema_version": "3.2",
+    "domain": "abstract.economy",
+    "subtopic": "abstract.economy.class",
+    "tier": "abstract",
+    "type": "concept",
+    "statement": "Прекариат Стэндинга: формирующийся класс работников с нестабильной занятостью, отсутствием идентичности труда и эрозией социальных гарантий, отличный от пролетариата индустриальной эпохи.",
+    "conditions": "Гибкие рынки труда позднего капитализма",
+    "prereq": ["concept.abstract.culture.cultural_capital"],
+    "confidence": 0.60,
+    "tags": ["precariat", "standing", "labor", "class"],
+    "tier_extensions": {
+      "abstract_type": "pattern",
+      "human_only": true,
+      "related_abstract": ["concept.abstract.economy.alienation_marx"]
+    }
+  },
+  {
+    "id": "concept.abstract.economy.alienation_marx",
+    "schema_version": "3.2",
+    "domain": "abstract.economy",
+    "subtopic": "abstract.economy.labor",
+    "tier": "abstract",
+    "type": "concept",
+    "statement": "Отчуждение по Марксу: разделение работника от продукта труда, процесса труда, родовой сущности и других людей в условиях капиталистического присвоения прибавочной стоимости.",
+    "conditions": "Капиталистические производственные отношения",
+    "prereq": ["concept.abstract.economy.precariat"],
+    "confidence": 0.72,
+    "tags": ["marx", "alienation", "labor", "capital"],
+    "tier_extensions": {
+      "abstract_type": "pattern",
+      "human_only": true,
+      "related_abstract": ["concept.abstract.culture.anomie_durkheim"]
+    }
+  },
+  {
+    "id": "concept.abstract.culture.anomie_durkheim",
+    "schema_version": "3.2",
+    "domain": "abstract.culture",
+    "subtopic": "abstract.culture.durkheim",
+    "tier": "abstract",
+    "type": "concept",
+    "statement": "Аномия Дюркгейма: состояние ослабления нормативной регуляции в обществе при резких социальных изменениях, ведущее к росту суицидов и девиаций.",
+    "conditions": "Быстрая модернизация или кризис",
+    "prereq": ["concept.abstract.economy.alienation_marx"],
+    "confidence": 0.74,
+    "tags": ["durkheim", "anomie", "norms", "suicide"],
+    "tier_extensions": {
+      "abstract_type": "pattern",
+      "human_only": true,
+      "related_abstract": ["relation.abstract.culture.solidarity"]
+    }
+  },
+  {
+    "id": "relation.abstract.culture.solidarity",
+    "schema_version": "3.2",
+    "domain": "abstract.culture",
+    "subtopic": "abstract.culture.durkheim",
+    "tier": "abstract",
+    "type": "relation",
+    "statement": "Дюркгейм различает механическую солидарность простых обществ через сходство и коллективное сознание и органическую солидарность сложных обществ через взаимозависимость функций.",
+    "conditions": "Переход от традиционных к индустриальным обществам",
+    "prereq": ["concept.abstract.culture.anomie_durkheim"],
+    "confidence": 0.74,
+    "tags": ["durkheim", "solidarity", "mechanical", "organic"],
+    "tier_extensions": {
+      "abstract_type": "pattern",
+      "human_only": true,
+      "related_abstract": ["concept.abstract.culture.anomie_durkheim"]
+    }
+  },
+  {
+    "id": "pattern.abstract.culture.inglehart_values",
+    "schema_version": "3.2",
+    "domain": "abstract.culture",
+    "subtopic": "abstract.culture.values",
+    "tier": "abstract",
+    "type": "pattern",
+    "statement": "Сдвиг ценностей Инглхарта: рост экономической безопасности в обществах ведёт к смещению от материалистических ценностей выживания к постматериалистическим ценностям самовыражения.",
+    "conditions": "Данные World Values Survey; межпоколенческая смена",
+    "prereq": ["relation.abstract.culture.solidarity"],
+    "confidence": 0.68,
+    "tags": ["inglehart", "values", "postmaterialism", "wvs"],
+    "tier_extensions": {
+      "abstract_type": "pattern",
+      "human_only": true,
+      "related_abstract": ["model.abstract.culture.hofstede_dimensions"]
+    }
+  },
+  {
+    "id": "model.abstract.culture.hofstede_dimensions",
+    "schema_version": "3.2",
+    "domain": "abstract.culture",
+    "subtopic": "abstract.culture.cross_cultural",
+    "tier": "abstract",
+    "type": "model",
+    "statement": "Измерения Хофстеде: дистанция власти, индивидуализм-коллективизм, избегание неопределённости, маскулинность-фемининность, долгосрочная ориентация, потворство-сдержанность.",
+    "conditions": "Сравнительные данные опросов сотрудников IBM и расширения",
+    "prereq": ["pattern.abstract.culture.inglehart_values"],
+    "confidence": 0.66,
+    "tags": ["hofstede", "cross_cultural", "dimensions"],
+    "tier_extensions": {
+      "abstract_type": "pattern",
+      "human_only": true,
+      "related_abstract": ["model.abstract.culture.globe_project"]
+    }
+  },
+  {
+    "id": "model.abstract.culture.globe_project",
+    "schema_version": "3.2",
+    "domain": "abstract.culture",
+    "subtopic": "abstract.culture.cross_cultural",
+    "tier": "abstract",
+    "type": "model",
+    "statement": "Проект GLOBE Хауса расширяет Хофстеде до девяти измерений культурной практики и ценности, добавляя гуманную ориентацию, ориентацию на исполнение и асертивность.",
+    "conditions": "Данные 62 обществ; разделение практик и ценностей",
+    "prereq": ["model.abstract.culture.hofstede_dimensions"],
+    "confidence": 0.62,
+    "tags": ["globe", "cross_cultural", "leadership"],
+    "tier_extensions": {
+      "abstract_type": "pattern",
+      "human_only": true,
+      "related_abstract": ["model.abstract.culture.hofstede_dimensions"]
+    }
+  },
+  {
+    "id": "concept.abstract.culture.weber_protestant",
+    "schema_version": "3.2",
+    "domain": "abstract.culture",
+    "subtopic": "abstract.culture.weber",
+    "tier": "abstract",
+    "type": "concept",
+    "statement": "Протестантская этика Вебера: кальвинистская доктрина предопределения и мирского аскетизма создала культурный субстрат, благоприятствовавший рациональному накоплению капитала.",
+    "conditions": "Северо-западная Европа XVI-XVII веков; кальвинистские деноминации",
+    "prereq": ["pattern.abstract.culture.inglehart_values"],
+    "confidence": 0.62,
+    "tags": ["weber", "protestant_ethic", "capitalism"],
+    "tier_extensions": {
+      "abstract_type": "pattern",
+      "human_only": true,
+      "related_abstract": ["relation.abstract.culture.weber_rationality"]
+    }
+  },
+  {
+    "id": "relation.abstract.culture.weber_rationality",
+    "schema_version": "3.2",
+    "domain": "abstract.culture",
+    "subtopic": "abstract.culture.weber",
+    "tier": "abstract",
+    "type": "relation",
+    "statement": "Вебер различает инструментальную целерациональность подбора средств к целям и ценностную рациональность ориентации на безусловную ценность независимо от последствий.",
+    "conditions": "Типологический анализ социального действия",
+    "prereq": ["concept.abstract.culture.weber_protestant"],
+    "confidence": 0.72,
+    "tags": ["weber", "rationality", "zweckrational", "wertrational"],
+    "tier_extensions": {
+      "abstract_type": "pattern",
+      "human_only": true,
+      "related_abstract": ["concept.abstract.culture.weber_ideal_type"]
+    }
+  },
+  {
+    "id": "concept.abstract.culture.weber_ideal_type",
+    "schema_version": "3.2",
+    "domain": "abstract.culture",
+    "subtopic": "abstract.culture.weber",
+    "tier": "abstract",
+    "type": "concept",
+    "statement": "Идеальный тип Вебера: мысленная конструкция, акцентирующая ключевые черты явления для аналитического сравнения с эмпирическими случаями без претензии на полное описание реальности.",
+    "conditions": "Методология понимающей социологии",
+    "prereq": ["relation.abstract.culture.weber_rationality"],
+    "confidence": 0.74,
+    "tags": ["weber", "ideal_type", "verstehen", "methodology"],
+    "tier_extensions": {
+      "abstract_type": "metacognition",
+      "human_only": true,
+      "related_abstract": ["relation.abstract.culture.weber_rationality"]
+    }
+  },
+  {
+    "id": "model.abstract.culture.actor_network",
+    "schema_version": "3.2",
+    "domain": "abstract.culture",
+    "subtopic": "abstract.culture.sts",
+    "tier": "abstract",
+    "type": "model",
+    "statement": "Акторно-сетевая теория Латура: социальная реальность собирается из гетерогенных сетей людей и нечеловеческих акторов, обладающих равным онтологическим статусом агентности.",
+    "conditions": "Этнография науки и техники; симметричная антропология",
+    "prereq": ["concept.abstract.culture.weber_ideal_type"],
+    "confidence": 0.62,
+    "tags": ["latour", "ant", "sts", "agency"],
+    "tier_extensions": {
+      "abstract_type": "pattern",
+      "human_only": false,
+      "related_abstract": ["concept.abstract.mind.extended_mind"]
+    }
+  },
+  {
+    "id": "concept.abstract.mind.extended_mind",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.cognition",
+    "tier": "abstract",
+    "type": "concept",
+    "statement": "Тезис расширенного разума Кларка-Чалмерса: когнитивные процессы конститутивно включают внешние артефакты и среду, если те играют ту же функциональную роль, что и внутренние состояния.",
+    "conditions": "Принцип паритета функций; доступность и доверие к внешнему ресурсу",
+    "prereq": ["concept.abstract.mind.symbol_grounding"],
+    "confidence": 0.62,
+    "tags": ["clark", "chalmers", "extended_mind", "embodied"],
+    "tier_extensions": {
+      "abstract_type": "metacognition",
+      "human_only": false,
+      "related_abstract": ["model.abstract.culture.actor_network", "concept.abstract.mind.symbol_grounding"]
+    }
+  }
+]

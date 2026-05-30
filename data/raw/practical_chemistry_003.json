@@ -1,0 +1,481 @@
+[
+  {
+    "id": "method.chemistry.separation.binary_distillation",
+    "schema_version": "3.2",
+    "domain": "chemistry.separation",
+    "subtopic": "chemistry.separation.distillation",
+    "tier": "practical",
+    "type": "method",
+    "statement": "Бинарная ректификация: разделение смеси двух жидкостей с разными точками кипения в тарельчатой или насадочной колонне с противотоком пара и флегмы.",
+    "formal_notation": "y_i = α·x_i / (1 + (α-1)·x_i); α — относительная летучесть; N_min — уравнение Фенске",
+    "conditions": "α > 1.05, давление от вакуума до 30 bar, флегмовое число R = 1.1–1.5 × R_min",
+    "prereq": [],
+    "confidence": 0.97,
+    "tags": ["distillation", "rectification", "binary", "relative_volatility"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.98,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "method.chemistry.separation.azeotropic_distillation",
+    "schema_version": "3.2",
+    "domain": "chemistry.separation",
+    "subtopic": "chemistry.separation.distillation",
+    "tier": "practical",
+    "type": "method",
+    "statement": "Азеотропная перегонка: введение третьего компонента-разделителя, образующего азеотроп с одним из компонентов исходной смеси, что разрушает исходный азеотроп.",
+    "formal_notation": "Гетероазеотроп: расслоение фаз; пример этанол-вода-бензол (Юнг)",
+    "conditions": "Разделитель образует низкокипящий азеотроп; температурные различия дают разделение в декантере",
+    "prereq": ["method.chemistry.separation.binary_distillation"],
+    "confidence": 0.94,
+    "tags": ["azeotropic_distillation", "entrainer", "ethanol", "benzene"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.93,
+      "safety_critical": true,
+      "safety_notes": "Разделители часто токсичны (бензол) или горючи; риск перегрева"
+    }
+  },
+  {
+    "id": "method.chemistry.separation.extractive_distillation",
+    "schema_version": "3.2",
+    "domain": "chemistry.separation",
+    "subtopic": "chemistry.separation.distillation",
+    "tier": "practical",
+    "type": "method",
+    "statement": "Экстрактивная перегонка: введение высококипящего селективного растворителя, изменяющего относительную летучесть компонентов без образования нового азеотропа.",
+    "formal_notation": "α_eff = γ1·P°1 / (γ2·P°2); растворитель снижает γ одного компонента",
+    "conditions": "Tкип растворителя >> Tкип ключевых; ввод растворителя выше точки питания, S/F = 1–5",
+    "prereq": ["method.chemistry.separation.binary_distillation"],
+    "confidence": 0.94,
+    "tags": ["extractive_distillation", "selective_solvent", "activity_coefficient", "separation"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.94,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "method.chemistry.separation.gas_absorption",
+    "schema_version": "3.2",
+    "domain": "chemistry.separation",
+    "subtopic": "chemistry.separation.absorption",
+    "tier": "practical",
+    "type": "method",
+    "statement": "Газовая абсорбция: избирательное растворение одного или нескольких компонентов газовой смеси жидким абсорбентом в противоточной колонне с насадкой.",
+    "formal_notation": "Закон Генри: p_i = H·x_i; ВЭТТ = высота, эквивалентная теоретической ступени",
+    "conditions": "Колонна с регулярной/нерегулярной насадкой, T низкая (растворимость газов растёт), L/G по равновесию",
+    "prereq": ["concept.chemistry.solutions.solubility"],
+    "confidence": 0.96,
+    "tags": ["absorption", "scrubber", "henrys_law", "packed_column"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.97,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "method.chemistry.separation.activated_carbon",
+    "schema_version": "3.2",
+    "domain": "chemistry.separation",
+    "subtopic": "chemistry.separation.adsorption",
+    "tier": "practical",
+    "type": "method",
+    "statement": "Адсорбция на активированном угле: физическое поглощение органических молекул высокоразвитой пористой структурой с удельной поверхностью 500–1500 м²/г.",
+    "formal_notation": "Изотерма Ленгмюра q = q_max·K·c/(1+K·c); Sуд BET 500–1500 м²/г",
+    "conditions": "T комнатная — 60°C, размер пор 0.4–10 нм, регенерация паром или термическая 700–950°C",
+    "prereq": [],
+    "confidence": 0.96,
+    "tags": ["activated_carbon", "adsorption", "BET", "langmuir"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.97,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "method.chemistry.separation.zeolite_adsorption",
+    "schema_version": "3.2",
+    "domain": "chemistry.separation",
+    "subtopic": "chemistry.separation.adsorption",
+    "tier": "practical",
+    "type": "method",
+    "statement": "Молекулярно-ситовая адсорбция на цеолитах: разделение молекул по размеру и полярности в кристаллических алюмосиликатных каналах размером 3–10 Å.",
+    "formal_notation": "Цеолиты типа A, X, Y, ZSM-5; диаметр пор 3 Å (3A), 4 Å (4A), 5 Å (5A), 10 Å (13X)",
+    "conditions": "T 25–200°C, P 1–10 bar, цикл PSA (1–5 мин) или TSA (часы), точка росы −60°C",
+    "prereq": ["method.chemistry.separation.activated_carbon"],
+    "confidence": 0.96,
+    "tags": ["zeolite", "molecular_sieve", "PSA", "drying"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.97,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "method.chemistry.separation.ion_exchange",
+    "schema_version": "3.2",
+    "domain": "chemistry.separation",
+    "subtopic": "chemistry.separation.adsorption",
+    "tier": "practical",
+    "type": "method",
+    "statement": "Ионный обмен на смолах: замена ионов раствора противоионами смолы по селективности, с регенерацией кислотой/щёлочью или солевым раствором.",
+    "formal_notation": "R-H + Na⁺ ⇌ R-Na + H⁺; обменная ёмкость 1–5 мэкв/г сухой смолы",
+    "conditions": "Катиониты сульфо- и карбокси-, аниониты четвертичные/третичные амины, регенерация HCl/NaOH",
+    "prereq": ["concept.chemistry.solutions.solubility"],
+    "confidence": 0.96,
+    "tags": ["ion_exchange", "resin", "demineralization", "water_softening"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.97,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "method.chemistry.separation.ultrafiltration",
+    "schema_version": "3.2",
+    "domain": "chemistry.separation",
+    "subtopic": "chemistry.separation.membrane",
+    "tier": "practical",
+    "type": "method",
+    "statement": "Ультрафильтрация через полимерные мембраны: разделение макромолекул и коллоидов 1–100 нм при перепаде давления 1–10 bar.",
+    "formal_notation": "Поры 1–100 нм; MWCO 1–500 кДа; поток J = ΔP/(μ·R_total)",
+    "conditions": "Мембраны PES/PVDF/PSU, тангенциальная или прямоточная фильтрация, ΔP 1–10 bar",
+    "prereq": [],
+    "confidence": 0.95,
+    "tags": ["ultrafiltration", "membrane", "MWCO", "macromolecules"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.95,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "method.chemistry.separation.nanofiltration",
+    "schema_version": "3.2",
+    "domain": "chemistry.separation",
+    "subtopic": "chemistry.separation.membrane",
+    "tier": "practical",
+    "type": "method",
+    "statement": "Нанофильтрация: мембранное разделение многовалентных ионов и молекул 200–1000 Да при умеренном давлении с зарядовой селективностью.",
+    "formal_notation": "Поры ~1 нм; MWCO 200–1000 Да; отсечение SO4²⁻ >99%, Cl⁻ 30–70%",
+    "conditions": "ΔP 5–20 bar, поток 10–40 л/(м²·ч), мембрана композитная полиамидная на полисульфоновой подложке",
+    "prereq": ["method.chemistry.separation.ultrafiltration"],
+    "confidence": 0.94,
+    "tags": ["nanofiltration", "membrane", "divalent_ions", "softening"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.95,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "method.chemistry.separation.reverse_osmosis",
+    "schema_version": "3.2",
+    "domain": "chemistry.separation",
+    "subtopic": "chemistry.separation.membrane",
+    "tier": "practical",
+    "type": "method",
+    "statement": "Обратный осмос: разделение растворителя и растворённых веществ через полупроницаемую мембрану при давлении выше осмотического.",
+    "formal_notation": "J_w = A·(ΔP - Δπ); π = i·c·R·T; отсечение NaCl >99%",
+    "conditions": "Морская вода: ΔP 55–80 bar; солоноватая: ΔP 10–25 bar; мембрана тонкослойная полиамидная",
+    "prereq": ["method.chemistry.separation.nanofiltration"],
+    "confidence": 0.97,
+    "tags": ["reverse_osmosis", "desalination", "polyamide_membrane", "osmotic_pressure"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.97,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "method.chemistry.separation.crystallization",
+    "schema_version": "3.2",
+    "domain": "chemistry.separation",
+    "subtopic": "chemistry.separation.crystallization",
+    "tier": "practical",
+    "type": "method",
+    "statement": "Кристаллизация из раствора: образование твёрдой фазы при пересыщении за счёт охлаждения, выпаривания или добавки антирастворителя.",
+    "formal_notation": "Пересыщение S = c/c*; скорость нуклеации ~ exp(-ΔG_crit/kT); рост по BCF теории",
+    "conditions": "Охлаждающие, испарительные или вакуум-кристаллизаторы; контроль скорости охлаждения 0.1–1 K/мин",
+    "prereq": ["concept.chemistry.solutions.solubility"],
+    "confidence": 0.96,
+    "tags": ["crystallization", "supersaturation", "nucleation", "purification"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.95,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "method.chemistry.separation.sublimation",
+    "schema_version": "3.2",
+    "domain": "chemistry.separation",
+    "subtopic": "chemistry.separation.purification",
+    "tier": "practical",
+    "type": "method",
+    "statement": "Сублимационная очистка: прямой переход вещества из твёрдой фазы в газовую с осаждением кристаллов на холодной поверхности без промежуточной жидкости.",
+    "formal_notation": "Условие: T < Tтр.точки, p < pтр.точки; йод, нафталин, кофеин",
+    "conditions": "Tнагрева ниже точки плавления, P 0.1–10 mbar, хладопалец T 10–25°C",
+    "prereq": [],
+    "confidence": 0.94,
+    "tags": ["sublimation", "purification", "triple_point", "cold_finger"],
+    "tier_extensions": {
+      "scale": "lab",
+      "success_rate": 0.93,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "method.chemistry.separation.vacuum_filtration",
+    "schema_version": "3.2",
+    "domain": "chemistry.separation",
+    "subtopic": "chemistry.separation.filtration",
+    "tier": "practical",
+    "type": "method",
+    "statement": "Вакуумная фильтрация: разделение твёрдой и жидкой фаз через пористый фильтр при разрежении ниже фильтра для ускорения процесса.",
+    "formal_notation": "Уравнение Дарси: dV/(A·dt) = ΔP / (μ·(α·c·V/A + R_m))",
+    "conditions": "Воронка Бюхнера / нутч-фильтр с вакуумом 50–700 mbar, фильтр-бумага 0.45–25 мкм",
+    "prereq": [],
+    "confidence": 0.95,
+    "tags": ["vacuum_filtration", "buchner", "darcy_law", "filter_cake"],
+    "tier_extensions": {
+      "scale": "lab",
+      "success_rate": 0.96,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "method.chemistry.separation.centrifugation",
+    "schema_version": "3.2",
+    "domain": "chemistry.separation",
+    "subtopic": "chemistry.separation.mechanical",
+    "tier": "practical",
+    "type": "method",
+    "statement": "Центрифугирование: разделение фаз и частиц по плотности в поле центробежного ускорения, выраженном через число g.",
+    "formal_notation": "RCF = 1.118·10⁻⁵·N²·r; v_s = 2·r_p²·(ρ_p - ρ_f)·g_eff / (9·μ)",
+    "conditions": "Лабораторные 1000–30000 g; препаративные ультрацентрифуги до 1000000 g; T 4–25°C",
+    "prereq": [],
+    "confidence": 0.96,
+    "tags": ["centrifugation", "RCF", "sedimentation", "stokes"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.97,
+      "safety_critical": true,
+      "safety_notes": "Аэрозоли при разрыве пробирок; биоопасные образцы требуют защиты"
+    }
+  },
+  {
+    "id": "method.chemistry.separation.froth_flotation",
+    "schema_version": "3.2",
+    "domain": "chemistry.separation",
+    "subtopic": "chemistry.separation.mechanical",
+    "tier": "practical",
+    "type": "method",
+    "statement": "Флотация руды: обогащение минералов разделением гидрофобных и гидрофильных частиц с использованием собирателей и вспенивателей в пенном слое.",
+    "formal_notation": "Собиратели — ксантогенаты, дитиофосфаты; вспениватели — терпинеол, MIBC; pH-регуляторы",
+    "conditions": "Пульпа 30–40% твёрдого, аэрация 0.5–1 м³/м³/мин, размер частиц 10–150 мкм",
+    "prereq": [],
+    "confidence": 0.95,
+    "tags": ["flotation", "froth", "collector", "ore_beneficiation"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.93,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "method.chemistry.separation.gravity_concentration",
+    "schema_version": "3.2",
+    "domain": "chemistry.separation",
+    "subtopic": "chemistry.separation.mechanical",
+    "tier": "practical",
+    "type": "method",
+    "statement": "Гравитационное обогащение: разделение минералов по разности плотностей в водной среде на отсадочных машинах, концентрационных столах и винтовых сепараторах.",
+    "formal_notation": "Критерий концентрации CC = (ρ_тяж - ρ_сред) / (ρ_лёг - ρ_сред); CC > 2.5 — лёгкое разделение",
+    "conditions": "Размер частиц 0.05–25 мм, отношение Δρ ≥ 0.5 г/см³, скорость потока подбирается по фракции",
+    "prereq": [],
+    "confidence": 0.94,
+    "tags": ["gravity_separation", "jig", "spiral", "concentration_criterion"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.92,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "method.chemistry.separation.vacuum_evaporation",
+    "schema_version": "3.2",
+    "domain": "chemistry.separation",
+    "subtopic": "chemistry.separation.evaporation",
+    "tier": "practical",
+    "type": "method",
+    "statement": "Выпаривание под вакуумом: концентрирование раствора испарением при пониженном давлении, что снижает температуру кипения и сохраняет термолабильные вещества.",
+    "formal_notation": "P 50–200 mbar → Tкип H2O 33–60°C; коэффициент теплопередачи U ≈ 1500–3000 Вт/(м²·К)",
+    "conditions": "Многокорпусные прямоточные/противоточные выпарные аппараты, MVR или пар низкого давления",
+    "prereq": [],
+    "confidence": 0.96,
+    "tags": ["evaporation", "vacuum", "thermolabile", "concentration"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.97,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "method.chemistry.separation.liquid_liquid_extraction",
+    "schema_version": "3.2",
+    "domain": "chemistry.separation",
+    "subtopic": "chemistry.separation.extraction",
+    "tier": "practical",
+    "type": "method",
+    "statement": "Жидкость-жидкостная экстракция: распределение растворённого вещества между двумя несмешивающимися жидкими фазами по коэффициенту распределения.",
+    "formal_notation": "K_D = c_org / c_aq; уравнение Крейга для многоступенчатой экстракции",
+    "conditions": "Смесительно-отстойные аппараты, пульсационные колонны, центробежные экстракторы; pH контролирует ионную форму",
+    "prereq": ["concept.chemistry.solutions.solubility"],
+    "confidence": 0.96,
+    "tags": ["liquid_extraction", "partition_coefficient", "nernst", "solvent"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.96,
+      "safety_critical": true,
+      "safety_notes": "Большие объёмы органических растворителей; пожароопасность; токсичность"
+    }
+  },
+  {
+    "id": "method.chemistry.separation.solid_phase_extraction",
+    "schema_version": "3.2",
+    "domain": "chemistry.separation",
+    "subtopic": "chemistry.separation.extraction",
+    "tier": "practical",
+    "type": "method",
+    "statement": "Твердофазная экстракция (SPE): концентрирование аналитов на сорбенте в картридже с последующим селективным элюированием малым объёмом растворителя.",
+    "formal_notation": "Стадии: кондиционирование → загрузка → промывка → элюирование; концентрирование 10–1000×",
+    "conditions": "Сорбенты C18, HLB, ионообменники; объём картриджа 1–60 мл; вакуум-манифолд или давление",
+    "prereq": ["method.chemistry.separation.activated_carbon"],
+    "confidence": 0.95,
+    "tags": ["SPE", "sample_prep", "C18", "preconcentration"],
+    "tier_extensions": {
+      "scale": "lab",
+      "success_rate": 0.95,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "method.chemistry.separation.prep_hplc",
+    "schema_version": "3.2",
+    "domain": "chemistry.separation",
+    "subtopic": "chemistry.separation.chromatography",
+    "tier": "practical",
+    "type": "method",
+    "statement": "Препаративная ВЭЖХ: хроматографическое разделение и выделение миллиграммовых-граммовых количеств вещества из смеси на колонке с обращённой или нормальной фазой.",
+    "formal_notation": "Колонки 10–100 мм диаметра, частицы 5–20 мкм; нагрузка 1–100 мг/г сорбента",
+    "conditions": "Давление 50–300 bar, поток 10–500 мл/мин, детектирование UV/ELSD, сбор фракций",
+    "prereq": ["method.chemistry.separation.solid_phase_extraction"],
+    "confidence": 0.95,
+    "tags": ["prep_HPLC", "purification", "C18", "fraction_collection"],
+    "tier_extensions": {
+      "scale": "pilot",
+      "success_rate": 0.93,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "method.chemistry.separation.steam_distillation",
+    "schema_version": "3.2",
+    "domain": "chemistry.separation",
+    "subtopic": "chemistry.separation.distillation",
+    "tier": "practical",
+    "type": "method",
+    "statement": "Перегонка с водяным паром: выделение нерастворимых в воде летучих компонентов при температуре ниже их точек кипения за счёт совместной упругости паров.",
+    "formal_notation": "P_total = P°_H2O + P°_орг; T кипения смеси < Tкип чистого орг.",
+    "conditions": "Прямой пар или нагрев с водой, T смеси <100°C при P = 1 atm, эфирные масла, нафталин",
+    "prereq": [],
+    "confidence": 0.95,
+    "tags": ["steam_distillation", "essential_oils", "raoult", "immiscible"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.95,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "method.chemistry.separation.lyophilization",
+    "schema_version": "3.2",
+    "domain": "chemistry.separation",
+    "subtopic": "chemistry.separation.drying",
+    "tier": "practical",
+    "type": "method",
+    "statement": "Лиофилизация: сушка замороженного материала сублимацией льда под вакуумом ниже тройной точки воды с сохранением структуры биомолекул.",
+    "formal_notation": "Замораживание -40..-80°C; первичная сушка P 0.05–0.5 mbar, T полки -30..-10°C; вторичная +20..+40°C",
+    "conditions": "Тройная точка H2O: 0.01°C, 6.1 mbar; конденсатор -50..-80°C; влажность продукта <2%",
+    "prereq": ["method.chemistry.separation.sublimation"],
+    "confidence": 0.96,
+    "tags": ["lyophilization", "freeze_drying", "sublimation", "biopreservation"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.96,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "method.chemistry.separation.molecular_distillation",
+    "schema_version": "3.2",
+    "domain": "chemistry.separation",
+    "subtopic": "chemistry.separation.distillation",
+    "tier": "practical",
+    "type": "method",
+    "statement": "Молекулярная (короткопутевая) перегонка: испарение и конденсация с расстоянием между поверхностями меньше длины свободного пробега молекул при глубоком вакууме.",
+    "formal_notation": "P 0.001–0.01 mbar; λ свободного пробега 10–100 мм > расстояние испаритель-конденсатор",
+    "conditions": "Тонкоплёночные роторные испарители, T 80–250°C, время контакта секунды, термолабильные вещества",
+    "prereq": ["method.chemistry.separation.binary_distillation"],
+    "confidence": 0.93,
+    "tags": ["molecular_distillation", "short_path", "high_vacuum", "thermolabile"],
+    "tier_extensions": {
+      "scale": "pilot",
+      "success_rate": 0.92,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "method.chemistry.separation.cryogenic_distillation",
+    "schema_version": "3.2",
+    "domain": "chemistry.separation",
+    "subtopic": "chemistry.separation.distillation",
+    "tier": "practical",
+    "type": "method",
+    "statement": "Криогенная перегонка воздуха: разделение N2, O2 и Ar в двойной колонне Линде после сжатия и охлаждения воздуха ниже -180°C.",
+    "formal_notation": "Tкип N2 = -195.8°C, Ar = -185.8°C, O2 = -183.0°C; двойная колонна высокого/низкого давления",
+    "conditions": "P нижней колонны 5–6 bar, верхней 1.3–1.5 bar, охлаждение турбодетандером, чистота O2 >99.5%",
+    "prereq": ["method.chemistry.separation.binary_distillation"],
+    "confidence": 0.96,
+    "tags": ["cryogenic_distillation", "air_separation", "linde", "oxygen"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.97,
+      "safety_critical": true,
+      "safety_notes": "Криогенные температуры; обогащённый O2 ускоряет горение; вытеснение кислорода N2"
+    }
+  },
+  {
+    "id": "method.chemistry.separation.dialysis",
+    "schema_version": "3.2",
+    "domain": "chemistry.separation",
+    "subtopic": "chemistry.separation.membrane",
+    "tier": "practical",
+    "type": "method",
+    "statement": "Диализ: разделение растворённых веществ по размеру через полупроницаемую мембрану под действием градиента концентраций без приложения давления.",
+    "formal_notation": "Поток J = P·(c1 - c2); MWCO мембран 1–50 кДа; движущая сила Δc",
+    "conditions": "Мембраны регенерированной целлюлозы или PES, время уравновешивания часы, объём диализата ≥20×",
+    "prereq": ["method.chemistry.separation.ultrafiltration"],
+    "confidence": 0.95,
+    "tags": ["dialysis", "MWCO", "diffusion", "desalting"],
+    "tier_extensions": {
+      "scale": "lab",
+      "success_rate": 0.95,
+      "safety_critical": false
+    }
+  }
+]

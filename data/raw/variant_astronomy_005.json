@@ -1,0 +1,718 @@
+[
+  {
+    "id": "fact.astronomy.nebula.crab",
+    "schema_version": "3.2",
+    "domain": "astronomy.nebula",
+    "subtopic": "astronomy.nebula.crab",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Крабовидная туманность (M1, NGC 1952) — остаток сверхновой SN 1054 в Тельце; диаметр ~11 св. лет; расстояние ~6500 св. лет; центральный пульсар PSR B0531+21 с периодом 33,5 мс.",
+    "conditions": "HST/Chandra",
+    "prereq": [
+      "concept.astronomy.supernova_remnant",
+      "concept.astronomy.pulsar"
+    ],
+    "confidence": 0.94,
+    "tags": [
+      "crab_nebula",
+      "m1",
+      "supernova_remnant",
+      "pulsar"
+    ],
+    "tier_extensions": {
+      "source": "Hubble/Chandra 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "diameter_ly": 11,
+      "distance_ly": 6500,
+      "pulsar_period_ms": 33.5
+    }
+  },
+  {
+    "id": "fact.astronomy.nebula.eagle_m16",
+    "schema_version": "3.2",
+    "domain": "astronomy.nebula",
+    "subtopic": "astronomy.nebula.eagle",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Туманность Орёл (M16, NGC 6611) — эмиссионная туманность H II в Змее; диаметр ~70 св. лет; расстояние ~7000 св. лет; содержит Столпы Творения, активное звездообразование.",
+    "conditions": "HST/JWST",
+    "prereq": [
+      "concept.astronomy.emission_nebula"
+    ],
+    "confidence": 0.92,
+    "tags": [
+      "eagle_nebula",
+      "m16",
+      "emission_nebula",
+      "pillars_of_creation"
+    ],
+    "tier_extensions": {
+      "source": "JWST 2022",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "diameter_ly": 70,
+      "distance_ly": 7000
+    }
+  },
+  {
+    "id": "fact.astronomy.nebula.orion_m42",
+    "schema_version": "3.2",
+    "domain": "astronomy.nebula",
+    "subtopic": "astronomy.nebula.orion",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Туманность Ориона (M42, NGC 1976) — эмиссионная H II область; диаметр ~24 св. лет; расстояние ~1344 св. лет; ярчайшая туманность ночного неба; активный регион звездообразования.",
+    "conditions": "HST/JWST",
+    "prereq": [
+      "concept.astronomy.emission_nebula"
+    ],
+    "confidence": 0.95,
+    "tags": [
+      "orion_nebula",
+      "m42",
+      "emission_nebula",
+      "star_formation"
+    ],
+    "tier_extensions": {
+      "source": "JWST 2023",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "diameter_ly": 24,
+      "distance_ly": 1344
+    }
+  },
+  {
+    "id": "fact.astronomy.nebula.helix",
+    "schema_version": "3.2",
+    "domain": "astronomy.nebula",
+    "subtopic": "astronomy.nebula.helix",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Туманность Улитка (NGC 7293) — планетарная туманность в Водолее; диаметр ~2,9 св. лет; расстояние ~655 св. лет; одна из ближайших ярких планетарных туманностей; центральный белый карлик.",
+    "conditions": "HST",
+    "prereq": [
+      "concept.astronomy.planetary_nebula"
+    ],
+    "confidence": 0.93,
+    "tags": [
+      "helix_nebula",
+      "ngc_7293",
+      "planetary_nebula"
+    ],
+    "tier_extensions": {
+      "source": "Hubble 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "diameter_ly": 2.9,
+      "distance_ly": 655
+    }
+  },
+  {
+    "id": "fact.astronomy.nebula.ring",
+    "schema_version": "3.2",
+    "domain": "astronomy.nebula",
+    "subtopic": "astronomy.nebula.ring",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Кольцевая туманность (M57, NGC 6720) — планетарная туманность в Лире; диаметр ~1,3 св. лет; расстояние ~2570 св. лет; центральный белый карлик с температурой 120000 K.",
+    "conditions": "HST/JWST",
+    "prereq": [
+      "concept.astronomy.planetary_nebula"
+    ],
+    "confidence": 0.93,
+    "tags": [
+      "ring_nebula",
+      "m57",
+      "planetary_nebula"
+    ],
+    "tier_extensions": {
+      "source": "JWST 2023",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "diameter_ly": 1.3,
+      "distance_ly": 2570,
+      "central_star_temperature_K": 120000
+    }
+  },
+  {
+    "id": "fact.astronomy.supernova.sn_1054",
+    "schema_version": "3.2",
+    "domain": "astronomy.supernova",
+    "subtopic": "astronomy.supernova.sn_1054",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "SN 1054 — сверхновая, наблюдавшаяся китайскими астрономами 04.07.1054 в Тельце; видимая величина −6; видна днём 23 дня; породила Крабовидную туманность и пульсар PSR B0531+21.",
+    "conditions": "Исторические записи + современные данные",
+    "prereq": [
+      "concept.astronomy.supernova"
+    ],
+    "confidence": 0.94,
+    "tags": [
+      "sn_1054",
+      "supernova",
+      "crab_progenitor",
+      "historical"
+    ],
+    "tier_extensions": {
+      "source": "Historical records, NASA 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "year": 1054,
+      "peak_magnitude": -6,
+      "type": "II"
+    }
+  },
+  {
+    "id": "fact.astronomy.supernova.sn_1987a",
+    "schema_version": "3.2",
+    "domain": "astronomy.supernova",
+    "subtopic": "astronomy.supernova.sn_1987a",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "SN 1987A — сверхновая типа II в Большом Магеллановом Облаке, замечена 23.02.1987; пиковая величина +2,9; расстояние ~168000 св. лет; первое детектирование нейтрино от SN.",
+    "conditions": "HST/JWST/Kamiokande",
+    "prereq": [
+      "concept.astronomy.supernova"
+    ],
+    "confidence": 0.95,
+    "tags": [
+      "sn_1987a",
+      "supernova",
+      "neutrino",
+      "lmc"
+    ],
+    "tier_extensions": {
+      "source": "NASA/ESO 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "discovery_date": "1987-02-23",
+      "peak_magnitude": 2.9,
+      "distance_ly": 168000,
+      "type": "II"
+    }
+  },
+  {
+    "id": "fact.astronomy.cmb.discovery_1965",
+    "schema_version": "3.2",
+    "domain": "astronomy.cmb",
+    "subtopic": "astronomy.cmb.discovery",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Открытие реликтового излучения — Пензиас и Вильсон в 1964-1965 на антенне Bell Labs в Холмделе зафиксировали изотропный шум T~3,5 K; Нобелевская премия 1978; подтвердило Большой взрыв.",
+    "conditions": "Bell Labs 1965",
+    "prereq": [
+      "concept.astronomy.cmb"
+    ],
+    "confidence": 0.95,
+    "tags": [
+      "cmb_discovery",
+      "penzias_wilson",
+      "big_bang"
+    ],
+    "tier_extensions": {
+      "source": "Penzias & Wilson 1965, ApJ",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "year": 1965,
+      "nobel_year": 1978
+    }
+  },
+  {
+    "id": "fact.astronomy.comet.halley",
+    "schema_version": "3.2",
+    "domain": "astronomy.comet",
+    "subtopic": "astronomy.comet.halley",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Комета Галлея (1P/Halley) — короткопериодическая комета с периодом 76 лет; ядро 15×8 км; перигелий 0,586 а.е.; афелий 35,1 а.е.; последний перигелий 09.02.1986; следующий — 2061.",
+    "conditions": "Данные Giotto, Vega",
+    "prereq": [
+      "concept.astronomy.comet"
+    ],
+    "confidence": 0.95,
+    "tags": [
+      "halley",
+      "comet",
+      "short_period",
+      "1p"
+    ],
+    "tier_extensions": {
+      "source": "NASA JPL Horizons 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "orbital_period_years": 76,
+      "perihelion_au": 0.586,
+      "aphelion_au": 35.1,
+      "next_perihelion_year": 2061
+    }
+  },
+  {
+    "id": "fact.astronomy.comet.hale_bopp",
+    "schema_version": "3.2",
+    "domain": "astronomy.comet",
+    "subtopic": "astronomy.comet.hale_bopp",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Комета Хейла-Боппа (C/1995 O1) — долгопериодическая комета; период ~2533 года; ядро ~60 км; перигелий 0,914 а.е.; перигелий 01.04.1997; видна невооружённым глазом 18 месяцев.",
+    "conditions": "HST/наземные обсерватории",
+    "prereq": [
+      "concept.astronomy.comet"
+    ],
+    "confidence": 0.94,
+    "tags": [
+      "hale_bopp",
+      "comet",
+      "long_period"
+    ],
+    "tier_extensions": {
+      "source": "NASA JPL 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "orbital_period_years": 2533,
+      "nucleus_diameter_km": 60,
+      "perihelion_au": 0.914,
+      "perihelion_date": "1997-04-01"
+    }
+  },
+  {
+    "id": "fact.astronomy.comet.shoemaker_levy_9",
+    "schema_version": "3.2",
+    "domain": "astronomy.comet",
+    "subtopic": "astronomy.comet.shoemaker_levy_9",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Комета Шумейкера-Леви 9 (D/1993 F2) — комета, захваченная Юпитером; разрушилась на 21 фрагмент; столкновение с Юпитером 16-22.07.1994; первое наблюдаемое столкновение в Солнечной системе.",
+    "conditions": "HST/Galileo",
+    "prereq": [
+      "concept.astronomy.comet",
+      "fact.astronomy.planet.jupiter"
+    ],
+    "confidence": 0.95,
+    "tags": [
+      "shoemaker_levy_9",
+      "comet",
+      "jupiter_impact"
+    ],
+    "tier_extensions": {
+      "source": "NASA/Hubble 1994",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "impact_date_start": "1994-07-16",
+      "impact_date_end": "1994-07-22",
+      "fragment_count": 21
+    }
+  },
+  {
+    "id": "fact.astronomy.meteor_shower.perseids",
+    "schema_version": "3.2",
+    "domain": "astronomy.meteor_shower",
+    "subtopic": "astronomy.meteor_shower.perseids",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Персеиды — ежегодный метеорный поток, активный 17.07-24.08; пик ~12.08; ZHR ~100; радиант в созвездии Персея; родительская комета 109P/Свифта-Туттля.",
+    "conditions": "IMO 2024",
+    "prereq": [
+      "concept.astronomy.meteor_shower"
+    ],
+    "confidence": 0.95,
+    "tags": [
+      "perseids",
+      "meteor_shower",
+      "swift_tuttle"
+    ],
+    "tier_extensions": {
+      "source": "International Meteor Organization 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "peak_date": "08-12",
+      "zhr": 100,
+      "parent_body": "109P/Swift-Tuttle"
+    }
+  },
+  {
+    "id": "fact.astronomy.meteor_shower.leonids",
+    "schema_version": "3.2",
+    "domain": "astronomy.meteor_shower",
+    "subtopic": "astronomy.meteor_shower.leonids",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Леониды — ежегодный метеорный поток, активный 06.11-30.11; пик ~17.11; ZHR ~15; периодические штормы каждые 33 года; родительская комета 55P/Темпеля-Туттля.",
+    "conditions": "IMO 2024",
+    "prereq": [
+      "concept.astronomy.meteor_shower"
+    ],
+    "confidence": 0.94,
+    "tags": [
+      "leonids",
+      "meteor_shower",
+      "tempel_tuttle"
+    ],
+    "tier_extensions": {
+      "source": "International Meteor Organization 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "peak_date": "11-17",
+      "zhr": 15,
+      "parent_body": "55P/Tempel-Tuttle"
+    }
+  },
+  {
+    "id": "fact.astronomy.meteor_shower.geminids",
+    "schema_version": "3.2",
+    "domain": "astronomy.meteor_shower",
+    "subtopic": "astronomy.meteor_shower.geminids",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Геминиды — ежегодный метеорный поток, активный 04.12-17.12; пик ~14.12; ZHR ~150; радиант в Близнецах; родительское тело — астероид 3200 Фаэтон.",
+    "conditions": "IMO 2024",
+    "prereq": [
+      "concept.astronomy.meteor_shower"
+    ],
+    "confidence": 0.95,
+    "tags": [
+      "geminids",
+      "meteor_shower",
+      "phaethon"
+    ],
+    "tier_extensions": {
+      "source": "International Meteor Organization 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "peak_date": "12-14",
+      "zhr": 150,
+      "parent_body": "3200 Phaethon"
+    }
+  },
+  {
+    "id": "fact.astronomy.grb.grb_221009a",
+    "schema_version": "3.2",
+    "domain": "astronomy.grb",
+    "subtopic": "astronomy.grb.grb_221009a",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "GRB 221009A (BOAT) — ярчайший гамма-всплеск за всю историю наблюдений; зарегистрирован 09.10.2022; z=0,151; расстояние ~2,4 млрд св. лет; энергия фотонов до 18 ТэВ.",
+    "conditions": "Fermi/Swift/LHAASO",
+    "prereq": [
+      "concept.astronomy.gamma_ray_burst"
+    ],
+    "confidence": 0.94,
+    "tags": [
+      "grb_221009a",
+      "boat",
+      "gamma_ray_burst",
+      "brightest"
+    ],
+    "tier_extensions": {
+      "source": "Fermi/Swift/LHAASO 2023",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "detection_date": "2022-10-09",
+      "redshift": 0.151,
+      "distance_ly": 2400000000.0,
+      "max_photon_energy_TeV": 18
+    }
+  },
+  {
+    "id": "fact.astronomy.frb.frb_121102",
+    "schema_version": "3.2",
+    "domain": "astronomy.frb",
+    "subtopic": "astronomy.frb.frb_121102",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "FRB 121102 — первый повторяющийся быстрый радиовсплеск; зарегистрирован 02.11.2012 на Аресибо; источник — карликовая галактика на z=0,193; расстояние ~3 млрд св. лет.",
+    "conditions": "Arecibo/VLA/CHIME",
+    "prereq": [
+      "concept.astronomy.frb"
+    ],
+    "confidence": 0.93,
+    "tags": [
+      "frb_121102",
+      "fast_radio_burst",
+      "repeating"
+    ],
+    "tier_extensions": {
+      "source": "Spitler et al. Nature 2016",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "first_detection": "2012-11-02",
+      "redshift": 0.193,
+      "distance_ly": 3000000000.0
+    }
+  },
+  {
+    "id": "fact.astronomy.star.betelgeuse_dimming_2019",
+    "schema_version": "3.2",
+    "domain": "astronomy.stellar_phenomena",
+    "subtopic": "astronomy.star.betelgeuse.dimming",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Великое затемнение Бетельгейзе — звезда упала по яркости с +0,5 до +1,6 mag в октябре 2019 — феврале 2020; причиной стал выброс пыли и понижение температуры фотосферы.",
+    "conditions": "ESO VLT/HST 2020-2022",
+    "prereq": [
+      "fact.astronomy.star.betelgeuse"
+    ],
+    "confidence": 0.9,
+    "tags": [
+      "betelgeuse_dimming",
+      "stellar_phenomenon",
+      "dust_ejection"
+    ],
+    "tier_extensions": {
+      "source": "Montargès et al. Nature 2021",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "min_magnitude": 1.6,
+      "max_magnitude": 0.5,
+      "period_start": "2019-10",
+      "period_end": "2020-02"
+    }
+  },
+  {
+    "id": "fact.astronomy.star.eta_carinae",
+    "schema_version": "3.2",
+    "domain": "astronomy.massive_stars",
+    "subtopic": "astronomy.star.eta_carinae",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Эта Киля (η Car) — система из двух массивных звёзд; общая масса ~150 M☉; светимость ~5×10⁶ L☉; расстояние ~7500 св. лет; Великое извержение 1843; туманность Гомункулус.",
+    "conditions": "HST/Chandra",
+    "prereq": [
+      "concept.astronomy.luminous_blue_variable"
+    ],
+    "confidence": 0.88,
+    "tags": [
+      "eta_carinae",
+      "lbv",
+      "homunculus",
+      "supernova_candidate"
+    ],
+    "tier_extensions": {
+      "source": "Hubble/Chandra 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": true,
+      "total_mass_solar": 150,
+      "luminosity_solar": 5000000.0,
+      "distance_ly": 7500,
+      "great_eruption_year": 1843
+    }
+  },
+  {
+    "id": "fact.astronomy.nebula.tarantula",
+    "schema_version": "3.2",
+    "domain": "astronomy.nebula",
+    "subtopic": "astronomy.nebula.tarantula",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Туманность Тарантул (30 Doradus, NGC 2070) — H II область в БМО; диаметр ~600 св. лет; расстояние ~160000 св. лет; крупнейший известный регион звездообразования в Местной группе.",
+    "conditions": "JWST 2022",
+    "prereq": [
+      "concept.astronomy.emission_nebula",
+      "fact.astronomy.galaxy.lmc"
+    ],
+    "confidence": 0.93,
+    "tags": [
+      "tarantula_nebula",
+      "30_doradus",
+      "star_formation",
+      "lmc"
+    ],
+    "tier_extensions": {
+      "source": "JWST 2022",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "diameter_ly": 600,
+      "distance_ly": 160000
+    }
+  },
+  {
+    "id": "fact.astronomy.comet.neowise",
+    "schema_version": "3.2",
+    "domain": "astronomy.comet",
+    "subtopic": "astronomy.comet.neowise",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Комета NEOWISE (C/2020 F3) — долгопериодическая комета; период ~6800 лет; перигелий 0,295 а.е. (03.07.2020); ядро ~5 км; ярчайшая комета 2020 года в северном полушарии.",
+    "conditions": "NEOWISE/TESS",
+    "prereq": [
+      "concept.astronomy.comet"
+    ],
+    "confidence": 0.92,
+    "tags": [
+      "neowise",
+      "comet",
+      "c_2020_f3"
+    ],
+    "tier_extensions": {
+      "source": "NASA JPL 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "orbital_period_years": 6800,
+      "perihelion_au": 0.295,
+      "perihelion_date": "2020-07-03"
+    }
+  },
+  {
+    "id": "fact.astronomy.supernova.sn_1604_kepler",
+    "schema_version": "3.2",
+    "domain": "astronomy.supernova",
+    "subtopic": "astronomy.supernova.sn_1604",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "SN 1604 (Звезда Кеплера) — последняя сверхновая, наблюдавшаяся в Млечном Пути невооружённым глазом; 09.10.1604 в Змееносце; пиковая величина −2,5; расстояние ~20000 св. лет.",
+    "conditions": "Историческое наблюдение Кеплера",
+    "prereq": [
+      "concept.astronomy.supernova"
+    ],
+    "confidence": 0.94,
+    "tags": [
+      "sn_1604",
+      "kepler_supernova",
+      "historical",
+      "milky_way"
+    ],
+    "tier_extensions": {
+      "source": "Historical + Chandra 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "year": 1604,
+      "peak_magnitude": -2.5,
+      "distance_ly": 20000,
+      "type": "Ia"
+    }
+  },
+  {
+    "id": "fact.astronomy.meteor_shower.quadrantids",
+    "schema_version": "3.2",
+    "domain": "astronomy.meteor_shower",
+    "subtopic": "astronomy.meteor_shower.quadrantids",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Квадрантиды — ежегодный метеорный поток, активный 28.12-12.01; пик ~03.01; ZHR ~120; радиант между Волопасом и Драконом; родительское тело — астероид 2003 EH1.",
+    "conditions": "IMO 2024",
+    "prereq": [
+      "concept.astronomy.meteor_shower"
+    ],
+    "confidence": 0.93,
+    "tags": [
+      "quadrantids",
+      "meteor_shower"
+    ],
+    "tier_extensions": {
+      "source": "International Meteor Organization 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "peak_date": "01-03",
+      "zhr": 120,
+      "parent_body": "2003 EH1"
+    }
+  },
+  {
+    "id": "fact.astronomy.frb.frb_200428",
+    "schema_version": "3.2",
+    "domain": "astronomy.frb",
+    "subtopic": "astronomy.frb.frb_200428",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "FRB 200428 — первый FRB, зарегистрированный внутри Млечного Пути 28.04.2020; источник — магнетар SGR 1935+2154; расстояние ~30000 св. лет; подтвердил магнетары как источники FRB.",
+    "conditions": "CHIME/STARE2",
+    "prereq": [
+      "concept.astronomy.frb",
+      "concept.astronomy.magnetar"
+    ],
+    "confidence": 0.93,
+    "tags": [
+      "frb_200428",
+      "magnetar",
+      "milky_way_frb"
+    ],
+    "tier_extensions": {
+      "source": "SGR 1935+2154",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "detection_date": "2020-04-28",
+      "distance_ly": 30000
+    }
+  },
+  {
+    "id": "fact.astronomy.nebula.veil",
+    "schema_version": "3.2",
+    "domain": "astronomy.nebula",
+    "subtopic": "astronomy.nebula.veil",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Туманность Вуаль (NGC 6960/6992/6995) — остаток сверхновой в Лебеде; диаметр ~110 св. лет; расстояние ~2400 св. лет; возраст ~10000-20000 лет; включает Сетку Рыбака и Метлу Ведьмы.",
+    "conditions": "HST/наземные",
+    "prereq": [
+      "concept.astronomy.supernova_remnant"
+    ],
+    "confidence": 0.91,
+    "tags": [
+      "veil_nebula",
+      "supernova_remnant",
+      "cygnus"
+    ],
+    "tier_extensions": {
+      "source": "Hubble 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "diameter_ly": 110,
+      "distance_ly": 2400,
+      "age_years_min": 10000,
+      "age_years_max": 20000
+    }
+  },
+  {
+    "id": "fact.astronomy.grb.grb_170817a",
+    "schema_version": "3.2",
+    "domain": "astronomy.grb",
+    "subtopic": "astronomy.grb.grb_170817a",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "GRB 170817A — короткий гамма-всплеск, зарегистрирован Fermi 17.08.2017 через 1,7 с после GW170817; первый GRB, ассоциированный с гравитационными волнами и слиянием нейтронных звёзд.",
+    "conditions": "Fermi/INTEGRAL/LIGO",
+    "prereq": [
+      "concept.astronomy.gamma_ray_burst",
+      "fact.astronomy.gw.gw170817"
+    ],
+    "confidence": 0.95,
+    "tags": [
+      "grb_170817a",
+      "short_grb",
+      "multimessenger",
+      "kilonova"
+    ],
+    "tier_extensions": {
+      "source": "Fermi/LIGO 2017",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "detection_date": "2017-08-17",
+      "delay_after_gw_seconds": 1.7
+    }
+  }
+]
