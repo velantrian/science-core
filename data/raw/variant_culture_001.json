@@ -1,0 +1,477 @@
+[
+  {
+    "id": "fact.culture.religion.catholicism",
+    "schema_version": "3.2",
+    "domain": "culture.religion",
+    "subtopic": "religion.christianity.catholicism",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Католицизм — крупнейшая ветвь христианства; около 1,4 млрд последователей; центр — Ватикан; глава — Папа Римский; признаёт 7 таинств и догмат о папской непогрешимости (1870).",
+    "conditions": "Данные на 2024; оценка Pew Research",
+    "prereq": ["concept.culture.religion"],
+    "confidence": 0.92,
+    "tags": ["catholicism", "christianity", "vatican", "religion"],
+    "tier_extensions": {
+      "source": "Pew Research / Vatican Annuario 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.culture.religion.orthodoxy",
+    "schema_version": "3.2",
+    "domain": "culture.religion",
+    "subtopic": "religion.christianity.orthodoxy",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Православие — восточная ветвь христианства; около 220 млн верующих; 14 автокефальных церквей; отделение от Рима — Великая схизма 1054 года; литургический язык преимущественно церковнославянский и греческий.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.culture.religion"],
+    "confidence": 0.91,
+    "tags": ["orthodoxy", "christianity", "schism", "religion"],
+    "tier_extensions": {
+      "source": "Pew Research 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.culture.religion.protestantism",
+    "schema_version": "3.2",
+    "domain": "culture.religion",
+    "subtopic": "religion.christianity.protestantism",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Протестантизм — ветвь христианства, возникшая в XVI веке после Реформации Мартина Лютера (1517); около 900 млн последователей; ключевые течения: лютеранство, кальвинизм, англиканство, баптизм, пятидесятничество.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.culture.religion"],
+    "confidence": 0.91,
+    "tags": ["protestantism", "reformation", "christianity", "luther"],
+    "tier_extensions": {
+      "source": "Pew Research 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.culture.religion.islam_sunni",
+    "schema_version": "3.2",
+    "domain": "culture.religion",
+    "subtopic": "religion.islam.sunni",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Сунниты — крупнейшая ветвь ислама; около 85–90% мусульман мира (примерно 1,6 млрд); признают четырёх праведных халифов; четыре мазхаба: ханафитский, маликитский, шафиитский, ханбалитский.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.culture.religion"],
+    "confidence": 0.91,
+    "tags": ["sunni", "islam", "religion", "mazhab"],
+    "tier_extensions": {
+      "source": "Pew Research 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.culture.religion.islam_shia",
+    "schema_version": "3.2",
+    "domain": "culture.religion",
+    "subtopic": "religion.islam.shia",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Шииты — вторая по численности ветвь ислама; около 200 млн (10–15% мусульман); признают власть от Али ибн Абу Талиба и имамов; доминируют в Иране, Ираке, Бахрейне, Азербайджане.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.culture.religion"],
+    "confidence": 0.9,
+    "tags": ["shia", "islam", "ali", "religion"],
+    "tier_extensions": {
+      "source": "Pew Research 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.culture.religion.judaism_orthodox",
+    "schema_version": "3.2",
+    "domain": "culture.religion",
+    "subtopic": "religion.judaism.orthodox",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Ортодоксальный иудаизм — традиционное течение, строго следующее Галахе; включает модерн-ортодоксов и харедим; около 2 млн последователей; крупные центры — Израиль, США, Великобритания.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.culture.religion"],
+    "confidence": 0.88,
+    "tags": ["judaism", "orthodox", "halacha", "religion"],
+    "tier_extensions": {
+      "source": "Pew Research 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.culture.religion.judaism_reform",
+    "schema_version": "3.2",
+    "domain": "culture.religion",
+    "subtopic": "religion.judaism.reform",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Реформистский иудаизм — либеральное течение, возникшее в Германии XIX века; около 2 млн последователей; адаптирует ритуалы под современность; крупнейшая еврейская деноминация в США.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.culture.religion"],
+    "confidence": 0.87,
+    "tags": ["judaism", "reform", "liberal", "religion"],
+    "tier_extensions": {
+      "source": "Pew Research 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.culture.religion.buddhism_theravada",
+    "schema_version": "3.2",
+    "domain": "culture.religion",
+    "subtopic": "religion.buddhism.theravada",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Тхеравада — старейшая школа буддизма; около 150 млн последователей; распространена в Шри-Ланке, Мьянме, Таиланде, Камбодже, Лаосе; канонический язык — пали; цель — достижение архатства.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.culture.religion"],
+    "confidence": 0.9,
+    "tags": ["buddhism", "theravada", "pali", "religion"],
+    "tier_extensions": {
+      "source": "Britannica / Pew Research 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.culture.religion.buddhism_mahayana",
+    "schema_version": "3.2",
+    "domain": "culture.religion",
+    "subtopic": "religion.buddhism.mahayana",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Махаяна — крупнейшая ветвь буддизма; около 360 млн последователей; доминирует в Китае, Японии, Корее, Вьетнаме; идеал бодхисаттвы; включает чань/дзен, чистую землю, тяньтай.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.culture.religion"],
+    "confidence": 0.9,
+    "tags": ["buddhism", "mahayana", "bodhisattva", "religion"],
+    "tier_extensions": {
+      "source": "Britannica / Pew Research 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.culture.religion.buddhism_vajrayana",
+    "schema_version": "3.2",
+    "domain": "culture.religion",
+    "subtopic": "religion.buddhism.vajrayana",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Ваджраяна — тантрическая ветвь буддизма; около 20 млн последователей; доминирует в Тибете, Бутане, Монголии; ключевые школы — Гелуг, Кагью, Ньингма, Сакья; глава Гелуг — Далай-лама.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.culture.religion"],
+    "confidence": 0.89,
+    "tags": ["buddhism", "vajrayana", "tibet", "religion"],
+    "tier_extensions": {
+      "source": "Britannica 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.culture.religion.hinduism",
+    "schema_version": "3.2",
+    "domain": "culture.religion",
+    "subtopic": "religion.hinduism",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Индуизм — третья по численности религия мира; около 1,2 млрд последователей; концепции дхармы, кармы, сансары, мокши; основные традиции — вайшнавизм, шиваизм, шактизм, смартизм.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.culture.religion"],
+    "confidence": 0.91,
+    "tags": ["hinduism", "dharma", "karma", "religion"],
+    "tier_extensions": {
+      "source": "Pew Research 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.culture.religion.daoism",
+    "schema_version": "3.2",
+    "domain": "culture.religion",
+    "subtopic": "religion.daoism",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Даосизм — китайская философско-религиозная традиция; основатель Лао-цзы (VI в. до н. э.); ключевой текст «Дао дэ цзин»; концепции Дао, у-вэй, инь-ян; около 12 млн активных последователей.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.culture.religion"],
+    "confidence": 0.86,
+    "tags": ["daoism", "laozi", "china", "religion"],
+    "tier_extensions": {
+      "source": "Britannica 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "fact.culture.religion.confucianism",
+    "schema_version": "3.2",
+    "domain": "culture.religion",
+    "subtopic": "religion.confucianism",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Конфуцианство — этико-философская традиция Восточной Азии; основатель Конфуций (551–479 до н. э.); ключевой текст «Лунь юй»; концепции жэнь, ли, сяо; влияет на культуру Китая, Кореи, Японии, Вьетнама.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.culture.religion"],
+    "confidence": 0.88,
+    "tags": ["confucianism", "ethics", "china", "religion"],
+    "tier_extensions": {
+      "source": "Britannica 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.culture.religion.shinto",
+    "schema_version": "3.2",
+    "domain": "culture.religion",
+    "subtopic": "religion.shinto",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Синтоизм — традиционная религия Японии; почитание ками (духов природы и предков); более 80 тыс. святилищ; около 100 млн практикующих в Японии; ключевое святилище Исэ-дзингу.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.culture.religion"],
+    "confidence": 0.88,
+    "tags": ["shinto", "japan", "kami", "religion"],
+    "tier_extensions": {
+      "source": "Britannica 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.culture.religion.sikhism",
+    "schema_version": "3.2",
+    "domain": "culture.religion",
+    "subtopic": "religion.sikhism",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Сикхизм — монотеистическая религия, основанная гуру Нанаком (1469–1539) в Пенджабе; около 30 млн последователей; священный текст Гуру Грантх Сахиб; главный храм — Хармандир-Сахиб в Амритсаре.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.culture.religion"],
+    "confidence": 0.9,
+    "tags": ["sikhism", "punjab", "nanak", "religion"],
+    "tier_extensions": {
+      "source": "Britannica 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.culture.religion.jainism",
+    "schema_version": "3.2",
+    "domain": "culture.religion",
+    "subtopic": "religion.jainism",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Джайнизм — древнеиндийская религия; около 4,5 млн последователей; основной принцип — ахимса (ненасилие); 24 тиртханкара, последний — Махавира (599–527 до н. э.); две ветви: дигамбары и шветамбары.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.culture.religion"],
+    "confidence": 0.9,
+    "tags": ["jainism", "ahimsa", "mahavira", "religion"],
+    "tier_extensions": {
+      "source": "Britannica 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.culture.religion.zoroastrianism",
+    "schema_version": "3.2",
+    "domain": "culture.religion",
+    "subtopic": "religion.zoroastrianism",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Зороастризм — древнеиранская дуалистическая религия; основатель Заратуштра (~XII в. до н. э.); священный текст Авеста; около 100–200 тыс. последователей; общины парсов в Индии и Иране.",
+    "conditions": "Данные на 2024; оценки численности расходятся",
+    "prereq": ["concept.culture.religion"],
+    "confidence": 0.84,
+    "tags": ["zoroastrianism", "parsi", "avesta", "religion"],
+    "tier_extensions": {
+      "source": "Britannica 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "fact.culture.religion.bahai",
+    "schema_version": "3.2",
+    "domain": "culture.religion",
+    "subtopic": "religion.bahai",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Бахаизм — монотеистическая религия, основанная Бахауллой в Персии XIX века; около 8 млн последователей в 200 странах; всемирный центр в Хайфе (Израиль); идея единства человечества и религий.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.culture.religion"],
+    "confidence": 0.86,
+    "tags": ["bahai", "bahaullah", "haifa", "religion"],
+    "tier_extensions": {
+      "source": "Britannica 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.culture.institution.un",
+    "schema_version": "3.2",
+    "domain": "culture.institutions",
+    "subtopic": "institution.un",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "ООН — Организация Объединённых Наций, создана 24 октября 1945 года; 193 государства-члена; штаб-квартира в Нью-Йорке; шесть главных органов, включая Совет Безопасности с 5 постоянными членами.",
+    "conditions": "Данные на 2024",
+    "prereq": [],
+    "confidence": 0.92,
+    "tags": ["un", "international", "1945", "institution"],
+    "tier_extensions": {
+      "source": "UN Official 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.culture.institution.who",
+    "schema_version": "3.2",
+    "domain": "culture.institutions",
+    "subtopic": "institution.who",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "ВОЗ — Всемирная организация здравоохранения, специализированное агентство ООН; основана 7 апреля 1948 года; штаб-квартира в Женеве; 194 государства-члена; координирует борьбу с пандемиями.",
+    "conditions": "Данные на 2024",
+    "prereq": [],
+    "confidence": 0.92,
+    "tags": ["who", "health", "geneva", "institution"],
+    "tier_extensions": {
+      "source": "WHO Official 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.culture.institution.imf",
+    "schema_version": "3.2",
+    "domain": "culture.institutions",
+    "subtopic": "institution.imf",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "МВФ — Международный валютный фонд; создан Бреттон-Вудскими соглашениями 1944 года; начал работу в 1947; штаб-квартира в Вашингтоне; 190 государств-членов; обеспечивает стабильность валютной системы.",
+    "conditions": "Данные на 2024",
+    "prereq": [],
+    "confidence": 0.92,
+    "tags": ["imf", "finance", "bretton_woods", "institution"],
+    "tier_extensions": {
+      "source": "IMF Official 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.culture.institution.wto",
+    "schema_version": "3.2",
+    "domain": "culture.institutions",
+    "subtopic": "institution.wto",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "ВТО — Всемирная торговая организация; создана 1 января 1995 года как преемница ГАТТ; штаб-квартира в Женеве; 164 государства-члена; регулирует правила международной торговли товарами и услугами.",
+    "conditions": "Данные на 2024",
+    "prereq": [],
+    "confidence": 0.91,
+    "tags": ["wto", "trade", "gatt", "institution"],
+    "tier_extensions": {
+      "source": "WTO Official 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.culture.institution.unesco",
+    "schema_version": "3.2",
+    "domain": "culture.institutions",
+    "subtopic": "institution.unesco",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "ЮНЕСКО — специализированное агентство ООН по образованию, науке и культуре; создано 16 ноября 1945 года; штаб-квартира в Париже; ведёт Список всемирного наследия, включающий 1223 объекта.",
+    "conditions": "Данные на 2024; список ВН обновляется ежегодно",
+    "prereq": ["fact.culture.institution.un"],
+    "confidence": 0.91,
+    "tags": ["unesco", "heritage", "education", "institution"],
+    "tier_extensions": {
+      "source": "UNESCO Official 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.culture.institution.nato",
+    "schema_version": "3.2",
+    "domain": "culture.institutions",
+    "subtopic": "institution.nato",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "НАТО — Североатлантический альянс, военно-политический блок; основан 4 апреля 1949 года Вашингтонским договором; 32 государства-члена с 2024 (включение Швеции); штаб-квартира в Брюсселе.",
+    "conditions": "Данные на 2024; Швеция вступила 7 марта 2024",
+    "prereq": [],
+    "confidence": 0.92,
+    "tags": ["nato", "military", "alliance", "institution"],
+    "tier_extensions": {
+      "source": "NATO Official 2024",
+      "valid_from": "2024-03-07",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.culture.institution.eu",
+    "schema_version": "3.2",
+    "domain": "culture.institutions",
+    "subtopic": "institution.eu",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "ЕС — Европейский союз, политико-экономическое объединение; создан Маастрихтским договором 1993 года; 27 государств-членов после Brexit (2020); единая валюта евро в 20 странах еврозоны.",
+    "conditions": "Данные на 2024; Хорватия в еврозоне с 2023",
+    "prereq": [],
+    "confidence": 0.92,
+    "tags": ["eu", "europe", "maastricht", "institution"],
+    "tier_extensions": {
+      "source": "EU Official 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  }
+]

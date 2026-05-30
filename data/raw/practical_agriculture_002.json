@@ -1,0 +1,634 @@
+[
+  {
+    "id": "technology.agriculture.dairy.holstein",
+    "schema_version": "3.2",
+    "domain": "agriculture.livestock",
+    "subtopic": "agriculture.livestock.dairy",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Промышленное молочное скотоводство голштино-фризской породы: круглогодичное стойловое содержание с продуктивностью 8000–13000 кг молока на корову в год при трёхкратном доении.",
+    "formal_notation": "Удой 8–13 т/гол·год; жир 3.6–4.0%; белок 3.1–3.3%; лактация 305 дней",
+    "conditions": "TMR-кормление со смесью силоса, концентратов и сенажа; вентиляция 4–6 м³/ч на кг живой массы; доение 2–3 раза/сут",
+    "limits": [
+      "Высокая чувствительность к тепловому стрессу при THI >72",
+      "Срок продуктивного использования 2.5–4 лактации",
+      "Метаболические нарушения (кетоз, ацидоз рубца) при пиковой лактации"
+    ],
+    "prereq": ["concept.biology.mammal.lactation"],
+    "derives_from": [],
+    "confidence": 0.94,
+    "tags": ["dairy", "holstein", "cattle", "milk"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.92,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "technology.agriculture.beef.angus",
+    "schema_version": "3.2",
+    "domain": "agriculture.livestock",
+    "subtopic": "agriculture.livestock.beef",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Мясное скотоводство абердин-ангусской породы: технология cow-calf на пастбище с финишным откормом на фидлоте при наборе живой массы 1.3–1.8 кг/сут.",
+    "formal_notation": "Убойный выход 60–64%; мраморность BMS 4–8; финиш 14–18 мес; масса 600–750 кг",
+    "conditions": "Пастбища с травостоем >2000 кг СВ/га; финиш на рационе с 70–85% концентратов 120–200 дней",
+    "limits": [
+      "Ацидоз рубца при резком переводе на концентраты",
+      "Сезонность отёлов при пастбищной технологии",
+      "Высокая эмиссия CH4 руминантной ферментацией"
+    ],
+    "prereq": ["concept.biology.mammal.digestion.ruminant"],
+    "derives_from": [],
+    "confidence": 0.93,
+    "tags": ["beef", "angus", "cattle", "feedlot"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.93,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "technology.agriculture.swine.production",
+    "schema_version": "3.2",
+    "domain": "agriculture.livestock",
+    "subtopic": "agriculture.livestock.swine",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Промышленное свиноводство замкнутого цикла: трёхпородное скрещивание с раздельным размещением по группам опороса, доращивания и откорма до 110–125 кг живой массы.",
+    "formal_notation": "Конверсия корма 2.4–2.8 кг/кг прироста; среднесуточный прирост 850–1000 г; убойный выход 75–78%",
+    "conditions": "Климат-контроль 18–24°C; станки с щелевыми полами; кормление ad libitum многофазной диетой",
+    "limits": [
+      "Высокая инфекционная нагрузка при плотном размещении (PRRS, цирковирус)",
+      "Запрет ряда антибиотиков как стимуляторов роста",
+      "Эмиссия NH3 и H2S из жижесборников"
+    ],
+    "prereq": ["concept.biology.animal.nutrition"],
+    "derives_from": [],
+    "confidence": 0.93,
+    "tags": ["swine", "pig", "livestock", "production"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.92,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "technology.agriculture.poultry.broiler",
+    "schema_version": "3.2",
+    "domain": "agriculture.livestock",
+    "subtopic": "agriculture.livestock.poultry",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Бройлерное птицеводство: интенсивное выращивание гибридов Ross/Cobb с живой массой 2.5–2.8 кг за 35–42 дня при напольном содержании на подстилке.",
+    "formal_notation": "Конверсия корма 1.55–1.75 кг/кг; плотность 18–22 птиц/м²; убойный выход 72–75%",
+    "conditions": "T 33→20°C по возрасту; вентиляция тоннельного типа 8–10 м³/ч на кг ЖМ; свет 18–23 ч/сут",
+    "limits": [
+      "Ножные и сердечно-сосудистые патологии из-за быстрого роста",
+      "Зависимость от вакцинаций (болезнь Ньюкасла, Гамборо, Марека)",
+      "Чувствительность к перебоям вентиляции — гибель за минуты"
+    ],
+    "prereq": ["concept.biology.animal.nutrition"],
+    "derives_from": [],
+    "confidence": 0.95,
+    "tags": ["poultry", "broiler", "chicken", "production"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.95,
+      "safety_critical": true,
+      "safety_notes": "Биобезопасность: гриппа птиц H5N1/H7N9 — карантин и депопуляция при вспышке"
+    }
+  },
+  {
+    "id": "technology.agriculture.poultry.layer",
+    "schema_version": "3.2",
+    "domain": "agriculture.livestock",
+    "subtopic": "agriculture.livestock.poultry",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Промышленное яичное птицеводство: клеточное или вольерное содержание гибридов Hy-Line/Lohmann с яйценоскостью 300–330 яиц на несушку за цикл 52–80 недель.",
+    "formal_notation": "Конверсия корма 2.0–2.2 кг/кг яйцемассы; масса яйца 58–65 г; пик яйценоскости 92–96%",
+    "conditions": "Стимуляция яйцекладки светом 14–16 ч/сут; рацион с Ca 3.8–4.2%; T 18–24°C",
+    "limits": [
+      "Падение продуктивности после 80 недель — выбраковка стада",
+      "Запрет клеточного содержания в ряде стран ЕС",
+      "Расклёв и каннибализм при стрессе и нарушениях освещения"
+    ],
+    "prereq": ["concept.biology.bird.reproduction"],
+    "derives_from": [],
+    "confidence": 0.94,
+    "tags": ["poultry", "layer", "egg", "hen"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.93,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "technology.agriculture.aquaculture.salmon",
+    "schema_version": "3.2",
+    "domain": "agriculture.aquaculture",
+    "subtopic": "agriculture.aquaculture.salmon",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Морское садковое выращивание атлантического лосося: содержание смолтов в сетных садках в фьордах с подачей экструдированных кормов до товарной массы 4–6 кг за 14–24 месяца.",
+    "formal_notation": "Плотность 15–25 кг/м³; конверсия корма 1.1–1.3 кг/кг; T 6–14°C",
+    "conditions": "Солёность 30–35 PSU; кислород >7 мг/л; ротация участков и санитарные перерывы",
+    "limits": [
+      "Поражение морской вошью Lepeophtheirus salmonis — обработки и чистильщики",
+      "Побеги и генетическое смешивание с дикими популяциями",
+      "Эпизоотии ISA, IPN, амёбной болезни жабр"
+    ],
+    "prereq": ["concept.biology.fish.osmoregulation"],
+    "derives_from": [],
+    "confidence": 0.92,
+    "tags": ["aquaculture", "salmon", "marine", "fish_farming"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.88,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "technology.agriculture.aquaculture.tilapia",
+    "schema_version": "3.2",
+    "domain": "agriculture.aquaculture",
+    "subtopic": "agriculture.aquaculture.tilapia",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Выращивание тилапии Oreochromis niloticus в УЗВ или прудах: тропическая теплолюбивая рыба с конверсией корма 1.4–1.8 и набором товарной массы 600–900 г за 6–9 месяцев.",
+    "formal_notation": "T 26–30°C; pH 6.5–8.5; плотность 50–150 кг/м³ в УЗВ; конверсия 1.4–1.8 кг/кг",
+    "conditions": "Только однополые мужские популяции (гормональная реверсия 17α-метилтестостероном); аэрация >4 мг O2/л",
+    "limits": [
+      "Гибель при T <12°C — невозможна в умеренном климате без подогрева",
+      "Инвазивный вид в природных водоёмах тропиков",
+      "Болезни Streptococcus, TiLV в плотных культурах"
+    ],
+    "prereq": ["concept.biology.fish.metabolism"],
+    "derives_from": [],
+    "confidence": 0.92,
+    "tags": ["aquaculture", "tilapia", "warm_water", "ras"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.9,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "technology.agriculture.aquaculture.shrimp",
+    "schema_version": "3.2",
+    "domain": "agriculture.aquaculture",
+    "subtopic": "agriculture.aquaculture.shrimp",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Прудовое и биофлок выращивание креветки Litopenaeus vannamei: интенсивное содержание с цикличной сменой воды или закрытой биофлок-технологией микробной переработки.",
+    "formal_notation": "Плотность 80–300 экз/м²; цикл 100–140 сут; конверсия 1.3–1.8 кг/кг; товарная масса 15–25 г",
+    "conditions": "Солёность 0.5–35 PSU; T 26–32°C; кислород >4 мг/л; C/N >12 для биофлока",
+    "limits": [
+      "Вирусные эпизоотии WSSV, IHHNV — потери 50–100% за дни",
+      "Деградация мангровых при экстенсивных фермах",
+      "Накопление аммиака и нитритов в плотных культурах"
+    ],
+    "prereq": ["concept.biology.crustacea.molting"],
+    "derives_from": [],
+    "confidence": 0.91,
+    "tags": ["aquaculture", "shrimp", "vannamei", "biofloc"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.85,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "method.agriculture.breeding.artificial_insemination",
+    "schema_version": "3.2",
+    "domain": "agriculture.livestock",
+    "subtopic": "agriculture.livestock.reproduction",
+    "tier": "practical",
+    "type": "method",
+    "statement": "Искусственное осеменение: введение разбавленной криоконсервированной спермы быка-производителя в матку коровы катетером в период охоты с эффективностью 50–70% по первому осеменению.",
+    "formal_notation": "Доза 15–25 млн подвижных сперматозоидов; хранение в жидком N₂ при −196°C; срок до 30 лет",
+    "conditions": "Определение охоты по визуальным признакам или активиметрам; осеменение через 12–18 ч после начала",
+    "limits": [
+      "Сезонные колебания эффективности при тепловом стрессе",
+      "Требует обученных техников и непрерывной криоцепи",
+      "Сужение генетического разнообразия из-за элитных производителей"
+    ],
+    "prereq": ["concept.biology.mammal.reproduction"],
+    "derives_from": [],
+    "confidence": 0.94,
+    "tags": ["ai", "insemination", "breeding", "cryopreservation"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.6,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "method.agriculture.breeding.embryo_transfer",
+    "schema_version": "3.2",
+    "domain": "agriculture.livestock",
+    "subtopic": "agriculture.livestock.reproduction",
+    "tier": "practical",
+    "type": "method",
+    "statement": "Эмбриотрансфер у крупного рогатого скота: суперовуляция донора гонадотропинами, вымывание эмбрионов на 7 день и нехирургическая пересадка реципиентам.",
+    "formal_notation": "FSH 6–8 инъекций; в среднем 6–8 пригодных эмбрионов; приживаемость 50–60%",
+    "conditions": "Синхронизация полового цикла донора и реципиента; стадия эмбриона морула-бластоциста",
+    "limits": [
+      "Высокая вариабельность отклика на суперовуляцию",
+      "Требует обученных эмбриологов",
+      "Стресс гормональной обработки донора"
+    ],
+    "prereq": ["concept.biology.mammal.reproduction"],
+    "derives_from": [],
+    "confidence": 0.9,
+    "tags": ["embryo_transfer", "et", "breeding", "superovulation"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.55,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "process.agriculture.feed.silage",
+    "schema_version": "3.2",
+    "domain": "agriculture.livestock",
+    "subtopic": "agriculture.livestock.feed",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Силосование: анаэробное молочнокислое брожение зелёной массы кукурузы или трав в герметичных траншеях с подкислением до pH 3.8–4.2 за 2–3 недели.",
+    "formal_notation": "Сахара → C3H6O3 (молочная кислота) Lactobacillus spp.; pH 3.8–4.2; СВ 28–38%",
+    "conditions": "Трамбовка плотностью >700 кг/м³; герметизация плёнкой; СВ зелёной массы 28–38%",
+    "limits": [
+      "При СВ <25% маслянокислое брожение клостридиями и порча",
+      "Микотоксины при доступе кислорода через повреждения плёнки",
+      "Потери СВ 8–20% при неоптимальной технологии"
+    ],
+    "prereq": ["concept.biology.fermentation.lactic"],
+    "derives_from": [],
+    "confidence": 0.94,
+    "tags": ["silage", "feed", "fermentation", "lactic"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.92,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "material.agriculture.feed.concentrate",
+    "schema_version": "3.2",
+    "domain": "agriculture.livestock",
+    "subtopic": "agriculture.livestock.feed",
+    "tier": "practical",
+    "type": "material",
+    "statement": "Концентрированные корма: смеси злаков, шротов и зернобобовых с энергетической ценностью 11–13 МДж ОЭ/кг и сырым протеином 14–22% для интенсивного кормления.",
+    "formal_notation": "ОЭ 11–13 МДж/кг; СП 14–22%; СК <8%; гранула ø 3–6 мм",
+    "conditions": "Дробление до 1–3 мм для жвачных или гранулирование под давлением при 70–85°C",
+    "limits": [
+      "Ацидоз рубца у жвачных при доле >50% в рационе",
+      "Подверженность поражению Fusarium и афлатоксинами при влажности >14%",
+      "Окисление жиров при хранении >3 мес без антиоксидантов"
+    ],
+    "prereq": ["concept.biology.animal.nutrition"],
+    "derives_from": [],
+    "confidence": 0.93,
+    "tags": ["feed", "concentrate", "grain", "nutrition"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.95,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "material.agriculture.feed.premix",
+    "schema_version": "3.2",
+    "domain": "agriculture.livestock",
+    "subtopic": "agriculture.livestock.feed",
+    "tier": "practical",
+    "type": "material",
+    "statement": "Премикс: концентрированная смесь витаминов A, D, E, K, группы B, микроэлементов Cu, Zn, Mn, Fe, Se, I и кокцидиостатиков на наполнителе для ввода 0.5–2% в комбикорм.",
+    "formal_notation": "Норма ввода 0.5–2.0%; срок годности 4–6 мес; защитные оболочки витаминов",
+    "conditions": "Хранение при T <25°C, влажности <60%, в темноте; равномерное смешивание ≥30:1",
+    "limits": [
+      "Распад витаминов A и E при длительном хранении и нагреве",
+      "Антагонизм Cu/Mo/Zn при дисбалансе",
+      "Токсичность Se при превышении 0.5 мг/кг рациона"
+    ],
+    "prereq": ["concept.biology.nutrition.vitamins"],
+    "derives_from": [],
+    "confidence": 0.92,
+    "tags": ["premix", "vitamins", "minerals", "feed_additive"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.94,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "technology.agriculture.veterinary.antibiotic",
+    "schema_version": "3.2",
+    "domain": "agriculture.livestock",
+    "subtopic": "agriculture.livestock.veterinary",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Антибиотикотерапия в животноводстве: лечебное и метафилактическое применение β-лактамов, тетрациклинов, фторхинолонов, макролидов с регламентированным периодом ожидания.",
+    "formal_notation": "Период ожидания 0–28 сут по молоку, 4–60 сут по мясу; MRL по EU 37/2010",
+    "conditions": "Назначение по диагнозу; соблюдение дозы и кратности; идентификация животных",
+    "limits": [
+      "Рост антимикробной резистентности — глобальная угроза AMR",
+      "Запрет колистина и др. критически важных АБ в продуктивном животноводстве в части стран",
+      "Превышение MRL ведёт к отзыву партии продукции"
+    ],
+    "prereq": ["concept.medicine.antibiotic"],
+    "derives_from": [],
+    "confidence": 0.93,
+    "tags": ["antibiotic", "veterinary", "amr", "withdrawal"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.85,
+      "safety_critical": true,
+      "safety_notes": "Антимикробная резистентность — One Health; запрет АБ-стимуляторов роста в ЕС, РФ, США"
+    }
+  },
+  {
+    "id": "process.food.dairy.pasteurization",
+    "schema_version": "3.2",
+    "domain": "agriculture.food",
+    "subtopic": "agriculture.food.dairy",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Пастеризация молока HTST: кратковременный нагрев до 72–75°C с выдержкой 15–20 секунд в пластинчатом теплообменнике с последующим охлаждением до 4°C.",
+    "formal_notation": "HTST 72–75°C / 15–20 с; LTLT 63°C / 30 мин; снижение микробной нагрузки 10⁵–10⁶ раз",
+    "conditions": "Постоянный поток в пластинчатом аппарате; обратный клапан недопастеризованного молока",
+    "limits": [
+      "Не убивает споры Bacillus, Clostridium — требует холодильной цепи",
+      "Денатурация части сывороточных белков (β-лактоглобулин 10–20%)",
+      "Не работает при загрязнении соматическими клетками >400 тыс/мл"
+    ],
+    "prereq": ["concept.biology.microbiology.bacteria"],
+    "derives_from": [],
+    "confidence": 0.97,
+    "tags": ["pasteurization", "milk", "htst", "dairy"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.99,
+      "safety_critical": true,
+      "safety_notes": "Сбой режима ведёт к выживанию Mycobacterium, Listeria, Coxiella burnetii"
+    }
+  },
+  {
+    "id": "process.food.sterilization.uht",
+    "schema_version": "3.2",
+    "domain": "agriculture.food",
+    "subtopic": "agriculture.food.preservation",
+    "tier": "practical",
+    "type": "process",
+    "statement": "UHT-стерилизация: ультравысокотемпературная обработка молока при 135–150°C с выдержкой 1–8 секунд и асептическим розливом в многослойную упаковку.",
+    "formal_notation": "T 135–150°C; τ 1–8 с; F0 >5; срок хранения до 6–9 мес без холодильника",
+    "conditions": "Прямой нагрев инжекцией пара или непрямой пластинами; асептическая зона розлива",
+    "limits": [
+      "Образование лактулозы и фуросина — индикаторы переобработки",
+      "Реакция Майяра — потемнение и привкус кипячёного",
+      "Дороже HTST по капзатратам и упаковке"
+    ],
+    "prereq": ["process.food.dairy.pasteurization"],
+    "derives_from": [],
+    "confidence": 0.96,
+    "tags": ["uht", "sterilization", "milk", "aseptic"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.98,
+      "safety_critical": true,
+      "safety_notes": "Сбой асептической зоны разлива — порча партии и риск Bacillus cereus, Clostridium"
+    }
+  },
+  {
+    "id": "process.food.fermentation.cheese",
+    "schema_version": "3.2",
+    "domain": "agriculture.food",
+    "subtopic": "agriculture.food.fermentation",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Сыроделие: коагуляция казеина молока сычужным ферментом или подкислением, отделение сыворотки от сгустка, прессование и созревание под действием микробиоты и ферментов.",
+    "formal_notation": "Химозин гидролизует κ-казеин по Phe105-Met106; pH сгустка 6.0–6.5; созревание 2 нед — 36 мес",
+    "conditions": "Молоко 30–38°C; CaCl₂ 10–30 г/100 кг; закваски Lactococcus, Lactobacillus; контроль T и RH созревания",
+    "limits": [
+      "Раннее газообразование при загрязнении Coliform/Clostridium",
+      "Поражение плесенью Mucor при влажности камеры >95%",
+      "Горечь от избыточного протеолиза при перезревании"
+    ],
+    "prereq": ["concept.biology.fermentation.lactic"],
+    "derives_from": [],
+    "confidence": 0.94,
+    "tags": ["cheese", "rennet", "fermentation", "dairy"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.93,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "process.food.fermentation.yogurt",
+    "schema_version": "3.2",
+    "domain": "agriculture.food",
+    "subtopic": "agriculture.food.fermentation",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Производство йогурта: молочнокислое сквашивание молока симбиотической культурой Streptococcus thermophilus и Lactobacillus bulgaricus при 42–45°C до pH 4.5–4.6.",
+    "formal_notation": "Лактоза → 2 молочной кислоты; pH 4.5–4.6; время сквашивания 3–5 ч",
+    "conditions": "Гомогенизация при 60°C/200 бар; пастеризация 90–95°C / 5 мин; инокуляция 2–5% закваски",
+    "limits": [
+      "Постокисление при хранении при T >6°C",
+      "Бактериофаги поражают закваску — требует ротации штаммов",
+      "Синерезис при нарушении технологии перемешивания"
+    ],
+    "prereq": ["concept.biology.fermentation.lactic"],
+    "derives_from": [],
+    "confidence": 0.95,
+    "tags": ["yogurt", "fermentation", "lactic", "dairy"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.96,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "process.food.fermentation.winemaking",
+    "schema_version": "3.2",
+    "domain": "agriculture.food",
+    "subtopic": "agriculture.food.fermentation",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Виноделие: алкогольная ферментация виноградного сусла дрожжами Saccharomyces cerevisiae с превращением глюкозы и фруктозы в этанол и CO2 до 11–15% об.",
+    "formal_notation": "C6H12O6 → 2C2H5OH + 2CO2; ΔG ≈ −235 кДж/моль; T 18–28°C",
+    "conditions": "Сульфитация SO2 30–80 мг/л; pH 3.0–3.8; питательные соли N для дрожжей",
+    "limits": [
+      "Остановка брожения при T >35°C или дефиците азота",
+      "Уксуснокислое брожение Acetobacter при доступе O2",
+      "Brettanomyces даёт фенольные офф-флейворы"
+    ],
+    "prereq": ["concept.biology.fermentation.alcoholic"],
+    "derives_from": [],
+    "confidence": 0.95,
+    "tags": ["wine", "fermentation", "yeast", "ethanol"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.94,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "process.food.bakery.bread_dough",
+    "schema_version": "3.2",
+    "domain": "agriculture.food",
+    "subtopic": "agriculture.food.bakery",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Производство дрожжевого хлеба: замес теста из муки и воды с формированием глютеновой сетки, расстойка с подъёмом CO2 от Saccharomyces cerevisiae и выпечка при 200–240°C.",
+    "formal_notation": "Глюкоза → CO2 + этанол; расстойка 60–180 мин при 30°C; выпечка 200–240°C / 15–40 мин",
+    "conditions": "Мука с содержанием белка 11–14%; гидратация 55–80%; соль 1.5–2.2%; дрожжи 0.5–3%",
+    "limits": [
+      "Перерасстойка ведёт к опадению при выпечке",
+      "Картофельная болезнь Bacillus subtilis при недопеке и хранении",
+      "Чёрствение через ретроградацию крахмала"
+    ],
+    "prereq": ["concept.biology.fermentation.alcoholic"],
+    "derives_from": [],
+    "confidence": 0.95,
+    "tags": ["bread", "bakery", "yeast", "fermentation"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.97,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "process.food.extrusion.cooking",
+    "schema_version": "3.2",
+    "domain": "agriculture.food",
+    "subtopic": "agriculture.food.processing",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Варочная экструзия: продавливание увлажнённого крахмалосодержащего сырья через шнек при 100–180°C и давлении 10–40 бар с резким сбросом давления и вспучиванием продукта.",
+    "formal_notation": "T 100–180°C; P 10–40 бар; τ 30–120 с; СВ продукта 70–85%",
+    "conditions": "Влажность сырья 15–25%; одно- или двухшнековый экструдер; матрицы заданного сечения",
+    "limits": [
+      "Деструкция термолабильных витаминов и аминокислот",
+      "Образование акриламида при высокой T и низкой влажности",
+      "Высокое энергопотребление 250–500 кВт·ч/т"
+    ],
+    "prereq": ["concept.chemistry.polymer.starch"],
+    "derives_from": [],
+    "confidence": 0.92,
+    "tags": ["extrusion", "cereal", "expansion", "snack"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.95,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "process.food.freezing.iqf",
+    "schema_version": "3.2",
+    "domain": "agriculture.food",
+    "subtopic": "agriculture.food.preservation",
+    "tier": "practical",
+    "type": "process",
+    "statement": "IQF: индивидуальная быстрая заморозка штучных продуктов в потоке холодного воздуха −35…−40°C на сетчатом конвейере или флюид-беде с прохождением зоны кристаллизации <30 мин.",
+    "formal_notation": "T −35…−40°C; v воздуха 5–8 м/с; τ заморозки 5–30 мин; T центра −18°C",
+    "conditions": "Однослойная подача продукта; калибровка по размеру; предохлаждение перед входом",
+    "limits": [
+      "Не работает для крупных кусков >5 см — образуются крупные кристаллы",
+      "Слипание при превышении массовой загрузки конвейера",
+      "Дегидратация поверхности при длительном хранении без глазури"
+    ],
+    "prereq": ["concept.physics.phase_transition.freezing"],
+    "derives_from": [],
+    "confidence": 0.95,
+    "tags": ["iqf", "freezing", "preservation", "cold_chain"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.97,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "technology.food.packaging.map",
+    "schema_version": "3.2",
+    "domain": "agriculture.food",
+    "subtopic": "agriculture.food.packaging",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Упаковка в модифицированной газовой среде MAP: замена воздуха в упаковке смесями CO2, N2, O2 с заданным составом для продления срока хранения охлаждённых продуктов.",
+    "formal_notation": "Состав N2/CO2/O2 варьирует: мясо 70/30/0, рыба 40/30/30, овощи 0/5/5–95",
+    "conditions": "Барьерные плёнки EVOH, PA, PET; герметичная сварка; T хранения 0–4°C",
+    "limits": [
+      "Анаэробный рост Clostridium botulinum при недостатке O2 в рыбе",
+      "Размягчение свежих овощей при избытке CO2",
+      "Зависимость безопасности от целостности шва"
+    ],
+    "prereq": ["concept.biology.microbiology.bacteria"],
+    "derives_from": [],
+    "confidence": 0.93,
+    "tags": ["map", "packaging", "shelf_life", "modified_atmosphere"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.95,
+      "safety_critical": true,
+      "safety_notes": "Риск C. botulinum в анаэробной среде — обязательная холодовая цепь и контроль шва"
+    }
+  },
+  {
+    "id": "process.food.preservation.smoking",
+    "schema_version": "3.2",
+    "domain": "agriculture.food",
+    "subtopic": "agriculture.food.preservation",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Копчение: обработка мяса или рыбы дымом из неполного сгорания лиственной древесины с осаждением фенолов и карбонилов при 18–28°C холодное или 60–110°C горячее.",
+    "formal_notation": "Фенолы, гваякол, сирингол, формальдегид; T холодного 18–28°C / 24–96 ч; горячего 60–110°C / 1–6 ч",
+    "conditions": "Предварительный посол; контроль влажности камеры 60–80%; дым из бука, ольхи, дуба, гикори",
+    "limits": [
+      "Образование канцерогенных ПАУ (бензпирен) при пиролизе >400°C",
+      "Холодное копчение не убивает паразитов и Listeria — нужен предварительный посол",
+      "Поверхностная активность фенолов — глубинная порча возможна"
+    ],
+    "prereq": ["material.chemistry.organic.phenol"],
+    "derives_from": [],
+    "confidence": 0.93,
+    "tags": ["smoking", "preservation", "phenols", "meat"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.93,
+      "safety_critical": true,
+      "safety_notes": "ПАУ-канцерогены при перегреве дыма; регламент EU 1881/2006 по бензпирену"
+    }
+  },
+  {
+    "id": "process.food.drying.spray",
+    "schema_version": "3.2",
+    "domain": "agriculture.food",
+    "subtopic": "agriculture.food.processing",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Распылительная сушка: тонкое диспергирование жидкого продукта форсункой или диском в башню с потоком горячего воздуха 150–250°C и получение порошка с влажностью 2–5%.",
+    "formal_notation": "Капли 10–200 мкм; T возд. вх 150–250°C / вых 70–110°C; влажность продукта 2–5%",
+    "conditions": "Концентрирование сырья до СВ 30–55% перед сушкой; циклон/рукавный фильтр для улавливания пыли",
+    "limits": [
+      "Термодеструкция термолабильных компонентов при высокой T входа",
+      "Пожаро- и взрывоопасность пыли молока, белка, лактозы",
+      "Налипание при сушке сахарсодержащего сырья — нужна стенозащита"
+    ],
+    "prereq": ["concept.physics.evaporation"],
+    "derives_from": [],
+    "confidence": 0.94,
+    "tags": ["spray_drying", "powder", "milk_powder", "drying"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.96,
+      "safety_critical": true,
+      "safety_notes": "Взрывоопасность мелкодисперсной пыли продукта (Kst 50–200 бар·м/с) — система подавления"
+    }
+  }
+]

@@ -1,0 +1,644 @@
+[
+  {
+    "id": "technology.energy.nuclear.pwr",
+    "schema_version": "3.2",
+    "domain": "energy.nuclear",
+    "subtopic": "practical.energy.nuclear",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Реактор с водой под давлением (PWR) удерживает воду первого контура под давлением выше насыщения с теплопередачей через парогенератор во второй контур с турбиной.",
+    "formal_notation": "P первого контура 15.5 МПа; T 290→325°C; топливо UO₂ обогащение 3–5%; мощность 900–1700 МВт_эл",
+    "conditions": "Корпус реактора из стали 16ГНМА; ТВЭЛ-оболочка Zr-сплав; борное регулирование H₃BO₃",
+    "limits": [
+      "Замена топлива требует остановки и разгрузки активной зоны",
+      "Авария потери теплоносителя как проектная основа безопасности",
+      "Не применим без активного охлаждения внутреннего бассейна"
+    ],
+    "prereq": ["mechanism.physics.nuclear.fission_chain", "concept.physics.heat_transfer"],
+    "derives_from": [],
+    "confidence": 0.97,
+    "tags": ["pwr", "nuclear", "reactor", "fission"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.97,
+      "safety_critical": true,
+      "safety_notes": "Радиоактивность активной зоны; авария LOCA при разрыве первого контура; необходимость остаточного теплоотвода"
+    }
+  },
+  {
+    "id": "technology.energy.nuclear.bwr",
+    "schema_version": "3.2",
+    "domain": "energy.nuclear",
+    "subtopic": "practical.energy.nuclear",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Кипящий реактор (BWR) генерирует насыщенный пар прямо в активной зоне с подачей пара на турбину одного контура без парогенератора.",
+    "formal_notation": "P в корпусе 7 МПа; T насыщения 285°C; одноконтурная схема; X пара 12–15%",
+    "conditions": "Активная зона с борными управляющими крестами снизу; рециркуляционные насосы; топливо UO₂ обогащение 3–4%",
+    "limits": [
+      "Радиоактивный пар попадает на турбину — биозащита турбозала",
+      "Положительный паровой коэффициент реактивности при пустотах",
+      "Сложная остановка при отказе циркуляции"
+    ],
+    "prereq": ["mechanism.physics.nuclear.fission_chain"],
+    "derives_from": [],
+    "confidence": 0.95,
+    "tags": ["bwr", "nuclear", "boiling", "fission"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.95,
+      "safety_critical": true,
+      "safety_notes": "Радиоактивный пар проходит через турбину; авария при разгерметизации корпуса; риск водородного взрыва как в Фукусиме"
+    }
+  },
+  {
+    "id": "mechanism.physics.nuclear.fission_chain",
+    "schema_version": "3.2",
+    "domain": "energy.nuclear",
+    "subtopic": "practical.energy.nuclear",
+    "tier": "practical",
+    "type": "mechanism",
+    "statement": "Цепная реакция деления ²³⁵U поглощает тепловой нейтрон с делением ядра на два осколка, испусканием 2–3 быстрых нейтронов и высвобождением ~200 МэВ энергии.",
+    "formal_notation": "²³⁵U + n → X + Y + 2.43 n + 200 МэВ; k_эфф = 1 в стационаре",
+    "conditions": "Замедление нейтронов H₂O или графитом; концентрация делящегося нуклида и геометрия выше критических",
+    "limits": [
+      "Без замедлителя — на тепловых нейтронах реакция не идёт",
+      "k_эфф > 1 даёт неуправляемый рост мощности",
+      "Запаздывающие нейтроны 0.65% от потока обеспечивают управляемость"
+    ],
+    "prereq": ["concept.physics.nuclear.fission", "concept.physics.nuclear.neutron"],
+    "derives_from": [],
+    "confidence": 0.93,
+    "tags": ["fission", "chain_reaction", "neutron", "uranium"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.99,
+      "safety_critical": true,
+      "safety_notes": "Потеря управления → разгон по мгновенным нейтронам за миллисекунды; продукты деления интенсивно радиоактивны"
+    }
+  },
+  {
+    "id": "process.energy.thermal.rankine_cycle",
+    "schema_version": "3.2",
+    "domain": "energy.thermal",
+    "subtopic": "practical.energy.thermal",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Цикл Ренкина превращает тепло в работу через нагрев воды до пара в котле, расширение пара в турбине, конденсацию и питательный насос в цикле с фазовым переходом.",
+    "formal_notation": "η = (h₁−h₂)/(h₁−h₄); параметры СКД 24 МПа/540°C дают η ~ 40–45%",
+    "conditions": "Котёл прямоточный или барабанный; турбина 1–3 цилиндра; конденсатор водяной",
+    "limits": [
+      "Предел КПД ограничен T_max по жаропрочности сталей",
+      "Конденсатор требует охлаждающей воды или градирни",
+      "Перегрев пара критичен для срока службы лопаток"
+    ],
+    "prereq": ["law.thermodynamics.second", "concept.physics.phase_transition"],
+    "derives_from": [],
+    "confidence": 0.97,
+    "tags": ["rankine", "steam", "turbine", "thermal"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.98,
+      "safety_critical": true,
+      "safety_notes": "Перегретый пар 540°C под давлением 24 МПа; разрыв паропровода даёт смертельный паровой удар"
+    }
+  },
+  {
+    "id": "technology.energy.thermal.coal_power",
+    "schema_version": "3.2",
+    "domain": "energy.thermal",
+    "subtopic": "practical.energy.thermal",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Угольная ТЭС сжигает молотый уголь в топке парового котла с передачей тепла рабочему телу цикла Ренкина и очисткой дымовых газов от NOx, SO₂ и золы.",
+    "formal_notation": "η нетто 33–46%; удельный расход 320–380 г у.т./кВт·ч; СО₂ 800–1100 г/кВт·ч",
+    "conditions": "Уголь пылеугольный 70 мкм; котёл паропроизводительностью 300–2400 т/ч; ЭСП и СГО",
+    "limits": [
+      "Высокие выбросы CO₂ среди тепловых станций",
+      "Шлак и зола требуют утилизации",
+      "Низкая манёвренность по сравнению с ПГУ"
+    ],
+    "prereq": ["process.energy.thermal.rankine_cycle", "concept.chemistry.combustion"],
+    "derives_from": [],
+    "confidence": 0.96,
+    "tags": ["coal", "thermal_power", "rankine", "combustion"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.97,
+      "safety_critical": true,
+      "safety_notes": "Пылеугольная взрывоопасная среда; высокотемпературный шлак; выброс CO и SO₂ при отказе очистки"
+    }
+  },
+  {
+    "id": "technology.energy.thermal.ccgt",
+    "schema_version": "3.2",
+    "domain": "energy.thermal",
+    "subtopic": "practical.energy.thermal",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Парогазовая установка комбинирует цикл Брайтона газовой турбины и цикл Ренкина паровой турбины с использованием выхлопа ГТУ для генерации пара в котле-утилизаторе.",
+    "formal_notation": "η нетто 55–63%; T выхлопа ГТУ 550–650°C; двух- или трёхдавлюшный котёл-утилизатор",
+    "conditions": "Топливо природный газ; ГТУ класса F/H; общий вал или раздельные генераторы",
+    "limits": [
+      "Только на газе или жидком топливе — не на угле",
+      "Стоимость ГТУ выше угольных котлов",
+      "КПД падает при частичной нагрузке"
+    ],
+    "prereq": ["process.energy.thermal.rankine_cycle", "process.energy.thermal.brayton_cycle"],
+    "derives_from": [],
+    "confidence": 0.96,
+    "tags": ["ccgt", "gas_turbine", "combined_cycle", "thermal"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.97,
+      "safety_critical": true,
+      "safety_notes": "Природный газ под давлением — утечки и взрыв; высокие температуры выхлопа; обслуживание лопаток ГТУ при остановке"
+    }
+  },
+  {
+    "id": "process.energy.thermal.brayton_cycle",
+    "schema_version": "3.2",
+    "domain": "energy.thermal",
+    "subtopic": "practical.energy.thermal",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Цикл Брайтона сжимает воздух в компрессоре, нагревает его в камере сгорания топливом и расширяет в турбине, отдавая часть работы компрессору и часть — генератору.",
+    "formal_notation": "η = 1 − (1/π)^((γ−1)/γ); степень сжатия π 15–40; T₃ 1300–1600°C",
+    "conditions": "Газовая турбина авиапроизводного или индустриального типа; топливо керосин или метан",
+    "limits": [
+      "КПД простого цикла 35–40% без рекуперации",
+      "T₃ ограничена жаропрочностью лопаток с системами охлаждения и TBC покрытиями"
+    ],
+    "prereq": ["law.thermodynamics.first", "concept.physics.adiabatic"],
+    "derives_from": [],
+    "confidence": 0.97,
+    "tags": ["brayton", "gas_turbine", "compression", "thermal"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.98,
+      "safety_critical": true,
+      "safety_notes": "Высокие скорости вращения и температуры; отрыв лопатки — катастрофическое разрушение"
+    }
+  },
+  {
+    "id": "technology.energy.hydro.dam",
+    "schema_version": "3.2",
+    "domain": "energy.renewables",
+    "subtopic": "practical.energy.renewables",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "ГЭС преобразует потенциальную энергию воды в водохранилище в электрическую через гидротурбину с напором от плотины и привязанным к ней генератором.",
+    "formal_notation": "P = ρ·g·Q·H·η; η_общ 85–92%; типы турбин Френсиса, Каплана, Пелтона",
+    "conditions": "Турбина Френсиса 30–700 м; Каплана 5–80 м; Пелтона 100–2000 м; Q м³/с по проекту",
+    "limits": [
+      "Зависит от речного стока и осадков",
+      "Затопление территорий и изменение экосистемы",
+      "Высокие капитальные затраты на плотину"
+    ],
+    "prereq": ["concept.physics.potential_energy", "concept.physics.fluid_flow"],
+    "derives_from": [],
+    "confidence": 0.97,
+    "tags": ["hydropower", "turbine", "dam", "renewable"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.99,
+      "safety_critical": true,
+      "safety_notes": "Разрушение плотины — катастрофа; кавитация турбин; высокое давление и расход воды"
+    }
+  },
+  {
+    "id": "technology.energy.wind.hawt",
+    "schema_version": "3.2",
+    "domain": "energy.renewables",
+    "subtopic": "practical.energy.renewables",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Ветроустановка с горизонтальной осью преобразует кинетическую энергию ветрового потока через подъёмную силу лопастей на ротор и генератор переменного тока.",
+    "formal_notation": "P = 1/2·ρ·A·v³·Cp; предел Беца Cp_max = 0.593; коммерческие Cp 0.40–0.50",
+    "conditions": "Диаметр ротора 80–230 м; высота башни 80–160 м; v_расч 11–13 м/с; v_отключения 25 м/с",
+    "limits": [
+      "Не работает при v < 3 м/с (старт) и v > 25 м/с (защита)",
+      "Прерывистая генерация требует резерва или хранения",
+      "Шум и обледенение лопастей зимой"
+    ],
+    "prereq": ["concept.physics.kinetic_energy", "law.physics.fluid.bernoulli"],
+    "derives_from": [],
+    "confidence": 0.96,
+    "tags": ["wind", "hawt", "turbine", "renewable"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.97,
+      "safety_critical": true,
+      "safety_notes": "Высота 200+ м; вращающиеся лопасти 300 км/ч на концах; молниезащита и противопожарная система гондолы"
+    }
+  },
+  {
+    "id": "technology.energy.solar.photovoltaic",
+    "schema_version": "3.2",
+    "domain": "energy.renewables",
+    "subtopic": "practical.energy.renewables",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Фотовольтаический модуль преобразует солнечное излучение в электрический ток через p-n переход кремниевой ячейки с разделением фотогенерированных пар электрон-дырка.",
+    "formal_notation": "η моно-Si 22–24%; η поли-Si 18–20%; η тонкоплёночные CdTe/CIGS 15–22%; STC 1000 Вт/м², 25°C, AM1.5",
+    "conditions": "Прямое и рассеянное солнечное излучение; модуль 60/72/144 ячейки; инвертор DC→AC",
+    "limits": [
+      "Снижение мощности 0.3–0.5%/°C при росте температуры",
+      "Нет генерации ночью — нужны аккумуляторы или сеть",
+      "Деградация 0.4–0.8% в год"
+    ],
+    "prereq": ["effect.physics.photoelectric", "mechanism.physics.semiconductor.pn_junction"],
+    "derives_from": [],
+    "confidence": 0.97,
+    "tags": ["photovoltaic", "solar", "silicon", "pn_junction"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.98,
+      "safety_critical": true,
+      "safety_notes": "DC напряжение модуля цепочки до 1500 В; дуговой пробой; нельзя отключить при свете без специального разъединителя"
+    }
+  },
+  {
+    "id": "technology.energy.solar.csp",
+    "schema_version": "3.2",
+    "domain": "energy.renewables",
+    "subtopic": "practical.energy.renewables",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Концентраторная солнечная установка фокусирует прямое солнечное излучение зеркалами на приёмник, нагревая теплоноситель до 400–600°C для парового или органического цикла.",
+    "formal_notation": "Концентрация 50–1000×; T параболоцилиндр 390°C, башня 565°C; η 15–25%",
+    "conditions": "Прямое нормальное излучение DNI ≥2000 кВт·ч/м²/год; теплоноситель — масло, расплавленные соли, пар",
+    "limits": [
+      "Работает только на прямом излучении — не в облачную погоду",
+      "Не подходит для регионов с высокой облачностью",
+      "Высокие требования к земельному участку"
+    ],
+    "prereq": ["concept.physics.optics.reflection", "process.energy.thermal.rankine_cycle"],
+    "derives_from": [],
+    "confidence": 0.93,
+    "tags": ["csp", "concentrated_solar", "molten_salt", "renewable"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.94,
+      "safety_critical": true,
+      "safety_notes": "Расплавленные соли 565°C; точка фокуса свыше 1000°C обжигает птиц и оборудование"
+    }
+  },
+  {
+    "id": "technology.energy.storage.li_ion",
+    "schema_version": "3.2",
+    "domain": "energy.storage",
+    "subtopic": "practical.energy.storage",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Литий-ионный аккумулятор циклически перемещает ионы Li⁺ между слоистым катодом и графитовым анодом через органический электролит и сепаратор с обратимой интеркаляцией.",
+    "formal_notation": "LiCoO₂ + 6C ⇌ Li₁₋ₓCoO₂ + LiC₆; U_ном 3.2–3.7 В; ε 150–270 Вт·ч/кг",
+    "conditions": "Электролит LiPF₆ в EC/DMC; сепаратор полиэтилен/полипропилен; катод NMC, NCA, LFP",
+    "limits": [
+      "Термический разгон выше 80–100°C",
+      "Деградация 0.05–0.15% за цикл",
+      "Нельзя глубоко разряжать ниже 2.5 В"
+    ],
+    "prereq": ["concept.electrochemistry.intercalation", "concept.electrochemistry.cell"],
+    "derives_from": [],
+    "confidence": 0.96,
+    "tags": ["lithium_ion", "battery", "intercalation", "storage"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.97,
+      "safety_critical": true,
+      "safety_notes": "Тепловой разгон при коротком замыкании — пожар и выброс HF; запрет на повреждение и перезаряд"
+    }
+  },
+  {
+    "id": "technology.energy.storage.lfp",
+    "schema_version": "3.2",
+    "domain": "energy.storage",
+    "subtopic": "practical.energy.storage",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "LFP-аккумулятор использует катод LiFePO₄ с оливиновой структурой со стабильной T-устойчивостью и плоской разрядной кривой при ~3.2 В.",
+    "formal_notation": "LiFePO₄ ⇌ FePO₄ + Li⁺ + e⁻; U_ном 3.2 В; ε 90–160 Вт·ч/кг",
+    "conditions": "Электролит LiPF₆; токосъём Al анодный; рабочая T −20…+60°C",
+    "limits": [
+      "Меньшая удельная энергия чем NMC/NCA",
+      "Низкая T снижает мощность",
+      "Не пригоден для миниатюрной электроники"
+    ],
+    "prereq": ["technology.energy.storage.li_ion"],
+    "derives_from": [],
+    "confidence": 0.96,
+    "tags": ["lfp", "iron_phosphate", "battery", "storage"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.98,
+      "safety_critical": true,
+      "safety_notes": "Безопаснее NMC, но при повреждении выделяет HF и горит; перезаряд ведёт к выделению газов"
+    }
+  },
+  {
+    "id": "technology.energy.storage.nmc",
+    "schema_version": "3.2",
+    "domain": "energy.storage",
+    "subtopic": "practical.energy.storage",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "NMC-аккумулятор имеет катод LiNi_xMn_yCo_zO₂ слоистой структуры с высокой удельной энергией и составом 622, 811 для увеличенной доли Ni.",
+    "formal_notation": "LiNi₀.₈Mn₀.₁Co₀.₁O₂; U_ном 3.7 В; ε 200–280 Вт·ч/кг",
+    "conditions": "Электролит LiPF₆ + добавки; анод графит или Si-композит; рабочая T −10…+45°C",
+    "limits": [
+      "Тепловой разгон выше 150–200°C",
+      "Деградация при заряде выше 4.2 В на ячейку",
+      "Высокая стоимость Co и Ni"
+    ],
+    "prereq": ["technology.energy.storage.li_ion"],
+    "derives_from": [],
+    "confidence": 0.95,
+    "tags": ["nmc", "nickel", "manganese", "cobalt"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.96,
+      "safety_critical": true,
+      "safety_notes": "Высокий риск теплового разгона; пиролиз катода с выделением O₂ ускоряет горение"
+    }
+  },
+  {
+    "id": "technology.energy.storage.nimh",
+    "schema_version": "3.2",
+    "domain": "energy.storage",
+    "subtopic": "practical.energy.storage",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "NiMH-аккумулятор хранит H в металлогидридном сплаве отрицательного электрода и обменивается ионами OH⁻ через щелочной электролит с положительным электродом NiOOH.",
+    "formal_notation": "MH + NiOOH ⇌ M + Ni(OH)₂; U_ном 1.2 В; ε 60–120 Вт·ч/кг",
+    "conditions": "Электролит KOH 30%; сплав AB₅ типа LaNi₅; сепаратор полипропилен",
+    "limits": [
+      "Высокий саморазряд 15–30%/мес (низкий у LSD-типа Eneloop)",
+      "Эффект памяти у части типов",
+      "Меньшая удельная энергия чем Li-ion"
+    ],
+    "prereq": ["concept.electrochemistry.cell", "material.chemistry.hydride"],
+    "derives_from": [],
+    "confidence": 0.94,
+    "tags": ["nimh", "hydride", "battery", "storage"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.97,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "technology.energy.storage.pumped_hydro",
+    "schema_version": "3.2",
+    "domain": "energy.storage",
+    "subtopic": "practical.energy.storage",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Гидроаккумулирующая станция накапливает энергию подъёмом воды из нижнего бассейна в верхний обратимыми насос-турбинами в часы низкого спроса и генерирует при пике.",
+    "formal_notation": "E = ρ·g·V·H·η; η цикла 70–80%; H 100–700 м; Q 100–600 м³/с",
+    "conditions": "Два бассейна с разностью высот; обратимые радиально-осевые гидромашины Френсиса",
+    "limits": [
+      "Требует географии с перепадом высот и водой",
+      "Длительный цикл строительства 5–10 лет",
+      "Потери на трение и испарение в бассейнах"
+    ],
+    "prereq": ["technology.energy.hydro.dam"],
+    "derives_from": [],
+    "confidence": 0.97,
+    "tags": ["pumped_hydro", "storage", "grid", "renewable"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.99,
+      "safety_critical": true,
+      "safety_notes": "Большие объёмы воды и перепады высот; авария на верхнем бассейне затапливает нижний участок"
+    }
+  },
+  {
+    "id": "concept.energy.efficiency.carnot_limit",
+    "schema_version": "3.2",
+    "domain": "energy.thermal",
+    "subtopic": "practical.energy.thermal",
+    "tier": "practical",
+    "type": "concept",
+    "statement": "Предел Карно ограничивает максимальный КПД тепловой машины при работе между нагревателем T_h и холодильником T_c независимо от рабочего тела и устройства цикла.",
+    "formal_notation": "η_max = 1 − T_c/T_h; при T_h=873 K, T_c=303 K: η_max ≈ 65%",
+    "conditions": "Идеальный обратимый цикл; квазистатические процессы",
+    "limits": [
+      "Реальные циклы дают η заметно ниже из-за необратимости",
+      "Не применимо к электрохимическим и фотовольтаическим преобразователям"
+    ],
+    "prereq": ["law.thermodynamics.second"],
+    "derives_from": [],
+    "confidence": 0.99,
+    "tags": ["carnot", "efficiency", "thermodynamics", "limit"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.99,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "process.energy.combustion.gas",
+    "schema_version": "3.2",
+    "domain": "energy.thermal",
+    "subtopic": "practical.energy.thermal",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Сжигание природного газа окисляет метан кислородом воздуха в горелке с диффузионным или предварительным смешением и образованием CO₂, H₂O, NOx как продуктов.",
+    "formal_notation": "CH₄ + 2O₂ → CO₂ + 2H₂O; Q_нр 35.8 МДж/нм³; α 1.05–1.20",
+    "conditions": "Газ метан 90–98%; коэффициент избытка воздуха 1.05–1.2; T факела 1700–1950°C",
+    "limits": [
+      "При недостатке воздуха образуется CO с риском отравления",
+      "Образование NOx термического выше 1500°C",
+      "Не применимо в среде без O₂"
+    ],
+    "prereq": ["concept.chemistry.combustion"],
+    "derives_from": [],
+    "confidence": 0.97,
+    "tags": ["combustion", "natural_gas", "methane", "thermal"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.98,
+      "safety_critical": true,
+      "safety_notes": "Взрыв газовоздушной смеси при 5–15% CH₄; отравление CO при неполном сгорании; обязательная вытяжка"
+    }
+  },
+  {
+    "id": "concept.energy.grid.frequency_regulation",
+    "schema_version": "3.2",
+    "domain": "energy.grid",
+    "subtopic": "practical.energy.thermal",
+    "tier": "practical",
+    "type": "concept",
+    "statement": "Регулирование частоты сети поддерживает 50/60 Гц балансом мгновенной генерации и потребления через первичный отклик турбин и вторичный AGC-сигнал диспетчера.",
+    "formal_notation": "Δf/Δt пропорциональна (P_ген − P_потр)/H_сети; статизм первичного регулирования 4–5%",
+    "conditions": "Синхронные генераторы с инерцией; PMU-измерения; AGC-сигнал 1–4 с",
+    "limits": [
+      "Без инерции (100% инвертор) требуется синтетическая инерция",
+      "Потеря крупного блока даёт ROCOF выше уставок",
+      "Не действует при изолированной островной работе без UFLS"
+    ],
+    "prereq": ["concept.physics.angular_momentum", "concept.electronics.power.synchronous_generator"],
+    "derives_from": [],
+    "confidence": 0.94,
+    "tags": ["grid", "frequency", "regulation", "agc"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.97,
+      "safety_critical": true,
+      "safety_notes": "Падение частоты ниже 47.5 Гц вызывает каскадные отключения; необходима UFLS"
+    }
+  },
+  {
+    "id": "mechanism.physics.semiconductor.pn_junction",
+    "schema_version": "3.2",
+    "domain": "energy.renewables",
+    "subtopic": "practical.energy.renewables",
+    "tier": "practical",
+    "type": "mechanism",
+    "statement": "p-n переход образует пространственный заряд с встроенным электрическим полем на границе p- и n-областей полупроводника, разделяющим фотогенерированные носители.",
+    "formal_notation": "V_bi = (kT/q)·ln(N_A·N_D/n_i²); ширина w ~ √(2ε·V_bi/(q·N))",
+    "conditions": "Si допирован B (p) и P/As (n); концентрации 10¹⁵–10¹⁹ см⁻³",
+    "limits": [
+      "Рекомбинация Шокли-Рида-Холла ограничивает ток короткого замыкания",
+      "При обратном смещении больше пробивного — лавинный пробой"
+    ],
+    "prereq": ["concept.physics.semiconductor.doping", "concept.physics.electric_field"],
+    "derives_from": [],
+    "confidence": 0.95,
+    "tags": ["pn_junction", "semiconductor", "depletion", "field"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.99,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "technology.energy.wind.offshore",
+    "schema_version": "3.2",
+    "domain": "energy.renewables",
+    "subtopic": "practical.energy.renewables",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Морская ветроустановка размещена на стационарной свайной или плавучей опоре в шельфовой зоне с более стабильным ветром и мощностью турбин 8–15 МВт.",
+    "formal_notation": "Мощность блока 8–15 МВт; диаметр ротора 164–236 м; высота ступицы 100–135 м",
+    "conditions": "Монопайл до 60 м глубины; джакет 30–80 м; полупогружные плавучие платформы свыше 100 м",
+    "limits": [
+      "Высокая стоимость установки и обслуживания",
+      "Морская коррозия требует катодной защиты",
+      "Сложная сетевая интеграция через HVDC"
+    ],
+    "prereq": ["technology.energy.wind.hawt"],
+    "derives_from": [],
+    "confidence": 0.94,
+    "tags": ["offshore_wind", "marine", "hvdc", "renewable"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.95,
+      "safety_critical": true,
+      "safety_notes": "Морские работы; высота 200+ м; шторм и обледенение; эвакуация персонала с гондолы вертолётом"
+    }
+  },
+  {
+    "id": "technology.energy.thermal.cogeneration",
+    "schema_version": "3.2",
+    "domain": "energy.thermal",
+    "subtopic": "practical.energy.thermal",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Когенерация одновременно генерирует электричество и тепло из одного топлива с отбором пара из турбины или горячих газов ГТУ на технологические и отопительные нужды.",
+    "formal_notation": "η_итого 75–90%; удельный отпуск тепла 1.5–3.5 кВт·ч_т/кВт·ч_э",
+    "conditions": "Тепловой потребитель в пределах 10–30 км от станции; теплосеть прямая и обратная",
+    "limits": [
+      "Требует постоянного теплового потребителя",
+      "Сезонная неравномерность спроса на тепло",
+      "Электрическая мощность снижается при росте теплового отбора"
+    ],
+    "prereq": ["process.energy.thermal.rankine_cycle"],
+    "derives_from": [],
+    "confidence": 0.96,
+    "tags": ["cogeneration", "chp", "district_heating", "thermal"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.98,
+      "safety_critical": true,
+      "safety_notes": "Сетевая вода 110–150°C под давлением 1.6 МПа; прорыв трубопровода даёт ошпаривание"
+    }
+  },
+  {
+    "id": "process.energy.nuclear.control_rods",
+    "schema_version": "3.2",
+    "domain": "energy.nuclear",
+    "subtopic": "practical.energy.nuclear",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Управляющие стержни вводят нейтронные поглотители B₄C, Hf, Ag-In-Cd в активную зону для регулирования k_эфф и аварийного гашения цепной реакции по сигналу AZ.",
+    "formal_notation": "Σ_a поглотителя >> Σ_a топлива; время падения по аварийному сигналу 1.5–4 с",
+    "conditions": "Стержни в направляющих каналах ТВС; привод СУЗ электромеханический или гидравлический",
+    "limits": [
+      "При обесточивании стержни падают под силой тяжести в PWR",
+      "Нарушение целостности стержня уменьшает запас реактивности"
+    ],
+    "prereq": ["mechanism.physics.nuclear.fission_chain"],
+    "derives_from": [],
+    "confidence": 0.97,
+    "tags": ["control_rods", "nuclear", "reactivity", "safety"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.99,
+      "safety_critical": true,
+      "safety_notes": "Отказ ввода стержней — главная аварийная угроза реактора; дублирование борной системой"
+    }
+  },
+  {
+    "id": "material.energy.nuclear.fuel_uo2",
+    "schema_version": "3.2",
+    "domain": "energy.nuclear",
+    "subtopic": "practical.energy.nuclear",
+    "tier": "practical",
+    "type": "material",
+    "statement": "Топливо UO₂ — спечённая керамическая таблетка с обогащением по ²³⁵U 3–5% в герметичной оболочке из циркониевого сплава, образующая ТВЭЛ активной зоны.",
+    "formal_notation": "UO₂ ρ 10.4–10.7 г/см³; T_пл 2865°C; обогащение 3–5% ²³⁵U",
+    "conditions": "Таблетки ø 7.5–9.5 мм; оболочка Zr-1%Nb или Zircaloy-4; гелий внутри ТВЭЛ",
+    "limits": [
+      "Низкая теплопроводность ~ 3–5 Вт/(м·К) ограничивает мощность ТВЭЛ",
+      "Зирконий выше 800°C активно реагирует с паром с выделением H₂"
+    ],
+    "prereq": ["technology.energy.nuclear.pwr"],
+    "derives_from": [],
+    "confidence": 0.96,
+    "tags": ["uo2", "fuel", "zirconium", "nuclear"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.99,
+      "safety_critical": true,
+      "safety_notes": "Радиоактивность облучённого топлива; реакция Zr+H₂O при потере охлаждения с генерацией водорода"
+    }
+  },
+  {
+    "id": "technology.energy.storage.hydrogen",
+    "schema_version": "3.2",
+    "domain": "energy.storage",
+    "subtopic": "practical.energy.storage",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Водородное хранение запасает энергию через электролиз воды с генерацией H₂ и последующее окисление в топливном элементе или сжигание с восстановлением электроэнергии.",
+    "formal_notation": "2H₂O → 2H₂ + O₂ (электролиз); 2H₂ + O₂ → 2H₂O (топливный элемент); η_цикла 30–45%",
+    "conditions": "Электролизёр PEM или щелочной; хранение под P 350–700 бар или жидкий при 20 К",
+    "limits": [
+      "Низкий КПД полного цикла",
+      "Утечка H₂ через большинство уплотнений",
+      "Не применим без сжатия для значимых объёмов"
+    ],
+    "prereq": ["concept.electrochemistry.electrolysis"],
+    "derives_from": [],
+    "confidence": 0.88,
+    "tags": ["hydrogen", "electrolysis", "fuel_cell", "storage"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.85,
+      "safety_critical": true,
+      "safety_notes": "Водород взрывоопасен 4–75% в воздухе; невидимое пламя; диффузия через металлы; обязательная вентиляция"
+    }
+  }
+]

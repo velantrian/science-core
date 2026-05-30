@@ -1,0 +1,477 @@
+[
+  {
+    "id": "axiom.logic.hilbert.ax1",
+    "schema_version": "3.2",
+    "domain": "logic.formal.hilbert",
+    "subtopic": "logic.formal.hilbert.axioms",
+    "tier": "logic",
+    "type": "axiom",
+    "statement": "Первая аксиома Гильберта пропозициональной логики: импликация утверждается из произвольной посылки при истинной заключительной формуле.",
+    "formal_notation": "⊢ A → (B → A)",
+    "conditions": "Классическая пропозициональная логика; A, B — формулы",
+    "prereq": ["definition.logic.propositional.implication"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["hilbert", "axiom", "propositional", "implication"],
+    "tier_extensions": {
+      "category": "axiom",
+      "is_axiomatic": true
+    }
+  },
+  {
+    "id": "axiom.logic.hilbert.ax2",
+    "schema_version": "3.2",
+    "domain": "logic.formal.hilbert",
+    "subtopic": "logic.formal.hilbert.axioms",
+    "tier": "logic",
+    "type": "axiom",
+    "statement": "Вторая аксиома Гильберта: распределение импликации над импликацией.",
+    "formal_notation": "⊢ (A → (B → C)) → ((A → B) → (A → C))",
+    "conditions": "Классическая пропозициональная логика",
+    "prereq": ["axiom.logic.hilbert.ax1"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["hilbert", "axiom", "distributivity", "implication"],
+    "tier_extensions": {
+      "category": "axiom",
+      "is_axiomatic": true
+    }
+  },
+  {
+    "id": "axiom.logic.hilbert.ax3",
+    "schema_version": "3.2",
+    "domain": "logic.formal.hilbert",
+    "subtopic": "logic.formal.hilbert.axioms",
+    "tier": "logic",
+    "type": "axiom",
+    "statement": "Третья аксиома Гильберта: контрапозиция через отрицания эквивалентна обратной импликации.",
+    "formal_notation": "⊢ (¬A → ¬B) → (B → A)",
+    "conditions": "Классическая пропозициональная логика",
+    "prereq": ["axiom.logic.hilbert.ax1", "axiom.logic.hilbert.ax2"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["hilbert", "axiom", "contraposition", "negation"],
+    "tier_extensions": {
+      "category": "axiom",
+      "is_axiomatic": true
+    }
+  },
+  {
+    "id": "theorem.logic.formal.deduction",
+    "schema_version": "3.2",
+    "domain": "logic.formal.metalogic",
+    "subtopic": "logic.formal.metalogic.deduction",
+    "tier": "logic",
+    "type": "theorem",
+    "statement": "Теорема дедукции: если из гипотезы A и множества Γ выводимо B, то из Γ выводимо A→B.",
+    "formal_notation": "Γ ∪ {A} ⊢ B  ⇔  Γ ⊢ A → B",
+    "conditions": "Гильбертова система с аксиомами Ax1, Ax2 и MP",
+    "prereq": ["axiom.logic.hilbert.ax1", "axiom.logic.hilbert.ax2", "inference_rule.logic.propositional.modus_ponens"],
+    "derives_from": ["axiom.logic.hilbert.ax1", "axiom.logic.hilbert.ax2"],
+    "confidence": 1.0,
+    "tags": ["deduction_theorem", "metalogic", "hilbert"],
+    "tier_extensions": {
+      "category": "theorem",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "inference_rule.logic.gentzen.right_implication",
+    "schema_version": "3.2",
+    "domain": "logic.formal.sequent",
+    "subtopic": "logic.formal.sequent.gentzen",
+    "tier": "logic",
+    "type": "inference_rule",
+    "statement": "Правое правило импликации в секвенциальном исчислении Генцена LK: добавление формулы в антецедент и связывание импликации в сукцеденте.",
+    "formal_notation": "(Γ, A ⊢ Δ, B) / (Γ ⊢ Δ, A → B)",
+    "conditions": "Секвенциальное исчисление LK; A, B — формулы; Γ, Δ — мультимножества формул",
+    "prereq": ["definition.logic.propositional.implication"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["gentzen", "sequent_calculus", "right_rule", "implication"],
+    "tier_extensions": {
+      "category": "rule",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "inference_rule.logic.gentzen.left_implication",
+    "schema_version": "3.2",
+    "domain": "logic.formal.sequent",
+    "subtopic": "logic.formal.sequent.gentzen",
+    "tier": "logic",
+    "type": "inference_rule",
+    "statement": "Левое правило импликации Генцена LK: разбиение импликации в антецеденте на две посылки.",
+    "formal_notation": "(Γ ⊢ Δ, A) и (Γ, B ⊢ Δ) / (Γ, A → B ⊢ Δ)",
+    "conditions": "Секвенциальное исчисление LK",
+    "prereq": ["inference_rule.logic.gentzen.right_implication"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["gentzen", "sequent_calculus", "left_rule", "implication"],
+    "tier_extensions": {
+      "category": "rule",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "inference_rule.logic.gentzen.cut",
+    "schema_version": "3.2",
+    "domain": "logic.formal.sequent",
+    "subtopic": "logic.formal.sequent.gentzen",
+    "tier": "logic",
+    "type": "inference_rule",
+    "statement": "Правило сечения LK: вывод секвенции через промежуточную формулу A, доказанную в одной ветви и используемую в другой.",
+    "formal_notation": "(Γ ⊢ Δ, A) и (Σ, A ⊢ Π) / (Γ, Σ ⊢ Δ, Π)",
+    "conditions": "Секвенциальное исчисление LK; формула A — сечение",
+    "prereq": ["inference_rule.logic.gentzen.left_implication"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["gentzen", "cut_rule", "sequent_calculus"],
+    "tier_extensions": {
+      "category": "rule",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "theorem.logic.gentzen.cut_elimination",
+    "schema_version": "3.2",
+    "domain": "logic.formal.sequent",
+    "subtopic": "logic.formal.sequent.gentzen",
+    "tier": "logic",
+    "type": "theorem",
+    "statement": "Теорема Генцена Hauptsatz: всякий вывод в LK преобразуется в вывод без правила сечения, сохраняющий заключение.",
+    "formal_notation": "Γ ⊢ Δ в LK ⇒ Γ ⊢ Δ выводимо без cut-rule",
+    "conditions": "Классическая или интуиционистская секвенциальная система",
+    "prereq": ["inference_rule.logic.gentzen.cut"],
+    "derives_from": ["inference_rule.logic.gentzen.cut"],
+    "confidence": 1.0,
+    "tags": ["gentzen", "cut_elimination", "hauptsatz", "proof_theory"],
+    "tier_extensions": {
+      "category": "theorem",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "lemma.logic.formal.lindenbaum",
+    "schema_version": "3.2",
+    "domain": "logic.formal.metalogic",
+    "subtopic": "logic.formal.metalogic.completeness",
+    "tier": "logic",
+    "type": "lemma",
+    "statement": "Лемма Линденбаума: всякое непротиворечивое множество формул расширяется до максимально непротиворечивого множества.",
+    "formal_notation": "Cons(Γ) ⇒ ∃ Γ* ⊇ Γ : Cons(Γ*) ∧ ∀φ (φ ∈ Γ* ∨ ¬φ ∈ Γ*)",
+    "conditions": "Логика с классической отрицательной связкой; счётный язык",
+    "prereq": ["definition.logic.formal.consistency"],
+    "derives_from": ["definition.logic.formal.consistency"],
+    "confidence": 1.0,
+    "tags": ["lindenbaum", "maximal_consistent", "completeness", "metalogic"],
+    "tier_extensions": {
+      "category": "theorem",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "theorem.logic.formal.compactness",
+    "schema_version": "3.2",
+    "domain": "logic.formal.metalogic",
+    "subtopic": "logic.formal.metalogic.model_theory",
+    "tier": "logic",
+    "type": "theorem",
+    "statement": "Теорема компактности FOL: множество формул выполнимо тогда и только тогда, когда каждое его конечное подмножество выполнимо.",
+    "formal_notation": "Sat(Γ) ⇔ ∀ Γ_fin ⊆ Γ : Sat(Γ_fin)",
+    "conditions": "Логика первого порядка с классической семантикой",
+    "prereq": ["theorem.logic.formal.completeness_godel", "lemma.logic.formal.lindenbaum"],
+    "derives_from": ["theorem.logic.formal.completeness_godel"],
+    "confidence": 1.0,
+    "tags": ["compactness", "fol", "model_theory", "metalogic"],
+    "tier_extensions": {
+      "category": "theorem",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "theorem.logic.formal.lowenheim_skolem_down",
+    "schema_version": "3.2",
+    "domain": "logic.formal.metalogic",
+    "subtopic": "logic.formal.metalogic.model_theory",
+    "tier": "logic",
+    "type": "theorem",
+    "statement": "Нисходящая теорема Лёвенгейма-Сколема: всякая выполнимая теория счётного языка имеет счётную модель.",
+    "formal_notation": "|L| = ℵ₀ ∧ Sat(T) ⇒ ∃ модель M ⊨ T : |M| ≤ ℵ₀",
+    "conditions": "FOL; счётная сигнатура; теория T выполнима",
+    "prereq": ["theorem.logic.formal.compactness"],
+    "derives_from": ["theorem.logic.formal.compactness"],
+    "confidence": 1.0,
+    "tags": ["lowenheim_skolem", "downward", "model_theory", "cardinality"],
+    "tier_extensions": {
+      "category": "theorem",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "theorem.logic.formal.lowenheim_skolem_up",
+    "schema_version": "3.2",
+    "domain": "logic.formal.metalogic",
+    "subtopic": "logic.formal.metalogic.model_theory",
+    "tier": "logic",
+    "type": "theorem",
+    "statement": "Восходящая теорема Лёвенгейма-Сколема: если теория имеет бесконечную модель, то имеет модели всякой большей кардинальности.",
+    "formal_notation": "∃M ⊨ T : |M| ≥ ℵ₀ ⇒ ∀κ ≥ max(|L|,ℵ₀) ∃ M' ⊨ T : |M'| = κ",
+    "conditions": "FOL; T имеет хотя бы одну бесконечную модель",
+    "prereq": ["theorem.logic.formal.compactness"],
+    "derives_from": ["theorem.logic.formal.compactness"],
+    "confidence": 1.0,
+    "tags": ["lowenheim_skolem", "upward", "model_theory", "cardinality"],
+    "tier_extensions": {
+      "category": "theorem",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "paradox.logic.set_theory.skolem",
+    "schema_version": "3.2",
+    "domain": "logic.paradoxes",
+    "subtopic": "logic.paradoxes.set_theory",
+    "tier": "logic",
+    "type": "paradox",
+    "statement": "Парадокс Сколема: ZFC доказывает существование несчётных множеств, но имеет счётную модель по Лёвенгейму-Сколему.",
+    "formal_notation": "ZFC ⊢ ∃X (|X| > ℵ₀) ∧ ∃M ⊨ ZFC : |M| = ℵ₀",
+    "conditions": "ZFC непротиворечива; FOL-формализация",
+    "prereq": ["theorem.logic.formal.lowenheim_skolem_down", "axiom.math.set_theory.zfc_power_set"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["skolem_paradox", "set_theory", "relativity_of_cardinality"],
+    "tier_extensions": {
+      "category": "paradox",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "theorem.logic.formal.completeness_godel_fol",
+    "schema_version": "3.2",
+    "domain": "logic.formal.metalogic",
+    "subtopic": "logic.formal.metalogic.completeness",
+    "tier": "logic",
+    "type": "theorem",
+    "statement": "Теорема Гёделя о полноте FOL: всякая логически истинная формула первого порядка выводима в исчислении предикатов.",
+    "formal_notation": "⊨ φ ⇔ ⊢ φ",
+    "conditions": "Классическая логика первого порядка",
+    "prereq": ["lemma.logic.formal.lindenbaum"],
+    "derives_from": ["lemma.logic.formal.lindenbaum"],
+    "confidence": 1.0,
+    "tags": ["godel", "completeness", "fol", "metalogic"],
+    "tier_extensions": {
+      "category": "theorem",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "axiom.math.set_theory.zfc_separation",
+    "schema_version": "3.2",
+    "domain": "logic.formal.set_theory",
+    "subtopic": "logic.formal.set_theory.zfc",
+    "tier": "logic",
+    "type": "axiom",
+    "statement": "Аксиома выделения ZFC: для всякого множества и всякого свойства существует подмножество элементов, удовлетворяющих свойству.",
+    "formal_notation": "∀A ∀φ ∃B ∀x (x ∈ B ⇔ x ∈ A ∧ φ(x))",
+    "conditions": "ZFC; φ — формула языка теории множеств без свободной B",
+    "prereq": ["axiom.math.set_theory.zfc_extensionality"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["zfc", "separation", "aussonderung", "axiom_schema"],
+    "tier_extensions": {
+      "category": "axiom",
+      "is_axiomatic": true
+    }
+  },
+  {
+    "id": "axiom.math.set_theory.zfc_replacement",
+    "schema_version": "3.2",
+    "domain": "logic.formal.set_theory",
+    "subtopic": "logic.formal.set_theory.zfc",
+    "tier": "logic",
+    "type": "axiom",
+    "statement": "Аксиома замены ZFC: образ всякого множества под действием функционального предиката есть множество.",
+    "formal_notation": "∀A (∀x ∈ A ∃!y φ(x,y) ⇒ ∃B ∀y (y ∈ B ⇔ ∃x ∈ A φ(x,y)))",
+    "conditions": "ZFC; φ — функциональная формула",
+    "prereq": ["axiom.math.set_theory.zfc_separation"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["zfc", "replacement", "fraenkel", "axiom_schema"],
+    "tier_extensions": {
+      "category": "axiom",
+      "is_axiomatic": true
+    }
+  },
+  {
+    "id": "axiom.math.set_theory.constructibility",
+    "schema_version": "3.2",
+    "domain": "logic.formal.set_theory",
+    "subtopic": "logic.formal.set_theory.constructible",
+    "tier": "logic",
+    "type": "axiom",
+    "statement": "Аксиома конструируемости V=L Гёделя: всякое множество принадлежит конструируемой иерархии L.",
+    "formal_notation": "∀x ∃α (x ∈ L_α);  V = L = ⋃_{α ∈ Ord} L_α",
+    "conditions": "Расширение ZFC; иерархия L определена трансфинитно",
+    "prereq": ["axiom.math.set_theory.zfc_replacement"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["godel", "constructible_universe", "v_equals_l", "zfc"],
+    "tier_extensions": {
+      "category": "axiom",
+      "is_axiomatic": true
+    }
+  },
+  {
+    "id": "theorem.logic.formal.godel_consistency_l",
+    "schema_version": "3.2",
+    "domain": "logic.formal.set_theory",
+    "subtopic": "logic.formal.set_theory.constructible",
+    "tier": "logic",
+    "type": "theorem",
+    "statement": "Теорема Гёделя о конструируемом универсуме: Con(ZF) влечёт Con(ZFC + GCH + V=L).",
+    "formal_notation": "Con(ZF) ⇒ Con(ZFC + GCH + V=L)",
+    "conditions": "Метатеория допускает построение L внутри ZF",
+    "prereq": ["axiom.math.set_theory.constructibility"],
+    "derives_from": ["axiom.math.set_theory.constructibility"],
+    "confidence": 1.0,
+    "tags": ["godel", "relative_consistency", "gch", "constructible"],
+    "tier_extensions": {
+      "category": "theorem",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "theorem.logic.formal.tarski_undefinability",
+    "schema_version": "3.2",
+    "domain": "logic.formal.metalogic",
+    "subtopic": "logic.formal.metalogic.semantics",
+    "tier": "logic",
+    "type": "theorem",
+    "statement": "Теорема Тарского о неопределимости истины: предикат истинности арифметического языка не выразим внутри самой арифметики.",
+    "formal_notation": "Не существует формулы Tr(x) в L_PA : PA ⊢ φ ⇔ Tr(⌈φ⌉)",
+    "conditions": "Достаточно сильная теория, представимая через арифметику",
+    "prereq": ["theorem.logic.formal.incompleteness_godel_first"],
+    "derives_from": ["theorem.logic.formal.incompleteness_godel_first"],
+    "confidence": 1.0,
+    "tags": ["tarski", "truth_undefinability", "self_reference", "metalogic"],
+    "tier_extensions": {
+      "category": "theorem",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "theorem.logic.formal.incompleteness_godel_second",
+    "schema_version": "3.2",
+    "domain": "logic.formal.metalogic",
+    "subtopic": "logic.formal.metalogic.incompleteness",
+    "tier": "logic",
+    "type": "theorem",
+    "statement": "Вторая теорема Гёделя о неполноте: непротиворечивая рекурсивно перечислимая теория, содержащая PA, не доказывает свою непротиворечивость.",
+    "formal_notation": "Con(T) ⇒ T ⊬ Con(T)",
+    "conditions": "T рекурсивно аксиоматизируема, содержит арифметику Пеано, непротиворечива",
+    "prereq": ["theorem.logic.formal.incompleteness_godel_first"],
+    "derives_from": ["theorem.logic.formal.incompleteness_godel_first"],
+    "confidence": 1.0,
+    "tags": ["godel", "incompleteness", "consistency", "metalogic"],
+    "tier_extensions": {
+      "category": "theorem",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "theorem.logic.formal.craig_interpolation",
+    "schema_version": "3.2",
+    "domain": "logic.formal.metalogic",
+    "subtopic": "logic.formal.metalogic.proof_theory",
+    "tier": "logic",
+    "type": "theorem",
+    "statement": "Теорема Крейга об интерполяции: если ⊢ A→B, то существует формула C с языком пересечения A и B такая, что ⊢ A→C и ⊢ C→B.",
+    "formal_notation": "⊢ A → B ⇒ ∃C : L(C) ⊆ L(A) ∩ L(B), ⊢ A → C, ⊢ C → B",
+    "conditions": "Классическая логика первого порядка",
+    "prereq": ["theorem.logic.formal.completeness_godel_fol"],
+    "derives_from": ["theorem.logic.formal.completeness_godel_fol"],
+    "confidence": 1.0,
+    "tags": ["craig", "interpolation", "fol", "metalogic"],
+    "tier_extensions": {
+      "category": "theorem",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "theorem.logic.formal.herbrand",
+    "schema_version": "3.2",
+    "domain": "logic.formal.metalogic",
+    "subtopic": "logic.formal.metalogic.proof_theory",
+    "tier": "logic",
+    "type": "theorem",
+    "statement": "Теорема Эрбрана: экзистенциальная формула FOL доказуема ⇔ конечная дизъюнкция её основных подстановок есть тавтология пропозициональной логики.",
+    "formal_notation": "⊢ ∃x̄ φ(x̄) ⇔ ∃ конечный набор t̄₁,…,t̄ₙ : ⊢ φ(t̄₁) ∨ … ∨ φ(t̄ₙ)",
+    "conditions": "FOL без равенства; φ бескванторна",
+    "prereq": ["theorem.logic.formal.completeness_godel_fol"],
+    "derives_from": ["theorem.logic.formal.completeness_godel_fol"],
+    "confidence": 1.0,
+    "tags": ["herbrand", "proof_theory", "ground_substitution", "metalogic"],
+    "tier_extensions": {
+      "category": "theorem",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "definition.logic.formal.satisfiability",
+    "schema_version": "3.2",
+    "domain": "logic.formal.metalogic",
+    "subtopic": "logic.formal.metalogic.semantics",
+    "tier": "logic",
+    "type": "definition",
+    "statement": "Выполнимость формулы φ: существование интерпретации M и означивания s, при которых M, s ⊨ φ.",
+    "formal_notation": "Sat(φ) ⇔ ∃M ∃s : M, s ⊨ φ",
+    "conditions": "Семантика Тарского для FOL",
+    "prereq": ["definition.logic.formal.tautology"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["satisfiability", "model", "semantics", "fol"],
+    "tier_extensions": {
+      "category": "axiom",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "definition.logic.formal.logical_consequence",
+    "schema_version": "3.2",
+    "domain": "logic.formal.metalogic",
+    "subtopic": "logic.formal.metalogic.semantics",
+    "tier": "logic",
+    "type": "definition",
+    "statement": "Логическое следование Γ ⊨ φ: во всякой модели всех формул из Γ истинна и формула φ.",
+    "formal_notation": "Γ ⊨ φ ⇔ ∀M (M ⊨ Γ ⇒ M ⊨ φ)",
+    "conditions": "Тарскианская семантика FOL",
+    "prereq": ["definition.logic.formal.satisfiability"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["entailment", "logical_consequence", "semantics", "fol"],
+    "tier_extensions": {
+      "category": "axiom",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "theorem.logic.formal.lob",
+    "schema_version": "3.2",
+    "domain": "logic.formal.metalogic",
+    "subtopic": "logic.formal.metalogic.provability",
+    "tier": "logic",
+    "type": "theorem",
+    "statement": "Теорема Лёба: если PA доказывает «доказуемость φ влечёт φ», то PA доказывает φ.",
+    "formal_notation": "PA ⊢ (□φ → φ) ⇒ PA ⊢ φ",
+    "conditions": "PA или достаточно сильная теория арифметики; □ — предикат доказуемости",
+    "prereq": ["theorem.logic.formal.incompleteness_godel_second"],
+    "derives_from": ["theorem.logic.formal.incompleteness_godel_second"],
+    "confidence": 1.0,
+    "tags": ["lob", "provability_logic", "self_reference", "metalogic"],
+    "tier_extensions": {
+      "category": "theorem",
+      "is_axiomatic": false
+    }
+  }
+]

@@ -1,0 +1,545 @@
+[
+  {
+    "id": "material.chemistry.hydrocarbons.methane",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.hydrocarbons",
+    "subtopic": "chemistry.hydrocarbons.alkanes",
+    "tier": "invariant",
+    "type": "material",
+    "statement": "Метан CH4 — простейший алкан, тетраэдрическая молекула, sp3-гибридизация, угол H-C-H 109.5°, Tкип -161.5 °C, главный компонент природного газа.",
+    "formal_notation": "CH4",
+    "conditions": "Нормальные условия; газ без цвета и запаха",
+    "prereq": [
+      "concept.chemistry.organic.alkane",
+      "concept.chemistry.bonding.hybridization"
+    ],
+    "confidence": 0.99,
+    "tags": [
+      "methane",
+      "alkane",
+      "hydrocarbon",
+      "natural_gas"
+    ]
+  },
+  {
+    "id": "material.chemistry.hydrocarbons.ethane",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.hydrocarbons",
+    "subtopic": "chemistry.hydrocarbons.alkanes",
+    "tier": "invariant",
+    "type": "material",
+    "statement": "Этан C2H6 — алкан с заторможенной конформацией как энергетическим минимумом; барьер вращения вокруг C-C ≈ 12 кДж/моль; Tкип -89 °C.",
+    "formal_notation": "C2H6",
+    "conditions": "Нормальные условия; газ",
+    "prereq": [
+      "concept.chemistry.organic.alkane"
+    ],
+    "confidence": 0.98,
+    "tags": [
+      "ethane",
+      "alkane",
+      "conformation",
+      "hydrocarbon"
+    ]
+  },
+  {
+    "id": "material.chemistry.hydrocarbons.propane",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.hydrocarbons",
+    "subtopic": "chemistry.hydrocarbons.alkanes",
+    "tier": "invariant",
+    "type": "material",
+    "statement": "Пропан C3H8 — газообразный алкан, Tкип -42 °C, сжижается при умеренном давлении, теплота сгорания ≈ 2220 кДж/моль.",
+    "formal_notation": "CH3-CH2-CH3",
+    "conditions": "Нормальные условия; газ, легко сжижаемый",
+    "prereq": [
+      "concept.chemistry.organic.alkane"
+    ],
+    "confidence": 0.98,
+    "tags": [
+      "propane",
+      "alkane",
+      "lpg",
+      "hydrocarbon"
+    ]
+  },
+  {
+    "id": "material.chemistry.hydrocarbons.butane",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.hydrocarbons",
+    "subtopic": "chemistry.hydrocarbons.alkanes",
+    "tier": "invariant",
+    "type": "material",
+    "statement": "н-Бутан C4H10 — линейный алкан, Tкип -0.5 °C; первый член ряда с цепной структурной изомерией (н-бутан и изобутан).",
+    "formal_notation": "CH3-CH2-CH2-CH3",
+    "conditions": "Нормальные условия; газ",
+    "prereq": [
+      "concept.chemistry.organic.alkane",
+      "concept.chemistry.organic.isomerism"
+    ],
+    "confidence": 0.98,
+    "tags": [
+      "butane",
+      "alkane",
+      "isomerism"
+    ]
+  },
+  {
+    "id": "material.chemistry.hydrocarbons.isobutane",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.hydrocarbons",
+    "subtopic": "chemistry.hydrocarbons.alkanes",
+    "tier": "invariant",
+    "type": "material",
+    "statement": "Изобутан (2-метилпропан) C4H10 — разветвлённый структурный изомер н-бутана; Tкип -11.7 °C; третичный C-H связь слабее.",
+    "formal_notation": "(CH3)3CH",
+    "conditions": "Нормальные условия; газ",
+    "prereq": [
+      "concept.chemistry.organic.isomerism"
+    ],
+    "confidence": 0.98,
+    "tags": [
+      "isobutane",
+      "branched",
+      "alkane",
+      "isomer"
+    ]
+  },
+  {
+    "id": "material.chemistry.hydrocarbons.cyclopropane",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.hydrocarbons",
+    "subtopic": "chemistry.hydrocarbons.cycloalkanes",
+    "tier": "invariant",
+    "type": "material",
+    "statement": "Циклопропан C3H6 — трёхчленный цикл с углом C-C-C 60°; высокое угловое напряжение Байера ≈ 115 кДж/моль; повышенная реакционная способность.",
+    "formal_notation": "C3H6 (треугольный цикл)",
+    "conditions": "Нормальные условия; газ",
+    "prereq": [
+      "concept.chemistry.organic.alkane"
+    ],
+    "confidence": 0.97,
+    "tags": [
+      "cyclopropane",
+      "ring_strain",
+      "cycloalkane"
+    ]
+  },
+  {
+    "id": "material.chemistry.hydrocarbons.cyclohexane",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.hydrocarbons",
+    "subtopic": "chemistry.hydrocarbons.cycloalkanes",
+    "tier": "invariant",
+    "type": "material",
+    "statement": "Циклогексан C6H12 — шестичленный цикл в конформации кресло без углового напряжения; Tкип 80.7 °C; аксиальные и экваториальные H.",
+    "formal_notation": "C6H12",
+    "conditions": "Нормальные условия; жидкость",
+    "prereq": [
+      "concept.chemistry.organic.alkane"
+    ],
+    "confidence": 0.98,
+    "tags": [
+      "cyclohexane",
+      "chair_conformation",
+      "cycloalkane"
+    ]
+  },
+  {
+    "id": "concept.chemistry.hydrocarbons.chair_conformation",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.hydrocarbons",
+    "subtopic": "chemistry.hydrocarbons.conformation",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "Конформация кресло циклогексана — пространственное расположение с минимальной энергией; чередующиеся аксиальные/экваториальные позиции; быстрая инверсия кольца.",
+    "conditions": "Шестичленные насыщенные циклы; T выше -100 °C",
+    "prereq": [
+      "material.chemistry.hydrocarbons.cyclohexane"
+    ],
+    "confidence": 0.97,
+    "tags": [
+      "conformation",
+      "chair",
+      "cyclohexane",
+      "stereochemistry"
+    ]
+  },
+  {
+    "id": "material.chemistry.hydrocarbons.toluene",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.hydrocarbons",
+    "subtopic": "chemistry.hydrocarbons.arenes",
+    "tier": "invariant",
+    "type": "material",
+    "statement": "Толуол C6H5-CH3 — метилбензол, ароматический углеводород, Tкип 110.6 °C; метильная группа активирует кольцо как орто-/пара-ориентант.",
+    "formal_notation": "C6H5CH3",
+    "conditions": "Нормальные условия; жидкость",
+    "prereq": [
+      "concept.chemistry.organic.arene"
+    ],
+    "confidence": 0.98,
+    "tags": [
+      "toluene",
+      "arene",
+      "aromatic",
+      "ortho_para_director"
+    ]
+  },
+  {
+    "id": "material.chemistry.hydrocarbons.xylene",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.hydrocarbons",
+    "subtopic": "chemistry.hydrocarbons.arenes",
+    "tier": "invariant",
+    "type": "material",
+    "statement": "Ксилол C6H4(CH3)2 — диметилбензол с тремя изомерами орто-, мета-, пара-; Tкип 138–144 °C в зависимости от изомера.",
+    "formal_notation": "C6H4(CH3)2",
+    "conditions": "Нормальные условия; жидкость",
+    "prereq": [
+      "material.chemistry.hydrocarbons.toluene"
+    ],
+    "confidence": 0.98,
+    "tags": [
+      "xylene",
+      "arene",
+      "isomerism",
+      "aromatic"
+    ]
+  },
+  {
+    "id": "material.chemistry.hydrocarbons.naphthalene",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.hydrocarbons",
+    "subtopic": "chemistry.hydrocarbons.pah",
+    "tier": "invariant",
+    "type": "material",
+    "statement": "Нафталин C10H8 — конденсированный бицикл из двух бензольных колец; 10 π-электронов; Tпл 80 °C; сублимирующее твёрдое вещество.",
+    "formal_notation": "C10H8",
+    "conditions": "Твёрдое при нормальных условиях",
+    "prereq": [
+      "concept.chemistry.organic.arene"
+    ],
+    "confidence": 0.98,
+    "tags": [
+      "naphthalene",
+      "pah",
+      "polycyclic_aromatic"
+    ]
+  },
+  {
+    "id": "material.chemistry.hydrocarbons.anthracene",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.hydrocarbons",
+    "subtopic": "chemistry.hydrocarbons.pah",
+    "tier": "invariant",
+    "type": "material",
+    "statement": "Антрацен C14H10 — линейно конденсированный трицикл; 14 π-электронов; флуоресцирует в УФ; центральное кольцо более реакционноспособно.",
+    "formal_notation": "C14H10",
+    "conditions": "Твёрдое; жёлтые кристаллы",
+    "prereq": [
+      "material.chemistry.hydrocarbons.naphthalene"
+    ],
+    "confidence": 0.97,
+    "tags": [
+      "anthracene",
+      "pah",
+      "fluorescence"
+    ]
+  },
+  {
+    "id": "material.chemistry.hydrocarbons.pyrene",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.hydrocarbons",
+    "subtopic": "chemistry.hydrocarbons.pah",
+    "tier": "invariant",
+    "type": "material",
+    "statement": "Пирен C16H10 — тетрациклический ПАУ с пери-конденсацией; 16 π-электронов; высокая флуоресценция; маркер при сгорании.",
+    "formal_notation": "C16H10",
+    "conditions": "Твёрдое; бесцветные кристаллы",
+    "prereq": [
+      "material.chemistry.hydrocarbons.naphthalene"
+    ],
+    "confidence": 0.96,
+    "tags": [
+      "pyrene",
+      "pah",
+      "peri_condensed"
+    ]
+  },
+  {
+    "id": "material.chemistry.hydrocarbons.ethylene",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.hydrocarbons",
+    "subtopic": "chemistry.hydrocarbons.alkenes",
+    "tier": "invariant",
+    "type": "material",
+    "statement": "Этилен C2H4 — простейший алкен, плоская молекула, sp2-гибридизация, двойная связь σ+π, длина C=C 134 пм; фитогормон созревания.",
+    "formal_notation": "CH2=CH2",
+    "conditions": "Нормальные условия; газ",
+    "prereq": [
+      "concept.chemistry.organic.alkene",
+      "concept.chemistry.bonding.hybridization"
+    ],
+    "confidence": 0.99,
+    "tags": [
+      "ethylene",
+      "alkene",
+      "sp2",
+      "phytohormone"
+    ]
+  },
+  {
+    "id": "material.chemistry.hydrocarbons.acetylene",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.hydrocarbons",
+    "subtopic": "chemistry.hydrocarbons.alkynes",
+    "tier": "invariant",
+    "type": "material",
+    "statement": "Ацетилен C2H2 — простейший алкин, линейная молекула, sp-гибридизация, тройная связь σ+2π, длина C≡C 120 пм; Tпл -84 °C сублимация.",
+    "formal_notation": "HC≡CH",
+    "conditions": "Нормальные условия; газ",
+    "prereq": [
+      "concept.chemistry.organic.alkyne",
+      "concept.chemistry.bonding.hybridization"
+    ],
+    "confidence": 0.99,
+    "tags": [
+      "acetylene",
+      "alkyne",
+      "sp",
+      "triple_bond"
+    ]
+  },
+  {
+    "id": "material.chemistry.hydrocarbons.butadiene",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.hydrocarbons",
+    "subtopic": "chemistry.hydrocarbons.dienes",
+    "tier": "invariant",
+    "type": "material",
+    "statement": "1,3-Бутадиен C4H6 — сопряжённый диен с делокализацией π-электронов по 4 атомам; диен в реакции Дильса-Альдера; Tкип -4.4 °C.",
+    "formal_notation": "CH2=CH-CH=CH2",
+    "conditions": "Нормальные условия; газ",
+    "prereq": [
+      "concept.chemistry.organic.alkene"
+    ],
+    "confidence": 0.98,
+    "tags": [
+      "butadiene",
+      "diene",
+      "conjugation"
+    ]
+  },
+  {
+    "id": "material.chemistry.hydrocarbons.isoprene",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.hydrocarbons",
+    "subtopic": "chemistry.hydrocarbons.dienes",
+    "tier": "invariant",
+    "type": "material",
+    "statement": "Изопрен C5H8 (2-метил-1,3-бутадиен) — сопряжённый диен, мономер натурального каучука; структурный блок терпенов по изопреновому правилу.",
+    "formal_notation": "CH2=C(CH3)-CH=CH2",
+    "conditions": "Нормальные условия; летучая жидкость",
+    "prereq": [
+      "material.chemistry.hydrocarbons.butadiene"
+    ],
+    "confidence": 0.98,
+    "tags": [
+      "isoprene",
+      "diene",
+      "terpene",
+      "rubber"
+    ]
+  },
+  {
+    "id": "material.chemistry.hydrocarbons.styrene",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.hydrocarbons",
+    "subtopic": "chemistry.hydrocarbons.arenes",
+    "tier": "invariant",
+    "type": "material",
+    "statement": "Стирол C6H5-CH=CH2 — винилбензол с сопряжённым π-кольцом и винильной группой; мономер полистирола; Tкип 145 °C.",
+    "formal_notation": "C6H5CH=CH2",
+    "conditions": "Нормальные условия; жидкость",
+    "prereq": [
+      "material.chemistry.hydrocarbons.toluene",
+      "concept.chemistry.organic.alkene"
+    ],
+    "confidence": 0.98,
+    "tags": [
+      "styrene",
+      "monomer",
+      "vinyl",
+      "polystyrene"
+    ]
+  },
+  {
+    "id": "material.chemistry.hydrocarbons.cyclopentadiene",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.hydrocarbons",
+    "subtopic": "chemistry.hydrocarbons.dienes",
+    "tier": "invariant",
+    "type": "material",
+    "statement": "Циклопентадиен C5H6 — циклический сопряжённый диен; pKa ≈ 16 за счёт ароматического циклопентадиенильного аниона (6 π-электронов).",
+    "formal_notation": "C5H6",
+    "conditions": "Нормальные условия; жидкость; димеризуется",
+    "prereq": [
+      "material.chemistry.hydrocarbons.butadiene"
+    ],
+    "confidence": 0.97,
+    "tags": [
+      "cyclopentadiene",
+      "aromatic_anion",
+      "diene"
+    ]
+  },
+  {
+    "id": "concept.chemistry.hydrocarbons.aromaticity_huckel",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.hydrocarbons",
+    "subtopic": "chemistry.hydrocarbons.aromaticity",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "Правило Хюккеля: плоский циклический сопряжённый углеводород ароматичен при 4n+2 π-электронах (n=0,1,2,…); антиароматичен при 4n.",
+    "formal_notation": "N(π) = 4n+2",
+    "conditions": "Плоская сопряжённая циклическая система",
+    "limits": [
+      "Только для моноциклов; для полициклов нужны другие критерии (NICS, диатропность)"
+    ],
+    "prereq": [
+      "concept.chemistry.organic.arene"
+    ],
+    "confidence": 0.96,
+    "tags": [
+      "huckel",
+      "aromaticity",
+      "pi_electrons"
+    ]
+  },
+  {
+    "id": "mechanism.chemistry.hydrocarbons.combustion",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.hydrocarbons",
+    "subtopic": "chemistry.hydrocarbons.reactions.combustion",
+    "tier": "invariant",
+    "type": "mechanism",
+    "statement": "Полное сгорание углеводорода CnHm + (n+m/4)O2 → nCO2 + (m/2)H2O; экзотермично; цепной радикальный механизм с участием HO·, HO2·.",
+    "formal_notation": "CnHm + (n+m/4)O2 → nCO2 + (m/2)H2O",
+    "conditions": "Избыток O2; T выше температуры воспламенения",
+    "prereq": [
+      "concept.chemistry.organic.hydrocarbon"
+    ],
+    "confidence": 0.95,
+    "tags": [
+      "combustion",
+      "oxidation",
+      "exothermic",
+      "radical_chain"
+    ]
+  },
+  {
+    "id": "mechanism.chemistry.hydrocarbons.radical_halogenation",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.hydrocarbons",
+    "subtopic": "chemistry.hydrocarbons.reactions.halogenation",
+    "tier": "invariant",
+    "type": "mechanism",
+    "statement": "Радикальное галогенирование алканов: инициирование Cl2→2Cl·; продолжение Cl·+RH→HCl+R·, R·+Cl2→RCl+Cl·; обрыв 2R·→R-R.",
+    "formal_notation": "RH + X2 → RX + HX (hv или Δ)",
+    "conditions": "X = Cl, Br; инициирование hv или пероксидами; газовая или неполярная фаза",
+    "prereq": [
+      "concept.chemistry.organic.alkane",
+      "mechanism.chemistry.kinetics.chain_reaction"
+    ],
+    "confidence": 0.93,
+    "tags": [
+      "radical",
+      "halogenation",
+      "alkane",
+      "chain_mechanism"
+    ]
+  },
+  {
+    "id": "concept.chemistry.hydrocarbons.selectivity_radical",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.hydrocarbons",
+    "subtopic": "chemistry.hydrocarbons.reactions.halogenation",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "Селективность отрыва H при радикальном галогенировании: 3°>2°>1°; для Br2 разница ~1600:80:1, для Cl2 ~5:4:1 (правило Хэммонда).",
+    "conditions": "Газовая фаза; T ~25–100 °C",
+    "prereq": [
+      "mechanism.chemistry.hydrocarbons.radical_halogenation"
+    ],
+    "confidence": 0.9,
+    "tags": [
+      "selectivity",
+      "radical",
+      "hammond_postulate"
+    ]
+  },
+  {
+    "id": "mechanism.chemistry.hydrocarbons.cracking",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.hydrocarbons",
+    "subtopic": "chemistry.hydrocarbons.reactions.cracking",
+    "tier": "invariant",
+    "type": "mechanism",
+    "statement": "Крекинг — расщепление длинных алканов на короткие алкан и алкен при T 450–750 °C; термический идёт радикально, каталитический — через карбкатионы на цеолитах.",
+    "formal_notation": "CnH2n+2 → CmH2m+2 + CkH2k (n=m+k)",
+    "conditions": "T 450–750 °C; катализаторы цеолиты (FCC) или термолиз",
+    "prereq": [
+      "concept.chemistry.organic.alkane"
+    ],
+    "confidence": 0.92,
+    "tags": [
+      "cracking",
+      "petroleum",
+      "zeolite",
+      "carbocation"
+    ]
+  },
+  {
+    "id": "mechanism.chemistry.hydrocarbons.isomerization",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.hydrocarbons",
+    "subtopic": "chemistry.hydrocarbons.reactions.isomerization",
+    "tier": "invariant",
+    "type": "mechanism",
+    "statement": "Изомеризация алканов — перегруппировка линейных в разветвлённые через карбкатионы; повышает октановое число; катализаторы Pt/Al2O3 или AlCl3.",
+    "formal_notation": "н-CnH2n+2 ⇌ изо-CnH2n+2",
+    "conditions": "T 100–300 °C; кислотные катализаторы; H2",
+    "prereq": [
+      "concept.chemistry.organic.isomerism"
+    ],
+    "confidence": 0.9,
+    "tags": [
+      "isomerization",
+      "carbocation",
+      "octane_number"
+    ]
+  },
+  {
+    "id": "mechanism.chemistry.hydrocarbons.reforming",
+    "schema_version": "3.2",
+    "domain": "chemistry.substances.organic.hydrocarbons",
+    "subtopic": "chemistry.hydrocarbons.reactions.reforming",
+    "tier": "invariant",
+    "type": "mechanism",
+    "statement": "Каталитический риформинг — превращение нафтенов и алканов C6–C10 в ароматические соединения через дегидрирование, циклизацию и изомеризацию на Pt/Re/Al2O3.",
+    "formal_notation": "циклогексан → бензол + 3H2",
+    "conditions": "T 480–530 °C; P 5–25 атм; катализатор Pt-Re/Al2O3",
+    "prereq": [
+      "material.chemistry.hydrocarbons.cyclohexane",
+      "concept.chemistry.organic.arene"
+    ],
+    "confidence": 0.9,
+    "tags": [
+      "reforming",
+      "dehydrogenation",
+      "aromatic",
+      "platinum"
+    ]
+  }
+]

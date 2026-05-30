@@ -1,0 +1,477 @@
+[
+  {
+    "id": "fact.culture.artist.leonardo_da_vinci",
+    "schema_version": "3.2",
+    "domain": "culture.art",
+    "subtopic": "art.painter.leonardo",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Леонардо да Винчи (1452–1519) — итальянский художник, учёный и инженер эпохи Высокого Возрождения; автор «Моны Лизы» и «Тайной вечери»; работал во Флоренции, Милане, Франции.",
+    "conditions": "Биографические данные; атрибуции по Лувру",
+    "prereq": ["concept.culture.art"],
+    "confidence": 0.92,
+    "tags": ["leonardo", "renaissance", "italy", "painter"],
+    "tier_extensions": {
+      "source": "Britannica / Louvre 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.culture.artist.michelangelo",
+    "schema_version": "3.2",
+    "domain": "culture.art",
+    "subtopic": "art.painter.michelangelo",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Микеланджело Буонарроти (1475–1564) — итальянский скульптор, живописец и архитектор Возрождения; автор скульптуры «Давид», росписи Сикстинской капеллы и фрески «Страшный суд».",
+    "conditions": "Биографические данные",
+    "prereq": ["concept.culture.art"],
+    "confidence": 0.92,
+    "tags": ["michelangelo", "sistine", "renaissance", "sculptor"],
+    "tier_extensions": {
+      "source": "Britannica / Vatican Museums 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.culture.artist.raphael",
+    "schema_version": "3.2",
+    "domain": "culture.art",
+    "subtopic": "art.painter.raphael",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Рафаэль Санти (1483–1520) — итальянский живописец и архитектор Высокого Возрождения; автор «Афинской школы», «Сикстинской мадонны»; работал в Урбино, Флоренции и Риме.",
+    "conditions": "Биографические данные",
+    "prereq": ["concept.culture.art"],
+    "confidence": 0.91,
+    "tags": ["raphael", "renaissance", "italy", "painter"],
+    "tier_extensions": {
+      "source": "Britannica 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.culture.artist.rembrandt",
+    "schema_version": "3.2",
+    "domain": "culture.art",
+    "subtopic": "art.painter.rembrandt",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Рембрандт ван Рейн (1606–1669) — голландский живописец и гравёр Золотого века; автор «Ночного дозора», «Урока анатомии доктора Тульпа»; мастер светотени и психологического портрета.",
+    "conditions": "Биографические данные",
+    "prereq": ["concept.culture.art"],
+    "confidence": 0.91,
+    "tags": ["rembrandt", "dutch", "baroque", "painter"],
+    "tier_extensions": {
+      "source": "Rijksmuseum / Britannica 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.culture.artist.vermeer",
+    "schema_version": "3.2",
+    "domain": "culture.art",
+    "subtopic": "art.painter.vermeer",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Ян Вермеер (1632–1675) — голландский живописец Золотого века; известно около 35 работ; шедевры — «Девушка с жемчужной серёжкой», «Молочница»; мастер света и интерьера.",
+    "conditions": "Атрибуции уточняются; число работ дискутируется",
+    "prereq": ["concept.culture.art"],
+    "confidence": 0.88,
+    "tags": ["vermeer", "dutch", "golden_age", "painter"],
+    "tier_extensions": {
+      "source": "Mauritshuis / Britannica 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "fact.culture.artist.goya",
+    "schema_version": "3.2",
+    "domain": "culture.art",
+    "subtopic": "art.painter.goya",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Франсиско Гойя (1746–1828) — испанский живописец и гравёр; придворный художник Карла IV; автор «Расстрела повстанцев», серии «Капричос», «Чёрных картин»; предтеча романтизма и модернизма.",
+    "conditions": "Биографические данные",
+    "prereq": ["concept.culture.art"],
+    "confidence": 0.9,
+    "tags": ["goya", "spain", "romanticism", "painter"],
+    "tier_extensions": {
+      "source": "Museo del Prado 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.culture.artist.monet",
+    "schema_version": "3.2",
+    "domain": "culture.art",
+    "subtopic": "art.painter.monet",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Клод Моне (1840–1926) — французский живописец, основоположник импрессионизма; от его картины «Впечатление. Восходящее солнце» (1872) произошло название течения; серии «Кувшинки», «Стога», «Руанский собор».",
+    "conditions": "Биографические данные",
+    "prereq": ["concept.culture.art"],
+    "confidence": 0.92,
+    "tags": ["monet", "impressionism", "france", "painter"],
+    "tier_extensions": {
+      "source": "Musée d'Orsay / Britannica 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.culture.artist.van_gogh",
+    "schema_version": "3.2",
+    "domain": "culture.art",
+    "subtopic": "art.painter.van_gogh",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Винсент Ван Гог (1853–1890) — голландский постимпрессионист; за 10 лет создал около 2100 работ, включая 860 картин маслом; шедевры — «Звёздная ночь», «Подсолнухи», автопортреты.",
+    "conditions": "Атрибуции по Van Gogh Museum",
+    "prereq": ["concept.culture.art"],
+    "confidence": 0.91,
+    "tags": ["van_gogh", "post_impressionism", "dutch", "painter"],
+    "tier_extensions": {
+      "source": "Van Gogh Museum 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.culture.artist.picasso",
+    "schema_version": "3.2",
+    "domain": "culture.art",
+    "subtopic": "art.painter.picasso",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Пабло Пикассо (1881–1973) — испанский художник, сооснователь кубизма (с Браком); автор «Авиньонских девиц» (1907), «Герники» (1937); прошёл через голубой и розовый периоды.",
+    "conditions": "Биографические данные",
+    "prereq": ["concept.culture.art"],
+    "confidence": 0.92,
+    "tags": ["picasso", "cubism", "spain", "painter"],
+    "tier_extensions": {
+      "source": "Musée Picasso / Britannica 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.culture.artist.dali",
+    "schema_version": "3.2",
+    "domain": "culture.art",
+    "subtopic": "art.painter.dali",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Сальвадор Дали (1904–1989) — испанский художник, ключевая фигура сюрреализма; автор «Постоянства памяти» (1931); разработал «параноидально-критический метод»; работал также в кино и ювелирном искусстве.",
+    "conditions": "Биографические данные",
+    "prereq": ["concept.culture.art"],
+    "confidence": 0.91,
+    "tags": ["dali", "surrealism", "spain", "painter"],
+    "tier_extensions": {
+      "source": "Fundació Gala-Dalí 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.culture.artist.malevich",
+    "schema_version": "3.2",
+    "domain": "culture.art",
+    "subtopic": "art.painter.malevich",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Казимир Малевич (1879–1935) — русский художник-авангардист, основатель супрематизма; автор «Чёрного квадрата» (1915), манифеста «От кубизма к супрематизму»; работал в Витебске и Ленинграде.",
+    "conditions": "Биографические данные",
+    "prereq": ["concept.culture.art"],
+    "confidence": 0.9,
+    "tags": ["malevich", "suprematism", "avant_garde", "painter"],
+    "tier_extensions": {
+      "source": "Tretyakov Gallery / Britannica 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.culture.writer.shakespeare",
+    "schema_version": "3.2",
+    "domain": "culture.literature",
+    "subtopic": "literature.playwright.shakespeare",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Уильям Шекспир (1564–1616) — английский драматург и поэт; автор 39 пьес, 154 сонетов, двух поэм; ключевые трагедии — «Гамлет», «Король Лир», «Макбет», «Отелло».",
+    "conditions": "Атрибуции по Folger Shakespeare",
+    "prereq": ["concept.culture.literature"],
+    "confidence": 0.91,
+    "tags": ["shakespeare", "drama", "england", "writer"],
+    "tier_extensions": {
+      "source": "Folger Shakespeare Library 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "fact.culture.writer.cervantes",
+    "schema_version": "3.2",
+    "domain": "culture.literature",
+    "subtopic": "literature.novelist.cervantes",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Мигель де Сервантес Сааведра (1547–1616) — испанский писатель; автор романа «Дон Кихот» (1605, 1615), считающегося первым современным романом и одним из самых издаваемых произведений мировой литературы.",
+    "conditions": "Биографические данные",
+    "prereq": ["concept.culture.literature"],
+    "confidence": 0.92,
+    "tags": ["cervantes", "don_quixote", "spain", "novelist"],
+    "tier_extensions": {
+      "source": "Cervantes Institute 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.culture.writer.dostoevsky",
+    "schema_version": "3.2",
+    "domain": "culture.literature",
+    "subtopic": "literature.novelist.dostoevsky",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Фёдор Достоевский (1821–1881) — русский писатель и философ; ключевые романы — «Преступление и наказание» (1866), «Идиот» (1869), «Бесы» (1872), «Братья Карамазовы» (1880).",
+    "conditions": "Биографические данные",
+    "prereq": ["concept.culture.literature"],
+    "confidence": 0.92,
+    "tags": ["dostoevsky", "russia", "novelist", "psychology"],
+    "tier_extensions": {
+      "source": "Britannica 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.culture.writer.tolstoy",
+    "schema_version": "3.2",
+    "domain": "culture.literature",
+    "subtopic": "literature.novelist.tolstoy",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Лев Толстой (1828–1910) — русский писатель и философ-моралист; автор романов «Война и мир» (1869), «Анна Каренина» (1877), «Воскресение» (1899); основатель толстовства.",
+    "conditions": "Биографические данные",
+    "prereq": ["concept.culture.literature"],
+    "confidence": 0.92,
+    "tags": ["tolstoy", "russia", "novelist", "realism"],
+    "tier_extensions": {
+      "source": "Britannica 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.culture.writer.chekhov",
+    "schema_version": "3.2",
+    "domain": "culture.literature",
+    "subtopic": "literature.playwright.chekhov",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Антон Чехов (1860–1904) — русский писатель, драматург, врач; реформатор драмы; ключевые пьесы — «Чайка», «Дядя Ваня», «Три сестры», «Вишнёвый сад»; мастер короткого рассказа.",
+    "conditions": "Биографические данные",
+    "prereq": ["concept.culture.literature"],
+    "confidence": 0.91,
+    "tags": ["chekhov", "russia", "drama", "writer"],
+    "tier_extensions": {
+      "source": "Britannica 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.culture.writer.goethe",
+    "schema_version": "3.2",
+    "domain": "culture.literature",
+    "subtopic": "literature.poet.goethe",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Иоганн Вольфганг фон Гёте (1749–1832) — немецкий поэт, прозаик, мыслитель; автор «Фауста», «Страданий юного Вертера», «Учения о цвете»; центральная фигура веймарского классицизма.",
+    "conditions": "Биографические данные",
+    "prereq": ["concept.culture.literature"],
+    "confidence": 0.91,
+    "tags": ["goethe", "germany", "faust", "writer"],
+    "tier_extensions": {
+      "source": "Britannica 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.culture.writer.hugo",
+    "schema_version": "3.2",
+    "domain": "culture.literature",
+    "subtopic": "literature.novelist.hugo",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Виктор Гюго (1802–1885) — французский поэт, романист, лидер романтизма; автор романов «Собор Парижской Богоматери» (1831), «Отверженные» (1862); политический деятель Третьей республики.",
+    "conditions": "Биографические данные",
+    "prereq": ["concept.culture.literature"],
+    "confidence": 0.91,
+    "tags": ["hugo", "france", "romanticism", "writer"],
+    "tier_extensions": {
+      "source": "Britannica 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.culture.composer.bach",
+    "schema_version": "3.2",
+    "domain": "culture.music",
+    "subtopic": "music.composer.bach",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Иоганн Себастьян Бах (1685–1750) — немецкий композитор и органист эпохи барокко; автор «Хорошо темперированного клавира», «Бранденбургских концертов», «Страстей по Матфею», «Мессы си минор».",
+    "conditions": "Биографические данные",
+    "prereq": ["concept.culture.music"],
+    "confidence": 0.93,
+    "tags": ["bach", "baroque", "germany", "composer"],
+    "tier_extensions": {
+      "source": "Bach-Archiv Leipzig 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.culture.composer.mozart",
+    "schema_version": "3.2",
+    "domain": "culture.music",
+    "subtopic": "music.composer.mozart",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Вольфганг Амадей Моцарт (1756–1791) — австрийский композитор Венской классической школы; создал более 600 произведений за 35 лет; ключевые оперы — «Дон Жуан», «Свадьба Фигаро», «Волшебная флейта».",
+    "conditions": "Каталог Кёхеля",
+    "prereq": ["concept.culture.music"],
+    "confidence": 0.93,
+    "tags": ["mozart", "classical", "austria", "composer"],
+    "tier_extensions": {
+      "source": "Mozarteum / Köchel-Verzeichnis 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.culture.composer.beethoven",
+    "schema_version": "3.2",
+    "domain": "culture.music",
+    "subtopic": "music.composer.beethoven",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Людвиг ван Бетховен (1770–1827) — немецкий композитор венской школы; мост между классицизмом и романтизмом; автор 9 симфоний, 32 фортепианных сонат, оперы «Фиделио»; писал в условиях нарастающей глухоты.",
+    "conditions": "Биографические данные",
+    "prereq": ["concept.culture.music"],
+    "confidence": 0.93,
+    "tags": ["beethoven", "classical", "germany", "composer"],
+    "tier_extensions": {
+      "source": "Beethoven-Haus Bonn 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.culture.composer.tchaikovsky",
+    "schema_version": "3.2",
+    "domain": "culture.music",
+    "subtopic": "music.composer.tchaikovsky",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Пётр Чайковский (1840–1893) — русский композитор эпохи романтизма; автор балетов «Лебединое озеро», «Спящая красавица», «Щелкунчик», 6 симфоний, оперы «Евгений Онегин».",
+    "conditions": "Биографические данные",
+    "prereq": ["concept.culture.music"],
+    "confidence": 0.92,
+    "tags": ["tchaikovsky", "russia", "romanticism", "composer"],
+    "tier_extensions": {
+      "source": "Britannica 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.culture.museum.louvre",
+    "schema_version": "3.2",
+    "domain": "culture.museum",
+    "subtopic": "museum.louvre",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Лувр — крупнейший художественный музей мира в Париже; основан в 1793 году; коллекция около 615 тыс. экспонатов, в экспозиции около 35 тыс.; посещаемость в 2023 году — 8,9 млн человек.",
+    "conditions": "Данные посещаемости за 2023",
+    "prereq": [],
+    "confidence": 0.9,
+    "tags": ["louvre", "paris", "museum", "art"],
+    "tier_extensions": {
+      "source": "Louvre / Themed Entertainment Association 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.culture.museum.hermitage",
+    "schema_version": "3.2",
+    "domain": "culture.museum",
+    "subtopic": "museum.hermitage",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Государственный Эрмитаж — крупнейший музей России в Санкт-Петербурге; основан Екатериной II в 1764 году; коллекция более 3 млн экспонатов; шесть зданий, включая Зимний дворец.",
+    "conditions": "Данные на 2024",
+    "prereq": [],
+    "confidence": 0.91,
+    "tags": ["hermitage", "russia", "museum", "art"],
+    "tier_extensions": {
+      "source": "Hermitage Official 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.culture.event.academy_awards",
+    "schema_version": "3.2",
+    "domain": "culture.cinema",
+    "subtopic": "cinema.award.oscar",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Премия «Оскар» — главная награда американской киноакадемии; вручается с 1929 года; статуэтка Академии высотой 34 см и весом 3,85 кг; в 2024 году «Оппенгеймер» получил 7 «Оскаров», включая лучший фильм.",
+    "conditions": "Данные на 96-ю церемонию 10 марта 2024",
+    "prereq": [],
+    "confidence": 0.91,
+    "tags": ["oscar", "academy", "cinema", "award"],
+    "tier_extensions": {
+      "source": "AMPAS Official 2024",
+      "valid_from": "2024-03-10",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  }
+]

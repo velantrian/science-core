@@ -1,0 +1,452 @@
+[
+  {
+    "id": "concept.abstract.culture.archetype",
+    "schema_version": "3.2",
+    "domain": "abstract.culture",
+    "subtopic": "abstract.culture.archetypes",
+    "tier": "abstract",
+    "type": "concept",
+    "statement": "Архетип по Юнгу: универсальная образно-смысловая структура коллективного бессознательного, повторяющаяся в мифах, снах и культурных нарративах разных народов.",
+    "conditions": "Кросс-культурная воспроизводимость без прямых заимствований",
+    "prereq": ["concept.abstract.mind.mental_representation", "pattern.abstract.culture.myth"],
+    "confidence": 0.62,
+    "tags": ["archetype", "jung", "collective_unconscious", "symbol"],
+    "tier_extensions": {
+      "abstract_type": "archetype",
+      "human_only": true,
+      "related_abstract": ["pattern.abstract.culture.monomyth", "concept.abstract.culture.shadow"]
+    }
+  },
+  {
+    "id": "concept.abstract.culture.shadow",
+    "schema_version": "3.2",
+    "domain": "abstract.culture",
+    "subtopic": "abstract.culture.archetypes",
+    "tier": "abstract",
+    "type": "concept",
+    "statement": "Тень: вытесненные и непризнанные содержания психики, проецируемые на внешних агентов и группирующиеся в культуре в образы антагониста и врага.",
+    "conditions": "Социальное подавление импульсов и асимметрия идентификации",
+    "prereq": ["concept.abstract.culture.archetype", "mechanism.abstract.mind.projection"],
+    "confidence": 0.58,
+    "tags": ["shadow", "jung", "projection", "antagonist"],
+    "tier_extensions": {
+      "abstract_type": "archetype",
+      "human_only": true,
+      "related_abstract": ["concept.abstract.culture.archetype", "pattern.abstract.culture.othering"]
+    }
+  },
+  {
+    "id": "pattern.abstract.culture.monomyth",
+    "schema_version": "3.2",
+    "domain": "abstract.culture",
+    "subtopic": "abstract.culture.narrative",
+    "tier": "abstract",
+    "type": "pattern",
+    "statement": "Мономиф Кэмпбелла: повторяющаяся в мифах структура путешествия героя из обыденного мира через инициацию и возврат с эликсиром изменённого знания.",
+    "conditions": "Нарративы инициатического типа в дописьменных и письменных культурах",
+    "prereq": ["concept.abstract.culture.archetype", "pattern.abstract.culture.story_structure"],
+    "confidence": 0.60,
+    "tags": ["monomyth", "campbell", "hero_journey", "narrative"],
+    "tier_extensions": {
+      "abstract_type": "pattern",
+      "human_only": true,
+      "related_abstract": ["pattern.abstract.culture.story_structure", "concept.abstract.culture.archetype"]
+    }
+  },
+  {
+    "id": "pattern.abstract.culture.story_structure",
+    "schema_version": "3.2",
+    "domain": "abstract.culture",
+    "subtopic": "abstract.culture.narrative",
+    "tier": "abstract",
+    "type": "pattern",
+    "statement": "Каноническая нарративная структура: исходное равновесие, нарушающее событие, эскалация конфликта, кульминация и новое равновесие с переоценкой исходного.",
+    "conditions": "Линейная временная организация повествования",
+    "prereq": ["mechanism.abstract.mind.narrative_self", "concept.abstract.mind.causality"],
+    "confidence": 0.75,
+    "tags": ["narrative", "plot", "structure", "todorov"],
+    "tier_extensions": {
+      "abstract_type": "pattern",
+      "human_only": true,
+      "related_abstract": ["pattern.abstract.culture.monomyth", "mechanism.abstract.mind.narrative_self"]
+    }
+  },
+  {
+    "id": "pattern.abstract.history.civilizational_cycle",
+    "schema_version": "3.2",
+    "domain": "abstract.history",
+    "subtopic": "abstract.history.cycles",
+    "tier": "abstract",
+    "type": "pattern",
+    "statement": "Цивилизационный цикл: рост сложности и экстракции ресурсов сменяется институциональным склерозом и фрагментацией, после чего система реорганизуется на меньшем масштабе.",
+    "conditions": "Закрытая ресурсная база и накопление институциональной ренты",
+    "prereq": ["pattern.abstract.systems.feedback_loop", "concept.abstract.history.institution"],
+    "confidence": 0.55,
+    "tags": ["cycle", "civilization", "tainter", "collapse"],
+    "tier_extensions": {
+      "abstract_type": "pattern",
+      "human_only": true,
+      "related_abstract": ["pattern.abstract.history.secular_cycle", "pattern.abstract.economy.kondratiev"]
+    }
+  },
+  {
+    "id": "pattern.abstract.history.secular_cycle",
+    "schema_version": "3.2",
+    "domain": "abstract.history",
+    "subtopic": "abstract.history.cycles",
+    "tier": "abstract",
+    "type": "pattern",
+    "statement": "Вековой цикл Турчина: демографический рост, рост элитной конкуренции и фискальный кризис ведут к фазе нестабильности с последующим демографическим спадом.",
+    "conditions": "Аграрные и раннеиндустриальные общества с ограниченной мобильностью элит",
+    "prereq": ["pattern.abstract.history.civilizational_cycle", "concept.abstract.history.elite_overproduction"],
+    "confidence": 0.50,
+    "tags": ["secular_cycle", "turchin", "cliodynamics", "instability"],
+    "tier_extensions": {
+      "abstract_type": "pattern",
+      "human_only": true,
+      "related_abstract": ["pattern.abstract.history.civilizational_cycle"]
+    }
+  },
+  {
+    "id": "pattern.abstract.history.paradigm_shift",
+    "schema_version": "3.2",
+    "domain": "abstract.history",
+    "subtopic": "abstract.history.science",
+    "tier": "abstract",
+    "type": "pattern",
+    "statement": "Парадигмальный сдвиг Куна: накопление аномалий внутри нормальной науки приводит к кризису и замене несоизмеримой парадигмы на новую с переопределением базовых понятий.",
+    "conditions": "Невозможность интеграции аномалий в существующую теоретическую рамку",
+    "prereq": ["concept.abstract.epistemology.paradigm", "pattern.abstract.history.scientific_revolution"],
+    "confidence": 0.65,
+    "tags": ["paradigm_shift", "kuhn", "incommensurability", "revolution"],
+    "tier_extensions": {
+      "abstract_type": "pattern",
+      "human_only": true,
+      "related_abstract": ["concept.abstract.epistemology.paradigm"]
+    }
+  },
+  {
+    "id": "concept.abstract.epistemology.paradigm",
+    "schema_version": "3.2",
+    "domain": "abstract.epistemology",
+    "subtopic": "abstract.epistemology.science",
+    "tier": "abstract",
+    "type": "concept",
+    "statement": "Парадигма: разделяемая научным сообществом совокупность онтологических допущений, образцовых решений и методологических норм, задающих критерии валидной задачи.",
+    "conditions": "Существование устойчивого профессионального сообщества",
+    "prereq": ["concept.abstract.epistemology.theory", "concept.abstract.culture.norm"],
+    "confidence": 0.78,
+    "tags": ["paradigm", "kuhn", "science", "community"],
+    "tier_extensions": {
+      "abstract_type": "pattern",
+      "human_only": true,
+      "related_abstract": ["pattern.abstract.history.paradigm_shift"]
+    }
+  },
+  {
+    "id": "concept.abstract.culture.meme",
+    "schema_version": "3.2",
+    "domain": "abstract.culture",
+    "subtopic": "abstract.culture.transmission",
+    "tier": "abstract",
+    "type": "concept",
+    "statement": "Мем по Докинзу: единица культурной репликации, передающаяся между разумами с вариацией и отбором по способности удерживать внимание и быть воспроизведённой.",
+    "conditions": "Каналы передачи между носителями и достаточная стабильность копирования",
+    "prereq": ["pattern.abstract.systems.replication", "concept.abstract.culture.transmission"],
+    "confidence": 0.58,
+    "tags": ["meme", "dawkins", "cultural_evolution", "replication"],
+    "tier_extensions": {
+      "abstract_type": "pattern",
+      "human_only": false,
+      "related_abstract": ["pattern.abstract.culture.cultural_selection", "concept.abstract.culture.norm"]
+    }
+  },
+  {
+    "id": "pattern.abstract.culture.cultural_selection",
+    "schema_version": "3.2",
+    "domain": "abstract.culture",
+    "subtopic": "abstract.culture.transmission",
+    "tier": "abstract",
+    "type": "pattern",
+    "statement": "Культурный отбор: дифференциальное воспроизводство вариантов поведения и идей в популяции под давлением когнитивных, социальных и экологических фильтров.",
+    "conditions": "Вариация, наследование и дифференциальная репродукция культурных единиц",
+    "prereq": ["concept.abstract.culture.meme", "pattern.abstract.systems.evolutionary_dynamics"],
+    "confidence": 0.62,
+    "tags": ["cultural_evolution", "selection", "boyd", "richerson"],
+    "tier_extensions": {
+      "abstract_type": "pattern",
+      "human_only": false,
+      "related_abstract": ["concept.abstract.culture.meme"]
+    }
+  },
+  {
+    "id": "concept.abstract.language.linguistic_structure",
+    "schema_version": "3.2",
+    "domain": "abstract.language",
+    "subtopic": "abstract.language.structure",
+    "tier": "abstract",
+    "type": "concept",
+    "statement": "Языковая структура: иерархическая комбинаторная система дискретных знаков с рекурсивным синтаксисом, порождающая неограниченное множество выражений из конечного словаря.",
+    "conditions": "Двойная артикуляция и продуктивность правил",
+    "prereq": ["concept.abstract.language.sign", "concept.abstract.language.grammar"],
+    "confidence": 0.85,
+    "tags": ["language", "structure", "recursion", "hockett"],
+    "tier_extensions": {
+      "abstract_type": "pattern",
+      "human_only": true,
+      "related_abstract": ["concept.abstract.language.grammar", "pattern.abstract.language.universals"]
+    }
+  },
+  {
+    "id": "pattern.abstract.language.universals",
+    "schema_version": "3.2",
+    "domain": "abstract.language",
+    "subtopic": "abstract.language.structure",
+    "tier": "abstract",
+    "type": "pattern",
+    "statement": "Лингвистические универсалии: статистические закономерности в наборе фонологических, морфологических и синтаксических свойств, повторяющиеся независимо в большинстве языков мира.",
+    "conditions": "Сравнительное обследование типологически удалённых языков",
+    "prereq": ["concept.abstract.language.linguistic_structure", "concept.abstract.mind.cognitive_constraint"],
+    "confidence": 0.72,
+    "tags": ["universals", "typology", "greenberg", "language"],
+    "tier_extensions": {
+      "abstract_type": "pattern",
+      "human_only": true,
+      "related_abstract": ["concept.abstract.language.linguistic_structure"]
+    }
+  },
+  {
+    "id": "pattern.abstract.language.zipf_law",
+    "schema_version": "3.2",
+    "domain": "abstract.language",
+    "subtopic": "abstract.language.statistics",
+    "tier": "abstract",
+    "type": "pattern",
+    "statement": "Закон Ципфа: частота слова в корпусе обратно пропорциональна его рангу по частоте, давая степенное распределение с показателем близким к единице.",
+    "conditions": "Достаточно большие естественноязыковые корпуса",
+    "prereq": ["pattern.abstract.patterns.power_law", "concept.abstract.language.linguistic_structure"],
+    "confidence": 0.85,
+    "tags": ["zipf", "power_law", "frequency", "language"],
+    "tier_extensions": {
+      "abstract_type": "pattern",
+      "human_only": false,
+      "related_abstract": ["concept.abstract.language.linguistic_structure"]
+    }
+  },
+  {
+    "id": "pattern.abstract.culture.image_schema",
+    "schema_version": "3.2",
+    "domain": "abstract.culture",
+    "subtopic": "abstract.culture.cognition",
+    "tier": "abstract",
+    "type": "pattern",
+    "statement": "Образ-схема: повторяющийся сенсомоторный паттерн опыта тела — контейнер, путь, баланс, сила — структурирующий абстрактные концепты через метафорическое расширение.",
+    "conditions": "Накопленный телесный опыт взаимодействия с физической средой",
+    "prereq": ["mechanism.abstract.mind.metaphor", "concept.abstract.mind.embodied_cognition"],
+    "confidence": 0.68,
+    "tags": ["image_schema", "embodied", "johnson", "lakoff"],
+    "tier_extensions": {
+      "abstract_type": "pattern",
+      "human_only": false,
+      "related_abstract": ["mechanism.abstract.mind.metaphor"]
+    }
+  },
+  {
+    "id": "pattern.abstract.culture.mythological_universal",
+    "schema_version": "3.2",
+    "domain": "abstract.culture",
+    "subtopic": "abstract.culture.myth",
+    "tier": "abstract",
+    "type": "pattern",
+    "statement": "Мифологические универсалии: повторяющиеся сюжетные мотивы — потоп, умирающий и воскресающий бог, мировое древо, культурный герой — встречающиеся в независимых традициях.",
+    "conditions": "Сравнительный анализ генетически и географически удалённых корпусов мифов",
+    "prereq": ["concept.abstract.culture.archetype", "pattern.abstract.culture.myth"],
+    "confidence": 0.55,
+    "tags": ["myth", "universals", "eliade", "comparative"],
+    "tier_extensions": {
+      "abstract_type": "pattern",
+      "human_only": true,
+      "related_abstract": ["pattern.abstract.culture.monomyth", "concept.abstract.culture.archetype"]
+    }
+  },
+  {
+    "id": "concept.abstract.culture.ritual",
+    "schema_version": "3.2",
+    "domain": "abstract.culture",
+    "subtopic": "abstract.culture.practice",
+    "tier": "abstract",
+    "type": "concept",
+    "statement": "Ритуал: формализованная последовательность действий с фиксированным порядком, исполняемая под нормативной санкцией и синхронизирующая аффективное состояние участников.",
+    "conditions": "Разделяемый набор правил и коллективное признание сцены как ритуальной",
+    "prereq": ["concept.abstract.culture.norm", "mechanism.abstract.culture.collective_emotion"],
+    "confidence": 0.75,
+    "tags": ["ritual", "rappaport", "synchrony", "norm"],
+    "tier_extensions": {
+      "abstract_type": "pattern",
+      "human_only": false,
+      "related_abstract": ["concept.abstract.culture.taboo", "pattern.abstract.culture.cohesion"]
+    }
+  },
+  {
+    "id": "concept.abstract.culture.taboo",
+    "schema_version": "3.2",
+    "domain": "abstract.culture",
+    "subtopic": "abstract.culture.norm",
+    "tier": "abstract",
+    "type": "concept",
+    "statement": "Табу: категорический запрет на действие или контакт с объектом, нарушение которого вызывает коллективную санкцию и аффект отвращения вне рационального обоснования.",
+    "conditions": "Сильная нормативная разметка границ сакрального и нечистого",
+    "prereq": ["concept.abstract.culture.norm", "concept.abstract.culture.sacred"],
+    "confidence": 0.72,
+    "tags": ["taboo", "norm", "douglas", "purity"],
+    "tier_extensions": {
+      "abstract_type": "pattern",
+      "human_only": true,
+      "related_abstract": ["concept.abstract.culture.ritual", "concept.abstract.culture.sacred"]
+    }
+  },
+  {
+    "id": "pattern.abstract.economy.gift_economy",
+    "schema_version": "3.2",
+    "domain": "abstract.culture",
+    "subtopic": "abstract.culture.exchange",
+    "tier": "abstract",
+    "type": "pattern",
+    "statement": "Экономика дара: циркуляция благ через обязательные триады дарения, принятия и отдаривания, создающая длящиеся отношения вместо разовых сделок.",
+    "conditions": "Малая группа с устойчивыми связями и нормой взаимности",
+    "prereq": ["pattern.abstract.culture.reciprocity", "concept.abstract.culture.norm"],
+    "confidence": 0.70,
+    "tags": ["gift_economy", "mauss", "reciprocity", "exchange"],
+    "tier_extensions": {
+      "abstract_type": "pattern",
+      "human_only": true,
+      "related_abstract": ["pattern.abstract.culture.reciprocity"]
+    }
+  },
+  {
+    "id": "pattern.abstract.culture.reciprocity",
+    "schema_version": "3.2",
+    "domain": "abstract.culture",
+    "subtopic": "abstract.culture.exchange",
+    "tier": "abstract",
+    "type": "pattern",
+    "statement": "Норма взаимности: получение блага создаёт обязательство ответного действия сопоставимой ценности, поддерживая кооперацию через отложенные обмены.",
+    "conditions": "Память о взаимодействиях и репутационная видимость партнёра",
+    "prereq": ["pattern.abstract.systems.cooperation", "concept.abstract.culture.norm"],
+    "confidence": 0.78,
+    "tags": ["reciprocity", "cooperation", "gouldner", "exchange"],
+    "tier_extensions": {
+      "abstract_type": "pattern",
+      "human_only": false,
+      "related_abstract": ["pattern.abstract.economy.gift_economy"]
+    }
+  },
+  {
+    "id": "pattern.abstract.culture.status_game",
+    "schema_version": "3.2",
+    "domain": "abstract.culture",
+    "subtopic": "abstract.culture.hierarchy",
+    "tier": "abstract",
+    "type": "pattern",
+    "statement": "Статусная игра: конкуренция за относительный ранг внутри группы через демонстрацию доминирования или престижа, перераспределяющая доступ к ресурсам и партнёрам.",
+    "conditions": "Видимость взаимных оценок и устойчивость состава группы",
+    "prereq": ["concept.abstract.culture.hierarchy", "pattern.abstract.systems.cooperation"],
+    "confidence": 0.72,
+    "tags": ["status", "hierarchy", "henrich", "prestige"],
+    "tier_extensions": {
+      "abstract_type": "pattern",
+      "human_only": false,
+      "related_abstract": ["concept.abstract.culture.norm"]
+    }
+  },
+  {
+    "id": "pattern.abstract.history.path_dependence",
+    "schema_version": "3.2",
+    "domain": "abstract.history",
+    "subtopic": "abstract.history.dynamics",
+    "tier": "abstract",
+    "type": "pattern",
+    "statement": "Path dependence: текущее множество доступных состояний системы определяется ранними случайными выборами через положительные обратные связи и нарастающую отдачу.",
+    "conditions": "Возрастающая отдача от масштаба и фиксация координирующих стандартов",
+    "prereq": ["pattern.abstract.systems.feedback_loop", "concept.abstract.history.institution"],
+    "confidence": 0.72,
+    "tags": ["path_dependence", "history", "arthur", "lock_in"],
+    "tier_extensions": {
+      "abstract_type": "pattern",
+      "human_only": false,
+      "related_abstract": ["pattern.abstract.history.civilizational_cycle"]
+    }
+  },
+  {
+    "id": "pattern.abstract.history.collective_action_dilemma",
+    "schema_version": "3.2",
+    "domain": "abstract.history",
+    "subtopic": "abstract.history.dynamics",
+    "tier": "abstract",
+    "type": "pattern",
+    "statement": "Дилемма коллективного действия: рациональный индивидуальный отказ от вклада в общее благо ведёт к недопроизводству этого блага в группе без механизмов принуждения.",
+    "conditions": "Невозможность исключения из потребления и низкая стоимость уклонения",
+    "prereq": ["pattern.abstract.systems.cooperation", "concept.abstract.history.institution"],
+    "confidence": 0.80,
+    "tags": ["collective_action", "olson", "free_rider", "commons"],
+    "tier_extensions": {
+      "abstract_type": "pattern",
+      "human_only": false,
+      "related_abstract": ["pattern.abstract.culture.reciprocity"]
+    }
+  },
+  {
+    "id": "pattern.abstract.history.preferential_attachment",
+    "schema_version": "3.2",
+    "domain": "abstract.history",
+    "subtopic": "abstract.history.dynamics",
+    "tier": "abstract",
+    "type": "pattern",
+    "statement": "Предпочтительное присоединение: вероятность приобретения нового ресурса растёт с уже накопленным объёмом, порождая степенное распределение богатства, цитирований и влияния.",
+    "conditions": "Видимость предыдущих накоплений и низкие барьеры подключения",
+    "prereq": ["pattern.abstract.patterns.power_law", "pattern.abstract.systems.feedback_loop"],
+    "confidence": 0.82,
+    "tags": ["preferential_attachment", "barabasi", "power_law", "matthew_effect"],
+    "tier_extensions": {
+      "abstract_type": "pattern",
+      "human_only": false,
+      "related_abstract": ["pattern.abstract.language.zipf_law"]
+    }
+  },
+  {
+    "id": "pattern.abstract.culture.cohesion",
+    "schema_version": "3.2",
+    "domain": "abstract.culture",
+    "subtopic": "abstract.culture.group",
+    "tier": "abstract",
+    "type": "pattern",
+    "statement": "Групповая сплочённость растёт с частотой синхронных совместных действий, разделяемых эмоциональных пиков и наличием различимой границы между своими и чужими.",
+    "conditions": "Возможность повторяющегося контакта и распознавания членства",
+    "prereq": ["concept.abstract.culture.ritual", "mechanism.abstract.culture.collective_emotion"],
+    "confidence": 0.68,
+    "tags": ["cohesion", "in_group", "synchrony", "durkheim"],
+    "tier_extensions": {
+      "abstract_type": "pattern",
+      "human_only": false,
+      "related_abstract": ["concept.abstract.culture.ritual"]
+    }
+  },
+  {
+    "id": "pattern.abstract.history.scientific_revolution",
+    "schema_version": "3.2",
+    "domain": "abstract.history",
+    "subtopic": "abstract.history.science",
+    "tier": "abstract",
+    "type": "pattern",
+    "statement": "Научная революция: ускоренная замена базовых онтологических допущений и методологии в дисциплине после длительной фазы накопления аномалий и кризиса доверия к теории.",
+    "conditions": "Существование альтернативной кандидатной парадигмы и поколенческий сдвиг сообщества",
+    "prereq": ["pattern.abstract.history.paradigm_shift", "concept.abstract.epistemology.paradigm"],
+    "confidence": 0.62,
+    "tags": ["scientific_revolution", "kuhn", "paradigm", "history_of_science"],
+    "tier_extensions": {
+      "abstract_type": "pattern",
+      "human_only": true,
+      "related_abstract": ["pattern.abstract.history.paradigm_shift", "concept.abstract.epistemology.paradigm"]
+    }
+  }
+]

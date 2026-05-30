@@ -1,0 +1,477 @@
+[
+  {
+    "id": "fact.history.medieval.holy_roman_empire",
+    "schema_version": "3.2",
+    "domain": "history.medieval",
+    "subtopic": "history.medieval.holy_roman_empire",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Священная Римская империя (962-1806): основана коронацией Оттона I в Риме; союз германских и итальянских земель; борьба за инвеституру с папством; распущена Наполеоном.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.medieval"],
+    "confidence": 0.9,
+    "tags": ["holy_roman_empire", "medieval", "history", "germany", "otto"],
+    "tier_extensions": {
+      "source": "Cambridge Medieval History",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.medieval.carolingians",
+    "schema_version": "3.2",
+    "domain": "history.medieval",
+    "subtopic": "history.medieval.carolingians",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Каролинги: франкская династия (751-987); пик при Карле Великом, коронованном императором в 800 г.; Каролингское возрождение учёности; раздел империи Верденским договором 843 г.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.medieval"],
+    "confidence": 0.9,
+    "tags": ["carolingians", "charlemagne", "medieval", "history", "franks"],
+    "tier_extensions": {
+      "source": "Cambridge Medieval History",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.medieval.byzantium_middle",
+    "schema_version": "3.2",
+    "domain": "history.medieval",
+    "subtopic": "history.medieval.byzantium_middle",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Византия раннего средневековья (610-1204): тематическое устройство, арабо-византийские войны, иконоборчество (730-843), македонское возрождение, поражение при Манцикерте 1071, IV крестовый поход.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.medieval"],
+    "confidence": 0.88,
+    "tags": ["byzantium", "medieval", "history", "iconoclasm", "manzikert"],
+    "tier_extensions": {
+      "source": "Cambridge Medieval History",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.medieval.arab_caliphate",
+    "schema_version": "3.2",
+    "domain": "history.medieval",
+    "subtopic": "history.medieval.arab_caliphate",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Праведный (632-661) и Омейядский (661-750) халифаты: распространение ислама от Аравии до Испании и Средней Азии; столица Дамаск при Омейядах; битва при Пуатье 732 г.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.medieval"],
+    "confidence": 0.9,
+    "tags": ["caliphate", "umayyad", "medieval", "history", "islam"],
+    "tier_extensions": {
+      "source": "Cambridge History of Islam",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.medieval.abbasids",
+    "schema_version": "3.2",
+    "domain": "history.medieval",
+    "subtopic": "history.medieval.abbasids",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Аббасидский халифат (750-1258): столица Багдад; золотой век ислама с Домом мудрости при Харун ар-Рашиде и аль-Мамуне; падение под ударами монголов Хулагу в 1258 г.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.medieval"],
+    "confidence": 0.9,
+    "tags": ["abbasids", "baghdad", "medieval", "history", "islam"],
+    "tier_extensions": {
+      "source": "Cambridge History of Islam",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.medieval.seljuks",
+    "schema_version": "3.2",
+    "domain": "history.medieval",
+    "subtopic": "history.medieval.seljuks",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Сельджуки: тюркская династия (1037-1194); победа при Манцикерте 1071 г. над Византией открыла Анатолию для тюркизации; контроль над Багдадом; распад на султанаты.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.medieval"],
+    "confidence": 0.85,
+    "tags": ["seljuks", "medieval", "history", "turks", "anatolia"],
+    "tier_extensions": {
+      "source": "Cambridge History of Islam",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.medieval.ottoman_empire",
+    "schema_version": "3.2",
+    "domain": "history.medieval",
+    "subtopic": "history.medieval.ottoman_empire",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Османская империя (1299-1922): основана Османом I в Анатолии; взятие Константинополя в 1453 г. Мехмедом II; пик территории при Сулеймане Великолепном; распалась после Первой мировой войны.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.medieval"],
+    "confidence": 0.92,
+    "tags": ["ottoman", "medieval", "history", "constantinople", "suleiman"],
+    "tier_extensions": {
+      "source": "Cambridge History of Turkey",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.medieval.kievan_rus",
+    "schema_version": "3.2",
+    "domain": "history.medieval",
+    "subtopic": "history.medieval.kievan_rus",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Киевская Русь (882-1240): восточнославянское государство со столицей в Киеве; крещение Руси Владимиром в 988 г.; «Русская правда» Ярослава Мудрого; пала под ударом монголов в 1240 г.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.medieval"],
+    "confidence": 0.88,
+    "tags": ["kievan_rus", "medieval", "history", "vladimir", "yaroslav"],
+    "tier_extensions": {
+      "source": "Cambridge History of Russia",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.medieval.mongol_empire",
+    "schema_version": "3.2",
+    "domain": "history.medieval",
+    "subtopic": "history.medieval.mongol_empire",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Монгольская империя (1206-1368): основана Чингисханом; крупнейшая смежная империя в истории от Кореи до Восточной Европы; распалась на улусы (Юань, Чагатайский, Ильханат, Золотая Орда).",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.medieval"],
+    "confidence": 0.9,
+    "tags": ["mongols", "genghis_khan", "medieval", "history", "empire"],
+    "tier_extensions": {
+      "source": "Cambridge History of Inner Asia",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.medieval.yuan",
+    "schema_version": "3.2",
+    "domain": "history.medieval",
+    "subtopic": "history.medieval.yuan",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Династия Юань в Китае (1271-1368): основана внуком Чингисхана Хубилаем; первая иноземная династия, правившая всем Китаем; столица Ханбалык (Пекин); посещение Марко Поло.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.medieval"],
+    "confidence": 0.88,
+    "tags": ["yuan", "kublai", "medieval", "history", "china"],
+    "tier_extensions": {
+      "source": "Cambridge History of China",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.medieval.song",
+    "schema_version": "3.2",
+    "domain": "history.medieval",
+    "subtopic": "history.medieval.song",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Династия Сун в Китае (960-1279): технологический расцвет с изобретением подвижного шрифта, компаса, пороха; бумажные деньги; неоконфуцианство; пала под натиском монголов.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.medieval"],
+    "confidence": 0.88,
+    "tags": ["song", "medieval", "history", "china", "gunpowder"],
+    "tier_extensions": {
+      "source": "Cambridge History of China",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.medieval.ming",
+    "schema_version": "3.2",
+    "domain": "history.medieval",
+    "subtopic": "history.medieval.ming",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Династия Мин в Китае (1368-1644): свергла монгольскую Юань; морские экспедиции Чжэн Хэ (1405-1433); строительство Запретного города; перенос столицы в Пекин; пала под натиском маньчжуров.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.medieval"],
+    "confidence": 0.9,
+    "tags": ["ming", "medieval", "history", "china", "zheng_he"],
+    "tier_extensions": {
+      "source": "Cambridge History of China",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.medieval.heian_japan",
+    "schema_version": "3.2",
+    "domain": "history.medieval",
+    "subtopic": "history.medieval.heian_japan",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Период Хэйан в Японии (794-1185): столица Хэйан-кё (Киото); расцвет придворной аристократии Фудзивара; «Повесть о Гэндзи» Мурасаки Сикибу; развитие японской письменности кана.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.medieval"],
+    "confidence": 0.88,
+    "tags": ["heian", "japan", "medieval", "history", "fujiwara"],
+    "tier_extensions": {
+      "source": "Cambridge History of Japan",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.medieval.kamakura_shogunate",
+    "schema_version": "3.2",
+    "domain": "history.medieval",
+    "subtopic": "history.medieval.kamakura_shogunate",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Сёгунат Камакура в Японии (1185-1333): первый военный режим, основан Минамото Ёритомо; класс самураев; отражение монгольских вторжений (1274, 1281) благодаря «камикадзе».",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.medieval"],
+    "confidence": 0.88,
+    "tags": ["kamakura", "japan", "medieval", "history", "shogunate"],
+    "tier_extensions": {
+      "source": "Cambridge History of Japan",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.medieval.delhi_sultanate",
+    "schema_version": "3.2",
+    "domain": "history.medieval",
+    "subtopic": "history.medieval.delhi_sultanate",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Делийский султанат (1206-1526): мусульманское государство Северной Индии; пять сменявших друг друга династий; синтез индо-исламской культуры; сменился империей Великих Моголов.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.medieval"],
+    "confidence": 0.85,
+    "tags": ["delhi_sultanate", "medieval", "history", "india", "islam"],
+    "tier_extensions": {
+      "source": "Cambridge History of India",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.medieval.silk_road",
+    "schema_version": "3.2",
+    "domain": "history.medieval",
+    "subtopic": "history.medieval.silk_road",
+    "tier": "variant",
+    "type": "concept",
+    "statement": "Великий шёлковый путь: сеть торговых маршрутов от Китая до Средиземноморья (II в. до н.э. - XV в. н.э.); пик в эпоху Pax Mongolica XIII-XIV вв.; обмен товарами, технологиями, болезнями.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.medieval"],
+    "confidence": 0.88,
+    "tags": ["silk_road", "medieval", "history", "trade", "mongols"],
+    "tier_extensions": {
+      "source": "Cambridge Medieval History",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.medieval.black_death",
+    "schema_version": "3.2",
+    "domain": "history.medieval",
+    "subtopic": "history.medieval.black_death",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Чёрная смерть (1346-1353): пандемия чумы Yersinia pestis в Евразии; гибель 30-60% населения Европы; преобразование феодальных отношений и рынка труда; рост крестьянских восстаний.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.medieval"],
+    "confidence": 0.9,
+    "tags": ["black_death", "plague", "medieval", "history", "pandemic"],
+    "tier_extensions": {
+      "source": "Cambridge Medieval History",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.medieval.hundred_years_war",
+    "schema_version": "3.2",
+    "domain": "history.medieval",
+    "subtopic": "history.medieval.hundred_years_war",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Столетняя война (1337-1453): серия конфликтов Англии и Франции за престол; битвы при Креси (1346), Пуатье (1356), Азенкуре (1415); роль Жанны д'Арк; победа Франции и потеря Англией континентальных владений.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.medieval"],
+    "confidence": 0.92,
+    "tags": ["hundred_years_war", "medieval", "history", "france", "england"],
+    "tier_extensions": {
+      "source": "Cambridge Medieval History",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.medieval.reconquista",
+    "schema_version": "3.2",
+    "domain": "history.medieval",
+    "subtopic": "history.medieval.reconquista",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Реконкиста (718-1492): отвоевание Пиренейского полуострова христианскими королевствами у мусульманских государств; завершилась взятием Гранады католическими королями Изабеллой и Фердинандом.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.medieval"],
+    "confidence": 0.9,
+    "tags": ["reconquista", "medieval", "history", "spain", "granada"],
+    "tier_extensions": {
+      "source": "Cambridge Medieval History",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.medieval.america_1492",
+    "schema_version": "3.2",
+    "domain": "history.medieval",
+    "subtopic": "history.medieval.america_1492",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Открытие Америки Колумбом 12 октября 1492 г.: высадка испанской экспедиции на острове Гуанахани (Багамы); начало европейской колонизации Нового Света и Колумбова обмена.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.medieval"],
+    "confidence": 0.92,
+    "tags": ["columbus", "1492", "medieval", "history", "america"],
+    "tier_extensions": {
+      "source": "Cambridge Medieval History",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.medieval.fall_constantinople_1453",
+    "schema_version": "3.2",
+    "domain": "history.medieval",
+    "subtopic": "history.medieval.fall_constantinople_1453",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Падение Константинополя 29 мая 1453 г.: взятие города османским султаном Мехмедом II; гибель Византийской империи; символическая граница между средневековьем и новым временем.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.medieval"],
+    "confidence": 0.92,
+    "tags": ["constantinople", "1453", "medieval", "history", "mehmed"],
+    "tier_extensions": {
+      "source": "Cambridge Medieval History",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.medieval.shu_han",
+    "schema_version": "3.2",
+    "domain": "history.medieval",
+    "subtopic": "history.medieval.shu_han",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Шу-Хань (221-263): одно из Трёх царств Китая после падения Хань; основано Лю Бэем в Сычуани; известно деятельностью стратега Чжугэ Ляна; завоёвано царством Вэй.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.medieval"],
+    "confidence": 0.85,
+    "tags": ["shu_han", "three_kingdoms", "medieval", "history", "china"],
+    "tier_extensions": {
+      "source": "Cambridge History of China",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.medieval.maya_classic",
+    "schema_version": "3.2",
+    "domain": "history.medieval",
+    "subtopic": "history.medieval.maya_classic",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Классический период цивилизации майя (ок. 250-900 н.э.): города-государства Тикаль, Паленке, Копан на Юкатане и в Гватемале; иероглифическое письмо, точный календарь, монументальная архитектура.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.medieval"],
+    "confidence": 0.88,
+    "tags": ["maya", "medieval", "history", "mesoamerica", "tikal"],
+    "tier_extensions": {
+      "source": "Cambridge History of the Native Peoples of the Americas",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.medieval.aztec",
+    "schema_version": "3.2",
+    "domain": "history.medieval",
+    "subtopic": "history.medieval.aztec",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Ацтеки (1325-1521): государство Тройственного союза со столицей Теночтитлан в долине Мехико; правитель Монтесума II; завоёваны конкистадорами Эрнана Кортеса в 1519-1521 гг.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.medieval"],
+    "confidence": 0.9,
+    "tags": ["aztec", "medieval", "history", "tenochtitlan", "cortes"],
+    "tier_extensions": {
+      "source": "Cambridge History of the Native Peoples of the Americas",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.history.medieval.inca",
+    "schema_version": "3.2",
+    "domain": "history.medieval",
+    "subtopic": "history.medieval.inca",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Империя инков Тауантинсуйу (ок. 1438-1533): крупнейшее доколумбово государство Южной Америки со столицей Куско; сеть дорог, террасное земледелие; завоёвана Франсиско Писарро.",
+    "conditions": "Современная историография; датировки могут уточняться",
+    "prereq": ["concept.history.medieval"],
+    "confidence": 0.9,
+    "tags": ["inca", "medieval", "history", "cusco", "pizarro"],
+    "tier_extensions": {
+      "source": "Cambridge History of the Native Peoples of the Americas",
+      "valid_from": "2020-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  }
+]

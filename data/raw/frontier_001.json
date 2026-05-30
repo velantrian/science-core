@@ -1,0 +1,509 @@
+[
+  {
+    "id": "open_problem.frontier.math.riemann_hypothesis",
+    "schema_version": "3.2",
+    "domain": "frontier.math",
+    "subtopic": "frontier.math.millennium",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Все нетривиальные нули дзета-функции Римана лежат на критической прямой Re(s)=1/2. Не доказано и не опровергнуто.",
+    "formal_notation": "ζ(s)=0 ∧ 0<Re(s)<1 ⟹ Re(s)=1/2",
+    "conditions": "Комплексная плоскость; функция ζ(s) аналитически продолженная",
+    "prereq": ["concept.math.complex_analysis.riemann_zeta", "concept.math.number_theory.prime_distribution"],
+    "confidence": 0.45,
+    "tags": ["riemann", "zeta", "millennium", "number_theory"],
+    "tier_extensions": {
+      "status": "open",
+      "partial_results": "Проверено более 10^13 нулей численно; доказано, что бесконечно много нулей лежат на критической прямой (Сельберг)",
+      "competing_approaches": ["random matrix theory", "spectral approach Hilbert-Polya", "p-adic methods"],
+      "prize": "Clay Millennium Prize $1M",
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "open_problem.frontier.cs.p_vs_np",
+    "schema_version": "3.2",
+    "domain": "frontier.cs",
+    "subtopic": "frontier.cs.complexity",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Равны ли классы сложности P и NP — разрешима ли каждая задача с полиномиально проверяемым решением за полиномиальное время.",
+    "formal_notation": "P =? NP; ∀L∈NP ∃ алгоритм с временем O(n^k) ?",
+    "conditions": "Машина Тьюринга; недетерминированные вычисления",
+    "prereq": ["concept.cs.complexity.polynomial_time", "concept.cs.complexity.np_completeness"],
+    "confidence": 0.30,
+    "tags": ["p_np", "complexity", "millennium", "computation"],
+    "tier_extensions": {
+      "status": "open",
+      "partial_results": "Большинство специалистов считают P≠NP; доказано существование NP-полных задач (Кук-Левин)",
+      "competing_approaches": ["geometric complexity theory", "circuit lower bounds", "barriers (relativization, natural proofs, algebrization)"],
+      "prize": "Clay Millennium Prize $1M",
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.math.hodge_conjecture",
+    "schema_version": "3.2",
+    "domain": "frontier.math",
+    "subtopic": "frontier.math.millennium",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "На проективных алгебраических многообразиях классы Ходжа являются рациональными линейными комбинациями классов алгебраических циклов.",
+    "formal_notation": "Hdg^k(X,ℚ) = Im(cl: Z^k(X)⊗ℚ → H^{2k}(X,ℚ))",
+    "conditions": "Гладкое проективное комплексное алгебраическое многообразие X",
+    "prereq": ["concept.math.algebraic_geometry.cohomology", "concept.math.complex_geometry.kahler_manifold"],
+    "confidence": 0.35,
+    "tags": ["hodge", "millennium", "algebraic_geometry", "cohomology"],
+    "tier_extensions": {
+      "status": "open",
+      "partial_results": "Доказано в малых размерностях (Лефшец, k=1); верно для абелевых многообразий типа CM в некоторых случаях",
+      "competing_approaches": ["motivic cohomology", "absolute Hodge classes", "Tate conjecture связь"],
+      "prize": "Clay Millennium Prize $1M",
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "open_problem.frontier.math.birch_swinnerton_dyer",
+    "schema_version": "3.2",
+    "domain": "frontier.math",
+    "subtopic": "frontier.math.millennium",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Ранг эллиптической кривой над ℚ равен порядку нуля L-функции этой кривой в точке s=1.",
+    "formal_notation": "rank E(ℚ) = ord_{s=1} L(E,s)",
+    "conditions": "Эллиптическая кривая E над полем рациональных чисел",
+    "prereq": ["concept.math.algebraic_geometry.elliptic_curve", "concept.math.number_theory.l_function"],
+    "confidence": 0.40,
+    "tags": ["bsd", "elliptic_curves", "millennium", "l_function"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "Доказано для рангов 0 и 1 (Колывагин, Гросс-Загир); численные подтверждения для тысяч кривых",
+      "competing_approaches": ["Iwasawa theory", "Heegner points", "p-adic L-functions"],
+      "prize": "Clay Millennium Prize $1M",
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "open_problem.frontier.math.navier_stokes_smoothness",
+    "schema_version": "3.2",
+    "domain": "frontier.math",
+    "subtopic": "frontier.math.millennium",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Существуют ли в ℝ^3 глобально гладкие решения уравнений Навье-Стокса для любых гладких начальных данных с конечной энергией.",
+    "formal_notation": "∂u/∂t + (u·∇)u = -∇p/ρ + ν∇²u; ∇·u=0; u(x,0)∈C^∞",
+    "conditions": "Несжимаемая ньютоновская жидкость в ℝ^3; гладкие начальные данные",
+    "prereq": ["concept.physics.fluid.navier_stokes", "concept.math.pde.weak_solution"],
+    "confidence": 0.25,
+    "tags": ["navier_stokes", "millennium", "pde", "turbulence"],
+    "tier_extensions": {
+      "status": "open",
+      "partial_results": "Лере (1934): слабые решения существуют глобально; гладкость в 2D доказана; в 3D — только локально",
+      "competing_approaches": ["Лере-Хопфа slабые решения", "сценарии blow-up Tao", "convex integration Buckmaster-Vicol"],
+      "prize": "Clay Millennium Prize $1M",
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.math.yang_mills_mass_gap",
+    "schema_version": "3.2",
+    "domain": "frontier.math",
+    "subtopic": "frontier.math.millennium",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Существует квантовая теория Янга-Миллса на ℝ^4 с положительной массовой щелью для любой простой компактной калибровочной группы.",
+    "formal_notation": "∃ Δ > 0: spec(H) ⊂ {0} ∪ [Δ, ∞)",
+    "conditions": "Квантовая теория поля на ℝ^4; компактная простая калибровочная группа",
+    "prereq": ["concept.physics.qft.gauge_theory", "concept.math.functional_analysis.spectrum"],
+    "confidence": 0.30,
+    "tags": ["yang_mills", "mass_gap", "millennium", "qft"],
+    "tier_extensions": {
+      "status": "open",
+      "partial_results": "Численное подтверждение через решёточную КХД; конструктивно построены теории на ℝ^2 и ℝ^3",
+      "competing_approaches": ["lattice gauge theory", "Osterwalder-Schrader axioms", "topological approaches"],
+      "prize": "Clay Millennium Prize $1M",
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "conjecture.frontier.math.goldbach",
+    "schema_version": "3.2",
+    "domain": "frontier.math.number_theory",
+    "subtopic": "frontier.math.open_problems",
+    "tier": "frontier",
+    "type": "conjecture",
+    "statement": "Любое чётное число большее 2 представимо в виде суммы двух простых чисел.",
+    "formal_notation": "∀n∈2ℤ, n>2: ∃p,q∈ℙ: n = p + q",
+    "conditions": "Натуральные числа; стандартное определение простых",
+    "prereq": ["concept.math.number_theory.prime", "concept.math.arithmetic.parity"],
+    "confidence": 0.55,
+    "tags": ["goldbach", "primes", "number_theory", "additive"],
+    "tier_extensions": {
+      "status": "open",
+      "partial_results": "Проверено до 4×10^18 (Oliveira e Silva); Хельфготт доказал тернарную версию (2013)",
+      "competing_approaches": ["circle method Hardy-Littlewood", "sieve theory", "computational verification"],
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "conjecture.frontier.math.twin_primes",
+    "schema_version": "3.2",
+    "domain": "frontier.math.number_theory",
+    "subtopic": "frontier.math.open_problems",
+    "tier": "frontier",
+    "type": "conjecture",
+    "statement": "Существует бесконечно много пар простых чисел вида (p, p+2).",
+    "formal_notation": "|{p∈ℙ : p+2 ∈ ℙ}| = ∞",
+    "conditions": "Натуральные числа; стандартное определение простых",
+    "prereq": ["concept.math.number_theory.prime", "concept.math.number_theory.prime_gap"],
+    "confidence": 0.50,
+    "tags": ["twin_primes", "primes", "number_theory", "gaps"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "Чжан Итан (2013): бесконечно много пар с разностью ≤ 70 млн; Polymath снизил до 246",
+      "competing_approaches": ["sieve methods GPY-Maynard", "circle method", "Hardy-Littlewood prime tuples conjecture"],
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "conjecture.frontier.math.collatz",
+    "schema_version": "3.2",
+    "domain": "frontier.math.number_theory",
+    "subtopic": "frontier.math.open_problems",
+    "tier": "frontier",
+    "type": "conjecture",
+    "statement": "Итерация функции f(n)=n/2 при чётном n или 3n+1 при нечётном n из любого натурального числа приводит к 1.",
+    "formal_notation": "∀n∈ℕ ∃k: f^k(n)=1; f(n) = n/2 if n even else 3n+1",
+    "conditions": "Положительные целые числа; стандартная арифметика",
+    "prereq": ["concept.math.arithmetic.iteration", "concept.math.number_theory.dynamics"],
+    "confidence": 0.45,
+    "tags": ["collatz", "syracuse", "dynamics", "number_theory"],
+    "tier_extensions": {
+      "status": "open",
+      "partial_results": "Проверено для всех n < 2.95×10^20; Tao (2019) доказал почти все орбиты ограничены",
+      "competing_approaches": ["ergodic theory", "stochastic models", "automata theoretic approach"],
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "conjecture.frontier.math.abc",
+    "schema_version": "3.2",
+    "domain": "frontier.math.number_theory",
+    "subtopic": "frontier.math.open_problems",
+    "tier": "frontier",
+    "type": "conjecture",
+    "statement": "Для любого ε>0 существует лишь конечно много троек взаимно простых a+b=c с c > rad(abc)^{1+ε}.",
+    "formal_notation": "∀ε>0: |{(a,b,c): a+b=c, gcd=1, c > rad(abc)^{1+ε}}| < ∞",
+    "conditions": "Натуральные числа; rad(n) — радикал n (произведение различных простых делителей)",
+    "prereq": ["concept.math.number_theory.radical", "concept.math.number_theory.coprime"],
+    "confidence": 0.35,
+    "tags": ["abc_conjecture", "number_theory", "diophantine", "mochizuki"],
+    "tier_extensions": {
+      "status": "disputed",
+      "partial_results": "Мочизуки (2012) опубликовал доказательство через IUT; не принято международным сообществом до 2026",
+      "competing_approaches": ["inter-universal Teichmuller theory", "anabelian geometry", "modular forms"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.cs.factoring_complexity",
+    "schema_version": "3.2",
+    "domain": "frontier.cs.complexity",
+    "subtopic": "frontier.cs.complexity",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Принадлежит ли задача факторизации целых чисел классу P; разрешима ли она классически за полиномиальное время.",
+    "formal_notation": "FACTOR ∈ P ?; временная сложность лучшего метода exp(O((log n)^{1/3}(log log n)^{2/3}))",
+    "conditions": "Классическая модель вычислений; вход — целое число n",
+    "prereq": ["concept.cs.complexity.polynomial_time", "concept.cs.cryptography.rsa"],
+    "confidence": 0.25,
+    "tags": ["factoring", "cryptography", "complexity", "rsa"],
+    "tier_extensions": {
+      "status": "open",
+      "partial_results": "Лучший классический: GNFS sub-exponential; квантовый алгоритм Шора — полиномиальный",
+      "competing_approaches": ["GNFS", "quantum Shor's algorithm", "elliptic curve methods"],
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "open_problem.frontier.cs.np_intermediate",
+    "schema_version": "3.2",
+    "domain": "frontier.cs.complexity",
+    "subtopic": "frontier.cs.complexity",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Существуют ли задачи NP-промежуточные — в NP, но ни в P, ни NP-полные, при условии P≠NP.",
+    "formal_notation": "P ≠ NP ⟹ ∃ L ∈ NP \\ (P ∪ NPC) ? (Ladner)",
+    "conditions": "Предположение P≠NP; стандартная классификация сложности",
+    "prereq": ["concept.cs.complexity.np_completeness", "concept.cs.complexity.polynomial_time"],
+    "confidence": 0.40,
+    "tags": ["np_intermediate", "ladner", "complexity", "open"],
+    "tier_extensions": {
+      "status": "open",
+      "partial_results": "Теорема Ладнера: если P≠NP, то NPI непуст, но конкретные кандидаты не известны как NPI",
+      "competing_approaches": ["graph isomorphism candidate (но Babai квазиполиномиальный)", "factoring", "discrete log"],
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "open_problem.frontier.cs.bqp_vs_ph",
+    "schema_version": "3.2",
+    "domain": "frontier.cs.complexity",
+    "subtopic": "frontier.cs.complexity",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Содержится ли класс BQP квантовых полиномиальных вычислений в полиномиальной иерархии PH.",
+    "formal_notation": "BQP ⊆? PH",
+    "conditions": "Стандартные модели квантовых и классических вычислений",
+    "prereq": ["concept.cs.complexity.bqp", "concept.cs.complexity.polynomial_hierarchy"],
+    "confidence": 0.30,
+    "tags": ["bqp", "ph", "quantum", "complexity"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "Раз-Тал (2018): существует оракул, относительно которого BQP ⊄ PH; в безоракульном виде открыта",
+      "competing_approaches": ["oracle separations", "structural complexity", "quantum query lower bounds"],
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "open_problem.frontier.cs.matrix_multiplication_omega",
+    "schema_version": "3.2",
+    "domain": "frontier.cs.complexity",
+    "subtopic": "frontier.cs.complexity",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Чему равен показатель ω матричного умножения — наименьшее число такое что произведение n×n матриц вычислимо за O(n^{ω+ε}).",
+    "formal_notation": "ω = inf{α : MatMul(n) = O(n^α)}; 2 ≤ ω ≤ 2.371552 (2024)",
+    "conditions": "Алгебраическая модель вычислений над полем; матрицы n×n",
+    "prereq": ["concept.cs.algorithms.matrix_multiplication", "concept.math.algebra.tensor_rank"],
+    "confidence": 0.30,
+    "tags": ["matrix_multiplication", "omega", "algorithms", "tensor"],
+    "tier_extensions": {
+      "status": "open",
+      "partial_results": "Штрассен (1969): ω<2.81; текущий рекорд Williams-Xu-Xu-Zhou (2024): ω<2.371552",
+      "competing_approaches": ["laser method Strassen", "group-theoretic Cohn-Umans", "asymptotic spectrum Strassen"],
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "open_problem.frontier.math.kakeya",
+    "schema_version": "3.2",
+    "domain": "frontier.math",
+    "subtopic": "frontier.math.open_problems",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "В ℝ^n любое множество Какейя (содержащее единичный отрезок в каждом направлении) имеет хаусдорфову размерность n.",
+    "formal_notation": "K ⊂ ℝ^n содержит единичный отрезок в каждом направлении ⟹ dim_H(K) = n",
+    "conditions": "Евклидово пространство ℝ^n; n ≥ 2",
+    "prereq": ["concept.math.measure_theory.hausdorff_dimension", "concept.math.geometry.kakeya_set"],
+    "confidence": 0.40,
+    "tags": ["kakeya", "geometric_measure", "harmonic_analysis", "open"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "Доказана для n=2 (Davies); Wang-Zahl (2025) объявили доказательство для n=3",
+      "competing_approaches": ["polynomial method Dvir", "additive combinatorics", "multilinear estimates Bennett-Carbery-Tao"],
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "conjecture.frontier.math.unique_games",
+    "schema_version": "3.2",
+    "domain": "frontier.cs.complexity",
+    "subtopic": "frontier.cs.complexity",
+    "tier": "frontier",
+    "type": "conjecture",
+    "statement": "Задача Unique Games NP-трудна для любого фиксированного зазора между значениями completeness и soundness, что усиливает PCP теорему.",
+    "formal_notation": "∀ε,δ>0: GAP-UG(1-ε, δ) NP-hard",
+    "conditions": "Стандартное определение Unique Games; ε, δ малые",
+    "prereq": ["concept.cs.complexity.pcp_theorem", "concept.cs.complexity.approximation"],
+    "confidence": 0.45,
+    "tags": ["unique_games", "khot", "pcp", "approximation"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "Khot-Minzer-Safra (2018): 2-to-2 Games теорема доказана, что подразумевает половину UGC",
+      "competing_approaches": ["small set expansion", "sum-of-squares hierarchy", "Grothendieck inequalities"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.math.exponent_diophantine",
+    "schema_version": "3.2",
+    "domain": "frontier.math.number_theory",
+    "subtopic": "frontier.math.open_problems",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Разрешима ли в общем виде проблема существования целочисленных решений показательных диофантовых уравнений.",
+    "formal_notation": "∃? алгоритм: вход = показательное диофантово уравнение, выход = есть ли целое решение",
+    "conditions": "Уравнения с переменными в показателях; целочисленные решения",
+    "prereq": ["concept.math.logic.hilbert_tenth_problem", "concept.math.number_theory.diophantine"],
+    "confidence": 0.35,
+    "tags": ["diophantine", "decidability", "hilbert", "exponential"],
+    "tier_extensions": {
+      "status": "open",
+      "partial_results": "Матиясевич (1970): полиномиальный случай неразрешим; показательный случай открыт",
+      "competing_approaches": ["Schanuel's conjecture link", "model theory", "transcendence theory Baker"],
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "conjecture.frontier.math.schanuel",
+    "schema_version": "3.2",
+    "domain": "frontier.math.number_theory",
+    "subtopic": "frontier.math.open_problems",
+    "tier": "frontier",
+    "type": "conjecture",
+    "statement": "Если z_1,...,z_n линейно независимы над ℚ, то степень трансцендентности поля ℚ(z_1,...,z_n,e^{z_1},...,e^{z_n}) над ℚ не меньше n.",
+    "formal_notation": "trdeg_ℚ ℚ(z_1,...,z_n, e^{z_1},...,e^{z_n}) ≥ n",
+    "conditions": "Комплексные числа z_i; линейная независимость над ℚ",
+    "prereq": ["concept.math.number_theory.transcendence", "concept.math.algebra.field_extension"],
+    "confidence": 0.35,
+    "tags": ["schanuel", "transcendence", "exponential", "ax_schanuel"],
+    "tier_extensions": {
+      "status": "open",
+      "partial_results": "Доказан функциональный аналог (Ax-Schanuel); следует Lindemann-Weierstrass и π,e алгебраически независимы",
+      "competing_approaches": ["o-minimality Wilkie", "model theory of fields", "p-adic Schanuel"],
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "open_problem.frontier.math.langlands",
+    "schema_version": "3.2",
+    "domain": "frontier.math",
+    "subtopic": "frontier.math.open_problems",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Существует функториальное соответствие между автоморфными представлениями редуктивных групп и Галуа-представлениями (программа Ленгленса).",
+    "formal_notation": "AutRep(G(𝔸_F)) ↔ Hom(Gal(F̄/F), ^LG(ℂ))",
+    "conditions": "Глобальное поле F; редуктивная группа G; L-группа ^LG",
+    "prereq": ["concept.math.algebra.reductive_group", "concept.math.number_theory.automorphic_form"],
+    "confidence": 0.30,
+    "tags": ["langlands", "automorphic", "galois", "reciprocity"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "Доказана модулярность эллиптических кривых (Wiles, Taylor); GL_n над функциональными полями (Lafforgue)",
+      "competing_approaches": ["geometric Langlands (Frenkel, Gaitsgory)", "p-adic Langlands", "categorical approach"],
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "conjecture.frontier.math.beal",
+    "schema_version": "3.2",
+    "domain": "frontier.math.number_theory",
+    "subtopic": "frontier.math.open_problems",
+    "tier": "frontier",
+    "type": "conjecture",
+    "statement": "Если A^x + B^y = C^z с положительными целыми A,B,C и x,y,z > 2, то A,B,C имеют общий простой делитель.",
+    "formal_notation": "A^x + B^y = C^z, x,y,z>2, A,B,C∈ℤ_+ ⟹ gcd(A,B,C) > 1",
+    "conditions": "Целые показатели больше 2; положительные основания",
+    "prereq": ["concept.math.number_theory.fermat_last_theorem", "concept.math.number_theory.coprime"],
+    "confidence": 0.50,
+    "tags": ["beal", "fermat", "diophantine", "number_theory"],
+    "tier_extensions": {
+      "status": "open",
+      "partial_results": "Проверено для оснований до 1000 и показателей до 1000; следует из abc для больших показателей",
+      "competing_approaches": ["modular forms", "Frey curves", "abc-conjecture reduction"],
+      "prize": "$1M от American Mathematical Society",
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "open_problem.frontier.math.invariant_subspace",
+    "schema_version": "3.2",
+    "domain": "frontier.math",
+    "subtopic": "frontier.math.open_problems",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Любой ограниченный линейный оператор на сепарабельном комплексном гильбертовом пространстве имеет нетривиальное замкнутое инвариантное подпространство.",
+    "formal_notation": "T ∈ B(H), dim H ≥ 2, H separable Hilbert ⟹ ∃ M ≠ {0}, H: T(M) ⊂ M",
+    "conditions": "Сепарабельное бесконечномерное гильбертово пространство над ℂ",
+    "prereq": ["concept.math.functional_analysis.hilbert_space", "concept.math.functional_analysis.bounded_operator"],
+    "confidence": 0.40,
+    "tags": ["invariant_subspace", "operator_theory", "hilbert_space", "open"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "Доказана для компактных операторов (фон Нейман-Аронсзайн); опровергнута на банаховых пространствах (Enflo, Read)",
+      "competing_approaches": ["polynomially bounded operators", "Bishop's operators", "extended functional calculus"],
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "conjecture.frontier.math.jacobian",
+    "schema_version": "3.2",
+    "domain": "frontier.math",
+    "subtopic": "frontier.math.open_problems",
+    "tier": "frontier",
+    "type": "conjecture",
+    "statement": "Полиномиальное отображение F: ℂ^n → ℂ^n с постоянным ненулевым якобианом является полиномиальным изоморфизмом.",
+    "formal_notation": "F: ℂ^n→ℂ^n полином., det(JF)∈ℂ* ⟹ F^{-1} полином.",
+    "conditions": "Полиномиальные отображения над полем характеристики 0",
+    "prereq": ["concept.math.algebra.polynomial_map", "concept.math.algebra.jacobian"],
+    "confidence": 0.40,
+    "tags": ["jacobian", "polynomial_automorphism", "algebra", "open"],
+    "tier_extensions": {
+      "status": "open",
+      "partial_results": "Доказано в размерности 1; в общем случае открыта; редуцирована к случаю степени 3 (Bass-Connell-Wright)",
+      "competing_approaches": ["tame automorphisms", "Mathieu's conjecture", "noncommutative analogues"],
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "open_problem.frontier.cs.parallel_repetition_optimal",
+    "schema_version": "3.2",
+    "domain": "frontier.cs.complexity",
+    "subtopic": "frontier.cs.complexity",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Каков оптимальный темп убывания значения параллельно повторяемой 2-prover игры с k повторениями.",
+    "formal_notation": "val(G^{⊗k}) ≤? val(G)^{Ω(k)}; точный показатель неизвестен",
+    "conditions": "2-prover 1-round games; параллельное повторение",
+    "prereq": ["concept.cs.complexity.interactive_proofs", "concept.cs.complexity.pcp_theorem"],
+    "confidence": 0.45,
+    "tags": ["parallel_repetition", "raz", "games", "complexity"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "Раз (1998): val ≤ (1-ε^3)^{Ω(k/s)}; Холенстайн улучшил до (1-ε^2)^{Ω(k/s)}; нижняя граница (1-ε)^k",
+      "competing_approaches": ["information theoretic bounds", "anchoring transformation", "quantum parallel repetition"],
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "conjecture.frontier.math.singmaster",
+    "schema_version": "3.2",
+    "domain": "frontier.math.combinatorics",
+    "subtopic": "frontier.math.open_problems",
+    "tier": "frontier",
+    "type": "conjecture",
+    "statement": "Каждое целое число m>1 появляется в треугольнике Паскаля ограниченное константой число раз.",
+    "formal_notation": "∃ C: ∀m>1, |{(n,k): C(n,k)=m}| ≤ C; предполагается C=8 или 10",
+    "conditions": "Биномиальные коэффициенты C(n,k); m > 1",
+    "prereq": ["concept.math.combinatorics.binomial", "concept.math.number_theory.diophantine"],
+    "confidence": 0.45,
+    "tags": ["singmaster", "pascal_triangle", "combinatorics", "open"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "Matomäki-Radziwiłł-Shao-Tao (2021): улучшенная верхняя граница O((log n)(log log n)^{-3})",
+      "competing_approaches": ["Diophantine analysis", "additive combinatorics", "subspace theorem"],
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "open_problem.frontier.math.aks_derandomization",
+    "schema_version": "3.2",
+    "domain": "frontier.cs.complexity",
+    "subtopic": "frontier.cs.complexity",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Допускает ли проверка полиномиальных тождеств (PIT) детерминированное решение за полиномиальное время.",
+    "formal_notation": "PIT ∈? P; вход — арифметическая схема, выход — тождественно ли 0",
+    "conditions": "Арифметические схемы над полем; чёрный или белый ящик",
+    "prereq": ["concept.cs.complexity.bpp", "concept.cs.algebra.arithmetic_circuit"],
+    "confidence": 0.40,
+    "tags": ["pit", "derandomization", "arithmetic_circuits", "complexity"],
+    "tier_extensions": {
+      "status": "open",
+      "partial_results": "Импальяццо-Кабанец: PIT ∈ P ⟺ есть явная функция требующая суперполиномиальных арифметических схем",
+      "competing_approaches": ["partial derivatives method", "shifted partials", "geometric complexity theory"],
+      "has_disputes": false
+    }
+  }
+]

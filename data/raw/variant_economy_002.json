@@ -1,0 +1,477 @@
+[
+  {
+    "id": "fact.economy.company_apple",
+    "schema_version": "3.2",
+    "domain": "economy.companies",
+    "subtopic": "company.apple",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Apple Inc. — американская технологическая корпорация, рыночная капитализация конца 2024 года около 3.8 триллиона долларов.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.economy.market_cap"],
+    "confidence": 0.9,
+    "tags": ["apple", "tech", "usa"],
+    "tier_extensions": {
+      "source": "NYSE/NASDAQ Q4 2024",
+      "valid_from": "2024-12-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.economy.company_microsoft",
+    "schema_version": "3.2",
+    "domain": "economy.companies",
+    "subtopic": "company.microsoft",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Microsoft — американская корпорация в области ПО и облачных сервисов, капитализация конца 2024 около 3.1 триллиона долларов.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.economy.market_cap"],
+    "confidence": 0.9,
+    "tags": ["microsoft", "tech", "cloud"],
+    "tier_extensions": {
+      "source": "NASDAQ Q4 2024",
+      "valid_from": "2024-12-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.economy.company_aramco",
+    "schema_version": "3.2",
+    "domain": "economy.companies",
+    "subtopic": "company.aramco",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Saudi Aramco — государственная нефтегазовая корпорация Саудовской Аравии, капитализация конца 2024 года около 1.8 триллиона долларов.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.economy.market_cap"],
+    "confidence": 0.85,
+    "tags": ["aramco", "oil", "saudi"],
+    "tier_extensions": {
+      "source": "Tadawul Q4 2024",
+      "valid_from": "2024-12-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.economy.company_alphabet",
+    "schema_version": "3.2",
+    "domain": "economy.companies",
+    "subtopic": "company.alphabet",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Alphabet (Google) — материнская компания Google, капитализация конца 2024 года около 2.3 триллиона долларов.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.economy.market_cap"],
+    "confidence": 0.88,
+    "tags": ["google", "alphabet", "tech"],
+    "tier_extensions": {
+      "source": "NASDAQ Q4 2024",
+      "valid_from": "2024-12-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.economy.company_amazon",
+    "schema_version": "3.2",
+    "domain": "economy.companies",
+    "subtopic": "company.amazon",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Amazon — американская корпорация e-commerce и облачных услуг (AWS), капитализация конца 2024 года около 2.4 триллиона долларов.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.economy.market_cap"],
+    "confidence": 0.88,
+    "tags": ["amazon", "ecommerce", "aws"],
+    "tier_extensions": {
+      "source": "NASDAQ Q4 2024",
+      "valid_from": "2024-12-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.economy.company_nvidia",
+    "schema_version": "3.2",
+    "domain": "economy.companies",
+    "subtopic": "company.nvidia",
+    "tier": "variant",
+    "type": "material",
+    "statement": "NVIDIA — производитель GPU и AI-чипов, капитализация конца 2024 года около 3.3 триллиона долларов после бума ИИ.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.economy.market_cap"],
+    "confidence": 0.88,
+    "tags": ["nvidia", "gpu", "ai"],
+    "tier_extensions": {
+      "source": "NASDAQ Q4 2024",
+      "valid_from": "2024-12-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.economy.company_tesla",
+    "schema_version": "3.2",
+    "domain": "economy.companies",
+    "subtopic": "company.tesla",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Tesla — производитель электромобилей и аккумуляторов, капитализация конца 2024 года около 1.3 триллиона долларов.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.economy.market_cap"],
+    "confidence": 0.85,
+    "tags": ["tesla", "ev", "auto"],
+    "tier_extensions": {
+      "source": "NASDAQ Q4 2024",
+      "valid_from": "2024-12-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.economy.company_berkshire",
+    "schema_version": "3.2",
+    "domain": "economy.companies",
+    "subtopic": "company.berkshire",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Berkshire Hathaway — холдинг Уоррена Баффетта, капитализация конца 2024 года около 1.0 триллиона долларов.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.economy.market_cap"],
+    "confidence": 0.86,
+    "tags": ["berkshire", "buffett", "holding"],
+    "tier_extensions": {
+      "source": "NYSE Q4 2024",
+      "valid_from": "2024-12-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.economy.company_tsmc",
+    "schema_version": "3.2",
+    "domain": "economy.companies",
+    "subtopic": "company.tsmc",
+    "tier": "variant",
+    "type": "material",
+    "statement": "TSMC — тайваньский контрактный производитель полупроводников, капитализация конца 2024 года около 1.0 триллиона долларов.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.economy.market_cap"],
+    "confidence": 0.85,
+    "tags": ["tsmc", "semiconductors", "taiwan"],
+    "tier_extensions": {
+      "source": "TWSE Q4 2024",
+      "valid_from": "2024-12-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.economy.company_samsung",
+    "schema_version": "3.2",
+    "domain": "economy.companies",
+    "subtopic": "company.samsung",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Samsung Electronics — южнокорейский производитель электроники и чипов памяти, капитализация конца 2024 года около 330 миллиардов долларов.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.economy.market_cap"],
+    "confidence": 0.83,
+    "tags": ["samsung", "electronics", "korea"],
+    "tier_extensions": {
+      "source": "KRX Q4 2024",
+      "valid_from": "2024-12-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.economy.company_toyota",
+    "schema_version": "3.2",
+    "domain": "economy.companies",
+    "subtopic": "company.toyota",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Toyota Motor — крупнейший автопроизводитель Японии и мира по числу машин, капитализация конца 2024 года около 230 миллиардов долларов.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.economy.market_cap"],
+    "confidence": 0.84,
+    "tags": ["toyota", "auto", "japan"],
+    "tier_extensions": {
+      "source": "TSE Q4 2024",
+      "valid_from": "2024-12-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.economy.company_walmart",
+    "schema_version": "3.2",
+    "domain": "economy.companies",
+    "subtopic": "company.walmart",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Walmart — крупнейший ритейлер США по выручке, выручка 2024 финансового года около 681 миллиарда долларов.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.economy.revenue"],
+    "confidence": 0.87,
+    "tags": ["walmart", "retail", "usa"],
+    "tier_extensions": {
+      "source": "Walmart Annual Report FY2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.economy.company_exxonmobil",
+    "schema_version": "3.2",
+    "domain": "economy.companies",
+    "subtopic": "company.exxonmobil",
+    "tier": "variant",
+    "type": "material",
+    "statement": "ExxonMobil — американская нефтегазовая корпорация, капитализация конца 2024 года около 480 миллиардов долларов.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.economy.market_cap"],
+    "confidence": 0.85,
+    "tags": ["exxonmobil", "oil", "usa"],
+    "tier_extensions": {
+      "source": "NYSE Q4 2024",
+      "valid_from": "2024-12-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.economy.company_jpmorgan",
+    "schema_version": "3.2",
+    "domain": "economy.companies",
+    "subtopic": "company.jpmorgan",
+    "tier": "variant",
+    "type": "material",
+    "statement": "JPMorgan Chase — крупнейший банк США по активам, капитализация конца 2024 года около 690 миллиардов долларов.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.economy.market_cap"],
+    "confidence": 0.86,
+    "tags": ["jpmorgan", "bank", "finance"],
+    "tier_extensions": {
+      "source": "NYSE Q4 2024",
+      "valid_from": "2024-12-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.economy.company_visa",
+    "schema_version": "3.2",
+    "domain": "economy.companies",
+    "subtopic": "company.visa",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Visa Inc. — глобальная платёжная сеть карт, капитализация конца 2024 года около 620 миллиардов долларов.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.economy.market_cap"],
+    "confidence": 0.85,
+    "tags": ["visa", "payments", "fintech"],
+    "tier_extensions": {
+      "source": "NYSE Q4 2024",
+      "valid_from": "2024-12-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.economy.company_mastercard",
+    "schema_version": "3.2",
+    "domain": "economy.companies",
+    "subtopic": "company.mastercard",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Mastercard — глобальная платёжная сеть, капитализация конца 2024 года около 480 миллиардов долларов.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.economy.market_cap"],
+    "confidence": 0.84,
+    "tags": ["mastercard", "payments", "fintech"],
+    "tier_extensions": {
+      "source": "NYSE Q4 2024",
+      "valid_from": "2024-12-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.economy.company_jnj",
+    "schema_version": "3.2",
+    "domain": "economy.companies",
+    "subtopic": "company.jnj",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Johnson & Johnson — американская фармацевтическая и медтех-корпорация, капитализация конца 2024 года около 350 миллиардов долларов.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.economy.market_cap"],
+    "confidence": 0.83,
+    "tags": ["jnj", "pharma", "healthcare"],
+    "tier_extensions": {
+      "source": "NYSE Q4 2024",
+      "valid_from": "2024-12-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.economy.company_pg",
+    "schema_version": "3.2",
+    "domain": "economy.companies",
+    "subtopic": "company.pg",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Procter & Gamble — американский производитель потребительских товаров, капитализация конца 2024 года около 390 миллиардов долларов.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.economy.market_cap"],
+    "confidence": 0.82,
+    "tags": ["pg", "consumer", "fmcg"],
+    "tier_extensions": {
+      "source": "NYSE Q4 2024",
+      "valid_from": "2024-12-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.economy.company_cocacola",
+    "schema_version": "3.2",
+    "domain": "economy.companies",
+    "subtopic": "company.cocacola",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Coca-Cola Company — производитель безалкогольных напитков, капитализация конца 2024 года около 270 миллиардов долларов.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.economy.market_cap"],
+    "confidence": 0.83,
+    "tags": ["cocacola", "beverage", "fmcg"],
+    "tier_extensions": {
+      "source": "NYSE Q4 2024",
+      "valid_from": "2024-12-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.economy.company_nestle",
+    "schema_version": "3.2",
+    "domain": "economy.companies",
+    "subtopic": "company.nestle",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Nestlé — швейцарский производитель продуктов питания и напитков, выручка 2024 года около 91 миллиарда швейцарских франков.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.economy.revenue"],
+    "confidence": 0.83,
+    "tags": ["nestle", "food", "swiss"],
+    "tier_extensions": {
+      "source": "Nestlé Annual Report 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.economy.company_lvmh",
+    "schema_version": "3.2",
+    "domain": "economy.companies",
+    "subtopic": "company.lvmh",
+    "tier": "variant",
+    "type": "material",
+    "statement": "LVMH — французский конгломерат люксовых брендов (Louis Vuitton, Dior), капитализация конца 2024 года около 320 миллиардов евро.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.economy.market_cap"],
+    "confidence": 0.82,
+    "tags": ["lvmh", "luxury", "france"],
+    "tier_extensions": {
+      "source": "Euronext Paris Q4 2024",
+      "valid_from": "2024-12-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.economy.company_inditex",
+    "schema_version": "3.2",
+    "domain": "economy.companies",
+    "subtopic": "company.inditex",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Inditex — испанский холдинг сети Zara и других брендов одежды, выручка 2024 финансового года около 38 миллиардов евро.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.economy.revenue"],
+    "confidence": 0.82,
+    "tags": ["inditex", "zara", "retail"],
+    "tier_extensions": {
+      "source": "Inditex Annual Report FY2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.economy.company_ikea",
+    "schema_version": "3.2",
+    "domain": "economy.companies",
+    "subtopic": "company.ikea",
+    "tier": "variant",
+    "type": "material",
+    "statement": "IKEA — шведская частная сеть мебельных магазинов с глобальной выручкой за 2024 финансовый год около 45 миллиардов евро.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.economy.revenue"],
+    "confidence": 0.8,
+    "tags": ["ikea", "furniture", "sweden"],
+    "tier_extensions": {
+      "source": "Inter IKEA FY2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.economy.company_volkswagen",
+    "schema_version": "3.2",
+    "domain": "economy.companies",
+    "subtopic": "company.volkswagen",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Volkswagen Group — немецкий автопроизводитель (VW, Audi, Porsche), выручка 2024 года около 324 миллиардов евро.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.economy.revenue"],
+    "confidence": 0.82,
+    "tags": ["volkswagen", "auto", "germany"],
+    "tier_extensions": {
+      "source": "VW Annual Report 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.economy.company_boeing",
+    "schema_version": "3.2",
+    "domain": "economy.companies",
+    "subtopic": "company.boeing",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Boeing — американский производитель самолётов и оборонной техники, капитализация конца 2024 года около 130 миллиардов долларов.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.economy.market_cap"],
+    "confidence": 0.8,
+    "tags": ["boeing", "aerospace", "usa"],
+    "tier_extensions": {
+      "source": "NYSE Q4 2024",
+      "valid_from": "2024-12-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  }
+]

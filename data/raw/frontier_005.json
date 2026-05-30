@@ -1,0 +1,489 @@
+[
+  {
+    "id": "open_problem.frontier.earth.regional_climate_response",
+    "schema_version": "3.2",
+    "domain": "frontier.earth.climate",
+    "subtopic": "frontier.earth.climate.regional_response",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Точные модели региональных климатических откликов на удвоение CO₂ с разрешением осадков и температур — модельный разброс превышает сигнал.",
+    "formal_notation": "ΔT_region(2×CO₂); ΔP_region; разброс CMIP6 > 50%",
+    "conditions": "Горизонтальное разрешение < 25 км; декадный масштаб; орографические эффекты",
+    "prereq": ["concept.earth.climate.gcm", "concept.earth.climate.co2"],
+    "confidence": 0.35,
+    "tags": ["climate", "regional", "cmip", "downscaling"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "CMIP6 модели согласуются в global mean (~3°C); региональные отклонения остаются большими",
+      "competing_approaches": ["GCM + динамическое масштабирование", "статистическое масштабирование", "ML emulators", "convection-permitting models"]
+    }
+  },
+  {
+    "id": "open_problem.frontier.earth.cloud_feedback",
+    "schema_version": "3.2",
+    "domain": "frontier.earth.climate",
+    "subtopic": "frontier.earth.climate.cloud_feedback",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Знак и величина обратной связи облаков на потепление — главный источник неопределённости климатической чувствительности (ECS = 2-5 °C).",
+    "formal_notation": "λ_cloud = ∂R_net/∂T; знак не определён; вклад в ECS доминирует",
+    "conditions": "Глобальное потепление; разрешение конвекции и стратокумулюсов",
+    "prereq": ["concept.earth.climate.feedback", "concept.earth.atmosphere.clouds"],
+    "confidence": 0.30,
+    "tags": ["cloud_feedback", "climate_sensitivity", "ecs", "stratocumulus"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "IPCC AR6 сузил ECS до 2.5-4 °C; низкие облака дают положительную обратную связь по данным",
+      "competing_approaches": ["LES моделирование", "satellite observations", "emergent constraints", "ML-параметризации"]
+    }
+  },
+  {
+    "id": "open_problem.frontier.earth.amoc_collapse",
+    "schema_version": "3.2",
+    "domain": "frontier.earth.climate",
+    "subtopic": "frontier.earth.climate.amoc",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Точный прогноз времени и условий коллапса Атлантической меридиональной циркуляции (AMOC) при сохраняющемся потеплении — не достигнут.",
+    "formal_notation": "P(коллапс AMOC до 2100) = ?; точки невозврата T_tip",
+    "conditions": "Текущие сценарии эмиссий; пресноводный сток Гренландии",
+    "prereq": ["concept.earth.ocean.amoc", "concept.earth.climate.tipping_point"],
+    "confidence": 0.30,
+    "tags": ["amoc", "tipping_point", "collapse", "ocean_circulation"],
+    "tier_extensions": {
+      "status": "disputed",
+      "partial_results": "Ditlevsen 2023 оценили коллапс 2025-2095 (центр 2050); IPCC AR6 — маловероятен до 2100; данные неоднозначны",
+      "competing_approaches": ["box models", "GCM ensemble", "статистика наблюдений (Caesar et al.)", "ранние сигналы"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.earth.ice_sheet_melting",
+    "schema_version": "3.2",
+    "domain": "frontier.earth.cryosphere",
+    "subtopic": "frontier.earth.cryosphere.ice_sheets",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Точная скорость и время таяния Гренландского и Антарктического ледяных щитов в XXI веке — большой разброс прогнозов (0.3-2 м вклада в уровень моря).",
+    "formal_notation": "dV_ice/dt; вклад в SLR к 2100: 0.3-2 м",
+    "conditions": "Текущие сценарии эмиссий; MISI/MICI нестабильности Антарктики",
+    "prereq": ["concept.earth.cryosphere.ice_sheet", "concept.earth.ocean.sea_level"],
+    "confidence": 0.30,
+    "tags": ["ice_sheet", "sea_level", "greenland", "antarctica", "misi"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "Спутниковые данные (GRACE, ICESat) фиксируют потерю массы; MICI спорна; точки невозврата неясны",
+      "competing_approaches": ["ISMIP6 ансамбль", "DeConto-Pollard MICI модель", "субшельфовая динамика", "structured expert judgment"]
+    }
+  },
+  {
+    "id": "open_problem.frontier.earth.extreme_event_attribution",
+    "schema_version": "3.2",
+    "domain": "frontier.earth.climate",
+    "subtopic": "frontier.earth.climate.extremes",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Точная атрибуция частоты и интенсивности экстремальных явлений (волны жары, ураганы, наводнения) к антропогенному потеплению на локальном масштабе — не решена.",
+    "formal_notation": "RR = P(событие | warming) / P(событие | counterfactual)",
+    "conditions": "Локальные события; короткие временные ряды; нестационарность",
+    "prereq": ["concept.earth.climate.attribution", "concept.statistics.extreme_value"],
+    "confidence": 0.40,
+    "tags": ["extreme_events", "attribution", "heatwaves", "hurricanes"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "World Weather Attribution для конкретных событий; rapid attribution достигает дней; систематическая глобальная — пока нет",
+      "competing_approaches": ["probabilistic attribution", "storyline approach", "GEV-распределения", "ML-эмуляторы"]
+    }
+  },
+  {
+    "id": "open_problem.frontier.earth.tropical_biodiversity_estimate",
+    "schema_version": "3.2",
+    "domain": "frontier.earth.ecology",
+    "subtopic": "frontier.earth.ecology.biodiversity",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Точная оценка биоразнообразия тропических лесов: количество видов варьируется от 2 до 100 млн в зависимости от метода — окончательная цифра не установлена.",
+    "formal_notation": "N_species(тропики) ∈ [2×10⁶, 10⁸]",
+    "conditions": "Тропические леса; экстраполяция от выборок; неописанные виды",
+    "prereq": ["concept.biology.ecology.biodiversity", "concept.biology.taxonomy"],
+    "confidence": 0.35,
+    "tags": ["biodiversity", "tropics", "species_richness", "extrapolation"],
+    "tier_extensions": {
+      "status": "open",
+      "partial_results": "Описано ~2 млн видов; оценки общего числа: Mora et al. 2011 ~8.7 млн; Erwin 1982 — 30 млн насекомых",
+      "competing_approaches": ["species-area relationships", "barcoding", "eDNA", "статистические extrapolators"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.earth.sixth_mass_extinction",
+    "schema_version": "3.2",
+    "domain": "frontier.earth.ecology",
+    "subtopic": "frontier.earth.ecology.extinction",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Масштаб и темпы шестого массового вымирания, его сравнение с предыдущими пятью и точные причины — количественно не установлены.",
+    "formal_notation": "скорость вымирания > 100× background; ≥ 75% видов за < 1 млн лет?",
+    "conditions": "Современная эпоха; антропогенное давление; короткие временные ряды",
+    "prereq": ["concept.biology.evolution.extinction", "concept.earth.geology.mass_extinction"],
+    "confidence": 0.40,
+    "tags": ["mass_extinction", "anthropocene", "biodiversity_loss"],
+    "tier_extensions": {
+      "status": "disputed",
+      "partial_results": "Ceballos et al. 2015 — текущая скорость 100-1000× background; IUCN Red List — оценки покрытия неполные",
+      "competing_approaches": ["IUCN-методология", "PBDB по ископаемым", "молекулярные часы", "функциональное разнообразие"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.earth.antibiotic_resistance_prediction",
+    "schema_version": "3.2",
+    "domain": "frontier.earth.biology",
+    "subtopic": "frontier.earth.biology.antibiotic_resistance",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Прогноз эволюции антибиотикорезистентных бактерий и времени появления резистентности к новым антибиотикам — общая теория отсутствует.",
+    "formal_notation": "t(резистентность | антибиотик, доза, среда) = ?",
+    "conditions": "Клинические и сельскохозяйственные условия; HGT; популяционная динамика",
+    "prereq": ["concept.biology.evolution.resistance", "concept.biology.bacteria"],
+    "confidence": 0.35,
+    "tags": ["antibiotic_resistance", "evolution", "amr"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "MIC-эволюция в лаборатории предсказуема (Toprak et al.); полевые условия — высокая стохастика",
+      "competing_approaches": ["evolutionary dynamics", "fitness landscapes", "ML на геномах", "epidemiological models"]
+    }
+  },
+  {
+    "id": "open_problem.frontier.earth.multicellularity_origin",
+    "schema_version": "3.2",
+    "domain": "frontier.earth.biology",
+    "subtopic": "frontier.earth.biology.multicellularity",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Точное число и условия независимого возникновения многоклеточности (минимум 25 раз) и общие факторы перехода — не установлены полностью.",
+    "formal_notation": "N(независимых переходов) ≥ 25; общие условия отбора",
+    "conditions": "Эволюционная история 2 млрд лет; различные таксоны",
+    "prereq": ["concept.biology.evolution.multicellularity", "concept.biology.cell"],
+    "confidence": 0.40,
+    "tags": ["multicellularity", "evolutionary_transition", "snowflake_yeast"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "Ratcliff snowflake yeast эксперименты показывают возникновение за < 1000 поколений; полная картина для всех 25+ переходов неполная",
+      "competing_approaches": ["синтетическая эволюция", "сравнительная геномика", "филогенетика", "теория уровней отбора"]
+    }
+  },
+  {
+    "id": "open_problem.frontier.earth.cambrian_explosion",
+    "schema_version": "3.2",
+    "domain": "frontier.earth.paleontology",
+    "subtopic": "frontier.earth.paleontology.cambrian",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Причина Кембрийского взрыва (~540 млн лет назад): быстрое появление основных типов животных — окончательное объяснение отсутствует.",
+    "formal_notation": "Δt ≈ 25 млн лет; > 20 типов появляются; единый триггер?",
+    "conditions": "Ранний кембрий; повышение O₂; экологические перестройки",
+    "prereq": ["concept.earth.geology.cambrian", "concept.biology.evolution.diversification"],
+    "confidence": 0.30,
+    "tags": ["cambrian_explosion", "diversification", "phyla"],
+    "tier_extensions": {
+      "status": "disputed",
+      "partial_results": "Геохимические свидетельства роста O₂; экологические триггеры (хищничество); генетические инновации (Hox)",
+      "competing_approaches": ["кислородная гипотеза", "экологическая (Marshall)", "генетическая (Hox)", "хищничество (Erwin)"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.earth.earthquake_short_term_prediction",
+    "schema_version": "3.2",
+    "domain": "frontier.earth.seismology",
+    "subtopic": "frontier.earth.seismology.prediction",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Возможен ли краткосрочный прогноз землетрясений (часы-дни) с практической точностью — вопрос остаётся открытым, большинство сейсмологов скептичны.",
+    "formal_notation": "P(M ≥ 6 | время, место, окно) с FAR < 10⁻³",
+    "conditions": "Короткое окно прогноза; конкретное место; высокая магнитуда",
+    "prereq": ["concept.earth.seismology.earthquake", "concept.earth.geology.fault"],
+    "confidence": 0.15,
+    "tags": ["earthquake_prediction", "seismology", "precursors"],
+    "tier_extensions": {
+      "status": "disputed",
+      "partial_results": "Проект VAN, китайский Haicheng 1975 — единичные успехи; систематически не работает; ETAS даёт статистику",
+      "competing_approaches": ["VAN method", "electromagnetic precursors", "ETAS statistical", "ML на сейсмограммах"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.earth.volcanic_eruption_prediction",
+    "schema_version": "3.2",
+    "domain": "frontier.earth.volcanology",
+    "subtopic": "frontier.earth.volcanology.prediction",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Краткосрочный прогноз времени и силы вулканических извержений с точностью до часов — частично возможен, но не для всех типов вулканов.",
+    "formal_notation": "P(извержение | сейсмика, газы, деформация); окно часы-дни",
+    "conditions": "Активные вулканы; мониторинг; разные типы магм",
+    "prereq": ["concept.earth.volcanology", "concept.earth.geology.magma"],
+    "confidence": 0.35,
+    "tags": ["volcanic_eruption", "prediction", "precursors"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "Пинатубо 1991 — успешный прогноз за дни; Mt St Helens 1980; андезитовые вулканы предсказуемы лучше базальтовых",
+      "competing_approaches": ["сейсмический мониторинг", "InSAR деформация", "газовая геохимия", "ML на multi-parameter"]
+    }
+  },
+  {
+    "id": "open_problem.frontier.earth.origin_of_life_location",
+    "schema_version": "3.2",
+    "domain": "frontier.earth.astrobiology",
+    "subtopic": "frontier.earth.astrobiology.origin_location",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Точное место, время и механизм возникновения жизни на Земле (гидротермальные источники, приливные водоёмы, импактные кратеры) — не установлены.",
+    "formal_notation": "t_LUCA ≈ 4.0 ± 0.2 Ga; место: гидротермальные vs поверхностные",
+    "conditions": "Ранняя Земля 4.4-3.8 Ga; пребиотическая химия",
+    "prereq": ["concept.biology.origin_of_life", "concept.earth.geology.hadean"],
+    "confidence": 0.25,
+    "tags": ["origin_of_life", "luca", "hydrothermal", "abiogenesis"],
+    "tier_extensions": {
+      "status": "disputed",
+      "partial_results": "Древнейшие микрофоссилии 3.5 Ga (Strelley Pool); биогенный углерод 3.8-4.1 Ga (Greenland) спорен",
+      "competing_approaches": ["alkaline hydrothermal (Russell, Lane)", "warm little ponds (Sutherland)", "impact-induced", "panspermia"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "hypothesis.frontier.earth.venus_mars_exo_evolution",
+    "schema_version": "3.2",
+    "domain": "frontier.earth.astrobiology",
+    "subtopic": "frontier.earth.astrobiology.early_venus_mars",
+    "tier": "frontier",
+    "type": "hypothesis",
+    "statement": "Ранние Венера и Марс могли иметь обитаемые условия (жидкая вода, плотная атмосфера) в первые 0.5-1 млрд лет; жизнь могла возникнуть независимо.",
+    "formal_notation": "T_surf < 373 K; P > 100 кПа; H₂O(l) на поверхности; t < 1 Ga",
+    "conditions": "Ранние Венера 4-3 Ga; ранний Марс 4-3 Ga; молодое тусклое Солнце",
+    "prereq": ["concept.earth.astrobiology.habitability", "concept.physics.planetary"],
+    "confidence": 0.40,
+    "tags": ["venus", "mars", "habitability", "panspermia"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "Марсианские долины и минералы указывают на воду 3.5-4 Ga; модели Way et al. 2016 — Венера могла иметь океаны до 0.7 Ga",
+      "competing_approaches": ["климатические модели", "поиск биомаркеров (Perseverance)", "образцы Марса", "Венера DAVINCI/VERITAS"]
+    }
+  },
+  {
+    "id": "open_problem.frontier.earth.dynamo_polarity_reversal",
+    "schema_version": "3.2",
+    "domain": "frontier.earth.geophysics",
+    "subtopic": "frontier.earth.geophysics.geodynamo",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Точная теория переключения полярности геомагнитного поля Земли: причины и предсказание следующего разворота — не установлены.",
+    "formal_notation": "P(разворот | состояние ядра, время) = ?; среднее время ≈ 300 кyr",
+    "conditions": "Жидкое внешнее ядро; MHD-конвекция; нестационарность",
+    "prereq": ["concept.earth.geophysics.geodynamo", "concept.physics.mhd"],
+    "confidence": 0.30,
+    "tags": ["geodynamo", "polarity_reversal", "magnetic_field"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "Glatzmaier-Roberts симуляции воспроизводят развороты; параметры далеки от реальных; статистика разворотов известна",
+      "competing_approaches": ["MHD-симуляции", "stochastic models", "scaling законы (Christensen)", "лабораторные dynamos"]
+    }
+  },
+  {
+    "id": "open_problem.frontier.earth.deep_earthquakes",
+    "schema_version": "3.2",
+    "domain": "frontier.earth.seismology",
+    "subtopic": "frontier.earth.seismology.deep_earthquakes",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Источники глубокофокусных землетрясений (300-700 км) — почему хрупкое разрушение возможно при высоких давлениях — окончательно не установлены.",
+    "formal_notation": "механизм при P > 10 ГПа, T > 1000 K; хрупкость подавлена",
+    "conditions": "Глубокая мантия; зоны субдукции; высокие P, T",
+    "prereq": ["concept.earth.seismology.deep_earthquake", "concept.earth.geology.subduction"],
+    "confidence": 0.40,
+    "tags": ["deep_earthquakes", "subduction", "transformational_faulting"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "Гипотеза transformational faulting (оливин → шпинель); thermal runaway; данные о Бенефе 1994 неоднозначны",
+      "competing_approaches": ["transformational faulting", "thermal shear instability", "dehydration embrittlement", "self-localising shear heating"]
+    }
+  },
+  {
+    "id": "open_problem.frontier.earth.plume_vs_plate_tectonics",
+    "schema_version": "3.2",
+    "domain": "frontier.earth.geophysics",
+    "subtopic": "frontier.earth.geophysics.mantle_dynamics",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Относительная роль мантийных плюмов и плитной тектоники в эволюции Земли: реальность плюмов из ядро-мантия границы — частично оспаривается.",
+    "formal_notation": "vклад плюмов в тепловой бюджет vs subduction-driven convection",
+    "conditions": "Глобальная мантийная конвекция; источники LIPs",
+    "prereq": ["concept.earth.geophysics.mantle", "concept.earth.geology.plate_tectonics"],
+    "confidence": 0.35,
+    "tags": ["plume", "plate_tectonics", "LLSVP", "mantle_convection"],
+    "tier_extensions": {
+      "status": "disputed",
+      "partial_results": "Сейсмические данные показывают LLSVP под Африкой/Пацификом; связь с плюмами через ULVZ — обсуждается",
+      "competing_approaches": ["глубокие plumes (Morgan)", "shallow ridge-driven (Anderson)", "LLSVP-based plumes", "geochemical heterogeneity"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.earth.nuclear_dynamo_model",
+    "schema_version": "3.2",
+    "domain": "frontier.earth.geophysics",
+    "subtopic": "frontier.earth.geophysics.core_dynamo",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Точная модель ядерного динамо Земли с реалистичными параметрами (Ek ~ 10⁻¹⁵, Pm ~ 10⁻⁶) — за пределами вычислительных возможностей.",
+    "formal_notation": "Ek = ν/(Ω L²); Rm = UL/η; реальные значения недостижимы в DNS",
+    "conditions": "Жидкое внешнее ядро; турбулентная конвекция; вращение",
+    "prereq": ["concept.physics.mhd.dynamo", "concept.earth.geophysics.core"],
+    "confidence": 0.40,
+    "tags": ["geodynamo", "mhd", "core_convection"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "DNS достигают Ek ~ 10⁻⁷; экстраполяция к 10⁻¹⁵ через scaling laws; неопределённости велики",
+      "competing_approaches": ["scaling laws (Christensen, Aubert)", "LES для core", "experimental dynamos (Madison, Cadarache)", "data assimilation"]
+    }
+  },
+  {
+    "id": "open_problem.frontier.earth.abiogenesis_vs_luca",
+    "schema_version": "3.2",
+    "domain": "frontier.earth.biology",
+    "subtopic": "frontier.earth.biology.luca_alternative",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Существует ли альтернативная парадигма абиогенеза, минующая LUCA-сценарий (множественные независимые истоки, химерное происхождение) — открытый вопрос.",
+    "formal_notation": "P(N независимых истоков ≥ 2) vs P(единый LUCA)",
+    "conditions": "Архей; перенос генов в ранней жизни; HGT доминирует",
+    "prereq": ["concept.biology.cell.luca", "concept.biology.evolution.hgt"],
+    "confidence": 0.30,
+    "tags": ["luca", "abiogenesis", "multiple_origins", "hgt"],
+    "tier_extensions": {
+      "status": "disputed",
+      "partial_results": "Универсальность генетического кода и core machinery поддерживают LUCA; chimeric origin сценарии обсуждаются",
+      "competing_approaches": ["единый LUCA (Woese)", "LUCAS — communal (Woese late)", "химерное (Lake)", "FUCA до LUCA"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.earth.genetic_code_origin",
+    "schema_version": "3.2",
+    "domain": "frontier.earth.biology",
+    "subtopic": "frontier.earth.biology.genetic_code",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Причина конкретного назначения кодонов аминокислотам в генетическом коде: случайный замороженный случай или биохимическая необходимость — не установлено.",
+    "formal_notation": "соответствие 64 кодонов → 20 аа; неслучайность статистически значима",
+    "conditions": "Универсальный код; ранние варианты у митохондрий, инфузорий",
+    "prereq": ["concept.biology.molecular.genetic_code", "concept.biology.evolution"],
+    "confidence": 0.30,
+    "tags": ["genetic_code", "codon_assignment", "frozen_accident"],
+    "tier_extensions": {
+      "status": "disputed",
+      "partial_results": "Код минимизирует ошибки кодирования (Freeland-Hurst); биохимическое соответствие через стереохимию (Yarus)",
+      "competing_approaches": ["frozen accident (Crick)", "адаптивный (Freeland-Hurst)", "стереохимический (Yarus)", "коэволюция аа-аминоацил-тРНК"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.earth.biological_homochirality",
+    "schema_version": "3.2",
+    "domain": "frontier.earth.biology",
+    "subtopic": "frontier.earth.biology.homochirality",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Причина биологической хиральной асимметрии (L-аминокислоты, D-сахара) — конкретный физический механизм первичного нарушения симметрии не установлен.",
+    "formal_notation": "ee_prebiotic > 0 → ee_biological → 100%; механизм усиления через автокатализ",
+    "conditions": "Пребиотическая Земля; рацемический пул; малый начальный ee",
+    "prereq": ["concept.chemistry.chirality", "concept.biology.origin_of_life"],
+    "confidence": 0.30,
+    "tags": ["homochirality", "biological", "soai", "parity_violation"],
+    "tier_extensions": {
+      "status": "open",
+      "partial_results": "Soai реакция демонстрирует усиление; метеоритные L-обогащения 10-15%; PV даёт ~10⁻¹⁷ ee — недостаточно",
+      "competing_approaches": ["CPL (circularly polarized light)", "parity violation", "stochastic + Soai amplification", "минералы chiral surfaces"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.earth.anthropocene_definition",
+    "schema_version": "3.2",
+    "domain": "frontier.earth.geology",
+    "subtopic": "frontier.earth.geology.anthropocene",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Формальное определение и стратиграфическая граница Антропоцена как геологической эпохи — IUGS отклонил предложение AWG в 2024, спор продолжается.",
+    "formal_notation": "GSSP кандидат: Crawford Lake, ~1950; ¹⁴C, ²³⁹Pu пики",
+    "conditions": "Стратиграфические маркеры; глобальная синхронность; ICS-критерии",
+    "prereq": ["concept.earth.geology.stratigraphy", "concept.earth.geology.epoch"],
+    "confidence": 0.40,
+    "tags": ["anthropocene", "stratigraphy", "gssp", "iugs"],
+    "tier_extensions": {
+      "status": "disputed",
+      "partial_results": "AWG предлагал Crawford Lake GSSP с 1952; IUGS отклонил март 2024; concept of event vs epoch обсуждается",
+      "competing_approaches": ["epoch с 1950 (AWG)", "event (Gibbard)", "with агрокультуры (Ruddiman)", "ранний antropocene"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.earth.extremophile_limits",
+    "schema_version": "3.2",
+    "domain": "frontier.earth.biology",
+    "subtopic": "frontier.earth.biology.extremophiles",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Предельные физические условия существования жизни (температура, давление, pH, излучение) — окончательные границы экспериментально не установлены.",
+    "formal_notation": "T_max ≈ 122°C (Methanopyrus); P_max > 1 ГПа?; pH < 0 и > 13",
+    "conditions": "Экстремальные среды; гидротермальные источники; глубокая кора",
+    "prereq": ["concept.biology.extremophile", "concept.biology.metabolism"],
+    "confidence": 0.40,
+    "tags": ["extremophiles", "habitability_limits", "deep_biosphere"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "Methanopyrus kandleri репликация при 122°C; Strain 121 — 121°C; пределы по другим параметрам уточняются",
+      "competing_approaches": ["глубинные керны", "Mariana Trench", "Atacama abiotic limit", "лабораторное давление"]
+    }
+  },
+  {
+    "id": "open_problem.frontier.earth.geoengineering_risks",
+    "schema_version": "3.2",
+    "domain": "frontier.earth.climate",
+    "subtopic": "frontier.earth.climate.geoengineering",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Полные риски климатических интервенций (стратосферная аэрозольная инъекция, осветление морских облаков) для региональных климатов и озона — количественно не установлены.",
+    "formal_notation": "ΔP_region(SAI), Δозон, termination shock — все неопределённости",
+    "conditions": "Гипотетическое развёртывание; глобальный масштаб; долгосрочные эффекты",
+    "prereq": ["concept.earth.climate.geoengineering", "concept.earth.atmosphere.stratosphere"],
+    "confidence": 0.30,
+    "tags": ["geoengineering", "sai", "mcb", "risks"],
+    "tier_extensions": {
+      "status": "open",
+      "partial_results": "GeoMIP ансамбли показывают восстановление T, но нарушение осадков; termination shock серьёзен; озоновые риски умеренные",
+      "competing_approaches": ["GeoMIP coordinated experiments", "natural analogue (Pinatubo)", "stratospheric chemistry models"],
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "open_problem.frontier.earth.hydrothermal_origin_life",
+    "schema_version": "3.2",
+    "domain": "frontier.earth.astrobiology",
+    "subtopic": "frontier.earth.astrobiology.hydrothermal",
+    "tier": "frontier",
+    "type": "open_problem",
+    "statement": "Достаточны ли щелочные гидротермальные источники (Lost City тип) как место зарождения жизни и каков точный путь от химии H₂/CO₂ к метаболизму — не установлено.",
+    "formal_notation": "путь: H₂ + CO₂ → ацетил-CoA → автотроф; minerals as proto-enzymes",
+    "conditions": "Серпентинизация; pH > 9; T 50-90°C; протонный градиент",
+    "prereq": ["concept.biology.origin_of_life.hydrothermal", "concept.chemistry.geochemistry"],
+    "confidence": 0.35,
+    "tags": ["hydrothermal", "lost_city", "serpentinization", "luca"],
+    "tier_extensions": {
+      "status": "partial",
+      "partial_results": "Лабораторное восстановление CO₂ на FeS-минералах продемонстрировано (Martin, Lane); полный путь к репликации — не достигнут",
+      "competing_approaches": ["alkaline vents (Russell-Lane)", "acidic black smokers (Wächtershäuser)", "warm pond (Sutherland-Powner)", "impact-driven"]
+    }
+  }
+]

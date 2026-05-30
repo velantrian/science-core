@@ -1,0 +1,542 @@
+[
+  {
+    "id": "material.geology.mineralogy.emerald",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.cyclosilicates.beryl",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Изумруд — Cr/V-окрашенная разновидность берилла, гексагональная сингония, твёрдость 7,5–8, плотность 2,67–2,78 г/см³, насыщенно-зелёный.",
+    "formal_notation": "Be3Al2Si6O18:Cr,V; hexagonal; ρ=2.67–2.78; Mohs 7.5–8",
+    "conditions": "Гидротермально-метасоматические зоны контакта пегматитов с ультрабазитами и сланцами",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.98,
+    "tags": ["silicate", "beryl", "emerald", "gemstone"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.aquamarine",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.cyclosilicates.beryl",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Аквамарин — Fe-окрашенная разновидность берилла, гексагональная сингония, твёрдость 7,5–8, плотность 2,68–2,74 г/см³, голубой до зеленовато-голубого.",
+    "formal_notation": "Be3Al2Si6O18:Fe2+; hexagonal; ρ=2.68–2.74; Mohs 7.5–8",
+    "conditions": "Гранитные пегматиты, миаролитовые полости",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.97,
+    "tags": ["silicate", "beryl", "aquamarine", "gemstone"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.heliodor",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.cyclosilicates.beryl",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Гелиодор — золотисто-жёлтая разновидность берилла, окрашен Fe3+, гексагональная сингония, твёрдость 7,5–8, плотность 2,67–2,8 г/см³.",
+    "formal_notation": "Be3Al2Si6O18:Fe3+; hexagonal; ρ=2.67–2.8; Mohs 7.5–8",
+    "conditions": "Гранитные пегматиты редкометалльной формации",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.94,
+    "tags": ["silicate", "beryl", "heliodor", "gemstone"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.morganite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.cyclosilicates.beryl",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Морганит — Mn-окрашенная розовая разновидность берилла, гексагональная сингония, твёрдость 7,5–8, плотность 2,71–2,9 г/см³.",
+    "formal_notation": "Be3Al2Si6O18:Mn2+; hexagonal; ρ=2.71–2.9; Mohs 7.5–8",
+    "conditions": "Литий-цезий-танталовые гранитные пегматиты",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.94,
+    "tags": ["silicate", "beryl", "morganite", "gemstone"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.ruby",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.oxides.corundum",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Рубин — Cr-окрашенная красная разновидность корунда, тригональная сингония, твёрдость 9, плотность 3,97–4,05 г/см³, флуоресцирует в УФ.",
+    "formal_notation": "Al2O3:Cr3+; trigonal; ρ=3.97–4.05; Mohs 9",
+    "conditions": "Мраморы (метаморфизм Al-содержащих известняков), щелочные базальты",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.99,
+    "tags": ["oxide", "corundum", "ruby", "gemstone"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.sapphire",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.oxides.corundum",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Сапфир — синяя разновидность корунда, окрашен Fe-Ti, тригональная сингония, твёрдость 9, плотность 3,95–4,03 г/см³, плеохроичный.",
+    "formal_notation": "Al2O3:Fe,Ti; trigonal; ρ=3.95–4.03; Mohs 9",
+    "conditions": "Щелочные базальты, метаморфизованные глинистые осадки, россыпи",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.99,
+    "tags": ["oxide", "corundum", "sapphire", "gemstone"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.gem_spinel",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.oxides.spinels",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Благородная шпинель — Mg-Al шпинель, кубическая сингония, твёрдость 8, плотность 3,58–3,61 г/см³, цвет от красного до синего, ювелирный.",
+    "formal_notation": "MgAl2O4; cubic; ρ=3.58–3.61; Mohs 8",
+    "conditions": "Метаморфизованные мраморы, ультраосновные породы",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.95,
+    "tags": ["oxide", "spinel", "gemstone", "noble"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.alexandrite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.oxides.chrysoberyl",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Александрит — Cr-окрашенная разновидность хризоберилла, орторомбическая сингония, твёрдость 8,5, плотность 3,7 г/см³, реверс цвета зелёный-красный.",
+    "formal_notation": "BeAl2O4:Cr3+; orthorhombic; ρ=3.7; Mohs 8.5",
+    "conditions": "Пегматиты на контакте с ультраосновными породами (бериллий + хром)",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.96,
+    "tags": ["oxide", "chrysoberyl", "alexandrite", "color_change"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.topaz",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.nesosilicates",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Топаз — F-OH несосиликат Al, орторомбическая сингония, твёрдость 8, плотность 3,49–3,57 г/см³, бесцветный, голубой, винно-жёлтый, розовый.",
+    "formal_notation": "Al2SiO4(F,OH)2; orthorhombic; ρ=3.49–3.57; Mohs 8",
+    "conditions": "Пневматолито-гидротермальные процессы в пегматитах и грейзенах",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.98,
+    "tags": ["silicate", "nesosilicate", "topaz", "gemstone"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.schorl",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.cyclosilicates.tourmaline",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Шерл — Fe-боросиликат группы турмалина, тригональная сингония, твёрдость 7–7,5, плотность 3,1–3,2 г/см³, чёрный, призматические кристаллы.",
+    "formal_notation": "NaFe3Al6(BO3)3Si6O18(OH)4; trigonal; ρ=3.1–3.2; Mohs 7–7.5",
+    "conditions": "Гранитные пегматиты, грейзены, метаморфические породы",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.96,
+    "tags": ["silicate", "tourmaline", "schorl", "borosilicate"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.verdelite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.cyclosilicates.tourmaline",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Верделит — зелёная разновидность эльбаита (Li-турмалин), тригональная сингония, твёрдость 7–7,5, плотность 3,03–3,1 г/см³, ювелирный камень.",
+    "formal_notation": "Na(Li,Al)3Al6(BO3)3Si6O18(OH)4; trigonal; ρ=3.03–3.1; Mohs 7–7.5",
+    "conditions": "Литиевые пегматиты редкометалльной формации",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.93,
+    "tags": ["silicate", "tourmaline", "verdelite", "gemstone"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.indigolite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.cyclosilicates.tourmaline",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Индиголит — синяя разновидность эльбаита, тригональная сингония, твёрдость 7–7,5, плотность 3,03–3,1 г/см³, плеохроичный синий камень.",
+    "formal_notation": "Na(Li,Al)3Al6(BO3)3Si6O18(OH)4; trigonal; ρ=3.03–3.1; Mohs 7–7.5",
+    "conditions": "Литиевые гранитные пегматиты",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.92,
+    "tags": ["silicate", "tourmaline", "indigolite", "gemstone"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.spessartine",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.garnets",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Спессартин — Mn-Al гранат, кубическая сингония, твёрдость 6,5–7,5, плотность 4,18–4,32 г/см³, оранжево-красный, ювелирный.",
+    "formal_notation": "Mn3Al2(SiO4)3; cubic; ρ=4.18–4.32; Mohs 6.5–7.5",
+    "conditions": "Гранитные пегматиты, марганцевые метаморфические породы",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.96,
+    "tags": ["silicate", "garnet", "spessartine", "gemstone"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.grossular",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.garnets",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Гроссуляр — Ca-Al гранат, кубическая сингония, твёрдость 6,5–7,5, плотность 3,42–3,72 г/см³, светло-зелёный до жёлто-зелёного (цаворит, гессонит).",
+    "formal_notation": "Ca3Al2(SiO4)3; cubic; ρ=3.42–3.72; Mohs 6.5–7.5",
+    "conditions": "Контактовый метаморфизм карбонатных пород, скарны",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.96,
+    "tags": ["silicate", "garnet", "grossular", "gemstone"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.andradite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.garnets",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Андрадит — Ca-Fe(III) гранат, кубическая сингония, твёрдость 6,5–7, плотность 3,8–3,9 г/см³, бурый до жёлто-зелёного (демантоид — ювелирный).",
+    "formal_notation": "Ca3Fe2(SiO4)3; cubic; ρ=3.8–3.9; Mohs 6.5–7",
+    "conditions": "Скарны, метаморфизованные железистые карбонатные породы",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.96,
+    "tags": ["silicate", "garnet", "andradite", "demantoid"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.zircon",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.nesosilicates",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Циркон — несосиликат Zr, тетрагональная сингония, твёрдость 7,5, плотность 4,6–4,7 г/см³, ювелирный камень и U-Pb геохронометр.",
+    "formal_notation": "ZrSiO4; tetragonal; ρ=4.6–4.7; Mohs 7.5",
+    "conditions": "Акцессорный минерал гранитов, пегматитов, россыпей",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.98,
+    "tags": ["silicate", "nesosilicate", "zircon", "geochronology"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.peridot",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.nesosilicates",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Перидот — ювелирная разновидность форстеритового оливина, орторомбическая сингония, твёрдость 6,5–7, плотность 3,27–3,37 г/см³, жёлто-зелёный.",
+    "formal_notation": "(Mg,Fe)2SiO4; orthorhombic; ρ=3.27–3.37; Mohs 6.5–7",
+    "conditions": "Ультраосновные мантийные ксенолиты, базальты, метеориты",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.97,
+    "tags": ["silicate", "olivine", "peridot", "gemstone"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.opal",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.mineraloids.silica",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Опал — аморфный гидратированный кремнезём, минералоид, твёрдость 5,5–6,5, плотность 1,9–2,3 г/см³, благородный опал даёт иризацию (опалесценцию).",
+    "formal_notation": "SiO2·nH2O; amorphous; ρ=1.9–2.3; Mohs 5.5–6.5",
+    "conditions": "Низкотемпературные гидротермальные растворы, гейзеры, осадочные коры",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.96,
+    "tags": ["mineraloid", "silica", "opal", "gemstone"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.turquoise",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.phosphates.copper_aluminium",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Бирюза — водный фосфат меди-алюминия, триклинная сингония, твёрдость 5–6, плотность 2,6–2,9 г/см³, небесно-голубой до зелёного.",
+    "formal_notation": "CuAl6(PO4)4(OH)8·4H2O; triclinic; ρ=2.6–2.9; Mohs 5–6",
+    "conditions": "Зоны окисления медных месторождений в аридных областях",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.96,
+    "tags": ["phosphate", "turquoise", "gemstone", "secondary"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.lazurite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.feldspathoids",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Лазурит — Na-Ca фельдшпатоид с S, кубическая сингония, твёрдость 5–5,5, плотность 2,38–2,42 г/см³, синий, главный минерал лазурита (ляпис-лазурь).",
+    "formal_notation": "(Na,Ca)8(AlSiO4)6(SO4,S,Cl)2; cubic; ρ=2.38–2.42; Mohs 5–5.5",
+    "conditions": "Контактово-метаморфические мраморы (магнезиальные скарны)",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.96,
+    "tags": ["silicate", "feldspathoid", "lazurite", "gemstone"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.nephrite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.amphiboles",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Нефрит — плотный волокнистый агрегат тремолит-актинолита, твёрдость 6–6,5, плотность 2,9–3,1 г/см³, зелёный, очень вязкий ювелирно-поделочный камень.",
+    "formal_notation": "Ca2(Mg,Fe)5Si8O22(OH)2; aggregate; ρ=2.9–3.1; Mohs 6–6.5",
+    "conditions": "Метасоматическое изменение серпентинитов и доломитовых мраморов",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.95,
+    "tags": ["silicate", "amphibole", "nephrite", "jade"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.jadeite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.pyroxenes",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Жадеит — Na-Al клинопироксен, моноклинная сингония, твёрдость 6,5–7, плотность 3,24–3,43 г/см³, зелёный, индикатор высокобарического метаморфизма.",
+    "formal_notation": "NaAlSi2O6; monoclinic; ρ=3.24–3.43; Mohs 6.5–7",
+    "conditions": "Высокобарический низкотемпературный метаморфизм (глаукофан-эклогитовая фация)",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.96,
+    "tags": ["silicate", "pyroxene", "jadeite", "jade"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.amber",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.mineraloids.organic",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Янтарь — ископаемая ископаемая смола хвойных, минералоид, аморфный, твёрдость 2–2,5, плотность 1,05–1,1 г/см³, медово-жёлтый, плавится при 250–375 °C.",
+    "formal_notation": "C10H16O; amorphous organic; ρ=1.05–1.1; Mohs 2–2.5",
+    "conditions": "Лагунные и прибрежно-морские осадки палеогена; полимеризация смол",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.96,
+    "tags": ["mineraloid", "organic", "amber", "gemstone"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.agate",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.silica.chalcedony",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Агат — полосчатая разновидность халцедона (микрокристаллический SiO2), тригональная сингония, твёрдость 6,5–7, плотность 2,58–2,64 г/см³.",
+    "formal_notation": "SiO2; trigonal microcrystalline; ρ=2.58–2.64; Mohs 6.5–7",
+    "conditions": "Заполнение миндалин и пустот в вулканитах низкотемпературными кремнезёмными растворами",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.97,
+    "tags": ["silicate", "silica", "agate", "chalcedony"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.onyx",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.silica.chalcedony",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Оникс — параллельно-полосчатая разновидность агата с чёрно-белыми слоями, твёрдость 6,5–7, плотность 2,55–2,7 г/см³, тригональная сингония.",
+    "formal_notation": "SiO2; trigonal microcrystalline; ρ=2.55–2.7; Mohs 6.5–7",
+    "conditions": "Низкотемпературные гидротермальные процессы в вулканических полостях",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.94,
+    "tags": ["silicate", "silica", "onyx", "chalcedony"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.amethyst",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.silica.quartz",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Аметист — фиолетовая разновидность кварца, окрашена Fe-центрами в облучённом SiO2, тригональная сингония, твёрдость 7, плотность 2,65 г/см³.",
+    "formal_notation": "SiO2:Fe3+; trigonal; ρ=2.65; Mohs 7",
+    "conditions": "Гидротермальные жилы, миндалины в базальтах (бразильские жеоды)",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.98,
+    "tags": ["silicate", "quartz", "amethyst", "gemstone"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.citrine",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.silica.quartz",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Цитрин — жёлтая разновидность кварца, окрашена Fe3+ центрами, тригональная сингония, твёрдость 7, плотность 2,65 г/см³.",
+    "formal_notation": "SiO2:Fe3+; trigonal; ρ=2.65; Mohs 7",
+    "conditions": "Гидротермальные жилы; часто получается прокаливанием аметиста",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.96,
+    "tags": ["silicate", "quartz", "citrine", "gemstone"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  }
+]

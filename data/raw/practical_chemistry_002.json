@@ -1,0 +1,496 @@
+[
+  {
+    "id": "process.chemistry.polymer.hdpe_phillips",
+    "schema_version": "3.2",
+    "domain": "chemistry.polymer",
+    "subtopic": "chemistry.polymer.polymerization",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Полимеризация этилена в HDPE по процессу Phillips на хромовом катализаторе CrO3/SiO2 с координационным механизмом и низким давлением.",
+    "formal_notation": "n CH2=CH2 → -[-CH2-CH2-]n-; кат CrO3/SiO2 после активации в O2 при 700°C; ρ HDPE 0.94–0.97 г/см³",
+    "conditions": "T 85–110°C, P 30–40 bar, суспензионная (slurry-loop) полимеризация в изобутане",
+    "prereq": ["concept.chemistry.organic.alkene", "concept.chemistry.kinetics.catalyst"],
+    "confidence": 0.96,
+    "tags": ["HDPE", "phillips_catalyst", "chromium", "slurry_loop"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.97,
+      "safety_critical": true,
+      "safety_notes": "Этилен взрывоопасен; изобутан горюч; пыль полимера взрывоопасна"
+    }
+  },
+  {
+    "id": "process.chemistry.polymer.ldpe_radical",
+    "schema_version": "3.2",
+    "domain": "chemistry.polymer",
+    "subtopic": "chemistry.polymer.polymerization",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Свободно-радикальная полимеризация этилена в LDPE при сверхвысоком давлении с пероксидным или O2-инициатором, дающая разветвлённую структуру.",
+    "formal_notation": "n CH2=CH2 → -[-CH2-CH2-]n- с разветвлениями; ρ LDPE 0.91–0.94 г/см³",
+    "conditions": "T 150–300°C, P 1000–3000 bar, трубчатый или автоклавный реактор, инициатор O2 или пероксид",
+    "prereq": ["concept.chemistry.organic.alkene", "mechanism.chemistry.kinetics.chain_reaction"],
+    "confidence": 0.96,
+    "tags": ["LDPE", "free_radical", "high_pressure", "branched"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.95,
+      "safety_critical": true,
+      "safety_notes": "Сверхвысокое давление 1000+ bar; декомпозиция этилена при перегреве"
+    }
+  },
+  {
+    "id": "process.chemistry.polymer.pp_ziegler_natta",
+    "schema_version": "3.2",
+    "domain": "chemistry.polymer",
+    "subtopic": "chemistry.polymer.polymerization",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Полимеризация пропилена в изотактический полипропилен на катализаторе Циглера-Натта TiCl4/MgCl2 с алюмоорганическим сокатализатором.",
+    "formal_notation": "n CH2=CH(CH3) → -[-CH2-CH(CH3)-]n- (изотактический); кат TiCl4/MgCl2 + AlEt3 + внутр./внеш. донор",
+    "conditions": "T 60–90°C, P 25–40 bar, gas-phase или жидкий пропилен, тактичность >97%",
+    "prereq": ["concept.chemistry.organic.alkene", "concept.chemistry.kinetics.catalyst"],
+    "confidence": 0.97,
+    "tags": ["polypropylene", "ziegler_natta", "isotactic", "titanium"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.97,
+      "safety_critical": true,
+      "safety_notes": "AlEt3 пирофорен; пропилен взрывоопасен; пыль PP горюча"
+    }
+  },
+  {
+    "id": "process.chemistry.polymer.pet_polycondensation",
+    "schema_version": "3.2",
+    "domain": "chemistry.polymer",
+    "subtopic": "chemistry.polymer.polymerization",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Поликонденсация терефталевой кислоты и этиленгликоля в полиэтилентерефталат через стадии этерификации и трансэтерификации.",
+    "formal_notation": "HOOC-C6H4-COOH + HO-CH2-CH2-OH → -[-OC-C6H4-CO-O-CH2-CH2-O-]n- + 2H2O",
+    "conditions": "Этерификация 240–260°C, поликонденсация 270–290°C при P 0.5–1 mbar, кат Sb2O3 или Ti",
+    "prereq": ["concept.chemistry.organic.ester", "concept.chemistry.organic.carboxylic_acid"],
+    "confidence": 0.97,
+    "tags": ["PET", "polyester", "polycondensation", "terephthalate"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.97,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "process.chemistry.polymer.nylon_66",
+    "schema_version": "3.2",
+    "domain": "chemistry.polymer",
+    "subtopic": "chemistry.polymer.polymerization",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Поликонденсация гексаметилендиамина и адипиновой кислоты через соль AH в нейлон-6,6 с выделением воды.",
+    "formal_notation": "n HOOC-(CH2)4-COOH + n H2N-(CH2)6-NH2 → -[-NH-(CH2)6-NH-CO-(CH2)4-CO-]n- + 2n H2O",
+    "conditions": "Соль AH 50% в воде, T 270–285°C, P 17 bar → атмосферное в финале, Mn 15000–25000",
+    "prereq": ["concept.chemistry.organic.amine", "concept.chemistry.organic.carboxylic_acid"],
+    "confidence": 0.97,
+    "tags": ["nylon_66", "polyamide", "polycondensation", "ah_salt"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.96,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "process.chemistry.polymer.pvc_suspension",
+    "schema_version": "3.2",
+    "domain": "chemistry.polymer",
+    "subtopic": "chemistry.polymer.polymerization",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Суспензионная полимеризация винилхлорида в ПВХ в каплях мономера, диспергированных в воде, с пероксидным инициатором.",
+    "formal_notation": "n CH2=CHCl → -[-CH2-CHCl-]n-; инициатор лауроилпероксид или дикумилпероксид",
+    "conditions": "T 50–70°C, P 6–12 bar, защитные коллоиды ПВС/метилцеллюлоза, конверсия 85–95%",
+    "prereq": ["mechanism.chemistry.kinetics.chain_reaction"],
+    "confidence": 0.96,
+    "tags": ["PVC", "suspension_polymerization", "vinyl_chloride", "peroxide"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.96,
+      "safety_critical": true,
+      "safety_notes": "Винилхлорид — канцероген (ангиосаркома печени), регламент ОБВЯЗ <1 ppm"
+    }
+  },
+  {
+    "id": "process.chemistry.polymer.polystyrene",
+    "schema_version": "3.2",
+    "domain": "chemistry.polymer",
+    "subtopic": "chemistry.polymer.polymerization",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Радикальная полимеризация стирола в полистирол в массе или суспензии с термической или пероксидной инициацией.",
+    "formal_notation": "n C6H5-CH=CH2 → -[-CH2-CH(C6H5)-]n-; самоинициация при T >100°C",
+    "conditions": "T 100–180°C, мономерная или суспензионная среда, Mn 100000–300000, конверсия 60–80%",
+    "prereq": ["mechanism.chemistry.kinetics.chain_reaction", "concept.chemistry.organic.arene"],
+    "confidence": 0.96,
+    "tags": ["polystyrene", "styrene", "radical_polymerization", "bulk"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.96,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "process.chemistry.polymer.epoxy_dgeba",
+    "schema_version": "3.2",
+    "domain": "chemistry.polymer",
+    "subtopic": "chemistry.polymer.polymerization",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Отверждение эпоксидной смолы DGEBA полиаминами через реакцию раскрытия оксиранового цикла с образованием 3D-сетки.",
+    "formal_notation": "R-NH2 + эпоксид → R-NH-CH2-CH(OH)-; затем R-NH-CH2-CH(OH)- + эпоксид → R-N(CH2CH(OH)-)2",
+    "conditions": "T 25–150°C, стехиометрия по эпоксидным эквивалентам, Tg от 80°C до 200°C по системе",
+    "prereq": ["concept.chemistry.organic.amine"],
+    "confidence": 0.95,
+    "tags": ["epoxy", "DGEBA", "amine_curing", "thermoset"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.94,
+      "safety_critical": true,
+      "safety_notes": "DGEBA — сенсибилизатор кожи; амины едкие; экзотермия при больших массах"
+    }
+  },
+  {
+    "id": "material.chemistry.polymer.silicone_rubber",
+    "schema_version": "3.2",
+    "domain": "chemistry.polymer",
+    "subtopic": "chemistry.polymer.polymerization",
+    "tier": "practical",
+    "type": "material",
+    "statement": "Силиконовый каучук на основе полидиметилсилоксана (PDMS) с вулканизацией через гидросилилирование или конденсацию с термостойкостью -55 до +250°C.",
+    "formal_notation": "-[-Si(CH3)2-O-]n-; HTV (пероксидная) или RTV (Pt-кат гидросилилирование Si-H + Si-CH=CH2)",
+    "conditions": "Тип Si-O связи 460 kJ/mol; диапазон Tраб -55..+250°C; усиление осаждённым SiO2",
+    "prereq": ["concept.chemistry.bonding.covalent"],
+    "confidence": 0.94,
+    "tags": ["silicone", "PDMS", "elastomer", "platinum_cure"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.95,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "process.chemistry.petrochemistry.atmospheric_distillation",
+    "schema_version": "3.2",
+    "domain": "chemistry.petrochemistry",
+    "subtopic": "chemistry.petrochemistry.refining",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Атмосферная перегонка нефти: фракционное разделение сырой нефти по температурам кипения в ректификационной колонне на бензин, керосин, дизель и мазут.",
+    "formal_notation": "Фракции: газ <30°C, бензин 30–180°C, керосин 180–250°C, дизель 250–360°C, мазут >360°C",
+    "conditions": "Печь нагрева 340–380°C, колонна 30–50 тарелок, P близкое к атмосферному",
+    "prereq": [],
+    "confidence": 0.97,
+    "tags": ["crude_distillation", "atmospheric", "fractionation", "refining"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.98,
+      "safety_critical": true,
+      "safety_notes": "Углеводородные пары взрывоопасны; H2S в кислых нефтях; высокие T"
+    }
+  },
+  {
+    "id": "process.chemistry.petrochemistry.vacuum_distillation",
+    "schema_version": "3.2",
+    "domain": "chemistry.petrochemistry",
+    "subtopic": "chemistry.petrochemistry.refining",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Вакуумная перегонка мазута: разделение тяжёлых остатков под вакуумом для снижения температуры кипения и предотвращения термического разложения.",
+    "formal_notation": "Pабс 20–50 mbar; кипение тяжёлых фракций при кажущемся 380–420°C вместо 500–600°C",
+    "conditions": "Печь 380–420°C, вакуумная колонна с насадкой, пар-эжекторы или вакуумные насосы",
+    "prereq": ["process.chemistry.petrochemistry.atmospheric_distillation"],
+    "confidence": 0.96,
+    "tags": ["vacuum_distillation", "vgo", "residue", "refining"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.97,
+      "safety_critical": true,
+      "safety_notes": "Высокие температуры; кокс в трубах печи; пары углеводородов"
+    }
+  },
+  {
+    "id": "process.chemistry.petrochemistry.fcc",
+    "schema_version": "3.2",
+    "domain": "chemistry.petrochemistry",
+    "subtopic": "chemistry.petrochemistry.refining",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Каталитический крекинг с псевдоожиженным слоем (FCC): разрыв тяжёлых углеводородов в бензин и олефины на цеолитном катализаторе с непрерывной регенерацией.",
+    "formal_notation": "CnH(2n+2) → CmH2m + C(n-m)H(2(n-m)+2); кат Y-цеолит/USY на матрице",
+    "conditions": "Райзер T 480–550°C, контакт 2–4 с, регенератор 700°C для выжига кокса, отношение кат/сырьё 4–9",
+    "prereq": ["concept.chemistry.kinetics.catalyst", "process.chemistry.petrochemistry.vacuum_distillation"],
+    "confidence": 0.97,
+    "tags": ["FCC", "fluid_catalytic_cracking", "zeolite", "gasoline"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.97,
+      "safety_critical": true,
+      "safety_notes": "Высокие T; катализаторная пыль; углеводородные пары; CO из регенератора"
+    }
+  },
+  {
+    "id": "process.chemistry.petrochemistry.catalytic_reforming",
+    "schema_version": "3.2",
+    "domain": "chemistry.petrochemistry",
+    "subtopic": "chemistry.petrochemistry.refining",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Каталитический риформинг: повышение октанового числа бензина и получение ароматики через дегидроциклизацию и изомеризацию на Pt-Re/Al2O3 катализаторе.",
+    "formal_notation": "Нафтены → ароматика + 3H2; парафины → изопарафины и ароматика",
+    "conditions": "T 490–525°C, P 3–35 bar, кат Pt-Re (0.3% Pt) на Cl-Al2O3, H2/HC = 3–10 моль/моль",
+    "prereq": ["concept.chemistry.kinetics.catalyst", "concept.chemistry.organic.arene"],
+    "confidence": 0.96,
+    "tags": ["reforming", "platforming", "octane", "platinum_rhenium"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.96,
+      "safety_critical": true,
+      "safety_notes": "H2 взрывоопасен; высокие T; бензол и ароматика — канцерогены"
+    }
+  },
+  {
+    "id": "process.chemistry.petrochemistry.alkylation_hf",
+    "schema_version": "3.2",
+    "domain": "chemistry.petrochemistry",
+    "subtopic": "chemistry.petrochemistry.refining",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Алкилирование изобутана олефинами на HF-катализаторе с получением высокооктанового алкилата (изооктанов).",
+    "formal_notation": "i-C4H10 + CnH2n → i-C(4+n)H(10+2n); кат жидкий HF",
+    "conditions": "T 25–40°C, P 8–10 bar, отношение i-C4/олефин 10–15, RON алкилата 93–96",
+    "prereq": ["concept.chemistry.kinetics.catalyst"],
+    "confidence": 0.94,
+    "tags": ["alkylation", "HF", "alkylate", "high_octane"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.95,
+      "safety_critical": true,
+      "safety_notes": "HF чрезвычайно токсичен и образует аэрозоль при утечке; ожоги глубокие"
+    }
+  },
+  {
+    "id": "process.chemistry.petrochemistry.alkylation_h2so4",
+    "schema_version": "3.2",
+    "domain": "chemistry.petrochemistry",
+    "subtopic": "chemistry.petrochemistry.refining",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Сернокислотное алкилирование изобутана олефинами в высокооктановый бензин с эмульсионным контактом и охлаждением реактора.",
+    "formal_notation": "i-C4H10 + олефин → разветвлённые C7–C8; кат 90–98% H2SO4",
+    "conditions": "T 5–15°C, P 4–7 bar, отношение i-C4/олефин 8–12, расход H2SO4 50–100 кг/т алкилата",
+    "prereq": ["material.chemistry.inorganic.sulfuric_acid"],
+    "confidence": 0.94,
+    "tags": ["alkylation", "sulfuric_acid", "isobutane", "alkylate"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.95,
+      "safety_critical": true,
+      "safety_notes": "Большие объёмы H2SO4; SO2 при регенерации; эмульсия с углеводородами"
+    }
+  },
+  {
+    "id": "process.chemistry.petrochemistry.isomerization",
+    "schema_version": "3.2",
+    "domain": "chemistry.petrochemistry",
+    "subtopic": "chemistry.petrochemistry.refining",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Изомеризация C5/C6 парафинов в разветвлённые изомеры с повышенным октановым числом на Pt-катализаторе с хлорированным или цеолитным носителем.",
+    "formal_notation": "n-C5H12 ⇌ i-C5H12; n-C6H14 ⇌ 2,2-DMB и 2,3-DMB; кат Pt/Cl-Al2O3 или Pt/морденит",
+    "conditions": "T 120–180°C (Cl-кат) или 240–280°C (цеолит), P 20–30 bar, H2/HC 1–4",
+    "prereq": ["concept.chemistry.kinetics.catalyst", "concept.chemistry.organic.isomerism"],
+    "confidence": 0.95,
+    "tags": ["isomerization", "isomerate", "platinum", "high_octane"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.96,
+      "safety_critical": true,
+      "safety_notes": "H2 взрывоопасен; HCl выделяется из хлорированного катализатора"
+    }
+  },
+  {
+    "id": "process.chemistry.petrochemistry.hydrotreating",
+    "schema_version": "3.2",
+    "domain": "chemistry.petrochemistry",
+    "subtopic": "chemistry.petrochemistry.refining",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Гидроочистка нефтяных фракций: удаление серы, азота и металлов гидрированием на CoMo/NiMo катализаторе под давлением водорода.",
+    "formal_notation": "R-S-R' + 2H2 → 2RH + H2S; R-NH2 + H2 → RH + NH3",
+    "conditions": "T 320–400°C, P 30–80 bar, кат CoMo-S или NiMo-S на Al2O3, H2/сырьё 200–800 нл/л",
+    "prereq": ["concept.chemistry.kinetics.catalyst"],
+    "confidence": 0.97,
+    "tags": ["hydrotreating", "hds", "desulfurization", "cobalt_molybdenum"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.98,
+      "safety_critical": true,
+      "safety_notes": "H2S летален; H2 высокого давления; пирофорный сульфид металла"
+    }
+  },
+  {
+    "id": "process.chemistry.petrochemistry.hydrocracking",
+    "schema_version": "3.2",
+    "domain": "chemistry.petrochemistry",
+    "subtopic": "chemistry.petrochemistry.refining",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Гидрокрекинг тяжёлых газойлей: одновременное расщепление и гидрирование на бифункциональном катализаторе (металл + цеолит) с получением средних дистиллятов.",
+    "formal_notation": "Тяжёлый углеводород + H2 → лёгкие парафины + изопарафины; кат NiW/USY-цеолит",
+    "conditions": "T 350–430°C, P 100–200 bar, H2/сырьё 1000–2000 нл/л, конверсия 50–90%",
+    "prereq": ["process.chemistry.petrochemistry.hydrotreating", "process.chemistry.petrochemistry.fcc"],
+    "confidence": 0.96,
+    "tags": ["hydrocracking", "bifunctional", "USY", "middle_distillate"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.96,
+      "safety_critical": true,
+      "safety_notes": "Очень высокое давление H2; экзотермия с риском теплового разгона"
+    }
+  },
+  {
+    "id": "process.chemistry.petrochemistry.delayed_coking",
+    "schema_version": "3.2",
+    "domain": "chemistry.petrochemistry",
+    "subtopic": "chemistry.petrochemistry.refining",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Замедленное коксование вакуумного остатка: термический крекинг с накоплением кокса в реакторе-камере и разделением жидких продуктов в колонне.",
+    "formal_notation": "Тяжёлый остаток → газ + бензин + газойль + нефтяной кокс; T печи 490–510°C",
+    "conditions": "Печь 490–510°C, коксовые камеры T 415–450°C P 1–4 bar, цикл заполнения 16–24 ч",
+    "prereq": ["process.chemistry.petrochemistry.vacuum_distillation"],
+    "confidence": 0.95,
+    "tags": ["delayed_coking", "petroleum_coke", "thermal_cracking", "residue"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.95,
+      "safety_critical": true,
+      "safety_notes": "Гидравлическая выгрузка кокса под высоким P; пары углеводородов; H2S"
+    }
+  },
+  {
+    "id": "process.chemistry.petrochemistry.steam_cracking",
+    "schema_version": "3.2",
+    "domain": "chemistry.petrochemistry",
+    "subtopic": "chemistry.petrochemistry.refining",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Пиролиз углеводородов с водяным паром (паровой крекинг): радикальное расщепление этана, нафты или газойля в этилен и пропилен.",
+    "formal_notation": "C2H6 → C2H4 + H2; нафта → C2H4 + C3H6 + C4 + ароматика; селективность по этилену 30–55%",
+    "conditions": "T 800–880°C в трубчатой печи, время контакта 0.1–0.5 с, разбавление паром 0.3–0.8 кг/кг сырья",
+    "prereq": ["mechanism.chemistry.kinetics.chain_reaction"],
+    "confidence": 0.97,
+    "tags": ["steam_cracking", "ethylene", "pyrolysis", "olefin"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.97,
+      "safety_critical": true,
+      "safety_notes": "Очень высокие T; этилен взрывоопасен; коксование в трубах требует декокинга"
+    }
+  },
+  {
+    "id": "process.chemistry.petrochemistry.mtbe_synthesis",
+    "schema_version": "3.2",
+    "domain": "chemistry.petrochemistry",
+    "subtopic": "chemistry.petrochemistry.refining",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Синтез метил-трет-бутилового эфира (MTBE) из изобутилена и метанола на кислотной ионообменной смоле для повышения октанового числа бензина.",
+    "formal_notation": "(CH3)2C=CH2 + CH3OH ⇌ (CH3)3C-O-CH3; кат сульфокатионит Amberlyst-15",
+    "conditions": "T 50–90°C, P 8–15 bar, мольный избыток метанола 1.05–1.1, конверсия изобутилена 90–95%",
+    "prereq": ["concept.chemistry.organic.ester", "concept.chemistry.organic.alkene"],
+    "confidence": 0.94,
+    "tags": ["MTBE", "octane_booster", "ion_exchange_resin", "etherification"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.95,
+      "safety_critical": true,
+      "safety_notes": "MTBE — загрязнитель подземных вод (запрещён в США); метанол токсичен"
+    }
+  },
+  {
+    "id": "process.chemistry.polymer.emulsion_polymerization",
+    "schema_version": "3.2",
+    "domain": "chemistry.polymer",
+    "subtopic": "chemistry.polymer.polymerization",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Эмульсионная полимеризация: радикальная полимеризация в мицеллах ПАВ в водной фазе с инициатором типа K2S2O8, дающая латексы стабильного размера.",
+    "formal_notation": "Мономер в каплях → диффузия в мицеллы → полимер в латексных частицах 50–500 нм",
+    "conditions": "T 50–90°C, ПАВ (SDS) 1–5 мас.%, инициатор персульфат 0.1–1 мас.%, P атмосферное",
+    "prereq": ["mechanism.chemistry.kinetics.chain_reaction"],
+    "confidence": 0.96,
+    "tags": ["emulsion_polymerization", "latex", "surfactant", "persulfate"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.96,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "process.chemistry.polymer.solution_polymerization",
+    "schema_version": "3.2",
+    "domain": "chemistry.polymer",
+    "subtopic": "chemistry.polymer.polymerization",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Полимеризация в растворе: мономер растворён в инертном растворителе с инициатором, что обеспечивает отвод тепла и контроль молекулярной массы.",
+    "formal_notation": "Мономер + растворитель + инициатор → раствор полимера; передача цепи на растворитель снижает Mn",
+    "conditions": "T 40–150°C, концентрация мономера 20–60%, растворитель толуол/ксилол/спирт",
+    "prereq": ["mechanism.chemistry.kinetics.chain_reaction"],
+    "confidence": 0.95,
+    "tags": ["solution_polymerization", "solvent", "heat_removal", "controlled_mw"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.96,
+      "safety_critical": true,
+      "safety_notes": "Горючие растворители; пары мономеров; рекуперация растворителя"
+    }
+  },
+  {
+    "id": "process.chemistry.polymer.romp_metathesis",
+    "schema_version": "3.2",
+    "domain": "chemistry.polymer",
+    "subtopic": "chemistry.polymer.polymerization",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Полимеризация по механизму метатезиса с раскрытием цикла (ROMP) циклоолефинов на катализаторе Граббса с сохранением двойной связи.",
+    "formal_notation": "Циклоолефин → -[-CH=CH-(CH2)n-]m-; кат Ru-карбен Grubbs G1/G2/G3",
+    "conditions": "T 20–80°C, растворитель CH2Cl2 или толуол, низкая загрузка катализатора 0.01–1 моль%",
+    "prereq": ["concept.chemistry.kinetics.catalyst", "concept.chemistry.organic.alkene"],
+    "confidence": 0.93,
+    "tags": ["ROMP", "grubbs", "metathesis", "ruthenium_carbene"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.92,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "process.chemistry.petrochemistry.visbreaking",
+    "schema_version": "3.2",
+    "domain": "chemistry.petrochemistry",
+    "subtopic": "chemistry.petrochemistry.refining",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Висбрекинг — мягкий термический крекинг тяжёлых остатков для снижения вязкости котельного топлива без образования значительных количеств кокса.",
+    "formal_notation": "Гудрон → бензин (5–10%) + газойль (15–20%) + висбрекинг-остаток с пониженной вязкостью",
+    "conditions": "Печной режим 470–490°C, sojourner-режим с реакционной камерой 420–440°C, время 1–8 мин",
+    "prereq": ["process.chemistry.petrochemistry.vacuum_distillation"],
+    "confidence": 0.94,
+    "tags": ["visbreaking", "thermal_cracking", "residue", "viscosity_reduction"],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.95,
+      "safety_critical": true,
+      "safety_notes": "Высокие T; коксование в трубах; пары углеводородов и H2S"
+    }
+  }
+]

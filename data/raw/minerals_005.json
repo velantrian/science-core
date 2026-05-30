@@ -1,0 +1,502 @@
+[
+  {
+    "id": "material.geology.mineralogy.diopside",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.pyroxenes",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Диопсид — клинопироксен Ca-Mg, моноклинная сингония, твёрдость 5,5–6,5, плотность 3,22–3,38 г/см³, зелёный, угол спайности 87°/93°.",
+    "formal_notation": "CaMgSi2O6; monoclinic; ρ=3.22–3.38; Mohs 5.5–6.5",
+    "conditions": "Метаморфизованные карбонаты, скарны, основные интрузивы",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.97,
+    "tags": ["silicate", "pyroxene", "diopside", "rock_forming"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.hedenbergite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.pyroxenes",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Геденбергит — клинопироксен Ca-Fe, моноклинная сингония, твёрдость 5,5–6,5, плотность 3,55 г/см³, тёмно-зелёный до чёрного, конечный член ряда с диопсидом.",
+    "formal_notation": "CaFeSi2O6; monoclinic; ρ=3.55; Mohs 5.5–6.5",
+    "conditions": "Железо-марганцевые скарны, метаморфические железистые породы",
+    "prereq": ["principle.geology.mineralogy.crystallochemistry.isomorphism"],
+    "confidence": 0.96,
+    "tags": ["silicate", "pyroxene", "hedenbergite", "skarn"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.aegirine",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.pyroxenes",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Эгирин — щелочной клинопироксен Na-Fe(III), моноклинная сингония, твёрдость 5–6, плотность 3,5–3,6 г/см³, тёмно-зелёный до чёрного, призматический.",
+    "formal_notation": "NaFe3+Si2O6; monoclinic; ρ=3.5–3.6; Mohs 5–6",
+    "conditions": "Щелочные интрузивы (нефелиновые сиениты), пегматиты, агпаитовые породы",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.95,
+    "tags": ["silicate", "pyroxene", "aegirine", "alkaline"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.actinolite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.amphiboles",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Актинолит — амфибол Ca-Mg-Fe, моноклинная сингония, твёрдость 5–6, плотность 3,0–3,2 г/см³, зелёный, игольчатый, член ряда тремолит-ферроактинолит.",
+    "formal_notation": "Ca2(Mg,Fe)5Si8O22(OH)2; monoclinic; ρ=3.0–3.2; Mohs 5–6",
+    "conditions": "Низкотемпературный метаморфизм (зелёносланцевая фация), скарны",
+    "prereq": ["principle.geology.mineralogy.crystallochemistry.isomorphism"],
+    "confidence": 0.97,
+    "tags": ["silicate", "amphibole", "actinolite", "metamorphic"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.phlogopite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.micas",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Флогопит — магнезиальная слюда, моноклинная сингония, твёрдость 2,5–3, плотность 2,76–2,9 г/см³, светло-бурый, совершенная спайность по {001}.",
+    "formal_notation": "KMg3(AlSi3O10)(F,OH)2; monoclinic; ρ=2.76–2.9; Mohs 2.5–3",
+    "conditions": "Метаморфизованные доломиты, ультраосновные породы, кимберлиты",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.96,
+    "tags": ["silicate", "mica", "phlogopite", "metamorphic"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.lepidolite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.micas",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Лепидолит — литиевая слюда, моноклинная сингония, твёрдость 2,5–4, плотность 2,8–2,9 г/см³, сиренево-розовый, главный минерал-руда лития.",
+    "formal_notation": "K(Li,Al)3(Si,Al)4O10(F,OH)2; monoclinic; ρ=2.8–2.9; Mohs 2.5–4",
+    "conditions": "Гранитные пегматиты с редкими элементами (Li, Cs, Rb)",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.96,
+    "tags": ["silicate", "mica", "lepidolite", "lithium_ore"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.antigorite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.phyllosilicates",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Антигорит — пластинчатая разновидность серпентина, моноклинная сингония, твёрдость 3,5–4, плотность 2,5–2,6 г/см³, зелёный, высокотемпературный.",
+    "formal_notation": "Mg3Si2O5(OH)4; monoclinic; ρ=2.5–2.6; Mohs 3.5–4",
+    "conditions": "Метаморфизм ультраосновных пород (серпентинизация перидотитов)",
+    "prereq": ["principle.geology.mineralogy.crystallochemistry.polymorphism"],
+    "confidence": 0.95,
+    "tags": ["silicate", "serpentine", "antigorite", "metamorphic"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.chrysotile",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.phyllosilicates",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Хризотил — волокнистая разновидность серпентина, моноклинная сингония, твёрдость 2,5–3, плотность 2,53 г/см³, шелковисто-зелёный, главный асбест.",
+    "formal_notation": "Mg3Si2O5(OH)4; monoclinic; ρ=2.53; Mohs 2.5–3; fibrous",
+    "conditions": "Жилы в серпентинизированных ультрамафитах",
+    "prereq": ["principle.geology.mineralogy.crystallochemistry.polymorphism"],
+    "confidence": 0.97,
+    "tags": ["silicate", "serpentine", "chrysotile", "asbestos"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.pyrophyllite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.phyllosilicates",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Пирофиллит — алюмосиликат, триклинная/моноклинная сингония, твёрдость 1–2, плотность 2,65–2,9 г/см³, белый или серый, жирный на ощупь.",
+    "formal_notation": "Al2Si4O10(OH)2; triclinic/monoclinic; ρ=2.65–2.9; Mohs 1–2",
+    "conditions": "Низкотемпературный метаморфизм глинистых пород, гидротермальные изменения",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.94,
+    "tags": ["silicate", "phyllosilicate", "pyrophyllite", "metamorphic"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.montmorillonite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.clays",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Монтмориллонит — смектитовая глина, моноклинная сингония, твёрдость 1–2, плотность 2,0–2,7 г/см³, набухает в воде, главный компонент бентонита.",
+    "formal_notation": "(Na,Ca)0.33(Al,Mg)2(Si4O10)(OH)2·nH2O; monoclinic; ρ=2.0–2.7; Mohs 1–2",
+    "conditions": "Выветривание основных вулканитов и пеплов, бентонитизация",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.95,
+    "tags": ["silicate", "clay", "montmorillonite", "smectite"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.illite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.clays",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Иллит — слюдоподобная глина, моноклинная сингония, твёрдость 1–2, плотность 2,6–2,9 г/см³, доминирующий глинистый минерал глинистых сланцев.",
+    "formal_notation": "K0.65Al2(Al0.65Si3.35O10)(OH)2; monoclinic; ρ=2.6–2.9; Mohs 1–2",
+    "conditions": "Диагенез и низкотемпературный метаморфизм глинистых осадков",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.93,
+    "tags": ["silicate", "clay", "illite", "sedimentary"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.vermiculite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.clays",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Вермикулит — гидратированная слюда, моноклинная сингония, твёрдость 1,5, плотность 2,4–2,7 г/см³, при нагреве расширяется в 8–12 раз.",
+    "formal_notation": "(Mg,Fe,Al)3(Al,Si)4O10(OH)2·4H2O; monoclinic; ρ=2.4–2.7; Mohs 1.5",
+    "conditions": "Гидротермальное выветривание биотита и флогопита",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.93,
+    "tags": ["silicate", "clay", "vermiculite", "expanding"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.natrolite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.zeolites",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Натролит — натриевый цеолит, орторомбическая сингония, твёрдость 5–5,5, плотность 2,2–2,25 г/см³, белый, игольчатые радиально-лучистые агрегаты.",
+    "formal_notation": "Na2Al2Si3O10·2H2O; orthorhombic; ρ=2.2–2.25; Mohs 5–5.5",
+    "conditions": "Полости базальтов, щелочные пегматиты, гидротермальные жилы",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.95,
+    "tags": ["silicate", "zeolite", "natrolite", "hydrothermal"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.heulandite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.zeolites",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Гейландит — Ca-Na цеолит, моноклинная сингония, твёрдость 3,5–4, плотность 2,1–2,2 г/см³, перламутровый блеск, таблитчатые кристаллы.",
+    "formal_notation": "(Ca,Na)2-3Al3(Al,Si)2Si13O36·12H2O; monoclinic; ρ=2.1–2.2; Mohs 3.5–4",
+    "conditions": "Миндалины в базальтах, низкотемпературный гидротермальный процесс",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.93,
+    "tags": ["silicate", "zeolite", "heulandite", "secondary"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.chabazite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.zeolites",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Шабазит — Ca-Na цеолит, тригональная сингония, твёрдость 4–5, плотность 2,05–2,15 г/см³, ромбоэдрические псевдокубические кристаллы.",
+    "formal_notation": "(Ca,Na2,K2)Al2Si4O12·6H2O; trigonal; ρ=2.05–2.15; Mohs 4–5",
+    "conditions": "Миндалины в базальтах, гидротермальные изменения вулканитов",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.93,
+    "tags": ["silicate", "zeolite", "chabazite", "secondary"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.margarite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.micas",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Маргарит — хрупкая Ca-слюда, моноклинная сингония, твёрдость 3,5–5, плотность 2,99–3,08 г/см³, серовато-розовый, спайность {001}.",
+    "formal_notation": "CaAl2(Al2Si2O10)(OH)2; monoclinic; ρ=2.99–3.08; Mohs 3.5–5",
+    "conditions": "Метаморфические породы, ассоциирует с корундом и хлоритоидом",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.92,
+    "tags": ["silicate", "mica", "margarite", "brittle_mica"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.celadonite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.micas",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Селадонит — K-Fe-Mg слюда, моноклинная сингония, твёрдость 2, плотность 3,0 г/см³, тёмно-зелёный, низкотемпературный аналог глауконита в вулканитах.",
+    "formal_notation": "K(Mg,Fe2+)(Fe3+,Al)Si4O10(OH)2; monoclinic; ρ=3.0; Mohs 2",
+    "conditions": "Низкотемпературные гидротермальные изменения базальтов",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.91,
+    "tags": ["silicate", "mica", "celadonite", "hydrothermal"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.chlorite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.phyllosilicates",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Хлорит — группа слоистых Mg-Fe-Al силикатов, моноклинная/триклинная сингония, твёрдость 2–2,5, плотность 2,6–3,3 г/см³, зелёный, листоватый.",
+    "formal_notation": "(Mg,Fe,Al)6(Si,Al)4O10(OH)8; monoclinic; ρ=2.6–3.3; Mohs 2–2.5",
+    "conditions": "Низкотемпературный метаморфизм (зелёносланцевая фация), гидротермальное замещение биотита",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.97,
+    "tags": ["silicate", "phyllosilicate", "chlorite", "metamorphic"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.sericite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.micas",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Серицит — мелкочешуйчатая разновидность мусковита, моноклинная сингония, твёрдость 2–2,5, плотность 2,77–2,88 г/см³, шелковистый блеск.",
+    "formal_notation": "KAl2(AlSi3O10)(OH)2; monoclinic; ρ=2.77–2.88; Mohs 2–2.5",
+    "conditions": "Гидротермальные изменения (серицитизация) полевых шпатов",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.94,
+    "tags": ["silicate", "mica", "sericite", "hydrothermal"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.dumortierite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.nesosilicates",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Дюмортьерит — Al-боросиликат, орторомбическая сингония, твёрдость 7–8,5, плотность 3,3–3,4 г/см³, синий или фиолетово-синий, плеохроичный.",
+    "formal_notation": "Al7BO3(SiO4)3O3; orthorhombic; ρ=3.3–3.4; Mohs 7–8.5",
+    "conditions": "Высокоалюминиевый метаморфизм, пегматиты, гидротермальные жилы",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.93,
+    "tags": ["silicate", "nesosilicate", "dumortierite", "borosilicate"],
+    "tier_extensions": {
+      "source": "IMA-CNMNC 2024",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.sillimanite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.nesosilicates",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Силлиманит — несосиликат Al, орторомбическая сингония, твёрдость 6,5–7,5, плотность 3,23 г/см³, высокотемпературный полиморф Al2SiO5.",
+    "formal_notation": "Al2SiO5; orthorhombic; ρ=3.23; Mohs 6.5–7.5",
+    "conditions": "Высокотемпературный региональный и контактовый метаморфизм глинистых пород",
+    "prereq": ["principle.geology.mineralogy.crystallochemistry.polymorphism"],
+    "confidence": 0.97,
+    "tags": ["silicate", "nesosilicate", "sillimanite", "polymorph"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.andalusite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.nesosilicates",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Андалузит — несосиликат Al, орторомбическая сингония, твёрдость 6,5–7,5, плотность 3,13–3,16 г/см³, низкобарический полиморф Al2SiO5, чиастолит.",
+    "formal_notation": "Al2SiO5; orthorhombic; ρ=3.13–3.16; Mohs 6.5–7.5",
+    "conditions": "Низкобарический контактовый метаморфизм глинистых пород",
+    "prereq": ["principle.geology.mineralogy.crystallochemistry.polymorphism"],
+    "confidence": 0.96,
+    "tags": ["silicate", "nesosilicate", "andalusite", "polymorph"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.glauconite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.micas",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Глауконит — K-Fe слюда, моноклинная сингония, твёрдость 2, плотность 2,4–2,95 г/см³, зелёный, индикатор морских осадков (глауконитовые пески).",
+    "formal_notation": "(K,Na)(Fe3+,Al,Mg)2(Si,Al)4O10(OH)2; monoclinic; ρ=2.4–2.95; Mohs 2",
+    "conditions": "Морские шельфовые осадки с медленным накоплением",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.93,
+    "tags": ["silicate", "mica", "glauconite", "sedimentary"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.anthophyllite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.amphiboles",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Антофиллит — Mg-Fe амфибол, орторомбическая сингония, твёрдость 5,5–6, плотность 2,85–3,57 г/см³, серо-бурый, волокнистый, асбестовая форма.",
+    "formal_notation": "(Mg,Fe)7Si8O22(OH)2; orthorhombic; ρ=2.85–3.57; Mohs 5.5–6",
+    "conditions": "Метаморфизм ультраосновных пород, среднетемпературные метаморфиты",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.92,
+    "tags": ["silicate", "amphibole", "anthophyllite", "metamorphic"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.glaucophane",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.amphiboles",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Глаукофан — Na амфибол, моноклинная сингония, твёрдость 6–6,5, плотность 3,0–3,15 г/см³, лазурно-синий, индикатор высокобарического метаморфизма.",
+    "formal_notation": "Na2(Mg,Fe)3Al2Si8O22(OH)2; monoclinic; ρ=3.0–3.15; Mohs 6–6.5",
+    "conditions": "Высокобарический низкотемпературный метаморфизм (глаукофановые сланцы)",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.95,
+    "tags": ["silicate", "amphibole", "glaucophane", "high_pressure"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  }
+]

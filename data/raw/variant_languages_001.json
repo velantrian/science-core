@@ -1,0 +1,477 @@
+[
+  {
+    "id": "fact.linguistics.lang_mandarin",
+    "schema_version": "3.2",
+    "domain": "linguistics.languages",
+    "subtopic": "language.mandarin",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Мандаринский китайский — язык с наибольшим числом носителей в мире как родного: около 940 миллионов L1-носителей в 2024 году.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.linguistics.language"],
+    "confidence": 0.88,
+    "tags": ["mandarin", "chinese", "sino-tibetan"],
+    "tier_extensions": {
+      "source": "Ethnologue 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.linguistics.lang_spanish",
+    "schema_version": "3.2",
+    "domain": "linguistics.languages",
+    "subtopic": "language.spanish",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Испанский язык имеет около 485 миллионов носителей как родного и распространён в Испании и Латинской Америке.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.linguistics.language"],
+    "confidence": 0.88,
+    "tags": ["spanish", "romance", "indo-european"],
+    "tier_extensions": {
+      "source": "Ethnologue 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.linguistics.lang_english",
+    "schema_version": "3.2",
+    "domain": "linguistics.languages",
+    "subtopic": "language.english",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Английский — язык с наибольшим суммарным числом носителей: около 380 млн L1 и около 1.5 млрд всего в 2024 году.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.linguistics.language"],
+    "confidence": 0.9,
+    "tags": ["english", "germanic", "indo-european"],
+    "tier_extensions": {
+      "source": "Ethnologue 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.linguistics.lang_hindi",
+    "schema_version": "3.2",
+    "domain": "linguistics.languages",
+    "subtopic": "language.hindi",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Хинди — индоарийский язык Северной Индии, около 345 миллионов L1-носителей в 2024 году, государственный язык Индии.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.linguistics.language"],
+    "confidence": 0.85,
+    "tags": ["hindi", "indo-aryan", "india"],
+    "tier_extensions": {
+      "source": "Ethnologue 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.linguistics.lang_bengali",
+    "schema_version": "3.2",
+    "domain": "linguistics.languages",
+    "subtopic": "language.bengali",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Бенгальский — индоарийский язык Бангладеш и индийского штата Западная Бенгалия, около 240 миллионов L1-носителей.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.linguistics.language"],
+    "confidence": 0.85,
+    "tags": ["bengali", "indo-aryan", "bangladesh"],
+    "tier_extensions": {
+      "source": "Ethnologue 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.linguistics.lang_portuguese",
+    "schema_version": "3.2",
+    "domain": "linguistics.languages",
+    "subtopic": "language.portuguese",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Португальский — романский язык Португалии, Бразилии и ряда стран Африки, около 235 миллионов L1-носителей.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.linguistics.language"],
+    "confidence": 0.86,
+    "tags": ["portuguese", "romance", "indo-european"],
+    "tier_extensions": {
+      "source": "Ethnologue 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.linguistics.lang_russian",
+    "schema_version": "3.2",
+    "domain": "linguistics.languages",
+    "subtopic": "language.russian",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Русский — восточнославянский язык, около 150 миллионов L1-носителей и около 255 миллионов всего носителей в 2024 году.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.linguistics.language"],
+    "confidence": 0.86,
+    "tags": ["russian", "slavic", "indo-european"],
+    "tier_extensions": {
+      "source": "Ethnologue 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.linguistics.lang_japanese",
+    "schema_version": "3.2",
+    "domain": "linguistics.languages",
+    "subtopic": "language.japanese",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Японский — язык Японии, около 123 миллиона L1-носителей в 2024 году, не имеет общепризнанной языковой семьи.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.linguistics.language"],
+    "confidence": 0.86,
+    "tags": ["japanese", "japonic", "japan"],
+    "tier_extensions": {
+      "source": "Ethnologue 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "fact.linguistics.lang_indonesian",
+    "schema_version": "3.2",
+    "domain": "linguistics.languages",
+    "subtopic": "language.indonesian",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Индонезийский (бахаса) — австронезийский язык, государственный язык Индонезии, около 200 миллионов носителей всего.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.linguistics.language"],
+    "confidence": 0.84,
+    "tags": ["indonesian", "austronesian", "indonesia"],
+    "tier_extensions": {
+      "source": "Ethnologue 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.linguistics.lang_marathi",
+    "schema_version": "3.2",
+    "domain": "linguistics.languages",
+    "subtopic": "language.marathi",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Маратхи — индоарийский язык штата Махараштра Индии, около 83 миллиона L1-носителей в 2024 году.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.linguistics.language"],
+    "confidence": 0.83,
+    "tags": ["marathi", "indo-aryan", "india"],
+    "tier_extensions": {
+      "source": "Ethnologue 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.linguistics.lang_telugu",
+    "schema_version": "3.2",
+    "domain": "linguistics.languages",
+    "subtopic": "language.telugu",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Телугу — дравидийский язык южноиндийских штатов Андхра-Прадеш и Телангана, около 83 миллиона L1-носителей.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.linguistics.language"],
+    "confidence": 0.83,
+    "tags": ["telugu", "dravidian", "india"],
+    "tier_extensions": {
+      "source": "Ethnologue 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.linguistics.lang_turkish",
+    "schema_version": "3.2",
+    "domain": "linguistics.languages",
+    "subtopic": "language.turkish",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Турецкий — тюркский язык Турции и Кипра, около 84 миллионов L1-носителей в 2024 году, агглютинативный язык.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.linguistics.language"],
+    "confidence": 0.85,
+    "tags": ["turkish", "turkic", "turkey"],
+    "tier_extensions": {
+      "source": "Ethnologue 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.linguistics.lang_tamil",
+    "schema_version": "3.2",
+    "domain": "linguistics.languages",
+    "subtopic": "language.tamil",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Тамильский — дравидийский язык штата Тамил-Наду Индии и Шри-Ланки, около 79 миллионов L1-носителей, один из старейших живых.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.linguistics.language"],
+    "confidence": 0.85,
+    "tags": ["tamil", "dravidian", "india"],
+    "tier_extensions": {
+      "source": "Ethnologue 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.linguistics.lang_vietnamese",
+    "schema_version": "3.2",
+    "domain": "linguistics.languages",
+    "subtopic": "language.vietnamese",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Вьетнамский — австроазиатский тональный язык Вьетнама, около 85 миллионов L1-носителей в 2024 году.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.linguistics.language"],
+    "confidence": 0.84,
+    "tags": ["vietnamese", "austroasiatic", "vietnam"],
+    "tier_extensions": {
+      "source": "Ethnologue 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.linguistics.lang_korean",
+    "schema_version": "3.2",
+    "domain": "linguistics.languages",
+    "subtopic": "language.korean",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Корейский — язык Кореи, около 81 миллион L1-носителей в 2024 году, языковая семья дискутируется как изолят.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.linguistics.language"],
+    "confidence": 0.85,
+    "tags": ["korean", "koreanic", "korea"],
+    "tier_extensions": {
+      "source": "Ethnologue 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "fact.linguistics.lang_italian",
+    "schema_version": "3.2",
+    "domain": "linguistics.languages",
+    "subtopic": "language.italian",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Итальянский — романский язык Италии, Сан-Марино и части Швейцарии, около 65 миллионов L1-носителей в 2024 году.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.linguistics.language"],
+    "confidence": 0.85,
+    "tags": ["italian", "romance", "indo-european"],
+    "tier_extensions": {
+      "source": "Ethnologue 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.linguistics.lang_thai",
+    "schema_version": "3.2",
+    "domain": "linguistics.languages",
+    "subtopic": "language.thai",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Тайский — тай-кадайский тональный язык Таиланда, около 61 миллион L1-носителей в 2024 году, тонов в системе пять.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.linguistics.language"],
+    "confidence": 0.83,
+    "tags": ["thai", "tai-kadai", "thailand"],
+    "tier_extensions": {
+      "source": "Ethnologue 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.linguistics.lang_gujarati",
+    "schema_version": "3.2",
+    "domain": "linguistics.languages",
+    "subtopic": "language.gujarati",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Гуджарати — индоарийский язык штата Гуджарат Индии, около 57 миллионов L1-носителей в 2024 году.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.linguistics.language"],
+    "confidence": 0.82,
+    "tags": ["gujarati", "indo-aryan", "india"],
+    "tier_extensions": {
+      "source": "Ethnologue 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.linguistics.lang_polish",
+    "schema_version": "3.2",
+    "domain": "linguistics.languages",
+    "subtopic": "language.polish",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Польский — западнославянский язык Польши, около 41 миллион L1-носителей в 2024 году, использует латиницу с диакритиками.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.linguistics.language"],
+    "confidence": 0.85,
+    "tags": ["polish", "slavic", "indo-european"],
+    "tier_extensions": {
+      "source": "Ethnologue 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.linguistics.lang_ukrainian",
+    "schema_version": "3.2",
+    "domain": "linguistics.languages",
+    "subtopic": "language.ukrainian",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Украинский — восточнославянский язык, около 33 миллионов L1-носителей в 2024 году, государственный язык Украины.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.linguistics.language"],
+    "confidence": 0.83,
+    "tags": ["ukrainian", "slavic", "indo-european"],
+    "tier_extensions": {
+      "source": "Ethnologue 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.linguistics.lang_malay",
+    "schema_version": "3.2",
+    "domain": "linguistics.languages",
+    "subtopic": "language.malay",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Малайский — австронезийский язык Малайзии, Сингапура и Брунея, около 19 миллионов L1-носителей, близкий к индонезийскому.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.linguistics.language"],
+    "confidence": 0.82,
+    "tags": ["malay", "austronesian", "malaysia"],
+    "tier_extensions": {
+      "source": "Ethnologue 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.linguistics.lang_msa",
+    "schema_version": "3.2",
+    "domain": "linguistics.languages",
+    "subtopic": "language.msa",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Современный стандартный арабский (MSA) — литературный арабский, официальный в 25 странах, читают около 300 миллионов человек.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.linguistics.language"],
+    "confidence": 0.84,
+    "tags": ["arabic", "semitic", "afroasiatic"],
+    "tier_extensions": {
+      "source": "Ethnologue 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.linguistics.lang_persian",
+    "schema_version": "3.2",
+    "domain": "linguistics.languages",
+    "subtopic": "language.persian",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Фарси (персидский) — иранский язык Ирана, Афганистана (дари) и Таджикистана, около 86 миллионов L1-носителей.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.linguistics.language"],
+    "confidence": 0.83,
+    "tags": ["persian", "iranian", "indo-european"],
+    "tier_extensions": {
+      "source": "Ethnologue 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.linguistics.lang_swahili",
+    "schema_version": "3.2",
+    "domain": "linguistics.languages",
+    "subtopic": "language.swahili",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Суахили — язык банту Восточной Африки, лингва франка региона, около 16 миллионов L1 и более 200 миллионов всего носителей.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.linguistics.language"],
+    "confidence": 0.8,
+    "tags": ["swahili", "bantu", "africa"],
+    "tier_extensions": {
+      "source": "Ethnologue 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.linguistics.lang_dutch",
+    "schema_version": "3.2",
+    "domain": "linguistics.languages",
+    "subtopic": "language.dutch",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Голландский — западногерманский язык Нидерландов и Бельгии, около 24 миллионов L1-носителей в 2024 году.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.linguistics.language"],
+    "confidence": 0.84,
+    "tags": ["dutch", "germanic", "indo-european"],
+    "tier_extensions": {
+      "source": "Ethnologue 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  }
+]

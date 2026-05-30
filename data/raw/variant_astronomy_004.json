@@ -1,0 +1,674 @@
+[
+  {
+    "id": "fact.astronomy.mission.hubble",
+    "schema_version": "3.2",
+    "domain": "astronomy.missions",
+    "subtopic": "astronomy.mission.hubble",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Hubble Space Telescope — оптический/УФ/ИК-телескоп NASA/ESA на НОО 540 км; диаметр зеркала 2,4 м; запуск 24.04.1990; >1,6 млн наблюдений; обслуживался 5 миссиями шаттла.",
+    "conditions": "Активен в 2024",
+    "prereq": [
+      "concept.astronomy.space_telescope"
+    ],
+    "confidence": 0.95,
+    "tags": [
+      "hubble",
+      "hst",
+      "space_telescope",
+      "nasa",
+      "esa"
+    ],
+    "tier_extensions": {
+      "source": "NASA/ESA 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "mirror_diameter_m": 2.4,
+      "launch_date": "1990-04-24",
+      "orbit_altitude_km": 540
+    }
+  },
+  {
+    "id": "fact.astronomy.mission.voyager_1",
+    "schema_version": "3.2",
+    "domain": "astronomy.missions",
+    "subtopic": "astronomy.mission.voyager_1",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Voyager 1 — межпланетный зонд NASA; запуск 05.09.1977; пересёк гелиопаузу 25.08.2012; самый удалённый объект, созданный человеком: >24 млрд км от Земли (2024).",
+    "conditions": "На 2024 в межзвёздном пространстве",
+    "prereq": [
+      "concept.astronomy.space_probe"
+    ],
+    "confidence": 0.95,
+    "tags": [
+      "voyager_1",
+      "interstellar",
+      "nasa",
+      "deep_space"
+    ],
+    "tier_extensions": {
+      "source": "NASA JPL 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "launch_date": "1977-09-05",
+      "heliopause_crossing": "2012-08-25",
+      "distance_km_2024": 24000000000.0
+    }
+  },
+  {
+    "id": "fact.astronomy.mission.voyager_2",
+    "schema_version": "3.2",
+    "domain": "astronomy.missions",
+    "subtopic": "astronomy.mission.voyager_2",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Voyager 2 — межпланетный зонд NASA; запуск 20.08.1977; единственный, посетивший Уран (1986) и Нептун (1989); пересёк гелиопаузу 05.11.2018.",
+    "conditions": "На 2024 в межзвёздном пространстве",
+    "prereq": [
+      "concept.astronomy.space_probe"
+    ],
+    "confidence": 0.95,
+    "tags": [
+      "voyager_2",
+      "interstellar",
+      "uranus",
+      "neptune"
+    ],
+    "tier_extensions": {
+      "source": "NASA JPL 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "launch_date": "1977-08-20",
+      "heliopause_crossing": "2018-11-05"
+    }
+  },
+  {
+    "id": "fact.astronomy.mission.cassini",
+    "schema_version": "3.2",
+    "domain": "astronomy.missions",
+    "subtopic": "astronomy.mission.cassini",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Cassini-Huygens — миссия NASA/ESA/ASI к Сатурну; запуск 15.10.1997; прибытие 01.07.2004; зонд Huygens сел на Титан 14.01.2005; завершена погружением в Сатурн 15.09.2017.",
+    "conditions": "Завершена 2017",
+    "prereq": [
+      "concept.astronomy.space_probe",
+      "fact.astronomy.planet.saturn"
+    ],
+    "confidence": 0.95,
+    "tags": [
+      "cassini",
+      "huygens",
+      "saturn",
+      "titan"
+    ],
+    "tier_extensions": {
+      "source": "NASA/ESA/ASI 2017",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "launch_date": "1997-10-15",
+      "saturn_arrival": "2004-07-01",
+      "end_date": "2017-09-15"
+    }
+  },
+  {
+    "id": "fact.astronomy.mission.new_horizons",
+    "schema_version": "3.2",
+    "domain": "astronomy.missions",
+    "subtopic": "astronomy.mission.new_horizons",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "New Horizons — зонд NASA; запуск 19.01.2006; пролёт Плутона 14.07.2015 на 12500 км; пролёт KBO Аррокот 01.01.2019; продолжает миссию в поясе Койпера.",
+    "conditions": "Активна 2024",
+    "prereq": [
+      "concept.astronomy.space_probe",
+      "fact.astronomy.dwarf_planet.pluto"
+    ],
+    "confidence": 0.95,
+    "tags": [
+      "new_horizons",
+      "pluto",
+      "kuiper_belt",
+      "arrokoth"
+    ],
+    "tier_extensions": {
+      "source": "NASA APL 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "launch_date": "2006-01-19",
+      "pluto_flyby": "2015-07-14",
+      "arrokoth_flyby": "2019-01-01"
+    }
+  },
+  {
+    "id": "fact.astronomy.mission.curiosity",
+    "schema_version": "3.2",
+    "domain": "astronomy.missions",
+    "subtopic": "astronomy.mission.curiosity",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Curiosity (MSL) — марсоход NASA; запуск 26.11.2011; посадка в кратер Гейл 06.08.2012; масса 899 кг; работает на РИТЭГ; подтвердил древнюю обитаемость Марса.",
+    "conditions": "Активен 2024",
+    "prereq": [
+      "concept.astronomy.mars_rover",
+      "fact.astronomy.planet.mars"
+    ],
+    "confidence": 0.95,
+    "tags": [
+      "curiosity",
+      "msl",
+      "mars_rover",
+      "gale_crater"
+    ],
+    "tier_extensions": {
+      "source": "NASA JPL 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "launch_date": "2011-11-26",
+      "landing_date": "2012-08-06",
+      "mass_kg": 899
+    }
+  },
+  {
+    "id": "fact.astronomy.mission.insight",
+    "schema_version": "3.2",
+    "domain": "astronomy.missions",
+    "subtopic": "astronomy.mission.insight",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "InSight — стационарный посадочный аппарат NASA на Марсе; запуск 05.05.2018; посадка 26.11.2018 в Elysium Planitia; зафиксировал >1300 марсотрясений; миссия завершена 21.12.2022.",
+    "conditions": "Завершена 2022",
+    "prereq": [
+      "fact.astronomy.planet.mars"
+    ],
+    "confidence": 0.95,
+    "tags": [
+      "insight",
+      "mars_lander",
+      "seismology"
+    ],
+    "tier_extensions": {
+      "source": "NASA JPL 2022",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "launch_date": "2018-05-05",
+      "landing_date": "2018-11-26",
+      "end_date": "2022-12-21",
+      "marsquakes_detected": 1300
+    }
+  },
+  {
+    "id": "fact.astronomy.mission.parker_solar_probe",
+    "schema_version": "3.2",
+    "domain": "astronomy.missions",
+    "subtopic": "astronomy.mission.parker_solar_probe",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Parker Solar Probe — зонд NASA для изучения солнечной короны; запуск 12.08.2018; минимальный перигелий 6,16 млн км от Солнца; рекордная скорость 192 км/с.",
+    "conditions": "Активен 2024",
+    "prereq": [
+      "fact.astronomy.star.sun"
+    ],
+    "confidence": 0.95,
+    "tags": [
+      "parker_solar_probe",
+      "sun",
+      "corona"
+    ],
+    "tier_extensions": {
+      "source": "NASA APL 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "launch_date": "2018-08-12",
+      "min_perihelion_km": 6160000.0,
+      "max_speed_kms": 192
+    }
+  },
+  {
+    "id": "fact.astronomy.mission.juno",
+    "schema_version": "3.2",
+    "domain": "astronomy.missions",
+    "subtopic": "astronomy.mission.juno",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Juno — орбитальный зонд NASA вокруг Юпитера; запуск 05.08.2011; прибытие 04.07.2016; полярная орбита 53,5 дня; изучает магнитосферу, гравитационное поле, состав атмосферы.",
+    "conditions": "Активен 2024",
+    "prereq": [
+      "fact.astronomy.planet.jupiter"
+    ],
+    "confidence": 0.95,
+    "tags": [
+      "juno",
+      "jupiter",
+      "orbiter"
+    ],
+    "tier_extensions": {
+      "source": "NASA JPL 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "launch_date": "2011-08-05",
+      "jupiter_arrival": "2016-07-04",
+      "orbital_period_days": 53.5
+    }
+  },
+  {
+    "id": "fact.astronomy.mission.bepicolombo",
+    "schema_version": "3.2",
+    "domain": "astronomy.missions",
+    "subtopic": "astronomy.mission.bepicolombo",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "BepiColombo — миссия ESA/JAXA к Меркурию; запуск 20.10.2018; прибытие планируется на 2026; включает MPO (ESA) и Mio (JAXA); первые пролёты Меркурия совершены в 2021-2024.",
+    "conditions": "В перелёте 2024",
+    "prereq": [
+      "fact.astronomy.planet.mercury"
+    ],
+    "confidence": 0.93,
+    "tags": [
+      "bepicolombo",
+      "mercury",
+      "esa",
+      "jaxa"
+    ],
+    "tier_extensions": {
+      "source": "ESA/JAXA 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "launch_date": "2018-10-20",
+      "mercury_orbit_year": 2026
+    }
+  },
+  {
+    "id": "fact.astronomy.mission.gaia",
+    "schema_version": "3.2",
+    "domain": "astronomy.missions",
+    "subtopic": "astronomy.mission.gaia",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Gaia — астрометрическая миссия ESA в точке L2; запуск 19.12.2013; релиз DR3 (2022) содержит каталог из >1,8 млрд объектов; измеряет позиции, параллаксы, спектры.",
+    "conditions": "Активна 2024; DR3 актуальный релиз",
+    "prereq": [
+      "concept.astronomy.astrometry"
+    ],
+    "confidence": 0.95,
+    "tags": [
+      "gaia",
+      "astrometry",
+      "esa",
+      "l2"
+    ],
+    "tier_extensions": {
+      "source": "ESA Gaia DR3 2022",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "launch_date": "2013-12-19",
+      "catalog_objects": 1800000000.0
+    }
+  },
+  {
+    "id": "fact.astronomy.mission.tess",
+    "schema_version": "3.2",
+    "domain": "astronomy.missions",
+    "subtopic": "astronomy.mission.tess",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "TESS — космический телескоп NASA для поиска транзитных экзопланет; запуск 18.04.2018; орбита 13,7 дня; обнаружил >7000 кандидатов и >400 подтверждённых экзопланет.",
+    "conditions": "Активен 2024",
+    "prereq": [
+      "concept.astronomy.transit_method",
+      "concept.astronomy.exoplanet"
+    ],
+    "confidence": 0.94,
+    "tags": [
+      "tess",
+      "exoplanet_survey",
+      "transit"
+    ],
+    "tier_extensions": {
+      "source": "NASA MIT 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "launch_date": "2018-04-18",
+      "confirmed_exoplanets": 400,
+      "candidates": 7000
+    }
+  },
+  {
+    "id": "fact.astronomy.mission.chandra",
+    "schema_version": "3.2",
+    "domain": "astronomy.missions",
+    "subtopic": "astronomy.mission.chandra",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Chandra X-ray Observatory — рентгеновская обсерватория NASA на эллиптической орбите 10000-140000 км; запуск 23.07.1999; угловое разрешение 0,5″; чувствительность 0,1-10 кэВ.",
+    "conditions": "Активен 2024",
+    "prereq": [
+      "concept.astronomy.xray_telescope"
+    ],
+    "confidence": 0.95,
+    "tags": [
+      "chandra",
+      "xray_observatory",
+      "nasa"
+    ],
+    "tier_extensions": {
+      "source": "NASA CXC 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "launch_date": "1999-07-23",
+      "angular_resolution_arcsec": 0.5,
+      "energy_range_keV": [
+        0.1,
+        10
+      ]
+    }
+  },
+  {
+    "id": "fact.astronomy.observatory.alma",
+    "schema_version": "3.2",
+    "domain": "astronomy.observatories",
+    "subtopic": "astronomy.observatory.alma",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "ALMA (Atacama Large Millimeter Array) — наземный радиоинтерферометр в Чили на высоте 5058 м; 66 антенн (54×12 м + 12×7 м); диапазон 0,3-3,6 мм; открыт в 2013.",
+    "conditions": "Активен 2024",
+    "prereq": [
+      "concept.astronomy.radio_telescope"
+    ],
+    "confidence": 0.95,
+    "tags": [
+      "alma",
+      "radio_interferometer",
+      "millimeter_wave",
+      "chile"
+    ],
+    "tier_extensions": {
+      "source": "ESO/NRAO/NAOJ 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "altitude_m": 5058,
+      "antenna_count": 66,
+      "wavelength_range_mm": [
+        0.3,
+        3.6
+      ]
+    }
+  },
+  {
+    "id": "fact.astronomy.observatory.vlt",
+    "schema_version": "3.2",
+    "domain": "astronomy.observatories",
+    "subtopic": "astronomy.observatory.vlt",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "VLT (Very Large Telescope) — комплекс ESO на Серро-Параналь в Чили; 4 телескопа по 8,2 м; высота 2635 м; может работать как интерферометр VLTI; начал работу в 1998.",
+    "conditions": "Активен 2024",
+    "prereq": [
+      "concept.astronomy.optical_telescope"
+    ],
+    "confidence": 0.95,
+    "tags": [
+      "vlt",
+      "eso",
+      "optical_telescope",
+      "chile"
+    ],
+    "tier_extensions": {
+      "source": "ESO 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "mirror_diameter_m": 8.2,
+      "telescope_count": 4,
+      "altitude_m": 2635
+    }
+  },
+  {
+    "id": "fact.astronomy.observatory.ligo",
+    "schema_version": "3.2",
+    "domain": "astronomy.observatories",
+    "subtopic": "astronomy.observatory.ligo",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "LIGO — лазерный интерферометр для детектирования гравитационных волн; 2 установки (Хэнфорд, Ливингстон) по 4 км; чувствительность ~10⁻²¹; первое детектирование GW150914 в 2015.",
+    "conditions": "Активен; O4 runs 2024",
+    "prereq": [
+      "concept.astronomy.gravitational_wave"
+    ],
+    "confidence": 0.95,
+    "tags": [
+      "ligo",
+      "gravitational_wave_detector",
+      "interferometer"
+    ],
+    "tier_extensions": {
+      "source": "LIGO Scientific Collaboration 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "arm_length_km": 4,
+      "first_detection_year": 2015,
+      "strain_sensitivity": 1e-21
+    }
+  },
+  {
+    "id": "fact.astronomy.mission.planck",
+    "schema_version": "3.2",
+    "domain": "astronomy.missions",
+    "subtopic": "astronomy.mission.planck",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Planck — космическая обсерватория ESA для изучения реликтового излучения; запуск 14.05.2009; работа в L2; завершена в 2013; точно измерила параметры космологической модели ΛCDM.",
+    "conditions": "Завершена 2013",
+    "prereq": [
+      "concept.astronomy.cmb"
+    ],
+    "confidence": 0.95,
+    "tags": [
+      "planck",
+      "cmb",
+      "cosmology",
+      "esa"
+    ],
+    "tier_extensions": {
+      "source": "ESA Planck 2018 results",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "launch_date": "2009-05-14",
+      "end_date": "2013-10-23"
+    }
+  },
+  {
+    "id": "fact.astronomy.mission.wmap",
+    "schema_version": "3.2",
+    "domain": "astronomy.missions",
+    "subtopic": "astronomy.mission.wmap",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "WMAP (Wilkinson Microwave Anisotropy Probe) — миссия NASA по изучению анизотропии реликтового излучения; запуск 30.06.2001; работа в L2; завершена 20.10.2010.",
+    "conditions": "Завершена 2010",
+    "prereq": [
+      "concept.astronomy.cmb"
+    ],
+    "confidence": 0.95,
+    "tags": [
+      "wmap",
+      "cmb",
+      "cosmology",
+      "nasa"
+    ],
+    "tier_extensions": {
+      "source": "NASA WMAP 9-year 2013",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "launch_date": "2001-06-30",
+      "end_date": "2010-10-20"
+    }
+  },
+  {
+    "id": "fact.astronomy.observatory.vera_rubin",
+    "schema_version": "3.2",
+    "domain": "astronomy.observatories",
+    "subtopic": "astronomy.observatory.vera_rubin",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Vera C. Rubin Observatory (LSST) — наземный обзорный телескоп в Чили; диаметр главного зеркала 8,4 м; камера 3,2 Гпикс; первая полевая засветка 2025; программа LSST на 10 лет.",
+    "conditions": "Готовится к научной операции 2025",
+    "prereq": [
+      "concept.astronomy.optical_telescope"
+    ],
+    "confidence": 0.9,
+    "tags": [
+      "vera_rubin",
+      "lsst",
+      "survey_telescope",
+      "chile"
+    ],
+    "tier_extensions": {
+      "source": "NSF/DOE Rubin Observatory 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "mirror_diameter_m": 8.4,
+      "camera_gigapixels": 3.2,
+      "first_light_year": 2025
+    }
+  },
+  {
+    "id": "fact.astronomy.station.tiangong",
+    "schema_version": "3.2",
+    "domain": "astronomy.missions",
+    "subtopic": "astronomy.station.tiangong",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Тяньгун — китайская модульная орбитальная станция CMSA; масса ~100 т; орбита 340-450 км; модули Tianhe (2021), Wentian и Mengtian (2022); экипаж 3-6 космонавтов.",
+    "conditions": "Активна 2024",
+    "prereq": [
+      "concept.astronomy.space_station"
+    ],
+    "confidence": 0.94,
+    "tags": [
+      "tiangong",
+      "space_station",
+      "china",
+      "cmsa"
+    ],
+    "tier_extensions": {
+      "source": "CMSA 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "mass_t": 100,
+      "orbit_altitude_km_range": [
+        340,
+        450
+      ],
+      "tianhe_launch": "2021-04-29"
+    }
+  },
+  {
+    "id": "fact.astronomy.station.iss",
+    "schema_version": "3.2",
+    "domain": "astronomy.missions",
+    "subtopic": "astronomy.station.iss",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "МКС — международная орбитальная станция NASA/Роскосмос/ESA/JAXA/CSA; масса 420 т; орбита ~400 км; первый модуль Заря — 20.11.1998; постоянно обитаема с 02.11.2000.",
+    "conditions": "Активна 2024; план эксплуатации до 2030",
+    "prereq": [
+      "concept.astronomy.space_station"
+    ],
+    "confidence": 0.95,
+    "tags": [
+      "iss",
+      "international_space_station",
+      "nasa",
+      "roscosmos"
+    ],
+    "tier_extensions": {
+      "source": "NASA/Roscosmos 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "mass_t": 420,
+      "orbit_altitude_km": 400,
+      "first_module_date": "1998-11-20"
+    }
+  },
+  {
+    "id": "fact.astronomy.mission.kepler",
+    "schema_version": "3.2",
+    "domain": "astronomy.missions",
+    "subtopic": "astronomy.mission.kepler",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Kepler — космический телескоп NASA для поиска экзопланет транзитным методом; запуск 07.03.2009; гелиоцентрическая орбита; миссия K2 (2014-2018); подтвердил >2700 экзопланет.",
+    "conditions": "Завершена 2018",
+    "prereq": [
+      "concept.astronomy.transit_method",
+      "concept.astronomy.exoplanet"
+    ],
+    "confidence": 0.95,
+    "tags": [
+      "kepler",
+      "exoplanet_survey",
+      "transit",
+      "nasa"
+    ],
+    "tier_extensions": {
+      "source": "NASA Ames 2018",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "launch_date": "2009-03-07",
+      "end_date": "2018-10-30",
+      "confirmed_exoplanets": 2700
+    }
+  },
+  {
+    "id": "fact.astronomy.observatory.eht",
+    "schema_version": "3.2",
+    "domain": "astronomy.observatories",
+    "subtopic": "astronomy.observatory.eht",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Event Horizon Telescope (EHT) — глобальный VLBI-интерферометр на длине волны 1,3 мм; виртуальная апертура диаметром с Землю; первое изображение M87* (2019) и Sgr A* (2022).",
+    "conditions": "Активен 2024",
+    "prereq": [
+      "concept.astronomy.vlbi",
+      "concept.astronomy.black_hole_supermassive"
+    ],
+    "confidence": 0.94,
+    "tags": [
+      "eht",
+      "vlbi",
+      "black_hole_imaging"
+    ],
+    "tier_extensions": {
+      "source": "EHT Collaboration 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "wavelength_mm": 1.3,
+      "m87_image_year": 2019,
+      "sgr_a_image_year": 2022
+    }
+  }
+]

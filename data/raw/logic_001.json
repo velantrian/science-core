@@ -1,0 +1,483 @@
+[
+  {
+    "id": "law_of_thought.logic.formal.identity",
+    "schema_version": "3.2",
+    "domain": "logic.formal",
+    "subtopic": "logic.formal.laws_of_thought",
+    "tier": "logic",
+    "type": "law_of_thought",
+    "statement": "Всякое суждение тождественно самому себе: A есть A.",
+    "formal_notation": "A ≡ A",
+    "conditions": "Классическая двузначная логика; фиксированное значение терминов",
+    "limits": ["Нарушается при подмене значений терминов в ходе рассуждения"],
+    "prereq": ["concept.logic.formal.proposition", "concept.logic.formal.truth_value"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["law_of_thought", "identity", "formal", "aristotle"],
+    "tier_extensions": {
+      "category": "law",
+      "is_axiomatic": true
+    }
+  },
+  {
+    "id": "law_of_thought.logic.formal.non_contradiction",
+    "schema_version": "3.2",
+    "domain": "logic.formal",
+    "subtopic": "logic.formal.laws_of_thought",
+    "tier": "logic",
+    "type": "law_of_thought",
+    "statement": "Суждение и его отрицание не могут быть одновременно истинными в одном и том же отношении.",
+    "formal_notation": "¬(A ∧ ¬A)",
+    "conditions": "Классическая двузначная логика; единое отношение и время",
+    "limits": ["Параконсистентные логики допускают локальные противоречия без взрыва"],
+    "prereq": ["concept.logic.formal.negation", "concept.logic.formal.conjunction"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["law_of_thought", "non_contradiction", "formal", "aristotle"],
+    "tier_extensions": {
+      "category": "law",
+      "is_axiomatic": true
+    }
+  },
+  {
+    "id": "law_of_thought.logic.formal.excluded_middle",
+    "schema_version": "3.2",
+    "domain": "logic.formal",
+    "subtopic": "logic.formal.laws_of_thought",
+    "tier": "logic",
+    "type": "law_of_thought",
+    "statement": "Всякое суждение либо истинно, либо ложно — третьего не дано.",
+    "formal_notation": "A ∨ ¬A",
+    "conditions": "Классическая двузначная логика",
+    "limits": ["Интуиционистская логика отвергает закон для бесконечных областей"],
+    "prereq": ["concept.logic.formal.disjunction", "concept.logic.formal.negation"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["law_of_thought", "excluded_middle", "tertium_non_datur", "formal"],
+    "tier_extensions": {
+      "category": "law",
+      "is_axiomatic": true
+    }
+  },
+  {
+    "id": "law_of_thought.logic.formal.sufficient_reason",
+    "schema_version": "3.2",
+    "domain": "logic.formal",
+    "subtopic": "logic.formal.laws_of_thought",
+    "tier": "logic",
+    "type": "law_of_thought",
+    "statement": "Всякое истинное суждение должно иметь достаточное основание своей истинности.",
+    "formal_notation": "∀A: True(A) → ∃R: Ground(R, A)",
+    "conditions": "Рациональный дискурс; различение факта и обоснования",
+    "limits": ["Не указывает критерий достаточности основания"],
+    "prereq": ["concept.logic.formal.truth_value", "concept.logic.justification"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["law_of_thought", "sufficient_reason", "leibniz", "formal"],
+    "tier_extensions": {
+      "category": "law",
+      "is_axiomatic": true
+    }
+  },
+  {
+    "id": "inference_rule.logic.propositional.modus_ponens",
+    "schema_version": "3.2",
+    "domain": "logic.formal.propositional",
+    "subtopic": "logic.formal.inference_rules",
+    "tier": "logic",
+    "type": "inference_rule",
+    "statement": "Если истинно P→Q и истинно P, то истинно Q.",
+    "formal_notation": "((P → Q) ∧ P) ⊢ Q",
+    "conditions": "Классическая двузначная логика; импликация материальная",
+    "prereq": ["concept.logic.formal.implication", "concept.logic.formal.truth_value"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["inference_rule", "modus_ponens", "propositional", "deduction"],
+    "tier_extensions": {
+      "category": "rule",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "inference_rule.logic.propositional.modus_tollens",
+    "schema_version": "3.2",
+    "domain": "logic.formal.propositional",
+    "subtopic": "logic.formal.inference_rules",
+    "tier": "logic",
+    "type": "inference_rule",
+    "statement": "Если истинно P→Q и ложно Q, то ложно P.",
+    "formal_notation": "((P → Q) ∧ ¬Q) ⊢ ¬P",
+    "conditions": "Классическая двузначная логика",
+    "prereq": ["concept.logic.formal.implication", "concept.logic.formal.negation"],
+    "derives_from": ["inference_rule.logic.propositional.modus_ponens"],
+    "confidence": 1.0,
+    "tags": ["inference_rule", "modus_tollens", "propositional", "deduction"],
+    "tier_extensions": {
+      "category": "rule",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "inference_rule.logic.propositional.hypothetical_syllogism",
+    "schema_version": "3.2",
+    "domain": "logic.formal.propositional",
+    "subtopic": "logic.formal.inference_rules",
+    "tier": "logic",
+    "type": "inference_rule",
+    "statement": "Из P→Q и Q→R следует P→R.",
+    "formal_notation": "((P → Q) ∧ (Q → R)) ⊢ (P → R)",
+    "conditions": "Классическая двузначная логика; транзитивность импликации",
+    "prereq": ["concept.logic.formal.implication"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["inference_rule", "hypothetical_syllogism", "transitivity", "propositional"],
+    "tier_extensions": {
+      "category": "rule",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "inference_rule.logic.propositional.disjunctive_syllogism",
+    "schema_version": "3.2",
+    "domain": "logic.formal.propositional",
+    "subtopic": "logic.formal.inference_rules",
+    "tier": "logic",
+    "type": "inference_rule",
+    "statement": "Из P∨Q и ¬P следует Q.",
+    "formal_notation": "((P ∨ Q) ∧ ¬P) ⊢ Q",
+    "conditions": "Классическая двузначная логика; дизъюнкция включающая",
+    "prereq": ["concept.logic.formal.disjunction", "concept.logic.formal.negation"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["inference_rule", "disjunctive_syllogism", "propositional", "deduction"],
+    "tier_extensions": {
+      "category": "rule",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "inference_rule.logic.propositional.conjunction_introduction",
+    "schema_version": "3.2",
+    "domain": "logic.formal.propositional",
+    "subtopic": "logic.formal.inference_rules",
+    "tier": "logic",
+    "type": "inference_rule",
+    "statement": "Из истинности P и истинности Q следует истинность P∧Q.",
+    "formal_notation": "P, Q ⊢ (P ∧ Q)",
+    "conditions": "Классическая двузначная логика",
+    "prereq": ["concept.logic.formal.conjunction"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["inference_rule", "conjunction_introduction", "propositional", "natural_deduction"],
+    "tier_extensions": {
+      "category": "rule",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "inference_rule.logic.propositional.conjunction_elimination",
+    "schema_version": "3.2",
+    "domain": "logic.formal.propositional",
+    "subtopic": "logic.formal.inference_rules",
+    "tier": "logic",
+    "type": "inference_rule",
+    "statement": "Из истинности P∧Q следует истинность P (и истинность Q).",
+    "formal_notation": "(P ∧ Q) ⊢ P;   (P ∧ Q) ⊢ Q",
+    "conditions": "Классическая двузначная логика",
+    "prereq": ["concept.logic.formal.conjunction"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["inference_rule", "conjunction_elimination", "propositional", "natural_deduction"],
+    "tier_extensions": {
+      "category": "rule",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "inference_rule.logic.propositional.disjunction_introduction",
+    "schema_version": "3.2",
+    "domain": "logic.formal.propositional",
+    "subtopic": "logic.formal.inference_rules",
+    "tier": "logic",
+    "type": "inference_rule",
+    "statement": "Из истинности P следует истинность P∨Q при любом Q.",
+    "formal_notation": "P ⊢ (P ∨ Q)",
+    "conditions": "Классическая двузначная логика",
+    "prereq": ["concept.logic.formal.disjunction"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["inference_rule", "disjunction_introduction", "propositional", "natural_deduction"],
+    "tier_extensions": {
+      "category": "rule",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "inference_rule.logic.propositional.double_negation",
+    "schema_version": "3.2",
+    "domain": "logic.formal.propositional",
+    "subtopic": "logic.formal.inference_rules",
+    "tier": "logic",
+    "type": "inference_rule",
+    "statement": "Двойное отрицание эквивалентно утверждению: ¬¬P ↔ P.",
+    "formal_notation": "¬¬P ⊣⊢ P",
+    "conditions": "Классическая логика",
+    "limits": ["В интуиционистской логике ¬¬P → P не выводимо"],
+    "prereq": ["concept.logic.formal.negation"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["inference_rule", "double_negation", "propositional", "classical"],
+    "tier_extensions": {
+      "category": "rule",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "inference_rule.logic.propositional.contraposition",
+    "schema_version": "3.2",
+    "domain": "logic.formal.propositional",
+    "subtopic": "logic.formal.inference_rules",
+    "tier": "logic",
+    "type": "inference_rule",
+    "statement": "Импликация эквивалентна своей контрапозиции: P→Q равносильно ¬Q→¬P.",
+    "formal_notation": "(P → Q) ⊣⊢ (¬Q → ¬P)",
+    "conditions": "Классическая двузначная логика",
+    "prereq": ["concept.logic.formal.implication", "concept.logic.formal.negation"],
+    "derives_from": ["inference_rule.logic.propositional.modus_tollens"],
+    "confidence": 1.0,
+    "tags": ["inference_rule", "contraposition", "propositional", "equivalence"],
+    "tier_extensions": {
+      "category": "rule",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "inference_rule.logic.propositional.resolution",
+    "schema_version": "3.2",
+    "domain": "logic.formal.propositional",
+    "subtopic": "logic.formal.inference_rules",
+    "tier": "logic",
+    "type": "inference_rule",
+    "statement": "Из дизъюнкций P∨A и ¬P∨B следует A∨B.",
+    "formal_notation": "(P ∨ A), (¬P ∨ B) ⊢ (A ∨ B)",
+    "conditions": "Клаузальная нормальная форма; классическая логика",
+    "prereq": ["concept.logic.formal.disjunction", "concept.logic.formal.negation"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["inference_rule", "resolution", "propositional", "automated_proving"],
+    "tier_extensions": {
+      "category": "rule",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "inference_rule.logic.predicate.universal_instantiation",
+    "schema_version": "3.2",
+    "domain": "logic.formal.predicate",
+    "subtopic": "logic.formal.inference_rules",
+    "tier": "logic",
+    "type": "inference_rule",
+    "statement": "Из общеутвердительного суждения о всех x следует то же утверждение для конкретного a.",
+    "formal_notation": "∀x P(x) ⊢ P(a)",
+    "conditions": "Предикатное исчисление первого порядка; a — терм из области",
+    "prereq": ["concept.logic.formal.universal_quantifier", "concept.logic.formal.predicate"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["inference_rule", "universal_instantiation", "predicate", "quantifier"],
+    "tier_extensions": {
+      "category": "rule",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "inference_rule.logic.predicate.existential_generalization",
+    "schema_version": "3.2",
+    "domain": "logic.formal.predicate",
+    "subtopic": "logic.formal.inference_rules",
+    "tier": "logic",
+    "type": "inference_rule",
+    "statement": "Из истинности P(a) для конкретного a следует существование x с P(x).",
+    "formal_notation": "P(a) ⊢ ∃x P(x)",
+    "conditions": "Предикатное исчисление первого порядка; a определён в области",
+    "prereq": ["concept.logic.formal.existential_quantifier", "concept.logic.formal.predicate"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["inference_rule", "existential_generalization", "predicate", "quantifier"],
+    "tier_extensions": {
+      "category": "rule",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "inference_rule.logic.syllogism.barbara",
+    "schema_version": "3.2",
+    "domain": "logic.formal.syllogisms",
+    "subtopic": "logic.formal.syllogisms",
+    "tier": "logic",
+    "type": "inference_rule",
+    "statement": "Если всякое M есть P и всякое S есть M, то всякое S есть P.",
+    "formal_notation": "∀x(M(x)→P(x)), ∀x(S(x)→M(x)) ⊢ ∀x(S(x)→P(x))",
+    "conditions": "Первая фигура; модус AAA; непустые термины",
+    "prereq": ["concept.logic.formal.syllogism", "concept.logic.formal.universal_quantifier"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["syllogism", "barbara", "aristotle", "AAA"],
+    "tier_extensions": {
+      "category": "rule",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "inference_rule.logic.syllogism.celarent",
+    "schema_version": "3.2",
+    "domain": "logic.formal.syllogisms",
+    "subtopic": "logic.formal.syllogisms",
+    "tier": "logic",
+    "type": "inference_rule",
+    "statement": "Если ни одно M не есть P и всякое S есть M, то ни одно S не есть P.",
+    "formal_notation": "∀x(M(x)→¬P(x)), ∀x(S(x)→M(x)) ⊢ ∀x(S(x)→¬P(x))",
+    "conditions": "Первая фигура; модус EAE; непустые термины",
+    "prereq": ["concept.logic.formal.syllogism"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["syllogism", "celarent", "aristotle", "EAE"],
+    "tier_extensions": {
+      "category": "rule",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "inference_rule.logic.syllogism.darii",
+    "schema_version": "3.2",
+    "domain": "logic.formal.syllogisms",
+    "subtopic": "logic.formal.syllogisms",
+    "tier": "logic",
+    "type": "inference_rule",
+    "statement": "Если всякое M есть P и некоторое S есть M, то некоторое S есть P.",
+    "formal_notation": "∀x(M(x)→P(x)), ∃x(S(x)∧M(x)) ⊢ ∃x(S(x)∧P(x))",
+    "conditions": "Первая фигура; модус AII",
+    "prereq": ["concept.logic.formal.syllogism"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["syllogism", "darii", "aristotle", "AII"],
+    "tier_extensions": {
+      "category": "rule",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "inference_rule.logic.syllogism.ferio",
+    "schema_version": "3.2",
+    "domain": "logic.formal.syllogisms",
+    "subtopic": "logic.formal.syllogisms",
+    "tier": "logic",
+    "type": "inference_rule",
+    "statement": "Если ни одно M не есть P и некоторое S есть M, то некоторое S не есть P.",
+    "formal_notation": "∀x(M(x)→¬P(x)), ∃x(S(x)∧M(x)) ⊢ ∃x(S(x)∧¬P(x))",
+    "conditions": "Первая фигура; модус EIO",
+    "prereq": ["concept.logic.formal.syllogism"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["syllogism", "ferio", "aristotle", "EIO"],
+    "tier_extensions": {
+      "category": "rule",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "inference_rule.logic.syllogism.cesare",
+    "schema_version": "3.2",
+    "domain": "logic.formal.syllogisms",
+    "subtopic": "logic.formal.syllogisms",
+    "tier": "logic",
+    "type": "inference_rule",
+    "statement": "Если ни одно P не есть M и всякое S есть M, то ни одно S не есть P.",
+    "formal_notation": "∀x(P(x)→¬M(x)), ∀x(S(x)→M(x)) ⊢ ∀x(S(x)→¬P(x))",
+    "conditions": "Вторая фигура; модус EAE",
+    "prereq": ["concept.logic.formal.syllogism"],
+    "derives_from": ["inference_rule.logic.syllogism.celarent"],
+    "confidence": 1.0,
+    "tags": ["syllogism", "cesare", "aristotle", "second_figure"],
+    "tier_extensions": {
+      "category": "rule",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "inference_rule.logic.syllogism.camestres",
+    "schema_version": "3.2",
+    "domain": "logic.formal.syllogisms",
+    "subtopic": "logic.formal.syllogisms",
+    "tier": "logic",
+    "type": "inference_rule",
+    "statement": "Если всякое P есть M и ни одно S не есть M, то ни одно S не есть P.",
+    "formal_notation": "∀x(P(x)→M(x)), ∀x(S(x)→¬M(x)) ⊢ ∀x(S(x)→¬P(x))",
+    "conditions": "Вторая фигура; модус AEE",
+    "prereq": ["concept.logic.formal.syllogism"],
+    "derives_from": ["inference_rule.logic.syllogism.celarent"],
+    "confidence": 1.0,
+    "tags": ["syllogism", "camestres", "aristotle", "second_figure"],
+    "tier_extensions": {
+      "category": "rule",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "inference_rule.logic.syllogism.darapti",
+    "schema_version": "3.2",
+    "domain": "logic.formal.syllogisms",
+    "subtopic": "logic.formal.syllogisms",
+    "tier": "logic",
+    "type": "inference_rule",
+    "statement": "Если всякое M есть P и всякое M есть S, то некоторое S есть P.",
+    "formal_notation": "∀x(M(x)→P(x)), ∀x(M(x)→S(x)) ⊢ ∃x(S(x)∧P(x))",
+    "conditions": "Третья фигура; модус AAI; непустой средний термин",
+    "limits": ["Требует экзистенциального импорта; в современной логике без него невалиден"],
+    "prereq": ["concept.logic.formal.syllogism"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["syllogism", "darapti", "aristotle", "third_figure"],
+    "tier_extensions": {
+      "category": "rule",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "definition.logic.propositional.implication",
+    "schema_version": "3.2",
+    "domain": "logic.formal.propositional",
+    "subtopic": "logic.formal.propositional",
+    "tier": "logic",
+    "type": "definition",
+    "statement": "Импликация P→Q ложна только при истинном P и ложном Q; во всех остальных случаях истинна.",
+    "formal_notation": "(P → Q) ≡ (¬P ∨ Q)",
+    "conditions": "Классическая двузначная логика; материальная импликация",
+    "prereq": ["concept.logic.formal.truth_value", "concept.logic.formal.disjunction"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["definition", "implication", "propositional", "material"],
+    "tier_extensions": {
+      "category": "rule",
+      "is_axiomatic": true
+    }
+  },
+  {
+    "id": "definition.logic.formal.tautology",
+    "schema_version": "3.2",
+    "domain": "logic.formal.propositional",
+    "subtopic": "logic.formal.propositional",
+    "tier": "logic",
+    "type": "definition",
+    "statement": "Тавтология — формула, истинная при всех возможных назначениях истинностных значений переменным.",
+    "formal_notation": "⊨ φ ⟺ ∀v: v(φ) = T",
+    "conditions": "Классическая двузначная пропозициональная логика",
+    "prereq": ["concept.logic.formal.truth_value", "concept.logic.formal.proposition"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["definition", "tautology", "propositional", "validity"],
+    "tier_extensions": {
+      "category": "rule",
+      "is_axiomatic": true
+    }
+  }
+]

@@ -1,0 +1,477 @@
+[
+  {
+    "id": "fact.sports.football.fifa",
+    "schema_version": "3.2",
+    "domain": "sports.football",
+    "subtopic": "football.organization.fifa",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "ФИФА — Международная федерация футбола; основана 21 мая 1904 года в Париже; штаб-квартира в Цюрихе; 211 национальных ассоциаций-членов; организатор Чемпионата мира с 1930 года.",
+    "conditions": "Данные на 2024",
+    "prereq": [],
+    "confidence": 0.92,
+    "tags": ["fifa", "football", "soccer", "organization"],
+    "tier_extensions": {
+      "source": "FIFA Official 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.sports.football.world_cup",
+    "schema_version": "3.2",
+    "domain": "sports.football",
+    "subtopic": "football.event.world_cup",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Чемпионат мира по футболу — главный международный турнир ФИФА; проводится с 1930 года каждые 4 года; в 2022 году в Катаре победила Аргентина; ЧМ-2026 пройдёт в США, Канаде и Мексике с 48 командами.",
+    "conditions": "Данные на 2024; ЧМ-2026 расширен до 48 команд",
+    "prereq": ["fact.sports.football.fifa"],
+    "confidence": 0.91,
+    "tags": ["world_cup", "fifa", "football", "tournament"],
+    "tier_extensions": {
+      "source": "FIFA Official 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.sports.football.uefa_champions_league",
+    "schema_version": "3.2",
+    "domain": "sports.football",
+    "subtopic": "football.event.champions_league",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Лига чемпионов УЕФА — ежегодный клубный турнир; проводится с 1955 года (как Кубок европейских чемпионов); в сезоне 2023/24 победил «Реал Мадрид» (15-й трофей); с 2024/25 новый формат с 36 командами в общей лиге.",
+    "conditions": "Данные на конец сезона 2023/24",
+    "prereq": [],
+    "confidence": 0.9,
+    "tags": ["champions_league", "uefa", "football", "club"],
+    "tier_extensions": {
+      "source": "UEFA Official 2024",
+      "valid_from": "2024-06-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.sports.football.uefa_euro",
+    "schema_version": "3.2",
+    "domain": "sports.football",
+    "subtopic": "football.event.euro",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Чемпионат Европы по футболу (УЕФА Евро) — главный турнир сборных Европы; проводится каждые 4 года с 1960 года; Евро-2024 в Германии выиграла сборная Испании, четвёртый титул в истории.",
+    "conditions": "Данные на 14 июля 2024 (финал Евро-2024)",
+    "prereq": [],
+    "confidence": 0.92,
+    "tags": ["euro", "uefa", "football", "tournament"],
+    "tier_extensions": {
+      "source": "UEFA Official 2024",
+      "valid_from": "2024-07-14",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.sports.basketball.nba",
+    "schema_version": "3.2",
+    "domain": "sports.basketball",
+    "subtopic": "basketball.league.nba",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "НБА — Национальная баскетбольная ассоциация США и Канады; основана 6 июня 1946 года; 30 клубов в двух конференциях; регулярный сезон 82 игры; чемпионом 2023/24 стал «Бостон Селтикс» (18-й титул).",
+    "conditions": "Данные на финал НБА 2024",
+    "prereq": [],
+    "confidence": 0.91,
+    "tags": ["nba", "basketball", "league", "usa"],
+    "tier_extensions": {
+      "source": "NBA Official 2024",
+      "valid_from": "2024-06-17",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.sports.tennis.grand_slam",
+    "schema_version": "3.2",
+    "domain": "sports.tennis",
+    "subtopic": "tennis.event.grand_slam",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Турниры Большого шлема — четыре главных турнира в теннисе: Australian Open (январь, хард), Roland Garros (май–июнь, грунт), Wimbledon (июнь–июль, трава), US Open (август–сентябрь, хард).",
+    "conditions": "Данные на сезон 2024",
+    "prereq": [],
+    "confidence": 0.93,
+    "tags": ["tennis", "grand_slam", "atp", "wta"],
+    "tier_extensions": {
+      "source": "ITF / ATP / WTA 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.sports.tennis.wimbledon",
+    "schema_version": "3.2",
+    "domain": "sports.tennis",
+    "subtopic": "tennis.event.wimbledon",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Уимблдон — старейший теннисный турнир, проводится с 1877 года в Лондоне на травяном покрытии; единственный турнир Большого шлема на траве; в 2024 году у мужчин победил Карлос Алькарас.",
+    "conditions": "Данные на 14 июля 2024",
+    "prereq": ["fact.sports.tennis.grand_slam"],
+    "confidence": 0.91,
+    "tags": ["wimbledon", "tennis", "grass", "grand_slam"],
+    "tier_extensions": {
+      "source": "AELTC Official 2024",
+      "valid_from": "2024-07-14",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.sports.boxing.weight_classes",
+    "schema_version": "3.2",
+    "domain": "sports.boxing",
+    "subtopic": "boxing.rules",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Профессиональный бокс делит спортсменов на 17 весовых категорий — от минимума (до 47,627 кг) до супертяжёлого (свыше 90,719 кг); главные санкционирующие организации — WBA, WBC, IBF, WBO.",
+    "conditions": "Данные на 2024",
+    "prereq": [],
+    "confidence": 0.88,
+    "tags": ["boxing", "weight_class", "wbc", "rules"],
+    "tier_extensions": {
+      "source": "WBC / WBA Official 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.sports.mma.ufc",
+    "schema_version": "3.2",
+    "domain": "sports.mma",
+    "subtopic": "mma.league.ufc",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "UFC — Ultimate Fighting Championship, крупнейшая организация ММА в мире; основана 12 ноября 1993 года; штаб-квартира в Лас-Вегасе; бои проводятся по «единым правилам ММА» в восьмиугольнике (Octagon).",
+    "conditions": "Данные на 2024",
+    "prereq": [],
+    "confidence": 0.9,
+    "tags": ["ufc", "mma", "octagon", "league"],
+    "tier_extensions": {
+      "source": "UFC Official 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.sports.hockey.nhl",
+    "schema_version": "3.2",
+    "domain": "sports.hockey",
+    "subtopic": "hockey.league.nhl",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "НХЛ — Национальная хоккейная лига Северной Америки; основана 26 ноября 1917 года; 32 клуба после расширения в 2021 (Сиэтл «Кракен»); главный трофей — Кубок Стэнли; в 2023/24 победил «Флорида Пантерз».",
+    "conditions": "Данные на финал Кубка Стэнли 2024",
+    "prereq": [],
+    "confidence": 0.9,
+    "tags": ["nhl", "hockey", "stanley_cup", "league"],
+    "tier_extensions": {
+      "source": "NHL Official 2024",
+      "valid_from": "2024-06-24",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.sports.baseball.mlb",
+    "schema_version": "3.2",
+    "domain": "sports.baseball",
+    "subtopic": "baseball.league.mlb",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "МЛБ — Главная лига бейсбола США и Канады; основана в 1903 году объединением Американской и Национальной лиг; 30 клубов; чемпионат World Series; в 2023 году победил «Техас Рейнджерс».",
+    "conditions": "Данные на сезон 2023",
+    "prereq": [],
+    "confidence": 0.89,
+    "tags": ["mlb", "baseball", "world_series", "league"],
+    "tier_extensions": {
+      "source": "MLB Official 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.sports.american_football.super_bowl",
+    "schema_version": "3.2",
+    "domain": "sports.american_football",
+    "subtopic": "american_football.event.super_bowl",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Супербоул — финал НФЛ, главное событие американского футбола; проводится с 1967 года; Супербоул LVIII (11 февраля 2024, Лас-Вегас) выиграл «Канзас-Сити Чифс» против «Сан-Франциско Форти Найнерс».",
+    "conditions": "Данные на Super Bowl LVIII",
+    "prereq": [],
+    "confidence": 0.91,
+    "tags": ["super_bowl", "nfl", "american_football", "event"],
+    "tier_extensions": {
+      "source": "NFL Official 2024",
+      "valid_from": "2024-02-11",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.sports.olympics.summer",
+    "schema_version": "3.2",
+    "domain": "sports.olympics",
+    "subtopic": "olympics.summer",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Летние Олимпийские игры — главное мультиспортивное событие планеты; проводятся МОК каждые 4 года с 1896 года; Игры XXXIII Олимпиады прошли в Париже 26 июля — 11 августа 2024 года; 32 вида спорта.",
+    "conditions": "Данные на Игры-2024",
+    "prereq": [],
+    "confidence": 0.93,
+    "tags": ["olympics", "summer", "ioc", "paris"],
+    "tier_extensions": {
+      "source": "IOC Official 2024",
+      "valid_from": "2024-08-11",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.sports.olympics.winter",
+    "schema_version": "3.2",
+    "domain": "sports.olympics",
+    "subtopic": "olympics.winter",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Зимние Олимпийские игры — мультиспортивное событие по зимним видам; проводятся МОК с 1924 года; последние прошли в Пекине в 2022 году; Игры-2026 состоятся в Милане и Кортине-д'Ампеццо.",
+    "conditions": "Данные на 2024; планы на 2026",
+    "prereq": [],
+    "confidence": 0.91,
+    "tags": ["olympics", "winter", "ioc", "milan"],
+    "tier_extensions": {
+      "source": "IOC Official 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.sports.olympics.paralympics",
+    "schema_version": "3.2",
+    "domain": "sports.olympics",
+    "subtopic": "olympics.paralympics",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Паралимпийские игры — крупнейшие международные соревнования атлетов с инвалидностью; проводятся с 1960 года; организатор — МПК; летние Паралимпийские игры 2024 прошли в Париже 28 августа — 8 сентября.",
+    "conditions": "Данные на Паралимпиаду-2024",
+    "prereq": [],
+    "confidence": 0.9,
+    "tags": ["paralympics", "ipc", "disability", "games"],
+    "tier_extensions": {
+      "source": "IPC Official 2024",
+      "valid_from": "2024-09-08",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.sports.athletics.events",
+    "schema_version": "3.2",
+    "domain": "sports.athletics",
+    "subtopic": "athletics.discipline",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Лёгкая атлетика — комплекс спортивных дисциплин: бег, прыжки, метания, многоборья; международная федерация World Athletics (с 1912 года, до 2019 IAAF); рекорд на 100 м — 9,58 с (Усэйн Болт, 2009).",
+    "conditions": "Рекорд 100 м зафиксирован в Берлине 16 августа 2009",
+    "prereq": [],
+    "confidence": 0.92,
+    "tags": ["athletics", "world_athletics", "track", "field"],
+    "tier_extensions": {
+      "source": "World Athletics 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.sports.swimming.fina",
+    "schema_version": "3.2",
+    "domain": "sports.swimming",
+    "subtopic": "swimming.organization.world_aquatics",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "World Aquatics (до 2023 FINA) — международная федерация водных видов спорта; основана в 1908 году; курирует плавание, прыжки в воду, водное поло, синхронное плавание и плавание на открытой воде.",
+    "conditions": "Данные на 2024; ребрендинг 2023",
+    "prereq": [],
+    "confidence": 0.89,
+    "tags": ["swimming", "world_aquatics", "fina", "organization"],
+    "tier_extensions": {
+      "source": "World Aquatics Official 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.sports.gymnastics.fig",
+    "schema_version": "3.2",
+    "domain": "sports.gymnastics",
+    "subtopic": "gymnastics.fig",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Международная федерация гимнастики (FIG) — старейшая международная спортивная федерация, основана 23 июля 1881 года; управляет спортивной, художественной, акробатической гимнастикой, прыжками на батуте, паркуром.",
+    "conditions": "Данные на 2024",
+    "prereq": [],
+    "confidence": 0.89,
+    "tags": ["gymnastics", "fig", "organization", "sports"],
+    "tier_extensions": {
+      "source": "FIG Official 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.sports.figure_skating.isu",
+    "schema_version": "3.2",
+    "domain": "sports.figure_skating",
+    "subtopic": "figure_skating.isu",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Международный союз конькобежцев (ISU) — управляющий орган фигурного катания и конькобежного спорта; основан в 1892 году в Шевенингене; организует чемпионаты мира и Гран-при; современная судейская система с 2004 года.",
+    "conditions": "Данные на 2024",
+    "prereq": [],
+    "confidence": 0.88,
+    "tags": ["figure_skating", "isu", "organization", "sports"],
+    "tier_extensions": {
+      "source": "ISU Official 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.sports.cycling.tour_de_france",
+    "schema_version": "3.2",
+    "domain": "sports.cycling",
+    "subtopic": "cycling.event.tour_de_france",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Тур де Франс — главная многодневная велогонка мира; проводится с 1903 года в июле; 21 этап, около 3500 км; в 2024 году победил словенец Тадей Погачар (третий титул).",
+    "conditions": "Данные на 21 июля 2024",
+    "prereq": [],
+    "confidence": 0.9,
+    "tags": ["tour_de_france", "cycling", "uci", "race"],
+    "tier_extensions": {
+      "source": "ASO / UCI Official 2024",
+      "valid_from": "2024-07-21",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.sports.golf.pga",
+    "schema_version": "3.2",
+    "domain": "sports.golf",
+    "subtopic": "golf.tour.pga",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "PGA Tour — главный мужской профессиональный гольф-тур Северной Америки; основан в 1929 году; четыре мейджора: Masters, PGA Championship, U.S. Open, The Open Championship; в 2023 объявил альянс с LIV Golf.",
+    "conditions": "Данные на 2024; альянс с PIF продолжает обсуждаться",
+    "prereq": [],
+    "confidence": 0.87,
+    "tags": ["pga", "golf", "tour", "majors"],
+    "tier_extensions": {
+      "source": "PGA Tour Official 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "fact.sports.esports.dota2_international",
+    "schema_version": "3.2",
+    "domain": "sports.esports",
+    "subtopic": "esports.dota2.international",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "The International — главный турнир Dota 2; проводится Valve с 2011 года; призовой фонд исторически крупнейший в киберспорте (до 40 млн USD в 2021); TI 2023 в Сиэтле выиграла Team Spirit.",
+    "conditions": "Данные на TI12 (29 октября 2023)",
+    "prereq": [],
+    "confidence": 0.87,
+    "tags": ["dota2", "esports", "ti", "valve"],
+    "tier_extensions": {
+      "source": "Valve / Liquipedia 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.sports.esports.lol_worlds",
+    "schema_version": "3.2",
+    "domain": "sports.esports",
+    "subtopic": "esports.lol.worlds",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Чемпионат мира по League of Legends (Worlds) — главный турнир Riot Games; проводится с 2011 года; в 2023 году в Сеуле победила корейская T1 во главе с Faker, его 4-й чемпионский титул.",
+    "conditions": "Данные на Worlds 2023 (19 ноября)",
+    "prereq": [],
+    "confidence": 0.88,
+    "tags": ["league_of_legends", "esports", "worlds", "riot"],
+    "tier_extensions": {
+      "source": "Riot Games / Lolesports 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.sports.chess.fide",
+    "schema_version": "3.2",
+    "domain": "sports.chess",
+    "subtopic": "chess.organization.fide",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "ФИДЕ — Международная шахматная федерация; основана 20 июля 1924 года в Париже; 201 национальная федерация-член; присваивает звание гроссмейстера; чемпион мира 2023 — Дин Лижэнь (Китай).",
+    "conditions": "Данные на 2024; матч 2024 ещё не сыгран",
+    "prereq": [],
+    "confidence": 0.9,
+    "tags": ["chess", "fide", "grandmaster", "organization"],
+    "tier_extensions": {
+      "source": "FIDE Official 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.sports.go.organization",
+    "schema_version": "3.2",
+    "domain": "sports.go",
+    "subtopic": "go.organization",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Го — древняя китайская настольная игра, доска 19x19; Международная федерация го (IGF) основана в 1982 году; около 75 национальных федераций; крупнейшие профессиональные ассоциации — в Японии, Китае, Корее.",
+    "conditions": "Данные на 2024",
+    "prereq": [],
+    "confidence": 0.87,
+    "tags": ["go", "igf", "board_game", "asia"],
+    "tier_extensions": {
+      "source": "International Go Federation 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  }
+]

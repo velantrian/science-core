@@ -1,0 +1,479 @@
+[
+  {
+    "id": "principle.logic.intuitionistic.no_double_negation",
+    "schema_version": "3.2",
+    "domain": "logic.formal.intuitionistic",
+    "subtopic": "logic.formal.intuitionistic.principles",
+    "tier": "logic",
+    "type": "principle",
+    "statement": "В интуиционистской логике закон снятия двойного отрицания ¬¬A→A не является общезначимым.",
+    "formal_notation": "¬¬A → A не выводимо в IPC; обратное A → ¬¬A выводимо",
+    "conditions": "Интуиционистское пропозициональное исчисление IPC",
+    "limits": ["В классической логике ¬¬A↔A справедливо безусловно"],
+    "prereq": ["law_of_thought.logic.formal.excluded_middle"],
+    "derives_from": [],
+    "confidence": 0.98,
+    "tags": ["intuitionistic", "double_negation", "brouwer", "constructivism"],
+    "tier_extensions": {
+      "category": "principle",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "definition.logic.intuitionistic.bhk",
+    "schema_version": "3.2",
+    "domain": "logic.formal.intuitionistic",
+    "subtopic": "logic.formal.intuitionistic.semantics",
+    "tier": "logic",
+    "type": "definition",
+    "statement": "BHK-интерпретация Брауэра-Гейтинга-Колмогорова: доказательство A∧B есть пара доказательств; A∨B — выбор; A→B — конструкция; ∃ — свидетель.",
+    "formal_notation": "proof(A∧B) = ⟨p_A, p_B⟩; proof(A→B) = функция p_A → p_B",
+    "conditions": "Конструктивная интерпретация логических связок",
+    "prereq": ["principle.logic.intuitionistic.no_double_negation"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["bhk", "intuitionistic", "constructive", "semantics"],
+    "tier_extensions": {
+      "category": "axiom",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "definition.logic.lambda.untyped",
+    "schema_version": "3.2",
+    "domain": "logic.computation.lambda",
+    "subtopic": "logic.computation.lambda.untyped",
+    "tier": "logic",
+    "type": "definition",
+    "statement": "Нетипизированное лямбда-исчисление: термы — переменные, абстракции λx.M и аппликации M N; редукция (λx.M) N → M[x:=N].",
+    "formal_notation": "Λ ::= x | λx.M | M N;  β: (λx.M) N → M[x:=N]",
+    "conditions": "Чёрчевское лямбда-исчисление без типов",
+    "prereq": ["definition.logic.intuitionistic.bhk"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["lambda_calculus", "church", "untyped", "beta_reduction"],
+    "tier_extensions": {
+      "category": "axiom",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "definition.logic.lambda.simply_typed",
+    "schema_version": "3.2",
+    "domain": "logic.computation.lambda",
+    "subtopic": "logic.computation.lambda.typed",
+    "tier": "logic",
+    "type": "definition",
+    "statement": "Простое типизированное лямбда-исчисление STT: каждый терм имеет тип, типы строятся из базовых через стрелку →; правила вывода типов через контекст.",
+    "formal_notation": "Γ ⊢ M : A → B,  Γ ⊢ N : A  ⇒  Γ ⊢ M N : B",
+    "conditions": "Типы строятся из конечного множества базовых через →",
+    "prereq": ["definition.logic.lambda.untyped"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["simply_typed", "stt", "lambda", "church"],
+    "tier_extensions": {
+      "category": "axiom",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "theorem.logic.curry_howard",
+    "schema_version": "3.2",
+    "domain": "logic.computation.correspondence",
+    "subtopic": "logic.computation.correspondence.curry_howard",
+    "tier": "logic",
+    "type": "theorem",
+    "statement": "Изоморфизм Карри-Говарда: формулы интуиционистской логики соответствуют типам, доказательства — программам, нормализация — редукции.",
+    "formal_notation": "Γ ⊢_IPC A   ⟺   ∃ M : Γ ⊢_STT M : A",
+    "conditions": "Соответствие между IPC и STT (или MLTT и FOL-расширениями)",
+    "prereq": ["definition.logic.lambda.simply_typed", "definition.logic.intuitionistic.bhk"],
+    "derives_from": ["definition.logic.lambda.simply_typed", "definition.logic.intuitionistic.bhk"],
+    "confidence": 1.0,
+    "tags": ["curry_howard", "isomorphism", "proofs_as_programs", "types"],
+    "tier_extensions": {
+      "category": "theorem",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "definition.logic.types.mltt",
+    "schema_version": "3.2",
+    "domain": "logic.computation.type_theory",
+    "subtopic": "logic.computation.type_theory.mltt",
+    "tier": "logic",
+    "type": "definition",
+    "statement": "Теория типов Мартин-Лёфа MLTT: зависимые типы Π и Σ, вселенные U, типы Id, индуктивные семейства; типы и термы вводятся одновременно.",
+    "formal_notation": "Π(x:A).B(x);  Σ(x:A).B(x);  Id_A(a,b);  U_n : U_{n+1}",
+    "conditions": "Конструктивная теория типов с зависимыми типами",
+    "prereq": ["theorem.logic.curry_howard"],
+    "derives_from": ["theorem.logic.curry_howard"],
+    "confidence": 1.0,
+    "tags": ["martin_lof", "mltt", "dependent_types", "type_theory"],
+    "tier_extensions": {
+      "category": "axiom",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "axiom.logic.types.univalence",
+    "schema_version": "3.2",
+    "domain": "logic.computation.type_theory",
+    "subtopic": "logic.computation.type_theory.hott",
+    "tier": "logic",
+    "type": "axiom",
+    "statement": "Аксиома унивалентности Воеводского: эквивалентные типы тождественны; путь между типами соответствует эквивалентности.",
+    "formal_notation": "(A =_U B) ≃ (A ≃ B)",
+    "conditions": "Гомотопическая теория типов HoTT",
+    "prereq": ["definition.logic.types.mltt"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["univalence", "voevodsky", "hott", "homotopy_type_theory"],
+    "tier_extensions": {
+      "category": "axiom",
+      "is_axiomatic": true
+    }
+  },
+  {
+    "id": "concept.logic.paraconsistent",
+    "schema_version": "3.2",
+    "domain": "logic.formal.nonclassical",
+    "subtopic": "logic.formal.nonclassical.paraconsistent",
+    "tier": "logic",
+    "type": "concept",
+    "statement": "Паранепротиворечивая логика: формальная система, в которой противоречие не влечёт всех формул, отвергающая ex falso quodlibet.",
+    "formal_notation": "{A, ¬A} ⊬ B  для произвольной B",
+    "conditions": "Отрицание ex contradictione sequitur quodlibet",
+    "prereq": ["inference_rule.logic.propositional.explosion"],
+    "derives_from": [],
+    "confidence": 0.95,
+    "tags": ["paraconsistent", "nonclassical", "ex_falso", "da_costa"],
+    "tier_extensions": {
+      "category": "concept",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "concept.logic.relevance",
+    "schema_version": "3.2",
+    "domain": "logic.formal.nonclassical",
+    "subtopic": "logic.formal.nonclassical.relevance",
+    "tier": "logic",
+    "type": "concept",
+    "statement": "Релевантная логика: импликация A→B требует содержательной связи между антецедентом и консеквентом; парадоксы материальной импликации устранены.",
+    "formal_notation": "⊢ A → B  только если переменные A и B пересекаются",
+    "conditions": "Системы R, E Андерсона-Белнапа",
+    "prereq": ["definition.logic.propositional.implication"],
+    "derives_from": [],
+    "confidence": 0.95,
+    "tags": ["relevance_logic", "anderson_belnap", "nonclassical", "implication"],
+    "tier_extensions": {
+      "category": "concept",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "concept.logic.temporal",
+    "schema_version": "3.2",
+    "domain": "logic.formal.modal.temporal",
+    "subtopic": "logic.formal.modal.temporal",
+    "tier": "logic",
+    "type": "concept",
+    "statement": "Временная логика: модальные операторы G «всегда в будущем», F «когда-нибудь», X «в следующий момент», U «до тех пор пока».",
+    "formal_notation": "G φ, F φ = ¬G ¬φ, X φ, φ U ψ",
+    "conditions": "Линейная LTL или ветвящаяся CTL модель времени",
+    "prereq": ["axiom.logic.modal.k"],
+    "derives_from": ["axiom.logic.modal.k"],
+    "confidence": 0.98,
+    "tags": ["temporal_logic", "ltl", "ctl", "modal"],
+    "tier_extensions": {
+      "category": "concept",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "concept.logic.dynamic",
+    "schema_version": "3.2",
+    "domain": "logic.formal.modal.dynamic",
+    "subtopic": "logic.formal.modal.dynamic",
+    "tier": "logic",
+    "type": "concept",
+    "statement": "Динамическая логика: модальности [α]φ «после выполнения α верно φ» и ⟨α⟩φ для программ α с композицией, выбором, итерацией.",
+    "formal_notation": "[α; β]φ ↔ [α][β]φ; [α ∪ β]φ ↔ [α]φ ∧ [β]φ",
+    "conditions": "Программы строятся из атомарных через ;, ∪, *",
+    "prereq": ["concept.logic.temporal"],
+    "derives_from": [],
+    "confidence": 0.97,
+    "tags": ["dynamic_logic", "pratt", "program_logic", "modal"],
+    "tier_extensions": {
+      "category": "concept",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "concept.logic.deontic",
+    "schema_version": "3.2",
+    "domain": "logic.formal.modal.deontic",
+    "subtopic": "logic.formal.modal.deontic",
+    "tier": "logic",
+    "type": "concept",
+    "statement": "Деонтическая логика: операторы O «обязательно», P «разрешено», F «запрещено» для нормативных высказываний.",
+    "formal_notation": "P φ ↔ ¬O ¬φ; F φ ↔ O ¬φ; O φ → P φ",
+    "conditions": "Стандартная система SDL фон Вригта",
+    "prereq": ["axiom.logic.modal.t"],
+    "derives_from": [],
+    "confidence": 0.95,
+    "tags": ["deontic", "von_wright", "normative", "modal"],
+    "tier_extensions": {
+      "category": "concept",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "concept.logic.epistemic_s5",
+    "schema_version": "3.2",
+    "domain": "logic.formal.modal.epistemic",
+    "subtopic": "logic.formal.modal.epistemic",
+    "tier": "logic",
+    "type": "concept",
+    "statement": "Эпистемическая логика S5: оператор K «агент знает», аксиома положительной интроспекции Kφ→KKφ и отрицательной ¬Kφ→K¬Kφ.",
+    "formal_notation": "K φ → φ;  K φ → K K φ;  ¬K φ → K ¬K φ",
+    "conditions": "Отношение неразличимости — эквивалентность",
+    "prereq": ["axiom.logic.modal.s5"],
+    "derives_from": ["axiom.logic.modal.s5"],
+    "confidence": 0.97,
+    "tags": ["epistemic", "s5", "hintikka", "knowledge"],
+    "tier_extensions": {
+      "category": "concept",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "concept.logic.lukasiewicz_l3",
+    "schema_version": "3.2",
+    "domain": "logic.formal.many_valued",
+    "subtopic": "logic.formal.many_valued.lukasiewicz",
+    "tier": "logic",
+    "type": "concept",
+    "statement": "Трёхзначная логика Лукасевича Ł3: значения {0, 1/2, 1}; импликация A→B = min(1, 1−v(A)+v(B)); отрицание ¬A = 1−v(A).",
+    "formal_notation": "v(A→B) = min(1, 1−v(A)+v(B));  v(¬A) = 1−v(A)",
+    "conditions": "Множество истинностных значений {0, ½, 1}",
+    "prereq": ["definition.logic.fuzzy.truth_degree"],
+    "derives_from": [],
+    "confidence": 0.98,
+    "tags": ["lukasiewicz", "many_valued", "l3", "nonclassical"],
+    "tier_extensions": {
+      "category": "concept",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "concept.logic.fuzzy_zadeh",
+    "schema_version": "3.2",
+    "domain": "logic.formal.fuzzy",
+    "subtopic": "logic.formal.fuzzy.zadeh",
+    "tier": "logic",
+    "type": "concept",
+    "statement": "Нечёткая логика Заде: степень истинности — число из [0,1]; операции по т-нормам, т-конормам и нечёткой импликации.",
+    "formal_notation": "v(A∧B) = T(v(A),v(B)); v(A∨B) = S(v(A),v(B)); v: F → [0,1]",
+    "conditions": "Множество истинности — единичный отрезок; функции принадлежности",
+    "prereq": ["concept.logic.lukasiewicz_l3", "definition.logic.fuzzy.t_norm"],
+    "derives_from": [],
+    "confidence": 0.97,
+    "tags": ["zadeh", "fuzzy_logic", "many_valued", "membership"],
+    "tier_extensions": {
+      "category": "concept",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "concept.logic.probabilistic_cox",
+    "schema_version": "3.2",
+    "domain": "logic.formal.probabilistic",
+    "subtopic": "logic.formal.probabilistic.cox",
+    "tier": "logic",
+    "type": "concept",
+    "statement": "Теорема Кокса о вероятностной логике: всякая мера правдоподобия, удовлетворяющая аксиомам непротиворечивости, изоморфна вероятности.",
+    "formal_notation": "Cox conditions ⇒ Bel(A|B) ≃ P(A|B), Колмогоров",
+    "conditions": "Степени убеждения упорядочены и непрерывны; принцип непротиворечивости",
+    "prereq": ["axiom.math.probability.kolmogorov_nonneg", "theorem.logic.bayesian.bayes_rule"],
+    "derives_from": [],
+    "confidence": 0.95,
+    "tags": ["cox_theorem", "probabilistic_logic", "jaynes", "epistemic_probability"],
+    "tier_extensions": {
+      "category": "concept",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "theorem.logic.descriptions.russell",
+    "schema_version": "3.2",
+    "domain": "logic.formal.descriptions",
+    "subtopic": "logic.formal.descriptions.russell",
+    "tier": "logic",
+    "type": "theorem",
+    "statement": "Теория определённых описаний Рассела: «единственный F есть G» переписывается как ∃x(Fx ∧ ∀y(Fy→y=x) ∧ Gx).",
+    "formal_notation": "ι x. F(x) есть G  ≡  ∃x (F(x) ∧ ∀y (F(y) → y=x) ∧ G(x))",
+    "conditions": "FOL с равенством; описания заменяются кванторными формулами",
+    "prereq": ["definition.logic.formal.logical_consequence"],
+    "derives_from": [],
+    "confidence": 0.99,
+    "tags": ["russell", "definite_descriptions", "iota_operator", "fol"],
+    "tier_extensions": {
+      "category": "theorem",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "paradox.logic.semantic.berry",
+    "schema_version": "3.2",
+    "domain": "logic.paradoxes",
+    "subtopic": "logic.paradoxes.semantic",
+    "tier": "logic",
+    "type": "paradox",
+    "statement": "Парадокс Берри: «наименьшее натуральное число, не определимое менее чем девятнадцатью русскими слогами», которое только что определено таковыми.",
+    "formal_notation": "n = min{k ∈ ℕ : ¬Definable(k, <19 syllables)}; но n определено фразой <19 слогов",
+    "conditions": "Понятие определимости в естественном языке без фиксации формального предиката",
+    "prereq": ["paradox.logic.semantic.liar"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["berry_paradox", "definability", "semantic_paradox", "russell"],
+    "tier_extensions": {
+      "category": "paradox",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "theorem.logic.formal.church_undecidability",
+    "schema_version": "3.2",
+    "domain": "logic.computability",
+    "subtopic": "logic.computability.church",
+    "tier": "logic",
+    "type": "theorem",
+    "statement": "Теорема Чёрча о неразрешимости: задача о выводимости в логике первого порядка не разрешима ни одной машиной Тьюринга.",
+    "formal_notation": "{φ ∈ L_FOL : ⊢ φ} ∉ RE ∩ co-RE",
+    "conditions": "Сигнатура содержит как минимум двуместный предикат",
+    "prereq": ["theorem.logic.formal.completeness_godel_fol"],
+    "derives_from": ["theorem.logic.formal.completeness_godel_fol"],
+    "confidence": 1.0,
+    "tags": ["church", "undecidability", "entscheidungsproblem", "fol"],
+    "tier_extensions": {
+      "category": "theorem",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "paradox.logic.semantic.curry",
+    "schema_version": "3.2",
+    "domain": "logic.paradoxes",
+    "subtopic": "logic.paradoxes.semantic",
+    "tier": "logic",
+    "type": "paradox",
+    "statement": "Парадокс Карри: самоприменимая формула X ≡ (X → Y) при правилах сжатия и MP доказывает произвольное Y без явного отрицания.",
+    "formal_notation": "X ↔ (X → Y);  contraction + MP ⇒ ⊢ Y",
+    "conditions": "Наивная теория множеств или λ-исчисление с самоприменением и контракцией",
+    "prereq": ["paradox.logic.set_theory.russell", "inference_rule.logic.propositional.modus_ponens"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["curry_paradox", "self_reference", "contraction", "naive_set_theory"],
+    "tier_extensions": {
+      "category": "paradox",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "principle.logic.intuitionistic.disjunction_property",
+    "schema_version": "3.2",
+    "domain": "logic.formal.intuitionistic",
+    "subtopic": "logic.formal.intuitionistic.properties",
+    "tier": "logic",
+    "type": "principle",
+    "statement": "Дизъюнктивное свойство IPC: если ⊢ A∨B в интуиционистской логике, то ⊢ A или ⊢ B по отдельности.",
+    "formal_notation": "⊢_IPC A ∨ B  ⇒  ⊢_IPC A  ∨  ⊢_IPC B",
+    "conditions": "Замкнутые формулы пропозиционального IPC",
+    "limits": ["Не выполняется в классической логике: ⊢ p ∨ ¬p, но ни p, ни ¬p не выводимы"],
+    "prereq": ["definition.logic.intuitionistic.bhk"],
+    "derives_from": [],
+    "confidence": 0.99,
+    "tags": ["intuitionistic", "disjunction_property", "ipc", "constructive"],
+    "tier_extensions": {
+      "category": "principle",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "concept.logic.kripke_semantics",
+    "schema_version": "3.2",
+    "domain": "logic.formal.modal",
+    "subtopic": "logic.formal.modal.kripke",
+    "tier": "logic",
+    "type": "concept",
+    "statement": "Семантика Крипке: модель ⟨W, R, V⟩ из миров W, отношения достижимости R и оценки V; □φ истинно в w, если φ истинно во всех R-достижимых мирах.",
+    "formal_notation": "M, w ⊨ □φ  ⇔  ∀v (wRv ⇒ M, v ⊨ φ)",
+    "conditions": "Модальная логика; реляционная семантика",
+    "prereq": ["axiom.logic.modal.k", "definition.logic.modal.necessity"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["kripke", "possible_worlds", "modal_semantics", "accessibility"],
+    "tier_extensions": {
+      "category": "concept",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "theorem.logic.types.normalization",
+    "schema_version": "3.2",
+    "domain": "logic.computation.lambda",
+    "subtopic": "logic.computation.lambda.typed",
+    "tier": "logic",
+    "type": "theorem",
+    "statement": "Теорема о сильной нормализации STT: каждый редекс типизированного λ-терма за конечное число β-редукций приводится к нормальной форме.",
+    "formal_notation": "∀M ∈ STT: ∄ бесконечной β-цепочки M →_β M_1 →_β M_2 → …",
+    "conditions": "Простое типизированное λ-исчисление; типы конечны",
+    "prereq": ["definition.logic.lambda.simply_typed"],
+    "derives_from": ["definition.logic.lambda.simply_typed"],
+    "confidence": 1.0,
+    "tags": ["strong_normalization", "stt", "termination", "lambda"],
+    "tier_extensions": {
+      "category": "theorem",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "theorem.logic.lambda.church_rosser",
+    "schema_version": "3.2",
+    "domain": "logic.computation.lambda",
+    "subtopic": "logic.computation.lambda.confluence",
+    "tier": "logic",
+    "type": "theorem",
+    "statement": "Теорема Чёрча-Россера: если λ-терм M β-редуцируется к N₁ и N₂, то существует L такой, что N₁ и N₂ оба β-редуцируются к L.",
+    "formal_notation": "M →*_β N₁ ∧ M →*_β N₂  ⇒  ∃L : N₁ →*_β L ∧ N₂ →*_β L",
+    "conditions": "Нетипизированное или типизированное λ-исчисление",
+    "prereq": ["definition.logic.lambda.untyped"],
+    "derives_from": ["definition.logic.lambda.untyped"],
+    "confidence": 1.0,
+    "tags": ["church_rosser", "confluence", "lambda", "beta_reduction"],
+    "tier_extensions": {
+      "category": "theorem",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "concept.logic.intuitionistic.heyting_algebra",
+    "schema_version": "3.2",
+    "domain": "logic.formal.intuitionistic",
+    "subtopic": "logic.formal.intuitionistic.algebra",
+    "tier": "logic",
+    "type": "concept",
+    "statement": "Алгебра Гейтинга: ограниченная дистрибутивная решётка с относительным псевдодополнением a→b — алгебраический семантический аналог IPC.",
+    "formal_notation": "c ≤ (a → b) ⇔ c ∧ a ≤ b;  ¬a := a → 0",
+    "conditions": "Дистрибутивная решётка с 0, 1 и операцией →",
+    "prereq": ["definition.logic.intuitionistic.bhk", "theorem.logic.boolean.distributivity"],
+    "derives_from": [],
+    "confidence": 1.0,
+    "tags": ["heyting_algebra", "intuitionistic", "lattice", "semantics"],
+    "tier_extensions": {
+      "category": "concept",
+      "is_axiomatic": false
+    }
+  }
+]

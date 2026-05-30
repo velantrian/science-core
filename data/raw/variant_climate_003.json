@@ -1,0 +1,598 @@
+[
+  {
+    "id": "concept.climate.epoch.pleistocene_ice_age",
+    "schema_version": "3.2",
+    "domain": "climate.paleoclimate",
+    "subtopic": "climate.epoch.pleistocene",
+    "tier": "variant",
+    "type": "concept",
+    "statement": "Плейстоценовое оледенение (~2.58 млн - 11.7 тыс. лет назад) — серия ледниковых циклов длительностью ~100 тыс. лет; ледниковые щиты покрывали Северную Америку и Европу; средняя T ниже современной на 4-7°C.",
+    "conditions": "ICS Геохронологическая шкала 2023",
+    "prereq": ["concept.geology.epochs"],
+    "confidence": 0.92,
+    "tags": ["pleistocene", "ice_age", "paleoclimate", "milankovitch"],
+    "tier_extensions": {
+      "source": "International Commission on Stratigraphy 2023; PAGES",
+      "valid_from": "2023-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "duration_years": 2580000
+    }
+  },
+  {
+    "id": "concept.climate.epoch.holocene",
+    "schema_version": "3.2",
+    "domain": "climate.paleoclimate",
+    "subtopic": "climate.epoch.holocene",
+    "tier": "variant",
+    "type": "concept",
+    "statement": "Голоцен (11.7 тыс. лет назад - наст. время) — текущая межледниковая эпоха; относительно стабильный климат; развитие сельского хозяйства и цивилизаций; глобальная T колебалась в пределах ±1°C до индустриальной эры.",
+    "conditions": "ICS Stratigraphic Chart 2023",
+    "prereq": ["concept.geology.epochs"],
+    "confidence": 0.94,
+    "tags": ["holocene", "interglacial", "civilization"],
+    "tier_extensions": {
+      "source": "International Commission on Stratigraphy 2023",
+      "valid_from": "2023-01-01",
+      "valid_until": null,
+      "has_disputes": false,
+      "duration_years": 11700
+    }
+  },
+  {
+    "id": "fact.climate.holocene_optimum",
+    "schema_version": "3.2",
+    "domain": "climate.paleoclimate",
+    "subtopic": "climate.epoch.holocene_optimum",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Голоценовый климатический оптимум (~9000-5000 лет назад) — глобальная T выше преиндустриальной на 0.5-1°C; зелёная Сахара с озёрами и саваннами; высокий уровень моря.",
+    "conditions": "IPCC AR6 палеоклиматические данные",
+    "prereq": ["concept.climate.epoch.holocene"],
+    "confidence": 0.82,
+    "tags": ["holocene_optimum", "green_sahara", "paleoclimate"],
+    "tier_extensions": {
+      "source": "IPCC AR6 Chapter 2; PAGES 2k Consortium",
+      "valid_from": "2021-08-09",
+      "valid_until": null,
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "fact.climate.roman_warm_period",
+    "schema_version": "3.2",
+    "domain": "climate.paleoclimate",
+    "subtopic": "climate.epoch.roman_optimum",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Римский климатический оптимум (~250 до н.э. - 400 н.э.) — региональное потепление в Средиземноморье; благоприятные условия для сельского хозяйства; снижение температуры к концу периода.",
+    "conditions": "PAGES 2k, региональные палеоданные",
+    "prereq": ["concept.climate.epoch.holocene"],
+    "confidence": 0.75,
+    "tags": ["roman_warm_period", "mediterranean", "paleoclimate"],
+    "tier_extensions": {
+      "source": "PAGES 2k Consortium; Nature Geoscience 2019",
+      "valid_from": "2019-07-24",
+      "valid_until": null,
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "fact.climate.medieval_warm_period",
+    "schema_version": "3.2",
+    "domain": "climate.paleoclimate",
+    "subtopic": "climate.epoch.medieval_optimum",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Средневековый климатический оптимум (~950-1250 н.э.) — региональное потепление в Северной Атлантике; колонизация Гренландии викингами; не глобально синхронное явление по PAGES 2k.",
+    "conditions": "PAGES 2k Consortium 2019",
+    "prereq": ["concept.climate.epoch.holocene"],
+    "confidence": 0.83,
+    "tags": ["medieval_warm_period", "vikings", "greenland"],
+    "tier_extensions": {
+      "source": "PAGES 2k Consortium Nature 2019",
+      "valid_from": "2019-07-24",
+      "valid_until": null,
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "fact.climate.little_ice_age",
+    "schema_version": "3.2",
+    "domain": "climate.paleoclimate",
+    "subtopic": "climate.epoch.little_ice_age",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Малый ледниковый период (XVI - середина XIX в.) — региональное похолодание ~0.4-1°C в Северном полушарии; замерзание Темзы; минимум Маундера солнечной активности 1645-1715.",
+    "conditions": "PAGES 2k Consortium; солнечные хроники",
+    "prereq": ["concept.climate.epoch.holocene"],
+    "confidence": 0.85,
+    "tags": ["little_ice_age", "maunder_minimum", "northern_hemisphere"],
+    "tier_extensions": {
+      "source": "PAGES 2k Consortium; NOAA Paleoclimatology",
+      "valid_from": "1500-01-01",
+      "valid_until": "1850-12-31",
+      "has_disputes": true
+    }
+  },
+  {
+    "id": "fact.climate.global_warming_modern",
+    "schema_version": "3.2",
+    "domain": "climate.modern",
+    "subtopic": "climate.modern.warming",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Современное глобальное потепление (1850-2023) — глобальная T выросла на ~1.45°C над преиндустриальным уровнем по WMO 2023; основная причина антропогенные выбросы парниковых газов.",
+    "conditions": "WMO State of Global Climate 2023",
+    "prereq": ["concept.climate.greenhouse_effect"],
+    "confidence": 0.93,
+    "tags": ["global_warming", "anthropogenic", "WMO"],
+    "tier_extensions": {
+      "source": "WMO State of the Global Climate 2023; IPCC AR6",
+      "valid_from": "2024-03-19",
+      "valid_until": null,
+      "has_disputes": false,
+      "warming_C": 1.45
+    }
+  },
+  {
+    "id": "concept.climate.koppen.af",
+    "schema_version": "3.2",
+    "domain": "climate.classification",
+    "subtopic": "climate.koppen.Af",
+    "tier": "variant",
+    "type": "concept",
+    "statement": "Af — тропический влажный экваториальный климат по Кёппену; осадки в самом сухом месяце ≥60 мм; экваториальные дождевые леса Амазонии, Конго, Индонезии.",
+    "conditions": "Köppen-Geiger Beck et al. 2018",
+    "prereq": ["concept.climate.classification"],
+    "confidence": 0.94,
+    "tags": ["koppen", "Af", "tropical_rainforest", "equatorial"],
+    "tier_extensions": {
+      "source": "Beck et al. Scientific Data 2018",
+      "valid_from": "2018-10-30",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "concept.climate.koppen.am",
+    "schema_version": "3.2",
+    "domain": "climate.classification",
+    "subtopic": "climate.koppen.Am",
+    "tier": "variant",
+    "type": "concept",
+    "statement": "Am — тропический муссонный климат по Кёппену; короткий сухой сезон с осадками <60 мм; характерен для Индии, Юго-Восточной Азии, западной Африки.",
+    "conditions": "Köppen-Geiger Beck et al. 2018",
+    "prereq": ["concept.climate.classification"],
+    "confidence": 0.93,
+    "tags": ["koppen", "Am", "monsoon", "tropical"],
+    "tier_extensions": {
+      "source": "Beck et al. Scientific Data 2018",
+      "valid_from": "2018-10-30",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "concept.climate.koppen.aw",
+    "schema_version": "3.2",
+    "domain": "climate.classification",
+    "subtopic": "climate.koppen.Aw",
+    "tier": "variant",
+    "type": "concept",
+    "statement": "Aw — тропический саванновый климат по Кёппену с сухой зимой; выраженный сезон засухи; характерен для саванн Африки, льяносов Венесуэлы, северной Австралии.",
+    "conditions": "Köppen-Geiger Beck et al. 2018",
+    "prereq": ["concept.climate.classification"],
+    "confidence": 0.93,
+    "tags": ["koppen", "Aw", "savanna", "tropical"],
+    "tier_extensions": {
+      "source": "Beck et al. Scientific Data 2018",
+      "valid_from": "2018-10-30",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "concept.climate.koppen.bwh",
+    "schema_version": "3.2",
+    "domain": "climate.classification",
+    "subtopic": "climate.koppen.BWh",
+    "tier": "variant",
+    "type": "concept",
+    "statement": "BWh — жаркий пустынный климат по Кёппену; среднегодовая T ≥18°C; осадки <250 мм/год; Сахара, Аравийский полуостров, центральная Австралия.",
+    "conditions": "Köppen-Geiger Beck et al. 2018",
+    "prereq": ["concept.climate.classification"],
+    "confidence": 0.93,
+    "tags": ["koppen", "BWh", "hot_desert", "arid"],
+    "tier_extensions": {
+      "source": "Beck et al. Scientific Data 2018",
+      "valid_from": "2018-10-30",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "concept.climate.koppen.bwk",
+    "schema_version": "3.2",
+    "domain": "climate.classification",
+    "subtopic": "climate.koppen.BWk",
+    "tier": "variant",
+    "type": "concept",
+    "statement": "BWk — холодный пустынный климат по Кёппену; среднегодовая T <18°C; пустыни Гоби, Такла-Макан, Большой Бассейн Невады; большая суточная амплитуда T.",
+    "conditions": "Köppen-Geiger Beck et al. 2018",
+    "prereq": ["concept.climate.classification"],
+    "confidence": 0.92,
+    "tags": ["koppen", "BWk", "cold_desert", "arid"],
+    "tier_extensions": {
+      "source": "Beck et al. Scientific Data 2018",
+      "valid_from": "2018-10-30",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "concept.climate.koppen.bsh",
+    "schema_version": "3.2",
+    "domain": "climate.classification",
+    "subtopic": "climate.koppen.BSh",
+    "tier": "variant",
+    "type": "concept",
+    "statement": "BSh — жаркий полупустынный (степной) климат по Кёппену; среднегодовая T ≥18°C; осадки 250-500 мм; Сахель, северная Индия, северо-восточная Бразилия.",
+    "conditions": "Köppen-Geiger Beck et al. 2018",
+    "prereq": ["concept.climate.classification"],
+    "confidence": 0.92,
+    "tags": ["koppen", "BSh", "hot_steppe", "semi_arid"],
+    "tier_extensions": {
+      "source": "Beck et al. Scientific Data 2018",
+      "valid_from": "2018-10-30",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "concept.climate.koppen.bsk",
+    "schema_version": "3.2",
+    "domain": "climate.classification",
+    "subtopic": "climate.koppen.BSk",
+    "tier": "variant",
+    "type": "concept",
+    "statement": "BSk — холодный полупустынный климат по Кёппену; среднегодовая T <18°C; центральная Азия, степи Казахстана, высокогорья Анд, северо-западное США.",
+    "conditions": "Köppen-Geiger Beck et al. 2018",
+    "prereq": ["concept.climate.classification"],
+    "confidence": 0.92,
+    "tags": ["koppen", "BSk", "cold_steppe", "semi_arid"],
+    "tier_extensions": {
+      "source": "Beck et al. Scientific Data 2018",
+      "valid_from": "2018-10-30",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "concept.climate.koppen.cfa",
+    "schema_version": "3.2",
+    "domain": "climate.classification",
+    "subtopic": "climate.koppen.Cfa",
+    "tier": "variant",
+    "type": "concept",
+    "statement": "Cfa — влажный субтропический климат по Кёппену; самый тёплый месяц ≥22°C; равномерное распределение осадков; юго-восток США, восточный Китай, Аргентина.",
+    "conditions": "Köppen-Geiger Beck et al. 2018",
+    "prereq": ["concept.climate.classification"],
+    "confidence": 0.93,
+    "tags": ["koppen", "Cfa", "humid_subtropical"],
+    "tier_extensions": {
+      "source": "Beck et al. Scientific Data 2018",
+      "valid_from": "2018-10-30",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "concept.climate.koppen.cfb",
+    "schema_version": "3.2",
+    "domain": "climate.classification",
+    "subtopic": "climate.koppen.Cfb",
+    "tier": "variant",
+    "type": "concept",
+    "statement": "Cfb — морской климат умеренных широт по Кёппену; самый тёплый месяц <22°C, ≥4 месяца >10°C; Западная Европа, Новая Зеландия, юго-восточная Австралия.",
+    "conditions": "Köppen-Geiger Beck et al. 2018",
+    "prereq": ["concept.climate.classification"],
+    "confidence": 0.93,
+    "tags": ["koppen", "Cfb", "marine_west_coast"],
+    "tier_extensions": {
+      "source": "Beck et al. Scientific Data 2018",
+      "valid_from": "2018-10-30",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "concept.climate.koppen.cfc",
+    "schema_version": "3.2",
+    "domain": "climate.classification",
+    "subtopic": "climate.koppen.Cfc",
+    "tier": "variant",
+    "type": "concept",
+    "statement": "Cfc — субполярный океанический климат по Кёппену; 1-3 месяца >10°C; прохладное лето; побережье Аляски, Исландия, северная Норвегия, Фарерские острова.",
+    "conditions": "Köppen-Geiger Beck et al. 2018",
+    "prereq": ["concept.climate.classification"],
+    "confidence": 0.9,
+    "tags": ["koppen", "Cfc", "subpolar_oceanic"],
+    "tier_extensions": {
+      "source": "Beck et al. Scientific Data 2018",
+      "valid_from": "2018-10-30",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "concept.climate.koppen.csa",
+    "schema_version": "3.2",
+    "domain": "climate.classification",
+    "subtopic": "climate.koppen.Csa",
+    "tier": "variant",
+    "type": "concept",
+    "statement": "Csa — средиземноморский климат с жарким сухим летом по Кёппену; самый тёплый месяц ≥22°C; бассейн Средиземноморья, Калифорния, центральное Чили, юго-западная Австралия.",
+    "conditions": "Köppen-Geiger Beck et al. 2018",
+    "prereq": ["concept.climate.classification"],
+    "confidence": 0.93,
+    "tags": ["koppen", "Csa", "mediterranean"],
+    "tier_extensions": {
+      "source": "Beck et al. Scientific Data 2018",
+      "valid_from": "2018-10-30",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "concept.climate.koppen.csb",
+    "schema_version": "3.2",
+    "domain": "climate.classification",
+    "subtopic": "climate.koppen.Csb",
+    "tier": "variant",
+    "type": "concept",
+    "statement": "Csb — средиземноморский климат с тёплым сухим летом по Кёппену; самый тёплый месяц <22°C; прибрежные районы Калифорнии, Орегона, северо-западного Иберийского полуострова.",
+    "conditions": "Köppen-Geiger Beck et al. 2018",
+    "prereq": ["concept.climate.classification"],
+    "confidence": 0.92,
+    "tags": ["koppen", "Csb", "warm_summer_mediterranean"],
+    "tier_extensions": {
+      "source": "Beck et al. Scientific Data 2018",
+      "valid_from": "2018-10-30",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "concept.climate.koppen.cwa",
+    "schema_version": "3.2",
+    "domain": "climate.classification",
+    "subtopic": "climate.koppen.Cwa",
+    "tier": "variant",
+    "type": "concept",
+    "statement": "Cwa — субтропический муссонный климат с сухой зимой по Кёппену; самый тёплый месяц ≥22°C; характерен для северной Индии, южного Китая, северного Вьетнама.",
+    "conditions": "Köppen-Geiger Beck et al. 2018",
+    "prereq": ["concept.climate.classification"],
+    "confidence": 0.91,
+    "tags": ["koppen", "Cwa", "subtropical_monsoon"],
+    "tier_extensions": {
+      "source": "Beck et al. Scientific Data 2018",
+      "valid_from": "2018-10-30",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "concept.climate.koppen.cwb",
+    "schema_version": "3.2",
+    "domain": "climate.classification",
+    "subtopic": "climate.koppen.Cwb",
+    "tier": "variant",
+    "type": "concept",
+    "statement": "Cwb — высокогорный субтропический климат с сухой зимой по Кёппену; самый тёплый месяц <22°C; высокогорья Мексики, Эфиопии, восточной Африки, Анд.",
+    "conditions": "Köppen-Geiger Beck et al. 2018",
+    "prereq": ["concept.climate.classification"],
+    "confidence": 0.9,
+    "tags": ["koppen", "Cwb", "subtropical_highland"],
+    "tier_extensions": {
+      "source": "Beck et al. Scientific Data 2018",
+      "valid_from": "2018-10-30",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "concept.climate.koppen.dfa",
+    "schema_version": "3.2",
+    "domain": "climate.classification",
+    "subtopic": "climate.koppen.Dfa",
+    "tier": "variant",
+    "type": "concept",
+    "statement": "Dfa — влажный континентальный климат с жарким летом по Кёппену; самый тёплый месяц ≥22°C, холодный <-3°C; Средний Запад США, Украина, северный Китай.",
+    "conditions": "Köppen-Geiger Beck et al. 2018",
+    "prereq": ["concept.climate.classification"],
+    "confidence": 0.92,
+    "tags": ["koppen", "Dfa", "humid_continental"],
+    "tier_extensions": {
+      "source": "Beck et al. Scientific Data 2018",
+      "valid_from": "2018-10-30",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "concept.climate.koppen.dfb",
+    "schema_version": "3.2",
+    "domain": "climate.classification",
+    "subtopic": "climate.koppen.Dfb",
+    "tier": "variant",
+    "type": "concept",
+    "statement": "Dfb — влажный континентальный климат с тёплым летом по Кёппену; самый тёплый месяц <22°C, ≥4 месяца >10°C; Москва, Скандинавия, центральная Канада.",
+    "conditions": "Köppen-Geiger Beck et al. 2018",
+    "prereq": ["concept.climate.classification"],
+    "confidence": 0.92,
+    "tags": ["koppen", "Dfb", "humid_continental_warm_summer"],
+    "tier_extensions": {
+      "source": "Beck et al. Scientific Data 2018",
+      "valid_from": "2018-10-30",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "concept.climate.koppen.dfc",
+    "schema_version": "3.2",
+    "domain": "climate.classification",
+    "subtopic": "climate.koppen.Dfc",
+    "tier": "variant",
+    "type": "concept",
+    "statement": "Dfc — субарктический (бореальный) климат по Кёппену; 1-3 месяца >10°C; тайга Сибири, Канады, Скандинавии; вечная мерзлота во многих регионах.",
+    "conditions": "Köppen-Geiger Beck et al. 2018",
+    "prereq": ["concept.climate.classification"],
+    "confidence": 0.92,
+    "tags": ["koppen", "Dfc", "subarctic", "boreal"],
+    "tier_extensions": {
+      "source": "Beck et al. Scientific Data 2018",
+      "valid_from": "2018-10-30",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "concept.climate.koppen.dfd",
+    "schema_version": "3.2",
+    "domain": "climate.classification",
+    "subtopic": "climate.koppen.Dfd",
+    "tier": "variant",
+    "type": "concept",
+    "statement": "Dfd — экстремально холодный субарктический климат по Кёппену; самый холодный месяц <-38°C; Восточная Сибирь, Якутия; полюс холода Северного полушария Верхоянск/Оймякон.",
+    "conditions": "Köppen-Geiger Beck et al. 2018",
+    "prereq": ["concept.climate.classification"],
+    "confidence": 0.9,
+    "tags": ["koppen", "Dfd", "extreme_subarctic", "yakutia"],
+    "tier_extensions": {
+      "source": "Beck et al. Scientific Data 2018",
+      "valid_from": "2018-10-30",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "concept.climate.koppen.et",
+    "schema_version": "3.2",
+    "domain": "climate.classification",
+    "subtopic": "climate.koppen.ET",
+    "tier": "variant",
+    "type": "concept",
+    "statement": "ET — тундровый климат по Кёппену; самый тёплый месяц 0-10°C; вечная мерзлота, низкорослая растительность; северное побережье Сибири, Канады, Гренландии.",
+    "conditions": "Köppen-Geiger Beck et al. 2018",
+    "prereq": ["concept.climate.classification"],
+    "confidence": 0.93,
+    "tags": ["koppen", "ET", "tundra", "polar"],
+    "tier_extensions": {
+      "source": "Beck et al. Scientific Data 2018",
+      "valid_from": "2018-10-30",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "concept.climate.koppen.ef",
+    "schema_version": "3.2",
+    "domain": "climate.classification",
+    "subtopic": "climate.koppen.EF",
+    "tier": "variant",
+    "type": "concept",
+    "statement": "EF — климат вечного льда по Кёппену; T самого тёплого месяца <0°C; постоянный ледниковый покров; внутренние районы Антарктиды и Гренландии.",
+    "conditions": "Köppen-Geiger Beck et al. 2018",
+    "prereq": ["concept.climate.classification"],
+    "confidence": 0.94,
+    "tags": ["koppen", "EF", "ice_cap", "polar"],
+    "tier_extensions": {
+      "source": "Beck et al. Scientific Data 2018",
+      "valid_from": "2018-10-30",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.climate.record.heat.death_valley",
+    "schema_version": "3.2",
+    "domain": "climate.records",
+    "subtopic": "climate.record.temperature_max",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Рекорд жары Долина Смерти (Калифорния, США) — 56.7°C зафиксированы 10 июля 1913 на станции Furnace Creek; признанный WMO рекорд приповерхностной температуры воздуха.",
+    "conditions": "WMO World Weather Records",
+    "prereq": ["concept.climate.records"],
+    "confidence": 0.82,
+    "tags": ["record", "heat", "death_valley", "furnace_creek"],
+    "tier_extensions": {
+      "source": "WMO Global Weather and Climate Extremes Archive",
+      "valid_from": "1913-07-10",
+      "valid_until": null,
+      "has_disputes": true,
+      "temperature_C": 56.7
+    }
+  },
+  {
+    "id": "fact.climate.record.cold.vostok",
+    "schema_version": "3.2",
+    "domain": "climate.records",
+    "subtopic": "climate.record.temperature_min",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Рекорд холода станция Восток (Антарктида) — -89.2°C зафиксированы 21 июля 1983; признанный WMO абсолютный минимум приземной температуры воздуха.",
+    "conditions": "WMO World Weather Records",
+    "prereq": ["concept.climate.records"],
+    "confidence": 0.93,
+    "tags": ["record", "cold", "vostok", "antarctica"],
+    "tier_extensions": {
+      "source": "WMO Global Weather and Climate Extremes Archive",
+      "valid_from": "1983-07-21",
+      "valid_until": null,
+      "has_disputes": false,
+      "temperature_C": -89.2
+    }
+  },
+  {
+    "id": "fact.climate.record.wind.barrow_island",
+    "schema_version": "3.2",
+    "domain": "climate.records",
+    "subtopic": "climate.record.wind_speed",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Рекорд скорости ветра остров Барроу (Австралия) — 408 км/ч зафиксированы 10 апреля 1996 при циклоне Оливия; признанный WMO мировой рекорд скорости ветра.",
+    "conditions": "WMO Global Weather Extremes Archive 2010",
+    "prereq": ["concept.climate.records"],
+    "confidence": 0.85,
+    "tags": ["record", "wind", "barrow_island", "cyclone_olivia"],
+    "tier_extensions": {
+      "source": "WMO Global Weather and Climate Extremes Archive 2010",
+      "valid_from": "1996-04-10",
+      "valid_until": null,
+      "has_disputes": false,
+      "wind_kmh": 408
+    }
+  },
+  {
+    "id": "fact.climate.record.rainfall.cherrapunji",
+    "schema_version": "3.2",
+    "domain": "climate.records",
+    "subtopic": "climate.record.rainfall",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Чхерапунджи (Мегхалая, Индия) — рекорд годовых осадков 26 461 мм за период август 1860 - июль 1861; среднегодовые осадки ~11 777 мм; муссонный режим.",
+    "conditions": "WMO World Weather Records; IMD",
+    "prereq": ["concept.climate.records"],
+    "confidence": 0.88,
+    "tags": ["record", "rainfall", "cherrapunji", "monsoon"],
+    "tier_extensions": {
+      "source": "WMO; India Meteorological Department",
+      "valid_from": "1861-07-31",
+      "valid_until": null,
+      "has_disputes": false,
+      "annual_rainfall_mm": 26461
+    }
+  }
+]

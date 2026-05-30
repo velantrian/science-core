@@ -1,0 +1,485 @@
+[
+  {
+    "id": "concept.biology.evolution.inclusive_fitness",
+    "schema_version": "3.2",
+    "domain": "biology.evolution",
+    "subtopic": "biology.evolution.social",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "Инклюзивная приспособленность Гамильтона — сумма прямой репродуктивной приспособленности особи и косвенного вклада через выживание родственников, взвешенного коэффициентом родства.",
+    "formal_notation": "W_inclusive = W_direct + Σ r_i · ΔW_i",
+    "conditions": "Аддитивность вкладов; коэффициент родства r определён по идентичности по происхождению",
+    "prereq": [],
+    "confidence": 0.98,
+    "tags": [
+      "Hamilton",
+      "inclusive_fitness",
+      "kin",
+      "altruism"
+    ]
+  },
+  {
+    "id": "law.biology.evolution.hamilton_rule",
+    "schema_version": "3.2",
+    "domain": "biology.evolution",
+    "subtopic": "biology.evolution.social",
+    "tier": "invariant",
+    "type": "law",
+    "statement": "Правило Гамильтона: альтруистический ген распространяется, если коэффициент родства r, умноженный на выгоду получателя B, превышает издержки альтруиста C.",
+    "formal_notation": "r · B > C",
+    "conditions": "Аддитивность вклада; одна локусная модель; пренебрежимая корреляция со средой",
+    "prereq": [
+      "concept.biology.evolution.inclusive_fitness"
+    ],
+    "confidence": 0.98,
+    "tags": [
+      "Hamilton_rule",
+      "kin_selection",
+      "altruism"
+    ]
+  },
+  {
+    "id": "principle.biology.evolution.group_selection",
+    "schema_version": "3.2",
+    "domain": "biology.evolution",
+    "subtopic": "biology.evolution.social",
+    "tier": "invariant",
+    "type": "principle",
+    "statement": "Групповой отбор — изменение частот аллелей через дифференциальное выживание и вымирание групп; современные многоуровневые модели Уилсона требуют структурирования популяции.",
+    "conditions": "Малые группы; сильная межгрупповая конкуренция; ограниченная миграция",
+    "prereq": [
+      "concept.biology.evolution.inclusive_fitness"
+    ],
+    "confidence": 0.9,
+    "tags": [
+      "group_selection",
+      "multilevel",
+      "D_S_Wilson"
+    ]
+  },
+  {
+    "id": "concept.biology.evolution.prisoners_dilemma",
+    "schema_version": "3.2",
+    "domain": "biology.evolution",
+    "subtopic": "biology.evolution.social",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "Дилемма заключённого — игра с матрицей T>R>P>S, где взаимное предательство — равновесие Нэша; итеративная версия с tit-for-tat поддерживает кооперацию.",
+    "formal_notation": "T (искушение) > R (награда) > P (наказание) > S (расплата)",
+    "conditions": "Повторяемые взаимодействия; распознавание партнёра; тень будущего",
+    "prereq": [
+      "principle.biology.evolution.group_selection"
+    ],
+    "confidence": 0.97,
+    "tags": [
+      "prisoners_dilemma",
+      "tit_for_tat",
+      "Axelrod",
+      "cooperation"
+    ]
+  },
+  {
+    "id": "concept.biology.evolution.ess",
+    "schema_version": "3.2",
+    "domain": "biology.evolution",
+    "subtopic": "biology.evolution.social",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "Эволюционно стабильная стратегия — стратегия, которую при достаточной частоте в популяции не способна вытеснить ни одна редкая мутантная альтернатива.",
+    "formal_notation": "Стратегия S — ESS, если E(S,S) > E(S',S) либо E(S,S)=E(S',S) и E(S,S')>E(S',S')",
+    "conditions": "Бесконечная популяция; симметричные парные взаимодействия",
+    "prereq": [
+      "concept.biology.evolution.prisoners_dilemma"
+    ],
+    "confidence": 0.98,
+    "tags": [
+      "ESS",
+      "Maynard_Smith",
+      "game_theory"
+    ]
+  },
+  {
+    "id": "model.biology.evolution.hawk_dove",
+    "schema_version": "3.2",
+    "domain": "biology.evolution",
+    "subtopic": "biology.evolution.social",
+    "tier": "invariant",
+    "type": "model",
+    "statement": "Игра ястребы-голуби моделирует конфликт за ресурс V с ценой травмы C; смешанное ESS даёт долю ястребов p* = V/C при V<C.",
+    "formal_notation": "p*_ястреб = V/C; при V≥C ESS — чистая стратегия ястреба",
+    "conditions": "Случайные встречи; симметрия игроков; единая цена травмы",
+    "prereq": [
+      "concept.biology.evolution.ess"
+    ],
+    "confidence": 0.97,
+    "tags": [
+      "hawk_dove",
+      "ESS",
+      "game_theory"
+    ]
+  },
+  {
+    "id": "principle.biology.evolution.balancing_selection",
+    "schema_version": "3.2",
+    "domain": "biology.evolution",
+    "subtopic": "biology.evolution.mechanisms",
+    "tier": "invariant",
+    "type": "principle",
+    "statement": "Балансирующий отбор поддерживает полиморфизм через гетерозиготное преимущество, частотозависимый отбор или гетерогенность среды во времени и пространстве.",
+    "conditions": "Множественные аллели с различающимися эффектами при разных условиях",
+    "prereq": [
+      "law.biology.genetics.hardy_weinberg"
+    ],
+    "confidence": 0.97,
+    "tags": [
+      "balancing_selection",
+      "polymorphism",
+      "heterozygote"
+    ]
+  },
+  {
+    "id": "concept.biology.evolution.heterozygote_advantage",
+    "schema_version": "3.2",
+    "domain": "biology.evolution",
+    "subtopic": "biology.evolution.mechanisms",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "Гетерозиготное преимущество — более высокая приспособленность гетерозиготы по сравнению с обеими гомозиготами; классический пример — HbS при малярии.",
+    "formal_notation": "W_Aa > W_AA; W_Aa > W_aa",
+    "conditions": "Среда с давлением патогена или иной фактор, фаворизирующий гетерозиготу",
+    "prereq": [
+      "principle.biology.evolution.balancing_selection"
+    ],
+    "confidence": 0.98,
+    "tags": [
+      "overdominance",
+      "sickle_cell",
+      "HbS"
+    ]
+  },
+  {
+    "id": "principle.biology.evolution.frequency_dependent",
+    "schema_version": "3.2",
+    "domain": "biology.evolution",
+    "subtopic": "biology.evolution.mechanisms",
+    "tier": "invariant",
+    "type": "principle",
+    "statement": "Частотозависимый отбор — приспособленность аллеля или фенотипа зависит от его частоты; отрицательная зависимость поддерживает редкие варианты и полиморфизм.",
+    "conditions": "Взаимодействие со средой через частоту других фенотипов",
+    "prereq": [
+      "principle.biology.evolution.balancing_selection"
+    ],
+    "confidence": 0.97,
+    "tags": [
+      "frequency_dependent",
+      "negative",
+      "polymorphism"
+    ]
+  },
+  {
+    "id": "concept.biology.evolution.ka_ks",
+    "schema_version": "3.2",
+    "domain": "biology.evolution",
+    "subtopic": "biology.evolution.molecular",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "Отношение Ka/Ks — число несинонимических замен на сайт к числу синонимических; Ka/Ks<1 говорит об очищающем отборе, =1 о нейтральности, >1 об позитивном отборе.",
+    "formal_notation": "ω = dN/dS = Ka/Ks",
+    "conditions": "Сравнение гомологичных кодирующих последовательностей",
+    "prereq": [],
+    "confidence": 0.98,
+    "tags": [
+      "Ka_Ks",
+      "dN_dS",
+      "selection",
+      "molecular"
+    ]
+  },
+  {
+    "id": "principle.biology.evolution.neutral_theory_extended",
+    "schema_version": "3.2",
+    "domain": "biology.evolution",
+    "subtopic": "biology.evolution.molecular",
+    "tier": "invariant",
+    "type": "principle",
+    "statement": "Нейтральная теория Кимуры утверждает, что большинство замен на молекулярном уровне селективно нейтральны и фиксируются генетическим дрейфом со скоростью, равной скорости мутирования.",
+    "formal_notation": "Скорость фиксации k = μ для нейтральных аллелей",
+    "conditions": "Большинство мутаций либо вредны и устраняются, либо нейтральны",
+    "prereq": [
+      "concept.biology.evolution.ka_ks"
+    ],
+    "confidence": 0.95,
+    "tags": [
+      "neutral_theory",
+      "Kimura",
+      "drift"
+    ]
+  },
+  {
+    "id": "concept.biology.evolution.genetic_load",
+    "schema_version": "3.2",
+    "domain": "biology.evolution",
+    "subtopic": "biology.evolution.population",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "Генетическая нагрузка — относительное снижение средней приспособленности популяции из-за вредных аллелей по сравнению с оптимальным генотипом.",
+    "formal_notation": "L = (W_max − W_mean) / W_max",
+    "conditions": "Учёт мутационной, сегрегационной и субституционной составляющих",
+    "prereq": [
+      "principle.biology.evolution.neutral_theory_extended"
+    ],
+    "confidence": 0.95,
+    "tags": [
+      "genetic_load",
+      "mutation_load",
+      "Haldane"
+    ]
+  },
+  {
+    "id": "concept.biology.evolution.inbreeding_coefficient",
+    "schema_version": "3.2",
+    "domain": "biology.evolution",
+    "subtopic": "biology.evolution.population",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "Коэффициент инбридинга F — вероятность того, что два аллеля в локусе у особи идентичны по происхождению; повышает гомозиготность и снижает гетерозиготность популяции.",
+    "formal_notation": "H_obs = H_exp · (1 − F)",
+    "conditions": "Известная родословная или оценка по молекулярным маркёрам",
+    "prereq": [
+      "concept.biology.evolution.genetic_load"
+    ],
+    "confidence": 0.98,
+    "tags": [
+      "inbreeding",
+      "F_coefficient",
+      "IBD"
+    ]
+  },
+  {
+    "id": "effect.biology.evolution.bottleneck",
+    "schema_version": "3.2",
+    "domain": "biology.evolution",
+    "subtopic": "biology.evolution.population",
+    "tier": "invariant",
+    "type": "effect",
+    "statement": "Эффект бутылочного горлышка — резкое сокращение размера популяции приводит к потере генетического разнообразия и усилению дрейфа в последующих поколениях.",
+    "formal_notation": "Эффективная Ne определяет потерю гетерозиготности ΔH ≈ 1/(2Ne)",
+    "conditions": "Длительность узкого этапа сопоставима с одним поколением и более",
+    "prereq": [
+      "concept.biology.evolution.inbreeding_coefficient"
+    ],
+    "confidence": 0.98,
+    "tags": [
+      "bottleneck",
+      "drift",
+      "Ne"
+    ]
+  },
+  {
+    "id": "effect.biology.evolution.founder",
+    "schema_version": "3.2",
+    "domain": "biology.evolution",
+    "subtopic": "biology.evolution.population",
+    "tier": "invariant",
+    "type": "effect",
+    "statement": "Эффект основателя — частоты аллелей в новой популяции, возникшей от малого числа основателей, случайно отличаются от исходной популяции и обедняются по разнообразию.",
+    "conditions": "Малая группа колонизаторов; репродуктивная изоляция новой популяции",
+    "prereq": [
+      "effect.biology.evolution.bottleneck"
+    ],
+    "confidence": 0.98,
+    "tags": [
+      "founder",
+      "drift",
+      "colonization"
+    ]
+  },
+  {
+    "id": "concept.biology.evolution.homology",
+    "schema_version": "3.2",
+    "domain": "biology.evolution",
+    "subtopic": "biology.evolution.systematics",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "Гомология — сходство признаков, обусловленное общим происхождением; противопоставляется гомоплазии, где сходство возникло независимо от общего предка.",
+    "conditions": "Сравнение признаков с учётом онтогенеза и филогении",
+    "prereq": [],
+    "confidence": 0.99,
+    "tags": [
+      "homology",
+      "homoplasy",
+      "ancestry"
+    ]
+  },
+  {
+    "id": "pattern.biology.evolution.convergence",
+    "schema_version": "3.2",
+    "domain": "biology.evolution",
+    "subtopic": "biology.evolution.systematics",
+    "tier": "invariant",
+    "type": "pattern",
+    "statement": "Конвергентная эволюция — независимое возникновение сходных признаков у неродственных линий под действием сходного отбора; результат — аналогичные структуры.",
+    "conditions": "Сходное давление среды; различные исходные линии",
+    "prereq": [
+      "concept.biology.evolution.homology"
+    ],
+    "confidence": 0.99,
+    "tags": [
+      "convergence",
+      "analogy",
+      "ichthyosaur",
+      "dolphin"
+    ]
+  },
+  {
+    "id": "pattern.biology.evolution.divergence",
+    "schema_version": "3.2",
+    "domain": "biology.evolution",
+    "subtopic": "biology.evolution.systematics",
+    "tier": "invariant",
+    "type": "pattern",
+    "statement": "Дивергентная эволюция — расхождение признаков у потомков общего предка под действием различающихся условий среды и адаптивной радиации.",
+    "conditions": "Разделение популяций; различающиеся ниши",
+    "prereq": [
+      "concept.biology.evolution.homology"
+    ],
+    "confidence": 0.99,
+    "tags": [
+      "divergence",
+      "adaptive_radiation",
+      "Galapagos"
+    ]
+  },
+  {
+    "id": "concept.biology.evolution.mutualism",
+    "schema_version": "3.2",
+    "domain": "biology.evolution",
+    "subtopic": "biology.evolution.coevolution",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "Мутуализм — взаимовыгодное взаимодействие видов, где приспособленность каждого партнёра растёт; примеры — микориза и опыление.",
+    "formal_notation": "Эффект на A: +; эффект на B: +",
+    "conditions": "Длительная коэволюция; механизмы против обмана",
+    "prereq": [],
+    "confidence": 0.98,
+    "tags": [
+      "mutualism",
+      "symbiosis",
+      "coevolution"
+    ]
+  },
+  {
+    "id": "concept.biology.evolution.commensalism",
+    "schema_version": "3.2",
+    "domain": "biology.evolution",
+    "subtopic": "biology.evolution.coevolution",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "Комменсализм — межвидовое взаимодействие, где один вид извлекает выгоду, а второй практически не испытывает положительного или отрицательного эффекта.",
+    "formal_notation": "Эффект на A: +; эффект на B: 0",
+    "conditions": "Слабая или отсутствующая модификация приспособленности хозяина",
+    "prereq": [
+      "concept.biology.evolution.mutualism"
+    ],
+    "confidence": 0.95,
+    "tags": [
+      "commensalism",
+      "interaction"
+    ]
+  },
+  {
+    "id": "concept.biology.evolution.ectoparasitism",
+    "schema_version": "3.2",
+    "domain": "biology.evolution",
+    "subtopic": "biology.evolution.coevolution",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "Эктопаразитизм — форма паразитизма, при которой паразит живёт на внешней поверхности хозяина и питается его тканями или жидкостями.",
+    "formal_notation": "Эффект на паразита: +; эффект на хозяина: −",
+    "conditions": "Морфологические адаптации крепления и питания",
+    "prereq": [
+      "concept.biology.evolution.commensalism"
+    ],
+    "confidence": 0.98,
+    "tags": [
+      "ectoparasite",
+      "host",
+      "parasitism"
+    ]
+  },
+  {
+    "id": "concept.biology.evolution.exaptation",
+    "schema_version": "3.2",
+    "domain": "biology.evolution",
+    "subtopic": "biology.evolution.mechanisms",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "Экзаптация — признак, ранее сформировавшийся под одним отбором или нейтрально, приобретает новую функцию в изменившихся условиях; перья сначала для терморегуляции, затем для полёта.",
+    "conditions": "Существующая структура с потенциалом новой функции; смена давления отбора",
+    "prereq": [],
+    "confidence": 0.96,
+    "tags": [
+      "exaptation",
+      "Gould",
+      "preadaptation"
+    ]
+  },
+  {
+    "id": "model.biology.evolution.punctuated_equilibrium",
+    "schema_version": "3.2",
+    "domain": "biology.evolution",
+    "subtopic": "biology.evolution.tempo",
+    "tier": "invariant",
+    "type": "model",
+    "statement": "Пунктированное равновесие Элдриджа-Гулда: длительные стазисы видов чередуются с короткими эпизодами быстрого видообразования в малых периферийных популяциях.",
+    "conditions": "Палеонтологические данные; аллопатрическое видообразование",
+    "prereq": [
+      "concept.biology.evolution.exaptation"
+    ],
+    "confidence": 0.92,
+    "tags": [
+      "punctuated_equilibrium",
+      "Eldredge",
+      "Gould",
+      "stasis"
+    ]
+  },
+  {
+    "id": "principle.biology.evolution.reciprocal_altruism",
+    "schema_version": "3.2",
+    "domain": "biology.evolution",
+    "subtopic": "biology.evolution.social",
+    "tier": "invariant",
+    "type": "principle",
+    "statement": "Взаимный альтруизм Триверса — обмен полезными действиями между неродственными особями при повторяющихся встречах и распознавании партнёра.",
+    "conditions": "Тень будущего; память о партнёре; асимметрия выгод и издержек во времени",
+    "prereq": [
+      "concept.biology.evolution.prisoners_dilemma"
+    ],
+    "confidence": 0.96,
+    "tags": [
+      "reciprocal_altruism",
+      "Trivers",
+      "cooperation"
+    ]
+  },
+  {
+    "id": "concept.biology.evolution.synonymous_substitutions",
+    "schema_version": "3.2",
+    "domain": "biology.evolution",
+    "subtopic": "biology.evolution.molecular",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "Синонимические замены не меняют аминокислоту благодаря вырожденности генетического кода; несинонимические заменяют аминокислоту и подвержены сильному отбору.",
+    "conditions": "Сравнение гомологичных кодирующих участков",
+    "prereq": [
+      "concept.biology.evolution.ka_ks"
+    ],
+    "confidence": 0.99,
+    "tags": [
+      "synonymous",
+      "nonsynonymous",
+      "codon"
+    ]
+  }
+]

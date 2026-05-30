@@ -1,0 +1,477 @@
+[
+  {
+    "id": "fallacy.logic.informal.texas_sharpshooter",
+    "schema_version": "3.2",
+    "domain": "logic.fallacies",
+    "subtopic": "logic.fallacies.statistical",
+    "tier": "logic",
+    "type": "fallacy",
+    "statement": "Подбор кластера данных постфактум под удобную гипотезу с игнорированием прочих наблюдений; вывод закономерности из случайной флуктуации.",
+    "formal_notation": "Cluster(X) selected after seeing data; P(pattern|chance) ≈ 1",
+    "conditions": "Множественные сравнения без коррекции; цель определена после наблюдения",
+    "prereq": ["concept.logic.evidence", "concept.math.statistics.multiple_testing"],
+    "derives_from": [],
+    "confidence": 0.97,
+    "tags": ["fallacy", "texas_sharpshooter", "cherry_picking", "post_hoc"],
+    "tier_extensions": {
+      "category": "fallacy",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "fallacy.logic.informal.moving_goalposts",
+    "schema_version": "3.2",
+    "domain": "logic.fallacies",
+    "subtopic": "logic.fallacies.dialectical",
+    "tier": "logic",
+    "type": "fallacy",
+    "statement": "Изменение критериев истинности или доказательства после того, как предъявленные доказательства удовлетворили исходное требование.",
+    "formal_notation": "Criterion(t1) ⊨ Evidence; Criterion(t2) ⊭ Evidence; Criterion(t2) ≠ Criterion(t1)",
+    "conditions": "Дискуссия с явным критерием; критерий пересматривается после ответа",
+    "prereq": ["concept.logic.argument", "concept.logic.criterion"],
+    "derives_from": [],
+    "confidence": 0.95,
+    "tags": ["fallacy", "moving_goalposts", "dialectical", "bad_faith"],
+    "tier_extensions": {
+      "category": "fallacy",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "fallacy.logic.informal.kafka_trap",
+    "schema_version": "3.2",
+    "domain": "logic.fallacies",
+    "subtopic": "logic.fallacies.dialectical",
+    "tier": "logic",
+    "type": "fallacy",
+    "statement": "Отрицание обвинения трактуется как подтверждение вины; невозможность защиты встроена в структуру обвинения.",
+    "formal_notation": "Accuse(X) ∧ Deny(X) ⇒ Guilty(X); Accuse(X) ∧ Admit(X) ⇒ Guilty(X)",
+    "conditions": "Обвинение по самоопровергающейся схеме; защита заранее обесценена",
+    "prereq": ["concept.logic.burden_of_proof", "concept.logic.falsifiability"],
+    "derives_from": [],
+    "confidence": 0.92,
+    "tags": ["fallacy", "kafka_trap", "unfalsifiable", "dialectical"],
+    "tier_extensions": {
+      "category": "fallacy",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "fallacy.logic.informal.ad_populum",
+    "schema_version": "3.2",
+    "domain": "logic.fallacies",
+    "subtopic": "logic.fallacies.relevance",
+    "tier": "logic",
+    "type": "fallacy",
+    "statement": "Истинность утверждения обосновывается широкой распространённостью убеждения в нём среди людей.",
+    "formal_notation": "Many(Believe(P)) ⊢ True(P)",
+    "conditions": "Вывод об истинности на основании частоты согласия, без независимых данных",
+    "prereq": ["concept.logic.truth", "concept.logic.evidence"],
+    "derives_from": [],
+    "confidence": 0.98,
+    "tags": ["fallacy", "ad_populum", "bandwagon", "relevance"],
+    "tier_extensions": {
+      "category": "fallacy",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "fallacy.logic.informal.appeal_to_tradition",
+    "schema_version": "3.2",
+    "domain": "logic.fallacies",
+    "subtopic": "logic.fallacies.relevance",
+    "tier": "logic",
+    "type": "fallacy",
+    "statement": "Истинность или правильность практики выводится из её давности и устойчивости во времени.",
+    "formal_notation": "Old(P) ⊢ Right(P)",
+    "conditions": "Аргумент опирается исключительно на возраст или историю практики",
+    "prereq": ["concept.logic.tradition", "concept.logic.justification"],
+    "derives_from": [],
+    "confidence": 0.97,
+    "tags": ["fallacy", "tradition", "relevance", "argumentum_ad_antiquitatem"],
+    "tier_extensions": {
+      "category": "fallacy",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "fallacy.logic.informal.appeal_to_novelty",
+    "schema_version": "3.2",
+    "domain": "logic.fallacies",
+    "subtopic": "logic.fallacies.relevance",
+    "tier": "logic",
+    "type": "fallacy",
+    "statement": "Истинность или превосходство утверждения выводится из его новизны без оценки содержания.",
+    "formal_notation": "New(P) ⊢ Better(P)",
+    "conditions": "Аргумент опирается на возраст; альтернатива — устаревший статус",
+    "prereq": ["concept.logic.novelty", "concept.logic.justification"],
+    "derives_from": [],
+    "confidence": 0.96,
+    "tags": ["fallacy", "novelty", "relevance", "argumentum_ad_novitatem"],
+    "tier_extensions": {
+      "category": "fallacy",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "fallacy.logic.informal.causal_oversimplification",
+    "schema_version": "3.2",
+    "domain": "logic.fallacies",
+    "subtopic": "logic.fallacies.causal",
+    "tier": "logic",
+    "type": "fallacy",
+    "statement": "Приписывание следствию единственной причины при наличии множества необходимых сопричин.",
+    "formal_notation": "Effect(E) ← Cause(C1) при фактическом Effect(E) ← {C1,C2,...,Cn}",
+    "conditions": "Многофакторное явление; объяснение редуцировано до одной переменной",
+    "prereq": ["concept.logic.causation", "concept.logic.multifactor"],
+    "derives_from": [],
+    "confidence": 0.94,
+    "tags": ["fallacy", "causal", "oversimplification", "single_cause"],
+    "tier_extensions": {
+      "category": "fallacy",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "fallacy.logic.informal.gish_gallop",
+    "schema_version": "3.2",
+    "domain": "logic.fallacies",
+    "subtopic": "logic.fallacies.dialectical",
+    "tier": "logic",
+    "type": "fallacy",
+    "statement": "Лавина слабо обоснованных утверждений за короткое время с целью перегрузить опровержение, асимметрия времени порождения и разбора.",
+    "formal_notation": "Rate(claims) ≫ Rate(rebuttals); Quality(claims) low",
+    "conditions": "Дебаты с лимитом времени; асимметрия стоимости порождения и опровержения",
+    "prereq": ["concept.logic.refutation", "concept.logic.brandolini"],
+    "derives_from": [],
+    "confidence": 0.93,
+    "tags": ["fallacy", "gish_gallop", "dialectical", "brandolini"],
+    "tier_extensions": {
+      "category": "fallacy",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "fallacy.logic.informal.golden_mean",
+    "schema_version": "3.2",
+    "domain": "logic.fallacies",
+    "subtopic": "logic.fallacies.dialectical",
+    "tier": "logic",
+    "type": "fallacy",
+    "statement": "Истина приравнивается к компромиссу между двумя позициями вне зависимости от их обоснованности.",
+    "formal_notation": "True(P) := midpoint(A, B) безотносительно Evidence(A), Evidence(B)",
+    "conditions": "Бинарная конфигурация позиций; усреднение выдаётся за беспристрастность",
+    "prereq": ["concept.logic.compromise", "concept.logic.truth"],
+    "derives_from": [],
+    "confidence": 0.94,
+    "tags": ["fallacy", "golden_mean", "middle_ground", "false_balance"],
+    "tier_extensions": {
+      "category": "fallacy",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "fallacy.logic.informal.special_pleading",
+    "schema_version": "3.2",
+    "domain": "logic.fallacies",
+    "subtopic": "logic.fallacies.dialectical",
+    "tier": "logic",
+    "type": "fallacy",
+    "statement": "Введение исключения из универсального правила без независимого обоснования, только ради защиты предпочитаемого тезиса.",
+    "formal_notation": "∀x P(x); ¬P(a); justification(a) = nil",
+    "conditions": "Универсальное правило подвергается ad hoc исключению",
+    "prereq": ["concept.logic.universal_rule", "concept.logic.justification"],
+    "derives_from": [],
+    "confidence": 0.95,
+    "tags": ["fallacy", "special_pleading", "ad_hoc", "dialectical"],
+    "tier_extensions": {
+      "category": "fallacy",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "fallacy.logic.informal.motte_and_bailey",
+    "schema_version": "3.2",
+    "domain": "logic.fallacies",
+    "subtopic": "logic.fallacies.dialectical",
+    "tier": "logic",
+    "type": "fallacy",
+    "statement": "Чередование сильного спорного тезиса (bailey) с защищаемой умеренной версией (motte); при критике отступление к motte, после её — возврат к bailey.",
+    "formal_notation": "Claim(bailey) при отсутствии критики; Claim(motte) при критике; bailey ≢ motte",
+    "conditions": "Два различимых тезиса с разной защищаемостью под общим именем",
+    "prereq": ["concept.logic.equivocation", "concept.logic.argument"],
+    "derives_from": [],
+    "confidence": 0.93,
+    "tags": ["fallacy", "motte_and_bailey", "equivocation", "shackel"],
+    "tier_extensions": {
+      "category": "fallacy",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "fallacy.logic.informal.naturalistic",
+    "schema_version": "3.2",
+    "domain": "logic.fallacies",
+    "subtopic": "logic.fallacies.is_ought",
+    "tier": "logic",
+    "type": "fallacy",
+    "statement": "Вывод нормативного суждения из чисто описательного факта о природе; переход от is к ought без нормативной посылки.",
+    "formal_notation": "Is(X) ⊢ Ought(X); по Юму запрещено без нормативной посылки",
+    "conditions": "Нет независимой нормативной аксиомы; обоснование морали из природных свойств",
+    "prereq": ["concept.philosophy.hume_law", "concept.logic.is_ought"],
+    "derives_from": [],
+    "confidence": 0.94,
+    "tags": ["fallacy", "naturalistic", "is_ought", "hume"],
+    "tier_extensions": {
+      "category": "fallacy",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "fallacy.logic.informal.moralistic",
+    "schema_version": "3.2",
+    "domain": "logic.fallacies",
+    "subtopic": "logic.fallacies.is_ought",
+    "tier": "logic",
+    "type": "fallacy",
+    "statement": "Вывод дескриптивного факта о мире из нормативного суждения о желаемом; переход от ought к is.",
+    "formal_notation": "Ought(X) ⊢ Is(X)",
+    "conditions": "Нормативное суждение подменяет эмпирическое исследование",
+    "prereq": ["concept.philosophy.hume_law", "concept.logic.is_ought"],
+    "derives_from": [],
+    "confidence": 0.93,
+    "tags": ["fallacy", "moralistic", "is_ought", "moore"],
+    "tier_extensions": {
+      "category": "fallacy",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "fallacy.logic.informal.etymological",
+    "schema_version": "3.2",
+    "domain": "logic.fallacies",
+    "subtopic": "logic.fallacies.semantic",
+    "tier": "logic",
+    "type": "fallacy",
+    "statement": "Современное значение слова приравнивается к историческому или этимологическому происхождению; диахроническое значение подменяет синхроническое.",
+    "formal_notation": "Meaning_now(W) := Meaning_origin(W)",
+    "conditions": "Семантический сдвиг во времени игнорируется при анализе термина",
+    "prereq": ["concept.linguistics.semantics", "concept.linguistics.diachrony"],
+    "derives_from": [],
+    "confidence": 0.94,
+    "tags": ["fallacy", "etymological", "semantic", "linguistics"],
+    "tier_extensions": {
+      "category": "fallacy",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "fallacy.logic.informal.package_deal",
+    "schema_version": "3.2",
+    "domain": "logic.fallacies",
+    "subtopic": "logic.fallacies.semantic",
+    "tier": "logic",
+    "type": "fallacy",
+    "statement": "Объединение разнородных понятий или позиций под единым ярлыком с переносом свойств одних на другие.",
+    "formal_notation": "Label(L) := {A, B, C}; Prop(A) ⊢ Prop(B), Prop(C) без обоснования",
+    "conditions": "Семантическое склеивание независимых тезисов под общим термином",
+    "prereq": ["concept.logic.equivocation", "concept.linguistics.semantics"],
+    "derives_from": [],
+    "confidence": 0.92,
+    "tags": ["fallacy", "package_deal", "semantic", "conflation"],
+    "tier_extensions": {
+      "category": "fallacy",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "fallacy.logic.informal.false_analogy",
+    "schema_version": "3.2",
+    "domain": "logic.fallacies",
+    "subtopic": "logic.fallacies.analogical",
+    "tier": "logic",
+    "type": "fallacy",
+    "statement": "Перенос свойства с одного объекта на другой при поверхностном сходстве и отсутствии релевантного структурного изоморфизма.",
+    "formal_notation": "Similar(A,B, surface) ∧ P(A) ⊢ P(B); Sim(A,B) ⊄ relevant_features",
+    "conditions": "Сходство аналогии не покрывает критическое свойство переноса",
+    "prereq": ["concept.logic.analogy", "concept.logic.relevance"],
+    "derives_from": [],
+    "confidence": 0.93,
+    "tags": ["fallacy", "false_analogy", "analogical", "structural"],
+    "tier_extensions": {
+      "category": "fallacy",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "fallacy.logic.informal.faulty_analogy",
+    "schema_version": "3.2",
+    "domain": "logic.fallacies",
+    "subtopic": "logic.fallacies.analogical",
+    "tier": "logic",
+    "type": "fallacy",
+    "statement": "Аналогия с релевантным базовым сходством, но с существенными различиями, обесценивающими вывод; ошибка количества или меры различий.",
+    "formal_notation": "Sim(A,B) > threshold; Diff(A,B) дисквалифицирует перенос P",
+    "conditions": "Часть свойств совпадает; ключевые для вывода — нет",
+    "prereq": ["concept.logic.analogy", "concept.logic.relevance"],
+    "derives_from": [],
+    "confidence": 0.91,
+    "tags": ["fallacy", "faulty_analogy", "analogical", "degree"],
+    "tier_extensions": {
+      "category": "fallacy",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "fallacy.logic.informal.false_middle",
+    "schema_version": "3.2",
+    "domain": "logic.fallacies",
+    "subtopic": "logic.fallacies.formal_like",
+    "tier": "logic",
+    "type": "fallacy",
+    "statement": "Силлогистическая ошибка нераспределённого среднего: средний термин не охватывает весь объём ни в одной посылке.",
+    "formal_notation": "All M are P; All S are M (не M полностью) ⊬ All S are P",
+    "conditions": "Категорический силлогизм; средний термин нераспределён",
+    "prereq": ["concept.logic.syllogism", "concept.logic.distribution"],
+    "derives_from": [],
+    "confidence": 0.98,
+    "tags": ["fallacy", "undistributed_middle", "syllogism", "categorical"],
+    "tier_extensions": {
+      "category": "fallacy",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "fallacy.logic.informal.suppressed_evidence",
+    "schema_version": "3.2",
+    "domain": "logic.fallacies",
+    "subtopic": "logic.fallacies.evidence",
+    "tier": "logic",
+    "type": "fallacy",
+    "statement": "Намеренное умолчание о релевантных свидетельствах, изменяющих заключение, при сохранении формально верных частных утверждений.",
+    "formal_notation": "Premises ⊨ C; Premises ∪ Hidden ⊭ C",
+    "conditions": "Существуют известные релевантные данные, не включённые в посылки",
+    "prereq": ["concept.logic.evidence", "concept.logic.completeness"],
+    "derives_from": [],
+    "confidence": 0.95,
+    "tags": ["fallacy", "suppressed_evidence", "omission", "selective"],
+    "tier_extensions": {
+      "category": "fallacy",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "fallacy.logic.informal.half_truth",
+    "schema_version": "3.2",
+    "domain": "logic.fallacies",
+    "subtopic": "logic.fallacies.evidence",
+    "tier": "logic",
+    "type": "fallacy",
+    "statement": "Истинное утверждение, представленное так, что создаётся ложная общая картина из-за выбранного фрагмента контекста.",
+    "formal_notation": "True(P_fragment) ∧ Implication(P_fragment, context) = false",
+    "conditions": "Импликатура противоречит факту, при истинности самого фрагмента",
+    "prereq": ["concept.logic.implicature", "concept.logic.context"],
+    "derives_from": [],
+    "confidence": 0.93,
+    "tags": ["fallacy", "half_truth", "selective", "implicature"],
+    "tier_extensions": {
+      "category": "fallacy",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "fallacy.logic.informal.perfect_solution",
+    "schema_version": "3.2",
+    "domain": "logic.fallacies",
+    "subtopic": "logic.fallacies.dialectical",
+    "tier": "logic",
+    "type": "fallacy",
+    "statement": "Отвержение решения на основании остаточных недостатков при значимом улучшении ситуации; требование идеала как условие принятия.",
+    "formal_notation": "Solution(S) → Δgood > 0; Reject(S) ← ¬Perfect(S)",
+    "conditions": "Сравнение со стандартом совершенства, а не с альтернативой или статусом-кво",
+    "prereq": ["concept.logic.tradeoff", "concept.logic.alternatives"],
+    "derives_from": [],
+    "confidence": 0.93,
+    "tags": ["fallacy", "nirvana", "perfect_solution", "tradeoff"],
+    "tier_extensions": {
+      "category": "fallacy",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "fallacy.logic.informal.two_wrongs",
+    "schema_version": "3.2",
+    "domain": "logic.fallacies",
+    "subtopic": "logic.fallacies.relevance",
+    "tier": "logic",
+    "type": "fallacy",
+    "statement": "Оправдание неправомерного действия указанием на аналогичный проступок оппонента или третьей стороны.",
+    "formal_notation": "Wrong(A) ∧ Wrong(B) ⊢ Justified(A)",
+    "conditions": "Сравнение двух нарушений без независимой нормы",
+    "prereq": ["concept.logic.norm", "concept.logic.justification"],
+    "derives_from": [],
+    "confidence": 0.96,
+    "tags": ["fallacy", "two_wrongs", "tu_quoque", "relevance"],
+    "tier_extensions": {
+      "category": "fallacy",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "fallacy.logic.informal.abusive_ad_hominem",
+    "schema_version": "3.2",
+    "domain": "logic.fallacies",
+    "subtopic": "logic.fallacies.ad_hominem",
+    "tier": "logic",
+    "type": "fallacy",
+    "statement": "Опровержение тезиса через прямые оскорбления и негативную характеристику оппонента без обращения к содержанию аргумента.",
+    "formal_notation": "Reject(P) ← Insult(Speaker(P))",
+    "conditions": "Атака направлена на лицо, не на пропозицию",
+    "prereq": ["concept.logic.ad_hominem", "concept.logic.relevance"],
+    "derives_from": [],
+    "confidence": 0.98,
+    "tags": ["fallacy", "ad_hominem", "abusive", "relevance"],
+    "tier_extensions": {
+      "category": "fallacy",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "fallacy.logic.informal.circumstantial_ad_hominem",
+    "schema_version": "3.2",
+    "domain": "logic.fallacies",
+    "subtopic": "logic.fallacies.ad_hominem",
+    "tier": "logic",
+    "type": "fallacy",
+    "statement": "Дискредитация тезиса ссылкой на личные обстоятельства, мотивы или интересы оппонента без оценки содержания.",
+    "formal_notation": "Reject(P) ← Interest(Speaker(P)) ∨ Bias(Speaker(P))",
+    "conditions": "Мотив подменяет содержательное опровержение",
+    "prereq": ["concept.logic.ad_hominem", "concept.logic.bias_vs_truth"],
+    "derives_from": [],
+    "confidence": 0.95,
+    "tags": ["fallacy", "ad_hominem", "circumstantial", "motive"],
+    "tier_extensions": {
+      "category": "fallacy",
+      "is_axiomatic": false
+    }
+  },
+  {
+    "id": "fallacy.logic.informal.guilt_by_association",
+    "schema_version": "3.2",
+    "domain": "logic.fallacies",
+    "subtopic": "logic.fallacies.ad_hominem",
+    "tier": "logic",
+    "type": "fallacy",
+    "statement": "Дискредитация тезиса через указание на принадлежность сторонника к дискредитированной группе без логической связи с содержанием.",
+    "formal_notation": "Belief(P, GroupBad) ⊢ False(P)",
+    "conditions": "Атрибуция группы заменяет аргумент по существу",
+    "prereq": ["concept.logic.association", "concept.logic.relevance"],
+    "derives_from": [],
+    "confidence": 0.94,
+    "tags": ["fallacy", "guilt_by_association", "ad_hominem", "relevance"],
+    "tier_extensions": {
+      "category": "fallacy",
+      "is_axiomatic": false
+    }
+  }
+]

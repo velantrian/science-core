@@ -1,0 +1,681 @@
+[
+  {
+    "id": "process.chemistry.industrial.haber_bosch_synthesis_loop",
+    "schema_version": "3.2",
+    "domain": "chemistry.industrial",
+    "subtopic": "chemistry.industrial.synthesis",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Каталитический синтез аммиака из азота и водорода на железном промотированном катализаторе при высоких давлении и температуре.",
+    "formal_notation": "N2 + 3H2 ⇌ 2NH3; ΔH = -92 kJ/mol",
+    "conditions": "T 400–500°C, P 150–300 atm, Fe/K2O/Al2O3 кат, конверсия за проход ~15%, рециркуляция",
+    "prereq": [
+      "concept.chemistry.kinetics.catalyst",
+      "principle.chemistry.equilibrium.le_chatelier",
+      "material.chemistry.inorganic.ammonia"
+    ],
+    "confidence": 0.97,
+    "tags": [
+      "ammonia",
+      "nitrogen_fixation",
+      "catalysis",
+      "industrial_synthesis"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.96,
+      "safety_critical": true,
+      "safety_notes": "Высокое давление H2; токсичный NH3 при утечке; риск взрыва смеси H2/N2"
+    }
+  },
+  {
+    "id": "process.chemistry.industrial.contact_h2so4",
+    "schema_version": "3.2",
+    "domain": "chemistry.industrial",
+    "subtopic": "chemistry.industrial.synthesis",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Контактный метод получения серной кислоты: окисление SO2 до SO3 на ванадиевом катализаторе и абсорбция в олеум.",
+    "formal_notation": "S + O2 → SO2; 2SO2 + O2 ⇌ 2SO3 (V2O5); SO3 + H2O → H2SO4",
+    "conditions": "T 420–600°C по слоям, V2O5/K2SO4 на SiO2, абсорбция в 98% H2SO4, конверсия >99.5%",
+    "prereq": [
+      "material.chemistry.inorganic.sulfuric_acid",
+      "concept.chemistry.kinetics.catalyst"
+    ],
+    "confidence": 0.97,
+    "tags": [
+      "sulfuric_acid",
+      "contact_process",
+      "vanadium_catalyst",
+      "oleum"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.98,
+      "safety_critical": true,
+      "safety_notes": "SO3 и олеум сильно гигроскопичны; туман H2SO4; ожоги; SO2 токсичен"
+    }
+  },
+  {
+    "id": "process.chemistry.industrial.ostwald_hno3",
+    "schema_version": "3.2",
+    "domain": "chemistry.industrial",
+    "subtopic": "chemistry.industrial.synthesis",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Процесс Освальда: каталитическое окисление аммиака на Pt-Rh сетках до NO, доокисление до NO2 и абсорбция водой в HNO3.",
+    "formal_notation": "4NH3 + 5O2 → 4NO + 6H2O; 2NO + O2 → 2NO2; 3NO2 + H2O → 2HNO3 + NO",
+    "conditions": "T 800–900°C на Pt/Rh (90/10) сетке, контакт <1 мс, P 4–12 atm, выход 95–97%",
+    "prereq": [
+      "process.chemistry.industrial.haber_bosch_synthesis_loop",
+      "concept.chemistry.kinetics.catalyst"
+    ],
+    "confidence": 0.97,
+    "tags": [
+      "nitric_acid",
+      "ostwald",
+      "platinum_catalyst",
+      "ammonia_oxidation"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.96,
+      "safety_critical": true,
+      "safety_notes": "NO2 высокотоксичен; HNO3 сильный окислитель; риск взрыва аммиак-воздух"
+    }
+  },
+  {
+    "id": "process.chemistry.industrial.solvay_na2co3",
+    "schema_version": "3.2",
+    "domain": "chemistry.industrial",
+    "subtopic": "chemistry.industrial.synthesis",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Процесс Сольвэ: получение карбоната натрия из рассола NaCl, аммиака и CO2 через малорастворимый бикарбонат натрия с последующей кальцинацией.",
+    "formal_notation": "NaCl + NH3 + CO2 + H2O → NaHCO3↓ + NH4Cl; 2NaHCO3 → Na2CO3 + CO2 + H2O",
+    "conditions": "Башня насыщения 30–40°C, кальцинация 150–200°C, регенерация NH3 известью Ca(OH)2",
+    "prereq": [
+      "material.chemistry.inorganic.ammonia",
+      "concept.chemistry.solutions.solubility"
+    ],
+    "confidence": 0.97,
+    "tags": [
+      "soda_ash",
+      "solvay",
+      "sodium_carbonate",
+      "ammonia_recycle"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.97,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "process.chemistry.industrial.chloralkali_membrane",
+    "schema_version": "3.2",
+    "domain": "chemistry.industrial",
+    "subtopic": "chemistry.industrial.electrolysis",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Мембранный хлор-щёлочной электролиз: разложение раствора NaCl на Cl2, H2 и NaOH с разделением катодного и анодного пространств катионообменной мембраной.",
+    "formal_notation": "2NaCl + 2H2O → Cl2↑ + H2↑ + 2NaOH; E° ≈ 2.2 V; катод Ni, анод DSA (Ru/Ti)",
+    "conditions": "T 80–90°C, плотность тока 4–6 kA/m², перфторированная мембрана Nafion, NaOH 30–35%",
+    "prereq": [
+      "law.chemistry.electrochemistry.faraday_first",
+      "concept.chemistry.electrochemistry.standard_potential"
+    ],
+    "confidence": 0.97,
+    "tags": [
+      "chlor_alkali",
+      "membrane_cell",
+      "electrolysis",
+      "naoh"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.97,
+      "safety_critical": true,
+      "safety_notes": "Cl2 токсичен; H2 взрывоопасен; смесь H2/Cl2 фотохимически взрывается"
+    }
+  },
+  {
+    "id": "process.chemistry.industrial.chloralkali_diaphragm",
+    "schema_version": "3.2",
+    "domain": "chemistry.industrial",
+    "subtopic": "chemistry.industrial.electrolysis",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Диафрагменный хлор-щёлочной электролиз: разделение продуктов асбестовой или полимерной диафрагмой, выход разбавленного раствора NaOH с примесью NaCl.",
+    "formal_notation": "2NaCl + 2H2O → Cl2 + H2 + 2NaOH; NaOH ~12%, остаточный NaCl 15–18%",
+    "conditions": "T ~95°C, плотность тока 1–2.5 kA/m², графитовые/металлические аноды, выпаривание NaOH",
+    "prereq": [
+      "law.chemistry.electrochemistry.faraday_first"
+    ],
+    "confidence": 0.93,
+    "tags": [
+      "chlor_alkali",
+      "diaphragm_cell",
+      "asbestos",
+      "electrolysis"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.93,
+      "safety_critical": true,
+      "safety_notes": "Канцерогенность асбестовой диафрагмы; Cl2 и H2"
+    }
+  },
+  {
+    "id": "process.chemistry.industrial.chloralkali_mercury",
+    "schema_version": "3.2",
+    "domain": "chemistry.industrial",
+    "subtopic": "chemistry.industrial.electrolysis",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Ртутный хлор-щёлочной электролиз: натрий разряжается на ртутном катоде с образованием амальгамы, разлагаемой водой до чистого NaOH 50%.",
+    "formal_notation": "Анод: 2Cl⁻ → Cl2 + 2e⁻; катод: Na⁺ + Hg + e⁻ → NaHg; разложение: 2NaHg + 2H2O → 2NaOH + H2 + 2Hg",
+    "conditions": "T 70–80°C, плотность тока 8–13 kA/m², графитовый/DSA анод, ртутный катод",
+    "prereq": [
+      "law.chemistry.electrochemistry.faraday_first"
+    ],
+    "confidence": 0.93,
+    "tags": [
+      "chlor_alkali",
+      "mercury_cell",
+      "amalgam",
+      "electrolysis"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.92,
+      "safety_critical": true,
+      "safety_notes": "Токсичность ртути; Минаматская конвенция требует вывода технологии из эксплуатации"
+    }
+  },
+  {
+    "id": "process.chemistry.industrial.smr",
+    "schema_version": "3.2",
+    "domain": "chemistry.industrial",
+    "subtopic": "chemistry.industrial.synthesis",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Паровая конверсия метана (SMR): эндотермическая реакция CH4 с водяным паром на никелевом катализаторе с получением синтез-газа CO+H2.",
+    "formal_notation": "CH4 + H2O ⇌ CO + 3H2 (ΔH = +206 kJ/mol); CO + H2O ⇌ CO2 + H2 (WGS, ΔH = -41 kJ/mol)",
+    "conditions": "T 800–900°C, P 15–40 bar, Ni/Al2O3 кат, отношение пар/углерод 2.5–3, конверсия CH4 ~90%",
+    "prereq": [
+      "concept.chemistry.kinetics.catalyst",
+      "principle.chemistry.equilibrium.le_chatelier"
+    ],
+    "confidence": 0.97,
+    "tags": [
+      "syngas",
+      "steam_methane_reforming",
+      "hydrogen",
+      "nickel_catalyst"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.97,
+      "safety_critical": true,
+      "safety_notes": "Высокотемпературное оборудование; H2 взрывоопасен; CO токсичен"
+    }
+  },
+  {
+    "id": "process.chemistry.industrial.fischer_tropsch",
+    "schema_version": "3.2",
+    "domain": "chemistry.industrial",
+    "subtopic": "chemistry.industrial.synthesis",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Синтез Фишера-Тропша: каталитическое превращение CO и H2 в смесь алифатических углеводородов на кобальтовом или железном катализаторе.",
+    "formal_notation": "nCO + (2n+1)H2 → CnH(2n+2) + nH2O; ΔH ≈ -165 kJ/mol C",
+    "conditions": "T 200–250°C (LTFT, Co) или 300–350°C (HTFT, Fe), P 20–40 bar, H2/CO ~2",
+    "prereq": [
+      "process.chemistry.industrial.smr",
+      "concept.chemistry.kinetics.catalyst"
+    ],
+    "confidence": 0.94,
+    "tags": [
+      "fischer_tropsch",
+      "gtl",
+      "syngas",
+      "synthetic_fuels"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.9,
+      "safety_critical": true,
+      "safety_notes": "Экзотермическая реакция; риск перегрева; H2 и CO опасны"
+    }
+  },
+  {
+    "id": "process.chemistry.industrial.methanol_synthesis",
+    "schema_version": "3.2",
+    "domain": "chemistry.industrial",
+    "subtopic": "chemistry.industrial.synthesis",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Синтез метанола из синтез-газа на медь-цинк-алюминиевом катализаторе при умеренных давлении и температуре.",
+    "formal_notation": "CO + 2H2 ⇌ CH3OH (ΔH = -91 kJ/mol); CO2 + 3H2 ⇌ CH3OH + H2O",
+    "conditions": "T 220–270°C, P 50–100 bar, Cu/ZnO/Al2O3 кат, конверсия за проход 5–10%, рециркуляция",
+    "prereq": [
+      "process.chemistry.industrial.smr",
+      "principle.chemistry.equilibrium.le_chatelier"
+    ],
+    "confidence": 0.97,
+    "tags": [
+      "methanol",
+      "low_pressure_synthesis",
+      "copper_catalyst",
+      "syngas"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.96,
+      "safety_critical": true,
+      "safety_notes": "Метанол токсичен и горюч; CO опасен; высокое давление"
+    }
+  },
+  {
+    "id": "process.chemistry.industrial.methanol_zno_cr2o3",
+    "schema_version": "3.2",
+    "domain": "chemistry.industrial",
+    "subtopic": "chemistry.industrial.synthesis",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Высокотемпературный синтез метанола на ZnO/Cr2O3 катализаторе при высоком давлении — исторический процесс BASF, устойчивый к примесям серы.",
+    "formal_notation": "CO + 2H2 ⇌ CH3OH; кат ZnO/Cr2O3 (≈70/30)",
+    "conditions": "T 320–400°C, P 250–350 bar, толерантность к S, конверсия 4–8%",
+    "prereq": [
+      "concept.chemistry.kinetics.catalyst"
+    ],
+    "confidence": 0.9,
+    "tags": [
+      "methanol",
+      "high_pressure",
+      "zinc_chromium",
+      "basf"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.88,
+      "safety_critical": true,
+      "safety_notes": "Очень высокое давление; коррозия CO/H2; токсичность Cr"
+    }
+  },
+  {
+    "id": "process.chemistry.industrial.deacon",
+    "schema_version": "3.2",
+    "domain": "chemistry.industrial",
+    "subtopic": "chemistry.industrial.synthesis",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Процесс Дикона: каталитическое окисление HCl кислородом до Cl2 на медном или рутениевом катализаторе — регенерация хлора из побочного HCl.",
+    "formal_notation": "4HCl + O2 ⇌ 2Cl2 + 2H2O; ΔH = -114 kJ/mol",
+    "conditions": "T 400–450°C (CuCl2) или 300–400°C (RuO2/TiO2), конверсия 70–85%",
+    "prereq": [
+      "concept.chemistry.kinetics.catalyst",
+      "material.chemistry.inorganic.hydrochloric_acid"
+    ],
+    "confidence": 0.92,
+    "tags": [
+      "deacon_process",
+      "chlorine_recovery",
+      "ruo2",
+      "copper_catalyst"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.9,
+      "safety_critical": true,
+      "safety_notes": "Cl2 и HCl высоко токсичны; коррозия оборудования"
+    }
+  },
+  {
+    "id": "process.chemistry.industrial.h3po4_wet",
+    "schema_version": "3.2",
+    "domain": "chemistry.industrial",
+    "subtopic": "chemistry.industrial.synthesis",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Экстракционный (мокрый) метод H3PO4: разложение фосфатной руды серной кислотой с осаждением фосфогипса и фильтрацией кислоты.",
+    "formal_notation": "Ca5(PO4)3F + 5H2SO4 + 10H2O → 3H3PO4 + 5CaSO4·2H2O↓ + HF",
+    "conditions": "T 70–80°C, концентрация H2SO4 93–98%, дигидратный или полугидратный режим, выход P2O5 95–97%",
+    "prereq": [
+      "material.chemistry.inorganic.sulfuric_acid"
+    ],
+    "confidence": 0.95,
+    "tags": [
+      "phosphoric_acid",
+      "wet_process",
+      "phosphogypsum",
+      "fertilizer"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.95,
+      "safety_critical": true,
+      "safety_notes": "Выделение HF и SiF4; радионуклиды в фосфогипсе; кислотные ожоги"
+    }
+  },
+  {
+    "id": "process.chemistry.industrial.h3po4_thermal",
+    "schema_version": "3.2",
+    "domain": "chemistry.industrial",
+    "subtopic": "chemistry.industrial.synthesis",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Термический метод H3PO4: сжигание элементарного фосфора в кислороде до P2O5 с последующей гидратацией водой до фосфорной кислоты высокой чистоты.",
+    "formal_notation": "P4 + 5O2 → P4O10; P4O10 + 6H2O → 4H3PO4",
+    "conditions": "Сжигание при T >1500°C, абсорбция в гидратационной башне, чистота >85% H3PO4",
+    "prereq": [
+      "material.chemistry.inorganic.sulfuric_acid"
+    ],
+    "confidence": 0.93,
+    "tags": [
+      "phosphoric_acid",
+      "thermal_process",
+      "food_grade",
+      "white_phosphorus"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.94,
+      "safety_critical": true,
+      "safety_notes": "Белый фосфор самовоспламеняется и высокотоксичен; P2O5 гигроскопичен"
+    }
+  },
+  {
+    "id": "process.chemistry.industrial.acetic_monsanto",
+    "schema_version": "3.2",
+    "domain": "chemistry.industrial",
+    "subtopic": "chemistry.industrial.synthesis",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Процесс Monsanto: гомогенный синтез уксусной кислоты карбонилированием метанола CO на родиевом йодидном катализаторе.",
+    "formal_notation": "CH3OH + CO → CH3COOH; кат [Rh(CO)2I2]⁻, промотер CH3I",
+    "conditions": "T 150–200°C, P 30–60 bar, селективность по метанолу >99%, по CO >85%",
+    "prereq": [
+      "process.chemistry.industrial.methanol_synthesis",
+      "concept.chemistry.organic.carboxylic_acid"
+    ],
+    "confidence": 0.96,
+    "tags": [
+      "acetic_acid",
+      "monsanto",
+      "rhodium_catalyst",
+      "carbonylation"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.96,
+      "safety_critical": true,
+      "safety_notes": "CO токсичен; CH3I канцерогенный алкилирующий агент; коррозия HI"
+    }
+  },
+  {
+    "id": "process.chemistry.industrial.acetic_cativa",
+    "schema_version": "3.2",
+    "domain": "chemistry.industrial",
+    "subtopic": "chemistry.industrial.synthesis",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Процесс Cativa: карбонилирование метанола на иридий-рутениевом катализаторе с большей скоростью и меньшим содержанием воды по сравнению с Monsanto.",
+    "formal_notation": "CH3OH + CO → CH3COOH; кат [Ir(CO)2I2]⁻/Ru-промотер; H2O ~5%",
+    "conditions": "T 180–210°C, P 30 bar, селективность >99%, скорость 1.5–2× выше Monsanto",
+    "prereq": [
+      "process.chemistry.industrial.acetic_monsanto"
+    ],
+    "confidence": 0.94,
+    "tags": [
+      "acetic_acid",
+      "cativa",
+      "iridium_catalyst",
+      "carbonylation"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.96,
+      "safety_critical": true,
+      "safety_notes": "CO токсичен; CH3I канцерогенный; коррозия HI требует Hastelloy"
+    }
+  },
+  {
+    "id": "process.chemistry.industrial.acetic_basf",
+    "schema_version": "3.2",
+    "domain": "chemistry.industrial",
+    "subtopic": "chemistry.industrial.synthesis",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Процесс BASF: карбонилирование метанола на кобальтовом йодидном катализаторе при высоких давлении и температуре — первый промышленный синтез CH3COOH из CO.",
+    "formal_notation": "CH3OH + CO → CH3COOH; кат CoI2, промотер HI",
+    "conditions": "T 230–250°C, P 500–700 bar, селективность по метанолу 90%, по CO 70%",
+    "prereq": [
+      "process.chemistry.industrial.methanol_synthesis"
+    ],
+    "confidence": 0.9,
+    "tags": [
+      "acetic_acid",
+      "basf",
+      "cobalt_catalyst",
+      "high_pressure"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.88,
+      "safety_critical": true,
+      "safety_notes": "Очень высокое давление CO; токсичность CO и HI; коррозия"
+    }
+  },
+  {
+    "id": "process.chemistry.industrial.wgs",
+    "schema_version": "3.2",
+    "domain": "chemistry.industrial",
+    "subtopic": "chemistry.industrial.synthesis",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Реакция водяного газа (WGS): обратимое каталитическое превращение CO и H2O в CO2 и H2, обогащающее синтез-газ водородом.",
+    "formal_notation": "CO + H2O ⇌ CO2 + H2; ΔH = -41 kJ/mol",
+    "conditions": "HT-shift 350–450°C на Fe2O3/Cr2O3, LT-shift 200–250°C на Cu/ZnO/Al2O3, остаточный CO <0.3%",
+    "prereq": [
+      "process.chemistry.industrial.smr",
+      "principle.chemistry.equilibrium.le_chatelier"
+    ],
+    "confidence": 0.97,
+    "tags": [
+      "water_gas_shift",
+      "hydrogen",
+      "syngas",
+      "iron_oxide"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.98,
+      "safety_critical": true,
+      "safety_notes": "CO токсичен; H2 взрывоопасен; пирофорность Cu-катализаторов"
+    }
+  },
+  {
+    "id": "process.chemistry.industrial.claus",
+    "schema_version": "3.2",
+    "domain": "chemistry.industrial",
+    "subtopic": "chemistry.industrial.synthesis",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Процесс Клауса: получение элементарной серы из H2S окислением одной трети до SO2 с последующей каталитической реакцией Клауса на бокситном/Al2O3 катализаторе.",
+    "formal_notation": "2H2S + 3O2 → 2SO2 + 2H2O; 2H2S + SO2 ⇌ 3S + 2H2O",
+    "conditions": "Термическая ступень T 1000–1400°C, каталитические ступени 200–350°C, выход серы 95–98%",
+    "prereq": [
+      "concept.chemistry.kinetics.catalyst"
+    ],
+    "confidence": 0.96,
+    "tags": [
+      "claus_process",
+      "sulfur_recovery",
+      "h2s",
+      "alumina_catalyst"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.97,
+      "safety_critical": true,
+      "safety_notes": "H2S летален при концентрациях >700 ppm; SO2 раздражает дыхательные пути"
+    }
+  },
+  {
+    "id": "process.chemistry.industrial.frasch",
+    "schema_version": "3.2",
+    "domain": "chemistry.industrial",
+    "subtopic": "chemistry.industrial.synthesis",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Метод Фраша: добыча самородной серы плавлением подземных пластов перегретой водой и выдавливанием расплавленной серы сжатым воздухом на поверхность.",
+    "formal_notation": "Sтв → Sж при T >115.2°C; подача воды 160–170°C; чистота S >99.5%",
+    "conditions": "Перегретая вода 160–170°C, сжатый воздух 25 atm, концентрические трубы в скважине",
+    "prereq": [],
+    "confidence": 0.92,
+    "tags": [
+      "frasch_process",
+      "sulfur_mining",
+      "superheated_water",
+      "underground"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.9,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "process.chemistry.industrial.urea_synthesis",
+    "schema_version": "3.2",
+    "domain": "chemistry.industrial",
+    "subtopic": "chemistry.industrial.synthesis",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Синтез карбамида из аммиака и CO2 через промежуточный карбамат аммония с дегидратацией до мочевины.",
+    "formal_notation": "2NH3 + CO2 ⇌ NH2COONH4 ⇌ CO(NH2)2 + H2O; ΔH общая = -101 kJ/mol",
+    "conditions": "T 180–200°C, P 140–200 bar, мольное отношение NH3/CO2 ≈ 3–4, конверсия 60–75% за проход",
+    "prereq": [
+      "process.chemistry.industrial.haber_bosch_synthesis_loop"
+    ],
+    "confidence": 0.96,
+    "tags": [
+      "urea",
+      "fertilizer",
+      "carbamate",
+      "high_pressure"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.96,
+      "safety_critical": true,
+      "safety_notes": "Высокое давление NH3/CO2; коррозия оборудования карбаматом"
+    }
+  },
+  {
+    "id": "process.chemistry.industrial.nh4no3",
+    "schema_version": "3.2",
+    "domain": "chemistry.industrial",
+    "subtopic": "chemistry.industrial.synthesis",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Производство аммиачной селитры нейтрализацией HNO3 газообразным NH3 с последующим выпариванием и гранулированием расплава.",
+    "formal_notation": "NH3 + HNO3 → NH4NO3; ΔH = -146 kJ/mol; концентрация раствора → 95–99.8%",
+    "conditions": "Нейтрализатор T 140–180°C, P 4–5 bar, грануляционная башня 50–60 м",
+    "prereq": [
+      "process.chemistry.industrial.ostwald_hno3",
+      "process.chemistry.industrial.haber_bosch_synthesis_loop"
+    ],
+    "confidence": 0.96,
+    "tags": [
+      "ammonium_nitrate",
+      "fertilizer",
+      "neutralization",
+      "prilling"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.95,
+      "safety_critical": true,
+      "safety_notes": "NH4NO3 — окислитель и взрывчатое вещество при загрязнении или нагреве (Тулуза 2001, Бейрут 2020)"
+    }
+  },
+  {
+    "id": "process.chemistry.industrial.cement_clinker",
+    "schema_version": "3.2",
+    "domain": "chemistry.industrial",
+    "subtopic": "chemistry.industrial.synthesis",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Производство портландцементного клинкера обжигом известняка и глины во вращающейся печи с образованием алита C3S и белита C2S.",
+    "formal_notation": "CaCO3 → CaO + CO2 (900°C); 3CaO + SiO2 → C3S (1450°C); 2CaO + SiO2 → C2S",
+    "conditions": "Вращающаяся печь, T до 1450°C в зоне спекания, время 30–40 мин, охлаждение клинкера",
+    "prereq": [],
+    "confidence": 0.96,
+    "tags": [
+      "cement",
+      "clinker",
+      "calcination",
+      "rotary_kiln"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.97,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "process.chemistry.industrial.lime_calcination",
+    "schema_version": "3.2",
+    "domain": "chemistry.industrial",
+    "subtopic": "chemistry.industrial.synthesis",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Получение негашёной извести термической декарбонизацией известняка в шахтных или вращающихся печах.",
+    "formal_notation": "CaCO3 → CaO + CO2; ΔH = +178 kJ/mol; T равновесия P(CO2)=1 atm ≈ 898°C",
+    "conditions": "T 900–1200°C в шахтной/вращающейся печи, время 4–10 ч, остаточный CaCO3 <2%",
+    "prereq": [
+      "principle.chemistry.equilibrium.le_chatelier"
+    ],
+    "confidence": 0.97,
+    "tags": [
+      "lime",
+      "calcination",
+      "cao",
+      "limestone"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.97,
+      "safety_critical": true,
+      "safety_notes": "CaO бурно реагирует с водой с выделением тепла; щелочные ожоги"
+    }
+  },
+  {
+    "id": "process.chemistry.industrial.glass_float",
+    "schema_version": "3.2",
+    "domain": "chemistry.industrial",
+    "subtopic": "chemistry.industrial.synthesis",
+    "tier": "practical",
+    "type": "process",
+    "statement": "Флоат-процесс производства листового стекла: расплавленная стекломасса разливается на расплав олова, формируя плоский лист с зеркальной поверхностью.",
+    "formal_notation": "SiO2-Na2O-CaO-стекло, T расплава 1100°C → 600°C; ρстекло < ρSn",
+    "conditions": "Ванна расплавленного Sn под защитной атмосферой N2/H2, T 600–1100°C, толщина 0.4–25 мм",
+    "prereq": [],
+    "confidence": 0.96,
+    "tags": [
+      "float_glass",
+      "pilkington",
+      "tin_bath",
+      "flat_glass"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.97,
+      "safety_critical": true,
+      "safety_notes": "Расплавленное олово и стекло; защитная атмосфера H2 взрывоопасна при утечке"
+    }
+  }
+]

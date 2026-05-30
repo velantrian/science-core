@@ -1,0 +1,452 @@
+[
+  {
+    "id": "concept.abstract.mind.working_memory",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.memory",
+    "tier": "abstract",
+    "type": "concept",
+    "statement": "Рабочая память — ограниченная система удержания и манипуляции активной информацией с ёмкостью около 4 чанков и длительностью удержания порядка десятков секунд без репетиции.",
+    "conditions": "Активная нейрональная репрезентация в префронтальной и теменной коре",
+    "prereq": ["concept.abstract.mind.attention", "concept.abstract.mind.memory"],
+    "confidence": 0.85,
+    "tags": ["working_memory", "cognition", "memory", "capacity"],
+    "tier_extensions": {
+      "abstract_type": "memory",
+      "human_only": false,
+      "related_abstract": ["mechanism.abstract.mind.chunking", "concept.abstract.mind.attention"]
+    }
+  },
+  {
+    "id": "mechanism.abstract.mind.chunking",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.memory",
+    "tier": "abstract",
+    "type": "mechanism",
+    "statement": "Чанкинг: объединение элементов в осмысленные группы повышает эффективную ёмкость рабочей памяти за счёт укрупнения единицы хранения.",
+    "conditions": "Наличие семантических связей между элементами в долговременной памяти",
+    "prereq": ["concept.abstract.mind.working_memory", "concept.abstract.mind.semantic_memory"],
+    "confidence": 0.82,
+    "tags": ["chunking", "memory", "encoding", "miller"],
+    "tier_extensions": {
+      "abstract_type": "memory",
+      "human_only": false,
+      "related_abstract": ["concept.abstract.mind.working_memory"]
+    }
+  },
+  {
+    "id": "concept.abstract.mind.episodic_memory",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.memory",
+    "tier": "abstract",
+    "type": "concept",
+    "statement": "Эпизодическая память: автобиографическая система, кодирующая события с привязкой ко времени, месту и субъективному опыту переживания.",
+    "conditions": "Сохранность гиппокампа и медиальной височной коры",
+    "prereq": ["concept.abstract.mind.memory", "concept.abstract.mind.consciousness"],
+    "confidence": 0.86,
+    "tags": ["episodic_memory", "autobiographical", "hippocampus", "tulving"],
+    "tier_extensions": {
+      "abstract_type": "memory",
+      "human_only": false,
+      "related_abstract": ["concept.abstract.mind.semantic_memory", "mechanism.abstract.mind.mental_time_travel"]
+    }
+  },
+  {
+    "id": "concept.abstract.mind.semantic_memory",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.memory",
+    "tier": "abstract",
+    "type": "concept",
+    "statement": "Семантическая память: система хранения обобщённых знаний о мире, независимых от контекста их приобретения, организованная в концептуальные сети.",
+    "conditions": "Сохранность височных долей и ассоциативных корковых зон",
+    "prereq": ["concept.abstract.mind.memory", "concept.abstract.mind.concept"],
+    "confidence": 0.86,
+    "tags": ["semantic_memory", "knowledge", "concepts", "tulving"],
+    "tier_extensions": {
+      "abstract_type": "memory",
+      "human_only": false,
+      "related_abstract": ["concept.abstract.mind.episodic_memory"]
+    }
+  },
+  {
+    "id": "mechanism.abstract.mind.memory_consolidation",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.memory",
+    "tier": "abstract",
+    "type": "mechanism",
+    "statement": "Консолидация памяти: постепенный перенос следа из гиппокампа в неокортикальные сети через повторную реактивацию во время сна и бодрствования.",
+    "conditions": "Целостность сна с медленноволновой и REM-фазами",
+    "prereq": ["concept.abstract.mind.episodic_memory", "mechanism.abstract.mind.replay"],
+    "confidence": 0.78,
+    "tags": ["consolidation", "memory", "sleep", "hippocampus"],
+    "tier_extensions": {
+      "abstract_type": "memory",
+      "human_only": false,
+      "related_abstract": ["concept.abstract.mind.episodic_memory"]
+    }
+  },
+  {
+    "id": "mechanism.abstract.mind.reconstructive_memory",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.memory",
+    "tier": "abstract",
+    "type": "mechanism",
+    "statement": "Память воспроизводится реконструктивно: восстановление эпизода активно перекомпонует фрагменты под влиянием схем, текущего контекста и наводящих сигналов.",
+    "conditions": "Отсутствие точной репликации следа; зависимость от извлекающих подсказок",
+    "prereq": ["concept.abstract.mind.episodic_memory", "concept.abstract.mind.schema"],
+    "confidence": 0.80,
+    "tags": ["reconstruction", "memory", "bartlett", "distortion"],
+    "tier_extensions": {
+      "abstract_type": "memory",
+      "human_only": false,
+      "related_abstract": ["mechanism.abstract.mind.confabulation"]
+    }
+  },
+  {
+    "id": "concept.abstract.mind.imagination",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.imagination",
+    "tier": "abstract",
+    "type": "concept",
+    "statement": "Воображение: способность порождать ментальные репрезентации объектов и сценариев, отсутствующих в текущем сенсорном поле или вообще не существующих.",
+    "conditions": "Активность дефолт-сети мозга и фронтопариетального контроля",
+    "prereq": ["concept.abstract.mind.mental_representation", "concept.abstract.mind.working_memory"],
+    "confidence": 0.82,
+    "tags": ["imagination", "simulation", "cognition", "creativity"],
+    "tier_extensions": {
+      "abstract_type": "imagination",
+      "human_only": false,
+      "related_abstract": ["mechanism.abstract.mind.counterfactual", "mechanism.abstract.mind.thought_experiment"]
+    }
+  },
+  {
+    "id": "mechanism.abstract.mind.thought_experiment",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.imagination",
+    "tier": "abstract",
+    "type": "mechanism",
+    "statement": "Мысленный эксперимент: симуляция гипотетического сценария в воображении с проверкой логических следствий теории без физической реализации.",
+    "conditions": "Развитая рабочая память и способность к контрфактическому мышлению",
+    "prereq": ["concept.abstract.mind.imagination", "mechanism.abstract.mind.counterfactual"],
+    "confidence": 0.80,
+    "tags": ["thought_experiment", "imagination", "reasoning", "philosophy"],
+    "tier_extensions": {
+      "abstract_type": "imagination",
+      "human_only": false,
+      "related_abstract": ["mechanism.abstract.mind.analogy"]
+    }
+  },
+  {
+    "id": "mechanism.abstract.mind.counterfactual",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.imagination",
+    "tier": "abstract",
+    "type": "mechanism",
+    "statement": "Контрфактическое мышление: построение альтернативных версий прошлого или настоящего через изменение одного фактора и оценку последствий такого изменения.",
+    "conditions": "Доступ к причинно-следственной модели ситуации",
+    "prereq": ["concept.abstract.mind.imagination", "concept.abstract.mind.causality"],
+    "confidence": 0.78,
+    "tags": ["counterfactual", "causality", "reasoning", "alternatives"],
+    "tier_extensions": {
+      "abstract_type": "imagination",
+      "human_only": false,
+      "related_abstract": ["mechanism.abstract.mind.thought_experiment", "mechanism.abstract.mind.regret"]
+    }
+  },
+  {
+    "id": "mechanism.abstract.mind.mental_simulation",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.imagination",
+    "tier": "abstract",
+    "type": "mechanism",
+    "statement": "Ментальная симуляция: внутреннее проигрывание сенсомоторного или социального сценария, рекрутирующее те же нейронные сети, что и реальное действие или восприятие.",
+    "conditions": "Активация моторных и перцептивных зон без внешнего стимула",
+    "prereq": ["concept.abstract.mind.imagination", "concept.abstract.mind.embodied_cognition"],
+    "confidence": 0.76,
+    "tags": ["simulation", "embodied", "motor_imagery", "prediction"],
+    "tier_extensions": {
+      "abstract_type": "imagination",
+      "human_only": false,
+      "related_abstract": ["mechanism.abstract.mind.mental_time_travel"]
+    }
+  },
+  {
+    "id": "mechanism.abstract.mind.mental_time_travel",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.imagination",
+    "tier": "abstract",
+    "type": "mechanism",
+    "statement": "Ментальное путешествие во времени: проекция себя в прошлое или будущее через реконструкцию эпизодов памяти и комбинирование их элементов в новые сцены.",
+    "conditions": "Целостность гиппокампа и дефолт-сети",
+    "prereq": ["concept.abstract.mind.episodic_memory", "concept.abstract.mind.imagination"],
+    "confidence": 0.75,
+    "tags": ["mental_time_travel", "prospection", "episodic", "future"],
+    "tier_extensions": {
+      "abstract_type": "imagination",
+      "human_only": false,
+      "related_abstract": ["mechanism.abstract.mind.default_mode_network"]
+    }
+  },
+  {
+    "id": "mechanism.abstract.mind.analogy",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.creativity",
+    "tier": "abstract",
+    "type": "mechanism",
+    "statement": "Аналогия: перенос структуры отношений из освоенной области-источника в целевую область с сохранением реляционных связей при различии поверхностных признаков.",
+    "conditions": "Доступ к схеме источника и структурное выравнивание элементов",
+    "prereq": ["concept.abstract.mind.concept", "mechanism.abstract.mind.mapping"],
+    "confidence": 0.82,
+    "tags": ["analogy", "mapping", "reasoning", "gentner"],
+    "tier_extensions": {
+      "abstract_type": "creativity",
+      "human_only": false,
+      "related_abstract": ["mechanism.abstract.mind.metaphor", "mechanism.abstract.mind.thought_experiment"]
+    }
+  },
+  {
+    "id": "mechanism.abstract.mind.metaphor",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.creativity",
+    "tier": "abstract",
+    "type": "mechanism",
+    "statement": "Концептуальная метафора: систематическое структурирование абстрактной целевой области через схему конкретной телесно-сенсорной области-источника.",
+    "conditions": "Наличие повторяющегося телесного опыта в качестве источника схемы",
+    "prereq": ["concept.abstract.mind.embodied_cognition", "mechanism.abstract.mind.analogy"],
+    "confidence": 0.75,
+    "tags": ["metaphor", "lakoff", "embodied", "conceptual"],
+    "tier_extensions": {
+      "abstract_type": "creativity",
+      "human_only": true,
+      "related_abstract": ["mechanism.abstract.mind.analogy", "pattern.abstract.culture.image_schema"]
+    }
+  },
+  {
+    "id": "mechanism.abstract.mind.insight",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.creativity",
+    "tier": "abstract",
+    "type": "mechanism",
+    "statement": "Инсайт: внезапная переструктуризация проблемы, сопровождаемая резким падением неопределённости и сдвигом активности к правой височной коре.",
+    "conditions": "Тупик в аналитическом поиске и ослабление фиксации на исходной репрезентации",
+    "prereq": ["concept.abstract.mind.problem_solving", "mechanism.abstract.mind.incubation"],
+    "confidence": 0.68,
+    "tags": ["insight", "aha", "restructuring", "creativity"],
+    "tier_extensions": {
+      "abstract_type": "creativity",
+      "human_only": false,
+      "related_abstract": ["mechanism.abstract.mind.incubation", "concept.abstract.mind.creativity"]
+    }
+  },
+  {
+    "id": "mechanism.abstract.mind.incubation",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.creativity",
+    "tier": "abstract",
+    "type": "mechanism",
+    "statement": "Инкубация: отложенная переработка задачи в фоновом режиме во время отвлечения, ослабляющая тупиковые ассоциации и облегчающая последующее переструктурирование.",
+    "conditions": "Предварительное вовлечение в задачу с последующей паузой",
+    "prereq": ["mechanism.abstract.mind.insight", "concept.abstract.mind.attention"],
+    "confidence": 0.62,
+    "tags": ["incubation", "creativity", "unconscious", "wallas"],
+    "tier_extensions": {
+      "abstract_type": "creativity",
+      "human_only": false,
+      "related_abstract": ["mechanism.abstract.mind.insight", "mechanism.abstract.mind.default_mode_network"]
+    }
+  },
+  {
+    "id": "concept.abstract.mind.creativity",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.creativity",
+    "tier": "abstract",
+    "type": "concept",
+    "statement": "Креативность: порождение продукта, одновременно новизного для агента и обладающего ценностью в данной задаче или культуре.",
+    "conditions": "Двойной критерий новизны и адекватности",
+    "prereq": ["mechanism.abstract.mind.divergent_thinking", "mechanism.abstract.mind.convergent_thinking"],
+    "confidence": 0.78,
+    "tags": ["creativity", "novelty", "value", "boden"],
+    "tier_extensions": {
+      "abstract_type": "creativity",
+      "human_only": false,
+      "related_abstract": ["mechanism.abstract.mind.insight", "mechanism.abstract.mind.combinatorial_creativity"]
+    }
+  },
+  {
+    "id": "mechanism.abstract.mind.divergent_thinking",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.creativity",
+    "tier": "abstract",
+    "type": "mechanism",
+    "statement": "Дивергентное мышление: расширяющий поиск, порождающий множество разнородных вариантов решения с ослабленным семантическим фильтром.",
+    "conditions": "Снижение когнитивного контроля и расширенный ассоциативный охват",
+    "prereq": ["concept.abstract.mind.creativity", "concept.abstract.mind.semantic_memory"],
+    "confidence": 0.72,
+    "tags": ["divergent", "creativity", "fluency", "guilford"],
+    "tier_extensions": {
+      "abstract_type": "creativity",
+      "human_only": false,
+      "related_abstract": ["mechanism.abstract.mind.convergent_thinking"]
+    }
+  },
+  {
+    "id": "concept.abstract.mind.metacognition",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.metacognition",
+    "tier": "abstract",
+    "type": "concept",
+    "statement": "Метакогниция: мониторинг и контроль собственных когнитивных процессов, включая оценку достоверности знания и регуляцию стратегий мышления.",
+    "conditions": "Способность строить репрезентацию о своей репрезентации",
+    "prereq": ["concept.abstract.mind.consciousness", "concept.abstract.mind.self_model"],
+    "confidence": 0.80,
+    "tags": ["metacognition", "monitoring", "flavell", "self_reflection"],
+    "tier_extensions": {
+      "abstract_type": "metacognition",
+      "human_only": false,
+      "related_abstract": ["mechanism.abstract.mind.feeling_of_knowing", "concept.abstract.mind.theory_of_mind"]
+    }
+  },
+  {
+    "id": "mechanism.abstract.mind.feeling_of_knowing",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.metacognition",
+    "tier": "abstract",
+    "type": "mechanism",
+    "statement": "Чувство знания: метакогнитивный сигнал доступности информации в памяти до её фактического извлечения, опирающийся на эвристики беглости и знакомости.",
+    "conditions": "Целостность медиальной префронтальной коры и доступ к мониторингу извлечения",
+    "prereq": ["concept.abstract.mind.metacognition", "concept.abstract.mind.memory"],
+    "confidence": 0.70,
+    "tags": ["feeling_of_knowing", "metamemory", "fluency", "tip_of_tongue"],
+    "tier_extensions": {
+      "abstract_type": "metacognition",
+      "human_only": false,
+      "related_abstract": ["concept.abstract.mind.metacognition"]
+    }
+  },
+  {
+    "id": "concept.abstract.mind.theory_of_mind",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.social",
+    "tier": "abstract",
+    "type": "concept",
+    "statement": "Теория разума: способность приписывать другим агентам ментальные состояния — убеждения, желания, намерения — отличные от собственных и от реальности.",
+    "conditions": "Развитие медиальной префронтальной коры и височно-теменного узла",
+    "prereq": ["concept.abstract.mind.self_model", "concept.abstract.mind.mental_representation"],
+    "confidence": 0.82,
+    "tags": ["theory_of_mind", "mentalizing", "social", "premack"],
+    "tier_extensions": {
+      "abstract_type": "metacognition",
+      "human_only": false,
+      "related_abstract": ["concept.abstract.mind.empathy", "concept.abstract.mind.metacognition"]
+    }
+  },
+  {
+    "id": "concept.abstract.mind.empathy",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.social",
+    "tier": "abstract",
+    "type": "concept",
+    "statement": "Эмпатия: разделяемая аффективная репрезентация состояния другого агента с сохранением различения между собственным и чужим переживанием.",
+    "conditions": "Целостность инсулы, передней цингулярной коры и системы саморазличения",
+    "prereq": ["concept.abstract.mind.theory_of_mind", "concept.abstract.mind.emotion"],
+    "confidence": 0.78,
+    "tags": ["empathy", "affective_sharing", "insula", "decety"],
+    "tier_extensions": {
+      "abstract_type": "metacognition",
+      "human_only": false,
+      "related_abstract": ["concept.abstract.mind.theory_of_mind", "mechanism.abstract.mind.mirror_system"]
+    }
+  },
+  {
+    "id": "mechanism.abstract.mind.narrative_self",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.self",
+    "tier": "abstract",
+    "type": "mechanism",
+    "statement": "Нарративная самость: связное Я конструируется через автобиографическую историю, организующую эпизодическую память в причинно-смысловую последовательность.",
+    "conditions": "Доступ к эпизодической памяти и языковой репрезентации",
+    "prereq": ["concept.abstract.mind.episodic_memory", "concept.abstract.mind.self_model"],
+    "confidence": 0.72,
+    "tags": ["narrative_self", "identity", "autobiography", "bruner"],
+    "tier_extensions": {
+      "abstract_type": "pattern",
+      "human_only": true,
+      "related_abstract": ["concept.abstract.mind.episodic_memory", "pattern.abstract.culture.story_structure"]
+    }
+  },
+  {
+    "id": "concept.abstract.mind.mental_model",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.representation",
+    "tier": "abstract",
+    "type": "concept",
+    "statement": "Ментальная модель: внутренняя репрезентация структуры и поведения внешней системы, поддерживающая симуляцию её состояний и прогноз последствий действий.",
+    "conditions": "Достаточный опыт взаимодействия с моделируемой системой",
+    "prereq": ["concept.abstract.mind.mental_representation", "mechanism.abstract.mind.mental_simulation"],
+    "confidence": 0.80,
+    "tags": ["mental_model", "representation", "simulation", "johnson_laird"],
+    "tier_extensions": {
+      "abstract_type": "pattern",
+      "human_only": false,
+      "related_abstract": ["mechanism.abstract.mind.mental_simulation", "concept.abstract.mind.schema"]
+    }
+  },
+  {
+    "id": "mechanism.abstract.mind.default_mode_network",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.brain_networks",
+    "tier": "abstract",
+    "type": "mechanism",
+    "statement": "Дефолт-сеть: распределённая система медиальной префронтальной, задней цингулярной и теменной коры, активная при самореференциальном мышлении и блуждании мыслей.",
+    "conditions": "Снижение требований внешней задачи и отсутствие фокусированного внимания",
+    "prereq": ["mechanism.abstract.mind.mental_time_travel", "concept.abstract.mind.self_model"],
+    "confidence": 0.78,
+    "tags": ["default_mode", "DMN", "mind_wandering", "raichle"],
+    "tier_extensions": {
+      "abstract_type": "pattern",
+      "human_only": false,
+      "related_abstract": ["mechanism.abstract.mind.mental_time_travel", "mechanism.abstract.mind.incubation"]
+    }
+  },
+  {
+    "id": "mechanism.abstract.mind.predictive_processing",
+    "schema_version": "3.2",
+    "domain": "abstract.mind",
+    "subtopic": "abstract.mind.cognition",
+    "tier": "abstract",
+    "type": "mechanism",
+    "statement": "Предсказательная обработка: мозг порождает иерархические предсказания сенсорного входа и обновляет модель по сигналам ошибки предсказания, минимизируя свободную энергию.",
+    "conditions": "Иерархическая организация генеративной модели и доступ к восходящим сигналам ошибки",
+    "prereq": ["concept.abstract.mind.mental_model", "concept.abstract.mind.bayesian_brain"],
+    "confidence": 0.65,
+    "tags": ["predictive_processing", "free_energy", "friston", "bayesian"],
+    "tier_extensions": {
+      "abstract_type": "pattern",
+      "human_only": false,
+      "related_abstract": ["concept.abstract.mind.mental_model", "mechanism.abstract.mind.mental_simulation"]
+    }
+  }
+]

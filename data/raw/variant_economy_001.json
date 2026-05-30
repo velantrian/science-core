@@ -1,0 +1,477 @@
+[
+  {
+    "id": "fact.economy.world_gdp_2024",
+    "schema_version": "3.2",
+    "domain": "economy.macro",
+    "subtopic": "gdp.world",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Мировой ВВП в 2024 году составил около 110 триллионов долларов США по номиналу согласно оценкам МВФ.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.economy.gdp"],
+    "confidence": 0.88,
+    "tags": ["gdp", "world", "macro"],
+    "tier_extensions": {
+      "source": "IMF WEO October 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.economy.usa_gdp_2024",
+    "schema_version": "3.2",
+    "domain": "economy.macro",
+    "subtopic": "gdp.usa",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "ВВП США в 2024 году составил около 29.2 триллиона долларов по номиналу, первое место в мире.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.economy.gdp"],
+    "confidence": 0.9,
+    "tags": ["gdp", "usa", "macro"],
+    "tier_extensions": {
+      "source": "IMF WEO October 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.economy.china_gdp_2024",
+    "schema_version": "3.2",
+    "domain": "economy.macro",
+    "subtopic": "gdp.china",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "ВВП Китая в 2024 году составил около 18.3 триллиона долларов по номиналу, второе место в мире.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.economy.gdp"],
+    "confidence": 0.88,
+    "tags": ["gdp", "china", "macro"],
+    "tier_extensions": {
+      "source": "IMF WEO October 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.economy.japan_gdp_2024",
+    "schema_version": "3.2",
+    "domain": "economy.macro",
+    "subtopic": "gdp.japan",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "ВВП Японии в 2024 году составил около 4.07 триллиона долларов по номиналу, четвёртое место в мире.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.economy.gdp"],
+    "confidence": 0.86,
+    "tags": ["gdp", "japan", "macro"],
+    "tier_extensions": {
+      "source": "IMF WEO October 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.economy.germany_gdp_2024",
+    "schema_version": "3.2",
+    "domain": "economy.macro",
+    "subtopic": "gdp.germany",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "ВВП Германии в 2024 году составил около 4.7 триллиона долларов по номиналу, третье место в мире.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.economy.gdp"],
+    "confidence": 0.86,
+    "tags": ["gdp", "germany", "macro"],
+    "tier_extensions": {
+      "source": "IMF WEO October 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.economy.india_gdp_2024",
+    "schema_version": "3.2",
+    "domain": "economy.macro",
+    "subtopic": "gdp.india",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "ВВП Индии в 2024 году составил около 3.9 триллиона долларов по номиналу, пятое место в мире.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.economy.gdp"],
+    "confidence": 0.86,
+    "tags": ["gdp", "india", "macro"],
+    "tier_extensions": {
+      "source": "IMF WEO October 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.economy.currency_usd",
+    "schema_version": "3.2",
+    "domain": "economy.currency",
+    "subtopic": "currency.usd",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Доллар США (USD) — основная мировая резервная валюта, около 58% мировых валютных резервов в 2024 году.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.economy.currency"],
+    "confidence": 0.9,
+    "tags": ["currency", "usd", "reserve"],
+    "tier_extensions": {
+      "source": "IMF COFER Q4 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.economy.currency_eur",
+    "schema_version": "3.2",
+    "domain": "economy.currency",
+    "subtopic": "currency.eur",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Евро (EUR) — валюта 20 стран еврозоны, вторая резервная валюта мира с долей около 20% резервов в 2024.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.economy.currency"],
+    "confidence": 0.88,
+    "tags": ["currency", "eur", "eurozone"],
+    "tier_extensions": {
+      "source": "ECB 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.economy.currency_cny",
+    "schema_version": "3.2",
+    "domain": "economy.currency",
+    "subtopic": "currency.cny",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Юань (CNY) — валюта Китая, около 2.3% мировых валютных резервов в 2024 году, средний курс ~7.2 за доллар.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.economy.currency"],
+    "confidence": 0.84,
+    "tags": ["currency", "cny", "china"],
+    "tier_extensions": {
+      "source": "IMF COFER 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.economy.currency_jpy",
+    "schema_version": "3.2",
+    "domain": "economy.currency",
+    "subtopic": "currency.jpy",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Иена (JPY) — валюта Японии, средний курс в 2024 году около 151 иены за доллар США.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.economy.currency"],
+    "confidence": 0.86,
+    "tags": ["currency", "jpy", "japan"],
+    "tier_extensions": {
+      "source": "Bank of Japan 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.economy.currency_gbp",
+    "schema_version": "3.2",
+    "domain": "economy.currency",
+    "subtopic": "currency.gbp",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Фунт стерлингов (GBP) — валюта Великобритании, средний курс в 2024 году около 1.28 доллара за фунт.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.economy.currency"],
+    "confidence": 0.85,
+    "tags": ["currency", "gbp", "uk"],
+    "tier_extensions": {
+      "source": "Bank of England 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.economy.currency_rub",
+    "schema_version": "3.2",
+    "domain": "economy.currency",
+    "subtopic": "currency.rub",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Российский рубль (RUB) — валюта РФ, средний курс в 2024 году около 92 рубля за доллар США.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.economy.currency"],
+    "confidence": 0.82,
+    "tags": ["currency", "rub", "russia"],
+    "tier_extensions": {
+      "source": "ЦБ РФ 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.economy.index_sp500",
+    "schema_version": "3.2",
+    "domain": "economy.markets",
+    "subtopic": "index.sp500",
+    "tier": "variant",
+    "type": "material",
+    "statement": "S&P 500 — индекс 500 крупнейших компаний США, закрытие конца 2024 года около 5881 пункта, рост ~23% за год.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.economy.stock_index"],
+    "confidence": 0.88,
+    "tags": ["index", "sp500", "usa"],
+    "tier_extensions": {
+      "source": "S&P Dow Jones Indices 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.economy.index_nasdaq",
+    "schema_version": "3.2",
+    "domain": "economy.markets",
+    "subtopic": "index.nasdaq",
+    "tier": "variant",
+    "type": "material",
+    "statement": "NASDAQ Composite — технологический индекс США, закрытие 2024 года около 19311 пункта, рост ~29% за год.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.economy.stock_index"],
+    "confidence": 0.87,
+    "tags": ["index", "nasdaq", "tech"],
+    "tier_extensions": {
+      "source": "Nasdaq Inc 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.economy.index_nikkei",
+    "schema_version": "3.2",
+    "domain": "economy.markets",
+    "subtopic": "index.nikkei",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Nikkei 225 — индекс Токийской биржи Японии, закрытие 2024 года около 39895 пунктов, рост ~19% за год.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.economy.stock_index"],
+    "confidence": 0.86,
+    "tags": ["index", "nikkei", "japan"],
+    "tier_extensions": {
+      "source": "Nikkei Inc 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.economy.index_ftse100",
+    "schema_version": "3.2",
+    "domain": "economy.markets",
+    "subtopic": "index.ftse100",
+    "tier": "variant",
+    "type": "material",
+    "statement": "FTSE 100 — индекс 100 крупнейших компаний Лондонской биржи, закрытие 2024 года около 8173 пункта.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.economy.stock_index"],
+    "confidence": 0.85,
+    "tags": ["index", "ftse", "uk"],
+    "tier_extensions": {
+      "source": "FTSE Russell 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.economy.index_hangseng",
+    "schema_version": "3.2",
+    "domain": "economy.markets",
+    "subtopic": "index.hangseng",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Hang Seng — индекс Гонконгской фондовой биржи, закрытие 2024 года около 20060 пунктов, рост ~18% за год.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.economy.stock_index"],
+    "confidence": 0.83,
+    "tags": ["index", "hangseng", "hongkong"],
+    "tier_extensions": {
+      "source": "Hang Seng Indexes Company 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.economy.index_moex",
+    "schema_version": "3.2",
+    "domain": "economy.markets",
+    "subtopic": "index.moex",
+    "tier": "variant",
+    "type": "material",
+    "statement": "MOEX — индекс Московской биржи России, закрытие 2024 около 2883 пункта, падение около 7% за год.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.economy.stock_index"],
+    "confidence": 0.8,
+    "tags": ["index", "moex", "russia"],
+    "tier_extensions": {
+      "source": "Moscow Exchange 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.economy.unemployment_usa_2024",
+    "schema_version": "3.2",
+    "domain": "economy.labor",
+    "subtopic": "unemployment.usa",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Безработица в США в декабре 2024 года составила 4.1% согласно данным Бюро статистики труда.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.economy.unemployment"],
+    "confidence": 0.9,
+    "tags": ["unemployment", "usa", "labor"],
+    "tier_extensions": {
+      "source": "US BLS December 2024",
+      "valid_from": "2024-12-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.economy.unemployment_eu_2024",
+    "schema_version": "3.2",
+    "domain": "economy.labor",
+    "subtopic": "unemployment.eu",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Безработица в Еврозоне в декабре 2024 года составила около 6.3%, исторический минимум по данным Eurostat.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.economy.unemployment"],
+    "confidence": 0.87,
+    "tags": ["unemployment", "eu", "labor"],
+    "tier_extensions": {
+      "source": "Eurostat December 2024",
+      "valid_from": "2024-12-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.economy.unemployment_japan_2024",
+    "schema_version": "3.2",
+    "domain": "economy.labor",
+    "subtopic": "unemployment.japan",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Безработица в Японии в 2024 году составила около 2.5%, одна из самых низких среди развитых стран.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.economy.unemployment"],
+    "confidence": 0.86,
+    "tags": ["unemployment", "japan", "labor"],
+    "tier_extensions": {
+      "source": "Statistics Bureau of Japan 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.economy.inflation_global_2024",
+    "schema_version": "3.2",
+    "domain": "economy.macro",
+    "subtopic": "inflation.global",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Глобальная инфляция в 2024 году составила около 5.8% по оценке МВФ, снижение с 6.7% в 2023 году.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.economy.inflation"],
+    "confidence": 0.86,
+    "tags": ["inflation", "global", "macro"],
+    "tier_extensions": {
+      "source": "IMF WEO October 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.economy.gold_price_2024",
+    "schema_version": "3.2",
+    "domain": "economy.commodities",
+    "subtopic": "gold.price",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Средняя цена золота в 2024 году составила около 2390 долларов за тройскую унцию, рост ~27% за год.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.economy.commodity"],
+    "confidence": 0.87,
+    "tags": ["gold", "commodities", "price"],
+    "tier_extensions": {
+      "source": "LBMA 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.economy.brent_price_2024",
+    "schema_version": "3.2",
+    "domain": "economy.commodities",
+    "subtopic": "oil.brent",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Средняя цена нефти Brent в 2024 году составила около 80 долларов за баррель согласно данным EIA.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.economy.commodity"],
+    "confidence": 0.85,
+    "tags": ["oil", "brent", "commodities"],
+    "tier_extensions": {
+      "source": "US EIA 2024",
+      "valid_from": "2024-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "fact.economy.bitcoin_price_2024",
+    "schema_version": "3.2",
+    "domain": "economy.crypto",
+    "subtopic": "bitcoin.price",
+    "tier": "variant",
+    "type": "fact",
+    "statement": "Биткоин впервые преодолел 100000 долларов в декабре 2024 года, закрытие года около 93500 долларов.",
+    "conditions": "Данные на 2024",
+    "prereq": ["concept.economy.cryptocurrency"],
+    "confidence": 0.85,
+    "tags": ["bitcoin", "crypto", "price"],
+    "tier_extensions": {
+      "source": "CoinMarketCap December 2024",
+      "valid_from": "2024-12-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  }
+]

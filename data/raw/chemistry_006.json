@@ -1,0 +1,581 @@
+[
+  {
+    "id": "mechanism.chemistry.reactions.sn1",
+    "schema_version": "3.2",
+    "domain": "chemistry.reactions.organic",
+    "subtopic": "chemistry.reactions.nucleophilic",
+    "tier": "invariant",
+    "type": "mechanism",
+    "statement": "SN1 — мономолекулярное нуклеофильное замещение через карбкатион; кинетика первого порядка по субстрату; рацемизация у хирального центра.",
+    "formal_notation": "RX → R+ + X-; R+ + Nu- → RNu; v = k[RX]",
+    "conditions": "Третичные R; полярные протонные растворители; слабый Nu",
+    "limits": [
+      "Не идёт для первичных алкилгалогенидов",
+      "Конкурирует с E1"
+    ],
+    "prereq": [
+      "concept.chemistry.kinetics.order"
+    ],
+    "confidence": 0.93,
+    "tags": [
+      "sn1",
+      "nucleophilic_substitution",
+      "carbocation"
+    ]
+  },
+  {
+    "id": "mechanism.chemistry.reactions.sn2",
+    "schema_version": "3.2",
+    "domain": "chemistry.reactions.organic",
+    "subtopic": "chemistry.reactions.nucleophilic",
+    "tier": "invariant",
+    "type": "mechanism",
+    "statement": "SN2 — бимолекулярное нуклеофильное замещение через пятикоординированное переходное состояние; кинетика второго порядка; инверсия Вальдена.",
+    "formal_notation": "Nu- + RX → [Nu···R···X]‡ → NuR + X-; v = k[RX][Nu]",
+    "conditions": "Первичные/метильные R; сильный Nu; полярные апротонные растворители (DMSO, DMF)",
+    "limits": [
+      "Не идёт для третичных из-за стерики",
+      "Конкурирует с E2 при сильных основаниях"
+    ],
+    "prereq": [
+      "concept.chemistry.kinetics.order"
+    ],
+    "confidence": 0.95,
+    "tags": [
+      "sn2",
+      "nucleophilic_substitution",
+      "walden_inversion"
+    ]
+  },
+  {
+    "id": "mechanism.chemistry.reactions.e1",
+    "schema_version": "3.2",
+    "domain": "chemistry.reactions.organic",
+    "subtopic": "chemistry.reactions.elimination",
+    "tier": "invariant",
+    "type": "mechanism",
+    "statement": "E1 — мономолекулярное элиминирование через карбкатион с последующим отщеплением β-протона основанием; правило Зайцева — преобладает более замещённый алкен.",
+    "formal_notation": "RX → R+ + X-; R+ → алкен + H+; v = k[RX]",
+    "conditions": "Третичные субстраты; слабое основание; протонные растворители",
+    "limits": [
+      "Сопровождается перегруппировкой карбкатиона"
+    ],
+    "prereq": [
+      "mechanism.chemistry.reactions.sn1"
+    ],
+    "confidence": 0.92,
+    "tags": [
+      "e1",
+      "elimination",
+      "zaitsev"
+    ]
+  },
+  {
+    "id": "mechanism.chemistry.reactions.e2",
+    "schema_version": "3.2",
+    "domain": "chemistry.reactions.organic",
+    "subtopic": "chemistry.reactions.elimination",
+    "tier": "invariant",
+    "type": "mechanism",
+    "statement": "E2 — бимолекулярное элиминирование: согласованный отрыв β-H и уходящей группы в антипериплоскости; стереоспецифично; кинетика второго порядка.",
+    "formal_notation": "B- + H-C-C-X → BH + C=C + X-; v = k[RX][B]",
+    "conditions": "Сильные объёмные основания (KOtBu); антипериплоскость H и X",
+    "limits": [
+      "Конкурирует с SN2"
+    ],
+    "prereq": [
+      "concept.chemistry.kinetics.order"
+    ],
+    "confidence": 0.94,
+    "tags": [
+      "e2",
+      "elimination",
+      "antiperiplanar"
+    ]
+  },
+  {
+    "id": "mechanism.chemistry.reactions.electrophilic_addition_alkene",
+    "schema_version": "3.2",
+    "domain": "chemistry.reactions.organic",
+    "subtopic": "chemistry.reactions.addition",
+    "tier": "invariant",
+    "type": "mechanism",
+    "statement": "Электрофильное присоединение к алкенам: атака E+ на π-связь даёт карбкатион, далее нуклеофил Y- замыкает связь; региоселективность — правило Марковникова.",
+    "formal_notation": "C=C + E-Y → C(E)-C(Y)",
+    "conditions": "HX, X2, H2O/H+, ROH/H+; полярные среды",
+    "prereq": [
+      "concept.chemistry.organic.alkene"
+    ],
+    "confidence": 0.94,
+    "tags": [
+      "electrophilic_addition",
+      "markovnikov",
+      "alkene"
+    ]
+  },
+  {
+    "id": "principle.chemistry.reactions.markovnikov",
+    "schema_version": "3.2",
+    "domain": "chemistry.reactions.organic",
+    "subtopic": "chemistry.reactions.addition",
+    "tier": "invariant",
+    "type": "principle",
+    "statement": "Правило Марковникова: при электрофильном присоединении HX к несимметричному алкену H идёт к более гидрогенизированному атому C — через более устойчивый карбкатион.",
+    "conditions": "Электрофильное присоединение; полярные реагенты",
+    "limits": [
+      "Антимарковниковское присоединение HBr в присутствии пероксидов (эффект Караша)"
+    ],
+    "prereq": [
+      "mechanism.chemistry.reactions.electrophilic_addition_alkene"
+    ],
+    "confidence": 0.93,
+    "tags": [
+      "markovnikov",
+      "regioselectivity",
+      "addition"
+    ]
+  },
+  {
+    "id": "mechanism.chemistry.reactions.electrophilic_aromatic_substitution",
+    "schema_version": "3.2",
+    "domain": "chemistry.reactions.organic",
+    "subtopic": "chemistry.reactions.aromatic",
+    "tier": "invariant",
+    "type": "mechanism",
+    "statement": "SE Ar — электрофильное ароматическое замещение: E+ атакует кольцо, образуя σ-комплекс (аренониевый ион), затем теряется H+ с восстановлением ароматичности.",
+    "formal_notation": "ArH + E+ → [Ar(H)(E)]+ → ArE + H+",
+    "conditions": "Ароматические субстраты; электрофил, генерируемый катализатором",
+    "prereq": [
+      "concept.chemistry.organic.arene"
+    ],
+    "confidence": 0.94,
+    "tags": [
+      "se_ar",
+      "aromatic_substitution",
+      "sigma_complex"
+    ]
+  },
+  {
+    "id": "mechanism.chemistry.reactions.nitration_benzene",
+    "schema_version": "3.2",
+    "domain": "chemistry.reactions.organic",
+    "subtopic": "chemistry.reactions.aromatic",
+    "tier": "invariant",
+    "type": "mechanism",
+    "statement": "Нитрование бензола: HNO3 + H2SO4 → NO2+ + HSO4- + H2O; нитроний-катион атакует кольцо; продукт — нитробензол.",
+    "formal_notation": "C6H6 + HNO3 (H2SO4) → C6H5NO2 + H2O",
+    "conditions": "Смесь конц. HNO3 и H2SO4; T 50–60 °C",
+    "prereq": [
+      "mechanism.chemistry.reactions.electrophilic_aromatic_substitution"
+    ],
+    "confidence": 0.95,
+    "tags": [
+      "nitration",
+      "nitronium",
+      "benzene"
+    ]
+  },
+  {
+    "id": "mechanism.chemistry.reactions.sulfonation_benzene",
+    "schema_version": "3.2",
+    "domain": "chemistry.reactions.organic",
+    "subtopic": "chemistry.reactions.aromatic",
+    "tier": "invariant",
+    "type": "mechanism",
+    "statement": "Сульфирование бензола: электрофил SO3 (или H2SO4·SO3) атакует кольцо; реакция обратима, при нагревании с разб. H2SO4 десульфируется.",
+    "formal_notation": "C6H6 + SO3 → C6H5SO3H",
+    "conditions": "Олеум или конц. H2SO4; T 40–80 °C",
+    "prereq": [
+      "mechanism.chemistry.reactions.electrophilic_aromatic_substitution"
+    ],
+    "confidence": 0.93,
+    "tags": [
+      "sulfonation",
+      "reversible",
+      "aromatic"
+    ]
+  },
+  {
+    "id": "mechanism.chemistry.reactions.halogenation_aromatic",
+    "schema_version": "3.2",
+    "domain": "chemistry.reactions.organic",
+    "subtopic": "chemistry.reactions.aromatic",
+    "tier": "invariant",
+    "type": "mechanism",
+    "statement": "Галогенирование ароматики: X2 + FeX3 даёт активированный электрофил X+; SE Ar даёт ArX; для I2 нужен окислитель (HNO3), для F2 — мягкие реагенты.",
+    "formal_notation": "ArH + X2/FeX3 → ArX + HX",
+    "conditions": "Катализаторы Льюиса FeCl3/AlCl3/FeBr3; T комн.–60 °C",
+    "prereq": [
+      "mechanism.chemistry.reactions.electrophilic_aromatic_substitution"
+    ],
+    "confidence": 0.94,
+    "tags": [
+      "aromatic_halogenation",
+      "lewis_acid"
+    ]
+  },
+  {
+    "id": "mechanism.chemistry.reactions.friedel_crafts_alkylation",
+    "schema_version": "3.2",
+    "domain": "chemistry.reactions.organic",
+    "subtopic": "chemistry.reactions.aromatic",
+    "tier": "invariant",
+    "type": "mechanism",
+    "statement": "Алкилирование Фриделя-Крафтса: RX + AlCl3 → R+ + AlCl4-; R+ атакует кольцо; даёт ArR; ограничения — перегруппировка катиона и полиалкилирование.",
+    "formal_notation": "ArH + RX/AlCl3 → ArR + HX",
+    "conditions": "Безводный AlCl3 (или иной кислота Льюиса); неполярный растворитель",
+    "limits": [
+      "Не идёт на дезактивированных кольцах (NO2, COR)",
+      "Перегруппировка карбкатиона"
+    ],
+    "prereq": [
+      "mechanism.chemistry.reactions.electrophilic_aromatic_substitution"
+    ],
+    "confidence": 0.92,
+    "tags": [
+      "friedel_crafts",
+      "alkylation",
+      "lewis_acid"
+    ]
+  },
+  {
+    "id": "mechanism.chemistry.reactions.friedel_crafts_acylation",
+    "schema_version": "3.2",
+    "domain": "chemistry.reactions.organic",
+    "subtopic": "chemistry.reactions.aromatic",
+    "tier": "invariant",
+    "type": "mechanism",
+    "statement": "Ацилирование Фриделя-Крафтса: RCOCl + AlCl3 → RCO+ + AlCl4-; ацилий-катион атакует кольцо; продукт — арилкетон, без перегруппировки.",
+    "formal_notation": "ArH + RCOCl/AlCl3 → ArCOR + HCl",
+    "conditions": "Безводный AlCl3 в стехиометрии; CH2Cl2 или CS2",
+    "limits": [
+      "Не идёт на сильно дезактивированных кольцах"
+    ],
+    "prereq": [
+      "mechanism.chemistry.reactions.electrophilic_aromatic_substitution"
+    ],
+    "confidence": 0.93,
+    "tags": [
+      "friedel_crafts",
+      "acylation",
+      "acylium"
+    ]
+  },
+  {
+    "id": "mechanism.chemistry.reactions.grignard",
+    "schema_version": "3.2",
+    "domain": "chemistry.reactions.organic",
+    "subtopic": "chemistry.reactions.organometallic",
+    "tier": "invariant",
+    "type": "mechanism",
+    "statement": "Реакция Гриньяра: RMgX действует как карбанион R-, присоединяясь к карбонилу C=O с образованием алкоголята; гидролиз даёт спирт.",
+    "formal_notation": "R-MgX + R'2C=O → R-C(R')2-OMgX → R-C(R')2-OH (H2O)",
+    "conditions": "Сухой эфир или ТГФ; отсутствие протонных групп",
+    "limits": [
+      "Несовместимо с OH, NH, SH в субстрате"
+    ],
+    "prereq": [
+      "concept.chemistry.organic.alcohol"
+    ],
+    "confidence": 0.94,
+    "tags": [
+      "grignard",
+      "organometallic",
+      "carbanion"
+    ]
+  },
+  {
+    "id": "mechanism.chemistry.reactions.alcohol_oxidation",
+    "schema_version": "3.2",
+    "domain": "chemistry.reactions.organic",
+    "subtopic": "chemistry.reactions.oxidation",
+    "tier": "invariant",
+    "type": "mechanism",
+    "statement": "Окисление спиртов: первичные RCH2OH → RCHO (PCC) или RCOOH (KMnO4, CrO3); вторичные R2CHOH → R2C=O; третичные не окисляются без разрыва C-C.",
+    "formal_notation": "1° ROH → RCHO → RCOOH; 2° ROH → R2C=O",
+    "conditions": "PCC/DMP для альдегида; KMnO4/K2Cr2O7 для кислоты",
+    "prereq": [
+      "concept.chemistry.organic.alcohol",
+      "concept.chemistry.organic.aldehyde"
+    ],
+    "confidence": 0.93,
+    "tags": [
+      "oxidation",
+      "alcohol",
+      "pcc",
+      "chromium"
+    ]
+  },
+  {
+    "id": "mechanism.chemistry.reactions.nabh4_reduction",
+    "schema_version": "3.2",
+    "domain": "chemistry.reactions.organic",
+    "subtopic": "chemistry.reactions.reduction",
+    "tier": "invariant",
+    "type": "mechanism",
+    "statement": "NaBH4 — мягкий гидрид: восстанавливает альдегиды и кетоны до спиртов; не затрагивает сложные эфиры, амиды, карбоновые кислоты, нитрилы.",
+    "formal_notation": "R2C=O + NaBH4/MeOH → R2CH-OH",
+    "conditions": "MeOH, EtOH или вода как растворитель; T 0–25 °C",
+    "limits": [
+      "Не восстанавливает -COOH, -COOR, -CONR2, C≡N"
+    ],
+    "prereq": [
+      "concept.chemistry.organic.aldehyde",
+      "concept.chemistry.organic.ketone"
+    ],
+    "confidence": 0.95,
+    "tags": [
+      "nabh4",
+      "reduction",
+      "hydride"
+    ]
+  },
+  {
+    "id": "mechanism.chemistry.reactions.lialh4_reduction",
+    "schema_version": "3.2",
+    "domain": "chemistry.reactions.organic",
+    "subtopic": "chemistry.reactions.reduction",
+    "tier": "invariant",
+    "type": "mechanism",
+    "statement": "LiAlH4 — сильный гидрид: восстанавливает альдегиды, кетоны, сложные эфиры, карбоновые кислоты, амиды и нитрилы до спиртов или аминов; бурно реагирует с водой.",
+    "formal_notation": "RCOOR' + LiAlH4 → RCH2OH + R'OH",
+    "conditions": "Сухой Et2O или ТГФ; T 0 °C → кипение; гидролиз водой после",
+    "limits": [
+      "Несовместимо с протонными растворителями"
+    ],
+    "prereq": [
+      "concept.chemistry.organic.carboxylic_acid",
+      "concept.chemistry.organic.ester"
+    ],
+    "confidence": 0.94,
+    "tags": [
+      "lialh4",
+      "reduction",
+      "strong_hydride"
+    ]
+  },
+  {
+    "id": "mechanism.chemistry.reactions.ester_hydrolysis",
+    "schema_version": "3.2",
+    "domain": "chemistry.reactions.organic",
+    "subtopic": "chemistry.reactions.hydrolysis",
+    "tier": "invariant",
+    "type": "mechanism",
+    "statement": "Гидролиз сложных эфиров: кислотный — обратимая AAC2 с переходом через тетраэдрический интермедиат; щелочной (омыление) необратим, даёт карбоксилат.",
+    "formal_notation": "RCOOR' + H2O ⇌ RCOOH + R'OH (H+); RCOOR' + OH- → RCOO- + R'OH",
+    "conditions": "Кислотный: H2SO4, T кипения; щелочной: NaOH/H2O или NaOH/EtOH",
+    "prereq": [
+      "concept.chemistry.organic.ester"
+    ],
+    "confidence": 0.94,
+    "tags": [
+      "hydrolysis",
+      "ester",
+      "saponification"
+    ]
+  },
+  {
+    "id": "mechanism.chemistry.reactions.esterification_fischer",
+    "schema_version": "3.2",
+    "domain": "chemistry.reactions.organic",
+    "subtopic": "chemistry.reactions.condensation",
+    "tier": "invariant",
+    "type": "mechanism",
+    "statement": "Этерификация Фишера: RCOOH + R'OH ⇌ RCOOR' + H2O; кислотный катализ; равновесие смещают избытком спирта или удалением воды.",
+    "formal_notation": "RCOOH + R'OH ⇌ RCOOR' + H2O (H+)",
+    "conditions": "Конц. H2SO4 или HCl; T кипения; обратимая реакция",
+    "prereq": [
+      "concept.chemistry.organic.ester",
+      "concept.chemistry.organic.carboxylic_acid"
+    ],
+    "confidence": 0.95,
+    "tags": [
+      "fischer_esterification",
+      "equilibrium",
+      "acid_catalysis"
+    ]
+  },
+  {
+    "id": "mechanism.chemistry.reactions.transesterification",
+    "schema_version": "3.2",
+    "domain": "chemistry.reactions.organic",
+    "subtopic": "chemistry.reactions.condensation",
+    "tier": "invariant",
+    "type": "mechanism",
+    "statement": "Переэтерификация: RCOOR' + R''OH ⇌ RCOOR'' + R'OH; катализируется кислотой или основанием; основа производства биодизеля.",
+    "formal_notation": "RCOOR' + R''OH ⇌ RCOOR'' + R'OH",
+    "conditions": "Кислотный (H2SO4) или основной (NaOMe) катализ",
+    "prereq": [
+      "mechanism.chemistry.reactions.esterification_fischer"
+    ],
+    "confidence": 0.93,
+    "tags": [
+      "transesterification",
+      "biodiesel"
+    ]
+  },
+  {
+    "id": "mechanism.chemistry.reactions.wittig",
+    "schema_version": "3.2",
+    "domain": "chemistry.reactions.organic",
+    "subtopic": "chemistry.reactions.condensation",
+    "tier": "invariant",
+    "type": "mechanism",
+    "statement": "Реакция Виттига: илид фосфора Ph3P=CR2 реагирует с карбонилом через четырёхчленный оксафосфетан, давая алкен и Ph3P=O.",
+    "formal_notation": "Ph3P=CR2 + R'2C=O → R2C=CR'2 + Ph3P=O",
+    "conditions": "Сухие ТГФ/Et2O; стабильные илиды дают E-алкен, нестабильные — Z",
+    "prereq": [
+      "concept.chemistry.organic.alkene",
+      "concept.chemistry.organic.ketone"
+    ],
+    "confidence": 0.93,
+    "tags": [
+      "wittig",
+      "ylide",
+      "alkene_synthesis"
+    ]
+  },
+  {
+    "id": "mechanism.chemistry.reactions.aldol_condensation",
+    "schema_version": "3.2",
+    "domain": "chemistry.reactions.organic",
+    "subtopic": "chemistry.reactions.condensation",
+    "tier": "invariant",
+    "type": "mechanism",
+    "statement": "Альдольная конденсация: енолят атакует второй карбонил, давая β-гидроксикарбонил (альдоль); дегидратация даёт α,β-ненасыщенный карбонил.",
+    "formal_notation": "2 RCH2CHO → RCH(OH)CH(R)CHO → RCH=C(R)CHO + H2O",
+    "conditions": "OH-/H2O или енолят основанием; T 0–80 °C",
+    "prereq": [
+      "concept.chemistry.organic.aldehyde",
+      "concept.chemistry.organic.ketone"
+    ],
+    "confidence": 0.93,
+    "tags": [
+      "aldol",
+      "enolate",
+      "condensation"
+    ]
+  },
+  {
+    "id": "mechanism.chemistry.reactions.diels_alder",
+    "schema_version": "3.2",
+    "domain": "chemistry.reactions.organic",
+    "subtopic": "chemistry.reactions.pericyclic",
+    "tier": "invariant",
+    "type": "mechanism",
+    "statement": "Реакция Дильса-Альдера [4+2]: сопряжённый диен и диенофил образуют циклогексен в согласованном переходном состоянии; стереоспецифична (cis-присоединение).",
+    "formal_notation": "диен + диенофил → циклогексен ([4π+2π])",
+    "conditions": "T 25–200 °C; электронодонорный диен + электроноакцепторный диенофил",
+    "limits": [
+      "Требует s-цис конформацию диена"
+    ],
+    "prereq": [
+      "material.chemistry.hydrocarbons.butadiene",
+      "concept.chemistry.organic.alkene"
+    ],
+    "confidence": 0.95,
+    "tags": [
+      "diels_alder",
+      "pericyclic",
+      "cycloaddition"
+    ]
+  },
+  {
+    "id": "mechanism.chemistry.reactions.suzuki",
+    "schema_version": "3.2",
+    "domain": "chemistry.reactions.organic",
+    "subtopic": "chemistry.reactions.cross_coupling",
+    "tier": "invariant",
+    "type": "mechanism",
+    "statement": "Кросс-сочетание Сузуки: арил/винилгалогенид + арил/винилборная кислота → сочетание C-C при Pd(0) катализе; цикл: окисл. присоединение → трансметаллирование → восст. элиминирование.",
+    "formal_notation": "Ar-X + Ar'B(OH)2 → Ar-Ar' + B(OH)2X",
+    "conditions": "Pd(PPh3)4 или Pd(dppf)Cl2; основание Na2CO3/K3PO4; растворитель толуол/этанол/вода",
+    "prereq": [
+      "concept.chemistry.organic.arene"
+    ],
+    "confidence": 0.93,
+    "tags": [
+      "suzuki",
+      "cross_coupling",
+      "palladium"
+    ]
+  },
+  {
+    "id": "mechanism.chemistry.reactions.ozonolysis",
+    "schema_version": "3.2",
+    "domain": "chemistry.reactions.organic",
+    "subtopic": "chemistry.reactions.oxidation",
+    "tier": "invariant",
+    "type": "mechanism",
+    "statement": "Окислительное расщепление озоном: C=C + O3 → молозонид → озонид; восстановительная обработка (Me2S, Zn/H2O) даёт два карбонила, окислительная (H2O2) — карбоновые кислоты.",
+    "formal_notation": "R2C=CR'2 + O3 → R2C=O + R'2C=O (Me2S)",
+    "conditions": "O3 в CH2Cl2 при -78 °C; обработка Me2S или Zn/H2O",
+    "prereq": [
+      "concept.chemistry.organic.alkene"
+    ],
+    "confidence": 0.93,
+    "tags": [
+      "ozonolysis",
+      "oxidative_cleavage",
+      "ozone"
+    ]
+  },
+  {
+    "id": "concept.chemistry.reactions.transition_state_pericyclic",
+    "schema_version": "3.2",
+    "domain": "chemistry.reactions.organic",
+    "subtopic": "chemistry.reactions.pericyclic",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "Согласованное переходное состояние перициклической реакции — циклическое перераспределение электронов без интермедиатов; описывается правилами Вудворда-Хоффмана.",
+    "conditions": "Сопряжённые системы; термический или фотохимический режим",
+    "prereq": [
+      "mechanism.chemistry.reactions.diels_alder"
+    ],
+    "confidence": 0.92,
+    "tags": [
+      "pericyclic",
+      "woodward_hoffmann",
+      "concerted"
+    ]
+  },
+  {
+    "id": "concept.chemistry.reactions.directing_groups",
+    "schema_version": "3.2",
+    "domain": "chemistry.reactions.organic",
+    "subtopic": "chemistry.reactions.aromatic",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "Орто-/пара-ориентанты (-OH, -NH2, -OR, -R) активируют кольцо при SE Ar; мета-ориентанты (-NO2, -CN, -SO3H, -COR) дезактивируют; галогены — дезактивирующие орто-/пара.",
+    "conditions": "Электрофильное ароматическое замещение",
+    "prereq": [
+      "mechanism.chemistry.reactions.electrophilic_aromatic_substitution"
+    ],
+    "confidence": 0.94,
+    "tags": [
+      "directing_group",
+      "regioselectivity",
+      "aromatic"
+    ]
+  },
+  {
+    "id": "concept.chemistry.reactions.enolate",
+    "schema_version": "3.2",
+    "domain": "chemistry.reactions.organic",
+    "subtopic": "chemistry.reactions.condensation",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "Енолят — резонансно-стабилизированный анион с отрицательным зарядом, делокализованным между α-углеродом и атомом кислорода карбонила; pKa α-H ≈ 19–25.",
+    "formal_notation": "R-C(=O)-CH(R')- ⇌ R-C(O-)=C(R')-",
+    "conditions": "Сильные основания (LDA, NaH, NaOEt); α-H у карбонила",
+    "prereq": [
+      "concept.chemistry.organic.ketone"
+    ],
+    "confidence": 0.94,
+    "tags": [
+      "enolate",
+      "resonance",
+      "alpha_hydrogen"
+    ]
+  }
+]

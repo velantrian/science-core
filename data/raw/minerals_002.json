@@ -1,0 +1,490 @@
+[
+  {
+    "id": "concept.geology.mineralogy.silicate_structure",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.structure",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "Силикаты построены на тетраэдре [SiO4]4-, который полимеризуется через общие вершины в изолированные, парные, кольцевые, цепочечные, ленточные, листовые и каркасные структуры.",
+    "formal_notation": "[SiO4]4-; polymerization degree → {neso, soro, cyclo, ino, phyllo, tecto}-silicates",
+    "conditions": "Стабильность тетраэдра при коровых P-T условиях; полимеризация контролируется отношением Si:O",
+    "prereq": ["concept.geology.crystallography.lattice"],
+    "confidence": 0.99,
+    "tags": ["silicate", "tetrahedron", "structure", "polymerization"]
+  },
+  {
+    "id": "material.geology.mineralogy.quartz",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.tectosilicates",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Кварц — каркасный силикат, тригональная сингония, твёрдость 7 по Моосу, плотность 2,65 г/см³, стеклянный блеск, раковистый излом, спайность отсутствует.",
+    "formal_notation": "SiO2; trigonal; ρ=2.65; Mohs 7; vitreous; conchoidal",
+    "conditions": "α-кварц стабилен при T<573°C; β-кварц при T>573°C при 1 атм",
+    "prereq": ["concept.geology.mineralogy.silicate_structure"],
+    "confidence": 0.99,
+    "tags": ["silicate", "quartz", "tectosilicate", "rock_forming"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.orthoclase",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.feldspars",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Ортоклаз — калиевый полевой шпат, моноклинная сингония, твёрдость 6, плотность 2,55–2,63 г/см³, совершенная спайность в двух направлениях под 90°, стеклянный блеск.",
+    "formal_notation": "KAlSi3O8; monoclinic; ρ=2.55–2.63; Mohs 6; cleavage 90°",
+    "conditions": "Кристаллизуется из кислых магм при T 600–900°C; устойчив до амфиболитовой фации",
+    "prereq": ["concept.geology.mineralogy.silicate_structure"],
+    "confidence": 0.97,
+    "tags": ["silicate", "feldspar", "potassium", "rock_forming"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.albite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.plagioclases",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Альбит — натровый плагиоклаз, триклинная сингония, твёрдость 6–6,5, плотность 2,62 г/см³, совершенная спайность в двух направлениях, полисинтетические двойники.",
+    "formal_notation": "NaAlSi3O8; triclinic; ρ=2.62; Mohs 6–6.5",
+    "conditions": "Конечный член плагиоклазового ряда An0–An10; стабилен при T<1118°C",
+    "prereq": ["concept.geology.mineralogy.silicate_structure", "principle.geology.mineralogy.goldschmidt_isomorphism"],
+    "confidence": 0.97,
+    "tags": ["silicate", "plagioclase", "sodium", "rock_forming"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.anorthite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.plagioclases",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Анортит — кальциевый плагиоклаз, триклинная сингония, твёрдость 6–6,5, плотность 2,76 г/см³, совершенная спайность в двух направлениях.",
+    "formal_notation": "CaAl2Si2O8; triclinic; ρ=2.76; Mohs 6–6.5",
+    "conditions": "Конечный член плагиоклазового ряда An90–An100; кристаллизуется из основных магм",
+    "prereq": ["concept.geology.mineralogy.silicate_structure"],
+    "confidence": 0.97,
+    "tags": ["silicate", "plagioclase", "calcium", "rock_forming"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.muscovite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.micas",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Мусковит — листовой алюмосиликат калия, моноклинная сингония, твёрдость 2,5, плотность 2,76–2,88 г/см³, совершенная базальная спайность, перламутровый блеск.",
+    "formal_notation": "KAl2(AlSi3O10)(OH)2; monoclinic; ρ=2.76–2.88; Mohs 2.5",
+    "conditions": "Метаморфизм средних и низких ступеней; кислые интрузивные породы",
+    "prereq": ["concept.geology.mineralogy.silicate_structure"],
+    "confidence": 0.97,
+    "tags": ["silicate", "mica", "phyllosilicate", "muscovite"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.biotite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.micas",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Биотит — листовой железо-магнезиальный алюмосиликат, моноклинная сингония, твёрдость 2,5–3, плотность 2,7–3,3 г/см³, совершенная базальная спайность.",
+    "formal_notation": "K(Mg,Fe)3(AlSi3O10)(OH)2; monoclinic; ρ=2.7–3.3; Mohs 2.5–3",
+    "conditions": "Распространён в магматических и метаморфических породах; устойчив до гранулитовой фации",
+    "prereq": ["concept.geology.mineralogy.silicate_structure"],
+    "confidence": 0.96,
+    "tags": ["silicate", "mica", "phyllosilicate", "biotite"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.olivine",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.nesosilicates",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Оливин — островной силикат железа и магния, ромбическая сингония, твёрдость 6,5–7, плотность 3,27–4,37 г/см³, несовершенная спайность, стеклянный блеск.",
+    "formal_notation": "(Mg,Fe)2SiO4; orthorhombic; ρ=3.27–4.37; Mohs 6.5–7",
+    "conditions": "Главный минерал ультраосновных пород и верхней мантии; устойчив до 410 км глубины",
+    "prereq": ["concept.geology.mineralogy.silicate_structure"],
+    "confidence": 0.98,
+    "tags": ["silicate", "olivine", "nesosilicate", "mantle"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.augite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.pyroxenes",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Авгит — моноклинный пироксен сложного состава, цепочечный силикат, твёрдость 5,5–6,5, плотность 3,2–3,6 г/см³, совершенная призматическая спайность под 87°/93°.",
+    "formal_notation": "(Ca,Na)(Mg,Fe,Al,Ti)(Si,Al)2O6; monoclinic; ρ=3.2–3.6; Mohs 5.5–6.5",
+    "conditions": "Породообразующий минерал базальтов, габбро, перидотитов",
+    "prereq": ["concept.geology.mineralogy.silicate_structure"],
+    "confidence": 0.96,
+    "tags": ["silicate", "pyroxene", "inosilicate", "rock_forming"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.enstatite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.pyroxenes",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Энстатит — магнезиальный ромбический пироксен, цепочечный силикат, твёрдость 5–6, плотность 3,2–3,3 г/см³, призматическая спайность под 87°/93°.",
+    "formal_notation": "Mg2Si2O6; orthorhombic; ρ=3.2–3.3; Mohs 5–6",
+    "conditions": "Ультраосновные и основные магматические породы; стабилен в верхней мантии",
+    "prereq": ["concept.geology.mineralogy.silicate_structure"],
+    "confidence": 0.96,
+    "tags": ["silicate", "pyroxene", "orthopyroxene", "rock_forming"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.hornblende",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.amphiboles",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Роговая обманка — ленточный амфибол, моноклинная сингония, твёрдость 5–6, плотность 3,0–3,4 г/см³, совершенная призматическая спайность под 56°/124°.",
+    "formal_notation": "(Ca,Na)2-3(Mg,Fe,Al)5(Si,Al)8O22(OH)2; monoclinic; ρ=3.0–3.4; Mohs 5–6",
+    "conditions": "Породообразующий минерал диоритов, амфиболитов, габбро",
+    "prereq": ["concept.geology.mineralogy.silicate_structure"],
+    "confidence": 0.96,
+    "tags": ["silicate", "amphibole", "inosilicate", "rock_forming"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.tremolite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.amphiboles",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Тремолит — кальциево-магнезиальный амфибол, моноклинная сингония, твёрдость 5–6, плотность 2,9–3,2 г/см³, призматическая спайность под 56°/124°.",
+    "formal_notation": "Ca2Mg5Si8O22(OH)2; monoclinic; ρ=2.9–3.2; Mohs 5–6",
+    "conditions": "Метаморфизм доломитовых известняков; контактовые ореолы",
+    "prereq": ["concept.geology.mineralogy.silicate_structure"],
+    "confidence": 0.95,
+    "tags": ["silicate", "amphibole", "tremolite", "metamorphic"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.almandine",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.garnets",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Альмандин — железисто-алюминиевый гранат, кубическая сингония, твёрдость 7–7,5, плотность 4,32 г/см³, спайность отсутствует, стеклянный блеск.",
+    "formal_notation": "Fe3Al2(SiO4)3; cubic; ρ=4.32; Mohs 7–7.5",
+    "conditions": "Индикатор средне-высоких ступеней регионального метаморфизма",
+    "prereq": ["concept.geology.mineralogy.silicate_structure"],
+    "confidence": 0.97,
+    "tags": ["silicate", "garnet", "nesosilicate", "metamorphic"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.pyrope",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.garnets",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Пироп — магнезиально-алюминиевый гранат, кубическая сингония, твёрдость 7–7,5, плотность 3,58 г/см³, типично красный, индикатор алмазоносных кимберлитов.",
+    "formal_notation": "Mg3Al2(SiO4)3; cubic; ρ=3.58; Mohs 7–7.5",
+    "conditions": "Стабилен при высоких давлениях верхней мантии; ассоциирован с кимберлитами",
+    "prereq": ["concept.geology.mineralogy.silicate_structure"],
+    "confidence": 0.96,
+    "tags": ["silicate", "garnet", "pyrope", "mantle"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.kaolinite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.clays",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Каолинит — слоистый алюмосиликат 1:1, триклинная сингония, твёрдость 2–2,5, плотность 2,6 г/см³, белый, землистый или жирный блеск, совершенная базальная спайность.",
+    "formal_notation": "Al2Si2O5(OH)4; triclinic; ρ=2.6; Mohs 2–2.5",
+    "conditions": "Продукт гипергенного выветривания полевых шпатов; кислая среда",
+    "prereq": ["concept.geology.mineralogy.silicate_structure"],
+    "confidence": 0.97,
+    "tags": ["silicate", "clay", "phyllosilicate", "weathering"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.talc",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.silicates.clays",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Тальк — листовой магнезиальный силикат, моноклинная или триклинная сингония, твёрдость 1, плотность 2,58–2,83 г/см³, перламутровый блеск, жирный на ощупь.",
+    "formal_notation": "Mg3Si4O10(OH)2; monoclinic/triclinic; ρ=2.58–2.83; Mohs 1",
+    "conditions": "Гидротермальное изменение ультраосновных пород; низкие ступени метаморфизма",
+    "prereq": ["concept.geology.mineralogy.silicate_structure"],
+    "confidence": 0.98,
+    "tags": ["silicate", "talc", "phyllosilicate", "mohs_standard"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "concept.geology.mineralogy.oxide_class",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.oxides.structure",
+    "tier": "invariant",
+    "type": "concept",
+    "statement": "Оксиды — минералы, в которых катионы металлов связаны с кислородом без участия дополнительных анионных комплексов; класс 4 по Штрунцу.",
+    "formal_notation": "M_xO_y; ionic-covalent bonding; Strunz class 4",
+    "conditions": "Окислительные обстановки; высокотемпературные магматические и метаморфические процессы",
+    "prereq": ["principle.geology.mineralogy.strunz_classification"],
+    "confidence": 0.98,
+    "tags": ["oxide", "classification", "structure", "mineralogy"]
+  },
+  {
+    "id": "material.geology.mineralogy.corundum",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.oxides.simple",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Корунд — оксид алюминия, тригональная сингония, твёрдость 9, плотность 3,98–4,02 г/см³, отсутствие спайности, стеклянный до алмазного блеск.",
+    "formal_notation": "Al2O3; trigonal; ρ=3.98–4.02; Mohs 9",
+    "conditions": "Метаморфические породы, бокситы, пегматиты; устойчив до 2050°C",
+    "prereq": ["concept.geology.mineralogy.oxide_class"],
+    "confidence": 0.99,
+    "tags": ["oxide", "corundum", "abrasive", "gemstone"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.hematite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.oxides.iron",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Гематит — оксид трёхвалентного железа, тригональная сингония, твёрдость 5,5–6,5, плотность 5,26 г/см³, металлический или матовый блеск, вишнёво-красная черта.",
+    "formal_notation": "Fe2O3; trigonal; ρ=5.26; Mohs 5.5–6.5; streak red",
+    "conditions": "Окислительные обстановки осадочных, метаморфических и гидротермальных процессов",
+    "prereq": ["concept.geology.mineralogy.oxide_class"],
+    "confidence": 0.98,
+    "tags": ["oxide", "hematite", "iron_ore", "red"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.magnetite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.oxides.iron",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Магнетит — двойной оксид железа со структурой шпинели, кубическая сингония, твёрдость 5,5–6,5, плотность 5,17 г/см³, металлический блеск, сильномагнитен.",
+    "formal_notation": "Fe3O4 = Fe2+Fe3+2O4; cubic spinel; ρ=5.17; Mohs 5.5–6.5",
+    "conditions": "Магматические, метаморфические, гидротермальные процессы; Tкюри = 580°C",
+    "prereq": ["concept.geology.mineralogy.oxide_class"],
+    "confidence": 0.99,
+    "tags": ["oxide", "magnetite", "iron_ore", "ferromagnetic"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.rutile",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.oxides.titanium",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Рутил — оксид титана, тетрагональная сингония, твёрдость 6–6,5, плотность 4,23 г/см³, алмазный до металлического блеск, красно-бурый цвет.",
+    "formal_notation": "TiO2; tetragonal; ρ=4.23; Mohs 6–6.5",
+    "conditions": "Высокотемпературные метаморфические и магматические породы; устойчивый акцессорий россыпей",
+    "prereq": ["concept.geology.mineralogy.oxide_class", "concept.geology.mineralogy.polymorphism"],
+    "confidence": 0.97,
+    "tags": ["oxide", "rutile", "titanium", "polymorph"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.cassiterite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.oxides.tin",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Касситерит — оксид олова, тетрагональная сингония, твёрдость 6–7, плотность 6,98–7,01 г/см³, алмазный блеск, главная руда олова.",
+    "formal_notation": "SnO2; tetragonal; ρ=6.98–7.01; Mohs 6–7",
+    "conditions": "Гидротермальные жилы, грейзены, аллювиальные россыпи",
+    "prereq": ["concept.geology.mineralogy.oxide_class"],
+    "confidence": 0.97,
+    "tags": ["oxide", "cassiterite", "tin_ore", "industrial"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.chromite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.oxides.spinels",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Хромит — хром-железистая шпинель, кубическая сингония, твёрдость 5,5, плотность 4,5–4,8 г/см³, металлический блеск, главная руда хрома.",
+    "formal_notation": "FeCr2O4; cubic spinel; ρ=4.5–4.8; Mohs 5.5",
+    "conditions": "Ультраосновные магматические породы; кумулатные слои в офиолитах",
+    "prereq": ["concept.geology.mineralogy.oxide_class"],
+    "confidence": 0.97,
+    "tags": ["oxide", "chromite", "chromium_ore", "spinel"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.spinel",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.oxides.spinels",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Шпинель — двойной оксид магния и алюминия, кубическая сингония, твёрдость 7,5–8, плотность 3,58–3,61 г/см³, стеклянный блеск, отсутствие спайности.",
+    "formal_notation": "MgAl2O4; cubic; ρ=3.58–3.61; Mohs 7.5–8",
+    "conditions": "Контактовый и региональный метаморфизм карбонатных и алюминиевых пород",
+    "prereq": ["concept.geology.mineralogy.oxide_class"],
+    "confidence": 0.97,
+    "tags": ["oxide", "spinel", "gemstone", "metamorphic"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  },
+  {
+    "id": "material.geology.mineralogy.ilmenite",
+    "schema_version": "3.2",
+    "domain": "geology.mineralogy",
+    "subtopic": "geology.mineralogy.oxides.titanium",
+    "tier": "variant",
+    "type": "material",
+    "statement": "Ильменит — титанат железа, тригональная сингония, твёрдость 5–6, плотность 4,7–4,8 г/см³, металлический блеск, слабо магнитен, главная руда титана.",
+    "formal_notation": "FeTiO3; trigonal; ρ=4.7–4.8; Mohs 5–6",
+    "conditions": "Основные и ультраосновные магматические породы; устойчив в россыпях",
+    "prereq": ["concept.geology.mineralogy.oxide_class"],
+    "confidence": 0.97,
+    "tags": ["oxide", "ilmenite", "titanium_ore", "magmatic"],
+    "tier_extensions": {
+      "source": "Strunz Classification 9th ed",
+      "valid_from": "2009-01-01",
+      "valid_until": null,
+      "has_disputes": false
+    }
+  }
+]

@@ -1,0 +1,644 @@
+[
+  {
+    "id": "material.construction.steel.i_beam",
+    "schema_version": "3.2",
+    "domain": "construction.steel",
+    "subtopic": "construction.steel.profiles",
+    "tier": "practical",
+    "type": "material",
+    "statement": "Двутавр: горячекатаный профиль с двумя параллельными полками и стенкой, момент сопротивления Wx максимизирован при минимуме массы, основа стальных балок и колонн.",
+    "conditions": "ГОСТ 8239, Б1-Б4 нормальный, Ш широкополочный, К колонный; высота 100–1000 мм",
+    "prereq": [
+      "material.metallurgy.steel.carbon"
+    ],
+    "confidence": 0.95,
+    "tags": [
+      "i_beam",
+      "steel",
+      "profile",
+      "structural"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.97,
+      "safety_critical": true,
+      "safety_notes": "Потеря устойчивости стенки и полок при неправильном опирании; обязательная проверка на изгиб с кручением"
+    }
+  },
+  {
+    "id": "material.construction.steel.angle",
+    "schema_version": "3.2",
+    "domain": "construction.steel",
+    "subtopic": "construction.steel.profiles",
+    "tier": "practical",
+    "type": "material",
+    "statement": "Уголок: прокатный профиль L-образного сечения, равнополочный или неравнополочный, основа лёгких ферм, связей и обрамлений; полки 20–250 мм при толщине 3–30 мм.",
+    "conditions": "ГОСТ 8509 равнополочный, ГОСТ 8510 неравнополочный; марка стали С235–С390",
+    "prereq": [
+      "material.construction.steel.i_beam"
+    ],
+    "confidence": 0.94,
+    "tags": [
+      "angle",
+      "steel",
+      "profile",
+      "truss"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.96,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "material.construction.steel.channel",
+    "schema_version": "3.2",
+    "domain": "construction.steel",
+    "subtopic": "construction.steel.profiles",
+    "tier": "practical",
+    "type": "material",
+    "statement": "Швеллер: прокатный профиль U-образного сечения с параллельными или уклонными полками, балка перекрытия и обвязка каркаса; высота 50–400 мм.",
+    "conditions": "ГОСТ 8240; П параллельные полки, У уклонные; центр изгиба смещён от стенки, требует учёта кручения",
+    "prereq": [
+      "material.construction.steel.i_beam"
+    ],
+    "confidence": 0.94,
+    "tags": [
+      "channel",
+      "steel",
+      "profile",
+      "structural"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.96,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "method.construction.steel.welded_joint",
+    "schema_version": "3.2",
+    "domain": "construction.steel",
+    "subtopic": "construction.steel.connections",
+    "tier": "practical",
+    "type": "method",
+    "statement": "Сварное соединение стальных конструкций: стыковое, угловое, тавровое, нахлёсточное швы, выполняемые ручной дуговой РДС, полуавтоматической MAG или автоматической под флюсом.",
+    "conditions": "Электроды Э42–Э70; контроль провара ультразвуковым УЗК или радиографическим методом; категории швов I–IV",
+    "prereq": [
+      "material.construction.steel.i_beam"
+    ],
+    "confidence": 0.93,
+    "tags": [
+      "welding",
+      "steel",
+      "joint",
+      "fabrication"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.95,
+      "safety_critical": true,
+      "safety_notes": "Дефекты сварки (непровар, трещины, поры) ведут к хрупкому разрушению при низких T; контроль НК обязателен"
+    }
+  },
+  {
+    "id": "method.construction.steel.bolted_joint",
+    "schema_version": "3.2",
+    "domain": "construction.steel",
+    "subtopic": "construction.steel.connections",
+    "tier": "practical",
+    "type": "method",
+    "statement": "Болтовое соединение: разъёмное соединение стальных элементов высокопрочными болтами М16–М48 классов прочности 8.8, 10.9, 12.9, работающими на срез, смятие или сдвиг от трения.",
+    "conditions": "Контролируемое натяжение моментом или поворотом гайки; предварительная обработка контактных поверхностей пескоструйно",
+    "prereq": [
+      "material.construction.steel.i_beam"
+    ],
+    "confidence": 0.94,
+    "tags": [
+      "bolted",
+      "steel",
+      "joint",
+      "high_strength"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.97,
+      "safety_critical": true,
+      "safety_notes": "Недотяжка снижает несущую способность фрикционных соединений; перетяжка разрушает резьбу"
+    }
+  },
+  {
+    "id": "concept.construction.structure.planar_truss",
+    "schema_version": "3.2",
+    "domain": "construction.structure",
+    "subtopic": "construction.structure.truss",
+    "tier": "practical",
+    "type": "concept",
+    "statement": "Плоская ферма: стержневая система из треугольных ячеек в одной плоскости, где стержни работают только на осевые усилия растяжения или сжатия при узловой нагрузке.",
+    "conditions": "Узлы шарнирные; нагрузка приложена в узлах; пролёт 18–60 м для покрытий и мостов",
+    "prereq": [
+      "material.construction.steel.angle"
+    ],
+    "confidence": 0.95,
+    "tags": [
+      "truss",
+      "planar",
+      "structure",
+      "axial"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.97,
+      "safety_critical": true,
+      "safety_notes": "Потеря устойчивости сжатого пояса при отсутствии связей из плоскости ведёт к прогрессирующему обрушению"
+    }
+  },
+  {
+    "id": "concept.construction.structure.space_truss",
+    "schema_version": "3.2",
+    "domain": "construction.structure",
+    "subtopic": "construction.structure.truss",
+    "tier": "practical",
+    "type": "concept",
+    "statement": "Пространственная ферма (структурная плита): трёхмерная стержневая система из пирамидальных ячеек с двумя поясами и раскосами, работает на изгиб как плита.",
+    "conditions": "Сетка узлов 1,5–3 м; высота 1/15–1/25 пролёта; пролёты до 100 м без промежуточных опор",
+    "prereq": [
+      "concept.construction.structure.planar_truss"
+    ],
+    "confidence": 0.92,
+    "tags": [
+      "space_truss",
+      "structural_grid",
+      "double_layer"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.94,
+      "safety_critical": true,
+      "safety_notes": "Узловые соединения типа МАрхИ или Mero критичны; разрушение одного узла перераспределяет усилия лавинообразно"
+    }
+  },
+  {
+    "id": "concept.construction.structure.column",
+    "schema_version": "3.2",
+    "domain": "construction.structure",
+    "subtopic": "construction.structure.element",
+    "tier": "practical",
+    "type": "concept",
+    "statement": "Колонна: вертикальный сжатый элемент каркаса, передающий нагрузки от перекрытий на фундамент; рассчитывается на сжатие, продольный изгиб и устойчивость.",
+    "conditions": "Гибкость λ < 120 для основных и 150 для второстепенных; материал сталь, бетон, дерево",
+    "prereq": [
+      "material.construction.steel.i_beam"
+    ],
+    "confidence": 0.95,
+    "tags": [
+      "column",
+      "compression",
+      "structure",
+      "buckling"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.97,
+      "safety_critical": true,
+      "safety_notes": "Потеря устойчивости по Эйлеру при превышении гибкости; разрушение колонны ведёт к обрушению вышележащих перекрытий"
+    }
+  },
+  {
+    "id": "concept.construction.structure.beam",
+    "schema_version": "3.2",
+    "domain": "construction.structure",
+    "subtopic": "construction.structure.element",
+    "tier": "practical",
+    "type": "concept",
+    "statement": "Балка: горизонтальный изгибаемый элемент, передающий поперечные нагрузки на опоры; работает на изгиб с моментом M и поперечную силу Q.",
+    "conditions": "Прогиб f < L/250 для перекрытий, L/400 для покрытий; высота сечения h ≈ L/10–L/20",
+    "prereq": [
+      "concept.construction.structure.column"
+    ],
+    "confidence": 0.95,
+    "tags": [
+      "beam",
+      "bending",
+      "structure",
+      "deflection"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.97,
+      "safety_critical": true,
+      "safety_notes": "Превышение прогиба и трещиностойкости; потеря устойчивости плоской формы изгиба у высоких балок"
+    }
+  },
+  {
+    "id": "concept.construction.structure.slab",
+    "schema_version": "3.2",
+    "domain": "construction.structure",
+    "subtopic": "construction.structure.element",
+    "tier": "practical",
+    "type": "concept",
+    "statement": "Плита перекрытия: плоский изгибаемый элемент, опёртый по контуру или линейно, работает на изгиб в двух направлениях или одном в зависимости от соотношения сторон.",
+    "conditions": "Толщина 1/30–1/40 короткой стороны; пустотные, ребристые, монолитные, сборно-монолитные типы",
+    "prereq": [
+      "concept.construction.structure.beam"
+    ],
+    "confidence": 0.94,
+    "tags": [
+      "slab",
+      "floor",
+      "plate",
+      "bending"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.96,
+      "safety_critical": true,
+      "safety_notes": "Продавливание плиты при опирании на колонны без капителей и поперечной арматуры в зоне продавливания"
+    }
+  },
+  {
+    "id": "concept.construction.structure.arch",
+    "schema_version": "3.2",
+    "domain": "construction.structure",
+    "subtopic": "construction.structure.curved",
+    "tier": "practical",
+    "type": "concept",
+    "statement": "Арка: криволинейный элемент, работающий преимущественно на сжатие с распором на опорах; форма кривой давления соответствует эпюре изгибающих моментов.",
+    "conditions": "Стрела подъёма f = L/4–L/10; распор воспринимается затяжкой или контрфорсами; материал камень, бетон, сталь",
+    "prereq": [
+      "concept.construction.structure.beam"
+    ],
+    "confidence": 0.93,
+    "tags": [
+      "arch",
+      "compression",
+      "thrust",
+      "vault"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.95,
+      "safety_critical": true,
+      "safety_notes": "Несимметричная нагрузка вызывает изгибающие моменты; разрушение опор от распора при недостаточном расчёте"
+    }
+  },
+  {
+    "id": "concept.construction.structure.vault",
+    "schema_version": "3.2",
+    "domain": "construction.structure",
+    "subtopic": "construction.structure.curved",
+    "tier": "practical",
+    "type": "concept",
+    "statement": "Свод: пространственная конструкция перекрытия, образованная сдвигом арки вдоль оси (цилиндрический) или вращением (купольный), работает на сжатие с распором.",
+    "conditions": "Цилиндрический, крестовый, сомкнутый, купольный типы; толщина 1/40–1/100 пролёта",
+    "prereq": [
+      "concept.construction.structure.arch"
+    ],
+    "confidence": 0.92,
+    "tags": [
+      "vault",
+      "shell",
+      "curved",
+      "masonry"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.94,
+      "safety_critical": true,
+      "safety_notes": "Несимметричные нагрузки разрушают свод; обязательны связи и затяжки для восприятия распора"
+    }
+  },
+  {
+    "id": "concept.construction.structure.dome",
+    "schema_version": "3.2",
+    "domain": "construction.structure",
+    "subtopic": "construction.structure.curved",
+    "tier": "practical",
+    "type": "concept",
+    "statement": "Купол: пространственная оболочка двойной кривизны вращения, работает на сжатие в меридиональном направлении и сжатие или растяжение в кольцевом.",
+    "conditions": "Угол ≈ 52° от вертикали — граница смены знака кольцевых усилий; затяжка по нижнему контуру",
+    "prereq": [
+      "concept.construction.structure.vault"
+    ],
+    "confidence": 0.92,
+    "tags": [
+      "dome",
+      "shell",
+      "double_curvature",
+      "meridional"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.94,
+      "safety_critical": true,
+      "safety_notes": "Локальная потеря устойчивости тонких оболочек при изгибно-моментных воздействиях"
+    }
+  },
+  {
+    "id": "concept.construction.bridge.beam_type",
+    "schema_version": "3.2",
+    "domain": "construction.bridge",
+    "subtopic": "construction.bridge.types",
+    "tier": "practical",
+    "type": "concept",
+    "statement": "Балочный мост: пролётное строение из балок, работающих на изгиб с передачей вертикальных опорных реакций без распора; пролёты 15–200 м для разрезных и неразрезных схем.",
+    "conditions": "Сталежелезобетонные, преднапряжённые ЖБ или цельнометаллические балки; разрезные, неразрезные, консольные",
+    "prereq": [
+      "concept.construction.structure.beam"
+    ],
+    "confidence": 0.95,
+    "tags": [
+      "bridge",
+      "beam",
+      "girder",
+      "span"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.97,
+      "safety_critical": true,
+      "safety_notes": "Усталостные трещины в стальных балках от циклических нагрузок; обязательный мониторинг и осмотр опор и швов"
+    }
+  },
+  {
+    "id": "concept.construction.bridge.arch_type",
+    "schema_version": "3.2",
+    "domain": "construction.bridge",
+    "subtopic": "construction.bridge.types",
+    "tier": "practical",
+    "type": "concept",
+    "statement": "Арочный мост: главная несущая конструкция — арка, передающая распор на массивные береговые опоры; пролёты 100–500 м с ездой поверху, понизу или посередине.",
+    "conditions": "Бетонные, сталежелезобетонные, стальные арки; стрела подъёма 1/4–1/8 пролёта",
+    "prereq": [
+      "concept.construction.bridge.beam_type"
+    ],
+    "confidence": 0.93,
+    "tags": [
+      "bridge",
+      "arch",
+      "thrust",
+      "span"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.95,
+      "safety_critical": true,
+      "safety_notes": "Размыв оснований опор разрушает восприятие распора; неравномерные осадки опор недопустимы"
+    }
+  },
+  {
+    "id": "concept.construction.bridge.cable_stayed",
+    "schema_version": "3.2",
+    "domain": "construction.bridge",
+    "subtopic": "construction.bridge.types",
+    "tier": "practical",
+    "type": "concept",
+    "statement": "Вантовый мост: пролётное строение подвешено на наклонных вантах к пилонам; пролёты 200–1100 м с радиальной, веерной или арфообразной схемой расположения вант.",
+    "conditions": "Ванты из высокопрочных канатов с защитой от коррозии в полиэтиленовой оболочке; натяжение домкратами",
+    "prereq": [
+      "concept.construction.bridge.arch_type"
+    ],
+    "confidence": 0.93,
+    "tags": [
+      "bridge",
+      "cable_stayed",
+      "pylon",
+      "stay"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.95,
+      "safety_critical": true,
+      "safety_notes": "Усталостные разрушения и коррозия вант; обязательная замена отдельных вант в течение жизни моста"
+    }
+  },
+  {
+    "id": "concept.construction.bridge.suspension",
+    "schema_version": "3.2",
+    "domain": "construction.bridge",
+    "subtopic": "construction.bridge.types",
+    "tier": "practical",
+    "type": "concept",
+    "statement": "Висячий мост: пролётное строение подвешено к двум главным несущим кабелям, перекинутым через пилоны и закреплённым в анкерах на берегах; пролёты 500–2000 м.",
+    "conditions": "Главные кабели из параллельных стальных проволок диаметром 5 мм; стрела провисания 1/9–1/12 пролёта",
+    "prereq": [
+      "concept.construction.bridge.cable_stayed"
+    ],
+    "confidence": 0.93,
+    "tags": [
+      "bridge",
+      "suspension",
+      "main_cable",
+      "long_span"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.94,
+      "safety_critical": true,
+      "safety_notes": "Аэродинамическая неустойчивость (флаттер) при сильном ветре; разрушение моста Tacoma Narrows 1940"
+    }
+  },
+  {
+    "id": "concept.construction.bridge.continuous",
+    "schema_version": "3.2",
+    "domain": "construction.bridge",
+    "subtopic": "construction.bridge.statical_scheme",
+    "tier": "practical",
+    "type": "concept",
+    "statement": "Неразрезной мост: пролётное строение проходит через несколько опор без разрезов, образуя многопролётную балку с отрицательными моментами над промежуточными опорами.",
+    "conditions": "Чувствителен к неравномерным осадкам опор; требует учёта температурных и реологических деформаций",
+    "prereq": [
+      "concept.construction.bridge.beam_type"
+    ],
+    "confidence": 0.93,
+    "tags": [
+      "bridge",
+      "continuous",
+      "multispan",
+      "statical"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.95,
+      "safety_critical": true,
+      "safety_notes": "Неравномерные осадки опор перераспределяют моменты с превышением расчётных значений"
+    }
+  },
+  {
+    "id": "concept.construction.bridge.frame_span",
+    "schema_version": "3.2",
+    "domain": "construction.bridge",
+    "subtopic": "construction.bridge.statical_scheme",
+    "tier": "practical",
+    "type": "concept",
+    "statement": "Рамный мост: пролётное строение жёстко соединено с опорами, образуя раму; уменьшаются изгибающие моменты в пролёте за счёт защемления в опорах.",
+    "conditions": "Опоры воспринимают изгибающие моменты и продольные силы; чувствительность к осадкам как у неразрезных схем",
+    "prereq": [
+      "concept.construction.bridge.continuous"
+    ],
+    "confidence": 0.91,
+    "tags": [
+      "bridge",
+      "frame",
+      "rigid_frame"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.93,
+      "safety_critical": true,
+      "safety_notes": "Опоры подвергаются изгибу; разрушение узла защемления критично для всей рамы"
+    }
+  },
+  {
+    "id": "technology.construction.tunnel.tbm_shield",
+    "schema_version": "3.2",
+    "domain": "construction.tunnel",
+    "subtopic": "construction.tunnel.boring",
+    "tier": "practical",
+    "type": "technology",
+    "statement": "Тоннелепроходческий механизированный комплекс ТПМК: проходка тоннеля щитом с роторной режущей головкой и одновременной обделкой из сборных железобетонных тюбингов.",
+    "conditions": "Диаметр 3–15 м; скорость 5–30 м/сутки; ППС грунтопригружающий или гидропригружающий тип забоя",
+    "prereq": [
+      "technology.construction.concrete.reinforced"
+    ],
+    "confidence": 0.93,
+    "tags": [
+      "tunnel",
+      "tbm",
+      "shield",
+      "boring"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.94,
+      "safety_critical": true,
+      "safety_notes": "Прорыв грунта или воды в забой; обрушение свода при выходе из расчётного режима пригруза"
+    }
+  },
+  {
+    "id": "material.construction.foundation.monolithic",
+    "schema_version": "3.2",
+    "domain": "construction.foundation",
+    "subtopic": "construction.foundation.construction_type",
+    "tier": "practical",
+    "type": "material",
+    "statement": "Монолитный фундамент: железобетонная конструкция, бетонируемая на месте в опалубке, формирующая единое тело без сборных швов; высокая жёсткость и водонепроницаемость.",
+    "conditions": "Класс бетона B25–B40 с маркой W6–W12; защитный слой арматуры 35–50 мм",
+    "prereq": [
+      "technology.construction.concrete.reinforced"
+    ],
+    "confidence": 0.94,
+    "tags": [
+      "foundation",
+      "monolithic",
+      "cast_in_place"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.96,
+      "safety_critical": true,
+      "safety_notes": "Перерывы в бетонировании создают холодные швы со сниженной водонепроницаемостью"
+    }
+  },
+  {
+    "id": "material.construction.foundation.precast",
+    "schema_version": "3.2",
+    "domain": "construction.foundation",
+    "subtopic": "construction.foundation.construction_type",
+    "tier": "practical",
+    "type": "material",
+    "statement": "Сборный фундамент: из заводских железобетонных блоков ФБС и плит ФЛ, монтируемых на цементно-песчаный раствор с перевязкой швов и заделкой стыков.",
+    "conditions": "Блоки ФБС 600–2400 мм длиной; плиты-подушки ФЛ ширина 800–3200 мм; жёсткие грунты без неравномерных осадок",
+    "prereq": [
+      "material.construction.foundation.monolithic"
+    ],
+    "confidence": 0.93,
+    "tags": [
+      "foundation",
+      "precast",
+      "block"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.95,
+      "safety_critical": false
+    }
+  },
+  {
+    "id": "concept.construction.foundation.pile",
+    "schema_version": "3.2",
+    "domain": "construction.foundation",
+    "subtopic": "construction.foundation.deep",
+    "tier": "practical",
+    "type": "concept",
+    "statement": "Свайный фундамент: вертикальные стержни длиной 6–60 м, передающие нагрузку на прочные нижележащие грунты через сопротивление по боковой поверхности и под пятой.",
+    "conditions": "Забивные, буронабивные, винтовые сваи; ростверк объединяет головы свай; слабые верхние грунты",
+    "prereq": [
+      "material.construction.foundation.monolithic"
+    ],
+    "confidence": 0.94,
+    "tags": [
+      "foundation",
+      "pile",
+      "deep"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.96,
+      "safety_critical": true,
+      "safety_notes": "Недопогружение сваи до проектной отметки или прочного слоя ведёт к неравномерным осадкам и разрушению здания"
+    }
+  },
+  {
+    "id": "concept.construction.foundation.raft",
+    "schema_version": "3.2",
+    "domain": "construction.foundation",
+    "subtopic": "construction.foundation.shallow",
+    "tier": "practical",
+    "type": "concept",
+    "statement": "Плитный фундамент: сплошная железобетонная плита под всем зданием, перераспределяющая нагрузку на грунт основания; толщина 0,3–3 м.",
+    "conditions": "Слабые, неоднородные грунты; высокие нагрузки от высотных зданий; высокий уровень грунтовых вод",
+    "prereq": [
+      "concept.construction.foundation.pile"
+    ],
+    "confidence": 0.93,
+    "tags": [
+      "foundation",
+      "raft",
+      "mat",
+      "shallow"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.95,
+      "safety_critical": true,
+      "safety_notes": "Неравномерные осадки при неоднородном основании; продавливание плиты колоннами"
+    }
+  },
+  {
+    "id": "concept.construction.foundation.strip",
+    "schema_version": "3.2",
+    "domain": "construction.foundation",
+    "subtopic": "construction.foundation.shallow",
+    "tier": "practical",
+    "type": "concept",
+    "statement": "Ленточный фундамент: непрерывная полоса под несущими стенами здания, передающая распределённую нагрузку на основание; малозаглублённый или заглублённый ниже промерзания.",
+    "conditions": "Глубина заложения ниже глубины промерзания грунта; ширина подошвы по расчёту на давление",
+    "prereq": [
+      "concept.construction.foundation.raft"
+    ],
+    "confidence": 0.94,
+    "tags": [
+      "foundation",
+      "strip",
+      "shallow",
+      "wall"
+    ],
+    "tier_extensions": {
+      "scale": "industrial",
+      "success_rate": 0.96,
+      "safety_critical": true,
+      "safety_notes": "Морозное пучение при заложении выше глубины промерзания во влагонасыщенных грунтах"
+    }
+  }
+]
